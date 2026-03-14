@@ -1,5 +1,5 @@
 import json 
-import src.scraper as scraper
+import scraper
 
 def main():
     # Example collection:  https://repositorium.uminho.pt/collections/690f7814-a67b-4f27-8fff-6b33581d1a91/search
