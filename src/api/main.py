@@ -239,7 +239,7 @@ def _build_result(
         authors=authors or None,
         abstract=abstract,
         snippet=snippet,
-        date=pub.get("date") or pub.get("publication_date"),
+        date=pub.get("date") or pub.get("publication_date") or pub.get("year"),
         doi=pub.get("doi"),
         pdf_link=pub.get("pdf_link") or pub.get("pdf_url"),
         score=round(score, 6) if score is not None else None,

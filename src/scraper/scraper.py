@@ -365,7 +365,7 @@ if __name__ == "__main__":
     BASE_URL = "https://repositorium.uminho.pt/search?f.entityType=Publication,equals"
 
     # REQ-B08: Optionally filter by research area (set to None to disable)
-    RESEARCH_AREA = "health"  # e.g. "machine learning" or "health"
+    RESEARCH_AREA = None  # e.g. "machine learning" or "health"
 
     scraper = UMinhoDSpace8Scraper(base_url=BASE_URL, max_items=20, research_area=RESEARCH_AREA)
     results = scraper.scrape()
