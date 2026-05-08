@@ -554,3 +554,63 @@ input, select { font-family: inherit; }
   .help-grid { grid-template-columns: 1fr; }
   .footer { flex-direction: column; text-align: center; }
 }
+/* ─── REQ-F10: Query validation error ───────────────────────────────────────── */
+.search-input-wrap.input-error {
+  border-color: #c0392b;
+}
+.query-error {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  background: #fdf0ef; border: 1px solid #f2c0bb;
+  border-radius: var(--radius);
+  font-size: .78rem; color: #8b2217;
+  animation: fadeIn .15s ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+/* ─── REQ-F08: Autocomplete as list ─────────────────────────────────────────── */
+.suggestions-box {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.suggestion-item[role="option"] {
+  cursor: pointer;
+}
+
+/* ─── REQ-F05: Focus visible for keyboard nav ───────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+.search-btn:disabled {
+  opacity: .5; cursor: not-allowed;
+}
+
+/* ─── REQ-F19: Score method info ────────────────────────────────────────────── */
+.score-method-info {
+  margin-top: 8px;
+  padding: 7px 10px;
+  background: var(--paper);
+  border-left: 3px solid var(--accent-2);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: .72rem;
+  color: var(--ink-mid);
+  font-family: var(--font-mono);
+  line-height: 1.5;
+}
+.score-method-badge {
+  margin-left: auto;
+  font-size: .7rem;
+  color: var(--accent-2);
+  cursor: help;
+}
+
+/* ─── REQ-F26: Query term highlighting ──────────────────────────────────────── */
+mark {
+  background: #fff3b0;
+  color: var(--ink);
+  border-radius: 2px;
+  padding: 0 2px;
+  font-style: normal;
+}
