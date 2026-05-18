@@ -87,28 +87,13 @@ function useSaved() {
 }
 
 // ─── SNIPPET with highlights ─────────────────────────────────────────────────
-
-// REQ-F26: Highlight query terms in text
-function highlightTerms(text, query) {
-  if (!text || !query) return text;
-  const terms = query
-    .replace(/AND|OR|NOT|NEAR\/\d+/g, " ")
-    .replace(/["\(\)]/g, " ")
-    .split(/\s+/)
-    .filter(t => t.length > 2);
-  if (!terms.length) return text;
-  const pattern = new RegExp(`(${terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "gi");
-  return text.replace(pattern, "<mark>$1</mark>");
-}
-
-const Snippet = ({ html, query }) => {
+const Snippet = ({ html }) => {
   if (!html) return null;
-  const highlighted = query ? highlightTerms(html, query) : html;
-  return <p className="snippet" dangerouslySetInnerHTML={{ __html: highlighted }} />;
+  return <p className="snippet" dangerouslySetInnerHTML={{ __html: html }} />;
 };
 
 // ─── RESULT CARD ──────────────────────────────────────────────────────────────
-const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick, query }) => {
+const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick }) => {
   const [expanded, setExpanded] = useState(false);
   return (
     <article className="result-card" style={{ animationDelay: `${rank * 40}ms` }}>
@@ -136,13 +121,9 @@ const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick, query }) => 
         )}
         {result.date && <span className="result-date">{result.date}</span>}
         {result.snippet
-          ? <Snippet html={result.snippet} query={query} />
+          ? <Snippet html={result.snippet} />
           : result.abstract && !expanded && (
-              <p className="snippet"
-                dangerouslySetInnerHTML={{ __html: highlightTerms(
-                  result.abstract.slice(0, 200) + (result.abstract.length > 200 ? "…" : ""),
-                  query
-                )}} />
+              <p className="snippet">{result.abstract.slice(0, 200)}{result.abstract.length > 200 ? "…" : ""}</p>
             )
         }
         {result.abstract && (
@@ -794,7 +775,6 @@ export default function App() {
                               isSaved={isSaved(r.url)}
                               onSave={toggleSave}
                               onAuthorClick={handleAuthorClick}
-                              query={query}
                             />
                           ))}
                         </div>
@@ -841,7 +821,7 @@ export default function App() {
                 <div className="results-list">
                   {saved.map((r, i) => (
                     <ResultCard key={r.url || i} result={r} rank={i + 1}
-                      isSaved={true} onSave={toggleSave} onAuthorClick={handleAuthorClick} query={query} />
+                      isSaved={true} onSave={toggleSave} onAuthorClick={handleAuthorClick} />
                   ))}
                 </div>
               )
