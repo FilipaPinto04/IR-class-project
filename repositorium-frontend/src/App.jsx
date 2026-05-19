@@ -509,7 +509,7 @@ const PerformanceMetrics = ({ searchTime, stats }) => {
   if (!searchTime && !stats) return null;
   return (
     <div className="perf-metrics">
-      <h4><Icon name="zap" size={13} /> Métricas de Performance (REQ-F53)</h4>
+      <h4><Icon name="zap" size={13} /> Métricas de Performance </h4>
       <div className="perf-grid">
         {searchTime && (
           <div className="perf-item">
@@ -517,18 +517,7 @@ const PerformanceMetrics = ({ searchTime, stats }) => {
             <span className="perf-label">Tempo de pesquisa</span>
           </div>
         )}
-        {stats && (
-          <>
-            <div className="perf-item">
-              <span className="perf-val">{stats.total_documents}</span>
-              <span className="perf-label">Documentos indexados</span>
-            </div>
-            <div className="perf-item">
-              <span className="perf-val">{stats.total_terms?.toLocaleString()}</span>
-              <span className="perf-label">Termos no índice</span>
-            </div>
-          </>
-        )}
+      
       </div>
     </div>
   );
@@ -552,7 +541,7 @@ const AnalyticsDashboard = ({ stats }) => {
 
   return (
     <div className="analytics-dashboard">
-      <h3>📊 Dashboard de Analytics (REQ-F55/F56/F57)</h3>
+      <h3>Dashboard de Analytics</h3>
 
       {/* REQ-F56: Index size stats */}
       <div className="analytics-section">
@@ -1003,7 +992,7 @@ const HelpPage = () => {
 
   return (
     <div className="help-page">
-      <h2>Ajuda e Documentação (REQ-F67)</h2>
+      <h2>Ajuda e Documentação</h2>
       <div className="help-layout">
         <nav className="help-nav">
           {Object.entries(sections).map(([key, s]) => (
@@ -1025,7 +1014,7 @@ const HelpPage = () => {
 const PreferencesPanel = ({ prefs, update }) => {
   return (
     <div className="prefs-panel">
-      <h3><Icon name="settings" size={16} /> Preferências (REQ-F63/F64)</h3>
+      <h3><Icon name="settings" size={16} /> Preferências </h3>
       <p className="muted" style={{ fontSize: ".82rem", marginBottom: "16px" }}>
         As preferências são guardadas automaticamente no browser entre sessões.
       </p>
