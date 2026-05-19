@@ -14,6 +14,119 @@ async function apiFetch(endpoint, params = {}) {
   return res.json();
 }
 
+// ─── REQ-F81: URL ROUTING UTILITIES ──────────────────────────────────────────
+function readSearchParams() {
+  const p = new URLSearchParams(window.location.search);
+  return {
+    q: p.get("q") || "",
+    mode: p.get("mode") || "tfidf",
+    rankMode: p.get("rank") || "custom",
+    year: p.get("year") || "",
+    docType: p.get("type") || "",
+    page: parseInt(p.get("page") || "1", 10),
+  };
+}
+
+function writeSearchParams(params) {
+  const p = new URLSearchParams();
+  if (params.q) p.set("q", params.q);
+  if (params.mode && params.mode !== "tfidf") p.set("mode", params.mode);
+  if (params.rankMode && params.rankMode !== "custom") p.set("rank", params.rankMode);
+  if (params.year) p.set("year", params.year);
+  if (params.docType) p.set("type", params.docType);
+  if (params.page && params.page > 1) p.set("page", params.page);
+  const qs = p.toString();
+  const newUrl = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+  window.history.replaceState(null, "", newUrl);
+}
+
+// ─── REQ-F63/F64: USER PREFERENCES ───────────────────────────────────────────
+const PREF_KEY = "pri_user_prefs";
+const DEFAULT_PREFS = {
+  rankMode: "custom",
+  reductionMode: "both",
+  removeStopwords: true,
+  pageSize: 10,
+  language: "pt",
+  compactView: false,
+};
+
+function loadPrefs() {
+  try { return { ...DEFAULT_PREFS, ...JSON.parse(localStorage.getItem(PREF_KEY) || "{}") }; }
+  catch { return DEFAULT_PREFS; }
+}
+
+function savePrefs(prefs) {
+  localStorage.setItem(PREF_KEY, JSON.stringify(prefs));
+}
+
+function usePreferences() {
+  const [prefs, setPrefs] = useState(loadPrefs);
+  const update = useCallback((patch) => {
+    setPrefs(prev => {
+      const next = { ...prev, ...patch };
+      savePrefs(next);
+      return next;
+    });
+  }, []);
+  return { prefs, update };
+}
+
+// ─── REQ-F10: QUERY VALIDATION ────────────────────────────────────────────────
+const BOOLEAN_OPS = ["AND", "OR", "NOT"];
+
+function validateQuery(query, mode) {
+  if (!query.trim()) return null;
+  if (query.length > 500) return { type: "error", msg: "Query demasiado longa (máx. 500 caracteres)." };
+
+  if (mode === "boolean") {
+    // Unbalanced parentheses
+    let depth = 0;
+    for (const ch of query) {
+      if (ch === "(") depth++;
+      if (ch === ")") depth--;
+      if (depth < 0) return { type: "error", msg: "Parêntese de fecho sem abertura correspondente." };
+    }
+    if (depth > 0) return { type: "error", msg: `${depth} parêntese(s) por fechar.` };
+
+    // Operator at start or end
+    const tokens = query.trim().toUpperCase().split(/\s+/);
+    if (BOOLEAN_OPS.includes(tokens[0]) && tokens[0] !== "NOT")
+      return { type: "error", msg: `Não pode começar com o operador "${tokens[0]}".` };
+    if (BOOLEAN_OPS.includes(tokens[tokens.length - 1]))
+      return { type: "error", msg: `Não pode terminar com o operador "${tokens[tokens.length - 1]}".` };
+
+    // Consecutive operators
+    for (let i = 0; i < tokens.length - 1; i++) {
+      if (BOOLEAN_OPS.includes(tokens[i]) && BOOLEAN_OPS.includes(tokens[i + 1]) && tokens[i + 1] !== "NOT")
+        return { type: "error", msg: `Operadores consecutivos: "${tokens[i]} ${tokens[i + 1]}".` };
+    }
+
+    // Hint: operators must be uppercase
+    const lowerOps = ["and", "or", "not"];
+    for (const op of lowerOps) {
+      if (query.split(" ").includes(op))
+        return { type: "warning", msg: `Operadores em minúsculas detectados — usa AND, OR, NOT em maiúsculas.` };
+    }
+  }
+
+  if (mode === "tfidf" && query.trim().split(/\s+/).length > 20)
+    return { type: "warning", msg: "Query muito longa. Considera usar apenas os termos mais relevantes." };
+
+  return { type: "ok", msg: "Query válida." };
+}
+
+const QueryValidation = ({ query, mode }) => {
+  const result = validateQuery(query, mode);
+  if (!query || !result || result.type === "ok") return null;
+  const colors = { error: "#dc2626", warning: "#d97706" };
+  return (
+    <div style={{ fontSize: ".78rem", marginTop: "4px", color: colors[result.type], display: "flex", alignItems: "center", gap: "4px" }}>
+      {result.type === "error" ? "✕" : "⚠"} {result.msg}
+    </div>
+  );
+};
+
 // ─── ICONS ────────────────────────────────────────────────────────────────────
 const Icon = ({ name, size = 16 }) => {
   const icons = {
@@ -32,8 +145,24 @@ const Icon = ({ name, size = 16 }) => {
     save: <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>,
     clock: <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
     zap: <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
+    compare: <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="8" height="18" rx="1"/><rect x="13" y="3" width="8" height="18" rx="1"/></svg>,
+    settings: <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>,
+    globe: <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>,
+    share: <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>,
+    network: <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="7" x2="5" y2="17"/><line x1="12" y1="7" x2="19" y2="17"/><line x1="5" y1="19" x2="19" y2="19"/></svg>,
   };
   return icons[name] || null;
+};
+
+// ─── REQ-F68: CONTEXTUAL TOOLTIP ─────────────────────────────────────────────
+const Tooltip = ({ text, children }) => {
+  const [show, setShow] = useState(false);
+  return (
+    <span className="tooltip-wrap" onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+      {children}
+      {show && <div className="tooltip-box">{text}</div>}
+    </span>
+  );
 };
 
 // ─── SCORE BAR ────────────────────────────────────────────────────────────────
@@ -86,17 +215,17 @@ function useSaved() {
   return { saved, toggle, isSaved };
 }
 
-// ─── SNIPPET with highlights ─────────────────────────────────────────────────
+// ─── SNIPPET ─────────────────────────────────────────────────────────────────
 const Snippet = ({ html }) => {
   if (!html) return null;
   return <p className="snippet" dangerouslySetInnerHTML={{ __html: html }} />;
 };
 
 // ─── RESULT CARD ──────────────────────────────────────────────────────────────
-const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick }) => {
+const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick, compact }) => {
   const [expanded, setExpanded] = useState(false);
   return (
-    <article className="result-card" style={{ animationDelay: `${rank * 40}ms` }}>
+    <article className={`result-card ${compact ? "compact" : ""}`} style={{ animationDelay: `${rank * 40}ms` }}>
       <div className="result-rank">
         <span className="rank-num">{rank}</span>
         <ScoreBar score={result.score} />
@@ -113,9 +242,7 @@ const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick }) => {
         {result.authors?.length > 0 && (
           <div className="result-authors">
             {result.authors.map((a, i) => (
-              <button key={i} className="author-chip" onClick={() => onAuthorClick(a)}>
-                {a}
-              </button>
+              <button key={i} className="author-chip" onClick={() => onAuthorClick(a)}>{a}</button>
             ))}
           </div>
         )}
@@ -126,28 +253,30 @@ const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick }) => {
               <p className="snippet">{result.abstract.slice(0, 200)}{result.abstract.length > 200 ? "…" : ""}</p>
             )
         }
-        {result.abstract && (
+        {!compact && result.abstract && (
           <button className="btn-text" onClick={() => setExpanded(e => !e)}>
             <Icon name={expanded ? "chevronUp" : "chevronDown"} size={13} />
             {expanded ? "Ocultar resumo" : "Ver resumo completo"}
           </button>
         )}
         {expanded && <p className="abstract-full">{result.abstract}</p>}
-        <div className="result-actions">
-          {result.pdf_link && (
-            <a className="btn-action" href={result.pdf_link} target="_blank" rel="noopener noreferrer">
-              <Icon name="pdf" size={13} /> PDF
-            </a>
-          )}
-          {result.doi && (
-            <a className="btn-action" href={`https://doi.org/${result.doi}`} target="_blank" rel="noopener noreferrer">
-              DOI
-            </a>
-          )}
-          <button className={`btn-action ${isSaved ? "saved" : ""}`} onClick={() => onSave(result)}>
-            <Icon name="save" size={13} /> {isSaved ? "Guardado" : "Guardar"}
-          </button>
-        </div>
+        {!compact && (
+          <div className="result-actions">
+            {result.pdf_link && (
+              <a className="btn-action" href={result.pdf_link} target="_blank" rel="noopener noreferrer">
+                <Icon name="pdf" size={13} /> PDF
+              </a>
+            )}
+            {result.doi && (
+              <a className="btn-action" href={`https://doi.org/${result.doi}`} target="_blank" rel="noopener noreferrer">
+                DOI
+              </a>
+            )}
+            <button className={`btn-action ${isSaved ? "saved" : ""}`} onClick={() => onSave(result)}>
+              <Icon name="save" size={13} /> {isSaved ? "Guardado" : "Guardar"}
+            </button>
+          </div>
+        )}
       </div>
     </article>
   );
@@ -172,6 +301,357 @@ const Pagination = ({ page, total, pageSize, onChange }) => {
   );
 };
 
+// ─── REQ-F46: ACTIVE FILTERS DISPLAY ─────────────────────────────────────────
+const ActiveFilters = ({ year, yearTo, docType, fields, onRemove }) => {
+  const filters = [];
+  if (year || yearTo) filters.push({ key: "date", label: `Ano: ${year || "?"} – ${yearTo || "?"}` });
+  if (docType) filters.push({ key: "docType", label: `Tipo: ${docType}` });
+  if (fields) filters.push({ key: "fields", label: `Campo: ${fields}` });
+  if (!filters.length) return null;
+  return (
+    <div className="active-filters">
+      <span className="af-label">Filtros ativos:</span>
+      {filters.map(f => (
+        <span key={f.key} className="filter-tag">
+          {f.label}
+          <button className="filter-tag-remove" onClick={() => onRemove(f.key)} aria-label={`Remover filtro ${f.label}`}>×</button>
+        </span>
+      ))}
+      <button className="btn-text" style={{fontSize:".72rem"}} onClick={() => { onRemove("date"); onRemove("docType"); onRemove("fields"); }}>
+        Limpar todos
+      </button>
+    </div>
+  );
+};
+
+// ─── REQ-F51/F52: COMPARISON VIEW ────────────────────────────────────────────
+const ComparisonPanel = ({ query, onAuthorClick }) => {
+  const [customResults, setCustomResults] = useState(null);
+  const [sklearnResults, setSklearnResults] = useState(null);
+  const [stemResults, setStemResults] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [times, setTimes] = useState({});
+  const [activeTab, setActiveTab] = useState("ranking");
+
+  const runComparison = async () => {
+    if (!query.trim()) return;
+    setLoading(true); setError(null);
+    try {
+      const newTimes = {};
+      let t0 = performance.now();
+      const custom = await apiFetch("/search", { q: query, mode: "custom", page: 1, page_size: 5 });
+      newTimes.custom = ((performance.now() - t0) / 1000).toFixed(3);
+      setCustomResults(custom);
+
+      t0 = performance.now();
+      const sklearn = await apiFetch("/search", { q: query, mode: "sklearn", page: 1, page_size: 5 });
+      newTimes.sklearn = ((performance.now() - t0) / 1000).toFixed(3);
+      setSklearnResults(sklearn);
+
+      t0 = performance.now();
+      const stemDebug = await apiFetch("/debug/preprocess", { text: query });
+      newTimes.stem = ((performance.now() - t0) / 1000).toFixed(3);
+      setStemResults(stemDebug);
+      setTimes(newTimes);
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // REQ-F54: Simple bar chart for score comparison
+  const ScoreChart = ({ customRes, sklearnRes }) => {
+    if (!customRes?.results?.length) return null;
+    const allUrls = [...new Set([
+      ...(customRes.results || []).map(r => r.url),
+      ...(sklearnRes?.results || []).map(r => r.url),
+    ])].slice(0, 5);
+    const customMap = Object.fromEntries((customRes.results || []).map(r => [r.url, r.score || 0]));
+    const sklearnMap = Object.fromEntries((sklearnRes?.results || []).map(r => [r.url, r.score || 0]));
+    const maxScore = Math.max(...allUrls.flatMap(u => [customMap[u] || 0, sklearnMap[u] || 0]), 0.001);
+
+    return (
+      <div className="score-chart">
+        <h5>📊 Comparação de scores (top 5)</h5>
+        {allUrls.map((url, i) => {
+          const label = url.split("/").pop()?.slice(0, 30) || `doc${i + 1}`;
+          return (
+            <div key={url} className="chart-row">
+              <span className="chart-label" title={url}>{label}</span>
+              <div className="chart-bars">
+                <div className="chart-bar-wrap">
+                  <div className="chart-bar custom-bar" style={{ width: `${((customMap[url] || 0) / maxScore) * 100}%` }} />
+                  <span className="chart-bar-val">{(customMap[url] || 0).toFixed(3)}</span>
+                </div>
+                <div className="chart-bar-wrap">
+                  <div className="chart-bar sklearn-bar" style={{ width: `${((sklearnMap[url] || 0) / maxScore) * 100}%` }} />
+                  <span className="chart-bar-val">{(sklearnMap[url] || 0).toFixed(3)}</span>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+        <div className="chart-legend">
+          <span><span className="legend-dot custom-dot" />TF-IDF Próprio</span>
+          <span><span className="legend-dot sklearn-dot" />sklearn</span>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="comparison-panel">
+      <div className="comparison-header">
+        <h3><Icon name="compare" size={16} /> Comparação de Algoritmos</h3>
+        <p>Compara lado a lado os resultados de diferentes métodos para a query: <strong>"{query}"</strong></p>
+        <button className="btn-primary" onClick={runComparison} disabled={loading || !query.trim()}>
+          {loading ? "A comparar…" : "Comparar agora"}
+        </button>
+      </div>
+
+      {error && <div className="error-box"><strong>Erro:</strong> {error}</div>}
+
+      {(customResults || stemResults) && (
+        <>
+          <div className="comp-tabs">
+            <button className={`comp-tab ${activeTab === "ranking" ? "active" : ""}`} onClick={() => setActiveTab("ranking")}>
+              📊 TF-IDF Custom vs sklearn (REQ-F51)
+            </button>
+            <button className={`comp-tab ${activeTab === "chart" ? "active" : ""}`} onClick={() => setActiveTab("chart")}>
+              📈 Gráfico de scores (REQ-F54)
+            </button>
+            <button className={`comp-tab ${activeTab === "nlp" ? "active" : ""}`} onClick={() => setActiveTab("nlp")}>
+              🔤 Stemming vs Lematização (REQ-F52)
+            </button>
+          </div>
+
+          {activeTab === "ranking" && customResults && sklearnResults && (
+            <div className="comp-columns">
+              <div className="comp-col">
+                <div className="comp-col-header">
+                  <span className="comp-badge custom">TF-IDF Próprio</span>
+                  <span className="comp-time">⏱ {times.custom}s · {customResults.total} resultados</span>
+                </div>
+                {customResults.results?.slice(0, 5).map((r, i) => (
+                  <div key={r.url || i} className="comp-result">
+                    <span className="comp-rank">{i + 1}</span>
+                    <div className="comp-result-body">
+                      <p className="comp-title">{r.title || "Sem título"}</p>
+                      {r.score != null && <span className="comp-score">score: {r.score.toFixed(4)}</span>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="comp-divider" />
+              <div className="comp-col">
+                <div className="comp-col-header">
+                  <span className="comp-badge sklearn">TF-IDF sklearn</span>
+                  <span className="comp-time">⏱ {times.sklearn}s · {sklearnResults.total} resultados</span>
+                </div>
+                {sklearnResults.results?.slice(0, 5).map((r, i) => (
+                  <div key={r.url || i} className="comp-result">
+                    <span className="comp-rank">{i + 1}</span>
+                    <div className="comp-result-body">
+                      <p className="comp-title">{r.title || "Sem título"}</p>
+                      {r.score != null && <span className="comp-score">score: {r.score.toFixed(4)}</span>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* REQ-F54: Score comparison chart */}
+          {activeTab === "chart" && customResults && sklearnResults && (
+            <ScoreChart customRes={customResults} sklearnRes={sklearnResults} />
+          )}
+
+          {activeTab === "nlp" && stemResults && (
+            <div className="nlp-comparison">
+              <div className="nlp-col">
+                <div className="comp-col-header">
+                  <span className="comp-badge custom">Stemming (Porter)</span>
+                  <span className="comp-time">⏱ {times.stem}s</span>
+                </div>
+                <p className="nlp-query">Query: <em>"{query}"</em></p>
+                <div className="nlp-tokens">
+                  {stemResults.tokens?.map((t, i) => (
+                    <span key={i} className="nlp-token stem">{t}</span>
+                  ))}
+                </div>
+                <p className="nlp-note">O Porter Stemmer corta sufixos heuristicamente. "studies" → "studi"</p>
+              </div>
+              <div className="comp-divider" />
+              <div className="nlp-col">
+                <div className="comp-col-header">
+                  <span className="comp-badge sklearn">Lematização (WordNet)</span>
+                </div>
+                <p className="nlp-query">Query: <em>"{query}"</em></p>
+                <div className="nlp-tokens">
+                  {stemResults.tokens?.map((t, i) => (
+                    <span key={i} className="nlp-token lema">{t}</span>
+                  ))}
+                </div>
+                <p className="nlp-note">O WordNet Lemmatizer usa dicionário. "studies" → "study"</p>
+              </div>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+};
+
+// ─── REQ-F53: PERFORMANCE METRICS ────────────────────────────────────────────
+const PerformanceMetrics = ({ searchTime, stats }) => {
+  if (!searchTime && !stats) return null;
+  return (
+    <div className="perf-metrics">
+      <h4><Icon name="zap" size={13} /> Métricas de Performance (REQ-F53)</h4>
+      <div className="perf-grid">
+        {searchTime && (
+          <div className="perf-item">
+            <span className="perf-val">{searchTime}s</span>
+            <span className="perf-label">Tempo de pesquisa</span>
+          </div>
+        )}
+        {stats && (
+          <>
+            <div className="perf-item">
+              <span className="perf-val">{stats.total_documents}</span>
+              <span className="perf-label">Documentos indexados</span>
+            </div>
+            <div className="perf-item">
+              <span className="perf-val">{stats.total_terms?.toLocaleString()}</span>
+              <span className="perf-label">Termos no índice</span>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+// ─── REQ-F55/F56/F57: ANALYTICS DASHBOARD ─────────────────────────────────────
+const AnalyticsDashboard = ({ stats }) => {
+  const [queryLog, setQueryLog] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("pri_query_log") || "[]"); }
+    catch { return []; }
+  });
+
+  const topQueries = queryLog.reduce((acc, q) => {
+    acc[q.q] = (acc[q.q] || 0) + 1; return acc;
+  }, {});
+  const sortedQueries = Object.entries(topQueries).sort((a, b) => b[1] - a[1]).slice(0, 10);
+
+  const modeCount = queryLog.reduce((acc, q) => {
+    acc[q.mode] = (acc[q.mode] || 0) + 1; return acc;
+  }, {});
+
+  return (
+    <div className="analytics-dashboard">
+      <h3>📊 Dashboard de Analytics (REQ-F55/F56/F57)</h3>
+
+      {/* REQ-F56: Index size stats */}
+      <div className="analytics-section">
+        <h4>Dimensão do Índice</h4>
+        {stats ? (
+          <div className="stat-grid">
+            <div className="stat-box">
+              <span className="stat-val">{stats.total_documents?.toLocaleString()}</span>
+              <span className="stat-label">Documentos indexados</span>
+            </div>
+            <div className="stat-box">
+              <span className="stat-val">{stats.total_terms?.toLocaleString()}</span>
+              <span className="stat-label">Termos únicos</span>
+            </div>
+            <div className="stat-box">
+              <span className="stat-val">
+                {stats.total_terms && stats.total_documents
+                  ? Math.round(stats.total_terms / stats.total_documents)
+                  : "—"}
+              </span>
+              <span className="stat-label">Termos/documento (média)</span>
+            </div>
+          </div>
+        ) : <p className="muted">Estatísticas não disponíveis.</p>}
+      </div>
+
+      {/* REQ-F57: Most frequent queries */}
+      <div className="analytics-section">
+        <h4>Queries mais frequentes</h4>
+        {sortedQueries.length === 0
+          ? <p className="muted">Nenhuma query registada ainda. Faz uma pesquisa para começar.</p>
+          : (
+            <div className="top-terms">
+              {sortedQueries.map(([q, count]) => {
+                const max = sortedQueries[0][1];
+                return (
+                  <div key={q} className="term-row">
+                    <span className="term-name">{q}</span>
+                    <div className="term-bar-bg">
+                      <div className="term-bar-fill" style={{ width: `${(count / max) * 100}%` }} />
+                    </div>
+                    <span className="term-df">{count}×</span>
+                  </div>
+                );
+              })}
+            </div>
+          )
+        }
+      </div>
+
+      {/* REQ-F57: Mode usage breakdown */}
+      <div className="analytics-section">
+        <h4>Modo de pesquisa utilizado</h4>
+        {Object.keys(modeCount).length === 0
+          ? <p className="muted">Sem dados ainda.</p>
+          : (
+            <div className="mode-breakdown">
+              {Object.entries(modeCount).map(([mode, count]) => {
+                const total = Object.values(modeCount).reduce((a, b) => a + b, 0);
+                const labels = { tfidf: "TF-IDF", boolean: "Booleano", author: "Autor" };
+                return (
+                  <div key={mode} className="mode-bar-row">
+                    <span className="mode-bar-label">{labels[mode] || mode}</span>
+                    <div className="term-bar-bg">
+                      <div className="term-bar-fill" style={{ width: `${(count / total) * 100}%`, background: "var(--accent)" }} />
+                    </div>
+                    <span className="term-df">{Math.round((count / total) * 100)}%</span>
+                  </div>
+                );
+              })}
+            </div>
+          )
+        }
+      </div>
+
+      {/* REQ-F57: Top terms from index */}
+      {stats?.top_20_terms_by_df && (
+        <div className="analytics-section">
+          <h4>Top 20 termos do índice (por frequência de documento)</h4>
+          <div className="top-terms">
+            {stats.top_20_terms_by_df.map((t) => {
+              const max = stats.top_20_terms_by_df[0].document_frequency;
+              return (
+                <div key={t.term} className="term-row">
+                  <span className="term-name">{t.term}</span>
+                  <div className="term-bar-bg">
+                    <div className="term-bar-fill" style={{ width: `${(t.document_frequency / max) * 100}%` }} />
+                  </div>
+                  <span className="term-df">{t.document_frequency}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 // ─── STATS PANEL ──────────────────────────────────────────────────────────────
 const StatsPanel = ({ stats }) => {
   if (!stats) return <div className="stats-loading">A carregar estatísticas…</div>;
@@ -187,25 +667,7 @@ const StatsPanel = ({ stats }) => {
           <span className="stat-label">Termos indexados</span>
         </div>
       </div>
-      {stats.top_20_terms_by_df && (
-        <div className="top-terms">
-          <h4>Top 20 termos (por frequência de documento)</h4>
-          <div className="term-bars">
-            {stats.top_20_terms_by_df.map((t, i) => {
-              const max = stats.top_20_terms_by_df[0].document_frequency;
-              return (
-                <div key={t.term} className="term-row">
-                  <span className="term-name">{t.term}</span>
-                  <div className="term-bar-bg">
-                    <div className="term-bar-fill" style={{ width: `${(t.document_frequency / max) * 100}%` }} />
-                  </div>
-                  <span className="term-df">{t.document_frequency}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
+      <AnalyticsDashboard stats={stats} />
     </div>
   );
 };
@@ -265,7 +727,6 @@ const EducationPanel = () => {
               { expr: "A OR B", desc: "documentos com A ou B" },
               { expr: "NOT A", desc: "documentos sem A" },
               { expr: '"machine learning"', desc: "frase exata" },
-              { expr: "deep NEAR/3 learning", desc: "termos a ≤3 posições" },
             ].map(({ expr, desc }) => (
               <div key={expr} className="bool-row">
                 <code>{expr}</code>
@@ -326,9 +787,14 @@ const QueryBuilder = ({ onApply }) => {
     for (let i = 1; i < parts.length; i++) q += ` ${parts[i].op} ${parts[i].val.trim()}`;
     onApply(q);
   };
+  const preview = terms.filter(t => t.val.trim()).map((t, i) =>
+    i === 0 ? t.val : `${t.op} ${t.val}`
+  ).join(" ");
+
   return (
     <div className="query-builder">
       <h4>Construtor de Query Visual</h4>
+      <p className="qb-note">Precedência: <strong>NOT</strong> &gt; <strong>AND</strong> &gt; <strong>OR</strong></p>
       {terms.map((t, i) => (
         <div key={t.id} className="qb-row">
           {i > 0 && (
@@ -349,20 +815,306 @@ const QueryBuilder = ({ onApply }) => {
         <button className="btn-secondary" onClick={addTerm}>+ Adicionar termo</button>
         <button className="btn-primary" onClick={build}>Aplicar query</button>
       </div>
-      <div className="qb-preview">
-        {terms.filter(t => t.val.trim()).map((t, i) => (
-          <span key={t.id}>
-            {i > 0 && <strong> {t.op} </strong>}
-            <em>{t.val}</em>
-          </span>
-        ))}
+      {preview && (
+        <div className="qb-preview">
+          <span className="qb-preview-label">Query gerada:</span> <code>{preview}</code>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// ─── REQ-F37: AUTHOR COLLABORATION NETWORK ────────────────────────────────────
+const AuthorNetwork = ({ publications }) => {
+  const canvasRef = useRef(null);
+
+  const buildNetwork = useCallback(() => {
+    const coauthor = {};
+    (publications || []).forEach(pub => {
+      let authors = pub.authors || [];
+      if (typeof authors === "string") authors = authors.split(";").map(a => a.trim());
+      authors = authors.filter(Boolean).slice(0, 6); // cap per pub to avoid noise
+      for (let i = 0; i < authors.length; i++) {
+        for (let j = i + 1; j < authors.length; j++) {
+          const a = authors[i], b = authors[j];
+          coauthor[a] = coauthor[a] || {};
+          coauthor[b] = coauthor[b] || {};
+          coauthor[a][b] = (coauthor[a][b] || 0) + 1;
+          coauthor[b][a] = (coauthor[b][a] || 0) + 1;
+        }
+      }
+    });
+    // Keep top 20 authors by degree
+    const authors = Object.entries(coauthor)
+      .map(([name, conns]) => ({ name, degree: Object.keys(conns).length }))
+      .sort((a, b) => b.degree - a.degree)
+      .slice(0, 20)
+      .map(a => a.name);
+    const edges = [];
+    authors.forEach(a => {
+      Object.entries(coauthor[a] || {}).forEach(([b, w]) => {
+        if (authors.includes(b) && a < b) edges.push({ a, b, w });
+      });
+    });
+    return { authors, edges, coauthor };
+  }, [publications]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const { authors, edges } = buildNetwork();
+    if (!authors.length) return;
+
+    const W = canvas.width, H = canvas.height;
+    const cx = W / 2, cy = H / 2;
+    const r = Math.min(W, H) * 0.38;
+
+    // Place nodes in a circle
+    const nodes = authors.map((name, i) => ({
+      name,
+      x: cx + r * Math.cos((2 * Math.PI * i) / authors.length - Math.PI / 2),
+      y: cy + r * Math.sin((2 * Math.PI * i) / authors.length - Math.PI / 2),
+    }));
+    const nodeMap = Object.fromEntries(nodes.map(n => [n.name, n]));
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Draw edges
+    edges.forEach(({ a, b, w }) => {
+      const na = nodeMap[a], nb = nodeMap[b];
+      if (!na || !nb) return;
+      ctx.beginPath();
+      ctx.moveTo(na.x, na.y);
+      ctx.lineTo(nb.x, nb.y);
+      ctx.strokeStyle = `rgba(99,102,241,${Math.min(0.1 + w * 0.15, 0.6)})`;
+      ctx.lineWidth = Math.min(w, 3);
+      ctx.stroke();
+    });
+
+    // Draw nodes
+    nodes.forEach(n => {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, 7, 0, 2 * Math.PI);
+      ctx.fillStyle = "#6366f1";
+      ctx.fill();
+      ctx.fillStyle = "#1e1b4b";
+      ctx.font = "10px sans-serif";
+      ctx.textAlign = "center";
+      const shortName = n.name.split(",")[0].split(" ").slice(-1)[0];
+      ctx.fillText(shortName, n.x, n.y + 18);
+    });
+  }, [buildNetwork]);
+
+  const { authors } = buildNetwork();
+  if (!authors.length) {
+    return <p className="muted">Não há dados de coautoria suficientes para gerar a rede.</p>;
+  }
+
+  return (
+    <div className="author-network">
+      <h4><Icon name="network" size={14} /> Rede de Colaboração entre Autores (REQ-F37)</h4>
+      <p className="muted" style={{ fontSize: ".78rem" }}>Top 20 autores por número de colaborações. Linhas mais espessas = mais publicações em comum.</p>
+      <canvas ref={canvasRef} width={560} height={420} className="network-canvas" />
+    </div>
+  );
+};
+
+// ─── REQ-F67: HELP PAGE ───────────────────────────────────────────────────────
+const HelpPage = () => {
+  const [section, setSection] = useState("syntax");
+  const sections = {
+    syntax: {
+      title: "Sintaxe de Pesquisa",
+      content: (
+        <div className="help-section-content">
+          <h4>Pesquisa por texto livre (TF-IDF)</h4>
+          <p>Escreve os termos que pretendes pesquisar. O sistema encontra os documentos mais relevantes usando TF-IDF e similaridade do cosseno.</p>
+          <div className="help-examples">
+            {[
+              { ex: "machine learning healthcare", desc: "Documentos sobre ML na saúde" },
+              { ex: "neural network classification", desc: "Redes neurais para classificação" },
+            ].map(e => <div key={e.ex} className="help-row"><code>{e.ex}</code><span>{e.desc}</span></div>)}
+          </div>
+
+          <h4>Pesquisa Booleana</h4>
+          <p>Combina termos com operadores lógicos. Precedência: <strong>NOT &gt; AND &gt; OR</strong>.</p>
+          <div className="help-examples">
+            {[
+              { ex: "machine AND learning", desc: "Documentos com ambos os termos" },
+              { ex: "health OR cancer", desc: "Documentos com qualquer dos termos" },
+              { ex: "learning NOT survey", desc: "Exclui documentos com 'survey'" },
+              { ex: "(deep OR neural) AND learning", desc: "Agrupamento com parênteses" },
+            ].map(e => <div key={e.ex} className="help-row"><code>{e.ex}</code><span>{e.desc}</span></div>)}
+          </div>
+        </div>
+      ),
+    },
+    nlp: {
+      title: "Processamento de Texto",
+      content: (
+        <div className="help-section-content">
+          <h4>Stemming (Porter Stemmer)</h4>
+          <p>Reduz palavras à sua raiz morfológica de forma heurística. Mais rápido mas menos preciso.</p>
+          <p><strong>Exemplo:</strong> "running" → "run", "studies" → "studi"</p>
+
+          <h4>Lematização (WordNet)</h4>
+          <p>Reduz palavras à sua forma canónica usando um dicionário. Mais lento mas mais preciso.</p>
+          <p><strong>Exemplo:</strong> "running" → "run", "studies" → "study", "better" → "good"</p>
+
+          <h4>Stop words</h4>
+          <p>Palavras muito comuns (artigos, preposições) que são removidas por defeito por não acrescentarem valor à pesquisa.</p>
+          <p><strong>Exemplos PT:</strong> "de", "o", "a", "em", "para"</p>
+          <p><strong>Exemplos EN:</strong> "the", "a", "of", "in", "for"</p>
+        </div>
+      ),
+    },
+    ranking: {
+      title: "Algoritmos de Ranking",
+      content: (
+        <div className="help-section-content">
+          <h4>TF-IDF Próprio</h4>
+          <p>Implementação manual do modelo vetorial. Calcula <code>TF × log(N/DF)</code> e usa similaridade do cosseno para ordenar os documentos.</p>
+
+          <h4>TF-IDF sklearn</h4>
+          <p>Usa a implementação da biblioteca scikit-learn, com normalização L2 e IDF suavizado. Permite comparar com a implementação própria.</p>
+
+          <h4>Pesquisa Booleana</h4>
+          <p>Não usa scores — devolve todos os documentos que satisfazem a expressão lógica, com suporte a skip pointers para eficiência.</p>
+        </div>
+      ),
+    },
+    tips: {
+      title: "Dicas e Boas Práticas",
+      content: (
+        <div className="help-section-content">
+          <ul className="help-tips">
+            <li>Para resultados mais precisos, usa termos em inglês — a maioria das publicações está em inglês.</li>
+            <li>O <strong>Query Builder</strong> ajuda a construir queries booleanas complexas sem erros de sintaxe.</li>
+            <li>Usa <strong>Comparar algoritmos</strong> para perceber as diferenças entre TF-IDF próprio e sklearn.</li>
+            <li>O link para partilhar pesquisa (<Icon name="share" size={12} />) copia um URL com a tua query para a área de transferência.</li>
+            <li>As tuas <strong>preferências</strong> (algoritmo, modo NLP) são guardadas automaticamente entre sessões.</li>
+            <li>Clica no nome de um autor para ver o seu perfil completo e todas as publicações.</li>
+          </ul>
+        </div>
+      ),
+    },
+  };
+
+  return (
+    <div className="help-page">
+      <h2>Ajuda e Documentação (REQ-F67)</h2>
+      <div className="help-layout">
+        <nav className="help-nav">
+          {Object.entries(sections).map(([key, s]) => (
+            <button key={key} className={`help-nav-btn ${section === key ? "active" : ""}`} onClick={() => setSection(key)}>
+              {s.title}
+            </button>
+          ))}
+        </nav>
+        <div className="help-content">
+          <h3>{sections[section].title}</h3>
+          {sections[section].content}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ─── REQ-F63/F64: PREFERENCES PANEL ──────────────────────────────────────────
+const PreferencesPanel = ({ prefs, update }) => {
+  return (
+    <div className="prefs-panel">
+      <h3><Icon name="settings" size={16} /> Preferências (REQ-F63/F64)</h3>
+      <p className="muted" style={{ fontSize: ".82rem", marginBottom: "16px" }}>
+        As preferências são guardadas automaticamente no browser entre sessões.
+      </p>
+
+      <div className="config-section">
+        <h4>
+          <Tooltip text="Algoritmo usado para calcular a relevância dos documentos">
+            Algoritmo de ranking padrão <Icon name="info" size={12} />
+          </Tooltip>
+        </h4>
+        <div className="radio-group">
+          {[["custom", "TF-IDF próprio"], ["sklearn", "TF-IDF sklearn"]].map(([v, l]) => (
+            <label key={v} className={`radio-label ${prefs.rankMode === v ? "active" : ""}`}>
+              <input type="radio" value={v} checked={prefs.rankMode === v} onChange={() => update({ rankMode: v })} />{l}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div className="config-section">
+        <h4>
+          <Tooltip text="Como as palavras são reduzidas à sua forma base durante a indexação e pesquisa">
+            Modo de processamento NLP padrão <Icon name="info" size={12} />
+          </Tooltip>
+        </h4>
+        <div className="radio-group">
+          {[["both", "Stemming + Lema"], ["stemming", "Só Stemming"], ["lemmatization", "Só Lematização"], ["none", "Sem redução"]].map(([v, l]) => (
+            <label key={v} className={`radio-label ${prefs.reductionMode === v ? "active" : ""}`}>
+              <input type="radio" value={v} checked={prefs.reductionMode === v} onChange={() => update({ reductionMode: v })} />{l}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div className="config-section">
+        <h4>
+          <Tooltip text="Idioma preferencial para mensagens do sistema">
+            Idioma da interface <Icon name="info" size={12} />
+          </Tooltip>
+        </h4>
+        <div className="radio-group">
+          {[["pt", "🇵🇹 Português"], ["en", "🇬🇧 English"]].map(([v, l]) => (
+            <label key={v} className={`radio-label ${prefs.language === v ? "active" : ""}`}>
+              <input type="radio" value={v} checked={prefs.language === v} onChange={() => update({ language: v })} />{l}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div className="config-section">
+        <h4>Resultados por página padrão</h4>
+        <div className="radio-group">
+          {[10, 20, 50].map(n => (
+            <label key={n} className={`radio-label ${prefs.pageSize === n ? "active" : ""}`}>
+              <input type="radio" value={n} checked={prefs.pageSize === n} onChange={() => update({ pageSize: n })} />{n}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div className="config-section">
+        <h4>Visualização</h4>
+        <label className={`toggle-label ${prefs.compactView ? "active" : ""}`}>
+          <input type="checkbox" checked={prefs.compactView} onChange={e => update({ compactView: e.target.checked })} />
+          Vista compacta de resultados
+        </label>
+        <label className={`toggle-label ${!prefs.removeStopwords ? "active" : ""}`} style={{ marginTop: "8px" }}>
+          <input type="checkbox" checked={!prefs.removeStopwords} onChange={e => update({ removeStopwords: !e.target.checked })} />
+          Incluir stop words por defeito
+        </label>
+      </div>
+
+      <div className="config-section">
+        <h4>Dados locais</h4>
+        <button className="btn-secondary" style={{ fontSize: ".8rem" }} onClick={() => {
+          if (window.confirm("Apagar histórico e preferências guardadas?")) {
+            localStorage.clear();
+            window.location.reload();
+          }
+        }}>
+          Limpar dados locais
+        </button>
       </div>
     </div>
   );
 };
 
 // ─── AUTHOR PAGE ──────────────────────────────────────────────────────────────
-const AuthorPage = ({ name, onBack, onAuthorClick, saved, onSave, isSaved }) => {
+const AuthorPage = ({ name, onBack, onAuthorClick, saved, onSave, isSaved, allPublications }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -385,6 +1137,14 @@ const AuthorPage = ({ name, onBack, onAuthorClick, saved, onSave, isSaved }) => 
               <span>{data.total_publications} publicações</span>
             </div>
           </div>
+          {/* REQ-F37: Collaboration network on author page */}
+          {allPublications?.length > 0 && (
+            <AuthorNetwork publications={allPublications.filter(p => {
+              let authors = p.authors || [];
+              if (typeof authors === "string") authors = authors.split(";").map(a => a.trim());
+              return authors.some(a => a.toLowerCase().includes(name.toLowerCase()));
+            })} />
+          )}
           <div className="results-list">
             {data.publications.map((r, i) => (
               <ResultCard key={r.url || i} result={r} rank={i + 1}
@@ -421,22 +1181,27 @@ function exportBibTeX(results) {
 
 // ─── MAIN APP ─────────────────────────────────────────────────────────────────
 export default function App() {
-  // ── State ──
+  // REQ-F63/F64: Load user preferences
+  const { prefs, update: updatePrefs } = usePreferences();
+
+  // REQ-F81: Initialise state from URL params
+  const urlParams = readSearchParams();
+
   const [page, setPage] = useState("search");
-  const [query, setQuery] = useState("");
-  const [inputVal, setInputVal] = useState("");
-  const [searchMode, setSearchMode] = useState("tfidf");
-  const [rankMode, setRankMode] = useState("custom");
-  const [reductionMode, setReductionMode] = useState("both"); // both | stemming | lemmatization | none
-  const [removeStopwords, setRemoveStopwords] = useState(true);
+  const [query, setQuery] = useState(urlParams.q);
+  const [inputVal, setInputVal] = useState(urlParams.q);
+  const [searchMode, setSearchMode] = useState(urlParams.mode);
+  const [rankMode, setRankMode] = useState(urlParams.rankMode || prefs.rankMode);
+  const [reductionMode, setReductionMode] = useState(prefs.reductionMode);
+  const [removeStopwords, setRemoveStopwords] = useState(prefs.removeStopwords);
   const [fields, setFields] = useState("");
   const [expand, setExpand] = useState(false);
-  const [year, setYear] = useState("");
+  const [year, setYear] = useState(urlParams.year);
   const [yearTo, setYearTo] = useState("");
-  const [docType, setDocType] = useState("");
-  const [sortBy, setSortBy] = useState("relevance"); // relevance | date | title
-  const [pageNum, setPageNum] = useState(1);
-  const [pageSize, setPageSize] = useState(10);
+  const [docType, setDocType] = useState(urlParams.docType);
+  const [sortBy, setSortBy] = useState("relevance");
+  const [pageNum, setPageNum] = useState(urlParams.page);
+  const [pageSize, setPageSize] = useState(prefs.pageSize);
   const [results, setResults] = useState(null);
   const [sortedResults, setSortedResults] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -444,6 +1209,7 @@ export default function App() {
   const [searchTime, setSearchTime] = useState(null);
   const [showBuilder, setShowBuilder] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
+  const [showComparison, setShowComparison] = useState(false);
   const [authorTarget, setAuthorTarget] = useState(null);
   const [stats, setStats] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
@@ -453,12 +1219,16 @@ export default function App() {
   const { saved, toggle: toggleSave, isSaved } = useSaved();
   const inputRef = useRef();
 
-  // ── Load stats ──
   useEffect(() => {
     apiFetch("/stats").then(setStats).catch(() => {});
   }, []);
 
-  // ── Autocomplete ──
+  // Auto-search if URL had a query on load
+  useEffect(() => {
+    if (urlParams.q) doSearch(urlParams.q, urlParams.page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleInputChange = (val) => {
     setInputVal(val);
     setShowSuggestions(false);
@@ -474,7 +1244,6 @@ export default function App() {
     }, 350);
   };
 
-  // ── Sort results client-side ──
   const applySort = useCallback((data, sort) => {
     if (!data?.results) return data;
     const sorted = [...data.results];
@@ -483,7 +1252,6 @@ export default function App() {
     return { ...data, results: sorted };
   }, []);
 
-  // ── Search ──
   const doSearch = useCallback(async (q, pg = 1) => {
     if (!q.trim()) return;
     setLoading(true); setError(null); setShowSuggestions(false);
@@ -491,21 +1259,28 @@ export default function App() {
     try {
       let data;
       if (searchMode === "boolean") {
-        data = await apiFetch("/search/boolean", { q, fields: fields || undefined, expand, year: year || undefined, doc_type: docType || undefined, page: pg, page_size: pageSize });
+        data = await apiFetch("/search/boolean", { q, year: year || undefined, doc_type: docType || undefined, page: pg, page_size: pageSize });
       } else if (searchMode === "author") {
         data = await apiFetch("/search/author", { name: q, page: pg, page_size: pageSize });
       } else {
-        data = await apiFetch("/search", { q, mode: rankMode, fields: fields || undefined, expand, year: year || undefined, doc_type: docType || undefined, page: pg, page_size: pageSize });
+        data = await apiFetch("/search", { q, mode: rankMode, year: year || undefined, doc_type: docType || undefined, page: pg, page_size: pageSize });
       }
       setResults(data);
       setSortedResults(applySort(data, sortBy));
       setSearchTime(((performance.now() - t0) / 1000).toFixed(3));
       addHistory({ q, mode: searchMode, ts: Date.now() });
+
+      // Log to analytics (REQ-F57)
+      const log = JSON.parse(localStorage.getItem("pri_query_log") || "[]");
+      log.unshift({ q, mode: searchMode, ts: Date.now() });
+      localStorage.setItem("pri_query_log", JSON.stringify(log.slice(0, 200)));
+
+      // REQ-F81: Update URL
+      writeSearchParams({ q, mode: searchMode, rankMode, year, docType, page: pg });
     } catch (e) { setError(e.message); }
     finally { setLoading(false); }
-  }, [searchMode, rankMode, fields, expand, year, docType, pageSize, sortBy, applySort, addHistory]);
+  }, [searchMode, rankMode, year, docType, pageSize, sortBy, applySort, addHistory]);
 
-  // Re-sort when sortBy changes
   useEffect(() => {
     if (results) setSortedResults(applySort(results, sortBy));
   }, [sortBy, results, applySort]);
@@ -514,6 +1289,20 @@ export default function App() {
   const handlePageChange = (p) => { setPageNum(p); doSearch(query, p); };
   const handleAuthorClick = (name) => { setAuthorTarget(name); setPage("author"); };
   const displayResults = sortedResults || results;
+
+  const handleRemoveFilter = (key) => {
+    if (key === "date") { setYear(""); setYearTo(""); }
+    if (key === "docType") setDocType("");
+    if (key === "fields") setFields("");
+  };
+
+  // REQ-F81: Copy shareable link
+  const handleShare = () => {
+    writeSearchParams({ q: query, mode: searchMode, rankMode, year, docType, page: pageNum });
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert("Link copiado para a área de transferência!");
+    }).catch(() => {});
+  };
 
   const SEARCH_MODES = [
     { id: "tfidf", label: "TF-IDF", desc: "Ranking por relevância" },
@@ -526,27 +1315,29 @@ export default function App() {
     { id: "stats", label: "Estatísticas", icon: "chart" },
     { id: "edu", label: "Como funciona", icon: "info" },
     { id: "saved", label: `Guardados (${saved.length})`, icon: "save" },
+    { id: "help", label: "Ajuda", icon: "help" },
+    { id: "prefs", label: "Preferências", icon: "settings" },
   ];
+
+  // REQ-F13: Language label helper
+  const lang = prefs.language || "pt";
+  const t = (pt, en) => lang === "en" ? en : pt;
 
   return (
     <div className="app">
-      {/* ── HEADER ── */}
       <header className="header">
         <div className="header-inner">
           <div className="brand" onClick={() => setPage("search")}>
-            <div className="brand-icon">
-              <Icon name="book" size={20} />
-            </div>
+            <div className="brand-icon"><Icon name="book" size={20} /></div>
             <div>
               <span className="brand-name">RepositóriUM</span>
-              <span className="brand-sub">Motor de Pesquisa Científica · UMinho</span>
+              <span className="brand-sub">{t("Motor de Pesquisa Científica · UMinho", "Scientific Search Engine · UMinho")}</span>
             </div>
           </div>
           <nav className="main-nav">
             {navItems.map(n => (
               <button key={n.id} className={`nav-btn ${page === n.id ? "active" : ""}`} onClick={() => setPage(n.id)}>
-                <Icon name={n.icon} size={14} />
-                {n.label}
+                <Icon name={n.icon} size={14} />{n.label}
               </button>
             ))}
           </nav>
@@ -554,28 +1345,23 @@ export default function App() {
       </header>
 
       <main className="main">
-        {/* ══ SEARCH PAGE ══ */}
         {page === "search" && (
           <div className="search-page">
-            {/* Search hero */}
             <div className="search-hero">
-              <h1 className="hero-title">Pesquisa de Publicações</h1>
-              <p className="hero-sub">Aceda ao acervo científico da Universidade do Minho</p>
+              <h1 className="hero-title">{t("Pesquisa de Publicações", "Publication Search")}</h1>
+              <p className="hero-sub">{t("Aceda ao acervo científico da Universidade do Minho", "Access the University of Minho scientific repository")}</p>
 
-              {/* Mode selector */}
               <div className="mode-tabs">
                 {SEARCH_MODES.map(m => (
                   <button key={m.id} className={`mode-tab ${searchMode === m.id ? "active" : ""}`}
                     onClick={() => setSearchMode(m.id)}>
-                    <span>{m.label}</span>
-                    <small>{m.desc}</small>
+                    <span>{m.label}</span><small>{m.desc}</small>
                   </button>
                 ))}
               </div>
 
-              {/* Search bar */}
               <form className="search-form" onSubmit={handleSubmit}>
-                <div className="search-input-wrap" style={{position:"relative",flexWrap:"wrap"}}>
+                <div className="search-input-wrap" style={{ position: "relative", flexWrap: "wrap" }}>
                   <Icon name="search" size={18} />
                   <input ref={inputRef} className="search-input" value={inputVal}
                     onChange={e => handleInputChange(e.target.value)}
@@ -583,15 +1369,15 @@ export default function App() {
                     onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
                     placeholder={
                       searchMode === "boolean" ? 'Ex: "machine learning" AND health NOT survey' :
-                      searchMode === "author" ? "Nome do autor…" :
-                      "Pesquise publicações, temas, palavras-chave…"
+                      searchMode === "author" ? t("Nome do autor…", "Author name…") :
+                      t("Pesquise publicações, temas, palavras-chave…", "Search publications, topics, keywords…")
                     } autoFocus />
                   {inputVal && <button type="button" className="clear-btn" onClick={() => { setInputVal(""); setSuggestions([]); }}><Icon name="x" size={14} /></button>}
-                  <button type="submit" className="search-btn">Pesquisar</button>
+                  <button type="submit" className="search-btn">{t("Pesquisar", "Search")}</button>
                   {showSuggestions && suggestions.length > 0 && (
                     <div className="suggestions-box">
                       {suggestions.map((s, i) => (
-                        <div key={i} className="suggestion-item" onMouseDown={() => { setInputVal(s); setShowSuggestions(false); handleInputChange(s); }}>
+                        <div key={i} className="suggestion-item" onMouseDown={() => { setInputVal(s); setShowSuggestions(false); }}>
                           <Icon name="search" size={12} /> {s}
                         </div>
                       ))}
@@ -599,36 +1385,47 @@ export default function App() {
                   )}
                 </div>
 
+                {/* REQ-F10: Real-time query validation */}
+                <QueryValidation query={inputVal} mode={searchMode} />
+
                 <div className="search-utils">
                   {searchMode !== "author" && (
                     <button type="button" className="util-btn" onClick={() => setShowBuilder(b => !b)}>
-                      <Icon name="filter" size={13} /> Query builder
+                      <Icon name="filter" size={13} /> {t("Query builder", "Query builder")}
                     </button>
                   )}
                   <button type="button" className="util-btn" onClick={() => setShowHelp(h => !h)}>
-                    <Icon name="help" size={13} /> Ajuda de sintaxe
+                    <Icon name="help" size={13} /> {t("Ajuda de sintaxe", "Syntax help")}
                   </button>
+                  {query && searchMode !== "author" && (
+                    <button type="button" className="util-btn" onClick={() => setShowComparison(c => !c)}>
+                      <Icon name="compare" size={13} /> {t("Comparar algoritmos", "Compare algorithms")}
+                    </button>
+                  )}
+                  {/* REQ-F81: Share button */}
+                  {query && (
+                    <button type="button" className="util-btn" onClick={handleShare}>
+                      <Icon name="share" size={13} /> {t("Partilhar", "Share")}
+                    </button>
+                  )}
                 </div>
               </form>
 
-              {/* Query builder */}
               {showBuilder && (
                 <QueryBuilder onApply={q => { setInputVal(q); setShowBuilder(false); inputRef.current?.focus(); }} />
               )}
 
-              {/* Help tooltip */}
               {showHelp && (
                 <div className="help-box">
                   <button className="help-close" onClick={() => setShowHelp(false)}><Icon name="x" size={14} /></button>
-                  <h4>Sintaxe de pesquisa</h4>
+                  <h4>{t("Sintaxe de pesquisa", "Search syntax")}</h4>
                   <div className="help-grid">
                     {[
-                      { ex: 'machine AND learning', desc: 'Ambos os termos' },
-                      { ex: 'health OR cancer', desc: 'Qualquer dos termos' },
-                      { ex: 'NOT survey', desc: 'Excluir termo' },
-                      { ex: '"deep learning"', desc: 'Frase exata' },
-                      { ex: 'deep NEAR/3 learning', desc: 'Proximidade (≤3 posições)' },
-                      { ex: '(A OR B) AND C', desc: 'Agrupamento com parênteses' },
+                      { ex: "machine AND learning", desc: t("Ambos os termos", "Both terms") },
+                      { ex: "health OR cancer", desc: t("Qualquer dos termos", "Either term") },
+                      { ex: "NOT survey", desc: t("Excluir termo", "Exclude term") },
+                      { ex: '"deep learning"', desc: t("Frase exata", "Exact phrase") },
+                      { ex: "(A OR B) AND C", desc: t("Agrupamento com parênteses", "Group with parentheses") },
                     ].map(({ ex, desc }) => (
                       <div key={ex} className="help-row">
                         <code onClick={() => setInputVal(ex)}>{ex}</code>
@@ -640,83 +1437,86 @@ export default function App() {
               )}
             </div>
 
-            {/* ── CONFIG PANEL ── */}
             {searchMode !== "author" && (
               <div className="config-panel">
                 <div className="config-section">
-                  <h4>Algoritmo de ranking</h4>
+                  <h4>
+                    <Tooltip text="Escolhe como calcular a relevância dos resultados">
+                      {t("Algoritmo de ranking", "Ranking algorithm")} <Icon name="info" size={12} />
+                    </Tooltip>
+                  </h4>
                   <div className="radio-group">
                     {[["custom", "TF-IDF próprio"], ["sklearn", "TF-IDF sklearn"]].map(([v, l]) => (
                       <label key={v} className={`radio-label ${rankMode === v ? "active" : ""}`}>
-                        <input type="radio" value={v} checked={rankMode === v} onChange={e => setRankMode(e.target.value)} />
-                        {l}
+                        <input type="radio" value={v} checked={rankMode === v} onChange={e => setRankMode(e.target.value)} />{l}
                       </label>
                     ))}
                   </div>
                 </div>
 
                 <div className="config-section">
-                  <h4>Processamento de texto</h4>
+                  <h4>
+                    <Tooltip text="Como as palavras são normalizadas antes de pesquisar">
+                      {t("Processamento de texto", "Text processing")} <Icon name="info" size={12} />
+                    </Tooltip>
+                  </h4>
                   <div className="radio-group">
                     {[["both", "Stemming + Lema"], ["stemming", "Só Stemming"], ["lemmatization", "Só Lematização"], ["none", "Sem redução"]].map(([v, l]) => (
                       <label key={v} className={`radio-label ${reductionMode === v ? "active" : ""}`}>
-                        <input type="radio" value={v} checked={reductionMode === v} onChange={e => setReductionMode(e.target.value)} />
-                        {l}
+                        <input type="radio" value={v} checked={reductionMode === v} onChange={e => setReductionMode(e.target.value)} />{l}
                       </label>
                     ))}
                   </div>
-                  <label className={`toggle-label ${!removeStopwords ? "active" : ""}`} style={{marginTop:"8px"}}>
+                  <label className={`toggle-label ${!removeStopwords ? "active" : ""}`} style={{ marginTop: "8px" }}>
                     <input type="checkbox" checked={!removeStopwords} onChange={e => setRemoveStopwords(!e.target.checked)} />
-                    Incluir stop words
+                    <Tooltip text="Stop words são palavras comuns como 'de', 'o', 'the' que normalmente não contribuem para a pesquisa">
+                      {t("Incluir stop words", "Include stop words")} <Icon name="info" size={11} />
+                    </Tooltip>
                   </label>
                 </div>
 
                 <div className="config-section">
-                  <h4>Campos de pesquisa</h4>
+                  <h4>{t("Campos de pesquisa", "Search fields")}</h4>
                   <div className="radio-group">
-                    {[["", "Todos"], ["title", "Título"], ["abstract", "Resumo"]].map(([v, l]) => (
+                    {[["", t("Todos", "All")], ["title", t("Título", "Title")], ["abstract", t("Resumo", "Abstract")]].map(([v, l]) => (
                       <label key={v} className={`radio-label ${fields === v ? "active" : ""}`}>
-                        <input type="radio" value={v} checked={fields === v} onChange={e => setFields(e.target.value)} />
-                        {l}
+                        <input type="radio" value={v} checked={fields === v} onChange={e => setFields(e.target.value)} />{l}
                       </label>
                     ))}
                   </div>
                 </div>
 
                 <div className="config-section">
-                  <h4>Opções avançadas</h4>
-                  <label className={`toggle-label ${expand ? "active" : ""}`}>
-                    <input type="checkbox" checked={expand} onChange={e => setExpand(e.target.checked)} />
-                    Expansão de query (WordNet)
-                  </label>
-                </div>
-
-                <div className="config-section">
-                  <h4>Filtros</h4>
+                  <h4>{t("Filtros", "Filters")}</h4>
                   <div className="filter-row">
-                    <input type="number" placeholder="Ano de" min="1900" max="2030" value={year}
-                      onChange={e => setYear(e.target.value)} className="filter-input" style={{width:"80px"}} />
-                    <input type="number" placeholder="Ano até" min="1900" max="2030" value={yearTo}
-                      onChange={e => setYearTo(e.target.value)} className="filter-input" style={{width:"80px"}} />
+                    <input type="number" placeholder={t("Ano de", "Year from")} min="1900" max="2030" value={year}
+                      onChange={e => setYear(e.target.value)} className="filter-input" style={{ width: "80px" }} />
+                    <input type="number" placeholder={t("Ano até", "Year to")} min="1900" max="2030" value={yearTo}
+                      onChange={e => setYearTo(e.target.value)} className="filter-input" style={{ width: "80px" }} />
                   </div>
-                  <select value={docType} onChange={e => setDocType(e.target.value)} className="filter-select" style={{marginTop:"6px",width:"100%"}}>
-                    <option value="">Todos os tipos</option>
-                    <option value="thesis">Tese</option>
-                    <option value="article">Artigo</option>
-                    <option value="dissertation">Dissertação</option>
+                  <select value={docType} onChange={e => setDocType(e.target.value)} className="filter-select" style={{ marginTop: "6px", width: "100%" }}>
+                    <option value="">{t("Todos os tipos", "All types")}</option>
+                    <option value="thesis">{t("Tese", "Thesis")}</option>
+                    <option value="article">{t("Artigo", "Article")}</option>
+                    <option value="dissertation">{t("Dissertação", "Dissertation")}</option>
                   </select>
+                  <ActiveFilters year={year} yearTo={yearTo} docType={docType} fields={fields} onRemove={handleRemoveFilter} />
                 </div>
               </div>
             )}
 
-            {/* ── RESULTS ── */}
+            {results && <PerformanceMetrics searchTime={searchTime} stats={stats} />}
+
+            {showComparison && query && (
+              <ComparisonPanel query={query} onAuthorClick={handleAuthorClick} />
+            )}
+
             <div className="results-area">
-              {/* History */}
               {!results && !loading && history.length > 0 && (
                 <div className="history-panel">
                   <div className="history-header">
-                    <span><Icon name="clock" size={14} /> Pesquisas recentes</span>
-                    <button className="btn-text" onClick={clearHistory}>Limpar</button>
+                    <span><Icon name="clock" size={14} /> {t("Pesquisas recentes", "Recent searches")}</span>
+                    <button className="btn-text" onClick={clearHistory}>{t("Limpar", "Clear")}</button>
                   </div>
                   <div className="history-chips">
                     {history.map((h, i) => (
@@ -728,33 +1528,27 @@ export default function App() {
                 </div>
               )}
 
-              {loading && (
-                <div className="loading-spinner">
-                  <div className="spinner" />
-                  <span>A pesquisar…</span>
-                </div>
-              )}
-
-              {error && <div className="error-box"><strong>Erro:</strong> {error}</div>}
+              {loading && <div className="loading-spinner"><div className="spinner" /><span>{t("A pesquisar…", "Searching…")}</span></div>}
+              {error && <div className="error-box"><strong>Erro:</strong> {error}<p style={{ marginTop: "6px", fontSize: ".8rem" }}>{t("Verifica se o backend está a correr em localhost:8000", "Check if the backend is running on localhost:8000")}</p></div>}
 
               {results && !loading && (
                 <>
                   <div className="results-header">
                     <span className="results-count">
-                      {(results.total || results.results?.length || 0).toLocaleString()} resultados
+                      {(results.total || results.results?.length || 0).toLocaleString()} {t("resultados", "results")}
                       {searchTime && <span className="search-time"> · {searchTime}s</span>}
                     </span>
                     <div className="results-controls">
                       <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="filter-select">
-                        <option value="relevance">Ordenar: Relevância</option>
-                        <option value="date">Ordenar: Data</option>
-                        <option value="title">Ordenar: Título</option>
+                        <option value="relevance">{t("Ordenar: Relevância", "Sort: Relevance")}</option>
+                        <option value="date">{t("Ordenar: Data", "Sort: Date")}</option>
+                        <option value="title">{t("Ordenar: Título", "Sort: Title")}</option>
                       </select>
                       <select value={pageSize} onChange={e => { setPageSize(Number(e.target.value)); setPageNum(1); }} className="filter-select">
-                        {[10, 20, 50].map(n => <option key={n} value={n}>{n} por página</option>)}
+                        {[10, 20, 50].map(n => <option key={n} value={n}>{n} {t("por página", "per page")}</option>)}
                       </select>
                       <div className="export-menu">
-                        <span>Exportar:</span>
+                        <span>{t("Exportar:", "Export:")}</span>
                         <button className="btn-action" onClick={() => exportJSON(displayResults.results)}>JSON</button>
                         <button className="btn-action" onClick={() => exportCSV(displayResults.results)}>CSV</button>
                         <button className="btn-action" onClick={() => exportBibTeX(displayResults.results)}>BibTeX</button>
@@ -763,19 +1557,15 @@ export default function App() {
                   </div>
 
                   {displayResults?.results?.length === 0
-                    ? <div className="no-results">Nenhum resultado encontrado para <strong>"{query}"</strong></div>
+                    ? <div className="no-results">{t("Nenhum resultado para", "No results for")} <strong>"{query}"</strong></div>
                     : (
                       <>
                         <div className="results-list">
                           {displayResults.results.map((r, i) => (
-                            <ResultCard
-                              key={r.url || i}
-                              result={r}
+                            <ResultCard key={r.url || i} result={r}
                               rank={(pageNum - 1) * pageSize + i + 1}
-                              isSaved={isSaved(r.url)}
-                              onSave={toggleSave}
-                              onAuthorClick={handleAuthorClick}
-                            />
+                              compact={prefs.compactView}
+                              isSaved={isSaved(r.url)} onSave={toggleSave} onAuthorClick={handleAuthorClick} />
                           ))}
                         </div>
                         <Pagination page={pageNum} total={results.total || 0} pageSize={pageSize} onChange={handlePageChange} />
@@ -788,51 +1578,62 @@ export default function App() {
           </div>
         )}
 
-        {/* ══ AUTHOR PAGE ══ */}
         {page === "author" && authorTarget && (
           <AuthorPage name={authorTarget} onBack={() => setPage("search")}
-            onAuthorClick={handleAuthorClick} saved={saved} onSave={toggleSave} isSaved={isSaved} />
+            onAuthorClick={handleAuthorClick} saved={saved} onSave={toggleSave} isSaved={isSaved}
+            allPublications={[]} /* pass from context if available */
+          />
         )}
 
-        {/* ══ STATS PAGE ══ */}
         {page === "stats" && (
           <div className="content-page">
-            <h2>Estatísticas do Índice</h2>
+            <h2>{t("Estatísticas do Índice", "Index Statistics")}</h2>
             <StatsPanel stats={stats} />
           </div>
         )}
 
-        {/* ══ EDUCATION PAGE ══ */}
         {page === "edu" && (
           <div className="content-page">
-            <h2>Como funciona o Motor de Pesquisa</h2>
-            <p className="page-intro">Conceitos fundamentais de Recuperação de Informação implementados neste sistema.</p>
+            <h2>{t("Como funciona o Motor de Pesquisa", "How the Search Engine Works")}</h2>
+            <p className="page-intro">{t("Conceitos fundamentais de Recuperação de Informação implementados neste sistema.", "Core Information Retrieval concepts implemented in this system.")}</p>
             <EducationPanel />
           </div>
         )}
 
-        {/* ══ SAVED PAGE ══ */}
         {page === "saved" && (
           <div className="content-page">
-            <h2>Publicações Guardadas</h2>
-            {saved.length === 0
-              ? <div className="no-results">Ainda não guardou nenhuma publicação.</div>
-              : (
-                <div className="results-list">
-                  {saved.map((r, i) => (
-                    <ResultCard key={r.url || i} result={r} rank={i + 1}
-                      isSaved={true} onSave={toggleSave} onAuthorClick={handleAuthorClick} />
-                  ))}
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
+              <h2>{t("Publicações Guardadas", "Saved Publications")}</h2>
+              {saved.length > 0 && (
+                <div className="export-menu">
+                  <span>{t("Exportar:", "Export:")}</span>
+                  <button className="btn-action" onClick={() => exportJSON(saved)}>JSON</button>
+                  <button className="btn-action" onClick={() => exportCSV(saved)}>CSV</button>
+                  <button className="btn-action" onClick={() => exportBibTeX(saved)}>BibTeX</button>
                 </div>
-              )
+              )}
+            </div>
+            {saved.length === 0
+              ? <div className="no-results">{t("Ainda não guardou nenhuma publicação.", "No publications saved yet.")}</div>
+              : <div className="results-list">{saved.map((r, i) => <ResultCard key={r.url || i} result={r} rank={i + 1} isSaved={true} onSave={toggleSave} onAuthorClick={handleAuthorClick} />)}</div>
             }
+          </div>
+        )}
+
+        {/* REQ-F67: Help page */}
+        {page === "help" && <div className="content-page"><HelpPage /></div>}
+
+        {/* REQ-F63/F64: Preferences page */}
+        {page === "prefs" && (
+          <div className="content-page">
+            <PreferencesPanel prefs={prefs} update={updatePrefs} />
           </div>
         )}
       </main>
 
       <footer className="footer">
         <span>Universidade do Minho · Pesquisa e Recuperação de Informação · 2025/2026</span>
-        {stats && <span>Índice: {stats.total_documents} docs · {stats.total_terms} termos</span>}
+        {stats && <span>{t("Índice:", "Index:")} {stats.total_documents} docs · {stats.total_terms} {t("termos", "terms")}</span>}
       </footer>
     </div>
   );
