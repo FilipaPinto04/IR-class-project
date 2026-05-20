@@ -1,14 +1,6 @@
 """
 query.py — Boolean & Phrase/Proximity Retrieval Engine
 Universidade do Minho · PRI
-
-Implements:
-  REQ-B45  Recursive-descent Boolean parser with correct operator precedence
-           (NOT > AND > OR), full parenthesis support.
-  REQ-B46  Optional field-scoped search (title / abstract / all).
-  REQ-B47  Query expansion via WordNet (delegated to nlp.expand_query).
-  REQ-B48  Phrase queries  ("machine learning")
-           Proximity queries  (NEAR/k  e.g. "deep learning"~3)
 """
 
 import json
@@ -16,10 +8,6 @@ import math
 import re
 from src.search.nlp import preprocess, expand_query, ReductionMode
 
-
-# ---------------------------------------------------------------------------
-# Resource loader
-# ---------------------------------------------------------------------------
 
 def load_resources(
     index_path: str = 'data/index.json',
@@ -37,15 +25,7 @@ def load_resources(
         return None, None
 
 
-# ---------------------------------------------------------------------------
-# Skip-pointer intersection (unchanged — kept for AND efficiency)
-# ---------------------------------------------------------------------------
-
 def intersect_with_skips(list1: list, list2: list) -> list:
-    """
-    Optimised intersection of two sorted posting lists using skip pointers.
-    O(P1 + P2) with a lower constant due to skipping.
-    """
     answer = []
     i = j = 0
     skip1 = max(1, int(math.sqrt(len(list1))))
@@ -71,25 +51,11 @@ def intersect_with_skips(list1: list, list2: list) -> list:
     return answer
 
 
-# ---------------------------------------------------------------------------
-# REQ-B46 — Field-aware posting lookup
-# ---------------------------------------------------------------------------
-
 def _get_docs_for_term(
     term: str,
     index: dict,
     fields: list[str] | None = None,
 ) -> set[str]:
-    """
-    Returns the set of document URLs that contain *term*.
-
-    Args:
-        term:   Preprocessed (stemmed/lemmatised) index term.
-        index:  The inverted index loaded from disk.
-        fields: If given, only count a document if the term appears in at
-                least one of the specified fields ('title', 'abstract').
-                None means 'any field' (original behaviour).
-    """
     entry = index.get(term, {})
     postings = entry.get("postings", {})
 
@@ -98,41 +64,20 @@ def _get_docs_for_term(
 
     matching = set()
     for url, posting in postings.items():
-        # Support both old (int) and new (dict) posting formats
         if isinstance(posting, dict):
             doc_fields = posting.get("fields", [])
             if any(f in doc_fields for f in fields):
                 matching.add(url)
         else:
-            # Old index: no field info — include unconditionally
             matching.add(url)
     return matching
 
-
-# ---------------------------------------------------------------------------
-# REQ-B48 — Phrase and proximity search
-# ---------------------------------------------------------------------------
 
 def execute_phrase_query(
     phrase: str,
     index: dict,
     fields: list[str] | None = None,
 ) -> set[str]:
-    """
-    REQ-B48 — Exact phrase search.
-
-    Finds all documents where the tokens of *phrase* appear consecutively
-    (adjacent positions) in the correct order, using the position lists
-    stored in the index.
-
-    Args:
-        phrase: Raw phrase string (will be preprocessed).
-        index:  Inverted index (must contain 'positions' in each posting).
-        fields: Optional field restriction (REQ-B46 integration).
-
-    Returns:
-        Set of matching document URLs.
-    """
     tokens = preprocess(phrase)
     if not tokens:
         return set()
@@ -140,7 +85,6 @@ def execute_phrase_query(
     if len(tokens) == 1:
         return _get_docs_for_term(tokens[0], index, fields)
 
-    # Candidate docs must contain ALL tokens
     candidate_docs = _get_docs_for_term(tokens[0], index, fields)
     for token in tokens[1:]:
         candidate_docs &= _get_docs_for_term(token, index, fields)
@@ -150,7 +94,6 @@ def execute_phrase_query(
 
     results = set()
     for url in candidate_docs:
-        # Fetch position lists for each token in this document
         pos_lists = []
         valid = True
         for token in tokens:
@@ -164,8 +107,6 @@ def execute_phrase_query(
         if not valid or not all(pos_lists):
             continue
 
-        # Check consecutive adjacency: pos[k+1] == pos[k] + 1 for every k
-        # Anchor on the first token's positions
         for start_pos in pos_lists[0]:
             if all(
                 (start_pos + offset) in set(pos_lists[offset])
@@ -184,22 +125,6 @@ def execute_proximity_query(
     index: dict,
     fields: list[str] | None = None,
 ) -> set[str]:
-    """
-    REQ-B48 — Proximity search  (NEAR/k operator).
-
-    Returns documents where *term1* and *term2* appear within
-    *max_distance* token positions of each other (in either order).
-
-    Args:
-        term1:        First search term (raw, will be preprocessed).
-        term2:        Second search term (raw, will be preprocessed).
-        max_distance: Maximum allowed positional gap (inclusive).
-        index:        Inverted index with position lists.
-        fields:       Optional field restriction.
-
-    Returns:
-        Set of matching document URLs.
-    """
     t1_tokens = preprocess(term1)
     t2_tokens = preprocess(term2)
     if not t1_tokens or not t2_tokens:
@@ -220,7 +145,6 @@ def execute_proximity_query(
         positions1 = sorted(p1_posting["positions"] if isinstance(p1_posting, dict) else [])
         positions2 = sorted(p2_posting["positions"] if isinstance(p2_posting, dict) else [])
 
-        # Two-pointer scan: O(P1 + P2)
         i = j = 0
         found = False
         while i < len(positions1) and j < len(positions2) and not found:
@@ -238,31 +162,7 @@ def execute_proximity_query(
     return results
 
 
-# ---------------------------------------------------------------------------
-# REQ-B45 — Recursive-descent Boolean parser
-# ---------------------------------------------------------------------------
-#
-# Grammar (precedence: NOT > AND > OR, parentheses override):
-#
-#   expr   ::= term  ( 'OR'  term  )*
-#   term   ::= factor ( 'AND'? factor )*      ← implicit AND between words
-#   factor ::= 'NOT' factor
-#            | '"' phrase '"'                 ← phrase query  (REQ-B48)
-#            | word 'NEAR/' digit+ word       ← proximity     (REQ-B48)
-#            | '(' expr ')'
-#            | word
-#
-# The lexer produces tokens of the form:
-#   ('OP',    'AND'|'OR'|'NOT')
-#   ('NEAR',  k)               — e.g. NEAR/3
-#   ('PHRASE', raw_string)     — content inside "..."
-#   ('LPAREN', '(')
-#   ('RPAREN', ')')
-#   ('WORD',  raw_string)
-
 class _Lexer:
-    """Tokenises a raw Boolean query string into typed tokens."""
-
     _NEAR_RE    = re.compile(r'near/(\d+)', re.IGNORECASE)
     _PHRASE_RE  = re.compile(r'"([^"]*)"')
     _OPERATORS  = {'and', 'or', 'not'}
@@ -273,8 +173,6 @@ class _Lexer:
         self._tokenise(query)
 
     def _tokenise(self, query: str) -> None:
-        # Extract quoted phrases first (they may contain spaces)
-        # We process the string left-to-right, replacing phrases with placeholders
         phrase_map: dict[str, str] = {}
         def _replace_phrase(m: re.Match) -> str:
             key = f"__PHRASE_{len(phrase_map)}__"
@@ -282,8 +180,6 @@ class _Lexer:
             return f" {key} "
 
         query = self._PHRASE_RE.sub(_replace_phrase, query)
-
-        # Pad parentheses so they split cleanly
         query = query.replace('(', ' ( ').replace(')', ' ) ')
         raw_tokens = query.split()
 
@@ -292,24 +188,17 @@ class _Lexer:
 
             if raw in phrase_map:
                 self._tokens.append(('PHRASE', phrase_map[raw]))
-
             elif raw_lower in self._OPERATORS:
                 self._tokens.append(('OP', raw_lower.upper()))
-
             elif self._NEAR_RE.fullmatch(raw_lower):
                 k = int(self._NEAR_RE.fullmatch(raw_lower).group(1))
                 self._tokens.append(('NEAR', k))
-
             elif raw == '(':
                 self._tokens.append(('LPAREN', '('))
-
             elif raw == ')':
                 self._tokens.append(('RPAREN', ')'))
-
             else:
                 self._tokens.append(('WORD', raw))
-
-    # ── Cursor helpers ────────────────────────────────────────────────────
 
     def peek(self) -> tuple[str, object] | None:
         if self._pos < len(self._tokens):
@@ -333,14 +222,6 @@ class _Lexer:
 
 
 class BooleanParser:
-    """
-    REQ-B45 — Recursive-descent parser for Boolean queries.
-
-    Correct operator precedence:  NOT > AND > OR
-    Supports: AND, OR, NOT, implicit AND, parentheses,
-              phrase queries ("…"), proximity (NEAR/k).
-    """
-
     def __init__(
         self,
         index: dict,
@@ -358,10 +239,7 @@ class BooleanParser:
         result = self._expr(lexer)
         return result if result is not None else set()
 
-    # ── Grammar rules ─────────────────────────────────────────────────────
-
     def _expr(self, lex: _Lexer) -> set[str]:
-        """expr ::= term ( 'OR' term )*"""
         left = self._term(lex)
         while lex.match_op('OR'):
             lex.consume()
@@ -370,34 +248,28 @@ class BooleanParser:
         return left or set()
 
     def _term(self, lex: _Lexer) -> set[str]:
-        """term ::= factor ( 'AND'? factor )*  — implicit AND between words"""
         left = self._factor(lex)
         while lex.is_operand() and not lex.match_op('OR'):
-            # Consume explicit AND if present, otherwise treat as implicit AND
             if lex.match_op('AND'):
                 lex.consume()
             right = self._factor(lex)
-            # AND = intersection (with skip pointers)
             l_sorted = sorted(left or [])
             r_sorted = sorted(right or [])
             left = set(intersect_with_skips(l_sorted, r_sorted))
         return left or set()
 
     def _factor(self, lex: _Lexer) -> set[str]:
-        """factor ::= NOT factor | '(' expr ')' | phrase | proximity | word"""
         tok = lex.peek()
         if tok is None:
             return set()
 
         kind, value = tok
 
-        # NOT — highest precedence unary operator
         if kind == 'OP' and value == 'NOT':
             lex.consume()
             operand = self._factor(lex)
             return self._all_doc_ids - (operand or set())
 
-        # Grouped sub-expression
         if kind == 'LPAREN':
             lex.consume()
             result = self._expr(lex)
@@ -405,17 +277,13 @@ class BooleanParser:
                 lex.consume()
             return result or set()
 
-        # Phrase query  "…"  (REQ-B48)
         if kind == 'PHRASE':
             lex.consume()
             return execute_phrase_query(value, self._index, self._fields)
 
-        # Proximity query  word NEAR/k word  (REQ-B48)
-        # Detected when current token is WORD and next is NEAR
         if kind == 'WORD':
             tokens_ahead = lex._tokens
             pos = lex._pos
-            # Look ahead: WORD NEAR/k WORD pattern
             if (pos + 2 < len(tokens_ahead)
                     and tokens_ahead[pos + 1][0] == 'NEAR'
                     and tokens_ahead[pos + 2][0] == 'WORD'):
@@ -424,23 +292,36 @@ class BooleanParser:
                 word2 = lex.consume()[1]
                 return execute_proximity_query(word1, word2, k, self._index, self._fields)
 
-            # Plain word
             lex.consume()
             return self._resolve_word(value)
 
-        # Fallback — skip unknown token
         lex.consume()
         return set()
 
-    # ── Term resolution with optional expansion ────────────────────────────
-
     def _resolve_word(self, raw: str) -> set[str]:
         """
-        Preprocess a raw query word, optionally expand via WordNet (REQ-B47),
-        and return the union of matching documents across all resulting terms.
+        Preprocess the raw word and look it up in the index.
+        If preprocessing removes the word (e.g. it's a stopword like 'silva'),
+        fall back to searching the raw lowercased form directly in the index.
+        This ensures proper nouns used as author names are still found.
         """
+        from nltk.stem import PorterStemmer
+        from unidecode import unidecode
+
         base_tokens = preprocess(raw)
+
+        # Fallback: if preprocessing eliminated the word (stopword / too short),
+        # try the raw form and common stemmed variants directly in the index
         if not base_tokens:
+            raw_norm = unidecode(raw.lower())
+            # Try exact match in index
+            if raw_norm in self._index:
+                return _get_docs_for_term(raw_norm, self._index, self._fields)
+            # Try stemmed form
+            stemmer = PorterStemmer()
+            stemmed = stemmer.stem(raw_norm)
+            if stemmed in self._index:
+                return _get_docs_for_term(stemmed, self._index, self._fields)
             return set()
 
         if self._expand:
@@ -454,10 +335,6 @@ class BooleanParser:
         return docs
 
 
-# ---------------------------------------------------------------------------
-# Public API — backward-compatible wrapper
-# ---------------------------------------------------------------------------
-
 def execute_boolean_query(
     query: str,
     index: dict,
@@ -465,30 +342,9 @@ def execute_boolean_query(
     fields: list[str] | None = None,
     expand: bool = False,
 ) -> set[str]:
-    """
-    Main entry point for Boolean retrieval.
-
-    Args:
-        query:        Raw query string. Supports AND / OR / NOT (with correct
-                      precedence), implicit AND, parentheses, phrase queries
-                      ("…"), and proximity queries (word NEAR/k word).
-        index:        Inverted index loaded from disk.
-        all_doc_ids:  Full set of document URLs (used for NOT complement).
-        fields:       Restrict matching to specific fields: ['title'],
-                      ['abstract'], or None for all fields.  (REQ-B46)
-        expand:       When True, each query term is expanded with WordNet
-                      synonyms before lookup.  (REQ-B47)
-
-    Returns:
-        Set of matching document URLs.
-    """
     parser = BooleanParser(index, all_doc_ids, fields=fields, expand=expand)
     return parser.parse(query)
 
-
-# ---------------------------------------------------------------------------
-# CLI (unchanged interface)
-# ---------------------------------------------------------------------------
 
 def main() -> None:
     index, all_doc_ids = load_resources()
@@ -498,14 +354,6 @@ def main() -> None:
     print("\n" + "=" * 55)
     print("   BILINGUAL BOOLEAN SEARCH ENGINE (v3.0)   ")
     print("=" * 55)
-    print("Features:")
-    print(" - NLP: Stemming, Lemmatization, Stopwords")
-    print(" - Logic: AND, OR, NOT (precedence: NOT > AND > OR)")
-    print(" - Parentheses for grouping")
-    print(" - Phrase search:     \"machine learning\"")
-    print(" - Proximity search:  deep NEAR/3 learning")
-    print(" - Field filter:      --title | --abstract")
-    print(" - Query expansion:   --expand")
 
     while True:
         raw = input("\nEnter query (or 'exit'): ").strip()
@@ -529,9 +377,7 @@ def main() -> None:
         if matches:
             print(f"\n[Success] Found {len(matches)} document(s):")
             for url in sorted(matches)[:20]:
-                print(f"  → {url}")
-            if len(matches) > 20:
-                print(f"  … and {len(matches) - 20} more.")
+                print(f"  -> {url}")
         else:
             print("\n[Notice] No documents found matching that query.")
 

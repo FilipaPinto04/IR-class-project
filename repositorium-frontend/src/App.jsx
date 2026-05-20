@@ -253,30 +253,28 @@ const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick, compact }) =
               <p className="snippet">{result.abstract.slice(0, 200)}{result.abstract.length > 200 ? "…" : ""}</p>
             )
         }
-        {!compact && result.abstract && (
+        {result.abstract && (
           <button className="btn-text" onClick={() => setExpanded(e => !e)}>
             <Icon name={expanded ? "chevronUp" : "chevronDown"} size={13} />
             {expanded ? "Ocultar resumo" : "Ver resumo completo"}
           </button>
         )}
         {expanded && <p className="abstract-full">{result.abstract}</p>}
-        {!compact && (
-          <div className="result-actions">
-            {result.pdf_link && (
-              <a className="btn-action" href={result.pdf_link} target="_blank" rel="noopener noreferrer">
-                <Icon name="pdf" size={13} /> PDF
-              </a>
-            )}
-            {result.doi && (
-              <a className="btn-action" href={`https://doi.org/${result.doi}`} target="_blank" rel="noopener noreferrer">
-                DOI
-              </a>
-            )}
-            <button className={`btn-action ${isSaved ? "saved" : ""}`} onClick={() => onSave(result)}>
-              <Icon name="save" size={13} /> {isSaved ? "Guardado" : "Guardar"}
-            </button>
-          </div>
-        )}
+        <div className="result-actions">
+          {result.pdf_link && (
+            <a className="btn-action" href={result.pdf_link} target="_blank" rel="noopener noreferrer">
+              <Icon name="pdf" size={13} /> PDF
+            </a>
+          )}
+          {result.doi && (
+            <a className="btn-action" href={`https://doi.org/${result.doi}`} target="_blank" rel="noopener noreferrer">
+              DOI
+            </a>
+          )}
+          <button className={`btn-action ${isSaved ? "saved" : ""}`} onClick={() => onSave(result)}>
+            <Icon name="save" size={13} /> {isSaved ? "Guardado" : "Guardar"}
+          </button>
+        </div>
       </div>
     </article>
   );

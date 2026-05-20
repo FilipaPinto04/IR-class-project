@@ -251,18 +251,35 @@ def _paginate(items, page: int, page_size: int):
     return items[start: start + page_size]
 
 
-def _apply_filters(urls: List[str], year: Optional[int], doc_type: Optional[str]) -> List[str]:
-    if not year and not doc_type:
+def _apply_filters(
+    urls: List[str],
+    year: Optional[int] = None,
+    doc_type: Optional[str] = None,
+    research_area: Optional[str] = None,
+    language: Optional[str] = None,
+) -> List[str]:
+    if not any([year, doc_type, research_area, language]):
         return urls
     filtered = []
     for url in urls:
         pub = PUB_LOOKUP.get(url, {})
         if year:
-            pub_date = str(pub.get("date", "") or pub.get("publication_date", ""))
-            if str(year) not in pub_date:
+            # Support year, date, and publication_date fields
+            pub_year = str(
+                pub.get("year", "") or pub.get("date", "") or pub.get("publication_date", "")
+            )
+            if str(year) not in pub_year:
                 continue
         if doc_type:
             if doc_type.lower() not in str(pub.get("type", "")).lower():
+                continue
+        if research_area:
+            pub_area = str(pub.get("predicted_category", "") or pub.get("category", "")).lower()
+            if research_area.lower() not in pub_area:
+                continue
+        if language:
+            pub_lang = str(pub.get("language", "")).lower()
+            if pub_lang and language.lower() not in pub_lang:
                 continue
         filtered.append(url)
     return filtered
@@ -274,6 +291,50 @@ def _parse_fields(fields: Optional[str]) -> Optional[List[str]]:
         return None
     parsed = [f.strip() for f in fields.split(",") if f.strip() in ("title", "abstract")]
     return parsed if parsed else None
+
+
+def _filter_by_fields(urls: List[str], query: str, field_list: Optional[List[str]]) -> List[str]:
+    """
+    Post-ranking field filter: removes documents that don't actually contain
+    any query term in the requested fields.
+    If field_list is None (all fields), no filtering is applied.
+    """
+    if not field_list:
+        return urls
+
+    # Build candidate tokens: preprocessed + raw lowercased (catches stopwords/proper nouns)
+    from unidecode import unidecode
+    query_tokens = preprocess(query)
+    raw_tokens = [
+        unidecode(w.lower()) for w in query.split()
+        if w.lower() not in {"and", "or", "not"} and len(w) > 1
+    ]
+    # Combine both — preprocessed first, raw as fallback
+    all_tokens = list(dict.fromkeys(query_tokens + raw_tokens))
+
+    if not all_tokens:
+        return urls
+
+    filtered = []
+    for url in urls:
+        match = False
+        for token in all_tokens:
+            posting = INDEX.get(token, {}).get("postings", {}).get(url)
+            if posting is None:
+                continue
+            if isinstance(posting, dict):
+                for field in field_list:
+                    if posting.get(f"{field}_tf", 0) > 0:
+                        match = True
+                        break
+            else:
+                # Old index format: no field info, include unconditionally
+                match = True
+            if match:
+                break
+        if match:
+            filtered.append(url)
+    return filtered
 
 
 def _respond(resp: SearchResponse, fmt: str):
@@ -303,8 +364,8 @@ def search(
     q: str = Query(..., description="Texto a pesquisar"),
     mode: str = Query(
         "custom",
-        description="'custom' (implementação própria) ou 'sklearn'",
-        pattern="^(custom|sklearn)$",
+        description="'custom', 'sklearn', 'bm25' ou 'tf'",
+        pattern="^(custom|sklearn|bm25|tf)$",
     ),
     fields: Optional[str] = Query(
         None,
@@ -313,15 +374,14 @@ def search(
     expand: bool = Query(False, description="REQ-B47 — Expandir termos com sinónimos WordNet."),
     year: Optional[int] = Query(None, description="Filtrar por ano de publicação"),
     doc_type: Optional[str] = Query(None, description="Filtrar por tipo de documento"),
+    research_area: Optional[str] = Query(None, description="Filtrar por área de investigação"),
+    language: Optional[str] = Query(None, description="Filtrar por idioma (pt/en)"),
     page: int = Query(1, ge=1),
     page_size: int = Query(10, ge=1, le=100),
     format: str = Query("json", pattern="^(json|xml)$", description="REQ-B52 — 'json' ou 'xml'."),
 ):
     """
-    **Pesquisa por texto livre** com ranking TF-IDF.
-
-    Suporta filtragem por campo (`fields`), expansão de query (`expand`) e
-    resposta em JSON ou XML (`format`).
+    **Pesquisa por texto livre** com ranking TF-IDF, BM25 ou TF-only.
     """
     if not INDEX:
         raise HTTPException(status_code=503, detail="Index not loaded.")
@@ -331,14 +391,21 @@ def search(
 
     if mode == "custom":
         raw_results = get_custom_ranking(q, INDEX, max(len(PUBLICATIONS), 1), fields=field_list, expand=expand)
-    else:
+    elif mode == "sklearn":
         if not PUBLICATIONS:
             raise HTTPException(status_code=503, detail="Publications data not available.")
         raw_results = get_sklearn_ranking(q, PUBLICATIONS, fields=field_list)
+    elif mode == "bm25":
+        raw_results = get_bm25_ranking(q, INDEX, max(len(PUBLICATIONS), 1))
+    elif mode == "tf":
+        raw_results = get_tf_ranking(q, INDEX)
+    else:
+        raw_results = []
 
     urls_ordered = [url for url, _ in raw_results]
     scores       = {url: score for url, score in raw_results}
-    filtered     = _apply_filters(urls_ordered, year, doc_type)
+    filtered     = _apply_filters(urls_ordered, year, doc_type, research_area, language)
+    filtered     = _filter_by_fields(filtered, q, field_list)
     paginated    = _paginate(filtered, page, page_size)
     hl_tokens    = _query_surface_tokens(q)
     results      = [_build_result(url, scores.get(url), PUB_LOOKUP.get(url), hl_tokens) for url in paginated]
@@ -372,7 +439,8 @@ def search_boolean(
 
     matching_urls = execute_boolean_query(q, INDEX, ALL_DOC_IDS, fields=field_list, expand=expand)
     urls_list     = sorted(list(matching_urls))
-    filtered      = _apply_filters(urls_list, year, doc_type)
+    filtered      = _apply_filters(urls_list, year, doc_type, None, None)
+    filtered      = _filter_by_fields(filtered, q, field_list)
     paginated     = _paginate(filtered, page, page_size)
     hl_tokens     = _query_surface_tokens(q)
     results       = [_build_result(url, None, PUB_LOOKUP.get(url), hl_tokens) for url in paginated]
@@ -407,7 +475,8 @@ def search_phrase(
 
     matching_urls = execute_phrase_query(q, INDEX, field_list)
     urls_list     = sorted(list(matching_urls))
-    filtered      = _apply_filters(urls_list, year, doc_type)
+    filtered      = _apply_filters(urls_list, year, doc_type, None, None)
+    filtered      = _filter_by_fields(filtered, q, field_list)
     paginated     = _paginate(filtered, page, page_size)
     hl_tokens     = _query_surface_tokens(q)
     results       = [_build_result(url, None, PUB_LOOKUP.get(url), hl_tokens) for url in paginated]

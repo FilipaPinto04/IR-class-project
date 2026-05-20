@@ -142,13 +142,24 @@ def get_sklearn_ranking(
     corpus = [_doc_text(p) for p in publications]
     urls   = [p.get('url') for p in publications]
 
-    vectorizer  = TfidfVectorizer(stop_words=None)
-    tfidf_matrix = vectorizer.fit_transform(corpus)
-    query_vec    = vectorizer.transform([query])
+    # Filter out empty/placeholder documents
+    non_empty = [(c, u) for c, u in zip(corpus, urls) if c.strip() and c.strip() not in ("N/A", "")]
+    if not non_empty:
+        return []
+    corpus_clean, urls_clean = zip(*non_empty)
 
+    from unidecode import unidecode
+    vectorizer = TfidfVectorizer(
+        stop_words=None,
+        lowercase=True,
+        preprocessor=lambda t: unidecode(t),
+        min_df=1,
+    )
+    tfidf_matrix  = vectorizer.fit_transform(corpus_clean)
+    query_vec     = vectorizer.transform([unidecode(query)])
     cosine_sim    = cosine_similarity(query_vec, tfidf_matrix).flatten()
     ranked_indices = cosine_sim.argsort()[::-1]
-    return [(urls[i], cosine_sim[i]) for i in ranked_indices if cosine_sim[i] > 0]
+    return [(urls_clean[i], float(cosine_sim[i])) for i in ranked_indices if cosine_sim[i] > 0]
 
 
 # ---------------------------------------------------------------------------

@@ -77,9 +77,15 @@ def build_index(
         title_tokens    = preprocess(pub.get('title', ''))
         abstract_tokens = preprocess(pub.get('abstract', ''))
 
+        # Index author names as a searchable field
+        authors = pub.get('authors', [])
+        if isinstance(authors, str):
+            authors = [a.strip() for a in authors.split(';') if a.strip()]
+        author_text  = ' '.join(authors)
+        author_tokens = preprocess(author_text)
+
         # Global token stream for position tracking (REQ-B48)
-        # Positions are assigned across the concatenated title+abstract stream
-        all_tokens = title_tokens + abstract_tokens
+        all_tokens = title_tokens + abstract_tokens + author_tokens
 
         # Per-field TF
         title_tf: dict[str, int] = {}
@@ -90,33 +96,38 @@ def build_index(
         for t in abstract_tokens:
             abstract_tf[t] = abstract_tf.get(t, 0) + 1
 
+        author_tf: dict[str, int] = {}
+        for t in author_tokens:
+            author_tf[t] = author_tf.get(t, 0) + 1
+
         # Global positions (REQ-B48)
         positions: dict[str, list[int]] = {}
         for pos, token in enumerate(all_tokens):
             positions.setdefault(token, []).append(pos)
 
         # All unique terms in this document
-        all_terms = set(title_tf) | set(abstract_tf)
+        all_terms = set(title_tf) | set(abstract_tf) | set(author_tf)
 
         for term in all_terms:
             if term not in inverted_index:
                 inverted_index[term] = {"df": 0, "postings": {}}
 
-            t_tf = title_tf.get(term, 0)
-            a_tf = abstract_tf.get(term, 0)
-            total_tf = t_tf + a_tf
+            t_tf  = title_tf.get(term, 0)
+            a_tf  = abstract_tf.get(term, 0)
+            au_tf = author_tf.get(term, 0)
+            total_tf = t_tf + a_tf + au_tf
 
             fields = []
-            if t_tf > 0:
-                fields.append("title")
-            if a_tf > 0:
-                fields.append("abstract")
+            if t_tf  > 0: fields.append("title")
+            if a_tf  > 0: fields.append("abstract")
+            if au_tf > 0: fields.append("authors")
 
             inverted_index[term]["postings"][url] = {
                 "tf":          total_tf,
                 "fields":      fields,
                 "title_tf":    t_tf,
                 "abstract_tf": a_tf,
+                "author_tf":   au_tf,
                 "positions":   positions.get(term, []),   # REQ-B48
             }
 
