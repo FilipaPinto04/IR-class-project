@@ -46,56 +46,30 @@ app.add_middleware(
 # Data loading
 # ---------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------
-# Data loading (Dual Index Architecture)
-# ---------------------------------------------------------------------------
-
-INDEX_STEM = {}
-INDEX_LEMMA = {}
-PUBLICATIONS = []
-ALL_DOC_IDS = set()
-PUB_LOOKUP = {}
-
-# Rota calibrada para o ficheiro gerado após a classificação
-PUBS_PATH = "data/categorized_publications.json"
+INDEX_PATH = "data/index.json"
+PUBS_PATH  = "data/scraper_results.json"
 
 
-def _load_dual_data():
-    global INDEX_STEM, INDEX_LEMMA, PUBLICATIONS, ALL_DOC_IDS, PUB_LOOKUP
-    
-    # 1. Carregar Índice de Stemming
-    stem_path = "data/index_stem.json"
-    if os.path.exists(stem_path):
-        with open(stem_path, "r", encoding="utf-8") as f:
-            INDEX_STEM = json.load(f)
-            
-    # 2. Carregar Índice de Lematização
-    lemma_path = "data/index_lemma.json"
-    if os.path.exists(lemma_path):
-        with open(lemma_path, "r", encoding="utf-8") as f:
-            INDEX_LEMMA = json.load(f)
-            
-    # 3. Carregar Publicações Enriquecidas com Metadados/Categorias do Classificador
+def _load_data():
+    if not os.path.exists(INDEX_PATH):
+        raise RuntimeError(f"Index not found at '{INDEX_PATH}'. Run the indexer first.")
+    with open(INDEX_PATH, "r", encoding="utf-8") as f:
+        index = json.load(f)
+    publications: List[dict] = []
     if os.path.exists(PUBS_PATH):
         with open(PUBS_PATH, "r", encoding="utf-8") as f:
-            PUBLICATIONS = json.load(f)
-            
-    ALL_DOC_IDS = {p.get("url") for p in PUBLICATIONS if p.get("url")}
-    PUB_LOOKUP  = {p.get("url"): p for p in PUBLICATIONS if p.get("url")}
-    print(f"[DB-API] Inicializada. Stemming: {len(INDEX_STEM)} termos | Lemmatization: {len(INDEX_LEMMA)} termos")
+            publications = json.load(f)
+    all_doc_ids = {p.get("url") for p in publications if p.get("url")}
+    pub_lookup  = {p.get("url"): p for p in publications if p.get("url")}
+    return index, publications, all_doc_ids, pub_lookup
 
 
 try:
-    _load_dual_data()
+    INDEX, PUBLICATIONS, ALL_DOC_IDS, PUB_LOOKUP = _load_data()
 except Exception as _e:
-    print(f"[WARNING] Erro no carregamento de dados em tempo de arranque: {_e}")
+    INDEX, PUBLICATIONS, ALL_DOC_IDS, PUB_LOOKUP = {}, [], set(), {}
+    print(f"[WARNING] Could not load data at startup: {_e}")
 
-
-def _get_active_index(reduction_mode: str) -> dict:
-    """Seleciona o índice invertido adequado ao modo léxico pretendido."""
-    if reduction_mode == "stemming":
-        return INDEX_STEM
-    return INDEX_LEMMA  # Fallback padrão para lematização
 
 # ---------------------------------------------------------------------------
 # Pydantic models
@@ -441,11 +415,15 @@ def root():
 
 
 # ── 1. Free-text search (TF-IDF) ───────────────────────────────────────────
+
 @app.get("/search", tags=["Search"])
 def search(
     q: str = Query(..., description="Texto a pesquisar"),
-    reduction_mode: str = Query("lemmatization", description="Modo NLP: stemming ou lemmatization"), # ◄ NOVO
-    mode: str = Query("custom", pattern="^(custom|sklearn|bm25|tf)$"),
+    mode: str = Query(
+        "custom",
+        description="'custom', 'sklearn', 'bm25' ou 'tf'",
+        pattern="^(custom|sklearn|bm25|tf)$",
+    ),
     fields: Optional[str] = Query(
         None,
         description="REQ-B46 — Restringir a 'title', 'abstract' ou 'title,abstract' (omitir = todos).",
@@ -460,43 +438,46 @@ def search(
     page: int = Query(1, ge=1),
     page_size: int = Query(10, ge=1, le=100),
     format: str = Query("json", pattern="^(json|xml)$", description="REQ-B52 — 'json' ou 'xml'."),
-    # ... mantém os teus restantes parâmetros originais (fields, expand, etc.)
 ):
-    # Capturar dinamicamente o índice correto
-    current_index = _get_active_index(reduction_mode)
-    
-    if not current_index:
-        raise HTTPException(status_code=503, detail=f"O índice para '{reduction_mode}' não foi gerado.")
-        
-    q = sanitize_query(q)
+    """
+    **Pesquisa por texto livre** com ranking TF-IDF, BM25 ou TF-only.
+
+    Filtro de data: usa ``year`` para ano exato, ou ``year_from``/``year_to``
+    para um intervalo (ambos inclusivos, qualquer um pode ser omitido).
+    """
+    if not INDEX:
+        raise HTTPException(status_code=503, detail="Index not loaded.")
+
+    q          = sanitize_query(q)
     field_list = _parse_fields(fields)
 
-    # Substitui a variável global antiga INDEX por current_index nas chamadas de ranking:
     if mode == "custom":
-        raw_results = get_custom_ranking(q, current_index, max(len(PUBLICATIONS), 1), fields=field_list, expand=expand)
-    elif mode == "bm25":
-        raw_results = get_bm25_ranking(q, current_index, max(len(PUBLICATIONS), 1))
-    elif mode == "tf":
-        raw_results = get_tf_ranking(q, current_index)
+        raw_results = get_custom_ranking(q, INDEX, max(len(PUBLICATIONS), 1), fields=field_list, expand=expand)
     elif mode == "sklearn":
         if not PUBLICATIONS:
             raise HTTPException(status_code=503, detail="Publications data not available.")
         raw_results = get_sklearn_ranking(q, PUBLICATIONS, fields=field_list)
+    elif mode == "bm25":
+        raw_results = get_bm25_ranking(q, INDEX, max(len(PUBLICATIONS), 1))
+    elif mode == "tf":
+        raw_results = get_tf_ranking(q, INDEX)
     else:
         raw_results = []
 
     urls_ordered = [url for url, _ in raw_results]
     scores       = {url: score for url, score in raw_results}
-    filtered     = _apply_filters(urls_ordered, year, doc_type, research_area, language, year_from=year_from, year_to=year_to)
-    
-    # Passa também o current_index para o filtro pós-ranking de campos se necessário
-    filtered     = _filter_by_fields_dual(filtered, q, field_list, current_index) 
+    filtered     = _apply_filters(
+        urls_ordered, year, doc_type, research_area, language,
+        year_from=year_from, year_to=year_to,
+    )
+    filtered     = _filter_by_fields(filtered, q, field_list)
     paginated    = _paginate(filtered, page, page_size)
     hl_tokens    = _query_surface_tokens(q)
     results      = [_build_result(url, scores.get(url), PUB_LOOKUP.get(url), hl_tokens) for url in paginated]
 
     resp = SearchResponse(query=q, total=len(filtered), page=page, page_size=page_size, results=results)
     return _respond(resp, format)
+
 
 # ── 2. Boolean search ───────────────────────────────────────────────────────
 
@@ -724,21 +705,12 @@ def get_document(url: str = Query(..., description="URL/handle do documento")):
 @app.get("/stats", tags=["Info"])
 def stats():
     """**Estatísticas do índice** — termos, documentos, top 20 por DF."""
-    # Usamos o INDEX_LEMMA (ou INDEX_STEM) como base para as estatísticas globais
-    global INDEX_LEMMA, ALL_DOC_IDS
-    
-    if not INDEX_LEMMA:
-        # Se os índices ainda não foram gerados pelos scripts, evitamos o crash
-        return {
-            "total_terms": 0,
-            "total_documents": len(ALL_DOC_IDS),
-            "top_20_terms_by_df": [],
-            "notice": "Os índices ainda não foram gerados no Docker. Executa o indexer.py no terminal."
-        }
+    if not INDEX:
+        raise HTTPException(status_code=503, detail="Index not loaded.")
     
     # Filtra os termos para ignorar variações de "n/a" ou termos vazios
     filtered_index = {
-        t: d for t, d in INDEX_LEMMA.items() 
+        t: d for t, d in INDEX.items() 
         if t.lower().strip() not in ("n/a", "na", "")
     }
     
@@ -746,7 +718,7 @@ def stats():
     top_terms = sorted(filtered_index.items(), key=lambda x: x[1]["df"], reverse=True)[:20]
     
     return {
-        "total_terms":        len(INDEX_LEMMA),
+        "total_terms":        len(INDEX),
         "total_documents":    len(ALL_DOC_IDS),
         "top_20_terms_by_df": [
             {"term": t, "document_frequency": d["df"]} for t, d in top_terms

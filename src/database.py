@@ -38,7 +38,6 @@ def init_db():
             processed   TEXT,       -- REQ-B10: JSON list of tokens after NLP
             pdf_link    TEXT,       -- REQ-B04
             affiliations TEXT       -- REQ-B05: JSON list of affiliations
-            pdf_text     TEXT       -- NOVO: texto completo extraído do PDF
         )
     """)
 
@@ -98,19 +97,19 @@ def insert_publications(publications: list, processed_map: dict = None):
 
         # Insert document (skip if already exists)
         cur.execute("""
-            INSERT OR IGNORE INTO documents (url, title, abstract, doi, year, raw_text, processed, pdf_link, affiliations)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT OR IGNORE INTO documents (url, title, abstract, doi, year, raw_text, processed, pdf_link, affiliations, pdf_text)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            url,
+            pub.get("url"),
             pub.get("title"),
             pub.get("abstract"),
             pub.get("doi"),
             pub.get("year"),
-            raw_text,
-            processed,
+            pub.get("raw_text"),
+            pub.get("processed"),
             pub.get("pdf_link"),
-            json.dumps(affiliations),
-            pub.get("pdf_text"),
+            pub.get("affiliations"),
+            pub.get("pdf_text")
         ))
 
         if cur.rowcount == 0:
