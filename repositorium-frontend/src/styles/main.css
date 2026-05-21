@@ -434,6 +434,71 @@ input, select, textarea { font-family: inherit; }
 }
 .btn-text:hover { color: var(--accent-2); }
 
+/*pdf*/
+.pdf-text-box {
+  margin-top: 10px;
+  padding: 14px 16px;
+  background: #fdf8f2;
+  border: 1px solid #e8d8c0;
+  border-radius: var(--radius);
+  border-left: 3px solid var(--accent);
+}
+.pdf-text-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+.pdf-text-content {
+  font-size: .82rem;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.pdf-text-note {
+  margin-top: 8px;
+  font-size: .72rem;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.pdf-text-box {
+  margin-top: 10px;
+  padding: 14px 16px;
+  background: #fdf8f2;
+  border: 1px solid #e8d8c0;
+  border-radius: var(--radius);
+  border-left: 3px solid var(--accent);
+}
+.pdf-text-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+.pdf-text-content {
+  font-size: .82rem;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.pdf-text-note {
+  margin-top: 8px;
+  font-size: .72rem;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
 /* ─── PAGINATION ─────────────────────────────────────────────────────────── */
 .pagination { display: flex; justify-content: center; gap: 4px; margin-top: 24px; }
 .pagination button {

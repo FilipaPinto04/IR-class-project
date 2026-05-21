@@ -415,13 +415,13 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
         <>
           <div className="comp-tabs">
             <button className={`comp-tab ${activeTab === "ranking" ? "active" : ""}`} onClick={() => setActiveTab("ranking")}>
-              📊 TF-IDF Custom vs sklearn (REQ-F51)
+              📊 TF-IDF Custom vs sklearn 
             </button>
             <button className={`comp-tab ${activeTab === "chart" ? "active" : ""}`} onClick={() => setActiveTab("chart")}>
-              📈 Gráfico de scores (REQ-F54)
+              📈 Gráfico de scores 
             </button>
             <button className={`comp-tab ${activeTab === "nlp" ? "active" : ""}`} onClick={() => setActiveTab("nlp")}>
-              🔤 Stemming vs Lematização (REQ-F52)
+              🔤 Stemming vs Lematização 
             </button>
           </div>
 
@@ -539,7 +539,7 @@ const AnalyticsDashboard = ({ stats }) => {
 
   return (
     <div className="analytics-dashboard">
-      <h3></h3>
+      <h3>Dashboard de Analytics</h3>
 
       {/* REQ-F56: Index size stats */}
       <div className="analytics-section">
@@ -640,11 +640,20 @@ const AnalyticsDashboard = ({ stats }) => {
 };
 
 // ─── STATS PANEL ──────────────────────────────────────────────────────────────
-// ─── STATS PANEL ──────────────────────────────────────────────────────────────
 const StatsPanel = ({ stats }) => {
   if (!stats) return <div className="stats-loading">A carregar estatísticas…</div>;
   return (
     <div className="stats-panel">
+      <div className="stat-grid">
+        <div className="stat-box">
+          <span className="stat-val">{stats.total_documents?.toLocaleString()}</span>
+          <span className="stat-label">Documentos</span>
+        </div>
+        <div className="stat-box">
+          <span className="stat-val">{stats.total_terms?.toLocaleString()}</span>
+          <span className="stat-label">Termos indexados</span>
+        </div>
+      </div>
       <AnalyticsDashboard stats={stats} />
     </div>
   );
@@ -1246,12 +1255,14 @@ export default function App() {
       } else if (yearTo) {
         yearParams.year_to = yearTo;
       }
+      // fields param: "title", "abstract", or "" (all) — maps to API fields param
+      const fieldsParam = fields || undefined;
       if (searchMode === "boolean") {
-        data = await apiFetch("/search/boolean", { q, ...yearParams, doc_type: docType || undefined, page: pg, page_size: pageSize });
+        data = await apiFetch("/search/boolean", { q, ...yearParams, fields: fieldsParam, doc_type: docType || undefined, page: pg, page_size: pageSize });
       } else if (searchMode === "author") {
         data = await apiFetch("/search/author", { name: q, page: pg, page_size: pageSize });
       } else {
-        data = await apiFetch("/search", { q, mode: rankMode, ...yearParams, doc_type: docType || undefined, page: pg, page_size: pageSize });
+        data = await apiFetch("/search", { q, mode: rankMode, ...yearParams, fields: fieldsParam, doc_type: docType || undefined, page: pg, page_size: pageSize });
       }
       setResults(data);
       setSortedResults(applySort(data, sortBy));
@@ -1267,7 +1278,7 @@ export default function App() {
       writeSearchParams({ q, mode: searchMode, rankMode, year, docType, page: pg });
     } catch (e) { setError(e.message); }
     finally { setLoading(false); }
-  }, [searchMode, rankMode, year, yearTo, docType, pageSize, sortBy, applySort, addHistory]);
+  }, [searchMode, rankMode, year, yearTo, fields, docType, pageSize, sortBy, applySort, addHistory]);
 
   useEffect(() => {
     if (results) setSortedResults(applySort(results, sortBy));

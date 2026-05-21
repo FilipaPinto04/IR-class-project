@@ -38,6 +38,7 @@ def init_db():
             processed   TEXT,       -- REQ-B10: JSON list of tokens after NLP
             pdf_link    TEXT,       -- REQ-B04
             affiliations TEXT       -- REQ-B05: JSON list of affiliations
+            pdf_text     TEXT       -- NOVO: texto completo extraído do PDF
         )
     """)
 
@@ -109,6 +110,7 @@ def insert_publications(publications: list, processed_map: dict = None):
             processed,
             pub.get("pdf_link"),
             json.dumps(affiliations),
+            pub.get("pdf_text"),
         ))
 
         if cur.rowcount == 0:

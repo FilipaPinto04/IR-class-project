@@ -84,6 +84,7 @@ class PublicationResult(BaseModel):
     date: Optional[str] = None
     doi: Optional[str] = None
     pdf_link: Optional[str] = None
+    pdf_text: Optional[str] = None
     score: Optional[float] = None
 
 
@@ -189,7 +190,7 @@ def _query_surface_tokens(q: str) -> List[str]:
 
 def _result_to_xml_elem(r: PublicationResult) -> ET.Element:
     doc = ET.Element("document")
-    for field in ("url", "title", "date", "doi", "pdf_link", "score", "snippet", "abstract"):
+    for field in ("url", "title", "date", "doi", "pdf_link", "score", "snippet", "abstract", "pdf_text"):
         val = getattr(r, field, None)
         if val is not None:
             ET.SubElement(doc, field).text = str(val)
@@ -198,8 +199,7 @@ def _result_to_xml_elem(r: PublicationResult) -> ET.Element:
         for a in r.authors:
             ET.SubElement(authors_el, "author").text = a
     return doc
-
-
+ 
 def _search_response_to_xml(resp: SearchResponse) -> Response:
     root = ET.Element("searchResponse")
     ET.SubElement(root, "query").text    = resp.query
@@ -233,6 +233,15 @@ def _build_result(
         authors = [a.strip() for a in authors.split(";") if a.strip()]
     abstract = pub.get("abstract")
     snippet  = _extract_snippet(abstract or "", query_tokens) if query_tokens is not None else None
+ 
+    # Truncar pdf_text para não sobrecarregar as respostas da API
+    # O texto completo está disponível via /document?url=...
+    pdf_text = pub.get("pdf_text")
+    if pdf_text and len(pdf_text) > 500:
+        pdf_text_preview = pdf_text[:500] + "…"
+    else:
+        pdf_text_preview = pdf_text
+ 
     return PublicationResult(
         url=url,
         title=pub.get("title"),
@@ -242,9 +251,10 @@ def _build_result(
         date=pub.get("date") or pub.get("publication_date") or pub.get("year"),
         doi=pub.get("doi"),
         pdf_link=pub.get("pdf_link") or pub.get("pdf_url"),
+        pdf_text=pdf_text_preview,      # ← NOVO
         score=round(score, 6) if score is not None else None,
     )
-
+ 
 
 def _paginate(items, page: int, page_size: int):
     start = (page - 1) * page_size
@@ -330,7 +340,7 @@ def _parse_fields(fields: Optional[str]) -> Optional[List[str]]:
     """Parse the ``fields`` query param into a list or None (= all fields)."""
     if not fields:
         return None
-    parsed = [f.strip() for f in fields.split(",") if f.strip() in ("title", "abstract", "authors")]
+    parsed = [f.strip() for f in fields.split(",") if f.strip() in ("title", "abstract", "authors", "pdf")]
     return parsed if parsed else None
 
 

@@ -107,57 +107,68 @@ def build_index(
         # REQ-B46: process each field independently
         title_tokens    = preprocess(pub.get('title', ''))
         abstract_tokens = preprocess(pub.get('abstract', ''))
-
+ 
+        # ── NOVO: indexar texto completo do PDF ───────────────────────────────
+        pdf_text_tokens = preprocess(pub.get('pdf_text', '') or '')
+ 
         # Index author names
         authors = pub.get('authors', [])
         if isinstance(authors, str):
             authors = [a.strip() for a in authors.split(';') if a.strip()]
         author_tokens = preprocess(' '.join(authors))
-
+ 
         # Global token stream for position tracking (REQ-B48)
-        all_tokens = title_tokens + abstract_tokens + author_tokens
-
+        all_tokens = title_tokens + abstract_tokens + pdf_text_tokens + author_tokens
+ 
         # Per-field TF
         title_tf: dict[str, int] = {}
         for t in title_tokens:
             title_tf[t] = title_tf.get(t, 0) + 1
-
+ 
         abstract_tf: dict[str, int] = {}
         for t in abstract_tokens:
             abstract_tf[t] = abstract_tf.get(t, 0) + 1
-
+ 
+        # ── NOVO ──────────────────────────────────────────────────────────────
+        pdf_tf: dict[str, int] = {}
+        for t in pdf_text_tokens:
+            pdf_tf[t] = pdf_tf.get(t, 0) + 1
+ 
         author_tf: dict[str, int] = {}
         for t in author_tokens:
             author_tf[t] = author_tf.get(t, 0) + 1
-
+ 
         # Global positions (REQ-B48)
         positions: dict[str, list[int]] = {}
         for pos, token in enumerate(all_tokens):
             positions.setdefault(token, []).append(pos)
-
-        all_terms = set(title_tf) | set(abstract_tf) | set(author_tf)
-
+ 
+        all_terms = set(title_tf) | set(abstract_tf) | set(pdf_tf) | set(author_tf)
+ 
         for term in all_terms:
             if term not in inverted_index:
                 inverted_index[term] = {"df": 0, "postings": {}}
-
+ 
             t_tf  = title_tf.get(term, 0)
             a_tf  = abstract_tf.get(term, 0)
+            p_tf  = pdf_tf.get(term, 0)           # ← NOVO
             au_tf = author_tf.get(term, 0)
-            total_tf = t_tf + a_tf + au_tf
-
+            total_tf = t_tf + a_tf + p_tf + au_tf  # ← inclui pdf
+ 
             fields = []
             if t_tf  > 0: fields.append("title")
             if a_tf  > 0: fields.append("abstract")
+            if p_tf  > 0: fields.append("pdf")     # ← NOVO
             if au_tf > 0: fields.append("authors")
-
+ 
             inverted_index[term]["postings"][url] = {
-                "tf":          total_tf,
-                "fields":      fields,
-                "title_tf":    t_tf,
-                "abstract_tf": a_tf,
-                "author_tf":   au_tf,
-                "positions":   positions.get(term, []),
+                "tf":           total_tf,
+                "fields":       fields,
+                "title_tf":     t_tf,
+                "abstract_tf":  a_tf,
+                "pdf_tf":       p_tf,               # ← NOVO
+                "author_tf":    au_tf,
+                "positions":    positions.get(term, []),
             }
 
     # Sort postings alphabetically (required by skip-pointer algorithm)
