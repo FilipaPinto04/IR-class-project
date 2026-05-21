@@ -97,8 +97,8 @@ def insert_publications(publications: list, processed_map: dict = None):
 
         # Insert document (skip if already exists)
         cur.execute("""
-            INSERT OR IGNORE INTO documents (url, title, abstract, doi, year, raw_text, processed)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            INSERT OR IGNORE INTO documents (url, title, abstract, doi, year, raw_text, processed, pdf_link, affiliations)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             url,
             pub.get("title"),

@@ -244,19 +244,33 @@ class BooleanParser:
         while lex.match_op('OR'):
             lex.consume()
             right = self._term(lex)
-            left = (left or set()) | (right or set())
-        return left or set()
+            left = (left if left is not None else set()) | (right if right is not None else set())
+        return left if left is not None else set()
 
     def _term(self, lex: _Lexer) -> set[str]:
         left = self._factor(lex)
+        # Track whether left was explicitly initialised (even if empty).
+        # We use a sentinel None to distinguish "not yet set" from "empty set".
+        left_initialised = left is not None
+
         while lex.is_operand() and not lex.match_op('OR'):
             if lex.match_op('AND'):
                 lex.consume()
             right = self._factor(lex)
-            l_sorted = sorted(left or [])
-            r_sorted = sorted(right or [])
-            left = set(intersect_with_skips(l_sorted, r_sorted))
-        return left or set()
+
+            if not left_initialised:
+                # First operand was None (shouldn't happen, but guard anyway)
+                left = right if right is not None else set()
+                left_initialised = True
+            else:
+                # Both sides are real sets — intersect even if one is empty.
+                # Do NOT use `left or []` because set() is falsy and would
+                # incorrectly skip the intersection with a genuinely empty set.
+                l_sorted = sorted(left)   if left  is not None else []
+                r_sorted = sorted(right)  if right is not None else []
+                left = set(intersect_with_skips(l_sorted, r_sorted))
+
+        return left if left is not None else set()
 
     def _factor(self, lex: _Lexer) -> set[str]:
         tok = lex.peek()
@@ -268,14 +282,14 @@ class BooleanParser:
         if kind == 'OP' and value == 'NOT':
             lex.consume()
             operand = self._factor(lex)
-            return self._all_doc_ids - (operand or set())
+            return self._all_doc_ids - (operand if operand is not None else set())
 
         if kind == 'LPAREN':
             lex.consume()
             result = self._expr(lex)
             if lex.peek() and lex.peek()[0] == 'RPAREN':
                 lex.consume()
-            return result or set()
+            return result if result is not None else set()
 
         if kind == 'PHRASE':
             lex.consume()

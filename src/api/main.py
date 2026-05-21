@@ -251,25 +251,65 @@ def _paginate(items, page: int, page_size: int):
     return items[start: start + page_size]
 
 
+def _extract_pub_year(pub: dict) -> Optional[int]:
+    """
+    Extracts a 4-digit publication year from whichever date field is available.
+    Handles formats: 2023, 2023-06, 2023-06-15, "June 2023", etc.
+    Returns None if no year can be parsed.
+    """
+    raw = str(
+        pub.get("year", "") or pub.get("date", "") or pub.get("publication_date", "")
+    ).strip()
+    if not raw or raw in ("N/A", "None", ""):
+        return None
+    # Look for the first 4-digit sequence that looks like a year (1900–2099)
+    m = re.search(r"\b(19\d{2}|20\d{2})\b", raw)
+    return int(m.group(1)) if m else None
+
+
 def _apply_filters(
     urls: List[str],
     year: Optional[int] = None,
     doc_type: Optional[str] = None,
     research_area: Optional[str] = None,
     language: Optional[str] = None,
+    year_from: Optional[int] = None,
+    year_to: Optional[int] = None,
 ) -> List[str]:
-    if not any([year, doc_type, research_area, language]):
+    """
+    Filters a list of document URLs by metadata.
+
+    Year filtering (mutually exclusive modes):
+      - ``year``       — exact year match (legacy, used by boolean/phrase endpoints).
+      - ``year_from`` / ``year_to`` — inclusive range filter (used by /search endpoint).
+        Either bound can be omitted (open-ended range).
+    """
+    has_exact_year = year is not None
+    has_range_year = year_from is not None or year_to is not None
+
+    if not any([has_exact_year, has_range_year, doc_type, research_area, language]):
         return urls
+
     filtered = []
     for url in urls:
         pub = PUB_LOOKUP.get(url, {})
-        if year:
-            # Support year, date, and publication_date fields
-            pub_year = str(
-                pub.get("year", "") or pub.get("date", "") or pub.get("publication_date", "")
-            )
-            if str(year) not in pub_year:
+
+        # ── Year filtering ────────────────────────────────────────────────────
+        if has_exact_year:
+            pub_year = _extract_pub_year(pub)
+            if pub_year is None or pub_year != year:
                 continue
+
+        elif has_range_year:
+            pub_year = _extract_pub_year(pub)
+            if pub_year is None:
+                continue  # exclude docs with no parseable year when a range is set
+            if year_from is not None and pub_year < year_from:
+                continue
+            if year_to is not None and pub_year > year_to:
+                continue
+
+        # ── Other filters ─────────────────────────────────────────────────────
         if doc_type:
             if doc_type.lower() not in str(pub.get("type", "")).lower():
                 continue
@@ -281,6 +321,7 @@ def _apply_filters(
             pub_lang = str(pub.get("language", "")).lower()
             if pub_lang and language.lower() not in pub_lang:
                 continue
+
         filtered.append(url)
     return filtered
 
@@ -289,7 +330,7 @@ def _parse_fields(fields: Optional[str]) -> Optional[List[str]]:
     """Parse the ``fields`` query param into a list or None (= all fields)."""
     if not fields:
         return None
-    parsed = [f.strip() for f in fields.split(",") if f.strip() in ("title", "abstract")]
+    parsed = [f.strip() for f in fields.split(",") if f.strip() in ("title", "abstract", "authors")]
     return parsed if parsed else None
 
 
@@ -324,7 +365,13 @@ def _filter_by_fields(urls: List[str], query: str, field_list: Optional[List[str
                 continue
             if isinstance(posting, dict):
                 for field in field_list:
-                    if posting.get(f"{field}_tf", 0) > 0:
+                    # 'authors' field stored as 'author_tf' in the posting dict
+                    tf_key = "author_tf" if field == "authors" else f"{field}_tf"
+                    if posting.get(tf_key, 0) > 0:
+                        match = True
+                        break
+                    # Also check the 'fields' list for explicit field membership
+                    if not match and field in posting.get("fields", []):
                         match = True
                         break
             else:
@@ -372,7 +419,9 @@ def search(
         description="REQ-B46 — Restringir a 'title', 'abstract' ou 'title,abstract' (omitir = todos).",
     ),
     expand: bool = Query(False, description="REQ-B47 — Expandir termos com sinónimos WordNet."),
-    year: Optional[int] = Query(None, description="Filtrar por ano de publicação"),
+    year: Optional[int] = Query(None, description="Filtrar por ano exato (alternativa ao intervalo)"),
+    year_from: Optional[int] = Query(None, description="Filtrar a partir deste ano (inclusive)"),
+    year_to: Optional[int] = Query(None, description="Filtrar até este ano (inclusive)"),
     doc_type: Optional[str] = Query(None, description="Filtrar por tipo de documento"),
     research_area: Optional[str] = Query(None, description="Filtrar por área de investigação"),
     language: Optional[str] = Query(None, description="Filtrar por idioma (pt/en)"),
@@ -382,6 +431,9 @@ def search(
 ):
     """
     **Pesquisa por texto livre** com ranking TF-IDF, BM25 ou TF-only.
+
+    Filtro de data: usa ``year`` para ano exato, ou ``year_from``/``year_to``
+    para um intervalo (ambos inclusivos, qualquer um pode ser omitido).
     """
     if not INDEX:
         raise HTTPException(status_code=503, detail="Index not loaded.")
@@ -404,7 +456,10 @@ def search(
 
     urls_ordered = [url for url, _ in raw_results]
     scores       = {url: score for url, score in raw_results}
-    filtered     = _apply_filters(urls_ordered, year, doc_type, research_area, language)
+    filtered     = _apply_filters(
+        urls_ordered, year, doc_type, research_area, language,
+        year_from=year_from, year_to=year_to,
+    )
     filtered     = _filter_by_fields(filtered, q, field_list)
     paginated    = _paginate(filtered, page, page_size)
     hl_tokens    = _query_surface_tokens(q)
@@ -419,9 +474,17 @@ def search(
 @app.get("/search/boolean", tags=["Search"])
 def search_boolean(
     q: str = Query(..., description="Query booleana — AND / OR / NOT, parênteses, frases, NEAR/k"),
-    fields: Optional[str] = Query(None, description="REQ-B46 — 'title', 'abstract' ou ambos."),
+    fields: Optional[str] = Query(
+        None,
+        description=(
+            "REQ-B46 — Restringir a campo(s): 'title', 'abstract', 'authors' ou "
+            "combinações separadas por vírgula (ex: 'title,abstract'). Omitir = todos os campos."
+        ),
+    ),
     expand: bool = Query(False, description="REQ-B47 — Expandir termos com sinónimos WordNet."),
-    year: Optional[int] = Query(None),
+    year: Optional[int] = Query(None, description="Filtrar por ano exato"),
+    year_from: Optional[int] = Query(None, description="Filtrar a partir deste ano (inclusive)"),
+    year_to: Optional[int] = Query(None, description="Filtrar até este ano (inclusive)"),
     doc_type: Optional[str] = Query(None),
     page: int = Query(1, ge=1),
     page_size: int = Query(10, ge=1, le=100),
@@ -430,6 +493,15 @@ def search_boolean(
     """
     **Pesquisa booleana** — NOT > AND > OR (precedência correcta), parênteses,
     frases ("…") e proximidade (word NEAR/k word) incluídos.
+
+    **Pesquisa por autor:** usa ``fields=authors``. O engine faz fallback para a
+    forma raw/stemmed do nome quando o preprocessamento elimina o token (ex: apelidos
+    que coincidem com stopwords como "Silva", "Costa").
+    Exemplos: ``Oliveira``, com ``fields=authors`` / ``Oliveira AND learning``
+
+    **Pesquisa só no título:** passa ``fields=title``.
+
+    **Filtro de data:** ``year`` para ano exato, ou ``year_from``/``year_to`` para intervalo.
     """
     if not INDEX:
         raise HTTPException(status_code=503, detail="Index not loaded.")
@@ -439,7 +511,10 @@ def search_boolean(
 
     matching_urls = execute_boolean_query(q, INDEX, ALL_DOC_IDS, fields=field_list, expand=expand)
     urls_list     = sorted(list(matching_urls))
-    filtered      = _apply_filters(urls_list, year, doc_type, None, None)
+    filtered      = _apply_filters(
+        urls_list, year, doc_type, None, None,
+        year_from=year_from, year_to=year_to,
+    )
     filtered      = _filter_by_fields(filtered, q, field_list)
     paginated     = _paginate(filtered, page, page_size)
     hl_tokens     = _query_surface_tokens(q)
@@ -475,7 +550,10 @@ def search_phrase(
 
     matching_urls = execute_phrase_query(q, INDEX, field_list)
     urls_list     = sorted(list(matching_urls))
-    filtered      = _apply_filters(urls_list, year, doc_type, None, None)
+    filtered      = _apply_filters(
+        urls_list, year, doc_type, None, None,
+        year_from=year_from, year_to=year_to,
+    )
     filtered      = _filter_by_fields(filtered, q, field_list)
     paginated     = _paginate(filtered, page, page_size)
     hl_tokens     = _query_surface_tokens(q)
@@ -612,13 +690,23 @@ def get_document(url: str = Query(..., description="URL/handle do documento")):
 
 
 # ── 8. Index stats ──────────────────────────────────────────────────────────
+# ── 8. Index stats ──────────────────────────────────────────────────────────
 
 @app.get("/stats", tags=["Info"])
 def stats():
     """**Estatísticas do índice** — termos, documentos, top 20 por DF."""
     if not INDEX:
         raise HTTPException(status_code=503, detail="Index not loaded.")
-    top_terms = sorted(INDEX.items(), key=lambda x: x[1]["df"], reverse=True)[:20]
+    
+    # Filtra os termos para ignorar variações de "n/a" ou termos vazios
+    filtered_index = {
+        t: d for t, d in INDEX.items() 
+        if t.lower().strip() not in ("n/a", "na", "")
+    }
+    
+    # Faz o sort baseado no índice filtrado
+    top_terms = sorted(filtered_index.items(), key=lambda x: x[1]["df"], reverse=True)[:20]
+    
     return {
         "total_terms":        len(INDEX),
         "total_documents":    len(ALL_DOC_IDS),
@@ -626,7 +714,6 @@ def stats():
             {"term": t, "document_frequency": d["df"]} for t, d in top_terms
         ],
     }
-
 
 # ── 9. NLP debug ────────────────────────────────────────────────────────────
 

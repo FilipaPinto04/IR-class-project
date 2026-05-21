@@ -14,6 +14,53 @@ from src.search.nlp import preprocess
 
 
 # ---------------------------------------------------------------------------
+# REQ-B24 — Term-Document Matrix (defined first so build_index can call it)
+# ---------------------------------------------------------------------------
+
+def build_term_document_matrix(
+    inverted_index: dict,
+    output_dir: str = 'data',
+) -> dict:
+    """
+    Builds a Term-Document Matrix (raw TF values) and persists it to disk.
+    """
+    all_doc_ids = sorted({
+        url
+        for entry in inverted_index.values()
+        for url in entry["postings"]
+    })
+
+    doc_index = {url: idx for idx, url in enumerate(all_doc_ids)}
+    n_docs = len(all_doc_ids)
+
+    matrix: dict[str, list[int]] = {}
+    for term, entry in inverted_index.items():
+        row = [0] * n_docs
+        for url, posting in entry["postings"].items():
+            tf = posting["tf"] if isinstance(posting, dict) else posting
+            row[doc_index[url]] = tf
+        matrix[term] = row
+
+    result = {"doc_ids": all_doc_ids, "matrix": matrix}
+
+    os.makedirs(output_dir, exist_ok=True)
+    matrix_path = os.path.join(output_dir, "term_document_matrix.json")
+    with open(matrix_path, 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+
+    print(f"[REQ-B24] Term-document matrix: {len(matrix)} terms × {n_docs} docs → {matrix_path}")
+    return result
+
+
+def load_term_document_matrix(
+    matrix_path: str = 'data/term_document_matrix.json',
+) -> tuple[list, dict]:
+    with open(matrix_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data["doc_ids"], data["matrix"]
+
+
+# ---------------------------------------------------------------------------
 # Main indexer
 # ---------------------------------------------------------------------------
 
@@ -23,28 +70,12 @@ def build_index(
 ) -> None:
     """
     Builds or incrementally updates the inverted index.
-
-    Index entry structure (per term)
-    ---------------------------------
-    {
-        "df": <int>,                          # document frequency
-        "postings": {
-            "<url>": {
-                "tf":       <int>,            # total TF across all fields
-                "fields":   ["title", ...],   # which fields contain the term  (REQ-B46)
-                "title_tf": <int>,            # TF in title field              (REQ-B46)
-                "abstract_tf": <int>,         # TF in abstract field           (REQ-B46)
-                "positions": [<int>, ...]     # token positions (global)       (REQ-B48)
-            }
-        }
-    }
     """
     print("--- Starting Indexer ---")
 
     inverted_index: dict = {}
     indexed_urls: set = set()
 
-    # Incremental support — load existing index if present
     if os.path.exists(output_path):
         try:
             with open(output_path, 'r', encoding='utf-8') as f:
@@ -73,16 +104,15 @@ def build_index(
 
         new_docs_count += 1
 
-        # ── REQ-B46: process each field independently ──────────────────────
+        # REQ-B46: process each field independently
         title_tokens    = preprocess(pub.get('title', ''))
         abstract_tokens = preprocess(pub.get('abstract', ''))
 
-        # Index author names as a searchable field
+        # Index author names
         authors = pub.get('authors', [])
         if isinstance(authors, str):
             authors = [a.strip() for a in authors.split(';') if a.strip()]
-        author_text  = ' '.join(authors)
-        author_tokens = preprocess(author_text)
+        author_tokens = preprocess(' '.join(authors))
 
         # Global token stream for position tracking (REQ-B48)
         all_tokens = title_tokens + abstract_tokens + author_tokens
@@ -105,7 +135,6 @@ def build_index(
         for pos, token in enumerate(all_tokens):
             positions.setdefault(token, []).append(pos)
 
-        # All unique terms in this document
         all_terms = set(title_tf) | set(abstract_tf) | set(author_tf)
 
         for term in all_terms:
@@ -128,7 +157,7 @@ def build_index(
                 "title_tf":    t_tf,
                 "abstract_tf": a_tf,
                 "author_tf":   au_tf,
-                "positions":   positions.get(term, []),   # REQ-B48
+                "positions":   positions.get(term, []),
             }
 
     # Sort postings alphabetically (required by skip-pointer algorithm)
@@ -154,54 +183,3 @@ def build_index(
 
 if __name__ == "__main__":
     build_index()
-
-
-# ---------------------------------------------------------------------------
-# REQ-B24 — Term-Document Matrix
-# ---------------------------------------------------------------------------
-
-def build_term_document_matrix(
-    inverted_index: dict,
-    output_dir: str = 'data',
-) -> dict:
-    """
-    Builds a Term-Document Matrix (raw TF values) and persists it to disk.
-
-    The matrix uses the total TF across all fields so that it remains
-    compatible with the pre-existing REQ-B24 contract.
-    """
-    all_doc_ids = sorted({
-        url
-        for entry in inverted_index.values()
-        for url in entry["postings"]
-    })
-
-    doc_index = {url: idx for idx, url in enumerate(all_doc_ids)}
-    n_docs = len(all_doc_ids)
-
-    matrix: dict[str, list[int]] = {}
-    for term, entry in inverted_index.items():
-        row = [0] * n_docs
-        for url, posting in entry["postings"].items():
-            # posting is now a dict — extract total TF
-            tf = posting["tf"] if isinstance(posting, dict) else posting
-            row[doc_index[url]] = tf
-        matrix[term] = row
-
-    result = {"doc_ids": all_doc_ids, "matrix": matrix}
-
-    os.makedirs(output_dir, exist_ok=True)
-    matrix_path = os.path.join(output_dir, "term_document_matrix.json")
-    with open(matrix_path, 'w', encoding='utf-8') as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-
-    print(f"[REQ-B24] Term-document matrix: {len(matrix)} terms × {n_docs} docs → {matrix_path}")
-    return result
-
-
-def load_term_document_matrix(
-    matrix_path: str = 'data/term_document_matrix.json',
-) -> tuple[list, dict]:
-    with open(matrix_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    return data["doc_ids"], data["matrix"]

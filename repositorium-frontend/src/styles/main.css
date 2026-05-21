@@ -650,3 +650,28 @@ input, select, textarea { font-family: inherit; }
   .stat-grid { flex-direction: column; }
   .footer { flex-direction: column; text-align: center; }
 }
+
+/* ─── Stats: coverage grid ───────────────────────────────────────────────────── */
+.coverage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+.coverage-item {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.coverage-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.coverage-label { font-size: .8rem; color: var(--ink-mid); }
+.coverage-pct   { font-size: .9rem; font-weight: 700; }
+.coverage-bar-bg {
+  height: 6px; background: var(--border); border-radius: 99px; overflow: hidden;
+}
+.coverage-bar-fill {
+  height: 100%; border-radius: 99px; transition: width .4s ease;
+}
+.coverage-count {
+  font-size: .7rem; color: var(--ink-mid);
+}

@@ -121,12 +121,18 @@ def find_chrome_executable():
 
 
 class UMinhoDSpace8Scraper:
-    def __init__(self, base_url, max_items=20, research_area=None):
+    def __init__(self, base_url, max_items=20, research_area=None, full_scrape_limit=20):
         """
         Initialize the web scraper with Selenium WebDriver configuration.
         Args:
             base_url (str): The base URL of the website to scrape.
-            max_items (int, optional): Maximum number of items to scrape. Defaults to 20.
+            max_items (int, optional): Total number of items whose URLs/basic metadata
+                are collected. Defaults to 20.
+            full_scrape_limit (int, optional): Of those items, how many get a full page
+                visit (abstract, PDF link, affiliations). Defaults to 20.
+                Set higher than max_items to do a full scrape of everything (original
+                behaviour). Set lower to keep bandwidth/time down while still having
+                basic metadata for a larger collection.
             research_area (str, optional): Filter by research area/subject (REQ-B08).
                 Appended as a query parameter, e.g. 'machine learning'.
         Note:
@@ -160,12 +166,65 @@ class UMinhoDSpace8Scraper:
 
         # Time to wait for Angular to settle after page loads
         self.ANGULAR_SETTLE_TIME = 0.5  # seconds
-        # Max items to scrape
+        # Total items to collect URLs/basic metadata for
         self.MAX_ITEMS = max_items
+        # Of those, how many get a full page visit (abstract, PDF, affiliations)
+        self.FULL_SCRAPE_LIMIT = full_scrape_limit
+
+    def get_listing_info(self, item_element) -> dict:
+        """
+        Extracts basic metadata directly from the listing page element —
+        no extra page visit required.
+
+        Returns a dict with: url, title, authors, year.
+        abstract, doi, pdf_link, and affiliations are left empty/None;
+        they are filled in by get_paper_info() only for the first
+        ``FULL_SCRAPE_LIMIT`` documents.
+        """
+        data = {
+            "title": "N/A",
+            "year": "N/A",
+            "doi": "N/A",
+            "abstract": "N/A",
+            "authors": [],
+            "affiliations": [],
+            "pdf_link": None,
+            "url": None,
+        }
+        try:
+            title_elem = item_element.find_element(By.CSS_SELECTOR, "a.item-list-title")
+            data["title"] = title_elem.text.strip() or "N/A"
+            href = title_elem.get_attribute("href")
+            if href:
+                data["url"] = href.split("?")[0]
+        except NoSuchElementException:
+            pass
+
+        # Authors shown in the listing card (class varies across DSpace themes)
+        for selector in ["span.item-list-authors", ".item-list-author", ".authors"]:
+            try:
+                author_elems = item_element.find_elements(By.CSS_SELECTOR, selector)
+                if author_elems:
+                    data["authors"] = [a.text.strip() for a in author_elems if a.text.strip()]
+                    break
+            except NoSuchElementException:
+                continue
+
+        # Publication date shown in the listing card
+        for selector in ["span.item-list-date", ".item-list-date", ".date"]:
+            try:
+                date_elem = item_element.find_element(By.CSS_SELECTOR, selector)
+                data["year"] = date_elem.text.strip() or "N/A"
+                break
+            except NoSuchElementException:
+                continue
+
+        return data
 
     def get_paper_info(self, url):
         """
         Given a paper URL, navigates to it and extracts metadata from the table.
+        Supports both old (/handle/) and new (/entities/publication/) DSpace 8 URL formats.
         
         Args:
             url (str): The URL of the specific paper's full metadata view.
@@ -173,14 +232,17 @@ class UMinhoDSpace8Scraper:
         Returns:
             dict: A dictionary containing the mapped Dublin Core metadata fields.
         """
-        # Navigate to the document's full metadata page
-        # The URL is used as the unique document ID in the system
         self.driver.get(url)
-        
-        # Wait until the metadata table is rendered by the Angular frontend
-        self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table.table-striped")))
-        
-        # Brief pause to ensure all dynamic elements are fully settled
+
+        # Wait for metadata table — supports both old (table.table-striped) and
+        # new (/entities/publication/) DSpace 8 URL formats where the table has no class
+        try:
+            self.wait.until(EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "table.table-striped, ds-full-item-page table, .item-page table, table")
+            ))
+        except Exception:
+            pass  # Continue anyway — maybe partial content loaded
+
         time.sleep(self.ANGULAR_SETTLE_TIME)
 
         # Dictionary to store the mapping we want
@@ -209,7 +271,7 @@ class UMinhoDSpace8Scraper:
 
         try:
             # Locate all rows in the metadata table
-            rows = self.driver.find_elements(By.CSS_SELECTOR, "table.table-striped tbody tr")
+            rows = self.driver.find_elements(By.CSS_SELECTOR, "table.table-striped tbody tr, table tbody tr")
             
             for row in rows:
                 # In DSpace 8, metadata is usually structured in two columns: Label and Value
@@ -273,7 +335,8 @@ class UMinhoDSpace8Scraper:
         3. Navigates to the next page until no more pages or limit reached.
         4. Returns a list of unique paper URLs.
         """
-        paper_urls = []
+        paper_items = []
+        seen_urls: set = set()
 
         # Load the initial collection page
         self.driver.get(self.base_url)
@@ -292,33 +355,31 @@ class UMinhoDSpace8Scraper:
 
             # Handle cases where the page didn't load any items
             if not items:
-                if not paper_urls:
+                if not paper_items:
                     print("Error: Could not find any item links in the list.")
                     return []
                 print("No items found on this page. Stopping pagination.")
                 break
 
-            # 2. Extract links from each item
+            # 2. Extract links and basic listing metadata from each item
             for item in items:
                 try:
-                    title_elem = item.find_element(By.CSS_SELECTOR, "a.item-list-title")
-                    href = title_elem.get_attribute("href")
+                    listing_data = self.get_listing_info(item)
+                    if not listing_data["url"]:
+                        continue
 
-                    if href:
-                        # Clean the URL (removes ?show=full etc.)
-                        clean_url = href.split('?')[0]
-
-                        if clean_url not in paper_urls:
-                            paper_urls.append(clean_url)
-                            print(f"  [{len(paper_urls)}] Found: {clean_url}")
+                    if listing_data["url"] not in seen_urls:
+                        seen_urls.add(listing_data["url"])
+                        paper_items.append(listing_data)
+                        print(f"  [{len(paper_items)}] Found: {listing_data['url']}")
 
                     # Stop immediately if we hit the limit
-                    if len(paper_urls) >= self.MAX_ITEMS:
+                    if len(paper_items) >= self.MAX_ITEMS:
                         print(f"Reached limit of {self.MAX_ITEMS} items.")
-                        return paper_urls
+                        return paper_items
 
                 except NoSuchElementException:
-                    continue # Skip items that don't have a title link
+                    continue  # Skip items that don't have a title link
 
             # 3. Attempt to move to the next page
             try:
@@ -327,31 +388,49 @@ class UMinhoDSpace8Scraper:
                 print("No more pages to scrape.")
                 break
 
-        return paper_urls
+        return paper_items
 
     def scrape(self):
         """
-        Main method to scrape the collection and extract metadata for each paper.
-        """
-        results = []     # To store final results
-        paper_urls = []  # To store unique paper URLs
+        Two-tier scraping strategy:
 
-        print(f"Loading collection list: {self.base_url}") # Debug print
+        Tier 1 — Listing metadata (up to ``MAX_ITEMS`` documents):
+            Collected directly from the search results page without visiting
+            each document. Provides: url, title, authors, year.
+
+        Tier 2 — Full metadata (first ``FULL_SCRAPE_LIMIT`` documents only):
+            Visits each document's /full page to extract the complete set:
+            abstract, DOI, PDF link, affiliations.
+            Documents beyond the limit keep the listing-level metadata.
+
+        This lets you index a large collection for search purposes while
+        limiting the time/bandwidth cost of full page visits.
+        """
+        results = []
+        paper_items = []
+
+        print(f"Loading collection list: {self.base_url}")
+        print(f"  Collecting metadata for up to {self.MAX_ITEMS} documents.")
+        print(f"  Full page scrape (abstract/PDF) for first {self.FULL_SCRAPE_LIMIT}.")
 
         try:
+            # ── Tier 1: collect basic metadata from the listing pages ────────
+            paper_items = self.collect_all_links()
+            print(f"Found {len(paper_items)} documents in listing.")
 
-            # Collect paper links across paginated collection
-            paper_urls = self.collect_all_links()
+            # ── Tier 2: enrich first FULL_SCRAPE_LIMIT docs with full metadata ─
+            for idx, item in enumerate(paper_items):
+                if idx < self.FULL_SCRAPE_LIMIT:
+                    full_url = item["url"] + "/full"
+                    print(f"  [full {idx+1}/{self.FULL_SCRAPE_LIMIT}] {item['url']}")
+                    full_data = self.get_paper_info(full_url)
+                    # Merge: full_data wins for every field it has
+                    item.update(full_data)
+                else:
+                    print(f"  [listing only] {item['url']}")
 
-            print(f"Found {len(paper_urls)} papers. Extracting metadata...") # Debug print
-
-            # Visit each paper to get the abstract and authors
-            for url in paper_urls:
-                # print(f"   Opening Paper: {url}")               # Debug print
-                full_url = url + "/full"                        # add '/full' to get the full metadata view
-                paper_info = self.get_paper_info(full_url)      # get the paper info
-                print(f"      Title: {paper_info['title']}")    # Debug print
-                results.append(paper_info)
+                print(f"      Title: {item['title']}")
+                results.append(item)
 
         finally:
             self.driver.quit()
@@ -365,13 +444,28 @@ if __name__ == "__main__":
     BASE_URL = "https://repositorium.uminho.pt/search?f.entityType=Publication,equals"
 
     # REQ-B08: Optionally filter by research area (set to None to disable)
-    RESEARCH_AREA = None  # e.g. "machine learning" or "health"
+    RESEARCH_AREA = ""  # e.g. "machine learning" or "health"
 
-    scraper = UMinhoDSpace8Scraper(base_url=BASE_URL, max_items=20, research_area=RESEARCH_AREA)
+    # Total documents to collect basic metadata for (url, title, authors, year)
+    MAX_ITEMS = 50
+
+    # Of those, how many get a full page visit (abstract, DOI, PDF, affiliations).
+    # Set equal to MAX_ITEMS to do a full scrape of everything (original behaviour).
+    FULL_SCRAPE_LIMIT = 20
+
+    scraper = UMinhoDSpace8Scraper(
+        base_url=BASE_URL,
+        max_items=MAX_ITEMS,
+        research_area=RESEARCH_AREA,
+        full_scrape_limit=FULL_SCRAPE_LIMIT,
+    )
     results = scraper.scrape()
 
     os.makedirs("data", exist_ok=True)
     with open("data/scraper_results.json", "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=4)
 
-    print(f"Guardados {len(results)} documentos.")
+    full_count = sum(1 for r in results if r.get("abstract") not in ("N/A", None, ""))
+    print(f"\nGuardados {len(results)} documentos.")
+    print(f"  → {full_count} com abstract completo (full scrape).")
+    print(f"  → {len(results) - full_count} só com metadados de listagem.")

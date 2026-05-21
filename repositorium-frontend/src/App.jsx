@@ -539,7 +539,7 @@ const AnalyticsDashboard = ({ stats }) => {
 
   return (
     <div className="analytics-dashboard">
-      <h3>Dashboard de Analytics</h3>
+      <h3></h3>
 
       {/* REQ-F56: Index size stats */}
       <div className="analytics-section">
@@ -640,20 +640,11 @@ const AnalyticsDashboard = ({ stats }) => {
 };
 
 // ─── STATS PANEL ──────────────────────────────────────────────────────────────
+// ─── STATS PANEL ──────────────────────────────────────────────────────────────
 const StatsPanel = ({ stats }) => {
   if (!stats) return <div className="stats-loading">A carregar estatísticas…</div>;
   return (
     <div className="stats-panel">
-      <div className="stat-grid">
-        <div className="stat-box">
-          <span className="stat-val">{stats.total_documents?.toLocaleString()}</span>
-          <span className="stat-label">Documentos</span>
-        </div>
-        <div className="stat-box">
-          <span className="stat-val">{stats.total_terms?.toLocaleString()}</span>
-          <span className="stat-label">Termos indexados</span>
-        </div>
-      </div>
       <AnalyticsDashboard stats={stats} />
     </div>
   );
@@ -1245,12 +1236,22 @@ export default function App() {
     const t0 = performance.now();
     try {
       let data;
+      // Build year filter params: use year_from/year_to for range, year for exact match
+      const yearParams = {};
+      if (year && yearTo) {
+        yearParams.year_from = year;
+        yearParams.year_to = yearTo;
+      } else if (year) {
+        yearParams.year_from = year;
+      } else if (yearTo) {
+        yearParams.year_to = yearTo;
+      }
       if (searchMode === "boolean") {
-        data = await apiFetch("/search/boolean", { q, year: year || undefined, doc_type: docType || undefined, page: pg, page_size: pageSize });
+        data = await apiFetch("/search/boolean", { q, ...yearParams, doc_type: docType || undefined, page: pg, page_size: pageSize });
       } else if (searchMode === "author") {
         data = await apiFetch("/search/author", { name: q, page: pg, page_size: pageSize });
       } else {
-        data = await apiFetch("/search", { q, mode: rankMode, year: year || undefined, doc_type: docType || undefined, page: pg, page_size: pageSize });
+        data = await apiFetch("/search", { q, mode: rankMode, ...yearParams, doc_type: docType || undefined, page: pg, page_size: pageSize });
       }
       setResults(data);
       setSortedResults(applySort(data, sortBy));
@@ -1266,7 +1267,7 @@ export default function App() {
       writeSearchParams({ q, mode: searchMode, rankMode, year, docType, page: pg });
     } catch (e) { setError(e.message); }
     finally { setLoading(false); }
-  }, [searchMode, rankMode, year, docType, pageSize, sortBy, applySort, addHistory]);
+  }, [searchMode, rankMode, year, yearTo, docType, pageSize, sortBy, applySort, addHistory]);
 
   useEffect(() => {
     if (results) setSortedResults(applySort(results, sortBy));
