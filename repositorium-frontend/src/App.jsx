@@ -19,7 +19,7 @@ async function apiFetch(endpoint, params = {}) {
   return res.json();
 }
 
-// ─── REQ-F81: URL ROUTING UTILITIES ──────────────────────────────────────────
+// ─── URL ROUTING UTILITIES ──────────────────────────────────────────
 function readSearchParams() {
   const p = new URLSearchParams(window.location.search);
   return {
@@ -45,7 +45,7 @@ function writeSearchParams(params) {
   window.history.replaceState(null, "", newUrl);
 }
 
-// ─── REQ-F63/F64: USER PREFERENCES ───────────────────────────────────────────
+// ─── USER PREFERENCES ───────────────────────────────────────────
 const PREF_KEY = "pri_user_prefs";
 const DEFAULT_PREFS = {
   rankMode: "custom",
@@ -77,7 +77,7 @@ function usePreferences() {
   return { prefs, update };
 }
 
-// ─── REQ-F10: QUERY VALIDATION ────────────────────────────────────────────────
+// ── QUERY VALIDATION ────────────────────────────────────────────────
 const BOOLEAN_OPS = ["AND", "OR", "NOT"];
 
 function validateQuery(query, mode) {
@@ -101,13 +101,11 @@ function validateQuery(query, mode) {
     if (BOOLEAN_OPS.includes(tokens[tokens.length - 1]))
       return { type: "error", msg: `Não pode terminar com o operador "${tokens[tokens.length - 1]}".` };
 
-    // Consecutive operators
     for (let i = 0; i < tokens.length - 1; i++) {
       if (BOOLEAN_OPS.includes(tokens[i]) && BOOLEAN_OPS.includes(tokens[i + 1]) && tokens[i + 1] !== "NOT")
         return { type: "error", msg: `Operadores consecutivos: "${tokens[i]} ${tokens[i + 1]}".` };
     }
 
-    // Hint: operators must be uppercase
     const lowerOps = ["and", "or", "not"];
     for (const op of lowerOps) {
       if (query.split(" ").includes(op))
@@ -159,7 +157,7 @@ const Icon = ({ name, size = 16 }) => {
   return icons[name] || null;
 };
 
-// ─── REQ-F68: CONTEXTUAL TOOLTIP ─────────────────────────────────────────────
+// ───  CONTEXTUAL TOOLTIP ─────────────────────────────────────────────
 const Tooltip = ({ text, children }) => {
   const [show, setShow] = useState(false);
   return (
@@ -304,7 +302,7 @@ const Pagination = ({ page, total, pageSize, onChange }) => {
   );
 };
 
-// ─── REQ-F46: ACTIVE FILTERS DISPLAY ─────────────────────────────────────────
+// ───ACTIVE FILTERS DISPLAY ─────────────────────────────────────────
 const ActiveFilters = ({ year, yearTo, docType, fields, onRemove }) => {
   const filters = [];
   if (year || yearTo) filters.push({ key: "date", label: `Ano: ${year || "?"} – ${yearTo || "?"}` });
@@ -327,7 +325,7 @@ const ActiveFilters = ({ year, yearTo, docType, fields, onRemove }) => {
   );
 };
 
-// ─── REQ-F51/F52: COMPARISON VIEW ────────────────────────────────────────────
+// ─── COMPARISON VIEW ────────────────────────────────────────────
 const ComparisonPanel = ({ query, onAuthorClick }) => {
   const [customResults, setCustomResults] = useState(null);
   const [sklearnResults, setSklearnResults] = useState(null);
@@ -364,7 +362,7 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
     }
   };
 
-  // REQ-F54: Simple bar chart for score comparison
+  //  Simple bar chart for score comparison
   const ScoreChart = ({ customRes, sklearnRes }) => {
     if (!customRes?.results?.length) return null;
     const allUrls = [...new Set([
@@ -377,7 +375,7 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
 
     return (
       <div className="score-chart">
-        <h5>📊 Comparação de scores (top 5)</h5>
+        <h5> Comparação de scores (top 5)</h5>
         {allUrls.map((url, i) => {
           const label = url.split("/").pop()?.slice(0, 30) || `doc${i + 1}`;
           return (
@@ -420,13 +418,13 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
         <>
           <div className="comp-tabs">
             <button className={`comp-tab ${activeTab === "ranking" ? "active" : ""}`} onClick={() => setActiveTab("ranking")}>
-              📊 TF-IDF Custom vs sklearn 
+               TF-IDF Custom vs sklearn 
             </button>
             <button className={`comp-tab ${activeTab === "chart" ? "active" : ""}`} onClick={() => setActiveTab("chart")}>
-              📈 Gráfico de scores 
+               Gráfico de scores 
             </button>
             <button className={`comp-tab ${activeTab === "nlp" ? "active" : ""}`} onClick={() => setActiveTab("nlp")}>
-              🔤 Stemming vs Lematização 
+               Stemming vs Lematização 
             </button>
           </div>
 
@@ -507,7 +505,7 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
   );
 };
 
-// ─── REQ-F53: PERFORMANCE METRICS ────────────────────────────────────────────
+// ─── PERFORMANCE METRICS ────────────────────────────────────────────
 const PerformanceMetrics = ({ searchTime, stats }) => {
   if (!searchTime && !stats) return null;
   return (
@@ -526,7 +524,7 @@ const PerformanceMetrics = ({ searchTime, stats }) => {
   );
 };
 
-// ─── REQ-F55/F56/F57: ANALYTICS DASHBOARD ─────────────────────────────────────
+// ─── ANALYTICS DASHBOARD ─────────────────────────────────────
 const AnalyticsDashboard = ({ stats }) => {
   const [queryLog, setQueryLog] = useState(() => {
     try { return JSON.parse(localStorage.getItem("pri_query_log") || "[]"); }
@@ -1436,6 +1434,10 @@ useEffect(() => {
                   </div>
                 </div>
               )}
+
+              {showComparison && query && (
+                <ComparisonPanel query={query} onAuthorClick={handleAuthorClick} />
+              )}
             </div>
 
             {searchMode !== "author" && (
@@ -1504,12 +1506,6 @@ useEffect(() => {
                   <ActiveFilters year={year} yearTo={yearTo} docType={docType} fields={fields} onRemove={handleRemoveFilter} />
                 </div>
               </div>
-            )}
-
-            {results && <PerformanceMetrics searchTime={searchTime} stats={stats} />}
-
-            {showComparison && query && (
-              <ComparisonPanel query={query} onAuthorClick={handleAuthorClick} />
             )}
 
             <div className="results-area">

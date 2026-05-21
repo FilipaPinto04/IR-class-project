@@ -23,7 +23,7 @@ services:
       dockerfile: Dockerfile
     container_name: repositorium_frontend
     ports:
-      - "3000:3000"  # ◄ Ajustado para a porta real do teu Vite
+      - "3000:3000"  
     volumes:
       - ./repositorium-frontend/src:/app/src
       - ./repositorium-frontend/index.html:/app/index.html
