@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback, useRef } from "react";
-import "./styles/main.css";
+import React, { useState, useEffect, useCallback, useRef } from "react"; // ◄ ADICIONADO 'React'
+// import "./styles/main.css";
 
 const API_BASE = "http://localhost:8000";
 const LangContext = React.createContext("pt");
