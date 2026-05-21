@@ -1,12 +1,8 @@
 """
-classifier.py — Multinomial Naïve Bayes Document Classifier
-Universidade do Minho · PRI
-
-Covers:
-  REQ-B41  Implement Multinomial Naïve Bayes classifier
-  REQ-B42  Train classifier on research publication categories
-  REQ-B43  Categorize documents into subject areas automatically
-  REQ-B44  Evaluate classification performance metrics
+Implement Multinomial Naïve Bayes classifier
+Train classifier on research publication categories
+Categorize documents into subject areas automatically
+Evaluate classification performance metrics
 """
 
 import json
@@ -24,14 +20,6 @@ from sklearn.pipeline import Pipeline
 import numpy as np
 
 from src.search.nlp import preprocess
-
-# ---------------------------------------------------------------------------
-# REQ-B42: Category definitions — keyword-based auto-labelling
-# ---------------------------------------------------------------------------
-
-# Each category is defined by a set of keywords that must appear in the
-# title or abstract for a document to be assigned that label.
-# Documents that match no category are labelled "other".
 
 CATEGORIES: dict[str, list[str]] = {
     "computer_science": [
@@ -70,7 +58,7 @@ CATEGORIES: dict[str, list[str]] = {
 
 def _assign_label(text: str) -> str:
     """
-    REQ-B42: Assigns a category label to a document based on keyword matching.
+    Assigns a category label to a document based on keyword matching.
     Returns the category with the most keyword hits, or 'other' if none match.
     """
     text_lower = text.lower()
@@ -90,7 +78,7 @@ def label_publications(
     output_path: str = "data/labelled_publications.json",
 ) -> list[dict]:
     """
-    REQ-B42: Labels all publications with a research category using keyword matching.
+    Labels all publications with a research category using keyword matching.
     Saves labelled data to disk for reuse.
     """
     with open(pubs_path, "r", encoding="utf-8") as f:
@@ -118,9 +106,7 @@ def label_publications(
     return labelled
 
 
-# ---------------------------------------------------------------------------
-# REQ-B41 + REQ-B42: Build and train the Multinomial Naïve Bayes classifier
-# ---------------------------------------------------------------------------
+# Build and train the Multinomial Naïve Bayes classifier
 
 def train_classifier(
     labelled_path: str = "data/labelled_publications.json",
@@ -129,9 +115,9 @@ def train_classifier(
     random_state: int = 42,
 ) -> tuple[Pipeline, dict]:
     """
-    REQ-B41: Trains a Multinomial Naïve Bayes classifier.
-    REQ-B42: Uses keyword-labelled research publication categories.
-    REQ-B44: Evaluates and logs classification performance metrics.
+    Trains a Multinomial Naïve Bayes classifier.
+    Uses keyword-labelled research publication categories.
+    Evaluates and logs classification performance metrics.
 
     Returns the trained pipeline and the evaluation report dict.
     """
@@ -142,7 +128,6 @@ def train_classifier(
     with open(labelled_path, "r", encoding="utf-8") as f:
         labelled = json.load(f)
 
-    # Prepare corpus and labels
     texts  = [f"{p.get('title', '')} {p.get('abstract', '')}" for p in labelled]
     labels = [p.get("category", "other") for p in labelled]
 
@@ -150,7 +135,6 @@ def train_classifier(
     print(f"  Classes   : {unique_labels}")
     print(f"  Documents : {len(texts)}")
 
-    # Need at least 2 classes and enough docs to split
     if len(unique_labels) < 2 or len(texts) < 4:
         print("[Warning] Not enough data for train/test split. Training on full dataset.")
         X_train, X_test = texts, texts
@@ -165,12 +149,12 @@ def train_classifier(
 
     print(f"  Train: {len(X_train)}  |  Test: {len(X_test)}")
 
-    # REQ-B41: Pipeline — TF-IDF vectorizer + Multinomial Naïve Bayes
+    # TF-IDF vectorizer + Multinomial Naïve Bayes
     pipeline = Pipeline([
         ("tfidf", TfidfVectorizer(
             preprocessor=lambda t: " ".join(preprocess(t)),
-            token_pattern=None,        # tokenization handled by preprocessor
-            sublinear_tf=True,         # log-scaled TF for better performance
+            token_pattern=None,        
+            sublinear_tf=True,         
             min_df=1,
         )),
         ("clf", MultinomialNB(alpha=0.1)),   # alpha: Laplace smoothing
@@ -184,9 +168,7 @@ def train_classifier(
     return pipeline, report
 
 
-# ---------------------------------------------------------------------------
-# REQ-B44: Evaluation metrics
-# ---------------------------------------------------------------------------
+# Evaluation metrics
 
 def evaluate_classifier(
     pipeline: Pipeline,
@@ -196,7 +178,7 @@ def evaluate_classifier(
     output_path: str = "data/classifier_report.json",
 ) -> dict:
     """
-    REQ-B44: Computes and logs classification performance metrics:
+    Computes and logs classification performance metrics:
       - Accuracy
       - Per-class Precision, Recall, F1
       - Confusion matrix
@@ -229,13 +211,11 @@ def evaluate_classifier(
     return result
 
 
-# ---------------------------------------------------------------------------
-# REQ-B43: Categorize new documents automatically
-# ---------------------------------------------------------------------------
+# Categorize new documents automatically
 
 def categorize_document(text: str, pipeline: Pipeline) -> str:
     """
-    REQ-B43: Predicts the research category of a new document.
+    Predicts the research category of a new document.
 
     Args:
         text:     Raw title + abstract text of the document.
@@ -263,7 +243,7 @@ def categorize_all(
     output_path: str = "data/categorized_publications.json",
 ) -> list[dict]:
     """
-    REQ-B43: Applies the trained classifier to all scraped publications
+    Applies the trained classifier to all scraped publications
     and saves the results with predicted categories.
     """
     with open(pubs_path, "r", encoding="utf-8") as f:
@@ -284,9 +264,7 @@ def categorize_all(
     return categorized
 
 
-# ---------------------------------------------------------------------------
 # CLI
-# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     print("=== Multinomial Naïve Bayes Classifier ===")
@@ -300,7 +278,6 @@ if __name__ == "__main__":
     pipeline = None
 
     if choice in ("1", "2", "3", "4"):
-        # Always label and train first
         label_publications()
         pipeline, report = train_classifier()
 
