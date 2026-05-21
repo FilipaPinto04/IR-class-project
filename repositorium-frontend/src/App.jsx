@@ -19,7 +19,7 @@ async function apiFetch(endpoint, params = {}) {
   return res.json();
 }
 
-// ─── URL ROUTING UTILITIES ──────────────────────────────────────────
+// ─── REQ-F81: URL ROUTING UTILITIES ──────────────────────────────────────────
 function readSearchParams() {
   const p = new URLSearchParams(window.location.search);
   return {
@@ -45,7 +45,7 @@ function writeSearchParams(params) {
   window.history.replaceState(null, "", newUrl);
 }
 
-// ─── USER PREFERENCES ───────────────────────────────────────────
+// ─── REQ-F63/F64: USER PREFERENCES ───────────────────────────────────────────
 const PREF_KEY = "pri_user_prefs";
 const DEFAULT_PREFS = {
   rankMode: "custom",
@@ -77,7 +77,7 @@ function usePreferences() {
   return { prefs, update };
 }
 
-// ── QUERY VALIDATION ────────────────────────────────────────────────
+// ─── REQ-F10: QUERY VALIDATION ────────────────────────────────────────────────
 const BOOLEAN_OPS = ["AND", "OR", "NOT"];
 
 function validateQuery(query, mode) {
@@ -101,11 +101,13 @@ function validateQuery(query, mode) {
     if (BOOLEAN_OPS.includes(tokens[tokens.length - 1]))
       return { type: "error", msg: `Não pode terminar com o operador "${tokens[tokens.length - 1]}".` };
 
+    // Consecutive operators
     for (let i = 0; i < tokens.length - 1; i++) {
       if (BOOLEAN_OPS.includes(tokens[i]) && BOOLEAN_OPS.includes(tokens[i + 1]) && tokens[i + 1] !== "NOT")
         return { type: "error", msg: `Operadores consecutivos: "${tokens[i]} ${tokens[i + 1]}".` };
     }
 
+    // Hint: operators must be uppercase
     const lowerOps = ["and", "or", "not"];
     for (const op of lowerOps) {
       if (query.split(" ").includes(op))
@@ -157,7 +159,7 @@ const Icon = ({ name, size = 16 }) => {
   return icons[name] || null;
 };
 
-// ───  CONTEXTUAL TOOLTIP ─────────────────────────────────────────────
+// ─── REQ-F68: CONTEXTUAL TOOLTIP ─────────────────────────────────────────────
 const Tooltip = ({ text, children }) => {
   const [show, setShow] = useState(false);
   return (
@@ -302,7 +304,7 @@ const Pagination = ({ page, total, pageSize, onChange }) => {
   );
 };
 
-// ───ACTIVE FILTERS DISPLAY ─────────────────────────────────────────
+// ─── REQ-F46: ACTIVE FILTERS DISPLAY ─────────────────────────────────────────
 const ActiveFilters = ({ year, yearTo, docType, fields, onRemove }) => {
   const filters = [];
   if (year || yearTo) filters.push({ key: "date", label: `Ano: ${year || "?"} – ${yearTo || "?"}` });
@@ -325,7 +327,7 @@ const ActiveFilters = ({ year, yearTo, docType, fields, onRemove }) => {
   );
 };
 
-// ─── COMPARISON VIEW ────────────────────────────────────────────
+// ─── REQ-F51/F52: COMPARISON VIEW ────────────────────────────────────────────
 const ComparisonPanel = ({ query, onAuthorClick }) => {
   const [customResults, setCustomResults] = useState(null);
   const [sklearnResults, setSklearnResults] = useState(null);
@@ -362,7 +364,7 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
     }
   };
 
-  //  Simple bar chart for score comparison
+  // REQ-F54: Simple bar chart for score comparison
   const ScoreChart = ({ customRes, sklearnRes }) => {
     if (!customRes?.results?.length) return null;
     const allUrls = [...new Set([
@@ -505,7 +507,7 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
   );
 };
 
-// ─── PERFORMANCE METRICS ────────────────────────────────────────────
+// ─── REQ-F53: PERFORMANCE METRICS ────────────────────────────────────────────
 const PerformanceMetrics = ({ searchTime, stats }) => {
   if (!searchTime && !stats) return null;
   return (
@@ -524,7 +526,7 @@ const PerformanceMetrics = ({ searchTime, stats }) => {
   );
 };
 
-// ─── ANALYTICS DASHBOARD ─────────────────────────────────────
+// ─── REQ-F55/F56/F57: ANALYTICS DASHBOARD ─────────────────────────────────────
 const AnalyticsDashboard = ({ stats }) => {
   const [queryLog, setQueryLog] = useState(() => {
     try { return JSON.parse(localStorage.getItem("pri_query_log") || "[]"); }
@@ -1197,6 +1199,7 @@ useEffect(() => {
   const [showBuilder, setShowBuilder] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
   const [showComparison, setShowComparison] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
   const [authorTarget, setAuthorTarget] = useState(null);
   const [stats, setStats] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
@@ -1373,6 +1376,11 @@ useEffect(() => {
                     } autoFocus />
                   {inputVal && <button type="button" className="clear-btn" onClick={() => { setInputVal(""); setSuggestions([]); }}><Icon name="x" size={14} /></button>}
                   <button type="submit" className="search-btn">{t("Pesquisar", "Search")}</button>
+                  {searchMode !== "author" && (
+                    <button type="button" className={`search-btn filter-toggle-btn${showFilters ? " active" : ""}`} onClick={() => setShowFilters(f => !f)} style={{ marginLeft: "6px", background: showFilters ? "#7a3b1e" : undefined }}>
+                      <Icon name="sliders" size={14} /> {t("Filtrar", "Filter")}
+                    </button>
+                  )}
                   {showSuggestions && suggestions.length > 0 && (
                     <div className="suggestions-box">
                       {suggestions.map((s, i) => (
@@ -1440,7 +1448,7 @@ useEffect(() => {
               )}
             </div>
 
-            {searchMode !== "author" && (
+            {searchMode !== "author" && showFilters && (
               <div className="config-panel">
                 <div className="config-section">
                   <h4>

@@ -7,10 +7,10 @@ import string
 from enum import Enum
 
 # Required NLTK resources download
-nltk.download('punkt_tab', quiet=True)   # for tokenization
-nltk.download('stopwords', quiet=True)  # for filtering common words in PT/EN
-nltk.download('wordnet', quiet=True)    # for lemmatization + query expansion
-nltk.download('omw-1.4', quiet=True)    # for multilingual WordNet support
+nltk.download('punkt_tab', quiet=True)   
+nltk.download('stopwords', quiet=True)  
+nltk.download('wordnet', quiet=True)   
+nltk.download('omw-1.4', quiet=True)    
 
 
 class ReductionMode(str, Enum):
@@ -38,19 +38,6 @@ def preprocess(
     Includes: Normalization, Tokenization, optional Stopword Removal,
     and configurable Lemmatization / Stemming.
 
-    Args:
-        text:
-            Raw input string to process.
-        reduction_mode:
-            Lexical reduction strategy to apply. One of:
-              - ReductionMode.STEMMING      – Porter Stemmer only.
-              - ReductionMode.LEMMATIZATION – WordNet Lemmatizer only.
-              - ReductionMode.BOTH          – Lemmatize then stem (default).
-              - ReductionMode.NONE          – Keep tokens unchanged.
-        remove_stopwords:
-            When True (default) bilingual PT+EN stop words are filtered out.
-            Set to False to retain stop words in the output token list.
-
     Returns:
         List of processed tokens.
     """
@@ -64,14 +51,14 @@ def preprocess(
     # Tokenization
     tokens = word_tokenize(text)
 
-    # Bilingual Stopword Removal (REQ-B20)
+    # Bilingual Stopword Removal 
     if remove_stopwords:
         stop_words = set(stopwords.words('portuguese')).union(set(stopwords.words('english')))
         stop_words = {unidecode(sw) for sw in stop_words}
     else:
         stop_words = set()
 
-    # Initialize Linguistic Reducers (REQ-B18)
+    # Initialize Linguistic Reducers
     stemmer = PorterStemmer() if reduction_mode in (ReductionMode.STEMMING, ReductionMode.BOTH) else None
     lemmatizer = WordNetLemmatizer() if reduction_mode in (ReductionMode.LEMMATIZATION, ReductionMode.BOTH) else None
 
@@ -95,9 +82,7 @@ def preprocess(
     return filtered_tokens
 
 
-# ---------------------------------------------------------------------------
-# REQ-B47 — Query Expansion via WordNet
-# ---------------------------------------------------------------------------
+# Query Expansion via WordNet
 
 def expand_query(
     tokens: list[str],
@@ -142,13 +127,12 @@ def expand_query(
     if not tokens:
         return tokens
 
-    expanded = list(tokens)          # start with originals
-    seen = set(tokens)               # avoid duplicates
+    expanded = list(tokens)        
+    seen = set(tokens)              
 
     for token in tokens:
         synonyms_added = 0
 
-        # WordNet works on surface forms; try the token as-is (already ASCII-lowercased)
         for synset in wordnet.synsets(token):
             if synonyms_added >= max_synonyms_per_token:
                 break
@@ -157,14 +141,11 @@ def expand_query(
                 if synonyms_added >= max_synonyms_per_token:
                     break
 
-                # Normalise: underscores / hyphens → space, then take first word
                 raw = lemma.name().replace('_', ' ').replace('-', ' ').split()[0]
 
-                # Skip if too short or identical to the source token
                 if len(raw) <= 2 or raw.lower() == token.lower():
                     continue
 
-                # Preprocess the synonym exactly as index terms are preprocessed
                 processed = preprocess(raw, reduction_mode=reduction_mode)
                 if not processed:
                     continue

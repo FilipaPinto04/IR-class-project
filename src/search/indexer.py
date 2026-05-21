@@ -1,10 +1,9 @@
 """
-Indexer — Universidade do Minho · PRI
 Builds an inverted index with:
-  - Per-field postings: title / abstract  (REQ-B46)
-  - Position lists per document           (REQ-B48 — phrase & proximity search)
+  - Per-field postings: title / abstract  
+  - Position lists per document        
   - Incremental update support
-  - Term-Document Matrix                  (REQ-B24)
+  - Term-Document Matrix                  
 """
 
 import json
@@ -13,9 +12,7 @@ import numpy as np
 from src.search.nlp import preprocess
 
 
-# ---------------------------------------------------------------------------
-# REQ-B24 — Term-Document Matrix (defined first so build_index can call it)
-# ---------------------------------------------------------------------------
+# Term-Document Matrix (defined first so build_index can call it)
 
 def build_term_document_matrix(
     inverted_index: dict,
@@ -60,9 +57,7 @@ def load_term_document_matrix(
     return data["doc_ids"], data["matrix"]
 
 
-# ---------------------------------------------------------------------------
 # Main indexer
-# ---------------------------------------------------------------------------
 
 def build_index(
     json_path: str = 'data/scraper_results.json',
@@ -104,11 +99,11 @@ def build_index(
 
         new_docs_count += 1
 
-        # REQ-B46: process each field independently
+        # process each field independently
         title_tokens    = preprocess(pub.get('title', ''))
         abstract_tokens = preprocess(pub.get('abstract', ''))
  
-        # ── NOVO: indexar texto completo do PDF ───────────────────────────────
+        # indexar texto completo do PDF ───────────────────────────────
         pdf_text_tokens = preprocess(pub.get('pdf_text', '') or '')
  
         # Index author names
@@ -129,7 +124,6 @@ def build_index(
         for t in abstract_tokens:
             abstract_tf[t] = abstract_tf.get(t, 0) + 1
  
-        # ── NOVO ──────────────────────────────────────────────────────────────
         pdf_tf: dict[str, int] = {}
         for t in pdf_text_tokens:
             pdf_tf[t] = pdf_tf.get(t, 0) + 1
@@ -151,14 +145,14 @@ def build_index(
  
             t_tf  = title_tf.get(term, 0)
             a_tf  = abstract_tf.get(term, 0)
-            p_tf  = pdf_tf.get(term, 0)           # ← NOVO
+            p_tf  = pdf_tf.get(term, 0)           
             au_tf = author_tf.get(term, 0)
-            total_tf = t_tf + a_tf + p_tf + au_tf  # ← inclui pdf
+            total_tf = t_tf + a_tf + p_tf + au_tf  
  
             fields = []
             if t_tf  > 0: fields.append("title")
             if a_tf  > 0: fields.append("abstract")
-            if p_tf  > 0: fields.append("pdf")     # ← NOVO
+            if p_tf  > 0: fields.append("pdf")    
             if au_tf > 0: fields.append("authors")
  
             inverted_index[term]["postings"][url] = {
@@ -166,12 +160,11 @@ def build_index(
                 "fields":       fields,
                 "title_tf":     t_tf,
                 "abstract_tf":  a_tf,
-                "pdf_tf":       p_tf,               # ← NOVO
+                "pdf_tf":       p_tf,               
                 "author_tf":    au_tf,
                 "positions":    positions.get(term, []),
             }
 
-    # Sort postings alphabetically (required by skip-pointer algorithm)
     for term in inverted_index:
         sorted_postings = dict(sorted(inverted_index[term]["postings"].items()))
         inverted_index[term]["postings"] = sorted_postings
