@@ -2,6 +2,11 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import "./styles/main.css";
 
 const API_BASE = "http://localhost:8000";
+const LangContext = React.createContext("pt");
+const useT = () => {
+  const lang = React.useContext(LangContext);
+  return (pt, en) => lang === "en" ? en : pt;
+};
 
 // ─── API ──────────────────────────────────────────────────────────────────────
 async function apiFetch(endpoint, params = {}) {
@@ -644,16 +649,6 @@ const StatsPanel = ({ stats }) => {
   if (!stats) return <div className="stats-loading">A carregar estatísticas…</div>;
   return (
     <div className="stats-panel">
-      <div className="stat-grid">
-        <div className="stat-box">
-          <span className="stat-val">{stats.total_documents?.toLocaleString()}</span>
-          <span className="stat-label">Documentos</span>
-        </div>
-        <div className="stat-box">
-          <span className="stat-val">{stats.total_terms?.toLocaleString()}</span>
-          <span className="stat-label">Termos indexados</span>
-        </div>
-      </div>
       <AnalyticsDashboard stats={stats} />
     </div>
   );
@@ -1169,8 +1164,15 @@ function exportBibTeX(results) {
 // ─── MAIN APP ─────────────────────────────────────────────────────────────────
 export default function App() {
   // REQ-F63/F64: Load user preferences
-  const { prefs, update: updatePrefs } = usePreferences();
+const { prefs, update: updatePrefs } = usePreferences();
 
+// Sincronizar preferências com o estado quando mudam
+useEffect(() => {
+  setRankMode(prefs.rankMode);
+  setReductionMode(prefs.reductionMode);
+  setRemoveStopwords(prefs.removeStopwords);
+  setPageSize(prefs.pageSize);
+}, [prefs]);
   // REQ-F81: Initialise state from URL params
   const urlParams = readSearchParams();
 
