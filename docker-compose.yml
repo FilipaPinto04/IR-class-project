@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: repositorium_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+    networks:
+      - search_network
+
+  frontend:
+    build:
+      context: ./repositorium-frontend
+      dockerfile: Dockerfile
+    container_name: repositorium_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./repositorium-frontend:/app
+      - /app/node_modules:/app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    networks:
+      - search_network
+
+networks:
+  search_network:
+    driver: bridge
