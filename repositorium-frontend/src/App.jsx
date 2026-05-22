@@ -228,7 +228,9 @@ const Snippet = ({ html }) => {
 
 // ─── RESULT CARD ──────────────────────────────────────────────────────────────
 const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick, compact }) => {
+  const t = useT();
   const [expanded, setExpanded] = useState(false);
+  const [showPdfSnippet, setShowPdfSnippet] = useState(false);
   return (
     <article className={`result-card ${compact ? "compact" : ""}`} style={{ animationDelay: `${rank * 40}ms` }}>
       <div className="result-rank">
@@ -239,10 +241,10 @@ const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick, compact }) =
         <h3 className="result-title">
           {result.url ? (
             <a href={result.url} target="_blank" rel="noopener noreferrer">
-              {result.title || "Sem título"}
+              {result.title || t("Sem título", "No title")}
               <Icon name="externalLink" size={13} />
             </a>
-          ) : (result.title || "Sem título")}
+          ) : (result.title || t("Sem título", "No title"))}
         </h3>
         {result.authors?.length > 0 && (
           <div className="result-authors">
@@ -261,10 +263,32 @@ const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick, compact }) =
         {result.abstract && (
           <button className="btn-text" onClick={() => setExpanded(e => !e)}>
             <Icon name={expanded ? "chevronUp" : "chevronDown"} size={13} />
-            {expanded ? "Ocultar resumo" : "Ver resumo completo"}
+            {expanded ? t("Ocultar resumo", "Hide abstract") : t("Ver resumo completo", "Show full abstract")}
           </button>
         )}
         {expanded && <p className="abstract-full">{result.abstract}</p>}
+
+        {/* Badge de match no PDF */}
+        {result.pdf_match === true && (
+          <div className="pdf-match-banner">
+            <span className="pdf-match-badge">
+              <Icon name="pdf" size={12} />
+              {t(" Encontrado no texto do PDF", " Found in PDF text")}
+            </span>
+            {result.pdf_snippet && (
+              <button className="btn-text pdf-match-toggle" onClick={() => setShowPdfSnippet(s => !s)}>
+                {showPdfSnippet ? t("Ocultar excerto", "Hide excerpt") : t("Ver excerto do PDF", "Show PDF excerpt")}
+              </button>
+            )}
+          </div>
+        )}
+        {showPdfSnippet && result.pdf_snippet && (
+          <div className="pdf-snippet">
+            <span className="pdf-snippet-label">{t("No PDF:", "In PDF:")}</span>
+            <Snippet html={result.pdf_snippet} />
+          </div>
+        )}
+
         <div className="result-actions">
           {result.pdf_link && (
             <a className="btn-action" href={result.pdf_link} target="_blank" rel="noopener noreferrer">
@@ -277,7 +301,7 @@ const ResultCard = ({ result, rank, isSaved, onSave, onAuthorClick, compact }) =
             </a>
           )}
           <button className={`btn-action ${isSaved ? "saved" : ""}`} onClick={() => onSave(result)}>
-            <Icon name="save" size={13} /> {isSaved ? "Guardado" : "Guardar"}
+            <Icon name="save" size={13} /> {isSaved ? t("Guardado", "Saved") : t("Guardar", "Save")}
           </button>
         </div>
       </div>

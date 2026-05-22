@@ -185,7 +185,7 @@ class UMinhoDSpace8Scraper:
             "authors":      [],
             "affiliations": [],
             "pdf_link":     None,
-            "pdf_text":     None,   # ← texto completo extraído do PDF
+            "pdf_text":     None,
             "url":          url.replace('/full', ''),
         }
 
@@ -201,46 +201,66 @@ class UMinhoDSpace8Scraper:
                     if field_label in targets:
                         key = targets[field_label]
                         if key in ("authors", "affiliations"):
-                            data[key].append(field_value)
+                            if field_value not in data[key]:
+                                data[key].append(field_value)
                         else:
                             data[key] = field_value
         except Exception as e:
             print(f"Error parsing metadata for {url}: {e}")
 
-        # Extrair link do PDF
-        try:
-            pdf_elem = self.driver.find_element(
-                By.CSS_SELECTOR, "a[href*='.pdf'], a[href*='/bitstream/']"
-            )
-            data["pdf_link"] = pdf_elem.get_attribute("href")
-        except NoSuchElementException:
-            pass
+        # ── [CORREÇÃO SELETORES DSPACE 8] Encontrar link do PDF ──────────────
+        pdf_selectors = [
+            "a.download-link", 
+            "a[href*='/bitstreams/']", 
+            "ds-file-download-link a", 
+            "a[href*='download']",
+            "a[href$='.pdf']"
+        ]
+        
+        for selector in pdf_selectors:
+            try:
+                pdf_elems = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                for elem in pdf_elems:
+                    href = elem.get_attribute("href")
+                    if href and ("bitstream" in href or "download" in href or href.endswith(".pdf")):
+                        data["pdf_link"] = href
+                        break
+                if data["pdf_link"]:
+                    break
+            except Exception:
+                continue
 
         # Descarregar e ler o texto completo do PDF
         if data["pdf_link"]:
             try:
-                headers = {"User-Agent": "Mozilla/5.0"}
+                print(f"      A tentar descarregar PDF de: {data['pdf_link']}")
+                headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
                 response = requests.get(
                     data["pdf_link"], headers=headers, timeout=30, stream=True
                 )
-                content_type = response.headers.get("Content-Type", "").lower()
-                if response.status_code == 200 and ("pdf" in content_type or data["pdf_link"].endswith(".pdf")):
+                
+                if response.status_code == 200:
                     pdf_bytes = io.BytesIO(response.content)
                     text_parts = []
                     with pdfplumber.open(pdf_bytes) as pdf:
-                        for page in pdf.pages:
+                        total_pages = len(pdf.pages)
+                        print(f"      -> A processar {total_pages} páginas do PDF...")
+                        for page_num, page in enumerate(pdf.pages, 1):
                             page_text = page.extract_text()
                             if page_text:
                                 text_parts.append(page_text.strip())
+                            # Imprime o progresso a cada 10 páginas para não encher o terminal
+                            if page_num % 10 == 0 or page_num == total_pages:
+                                print(f"         [Progresso: {page_num}/{total_pages} páginas lidas]")
                     if text_parts:
                         data["pdf_text"] = "\n\n".join(text_parts)
-                        print(f"      PDF lido: {len(data['pdf_text'])} caracteres")
+                        print(f"      -> PDF lido com sucesso: {len(data['pdf_text'])} caracteres")
                     else:
-                        print(f"      PDF sem texto extraível (pode ser imagem).")
+                        print(f"      -> O PDF não contém texto extraível estruturado.")
                 else:
-                    print(f"      PDF não disponível (status {response.status_code}).")
+                    print(f"      -> Falha no download (HTTP Status {response.status_code}).")
             except Exception as e:
-                print(f"      Erro ao ler PDF: {e}")
+                print(f"      -> Erro ao ler corpo do PDF: {e}")
 
         return data
 
@@ -326,20 +346,18 @@ class UMinhoDSpace8Scraper:
 
         return results
 
-
 if __name__ == "__main__":
     import json
     import os
 
     BASE_URL = "https://repositorium.uminho.pt/search?f.entityType=Publication,equals"
-
     RESEARCH_AREA = ""
 
-    # Total de documentos a recolher
+    # [ALTERADO] Total de documentos na listagem geral
     MAX_ITEMS = 100
 
-    # Todos os 100 visitam a página completa para extrair abstract, DOI, PDF e ler o texto do PDF
-    FULL_SCRAPE_LIMIT = 100
+    # [ALTERADO] Apenas os primeiros 20 visitam a página completa e extraem o texto do PDF
+    FULL_SCRAPE_LIMIT = 20
 
     scraper = UMinhoDSpace8Scraper(
         base_url=BASE_URL,
