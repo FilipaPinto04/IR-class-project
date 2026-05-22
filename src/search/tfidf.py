@@ -137,6 +137,18 @@ def get_sklearn_ranking(
             parts.append(p.get('title', ''))
         if fields is None or "abstract" in fields:
             parts.append(p.get('abstract', ''))
+        # Read PDF text from file if available (REQ-B46)
+        if fields is None or "pdf" in fields:
+            pdf_path = p.get("pdf_text_path")
+            if pdf_path and os.path.exists(pdf_path):
+                try:
+                    with open(pdf_path, "r", encoding="utf-8") as f:
+                        parts.append(f.read())
+                except Exception:
+                    pass
+            elif p.get("pdf_text"):
+                # Retrocompatibilidade com índices antigos
+                parts.append(p.get("pdf_text", ""))
         return " ".join(parts)
 
     corpus = [_doc_text(p) for p in publications]
@@ -148,15 +160,15 @@ def get_sklearn_ranking(
         return []
     corpus_clean, urls_clean = zip(*non_empty)
 
-    from unidecode import unidecode
+    # FIX: usar o mesmo pipeline do nlp.py para ser consistente com o índice próprio.
+    # Antes estava stop_words=None, o que fazia o sklearn não filtrar stop words
+    # e retornar resultados para termos como "and" quando o TF-IDF próprio dava 0.
     vectorizer = TfidfVectorizer(
-        stop_words=None,
-        lowercase=True,
-        preprocessor=lambda t: unidecode(t),
+        analyzer=lambda t: preprocess(t),
         min_df=1,
     )
     tfidf_matrix  = vectorizer.fit_transform(corpus_clean)
-    query_vec     = vectorizer.transform([unidecode(query)])
+    query_vec     = vectorizer.transform([query])
     cosine_sim    = cosine_similarity(query_vec, tfidf_matrix).flatten()
     ranked_indices = cosine_sim.argsort()[::-1]
     return [(urls_clean[i], float(cosine_sim[i])) for i in ranked_indices if cosine_sim[i] > 0]

@@ -1,0 +1,805 @@
+Fernanda Cristina Gomes de Sousa Marques
+Development and implementation of a
+digital portfolio in fundamental sciences
+abril de 2024
+secneics
+latnemadnuf
+ni
+oiloftrop
+latigid
+a
+fo
+noitatnemelpmi
+dna
+tnempoleveD
+seuqraM
+asuoS
+ed
+semoG
+anitsirC
+adnanreF
+4202|ohniMU
+Universidade do Minho
+Escola de Medicina
+
+Universidade do Minho
+Escola de Medicina
+Fernanda Cristina Gomes de Sousa Marques
+Development and implementation of a
+digital portfolio in fundamental sciences
+Dissertação de Mestrado
+Mestrado em Avaliação Aplicada à Formação nas Profissões
+da Saúde
+Trabalho efetuado sob a orientação do
+Professor Doutor Vitor Hugo Pereira
+abril de 2024
+
+COPYRIGHTS AND TERMS OF USE OF WORK BY THIRD PARTIES
+This is an academic work that can be used by third parties as long as the internationally accepted rules
+and good practices are respected, with regard to copyright and related rights.
+Thus, this work can be used under the terms set out in the license below.
+If the user needs permission to be able to make use of the work under conditions not provided for in the
+indicated license, he must contact the author, through the RepositóriUM of the University of Minho.
+License granted to users of this work
+Atribuição-NãoComercial-SemDerivações
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+ii
+
+ACKNOWLEDGMENTS
+I would like to thank everyone who worked to carry out this project and without whom it would not be
+possible, namely:
+- Vítor Hugo Pereira for the supervision.
+- Nuno Sousa for the constant stimulation during all the process. I do believe that was him the main
+responsible for all this work. Nuno thank you so much for everyday push me and put me on the way.
+- To all my PT colleagues and friends namely: Sara Gomes, Rita Sousa, António Melo, André Santa
+Cruz, Hugo Almeida, Nuno Gonçalves and Pedro Morgado.
+- To all my Brazilian colleagues and now friends namely: Camila Sousa, Lucimara, Márcia, Wilfredo,
+Marco, Murílio and Pedro Souza.
+- To all the students from the School of Medicine, thank you for giving me the feeling that I'm not getting
+older. You made my days.
+A special thanks to Beatriz Araújo for all the help with the institutional burocracy and for all the
+guidance.
+Finally, a special thanks to Jorge Freitas and Sara Silva for the help in data collection and analysis.
+Financial Support
+The work presented in this thesis was performed in the School of Medicine and in the Life and Health
+Sciences Research Institute (ICVS), University of Minho. Financial support was provided by Grupo Fuste
+and 2CA Braga – Centro Clínico Académico, Braga.
+iii
+
+STATEMENT OF INTEGRITY
+I hereby declare having conducted this academic work with integrity. I confirm that I have not used
+plagiarism or any form of undue use of information or falsification of results along the process leading
+to its elaboration.
+I further declare that I have fully acknowledged the Code of Ethical Conduct of the University of Minho.
+iv
+
+Development and implementation of a digital portfolio in fundamental
+sciences
+ABSTRACT
+Introduction: With the need of re-think how a medical doctor should be in the future, an increasing
+emphasis on reflective, competency-based practice has led to an expansion in the use of portfolios in
+health professionals (1,2). The great variety of portfolio used in education make it impossible to make a
+general statement about them. Despite their many variations, however, we can divide them in two main
+types: the reflective and the comprehensive portfolio (3, 4). Still, both types aim to support the learners
+learning process and to assess the student’s progress. Methods: At the UMinho Medical School, in
+2021 we implemented the use of the portfolio in the 1st and 2nd year of the curriculum where students
+have training in Basic Sciences. A portfolio containing 3 components was implemented: 1) Pedagogical
+Indicators, 2) Extracurricular activities relevant to professional development and 3) Reflective
+Component. It was intended that the student would be able to monitor their evolution, in a critical and
+reflective way, with the ultimate objective of promoting a proactive attitude in individual learning. We
+analyzed the grades obtained in the portfolio by 1st and 2nd year students, using the results of the 21-22
+and 22-23 cohort. Results: We observed that there is no difference in component 2 grades between 1st
+and 2nd year learners from the first cohort, but in the second we observed that 2nd year learners had
+better grades. We also saw that 2nd year learners, in both cohorts, performed better in component 3. We
+showed that, although components 2 and 3 were recognized as relevant, component 1 was not useful
+in the sense that, it is a record of classifications obtained in the Knowledge Component and in the Skills
+and Attitudes Component and was not even considered for the final score of the portfolio. Conclusion:
+As this is a basic science portfolio, we propose to change component 1 and introduce, for laboratory
+classes, an e-book where students, for each class, record the objective; methodologies used to achieve
+this objective; results; brief discussion about how the methodology was useful in achieving the objective
+and a brief reflection on what they learned and how they felt when executing that technical
+skill/methodology. We also intend to have activities such as preparation and submission of scientific
+posters, journal clubs, letters to editors and discussing cases involving issues related to scientific
+integrity and ethics. In the future, the impact of introducing this new portfolio format on the student's
+learning and development of a critical and proactive attitude should also be addressed.
+Keywords: Basic science; Medical curricula; Medical education; Portfolio.
+v
+
+ncias
+fundamentais
+RESUMO
+Introdução: A necessidade de repensar o médico no futuro, levou a uma expansão no uso de portfólios
+na educação de profissionais de saúde (1,2). Devido à grande variedade de tipos de portfólio torna
+impossível fazer uma observação geral sobre eles. No entanto, e apesar das suas muitas variações,
+podemos dividi-los em dois tipos principais: o portfólio reflexivo e portfólios mais abrangentes (3,4).
+Ambos os tipos visam apoiar o processo de aprendizagem dos alunos e avaliar o seu progresso.
+Métodos: Na Escola Médica da UMinho implementámos em 2021, a utilização do portefólio no 1º e 2º
+ano do currículo onde os alunos estão a ter formação em Ciências Básicas. Foi implementado um
+portfólio que contem 3 componentes: 1) Indicadores Pedagógicos, 2) Atividades extracurriculares
+relevantes para o desenvolvimento profissional e 3) Componente Reflexiva. Pretendeu-se que o aluno
+fosse capaz de acompanhar a sua evolução, de forma crítica e reflexiva, com o objetivo final de
+promover uma atitude proativa na aprendizagem individual. Analisamos as notas obtidas no portfólio,
+pelos alunos do 1º e do 2º ano, usando para isso os resultados da coorte de 21-22 e 22-23.
+Resultados: Observamos que não há diferença nas notas da componente 2 entre os alunos do 1º e do
+2º ano na primeira coorte, mas na segunda observamos que os alunos do 2º ano tinham melhores
+notas. Vimos ainda que os alunos do 2º ano, em ambas as coortes tinham melhor desempenho na
+componente 3. Mostramos que, embora as componentes 2 e 3 tenham sido reconhecidas como
+relevantes, a componente 1 não foi útil no sentido de que é um registro das classificações obtidas na
+Componente de conhecimentos (avaliações sumativas) e na Componente de Competências e Atitudes.
+Conclusão: Sendo este um portfólio de ciência básica, propomos alterar a componente 1 e introduzir,
+para as aulas laboratoriais, um e-book onde os alunos, para cada aula, registram o objetivo da aula;
+metodologias usadas para atingir esse objetivo; os resultados; breve discussão sobre como a
+metodologia foi útil para atingir o objetivo e uma breve reflexão sobre o que aprenderam e como se
+sentiram na execução daquela habilidade técnica/metodologia. Pretendemos ainda ter atividades como
+preparação e submissão de pósteres científicos, jornal clubs, redação de cartas a editores e discussão
+de casos que envolvam questões relacionadas à integridade e ética científica. No futuro deverá também
+ser abordado o impacto da introdução deste novo formato de portfólio na aprendizagem e
+desenvolvimento de uma atitude critica e proativa do aluno.
+Palavras-chave: Currículo médico; Educação médica; ensino de ciências básicas; portfólio.
+vi
+
+INDEX
+COPYRIGHTS AND TERMS OF USE OF WORK BY THIRD PARTIES ..................................... ii
+ACKNOWLEDGMENTS ..................................................................................................... iii
+STATEMENT OF INTEGRITY .............................................................................................. iv
+ABSTRACT ......................................................................................................................... v
+RESUMO ........................................................................................................................... vi
+LIST OF ABBREVIATIONS ................................................................................................ viii
+LIST OF FIGURES .............................................................................................................. ix
+1. INTRODUCTION ........................................................................................................ 2
+1.1 Definition of a portfolio and their goals .................................................................................... 2
+1.2 Types of portfolios .................................................................................................................. 4
+1.3 When to use a portfolio .......................................................................................................... 5
+2. AIMS ......................................................................................................................... 8
+3. Portfolio implementation in basic sciences ............................................................. 11
+3.1 Abstract ............................................................................................................................... 12
+3.2 Introduction ......................................................................................................................... 13
+3.3 Methods .............................................................................................................................. 15
+3.4 Results and Discussion ........................................................................................................ 16
+3.5 Conclusion ........................................................................................................................... 23
+4. REFERENCES .......................................................................................................... 25
+5. ATTACHES .............................................................................................................. 29
+Attach I – Current model of the Portfolio requested to the learners from the first and second year of
+the University of Minho' Degree in Medicine. ................................................................................. 29
+vii
+
+LIST OF ABBREVIATIONS
+ FM1 – Fundamentals of Medicine 1
+ FM2 – Fundamentals of Medicine 2
+ FM3 – Fundamentals of Medicine 3
+ FM4 – Fundamentals of Medicine 4
+ FoM – Foundations of medicine
+ M – Mean
+ Max – Maximum
+ Min – Minimum
+ OSCE – Objective structured clinical examination
+ p – p value (level of statistical significance)
+ PA1 – Academic Profile 1
+ PA2 – Academic Profile 2
+ rS – Spearman’s correlation coefficient
+ Graph Pad – GraphPad Software
+ Uminho – University of Minho
+ % - Percentage
+viii
+
+LIST OF FIGURES
+Figure 1. – Universe of portfolios.
+Figure 2. – Purposes and content of portfolios (Van Tartwijk et al., 2007).
+Figure 3. – Some tips when using a portfolio as teaching and learning methodology.
+Figure 4. – Classification on component 2 and 3 of the portfolio in the first- (PA1) and second- (PA2)
+year medical learners in the scholar year of 2021-2022.
+Figure 5. – Final classification of the portfolio in the first- (PA1) and second- (PA2) year medical
+learners in the scholar year of 2021-2022.
+Figure 6. – Classification on component 2 and 3 of the portfolio in the first- (PA1) and second- (PA2)
+year medical learners in the scholar year of 2022-2023.
+Figure 7. – Final classification of the portfolio in the first- (PA1) and second- (PA2) year medical
+learners in the scholar year of 2022-2023.
+Figure 8. – Correlation between the final score obtained in the portfolio by the learners from PA1 and
+PA2 among the different evaluators.
+Figure 9. – Correlation between the final score obtained in the portfolio by the learners from PA1 and
+PA2 among the OSCE that they had to performed in the first and second-year of the medical
+curriculum.
+Figure 10. – New structure Portfolio.
+ix
+
+Chapter 1
+___________________________________________________________________________
+INTRODUCTION
+1
+
+1. INTRODUCTION
+In 1990, in a pivotal work in healthcare professions education, Miller described the challenges of
+assessing clinical skills/competence/performance. He listed which instruments were available for
+assessing those dimensions but clearly stated that no tools were available for assessment of what a
+learner does when functioning independently at the clinical workplace (5). Since then, portfolios have
+trying to fill this gap and found their way into the field, not only as tools for assessment of performance
+in the workplace, but also as tools to stimulate learning from experience. Portfolios are advantageous
+for evaluation because they can test areas difficult to assess such as professionalism, continuous
+professional development, attitudes and critical thinking.
+1.1 Definition of a portfolio and their goals
+Traditionally, portfolios were highly used in areas such as architecture and arts. Indeed, portfolios
+began to be employed in pedagogy in 1980 and were initially used by architects, photographers,
+designers, among others, to show their work. In 1991, Paulson (6) described the portfolio as a
+collection of students’ works that reflects the progress, effort, and achievements of an individual.
+However, in recent years, the use of portfolios as learning and assessment tools has become more
+widespread across the range of other activities namely in health professions (7).
+Portfolio, used in education, can be defined as a collection of documentation of performed learning
+activities, feedback, and progress (8). The portfolio must have a clear purpose and be aligned with the
+learning outcomes of the program. To be successfully implemented a portfolio must be an integral part
+of the education with defined tasks for both the learners and the mentors. Support to learners and
+mentors support in how to use the portfolio is essential especially in the beginning of the program
+(9). Portfolios clearly have a strong formative component that should be fostered and supported by
+feedback but, also to be effective it should have a summative character. Indeed, in medical education,
+portfolios serve 3 main goals: assessment, reflection and learner development.
+Thus, all these concepts are relevant when we are defining a portfolio as it is also illustrated in Figure 1.
+2
+
+Figure 1. Universe of the portfolio. Concepts and words that helped on the definition of portfolios.
+Portfolios are instruments with multipurpose. Although not initially thought for that, portfolios are
+instruments for assessment. Different types of evidence can be combined in portfolios, such as
+materials produced by learners (log books, case reports, clinical data), reports of direct observation of
+practical procedure but also the reflective practices that should be part of the portfolios. Portfolios are
+also instruments for learning. Portfolio learning was a term that was introduced in 1998 (10) and it is
+defined as a method of encouraging adult and reflective learning for professionals. It was also
+emphasized the importance of supervision and critical reflection for portfolio learning. Indeed, a
+portfolio can also stimulate reflection, because, collecting and selecting work samples, evaluations and
+other types of materials that illustrate the work that was performed induces learners to look back on
+what they have done and analyze what they have achieve and what they should accomplish. Because
+portfolios are generally used in a long period of time, they can also be used to support planning and
+monitoring in professional development. To stimulate all this process, it should be included learning
+objectives in the portfolio as well as a document path of related learning activities and accomplishments
+(11, 12). As a consequence, reflections and overviews of personal development have secured a
+prominent place in many portfolios. To help in determining whether a portfolio is appropriate for its
+intended purpose, the triangle in Figure 2 helps to define the nature of a portfolio. However, a portfolio
+can be used to achieve more than one purpose. Indeed, in practice, the majority of portfolios are not
+situated in one of the corners of the triangle (13) which is especially relevant to decrease for example
+the negative impact that the assessment can have in the student’s hesitancy to expose their own
+difficulties on the learning process and in their personal development. On the other hand, if portfolios
+3
+
+are not assessed or used for assessment do not reward learners for the time and energy, they invest in
+them which leads them to likely take the portfolio and any associated learning activities with less
+commitment.
+Figure 2. Purposes and content of portfolios (Van Tartwijk et al., 2009) (14).
+1.2 Types of portfolios
+Portfolios were initially used in medical education for formative purposes in order to encourage
+reflection (15). More recently, the use of portfolios has been advocated for summative purposes. The
+summative portfolio is used to assess the final learning product of the student and formative portfolio
+can guide the student through the learning process with various evaluations.
+Also, depending on their purpose, portfolios may differ significantly in scope, structure and content (16).
+Thus, some will be little more than a log book recording special activities, while others offer an in-depth
+and long-term perspective on professional development over an extended period. Portfolios will normally
+be integrally related to a personal or professional learning plan. They may be digital or in paper-based.
+The content and the format may be prescribed (closed portfolio) or some level of freedom can be given
+to the learner (open portfolio) (9). Although the closed portfolio brings advantages namely for the tutor
+to assess different learners, the open portfolio can provide richer descriptions of the learner individual
+learning processes and where they can pay attention to specific characteristics of the workplaces (9). It
+4
+
+can report on work done, feedback received, progress made, plans for improving competence, and
+reflections on performance and development (9). Also, as referred before other different classification is
+the distinguish between the reflexive and comprehensive portfolio. While some portfolios may be
+developed in order to demonstrate the process of progression, others will be assessed against special
+targets of achievement. However, in all cases, the portfolio remains the practical and intellectual
+property of the person who develops it. In order to maximize the learning potential of portfolio
+development, the learner therefore has to take responsibility for its creation, maintenance and
+appropriateness for purpose (16). Also, relevant is the fact that whatever the guiding purpose behind
+the portfolio, it should be clear to both the learner and the person making judgements about the
+portfolio.
+1.3 When to use a portfolio
+Portfolios are widely used in undergraduate Healthcare Professions Education but often only in later
+clinical years/senior years. It was demonstrated in 2019 (17) that the use of portfolio is well accepted
+in the first year of Medical Curriculum and that thorough introduction of the portfolio planned in the
+early stages of their studies seems to be the way to train medical learners in reflection. In this study,
+the voices of learners n=14 (2 focus groups) and tutors n=6 (semi-structured interviews) who had used
+the Undergraduate Medical e-Portfolio in its first introductory year was registered. Analysis uncovered
+four major themes: Reflective Practice, Support/Training, e-Portfolio functions, and
+Feedback/Assessment. This study revealed that the introduction of portfolio learning in first year of the
+Medical Education is relevant in promoting reflective practice and for life-long-learning habits (17). Of
+relevance regular small group tutor support and feedback were positive factors which means that each
+tutor should be responsible for a group of learners (17) and ideally follow that student during the first
+and probably second year of medical graduation. In addition, in this study it was shown that the use of
+an authentic e-Portfolio based on a format used in postgraduate years enhanced its support among
+early curriculum learners. Also, although recognized that tutoring small group is beneficial, it was
+recognized that, especially in the first years, there is a need for further tutor training on reflection and
+that Institutional support for reflective practice and the role of an e-Portfolio with good curriculum
+integration is important (17). Based on this evidence in use of portfolios in the first years of Medical
+Education should be fostered and should be designed based on these characteristics. It is relevant to
+take student perceptions into account when implementing a competency-based portfolio and learners
+would benefit from coaching on how to select meaningful experiences and performance data for
+5
+
+documentation in their portfolios (16, 17). Flexibility in portfolio structure and requirements is essential
+to ensure optimal fit between learners' experienced competence development and portfolio content.
+Figure 3 illustrate some key concepts regarding how, when and why to use portfolios in medical
+education as teaching and learning methodology.
+Figure 3. Some tips when using a portfolio as teaching and learning methodology. Based
+on (Van Tartwijk et al., 2009) (14).
+6
+
+Chapter 2
+___________________________________________________________________________
+AIMS
+7
+
+2. AIMS
+As referred before, the portfolios are important instruments for assessing what a learner does when
+functioning independently at the clinical workplace (5). And if in the clinical practice the usage of
+portfolios is well accepted and established, the implementation and even the format of the portfolio in
+the basic years of the medical graduation is still missing.
+The teaching of Basic Sciences as well as laboratory practices is fundamental for medical learners and
+is an even more important tool for those who want a profile more focused on scientific research. On the
+other hand, in the UMinho Medical graduation, one key aspect that since the foundation was recognized
+as a pillar is the fact that medical doctors should be fostered to do research. On that sense, in order to
+stimulate learning and life-long learners, while promoting the collection and recording of experiences, as
+well as feedback, the implementation of a Basic Sciences portfolio is essential.
+Thus, in this dissertation we analyzed the impact of the introduction of portfolio on pre-clinical years in a
+medical curriculum and based on that assessment we design a proposal for a Basic Science portfolio.
+Our aim is to improve portfolio to the level that the students recognized portfolios as a key element on
+their ability to select evidence of learning and reflections and to improve their personal and intellectual
+developed.
+This is to be implemented in 1st and 2nd year learners in specific activities throughout the different
+curricular units.
+The objectives of this work are:
+1. To foster the basic skills in the learner. As, at the School of Medicine of the UMinho, teaching
+in the first years is already based on clinical cases, we intend to measure the development of
+more basic laboratory skills as learning outcomes;
+2. We also want learners to have a reference document, not only for preparing for the Objective
+Structured Clinical Examinations (OSCE) of the Curricular Unit of Fundamentals in Medicine
+(FM)/ Foundations of medicine (FoM) but also, for those who want to do research, of protocols
+for basic techniques that they can use in the future on their PhDs.
+8
+
+3. To reformulate existing classes (rather than to introduce new classes), and to implement a
+portfolio where learners will have the opportunity to record classes (Log Book) and reflect on
+their future in science. Furthermore, it will be a tool where extracurricular activities linked to
+scientific activities will be valued.
+These objectives were performed and resulted in the work that will be presented, in this thesis, in
+the form of an article.
+9
+
+Chapter 3
+___________________________________________________________________________
+RESULTS
+10
+
+3. Portfolio implementation in basic sciences
+Fernanda Marques1,2, Sara Duarte-Silva1,2, Nuno Sousa1,2, Vítor Hugo Pereira1,2
+1Life and Health Sciences Research Institute (ICVS), School of Medicine, University of Minho, Campus
+Gualtar, Braga, Portugal.
+2ICVS/3B’s - PT Government Associate Laboratory, Braga/Guimarães, Portugal.
+* Corresponding author:
+Fernanda Marques
+Life and Health Sciences Research Institute (ICVS), School of Medicine, University of Minho, Campus
+Gualtar, 4710-057 Braga, Portugal.
+E-mail: fmarques@med.uminho.pt
+11
+
+3.1 Abstract
+At the School of Medicine of the University of Minho (UMinho), in the medical curriculum, learners at
+the end of the first three curricular years obtained a degree in Basic Sciences in Medicine and at the
+end of the six curricular years they obtain a Master's degree, being qualified to access all the medical
+specialties available in the European space. The teaching of Basic Sciences as well as laboratory
+practices are essential for learners that aim to follow a profile focused on scientific research. In that
+sense, in order to stimulate learning, while promoting the collection and recording of experiences, as
+well as feedback, the implementation of a portfolio in Basic Sciences was critical. For that reason, since
+2021 the portfolio in the Basic Sciences was introduced. However, the way it was structured failed in
+several aspects namely in: i) giving greater visibility to what has been learned in the student training; ii)
+be a document that can be used for consultation in the future and iii) promote the achievement of
+autonomy by the student in a research laboratory setting. The reason why this was happening relies on
+the structure that was suggested for the portfolio, that do not include, as an example, a register of
+activities and laboratory practical skills that were performed during the scholar year in the laboratory
+classes, and also because learners were only requested to fill the portfolio at the end of the year instead
+of being filled during the entire scholar year in a continuous manner. For that reason, we intend to
+reformulate and implement a new structure portfolio of Basic Sciences where the student selects the
+evidence of learning and includes reflections on the process developed.
+Keywords: Portfolio, Basic Sciences, Medical education, stimulation of scientific profile
+12
+
+3.2 Introduction
+Portfolios are widely used in Medical education, not only as a source of information for assessment but
+also to help learners reflect on their experiences (18). Because portfolios can differ in their purpose,
+components and processes, we cannot force that one element, such as reflection, is essential. To
+increase our understanding of portfolios, we must recognize that there are different purposes in the
+portfolios and also depending of that purpose a variety of components that can contribute to any
+particular portfolio model should be considered. All portfolios must have a purpose, which is why
+Mathers et al. (19) defined a portfolio as a collection of evidence maintained and presented for a
+specific purpose. In Medical Education, van der Vleuten et al. have discussed three functions for a
+portfolio: personal development, assessment and learning. And, if for personal development and for
+learning, reflection is an essential part in a portfolio, it is not likely to be a relevant component for a
+portfolio model designed uniquely for summative assessment. But, because in Medical Education the
+majority of the portfolios, were designed for learning purposes there is no doubt that reflection has been
+a key component. This led us to the concept that the structure and the components of a portfolio must
+accomplish the function that we previously established for a portfolio. Also, for portfolios to be effective
+in supporting and assessing competence development, robust integration into the curriculum and tutor
+support are essential (20). Importantly previous studies have shown that learners can be quite negative
+about portfolio learning and assessment (18) and also because of that, medical educators should
+consider introducing portfolios as a method of formative and summative assessment earlier in the
+curriculum (21). Motivated by this idea we, in the School of Medicine of the UMinho, introduced in
+2021, in the first- and second-year of the curriculum the Portfolio in the Basic Sciences. In this portfolio,
+that we initially established as a learning portfolio, we propose the existence of 3 components: 1)
+Pedagogical Indicators, 2) Assignments/Deliverables/Extracurricular activities considered as relevant
+for the professional development and 3) Reflective Component (Annex 1). With this portfolio, it was
+intended that the students monitor their evolution, in a critical and reflective way, with the ultimate
+objective of promoting a proactive attitude in each student's individual learning, essential for the
+creation of life-long learners.
+Overall, we observed that although the implementation of this portfolio stimulated the student’s
+participation in extra-curricular activities, but the information that we obtain from them points to the
+conclusion that the portfolio stimulus to the student’s learning process was mainly observed in the
+reflective component. Moreover, to assess this portfolio, as it was implemented, component 1 which
+consists only in a table where the learners need to register the classifications that they obtained in the
+13
+
+progress tests and in summative knowledge exams; as no classification was attributed to this
+component the information is not relevant for assessment purposes and does not seem to be
+stimulating any relevant purpose. As so, there is a need for reappraisal, and changes, to this
+component of the portfolio.
+Given the implementation of a new structure for the portfolio in the Basic Sciences is needed, we start
+to think on the main objectives we aim with this instrument:
+-Allow the student to have an organized collection of activities that can serve as a long-term reference –
+longitudinal nature.
+-Allow the student to monitor their development, know the potential and the aspects that need to be
+improved – diversity of content.
+-Value the students work by the appreciation and recognition of the effort of the student.
+-Use the portfolio as a learning monitoring tool – reflective character.
+In brief, in this work we performed an analysis regarding different parameters collected from the
+portfolios that were submitted by the learners of the scholar year of 2021/2022 and 2022/2023.
+Based on the results obtained, we also propose a new portfolio format to be implemented in the
+MinhoMD curriculum at the School of Medicine (UMinho).
+14
+
+3.3 Methods
+Context
+The portfolio in Basic Science was implemented, in 2020/2021 scholar year, at the School of Medicine
+(UMinho, Braga, Portugal), enrolling first and second-year medical students. The portfolio was
+introduced in the context of Curricular Unit of Academic Profile (PA) -1 for the students of the 1-years
+and PA-2 for the students of the 2-year. It is a mandatory activity as it is used for summative evaluation
+of that Curricular Unit.
+Portfolio structure
+The Portfolio is divided into 3 components: 1) Pedagogical Indicators, 2) Tasks/Deliverables and 3)
+Reflective Component. With this portfolio, it is intended that the student monitors their evolution, in a
+critical and reflective way, with the ultimate objective of promoting a proactive attitude in each student's
+individual learning, essential for creating lifelong learners.
+In component 1 two aspects were considered: 1) Knowledge Component – where the learners need to
+fill a table with only the final classification obtained in the summative assessments and 2) Skills and
+Attitudes Component – where the learners need to fill with the final classification that they obtained in
+the OSCE exam (skills) and, the final score of the attitudes that were obtained by the mean of the
+classifications that were attributed by the teacher in the different classes.
+In component 2 the learners are invited to describe any extra-curricular tasks/assignments developed
+during the curricular year with impact on CanMeds competence framework for professional
+development (Medical Expert including: Communicator, Collaborator, Leader, Health Advocate, Scholar,
+Professional). For this the learners described which was the activity that they participated, classification
+(if applicable) and the relevance of that activity for the professional future.
+In component 3 learners need to reflect on their academic and professional future
+(Leader/Communicator). As suggestion the learners are required to reflect on possible topics to cover:
+“What do I need to improve in each section”, “what do I need to maintain”, “what is the plan for
+continuous improvement?”, “what are the main challenges, difficulties and successes”, “how do
+challenges and successes contribute to learning about oneself and the context in which one is
+inserted”).
+15
+
+Students know in advance which are the components that they will need to fill to deliver the portfolio.
+Portfolio assessment
+The portfolio was assessed at the end of each scholar year and each teacher was responsible for the
+assessment of 10-12 portfolios. As referred before, component 1 was not assessed because it is a
+register of the classifications obtained by the student in the knowledge and skill exams and
+professionalism obtained in the different classes. This quantitative information is useful for the learned
+then to reflect in the component 3. Then, component 2 is assessed in a scale 0-3 in which the quote
+must consider: a) whether they are actually extracurricular activities and not activities of some curricular
+unit; b) the relevance of the activities; c) the duration of the activities. Component 3 is assessed in a
+scale of 0-7 taking into account: a) correctness of writing; b) ability to raise pertinent questions; c)
+maturity in the proposed response to the questions raised; d) suggestion of personal changes for the
+next academic year.
+Statistical analysis
+Data that was analyzed in this work was obtained from the portfolio of students in the first and second
+year of the Medical degree from the University of Minho (years of 2021/2022 and 2022/2023). A
+confidence interval of 95% was assumed for all statistical tests. Regarding continuous variables, the
+assumption of normality was assessed by qualitative analysis of Q-Q plots and frequency distributions,
+the z-score of skewness and kurtosis, as well as by the Kolmogorov-Smirnov and Shapiro-Wilk tests.
+Mann-Whitney U-test was applied for all the data presented, except when reported otherwise.
+Correlations were carried out using Spearman’s correlation coefficient (rS). The sample size was as
+follows: N=146 and 126 (Year 2021/2022, PA1 and PA2, respectively); N= 157 and 129 (Year
+2022/2023, PA1 and PA2, respectively). Data is presented as median (min-max) and plotted using
+GraphPad prism 8.
+3.4 Results and Discussion
+The portfolios in Basic Sciences of Medical education are relevant to the extent that they allow the
+development of science-related skills in learners as well as the identification of potential learners to
+develop research projects in the cluster of the School of Medicine. The portfolio in Basic Science was
+implemented, in 2020/2021 at the School of Medicine, however we only have data regarding the
+16
+
+classifications for the year of 2021/2022 and 2022/2023 and in the context of this work only the data
+from 2021/2022 was considered and analyzed. The portfolio was introduced in the context of
+Curricular Unit of PA1 for the learners of the 1-year and PA2 for the learners of the 2-year.
+When analyzing the data obtained in the portfolio classifications in the component 2 and 3, which
+consists in the extracurricular activities that were developed by the learners during the scholar year and
+the reflective practice that was performed at the end of the year, respectively we observe that there is
+no difference in component 2 when comparing the learners from the 1- and 2-year (Figure 4). However,
+when analyzing the component 3, regarding the reflective practice we observed that the score obtained
+in the learners of the 2-year is higher, which may suggest that there is a positive effect in the
+introduction of the portfolio in the 1-year of the medical curriculum (Figure 4).
+Figure 4. Classification on component 2 and 3 of the portfolio in the first- (PA1) and
+second- (PA2) year medical learners in the scholar year of 2021-2022.
+Due to this better performance in this component, related with the reflective practice, we observed that
+the final score obtained in the in the portfolio is significantly higher for the learners of the second year
+(Figure 5). Of interest the impact of the reflective practice in the rating of the portfolio was already
+described, and it was shown that the ratings were primarily determined by quality of this task (22). In
+fact, quality of reflection was the only item to make a significant contribution (64%) to the explanation of
+the variance of the regular portfolio ratings (22).
+17
+
+Figure 5. Final classification of the portfolio in the first- (PA1) and second- (PA2) year
+medical learners in the scholar year of 2021-2022.
+Of relevance when we did the same analysis, for component 2 and 3, in a different cohort of students
+(from scholar year of 2022-203) we observed that students in the second-year (and that were previously
+submitted to portfolio experience, in PA1, in the scholar year of 2021-2022) already showed increased
+score in the extracurricular activities and as expected showed increased score also in component 3
+(Figure 6).
+Figure 6. Classification on component 2 and 3 of the portfolio in the first- (PA1) and
+second- (PA2) year medical learners in the scholar year of 2022-2023. The students from
+PA2 were the same that previously filled portfolio in the previous scholar year.
+This result is also reflected in the final score of the portfolio where students from the second-year (PA2)
+and that had some experience in portfolios showed increased scores with some students having scores
+near the maximum (Figure 7).
+18
+
+Figure 7. Final classification of the portfolio in the first- (PA1) and second- (PA2) year
+medical learners in the scholar year of 2022-2023. The students from PA2 were the same that
+previously filled portfolio in the previous scholar year.
+Because each teacher is assessing, in average, 10-12 portfolios we also analyzed the effect of having
+different evaluators in the final score of the portfolios. Regarding the portfolios from the learners from
+the first-year we did not observe any effect of having different teachers assessing the portfolios. For this
+first year we had 12 evaluators involved (Figure 8). However, when analyzing the data from the second-
+year we observed that there is significantly correlation between the final score obtained by the learners
+and the person that is assessing the portfolio (Figure 8). In this case we had less evaluators involved in
+the process and one of the evaluators was involved in the assessment of a higher number of portfolios
+(evaluator 1). Also, other important aspect was that only some evaluators are the same in the first and
+second-year.
+Figure 8. Correlation between the final score obtained in the portfolio by the learners
+from PA1 and PA2 among the different evaluators. In PA1 13 evaluators were involved
+19
+
+(evaluator 0-12) and in PA2 8 evaluators (evaluator 0-7) were involved in the process. With the
+exception of one, they evaluators involved in the assessment of PA1 and PA2 were different.
+This data is highly relevant and it highlight the relevance of having a completely different strategy to
+assess portfolios. Of relevance until the moment, we cannot assume that we have a mentoring program
+to guide our learners in the portfolios. But it is described that the system works well when it operates
+through the interaction of a learner and mentor using the material as a catalyst to guide further
+learning. So, in the future it will be essential to create a mentoring strategy during the portfolio
+construction and not to have an evaluator that will assess the portfolio only at the end of the scholar
+year. Regarding this aspect it is essential that the mentoring support should be based on the principle
+that the support is non-judgmental (16). Its purpose is to enable the learner to develop a portfolio that
+meets his/her needs and explore means to achieve this. The mentor may offer opinions and add issues
+based on personal experience, but should not take responsibility for the eventual actions of the learner
+in developing the portfolio (16). Other important aspect, that should be taken into consideration is that
+mentoring is a totally separate activity from either appraising or assessing the learner (16).
+Then, to better understand if the portfolio, in the way it is organized is contributing for the learners to
+have a better performance in the OSCE, where skills are assessed, we analyzed the correlation between
+the final score of the portfolio in the score obtained in the OSCE that learners performed in the first-year
+in the context of the curricular unit of Fundamental of Medicine 1 (FM1) and FM2 and in the second-
+year in the context of FM3 and FM4. As depicted in Figure 9 data from the correlation is difficult to
+interpret since we saw no correlation between the final score in the portfolio and the performance in the
+OSCE in FM1 and FM4 but observed a positive correlation was found for FM2 and FM3 (Figure 9).
+20
+
+Figure 9. Correlation between the final score obtained in the portfolio by the learners
+from PA1 and PA2 among the OSCE that they had to performed in the first and second-
+year of the medical curriculum.
+This lack of correlation is not completely surprising in the sense that none of the components of the
+portfolio is addressing the technical skills that the learners had to face during the scholar year and for
+which they are required to recall in the OSCEs. This reinforces the idea that our portfolio and its
+assessment is highly based on the reflective practice.
+Consequently, and if we want the portfolio to have an impact in the proficiency of the practical skills of
+the learners, we may replace the component 1, which is not being used to assess the portfolio, for a
+component that will bring a learning component for the learners. Being this a portfolio in basic science
+the suggestion is to have in part 1 an e-lab book where, the learners for each practical class that they
+have during the medical curriculum in the first and second year, can register the objective of that class;
+which methodologies they needed to follow to reach that objective; which were the results and a brief
+discussion on how the methodology was useful in reaching the final objective. Also, they would need to
+write a small reflection on what they learnt and how they felt confident in performing that technical
+skill/methodology (Figure 10).
+21
+
+Figure 10. New structure Portfolio.
+Also in this new component 1, in addition of having a e-lab book for the practical sessions we would
+have activities to train our student in scientific activities such as elaboration of scientific posters, journal
+clubs, writing letters to editor and discussing practical cases where scientific integrity should be taken in
+consideration. The proposal here is to add different tasks to their activities that could foster their
+scientific reasoning and awareness.
+It is also critical to reach a consensus among the faculty of the medical degree on what is the desired
+outcome of the implementation of a portfolio in pre-clinical years. Again, in our view, it is a great
+opportunity to stimulate students to develop their scientific competences not only in terms of laboratory
+skills but also on the scientific method.
+When addressing the new model that is proposed for the portfolio, data should be collected, to assess
+the efficacy of the portfolios in Basic Sciences. Namely it is our aim to do the:
+-Assessment of student attitudes in classes that have portfolio activities.
+-Assessment of the portfolios themselves, using measures of progression of the quality of the works
+presented.
+-Survey on the usability of the portfolio in the QuizOne tool (it is our intend to do a e-portfolio using the
+QuizOne tool).
+22
+
+-Evaluate how many students did laboratory internships over 2 years and in the long term how many of
+them will choose to do a PhD.
+-Questionnaires for students and teachers to evaluate portfolios in terms of transforming the theoretical
+and practical knowledge acquired.
+-For students who decide to do laboratory rotations, the supervisor will be asked about the students'
+level of preparation for the assigned tasks.
+This information will be relevant for portfolio evaluation namely in the transforming aspect of theoretical
+and practical knowledge acquired.
+3.5 Conclusion
+It is well established that portfolios enhance medical knowledge, promote professionalism, and
+encourage lifelong learning (23, 24). Successful portfolio programs include structured content
+guidelines, meaningful experiences for reflection, summative assessments, and faculty coaching (25).
+Due to these characteristics and attending to the data obtained and discussed in this work we
+suggested the implementation of a new structure for the portfolio in the basic sciences that will better
+allow:
+-The creation of a communities of practice that can help both learners and faculty to stimulate the
+profile more linked to science in medical education.
+-Understand the acquisition of theoretical knowledge and practical skills by learners.
+-Stimulate the learners to reflect throughout the entire year on the technical skills learnt.
+-Understand the extent to which learners reflect on issues such as scientific ethics; and reflections for
+its development with recognition of weaknesses and strengths; self-assessment and self-direction.
+For sure that it will be necessary to initially motivate learners to fill in the portfolio and try to create the
+idea that it is not a waste of time and that it can be an important tool. On the other hand, it will be
+necessary to gather a qualified and available faculty to monitor the learners and final evaluation.
+23
+
+Chapter 4
+___________________________________________________________________________
+REFERENCES
+24
+
+4. REFERENCES
+1.General Medical Council. Good Medical Practice. General Medical Council Guidance for Doctors
+2006. Available at http://www.gmc-uk.org/guidance/ good_medical_practice.asp. Accessed on 6 May
+2010.
+2. Nursing and Midwifery Council. Personal Professional Profiles. Nursing and Midwifery Council 2008.
+Available at http://www.nmc-uk.org. Accessed on 6 May 2010.
+3. Roberts C, Shadbolt N, Clark T, Simpson P. The reliability and validity of a portfolio designed as a
+programmatic assessment of performance in an integrated clinical placement. BMC Med Educ. 2014
+Sep 20;14:197. doi: 10.1186/1472-6920-14-197.
+4. Driessen E. Do portfolios have a future?. Adv Health Sci Educ Theory Pract. 2017. 2017
+Mar;22(1):221-228. doi: 10.1007/s10459-016-9679-4.
+5. Miller GE. The assessment of clinical skills/competence/performance. Acad Med. 1990 Sep;65(9
+Suppl):S63-7. doi: 10.1097/00001888-199009000-00045.
+6. Paulson FL, Paulson PR, Meyer CA. What makes a portfolio a portfolio? Eight thoughtful guidelines
+will help educators encourage self directed learning. Educ Leadership. 1991 48:60–63.
+7. Buckley S, Coleman J, Davison I, Khan KS, Zamora J, Malick S, Morley D, Pollard D, Ashcroft T,
+Popovic C, Sayers J. The educational effects of portfolios on undergraduate student learning: a Best
+Evidence Medical Education (BEME) systematic review. BEME Guide No. 11. Med Teach. 2009
+Apr;31(4):282-98. doi: 10.1080/01421590902889897.
+8. Möller R, Ringsted C, Danielsen N. Portfolio - a tool for making learning and competence
+development visible. Lakartidningen. 2021 Sep 20;118:21099.PMID: 34542895
+9. Driessen E and Jan van Tartwijk. Portfolios in personal and professional development. Understanding
+Medical Education: Evidence, Theory and Practice, Second Edition. Edited by Tim Swanwick. 2014 The
+Association for the Study of Medical Education. Published 2014 by John Wiley & Sons, Ltd.
+25
+
+10. Snadden D, Thomas ML. Portfolio learning in general practice vocational training--does it work? Med
+Educ. 1998 Jul;32(4):401-6. doi: 10.1046/j.1365-2923.1998.00245.x.
+11. Mathers NJ, Challis MC, Howe AC, Field NJ. Portfolios in continuing medical education--effective
+and efficient? Med Educ. 1999 Jul;33(7):521-30. doi: 10.1046/j.1365-2923.1999.00407.x.
+12. Oermann MH. Developing a professional portfolio in nursing. Orthop Nurs. 2002 Mar-Apr;21(2):73-
+8. doi: 10.1097/00006416-200203000-00013.
+13. Buckley S, Coleman J, Davison I et al. (2009) The educational effects of portfolios on
+undergraduate student learning: a Best Evidence Medical Education (BEME) systematic review. BEME
+Guide No. 11. Medical Mentor. 31(4): 282–98.
+14. Van Tartwijk J, Driessen EW. Portfolios for assessment and learning: AMEE Guide no. 45. Med
+Teach. 2009 Sep;31(9):790-801. doi:10.1080/01421590903139201.
+15. Driessen E. Do portfolios have a future? Adv Health Sci Educ Theory Pract. 2017 Mar;22(1):221-
+228. doi: 10.1007/s10459-016-9679-4.
+16. Challis M. AMEE Medical Education Guide No. 11 (revised): Portfolio-based learning and
+assessment in medical education. Medical Teacher, Vol. 21, No. 4, 1999.
+17. Grom I, O'Neill A. Can an authentic EPortfolio succeed in First Year Medicine? MedEdPublish
+(2016). 2019 Dec 23:8:236. doi: 10.15694/mep.2019.000236.1. eCollection 2019.
+18. Rees C, Sheard C. Undergraduate medical learners' views about a reflective portfolio assessment of
+their communication skills learning. Med Educ. 2004 Feb;38(2):125-8. doi: 10.1111/j.1365-
+2923.2004.01750.x.
+19. Mathers NJ, Challis MC, Howe AC, Field NJ. Portfolios in continuing medical education--effective
+and efficient? Med Educ. 1999 Jul;33(7):521-30. doi: 10.1046/j.1365-2923.1999.00407.x.
+26
+
+20. Driessen E, van Tartwijk J, van der Vleuten C, Wass V. Portfolios in medical education: why do they
+meet with mixed success? A systematic review. Med Educ. 2007 Dec;41(12):1224-33. doi:
+10.1111/j.1365-2923.2007.02944.x.
+21. Driessen E, van Tartwijk J, Vermunt JD, van der Vleuten CP. Use of portfolios in early
+undergraduate medical training. Med Teach. 2003 Jan;25(1):18-23. doi:
+10.1080/0142159021000061378.
+22. Driessen EW, Overeem K, van Tartwijk J, van der Vleuten CPM, Muijtjens AMM. Validity of portfolio
+assessment: which qualities determine ratings? Med Educ. 2006. doi: 10.1111/j.1365-
+2929.2006.02550.x.
+23. Buckley S, Coleman J, Davison I, Khan KS, Zamora J, Malick S, Morley D, Pollard D, Ashcroft T,
+Popovic C, Sayers J. The educational effects of portfolios on undergraduate student learning: a Best
+Evidence Medical Education (BEME) systematic review. BEME Guide No. 11 Med Teach. 2009
+Apr;31(4):282-98. doi: 10.1080/01421590902889897.
+24. Driessen E , J Van Tartwijk, Van Der Vleuten C, Wass V. Portfolios in medical education: why do
+they meet with mixed success? A systematic review. Med Educ. 2007 Dec;41(12):1224-33. doi:
+10.1111/j.1365-2923.2007.02944.x.
+25. Driessen EW, van Tartwijk J, Overeem K, Vermunt JD, van der Vleuten CP. Conditions for successful
+reflective use of portfolios in undergraduate medical education. Med Educ. 2005 Dec;39(12):1230-5.
+doi: 10.1111/j.1365-2929.2005.02337.x.
+27
+
+Chapter 5
+___________________________________________________________________________
+ATTACHES
+28
+
+5. ATTACHES
+Attach I – Current model of the Portfolio requested to the learners from the first and second year of
+the University of Minho' Degree in Medicine.
+PORTEFÓLIO
+2023/2024
+MinhoMD
+Escola de Medicina
+Universidade do Minho
+29
+
+Portefólio
+O Portefólio está dividido em 3 partes: 1) Indicadores Pedagógicos, 2)
+Assignments/Deliverables e 3) Componente Reflexiva, todas elas consideradas essenciais para a
+formação de estudantes de medicina. Com este portefólio, pretende-se que o estudante vá
+monitorizando a sua evolução, de forma crítica e reflexiva, com o objetivo final de promover uma
+atitude proativa na aprendizagem individual de cada estudante, essencial para a criação de life-long
+learners.
+30
+
+1. Indicadores Pedagógicos
+31
+
+A. Componente Conhecimento - avaliações sumativas (Medical Expert)
+Inserir Unidade Curricular 1º Trimeste
+Exame Nota (Cor)
+Bloco 1
+Bloco 2
+Progress Test Parte A
+Progress Test Parte B
+Inserir Unidade Curricular 2º Trimeste
+Exame Nota (Cor)
+Bloco 1
+Bloco 2
+Progress Test Parte A
+Progress Test Parte B
+Inserir Unidade Curricular 3º Trimeste
+Exame Nota (Cor)
+Bloco 1
+Bloco 2
+Progress Test Parte A
+Progress Test Parte B
+32
+
+B. Componente Habilidades e Atitudes - comunicação clínica médico-doente, escalas de
+comportamento e atitudes (Professional)
+Resultados do OSCE
+Unidade Curricular Nota
+Resultados de Atitudes
+Unidade Curricular Nota
+33
+
+2. Assignments/Deliverables/Atividades extrcurriculares
+34
+
+A. Tarefas/Assignments desenvolvidas durante o ano curricular com relevo para a valorização
+profissional (Medical Expert including: Communicator, Collaborator, Leader, Health Advocate, Scholar,
+Professional)
+Tarefa/Atividade Nota (se Relevância para o futuro profissional
+aplicável)
+Curso de Estatística no NA Este curso permitiu-me conhecer conceitos
+Coursera (5 horas) básicos de estatística; uma ferramenta
+indispensável para a interpretação e geração
+de conhecimento científico.
+Esta tarefa permitiu-me adquirir as
+competências X e Y.
+35
+
+3. Componente Reflexiva
+36
+
+A. Reflexão sobre o futuro académico e profissional (Leader/Communicator)
+(sugestões de temas a abordar: “O que preciso melhorar em cada secção”, “o que preciso manter”,
+“qual o plano para melhoria contínua?”, “quais os principais desafios, dificuldades e sucessos”, “de
+que forma os desafios e sucessos contribuem para a aprendizagem sobre si mesmo e sobre o contexto
+em que está inserido”)
+37

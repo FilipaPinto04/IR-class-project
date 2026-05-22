@@ -38,7 +38,7 @@ def init_db():
             processed    TEXT,
             pdf_link     TEXT,
             affiliations TEXT,
-            pdf_text     TEXT
+            pdf_text_path TEXT
         )
     """)
 
@@ -97,7 +97,7 @@ def insert_publications(publications: list, processed_map: dict = None):
 
         cur.execute("""
             INSERT OR IGNORE INTO documents
-                (url, title, abstract, doi, year, raw_text, processed, pdf_link, affiliations, pdf_text)
+                (url, title, abstract, doi, year, raw_text, processed, pdf_link, affiliations, pdf_text_path)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             url,
@@ -109,7 +109,7 @@ def insert_publications(publications: list, processed_map: dict = None):
             processed,
             pub.get("pdf_link"),
             json.dumps(affiliations),
-            pub.get("pdf_text"),
+            pub.get("pdf_text_path"),
         ))
 
         if cur.rowcount == 0:
@@ -206,6 +206,7 @@ def get_all_publications() -> list:
         doc_dict.pop("id", None)
         doc_dict.pop("raw_text", None)
         doc_dict.pop("processed", None)
+        # pdf_text_path kept so indexer/API can read the file
         publications.append(doc_dict)
 
     conn.close()
@@ -261,4 +262,3 @@ if __name__ == "__main__":
     with open("data/scraper_results.json", "r", encoding="utf-8") as f:
         publications = json.load(f)
     insert_publications(publications)
-    print("[DB] Done.")

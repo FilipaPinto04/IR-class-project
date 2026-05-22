@@ -103,8 +103,20 @@ def build_index(
         title_tokens    = preprocess(pub.get('title', ''))
         abstract_tokens = preprocess(pub.get('abstract', ''))
  
-        # indexar texto completo do PDF ───────────────────────────────
-        pdf_text_tokens = preprocess(pub.get('pdf_text', '') or '')
+        # Ler texto do PDF a partir do ficheiro .txt (se existir)
+        pdf_text_raw = ""
+        pdf_text_path = pub.get("pdf_text_path")
+        if pdf_text_path and os.path.exists(pdf_text_path):
+            try:
+                with open(pdf_text_path, "r", encoding="utf-8") as f:
+                    pdf_text_raw = f.read()
+            except Exception as e:
+                print(f"[Warning] Could not read PDF text file {pdf_text_path}: {e}")
+        elif pub.get("pdf_text"):
+            # Retrocompatibilidade: índices antigos com pdf_text inline
+            pdf_text_raw = pub.get("pdf_text", "")
+
+        pdf_text_tokens = preprocess(pdf_text_raw)
  
         # Index author names
         authors = pub.get('authors', [])

@@ -1,0 +1,1473 @@
+Universidade do Minho
+Escola de Medicina
+Camila Vieira Sousa
+Implantação da telemedicina como prática
+médica no currículo de graduação
+abril de 2024
+olucírruc
+on
+acidém
+acitárp
+omoc
+anicidemelet
+ad
+oãçatnalpmI
+asuoS
+arieiV
+alimaC
+4202
+|
+ohniMU
+oãçaudarg
+ed
+
+Universidade do Minho
+Escola de Medicina
+Camila Vieira Sousa
+Implantação da telemedicina como prática
+médica no currículo de graduação
+Dissertação de Mestrado
+Mestrado em Avaliação aplicado à formação das
+Profissões de Saúde
+Trabalho efetuado sob a orientação do
+Doutor Vítor Hugo Pereira
+abril de 2024
+
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO
+TRABALHO POR TERCEIROS
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas
+as regras e boas práticas internacionalmente aceites, no que concerne aos direitos de autor e
+direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo
+indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em
+condições não previstas no licenciamento indicado, deverá contactar o autor, através do
+RepositóriUM da Universidade do Minho.
+Licença concedida aos utilizadores deste trabalho
+Atribuição-NãoComercial-SemDerivações
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+ii
+
+AGRADECIMENTOS
+Ao professor José Lucio Machado que sempre me incentivou a crescer e viabilizou a realização
+desse mestrado, juntamente com os colegas da Inspirali.
+Ao Nathan Mendes pelo apoio, direcionamento e por despertar em mim o desejo de realizar o
+mestrado e ser uma profissional cada vez mais capacitada.
+A Mara que contribuiu muito para pesquisa e disponibilização e adequação de todos os dados que
+precisava na plataforma Prontlife.
+A professora Flávia Andrade que foi incansável no apoio a submissão e aprovação do estudo no
+Comitê de Ética e Pesquisa.
+Ao Vitor Hugo e ao Nuno Sousa que me direcionaram, apoiaram e foram verdadeiros mestres em
+toda a jornada de aprendizado durante o mestrado e na construção dessa tese.
+Aos colegas de trabalho que entenderam o momento e me apoiaram nos dias de estudo e ausência
+de encontros e reuniões.
+A comunidade MAPS, vocês me ensinaram muito e levarei os aprendizados, convivência e
+encontros para as melhores memórias de minha vida.
+Ao André pelo apoio incondicional e incansável, em todos os
+dias de nossas vidas. Ao Miguel, que mesmo sem entender, contribuiu
+muito com esse sonho, ele é muito responsável pela realização dele.
+E aos meus pais, Gilson e Dora, que sempre me permitiram
+sonhar e realizar.
+iii
+
+DECLARAÇÃO DE INTEGRIDADE
+Declaro ter atuado com integridade na elaboração do presente trabalho académico e confirmo que
+não recorri à prática de plágio nem a qualquer forma de utilização indevida ou falsificação de
+informações ou resultados em nenhuma das etapas conducente à sua elaboração.
+Mas declaro que conheço e que respeitei o Código de Conduta Ética da Universidade do Minho.
+iv
+
+RESUMO
+Implantação da telemedicina como prática médica no currículo de
+graduação
+O presente estudo tem por objetivo implementar a telemedicina como formação prática no
+currículo de graduação médica em duas instituições de ensino superior, uma em Belo Horizonte
+(UNIBH) e a outra na região metropolitana (FASEH) de Vespasiano, Minas Gerais, Brasil, nos ciclos
+clínico e de internato mediante uso da plataforma ProntLife. Trata-se de um estudo descritivo, de
+natureza mista, qualitativo e quantitativo, realizado em duas escolas de medicina do grupo
+Inspirali. Os dados foram retirados do Prontlife e tratados por meio da análise de conteúdo,
+modalidade temática. Além disso, foi feita uma revisão de literatura, usando a base de dados
+PUBMED, LILACS e SCIELO em que se usou os descritores para busca de artigos sobre o uso da
+telemedicina na graduação médica, a história da telemedicina e sua implementação, as resoluções
+da telemedicina no Brasil e uma breve contextualizada da Inspirali; o uso da telemedicina durante
+a pandemia da Covid-19 no Brasil; descrever a montagem de serviços de telemedicina no curso
+de medicina de uma instituição de ensino superior em Belo Horizonte; discutir essa
+implementação com docentes e trabalhar juntamente com a Diretoria de Inovação da Inspirali a
+telemedicina como simulação. Com a implementação desse projeto, pretende-se colocar a
+telemedicina como prática nas simulações e ambulatórios do curso de graduação de medicina,
+avaliar os efeitos da inserção da telemedicina na formação e no acesso aos cuidados de saúde a
+grupos vulnerabilizados e os impactos nos serviços de saúde que estão compartilhando essa
+prática com a escola de medicina.
+Palavras-chave: Telemedicina; história da telemedicina; educação médica e telessaúde
+v
+
+ABSTRACT
+Implementation of telemedicine as a medical practice in the
+undergraduate curriculum
+The present study aims to implement telemedicine as practical training in the undergraduate
+medical curriculum at two higher education institutions, one in Belo Horizonte (UNIBH) and the
+other in the metropolitan region (FASEH) of Vespasiano, Minas Gerais, Brazil, in the clinical and
+internship cycles through the use of the ProntLife platform. This is a descriptive study of a mixed
+nature, combining qualitative and quantitative approaches, conducted at two medical schools
+within the Inspirali group. Data were extracted from ProntLife and analyzed using thematic content
+analysis. Additionally, a literature review was conducted using PUBMED, LILACS, and SCIELO
+databases, with descriptors used to search for articles on the use of telemedicine in medical
+education, the history of telemedicine and its implementation, telemedicine regulations in Brazil,
+and a brief contextualization of Inspirali. The review also covered the use of telemedicine during
+the Covid-19 pandemic in Brazil, the description of the setup of telemedicine services in the medical
+course of a higher education institution in Belo Horizonte, and discussions on the implementation
+with faculty members. Collaboratively, with the Innovation Directorate of Inspirali, the study
+explored telemedicine as a simulation. Through the implementation of this project, the goal is to
+incorporate telemedicine as a practice in simulations and outpatient clinics in the undergraduate
+medical curriculum. The study aims to evaluate the effects of integrating telemedicine into medical
+education and its impact on access to healthcare for vulnerable groups. Furthermore, it intends to
+assess the impacts on healthcare services that are engaged in this practice with the medical school.
+Keywords: Telemedicine; history of telemedicine; medical education and telehealth.
+.
+vi
+
+ÍNDICE
+1 INTRODUÇÃO .................................................................................................................... 1
+2 REVISÃO DE LITERATURA ............................................................................................ 4
+2.1 Definição telessaúde e telemedicina ...................................................................... 4
+2.2 História da Telemedicina .......................................................................................... 5
+2.2.1 História da telemedicina no Brasil ............................................................................ 7
+2.2.2 Legislação da Telemedicina no Brasil ....................................................................... 8
+2.3 Telemedicina e COVID-19 ...................................................................................... 10
+2.4 Diretrizes Curriculares Nacionais ......................................................................... 11
+2.5 Currículo Inspirali ................................................................................................... 12
+2.6 Vantagens, desvantagens e evidências do uso da telemedicina ....................... 14
+3 OBJETIVOS E METODOLOGIA ......................................................................... 17
+3.1 Objetivos ................................................................................................................... 17
+3.1.1 Objetivo geral ......................................................................................................... 17
+3.1.2 Objetivos específicos .............................................................................................. 17
+3.2 Hipótese .................................................................................................................... 17
+3.3 Metodologia ............................................................................................................. 17
+3.3.1 Considerações estatísticas ..................................................................................... 17
+3.3.2 Local de estudo e operacionalização da coleta de dados ......................................... 18
+3.3.3 Riscos e benefícios da pesquisa ............................................................................. 19
+3.3.4 Amostra ................................................................................................................. 20
+3.3.5 Instrumento de avaliação em telessaúde ................................................................ 20
+4 RESULTADOS ............................................................................................................... 25
+4.1 Amostra coletada .................................................................................................... 25
+4.1.1 Experiências práticas telemedicina ......................................................................... 25
+5 DISCUSSÃO E CONCLUSÃO ............................................................................ 44
+5.1 Discussão.................................................................................................................. 44
+5.2 Conclusão ................................................................................................................. 48
+6 PERSPECTIVAS FUTURAS ............................................................................... 50
+REFERÊNCIAS ................................................................................................... 51
+APÊNDICE ......................................................................................................... 55
+ANEXOS ............................................................................................................. 57
+vii
+
+LISTA DE ABREVIAÇÕES
+APS Atenção Primária a Saúde
+CEP Comitê de Ética e Pesquisa
+CFM Conselho Federal de Medicina
+CIS Clínica Integrada de Saúde
+CNPq Conselho Nacional de Desenvolvimento Científico e Tecnológico
+CONEP Comissão Nacional de Ética e Pesquisa
+DCNs Diretrizes Curriculares Nacionais
+DEGES Departamento de Gestão da Educação em Saúde
+FASEH Faculdade de Saúde e Ecologia Humana
+Mini-CEX Mini-exercício Clínico Avaliativo
+MS Ministério da Saúde
+OMS Organização Mundial de Saúde
+PMSUS Prática Médica no SUS
+PPC Projeto Pedagógico de Curso
+SGTES Secretaria de Gestão do Trabalho e da Educação em Saúde
+TIC Tecnologias de Informação e comunicação
+OMS Organização Mundial de Saúde
+RUTE Rede Universitária de Telemedicina
+SGTES Secretaria de Gestão do Trabalho e da Educação em Saúde
+UBS Unidade Básica de Saúde
+UC Unidade Curricular
+UNIBH Centro Universitário de Belo Horizonte
+UPA Unidade de Pronto Atendimento
+SUS Sistema Único de Saúde
+viii
+
+LISTA DE TABELAS
+Tabela 1 - Tipos de Telessaúde ................................................................................................ 5
+Tabela 2 - Tipos de Telessaúde ................................................................................................. 6
+Tabela 3 – Checklist do Instrumento de Orientação em Telessaúde ......................................... 21
+Tabela 4 - Projetos de extensão cadastrados na Ânima no ano de 2021/2022 ....................... 26
+Tabela 5 - Experiências de telemedicina no ano de 2021 no UNIBH ........................................ 26
+Tabela 6 - Resposta Checklist a implementação de telemedicina – Itens 1 ao 3 ....................... 32
+Tabela 7 - Presença na capacitação ambulatório PMSUS......................................................... 33
+Tabela 8 - Percepção dos docentes sobre a inserção da telemedicina como prática ................. 43
+ix
+
+LISTA DE FIGURAS
+Figura 1 – Artigos da resolução CFM Nº1.643/2002 ............................................................... 9
+Figura 2 – Resolução 1.974/2011 ........................................................................................... 9
+Figura 3 – Organização da telemedicina na educação médica na COVID-19 ............................ 10
+Figura 4 – Mapa das Escolas de Medicina Inspirali no Brasil ................................................... 13
+Figura 5 – Evidências do uso da telemedicina ......................................................................... 16
+Figura 6 - Reuniões de construção da telemedicina UNIBH ...................................................... 27
+Figura 7 - Projeto do Centro de Telemedicina UNIBH ............................................................... 28
+Figura 8 - Centro de telemedicina UNIBH ................................................................................ 28
+Figura 9 - Centro de Telemedicina do UNIBH em atendimento com alunos do ambulatório ...... 28
+Figura 10 - Consultórios da FASEH com adequação para telemedicina. ................................... 29
+Figura 11 - Fluxograma de envolvimento de docentes e discentes no atendimento de telemedicina
+.............................................................................................................................................. 29
+Figura 12 - Organização do atendimento de telemedicina. ....................................................... 31
+Figura 13 - Modelo de Mini-CEX aplicado nos atendimentos de telemedicina ........................... 34
+Figura 14 - Número de teleconsultas realizadas por alunos da Inspirali. ................................... 35
+Figura 15 - Números de teleconsulta por escola, duração da chama e número de participantes 36
+Figura 16 -Total de consultas realizadas por telemedicina no UNIBH e FASEH ......................... 38
+Figura 17 - Número de teleconsultas realizadas na FASEH em 01/03/2022 a 31/12/2023............. 38
+Figura 18 - Número de teleconsultas realizadas no UNIBH em 01/03/2022 a 31/12/2023 .......... 39
+Figura 19 - Atendimentos presenciais realizados na CIS UNIBH e FASEH ................................ 40
+Figura 20 - Número de atendimentos presenciais realizados na CIS UNIBH ............................. 41
+Figura 21 - Número de atendimentos presenciais realizados na CIS FASEH ............................. 41
+x
+
+LISTA DE GRÁFICOS
+Gráfico 1 - Resposta do Checklist implementação de telemedicina – Itens 1 ao 3 .................... 31
+Gráfico 2 Evolução de realização de telemedicina na INSPIRALI .............................................. 35
+Gráfico 3 - Número de consultas por telemedicina por escola Inspirali ..................................... 37
+Gráfico 4 - Porcentagem de consulta por telemedicina UNIBH e FASEH comparado a Inspirali - 37
+Gráfico 5 - Porcentagem de atendimentos realizado por telemedicina no UNIBH e FASEH ................ 39
+Gráfico 6 - Atendimentos de telemedicina ao longo dos meses no UNIBH e FASEH .................. 42
+Gráfico 7 - Agendamento de telemedicina por especialidade .................................................... 42
+Gráfico 8 - Tempo gasto por consulta de telemedicina ............................................................. 43
+xi
+
+1 INTRODUÇÃO
+O avanço incessante das tecnologias digitais e da informação tem permeado diversas
+esferas da sociedade contemporânea, culminando em transformações significativas em vários
+setores, inclusive na saúde. Neste contexto, surge a telemedicina, uma modalidade de cuidados
+médicos à distância que tem ganhado cada vez mais relevância, especialmente no cenário
+pandêmico recente.
+A telemedicina é uma ferramenta da telessaúde e pode ser utilizada para atendimento
+médico, educação em saúde, monitoramento de pacientes, e outras atividades correlatas,
+ultrapassando barreiras físicas e possibilitando maior acessibilidade aos serviços de saúde.
+A formação médica vem sofrendo grandes avanços nos últimos tempos, especialmente
+relacionada às mudanças curriculares e à inserção de novas tecnologias de ensino aprendizagem.
+As Diretrizes Nacionais Curriculares de graduação de medicina de 2014 (Resolução no 3,
+2014) trazem “O graduado em Medicina terá formação geral, humanista, crítica, reflexiva e ética,
+com capacidade para atuar nos diferentes níveis de atenção à saúde, com ações de promoção,
+prevenção, recuperação e reabilitação da saúde, nos âmbitos individual e coletivo, com
+responsabilidade social e compromisso com a defesa da cidadania, da dignidade humana, da
+saúde integral do ser humano e tendo como transversalidade em sua prática, sempre, a
+determinação social do processo de saúde e doença.”
+Em um país de dimensões continentais como o Brasil, inserir o aluno de medicina na
+realidade de enorme diversidade socioeconômico cultural nacional é muito desafiador. Dessa
+maneira, as DCN preconizam a inserção do aluno desde os primeiros períodos do curso no
+Sistema Único de Saúde, especialmente na Atenção Primária à Saúde, onde o contato e a vivência
+diversificada com essas diversas realidades tornam-se essenciais. (Resolução no 3, 2014).
+Ceccim e Feuerwerker (2004) colocam que a formação médica não pode ter como
+referência apenas a busca de evidências de diagnóstico, cuidado, tratamento, prognóstico,
+etiologia e profilaxia de doenças e agravos. Deve buscar desenvolver condições de cuidados
+aplicados às necessidades de saúde das pessoas e das populações, da gestão setorial e do
+controle social em saúde.
+O Brasil atingiu o record histórico de 500 mil médicos, segundo o perfil demográfico
+produzido em 2020 pelo Conselho Federal de Medicina. Perguntarmos, enquanto sociedade, que
+tipo de médico e médica as instituições de ensino superior, público e privadas, precisam formar
+1
+
+torna-se essencial. Mais do que nunca, precisa-se formar profissionais médicos voltados à
+educação em saúde, gestão da saúde e aos cuidados ampliados de saúde. Profissionais com
+consciência crítica e atitude de engajamento e compromisso social em prol da transformação da
+dura realidade desigual do Brasil.
+Segundo o perfil demográfico médico, há uma grande deficiência de médicos nas regiões
+norte e nordeste do país, predominando grande permanência de profissionais nas regiões sudeste
+e sul. Porém, mesmo no interior das regiões sudeste e sul observa-se uma deficiência do
+profissional médico devido a permanência desses profissionais nas capitais.
+A telemedicina tem um enorme potencial para contribuir com a formação médica
+apoiando no desenvolvimento de conhecimentos, habilidades e atitudes em cuidados, gestão e
+educação em saúde.
+Ademais, a telemedicina guarda papel crucial para ampliar as vivências com populações
+diversas e invisibilizadas. Pode assim, ampliar o aprendizado e positivamente impactar o acesso
+aos serviços de saúde reduzindo as iniquidades em saúde. A pandemia do COVID-19 foi um divisor
+para incentivar ainda mais rápido o uso das tecnologias, incluindo a telemedicina, o que tornou
+uma necessidade e uma realidade de acesso a vários serviços de saúde e precisa ser prática
+dentro das instituições de ensino.
+Este trabalho tem por objetivo a implementação da telemedicina no currículo de
+graduação médica. A investigação procura compreender a importância e os impactos desta
+implementação, analisando sua eficácia na proposta curricular da Inspirali e avaliar se sua
+implementação melhora o acesso a saúde de populações com acesso restrito a saúde.
+Além disso, será feita uma análise crítica dos desafios, vantagens, e possíveis obstáculos
+envolvidos na inserção da telemedicina na formação médica, bem como as implicações éticas,
+legais e profissionais que esta incorporação pode suscitar.
+Por fim, esse projeto também pode ser avaliado por seu caráter adaptativo e de resiliência
+da comunidade acadêmica frente à inovação no currículo da escola, rompendo barreiras da
+tradicional escola médica e avanço em currículo inovador.
+A metodologia empregada envolverá uma revisão sistemática da literatura, análise de
+casos de implementação da telemedicina na instituição de ensino médico da Inspirali e análise do
+papel social da escola médica.
+2
+
+Espera-se, com isso, contribuir para um corpo robusto de conhecimento sobre a
+telemedicina na educação médica e fornecer contribuição para a elaboração de estratégias
+eficazes de integração desta prática no currículo de medicina.
+3
+
+2 REVISÃO DE LITERATURA
+2.1 Definição telessaúde e telemedicina
+Na literatura, existem diversas definições para o termo telemedicina. Algumas da década
+de 60 e outras vêm sendo aprimoradas e adequadas de acordo com as novas facilidades
+tecnológicas e com as necessidades da saúde. Existem várias definições que focam na ideia de
+que a Telemedicina consiste no uso da tecnologia para possibilitar cuidados à saúde nas situações
+em que a distância é um fator crítico. A expansão da aplicação da Telemedicina para diversos
+serviços de saúde proporcionou o surgimento de termos adicionais nesta última década, sendo os
+mais comuns Telecare, e-Health e Telehealth, todos com o objetivo de ampliar a sua abrangência
+(Wen, 2008).
+De acordo com a Organização Mundial da Saúde (OMS), (2019), telessaúde é um termo
+abrangente que engloba todos os componentes da saúde e utiliza as tecnologias da informação e
+comunicação (TIC) para melhorar a prevenção, o diagnóstico, o tratamento, a pesquisa, a
+monitorização e a gestão da saúde, abordando as questões de saúde dos indivíduos e das
+populações.
+A telessaúde engloba uma série de atividades, desde o monitoramento remoto de
+pacientes e a prestação de serviços clínicos (telemedicina) até a formação profissional e a
+sensibilização pública. O objetivo é superar desafios relacionados à distância, melhorar o acesso
+aos serviços de saúde e otimizar a eficiência dos sistemas de saúde (Ministério da Saúde, 2019).
+Em muitos documentos e diretrizes, a OMS usa os termos telessaúde e telemedicina de
+forma associada, mas é importante entender que telemedicina muitas vezes se refere mais
+diretamente à prestação clínica remota, enquanto a telessaúde tem um escopo mais amplo (OMS,
+2020).
+Já telemedicina é definida pela OMS como a oferta de serviços de saúde – onde os
+pacientes e os prestadores de serviços de saúde estão separados por distância – usando
+tecnologias de informação e comunicação (TIC) para o diagnóstico, tratamento, prevenção,
+pesquisa e avaliação, bem como para a educação contínua de profissionais de saúde e do público
+em geral, em prol da saúde dos indivíduos e de suas comunidades (Ministério da Saúde, 2019).
+A definição da OMS enfatiza o potencial da telemedicina em superar barreiras geográficas,
+proporcionando cuidados de saúde de qualidade, especialmente para comunidades rurais e
+4
+
+distantes. A telemedicina engloba uma variedade de serviços e aplicações, desde consultas
+remotas e monitoramento de pacientes até educação médica à distância (OMS, 2020).
+Tabela 1 - Tipos de Telessaúde
+Fonte: Santos et al., (2020)
+2.2 História da Telemedicina
+Os Estados Unidos são os pioneiros no uso da telemedicina no mundo. Há relatos de uso
+da telemedicina desde 1920 com a invenção do telefone. Durante a Segunda Guerra Mundial
+houve uso do telefone e rádio para comunicação médica, sendo hoje considerado como uma forma
+de telemedicina (Ferrer-Roca, 2001).
+No final de 1950 a telemedicina foi criada pelos Drs. Kenneth Bird e Thomas Fitzpatrick
+do Massachusetts General Hospital (MGH), que, nessa época, transmitiram com sucesso imagens
+radiológicas e dermatológicas, telepatologia, ausculta cardíaca e diagnósticos físicos entre os
+locais (Nestor, 2001).
+Em 1970, programas de telemedicina surgiram em várias instituições médicas, e
+começou-se a pensar em regulamentações e estruturações para tais serviços. Em 1990 com a
+popularização da Internet, a telemedicina nos Estados Unidos deu um salto qualitativo e
+quantitativo, com a possibilidade de realizar consultas online e de compartilhar informações
+médicas em formato digital (Santos et al., 2020).
+Em 1999 houve a publicação da Declaração de Tel Aviv sobre a responsabilidade e
+normas técnicas na utilização da telemedicina e definiu os tipos de telessaúde (D’Avila, 2003).
+5
+
+Tabela 2 - Tipos de Telessaúde
+Aplicações da telessaúde Atividades
+Teleconsultoria Consulta registrada e realizada entre trabalhadores,
+profissionais e gestores da área de saúde, objetivando
+esclarecer dúvidas sobre procedimentos clínicos, ações de
+saúde e questões relativas ao processo de trabalho.
+Telediagnóstico Utilização das TIC em serviços de apoio ao diagnóstico por
+meio de distâncias geográficas e/ou temporais, que inclui
+telerradiologia, teleECG, teleespirometria, telepatologia etc.
+Telemonitoramento Monitoramento à distância de parâmetros de saúde e/ou
+doença de pacientes, incluindo coleta de dados clínicos,
+transmissão, processamento e manejo por profissional de
+saúde.
+Telerregulação Ações em sistemas de regulação, avaliação e o planejamento
+das ações, fornecendo à gestão uma inteligência reguladora
+operacional. Possibilita a redução nas filas de espera no
+atendimento especializado.
+Teleeducação Aulas, cursos ou disponibilização de objetos de aprendizagem
+interativos sobre temas relacionados à saúde.
+Segunda opinião formativa Resposta sistematizada, construída com base em revisão
+bibliográfica das melhores evidências científicas a perguntas
+originadas das teleconsultorias.
+Teleconsulta Realização de consulta médica ou de outro profissional de
+saúde à distância por meio de TIC, que até a epidemia só era
+permitida, no Brasil, pelo Conselho Federal de Medicina em
+situações de emergência.
+Fonte: Gundim (2009)
+No século XXI a telemedicina começou a se diversificar, incorporando smartphones,
+aplicativos móveis, e inteligência artificial. Leis e políticas públicas foram formuladas para regular
+a prática da telemedicina, e houve um aumento significativo na sua aceitação e adoção tanto por
+profissionais da saúde quanto por pacientes. Em 2019, a OMS lançou o guia prático para uso da
+telessaúde e com a pandemia global de COVID 19 houve uma rápida expansão e adoção da
+telemedicina, dada a necessidade de distanciamento social e a demanda por serviços de saúde
+remotos (Santos, et al., 2020).
+6
+
+Atualmente, a telemedicina é uma componente fundamental em vários sistemas de saúde
+do mundo. Os avanços continuam, com a integração de novas tecnologias. A telemedicina está
+ajudando a moldar o futuro da assistência médica e dos cuidados de saúde (Caetano, et al., 2020).
+2.2.1 História da telemedicina no Brasil
+As primeiras iniciativas em telemedicina no Brasil datam da década de 1990,
+principalmente em universidades e instituições de pesquisa. Na década de 2000, começaram a
+surgir os primeiros projetos e redes de telemedicina, como o Telemedicina em Cardiologia (RUTE)
+(Wen, 2008).
+Nos anos 2000, com a popularização da internet e dos dispositivos móveis, a telemedicina
+ganhou um impulso significativo. O Ministério da Saúde passou a integrar a telemedicina em suas
+estratégias, como o Programa Nacional Telessaúde Brasil Redes, voltado principalmente para a
+atenção básica. O grande marco foi em 2006 quando o Conselho Nacional de Desenvolvimento
+Científico e Tecnológico (CNPq) lançou um edital do programa “Instituto dos Milênios” em que
+entendia que a Telemedicina era uma área de pesquisa que precisava ser incentivada (Wen,
+2008).
+Em 2005 o Ministério da Saúde brasileiro (MS), por meio da Secretaria de Gestão do
+Trabalho e da Educação em Saúde (SGTES) e do Departamento de Gestão da Educação na Saúde
+(DEGES), deu os primeiros passos para o uso da telemedicina no Sistema Único de Saúde (SUS)
+com a estruturação do Projeto Piloto de Telemática e Telemedicina em apoio à Atenção Primária
+à Saúde (APS) no Brasil. Como objetivo inicial buscava-se desenvolver ações em saúde,
+aperfeiçoando a qualidade do atendimento da Atenção Básica no SUS, por meio da ampliação da
+capacitação das equipes de Saúde da Família (Godinho et al., 2022)
+Em 2007, o Ministério da Saúde, lançou a portaria 35/2007 que instituía o Programa
+Nacional de telessaúde, mostrando a necessidade de investir em telessaúde nas áreas de ações
+em saúde e educação em saúde na Atenção Primária do SUS (Portaria nº 35, 2007).
+Outro marco importante da telemedicina no Brasil, foi o início do desenvolvimento do
+projeto da Rede Universitária de Telemedicina (RUTE) da RNP (Rede Nacional de Ensino e
+Pesquisa), no primeiro semestre de 2006. Hoje, a RUTE visa aprimorar a infraestrutura para
+telemedicina já existente em Hospitais Universitários, bem como promover a integração e a
+7
+
+conectividade de projetos entre as instituições inseridas em projetos de telemedicina (Coury,
+2020).
+Atualmente, no Brasil, a telemedicina vem sendo pauta discutida em todos os níveis de
+governo e os conselhos de profissões, principalmente nas profissões de saúde, culminando com
+o lançamento do documento intitulado Estratégia de Saúde Digital para o Brasil 2020-2028 que
+reforça o uso da telemedicina como estratégia de cuidado e ações em saúde. (Ministério da Saúde,
+2020)
+Além disso, o Brasil apresenta uma realidade de grande favorecimento da telemedicina.
+A grande extensão geográfica do país, milhares de locais sem acesso à saúde pelo difícil acesso e
+a distribuição de médicos por população muito desigual pelas regiões do país o que dificulta muito
+uma saúde integral, universal e equânime, o que dificulta o direito à saúde, vendo na telemedicina
+potencial da expansão do cuidado à saúde nessa realidade brasileira (Maldonado et al., 2016).
+2.2.2 Legislação da Telemedicina no Brasil
+Em 1999, ocorreu a 51ª Assembleia Geral da Associação Médica Mundial em Tel Aviv,
+Israel, nesta Assembleia, houve a construção da Declaração de Tel Aviv, que dispõe sobre as
+responsabilidades e normas éticas na utilização da telemedicina. A declaração elencou alguns
+princípios importantes para a sua utilização, como a relação médico-paciente, as
+responsabilidades do médico, as responsabilidades do paciente, o consentimento e a
+confidencialidade do paciente, a qualidade da atenção e segurança na telemedicina, a qualidade
+da informação, a autorização e a competência para utilizar a telemedicina, a história clínica do
+paciente, e, a formação em telemedicina (Noce, 2022)
+Após a declaração de Tel Aviv com Conselho Regional de Medicina (CFM) se posicionou
+sobre a telemedicina no Brasil e sua utilização pelos médicos do Brasil (Ministério da Saúde,
+2019). A resolução CFM N° 1.643/2002, que definia e regulamentava o uso da telemedicina no
+Brasil. Esta foi a primeira tentativa oficial de normatizar a telemedicina no país. A resolução tinha
+alguns pontos importantes que seguem (Resolução noº 1.643, 2002).
+8
+
+Figura 1 – Artigos da resolução CFM Nº1.643/2002
+Fonte: Resolução no 1.643 (2002)
+Em 2009, o CFM lança o novo código de ética médica e proíbe a realização de
+telemedicina no artigo 37, que é claro ao informar que: “veda ao médico a prescrição de
+tratamento ou outros procedimentos sem exame direto do paciente, salvo casos de
+urgência/emergência, mas com atendimento presencial subsequente obrigatório”. O que foi
+reforçado em 2011 pela Resolução CFM nº 1.974/2011, que estende a proibição da telemedicina
+e da consulta, diagnóstico e prescrição às redes sociais ou qualquer meio de comunicação em
+massa ou a distância (Resolução nº 1.974, 2011).
+Figura 2 – Resolução 1.974/2011
+Fonte: Resolução nº 1.974 (2011)
+Em 2018, o CFM publicou uma nova resolução nº 2.227/2018 com diretrizes mais
+amplas sobre telemedicina. No entanto, após polêmicas e críticas de entidades médicas e
+profissionais de saúde, a resolução foi revogada para reavaliação (Resolução nº 2.227, 2019).
+Em abril de 2020, em meio à pandemia de COVID-19, foi sancionada a lei que autoriza o
+uso da telemedicina enquanto durar a crise causada pelo coronavírus, Lei 13.989/2020. Ela
+permitiu, de maneira temporária, a prática da telemedicina em todas as áreas médicas. Com o
+fim do decreto de pandemia, a lei foi revogada e foi sancionada a Lei nº 14.510/2022. Essa lei
+altera a Lei nº 8.080, de 19 de setembro de 1990, para autorizar e disciplinar a prática da
+telessaúde em todo o território nacional, e a Lei nº 13.146, de 6 de julho de 2015 (Lei nº 14.510,
+2022).
+9
+
+2.3 Telemedicina e COVID-19
+Em março de 2029, a Organização Mundial de Saúde (OMS) decretou que a COVID-19,
+doença causada pelo SARS COV-2, uma pandemia que afetaria todo o mundo. Entre as medidas
+de saúde pública que foram tomadas, uma delas foi a distanciamento/isolamento social impostas
+pelos governos como estratégia de diminuir a disseminação da doença. O distanciamento social
+apresentou para a saúde um grande desafio para a saúde, que foi forçada a pensar estratégias de
+cuidado com uso de diferentes tecnologias, assim os cuidados em saúde migraram para os
+domicílios através de visitas domiciliares e o uso da telemedicina (Hincapié et al., 2020).
+Já na área da educação médica, a pandemia de COVID-19 acelerou o uso de telemedicina
+durante a formação, uma vez que as aulas foram suspensas, os internatos e todas as práticas
+diretamente relacionadas ao contato com pacientes. Além disso, as escolas médicas, tiveram
+tempo para preparar os alunos quanto a importância do uso dessa tecnologia na formação do
+médico para o século XXI onde um cenário de próximas pandemias pode ser real.
+Figura 3 – Organização da telemedicina na educação médica na COVID-19
+Fonte: Gareev et al., (2021)
+Além disso, no Brasil e no mundo, já existem estudos que comprovam que a telemedicina
+no contexto da Pandemia, reduziu a emissão de carbono, gerando um efeito colateral que beneficia
+a todos. A soma das distâncias que foram deixadas de percorrer com a implementação da
+10
+
+telemedicina foi de 3.817.124 KM que geraram redução de 936, 64 ton de gases de carbono na
+atmosfera (Umpierre, 2022).
+Com isso, a Pandemia foi um grande incentivo para a regulamentação da telemedicina no
+Brasil, com a Resolução nº 2.324/2022 do CFM com a perspectiva de ampliação de acesso,
+construída pelas evidências da telemedicina (Rocha, et al., 2021).
+2.4 Diretrizes Curriculares Nacionais
+As Diretrizes Curriculares Nacionais (DCNs) para o curso de Medicina no Brasil têm como
+principal objetivo estabelecer parâmetros para a formação médica, garantindo um ensino de
+qualidade e alinhado às necessidades de saúde da população. Essas diretrizes definem
+competências, habilidades e atitudes que os estudantes de medicina devem desenvolver durante
+sua formação (Resolução no 3, 2014).
+As DCNs priorizam a formação geral, humanista, crítica, reflexiva e ética, para o médico
+que será formado atuar nos diferentes níveis de atenção à saúde, com ações de promoção,
+prevenção, recuperação e reabilitação da saúde, nos âmbitos individual e coletivo, com
+responsabilidade social e compromisso com a defesa da cidadania, da dignidade humana, da
+saúde integral do ser humano e tendo como transversalidade em sua prática, sempre, a
+determinação social do processo de saúde e doença (Resolução no 3, 2014).
+As DCNs de 2014 não mencionam a telemedicina de forma explícita. No entanto, podem
+ser identificadas relações indiretas e implicações nas diretrizes que justificam o aprendizado da
+telemedicina no curso de graduação (Resolução no 3, 2014):
+1. Abordagem Tecnológica: As DCNs ressaltam a necessidade de os currículos utilizarem
+novas tecnologias que beneficiem a atenção à saúde. Dado que a telemedicina é uma
+dessas tecnologias, há um entendimento implícito de que a formação médica deve ter em
+suas práticas essa ferramenta.
+2. Atenção Integral à Saúde: As DCNs enfatizam a formação de médicos com capacidade
+de promover saúde de forma integral. A telemedicina pode ser uma ferramenta valiosa
+para alcançar esse objetivo, especialmente em contextos em que ocorre difícil acesso e a
+telemedicina pode contribuir para essa integralidade.
+11
+
+3. Educação Continuada: As diretrizes reconhecem a importância da formação contínua
+e do aprendizado ao longo da vida. A telessaúde, em particular a teleducação, pode ser
+uma ferramenta valiosa para médicos se atualizarem e continuarem sua formação após
+a graduação.
+4. Adaptação às Necessidades Sociais: As DCNs também ressaltam a capacidade de
+adaptação às necessidades sociais, culturais e de saúde da população. A telemedicina
+pode ser uma resposta a muitas dessas necessidades, especialmente em um país de
+dimensões continentais como o Brasil.
+É claro a falta de ensinamento de habilidades técnicas e de comunicação necessárias
+para encontros virtuais bem-sucedidos de telemedicina na educação médica tanto na graduação
+como na pós-graduação. Embora existam experiências didáticas e de telemedicina clínica eletiva
+em algumas escolas médicas, poucas são exigidas nos currículos básicos e os dados publicados
+sobre o conteúdo específico de tais ofertas são limitados. Muitos defendem a adoção de
+competências de telemedicina para facilitar a formação médica; no entanto, existem poucos
+currículos de telemedicina ou ferramentas de avaliação estruturadas (Sartori & Musacchio, 2020).
+Existem algumas experiências do uso da telemedicina no currículo de graduação médica
+no Brasil, muitas embasadas no desenvolvimento de habilidades de comunicação que o aluno
+precisa estar apto e no conhecimento de novas tecnologias durante a graduação, sendo a
+telemedicina a tecnologia de maior desenvolvimento na área médica nos últimos anos (Coury,
+2020).
+Hoje o Brasil conta com 389 cursos de medicina, com 18 cursos de graduação em
+medicina com disciplinas de saúde digital (CFM, 2023).
+Avaliando um cenário geral, foram levantadas 68 ofertas de formação relacionadas à
+informática em saúde e saúde digital, ofertadas por Instituições de ensino superior. Desses cursos,
+25 são de curta duração, 12 disciplinas de graduação ou pós graduação, sendo divido em 5 cursos
+de graduação, 17 cursos de pós-graduação lato sensu e 10 cursos de pós-graduação stricto sensu,
+sendo 7 mestrados e 3 doutorados (Modesto et al., 2022).
+2.5 Currículo Inspirali
+A Inspirali é uma rede de escolas médicas no Brasil, criada pelo grupo Ânima Educação,
+em 2020, atualmente possui 14 escolas de medicina em várias regiões do Brasil,
+12
+
+aproximadamente 1.200 docentes e 12.000 alunos em processo de formação na graduação de
+medicina (Inspirali, 2022).
+Tendo como missão da Ânima Educação “transformar o país pela educação” e pelos
+valores comprometimento, cooperação, reconhecimento, respeito, transparência e inovação, a
+inserção de tecnologias e da telemedicina no currículo de graduação médica é algo natural e
+essencial.
+“Transformar o Brasil pela educação, formando cidadãos éticos e competentes, por
+meio de práticas inovadoras de aprendizagem e gestão, internacionalização,
+relacionamento com o mercado, valorização das pessoas e responsabilidade social.”
+Figura 4 – Mapa das Escolas de Medicina Inspirali no Brasil
+Fonte: Inspirali (2024)
+A organização metodológica dos cursos do UNIBH e FASEH, onde aconteceram a
+pesquisa, congrega momentos presenciais e atividades individuais e coletivas, em diferentes
+cenários de prática da profissão médica, tendo o apoio técnico remoto. No modelo pedagógico
+proposto, as TICs são entendidas como ferramentas que ajudam no processo ensino-
+aprendizagem, constituindo-se numa rica oportunidade de provocar no aluno perguntas, reflexões,
+sínteses e motivá-lo à busca autônoma do conhecimento.
+Os ambientes virtuais são espaços de encontro entre alunos, professores e tutores para
+estudo e realização de atividades individuais e coletivas de exploração, expansão e
+aprofundamento das discussões, em permanente diálogo com as tutorias e demais contextos de
+13
+
+desenvolvimento do curso: práticas de laboratório, plenárias, campos de estágios, programas de
+integração com a comunidade etc.
+As Tecnologias de Informação e comunicação (TICs) são utilizadas para promover
+processos ativos de aprendizagem e para atender ao design educacional planejado, buscando-se
+o entrelaçamento das atividades de estudo, dos recursos operacionais de ambientes virtuais e das
+ações de mediação pedagógica (presenciais e remotas junto à Rede de Cuidados do município e
+região) de modo que os conceitos de cooperação, colaboração, interatividade, significatividade e
+autonomia enredem situações, recursos e estratégias pedagógicas diversas e efetivas.
+Como utilização de TICs na aprendizagem do currículo da graduação Inspirali, utiliza-se
+as seguintes plataformas ou estratégias: portfólio digital, Medroom, Tratme, Ulife, Algetec,
+Dynamed, paciente 360, Lt entre outras.
+A telemedicina é contemplada no Projeto Pedagógico do curso como a oportunidade como
+oportunidade da escola e os serviços de saúde se beneficiarem para facilitar o acesso ao
+conhecimento sobre saúde, ensinar, aprender e ofertar consultas às pessoas que estão distantes.
+2.6 Vantagens, desvantagens e evidências do uso da telemedicina
+As evidências têm mostrado que o uso da telessaúde traz muitos benefícios, como
+redução de tempo de atendimento, de custos, de deslocamento de pacientes e profissionais e
+melhoria na qualidade assistencial ao permitir acesso a especialidades em áreas remotas
+(Caetano, et al., 2020).
+Em muitos estudos já se comprova que a telemedicina possui muito mais vantagens
+do que desvantagens, sendo as principais vantagens (Gareev et al., 2021):
+1. Acesso Ampliado: Pacientes em áreas rurais ou remotas podem acessar especialistas
+e consultas sem precisar viajar longas distâncias e os pacientes podem receber
+atendimento no conforto de suas casas, o que é particularmente benéfico para aqueles
+com limitações de mobilidade.
+2. Redução de Custos: Evita deslocamentos e pode reduzir a necessidade de consultas
+presenciais, o que pode resultar em economia tanto para os pacientes quanto para os
+sistemas de saúde público e privado;
+3. Continuidade do Atendimento: Facilita o acompanhamento e monitoramento de
+pacientes com doenças crônicas.
+14
+
+4. Atendimento de Emergência: Em situações de emergência, especialistas podem ser
+consultados rapidamente por meio da telemedicina.
+5. Diminuição de Barreiras: Além da distância geográfica, a telemedicina pode ajudar a
+superar barreiras linguísticas, culturais ou de transporte.
+Apesar da telemedicina ser considerada uma fortaleza tanto na pandemia de COVID-19 E na
+utilização em cursos de graduação de telemedicina e em serviços de saúde, há de se considerar
+que existem desvantagens:
+1- Limitações Técnicas: Requer equipamentos, software e conexões de internet
+confiáveis. Falhas técnicas podem interromper ou degradar a qualidade do
+atendimento;
+2- Perda de Interatividade Pessoal: A interação cara a cara entre médico e paciente
+pode ser crucial para estabelecer confiança e para identificar nuances no estado de
+saúde do paciente;
+3- Problemas de Privacidade e Segurança: A transmissão de informações médicas
+por meios eletrônicos pode ser vulnerável a violações de segurança;
+4- Regulamentação e Licenciamento: Em muitos lugares, a telemedicina enfrenta
+desafios regulatórios, especialmente quando envolve o atendimento de pacientes em
+diferentes jurisdições;
+5- Diagnóstico Limitado: Alguns exames físicos não podem ser realizados à distância,
+limitando a capacidade diagnóstica da telemedicina em certas situações;
+6- Educação e Treinamento: Tanto os profissionais de saúde quanto os pacientes
+podem precisar de treinamento adicional para usar eficazmente as ferramentas de
+telemedicina;
+7- Aceitação: Alguns pacientes e profissionais podem ser resistentes à adoção da
+telemedicina devido à falta de familiaridade ou preocupações sobre a eficácia.
+As evidências encontradas sobre a telemedicina, na maioria dos estudos sugere que a
+telemedicina é uma ferramenta útil a ser utilizada tanto em atendimentos ambulatoriais como
+hospitalares. Montra ainda que os pacientes submetidos a consultas por meio desse recurso
+sentem-se satisfeitos com o atendimento prestado. O uso da telemedicina pode ser fortalecido ao
+proporcionar a prevenção de doenças e de infecções hospitalares, bem como a diminuição da
+sobrecarga dos serviços de saúde.
+15
+
+Figura 5 - Evidências do uso da telemedicina
+Fonte: Totten, et al., (2016)
+Ao analisar as evidências e a teoria, buscou-se referencial teóricos sobre as teorias de
+aprendizagem e verificou-se que as teorias de aprendizagem que justificam a inserção da
+telemedicina no currículo de graduação são:
+Teoria da Aprendizagem Construtivista: Baseada nas teorias de Jean Piaget e Lev
+Vygotsky, essa abordagem enfatiza a construção ativa do conhecimento pelos alunos. A
+telemedicina pode proporcionar oportunidades para os alunos construírem seu conhecimento
+através de experiências práticas, discussões online e interações com pacientes virtuais.
+Teoria da Aprendizagem Interprofissional (IPE - Interprofessional Education): A
+telemedicina também pode facilitar a colaboração interprofissional, permitindo que estudantes de
+diferentes disciplinas de saúde interajam e aprendam juntos, simulando cenários de equipe de
+saúde.
+Teoria da Prática Reflexiva: Os alunos podem usar a telemedicina para gravar suas
+interações clínicas, permitindo a revisão e reflexão sobre seu próprio desempenho, contribuindo
+para um aprendizado mais eficaz e uma prática médica mais cuidadosa.
+Esses referenciais teóricos podem ajudar a orientar a integração eficaz da telemedicina
+na educação médica, garantindo que ela seja usada de maneira aprimorar a formação dos
+estudantes de medicina, ao mesmo tempo em que atende às demandas da prática médica
+moderna.
+16
+
+3 OBJETIVOS E METODOLOGIA
+3.1 Objetivos
+3.1.1 Objetivo geral
+Analisando a literatura e verificando que a telemedicina é uma realidade de prática da
+medicina em todo o mundo, o objetivo geral desta tese de mestrado é inserir a telemedicina no
+currículo de graduação de medicina, garantindo uma vivência do uso dessa tecnologia durante a
+formação, bem como identificar desafios, oportunidades e melhores práticas associadas a essa
+abordagem educacional e assistencial inovadora.
+3.1.2 Objetivos específicos
+1. Analisar a inclusão da telemedicina nos programas de estudo de graduação em
+medicina, identificando as unidades curriculares e conteúdo específicos relacionados à
+telemedicina.
+2. Analisar e avaliar dados produzidos através da telemedicina, como número de
+atendimentos realizados, tempo por atendimento e comparar com outras escolas da Inspirali;
+3. Identificar fatores facilitadores e dificultadores da implantação da telemedicina;
+3.2 Hipótese
+1. É possível a inserção da telemedicina no currículo de graduação médica?
+3.3 Metodologia
+É um estudo de implementação descritivo e analítico, com uma revisão de literatura sobre
+a telemedicina para acompanhar as evidências do uso da telemedicina, implantação da prática da
+telemedicina nos ambulatórios de prática médica e uso de dados do sistema Prontlife de
+atendimento via telemedicina, utilizado nos ambulatórios das escolas médicas da Inspirali.
+3.3.1 Considerações estatísticas
+17
+
+Como se trata de um estudo quali-quantitativo usamos duas bases de dados. Os dados
+usados nesta pesquisa foram colocados em planilha excel ou gráfico com a representativa de
+números de consultas realizadas por telemedicina, tempo das consultas e tipo de teleatendimento
+que foi realizado. A maioria dos dados foram extraídos da plataforma de prontuário eletrônico
+utilizado para telemedicina Prontlife. A seleção de dados se deu a partir de todas as experiências
+realizadas em telemedicina a partir do ano de 2021 nas escolas Inspirali.
+3.3.2 Local de estudo e operacionalização da coleta de dados
+O estudo foi realizado em duas escolas de medicina da Inspirali, Faculdade de Ecologia e
+Saúde Humana (FASEH) e Centro Universitário de Belo Horizonte (UNIBH).
+A UNIBH está localizada em Belo Horizonte, capital de Minas Gerais. A UNIBH possui em
+torno de 1052 alunos de medicina entre o 1º período e 12º período. A FASEH está localizada em
+Vespasiano, um município 40 km distante de Belo Horizonte com aproximadamente 740 alunos
+entre o 1º período e 12º período.
+As duas escolas possuem um ambiente de prática médica com ambulatórios de
+especialidades médicas chamado Clínica Integrada de Saúde (CIS). Nas Clínicas Integradas de
+Saúde acontecem os atendimentos de especialidades médicas da atenção secundária à saúde,
+com atendimento de preceptores e docentes com grupos de 8 alunos. As especialidades que são
+atendidas nas CIS são: cardiologia, endocrinologia, geriatria, cirurgia, urologia, pneumologia,
+pediatria, ginecologia, otorrinolaringologia, dermatologia, reumatologia e entre outros.
+Todos os pacientes atendidos nas CIS das escolas de medicina são agendados e
+referenciados via Central de Marcação de consulta dos SUS e todos os atendimentos de
+telemedicina são agendados em parceria com essa Centra de Marcação de consulta com os
+municípios parceiros que encaminham os pacientes.
+A implementação da telemedicina ocorreu nestas duas escolas de medicina, onde a
+estudante desempenha a sua função como docente e está alinhada com a meta do currículo da
+Inspirali de ter a implementação da telemedicina como ferramenta de aprendizagem médica.
+Para coleta de dados foram utilizados os dados de atendimento retirados do prontuário
+eletrônico utilizado para atendimento através da telemedicina, chamado Prontlife e através de
+acompanhamento da realização da telemedicina dos gestores de cada CIS. O estudo foi realizando
+entre março de 2022 a dezembro de 2023.
+18
+
+Além disso, está sendo construída a implantação de prática de telemedicina nas práticas
+simuladas do currículo em uma unidade curricular chamada Habilidades Médicas e estações
+clínicas. Foram criados roteiros de atendimento envolvendo a telemedicina. Essa frente de trabalho
+foi desenvolvida juntamente com a Diretoria de Inovação e Tecnologia da Inspirali em forma de
+grupo de trabalho e elaboração desses casos e metodologia de implementação.
+Os critérios de inclusão de dados desse estudo foram todas as iniciativas que foram
+desenvolvidas entre março de 2022 a dezembro de 2023 para garantir a implantação da
+telemedicina como prática no currículo de graduação.
+Para ter acesso aos dados do prontuário eletrônico, o estudo foi submetido ao Comitê de
+Ética e Pesquisa do UNIBH. A submissão ocorreu no mês de junho e foi aprovada, conforme
+parecer em anexo.
+3.3.3 Riscos e benefícios da pesquisa
+As Resoluções 466/2012 e 510/2016 do Conselho Nacional de Saúde do Brasil
+estabelecem diretrizes éticas e regulamentações para pesquisas envolvendo seres humanos.
+Quando se trata de uma pesquisa sobre telemedicina que utiliza a análise de dados de prontuários
+eletrônicos, há vários riscos e considerações éticas que devem ser levados em conta de acordo
+com essas resoluções. Alguns desses riscos incluem:
+Privacidade e Confidencialidade dos Dados: A análise de prontuários eletrônicos
+envolve o acesso a informações médicas pessoais dos pacientes. O principal risco é a violação da
+privacidade e a quebra da confidencialidade desses dados. A pesquisadora garante que os dados
+serão adequadamente anonimizados ou desidentificados para evitar que informações pessoais
+sejam divulgadas.
+Uso Responsável dos Dados: Os dados dos prontuários eletrônicos serão usados
+apenas para os fins específicos da pesquisa e garantir que não haja uso indevido ou divulgação
+não autorizada desses dados.
+Segurança dos Dados: Os dados de prontuários eletrônicos serão armazenados e
+transmitidos de forma segura para evitar a exposição a hackers ou violações de segurança que
+possam comprometer a integridade dos dados.
+19
+
+Viés nos Dados: A seleção dos dados de prontuários eletrônicos e a análise podem
+introduzir viés nos resultados da pesquisa. É importante que a pesquisa seja transparente sobre
+como os dados foram selecionados e como o viés foi controlado.
+Aprovação Ética: De acordo com as resoluções mencionadas, qualquer pesquisa
+envolvendo seres humanos deve passar por um processo de revisão ética por um Comitê de Ética
+em Pesquisa (CEP) ou Comissão Nacional de Ética em Pesquisa (CONEP) para garantir que a
+pesquisa seja conduzida de maneira ética e em conformidade com as regulamentações.
+Benefícios para os Participantes: A pesquisa beneficia a população que pode ter mais
+acesso e atendimento seguro com a utilização da telemedicina com dados seguros e mais
+especialistas médicos disponíveis.
+Acompanhamento e Monitoramento: A pesquisa será feita de forma a manter o
+acompanhamento e monitoramento do uso de dados garantindo que seja conduzida de acordo
+com os protocolos aprovados e que os riscos sejam mitigados.
+É fundamental que o responsável pela pesquisa sobre uso de telemedicina utilizando
+análise de dados de prontuários eletrônicos esteja ciente desses riscos e cumpra as
+regulamentações éticas e legais aplicáveis para garantir a integridade da pesquisa e a proteção
+dos direitos e privacidade dos pacientes envolvidos.
+3.3.4 Amostra
+A amostra foi composta por todas as iniciativas que foram feitas e implementadas para
+uso da telemedicina no currículo de graduação a partir de março de 2022.
+3.3.5 Instrumento de avaliação em telessaúde
+Foi utilizado o Guia de Avaliação, Implementação e Monitoramento de Programas e
+Serviços de telemedicina e telessaúde (Harzheim et al., 2017) como orientador para avaliar o
+preparo da Clínica Integrada de Saúde para iniciar os atendimentos via telemedicina.
+20
+
+Tabela 3 – Checklist do Instrumento de Orientação em Telessaúde
+(A tabela continua na página seguinte)
+21
+
+(A tabela continua na página seguinte)
+22
+
+Fonte: Ministério da Saúde, (2019)
+Ressaltando que o Instrumento de Orientação para Programas e Serviços de Telessaúde
+tem por objetivo apoiar gestores, profissionais de saúde, usuários e outros atores nas diferentes
+fases do mesmo.
+Esse instrumento pode ser usado em sua totalidade ou apenas utilizar algumas secções
+de acordo com a necessidade e a fase do serviço. Esse instrumento não é uma escala validada,
+pois não foi testado metodologicamente para sê-lo, não produz um escore com ponto de corte
+predefinido que estabeleça se um serviço de Telemedicina é bom ou ruim, esse não é o propósito
+desse instrumento.
+Conforme definido o propósito no guia, ele foi utilizado para auxiliar na tomada de decisão
+sobre o momento da implementação e a qualidade do serviço de Telemedicina. Ou, como dito “se
+23
+
+em fase de implantação, auxiliar os responsáveis pelo novo serviço a seguirem um caminho de
+criação de serviços de Telessaúde que tenham mais probabilidade de êxito (Ministério da Saúde,
+2019)”.
+24
+
+4 RESULTADOS
+4.1 Amostra coletada
+4.1.1 Experiências práticas telemedicina
+Iniciamos, portanto, os trabalhos de implementação da telemedicina com as necessidades
+dos municípios parceiros. A primeira parceria foi no projeto de telemonitoramento de casos e
+contatos de COVID em Belo Horizonte. Foram envolvidos 84 alunos do 11º período, no período de
+03/01/2021 a 23/12/2021, matriculados na disciplina Internato de Atenção Primária, por pelo
+menos um turno de 4h. Todos os alunos possuíam escala fixa no serviço e foram feitos 8.500
+monitoramentos na população de um distrito específico de Belo Horizonte.
+Essa experiência motivou a construção de uma experiência com o SUS Contagem, cidade
+da região metropolitana de Belo Horizonte. Construiu-se e implementou-se o telemonitoramento
+de pessoas com COVID19 e de rastreamento de seus contactantes. Foi usada a metodologia da
+Johns Hopkins COVID-19 Contact tracing e recomendações da OMS envolvendo a assistência,
+vigilância à saúde e a diretoria de informática do SUS Contagem e a coordenação do curso de
+Medicina. Foi desenvolvida uma plataforma própria para coleta e análise dos dados do
+telemonitoramento/rastreio. A concepção e assinatura do convênio durou 06 e 07/2021 e a
+implementação de 23/08 a 23/12/2021. A supervisão foi realizada por duas preceptoras
+enfermeiras, duas técnicas da assistência e da vigilância à saúde e por um médico de família e
+comunidade. As ações foram desenvolvidas no laboratório de informática por 180 alunos de
+medicina (6 grupos de 30 alunos, 5 turnos em 3 dias da semana), com uso de celulares e
+computadores. Os dados das pessoas com COVID19 eram capturados nos sistemas de
+informações das UPA, UBS e dos laboratórios públicos e conveniados e analisados com
+epidemiologia descritiva. Foram realizados 11617 telemonitoramentos/rastreios e 3488 pessoas
+teleacompanhados.
+Esses primeiros trabalhos de telemedicina foram feitos através de projetos de extensão
+que ficaram abertos a alunos de medicina das instituições Inspirali, conforme tabela abaixo:
+25
+
+Tabela 4 - Projetos de extensão cadastrados na Ânima no ano de 2021/2022
+Fonte: Ânima Educação, (2022).
+Tabela 5 - Experiências de telemedicina no ano de 2021 no UNIBH
+A partir de setembro de 2021, após essas experiências que foram feitas em serviço de
+forma manual, iniciou-se o uso de plataforma de telemedicina e prontuário eletrônico. A plataforma
+chamada Prontlife realizou capacitação de docentes e alunos que estariam envolvidos no
+atendimento de telemedicina.
+Foram capacitados semestrais de alunos e docentes a partir de novembro de 2021.
+Além das capacitações do Prontlife, foram realizadas reuniões locais, com os docentes e
+coordenação de curso para organização do fluxograma e estrutura física para realização de
+telemedicina.
+26
+
+Figura 6 - Reuniões de construção da telemedicina UNIBH
+Das reuniões com docentes e coordenadores de cursos foram levantadas algumas
+prioridades para a implementação mais efetiva do uso da telemedicina nos ambulatórios de
+prática.
+1- Criação de estrutura física adequada – já que a telemedicina estava sendo realizada
+no computador do próprio docente e os alunos ficavam de pé ouvindo o atendimento
+2- Criação de fluxo para orientação de alunos, docentes e serviços de saúde;
+3- Ter um professor responsável pelo projeto de telemedicina;
+4- Aplicar um modelo de avaliação/feedback do aluno que realiza o atendimento do
+ambulatório e o atendimento de telemedicina.
+Os resultados das prioridades elencadas foram trabalhados e a primeira delas foi a
+estrutura física. Foi construído um projeto com a equipe de engenharia da Ânima e diretor de
+campus para permitir essa adequação da estrutura física e foi criado o Centro de Telemedicina na
+Clínica Integrada do UNIBH, na FASEH não foi possível criar esse Centro de Telemedicina, porém
+em todos os consultórios foram colocados computadores com câmera e áudio adequado para
+realização de telemedicina.
+27
+
+Figura 7 - Projeto do Centro de Telemedicina UNIBH
+Figura 8 - Centro de telemedicina UNIBH
+Figura 9- Centro de Telemedicina do UNIBH em atendimento com alunos do ambulatório
+28
+
+Figura 10 - Consultórios da FASEH com adequação para telemedicina.
+O segundo passo das adequações que seriam necessárias para a implementação da
+telemedicina foi a criação de fluxogramas para orientações dos serviços de saúde, docentes e
+discentes. Os fluxogramas foram criados em parceria com os docentes e coordenação de curso e
+apresentado em reuniões da Clínica Integrada.
+Figura 11 - Fluxograma de envolvimento de docentes e discentes no atendimento de
+telemedicina
+Atendimento de 05
+consultas
+Alunos participantes
+presenciais.
+do ambulatório de
+pratica médica no
+SUS. Atendimento de 01
+consulta por
+Inserção da
+TELEMEDICINA
+telemedicina no
+ambulatório de
+Práticas Médicas no
+SUS Mapear o paciente
+com critério de
+Alunos do internato
+agendamento e
+de Atenção Primária
+inserir o
+a Saúde e internato
+agendamento no
+de Saúde Mental
+PRONTLIFE.
+29
+
+Após a criação do fluxograma de como ocorreriam os atendimentos foi criado o fluxograma
+de como seriam realizados os atendimentos, para posterior reunião e orientação com alunos e
+docentes do ambulatório.
+1. Disponibilização de Agendas pelas Especialidades:
+● Início do processo.
+● Cada especialidade médica disponibiliza horários específicos para atendimento
+de telemedicina.
+2. Mapeamento da Demanda por Alunos em Internato:
+● Alunos que estão em internato em cidades distantes de Belo Horizonte ou
+sistema prisional identificam pacientes que necessitam de atendimento;
+● Coletam informações básicas dos pacientes, como necessidades de saúde,
+motivo do encaminhamento e disponibilidade de horário.
+3. Agendamento do Paciente:
+● Com base na disponibilidade do paciente e na agenda do médico, um horário é
+agendado para a consulta de telemedicina;
+● O paciente é informado sobre o horário e as instruções para a consulta;
+● A consulta é agendada no sistema Prontlife.
+4. Consulta de Telemedicina:
+● O paciente participa da consulta de telemedicina no horário agendado.
+● O médico especialista da Clínica Integrada de saúde e o aluno do internato e o
+aluno do ambulatório da clínica integrada conduzem a consulta;
+5. Follow-up e Feedback:
+● Após a consulta, é realizado a orientação do paciente em relação aos exames,
+encaminhamentos, necessidade de retorno e/ou alta;
+● Coleta de feedback do paciente sobre o atendimento;
+● Feedback aos alunos do ambulatório e ao aluno do internato.
+● Encerramento do atendimento.
+30
+
+Figura 12 - Organização do atendimento de telemedicina.
+Após a criação da estrutura física e fluxograma aplicamos o questionário de avaliação da
+implementação de telessaúde, avaliamos em princípio os três primeiro itens dos questionários
+para verificar se a implementação estava sendo realizada de maneira planejada e adequada com
+outras experiências de implementação de telemedicina.
+Foram avaliados os 3 itens: problemas de saúde e seu contexto, escolha de tecnologia e
+aspectos legais e éticos. Para os três itens avaliados tínhamos 16 subitens dos quais se esperava
+resposta SIM, NÃO ou NÃO SE APLICA. Dos 16 itens analisados, 14 tiveram resposta SIM e 2
+tiveram resposta NÃO, nenhum item foi classificado como NÃO SE APLICA.
+Gráfico 1 - Resposta do Checklist implementação de telemedicina – Itens 1 ao 3
+CHECK LIST IMPLEMENTAÇÃO DE
+TELEMEDICINA
+13%
+Sim
+Não
+87%
+31
+
+Tabela 6 - Resposta Checklist a implementação de telemedicina – Itens 1 ao 3
+Não
+sabe
+/Não
+Checklist do Instrumento de Orientação em se
+Telessaúde Sim Não aplica
+1. Problema de saúde e seu contexto
+As necessidades em saúde atendidas pelo sistema/serviço de
+saúde foram definidas x
+A população-alvo (profissionais de saúde e/ou pacientes) foi
+definida x
+A avaliação das necessidades em saúde contou com a
+participação dos profissionais de saúde e dos pacientes x
+2. Escolha da tecnologia
+Existem soluções em Telemedicina já previamente testadas
+para resolução do problema? x
+A solução tem capacidade de melhorar o acesso da
+população alvo? x
+A solução tem efetividade previamente estabelecida por
+estudos clínicos adequados x
+A incorporação da solução está baseada em evidências
+científicas de moderada ou alta qualidade x
+A solução tem acurácia e confiabilidade ao longo do tempo
+definidas x
+A solução é segura (riscos de danos menores que os
+benefícios)? x
+A solução é adaptável ao cenário e à estrutura existentes? x
+A solução é adaptada à população-alvo? x
+Foram discutidos com os profissionais de saúde e/ou
+pacientes a escolha e o formato da solução? x
+Foram discutidos com os profissionais de saúde e/ou
+pacientes a escolha e o formato da solução? x
+3. Aspectos legais e éticos
+A solução garante a segurança e a confidencialidade das
+informações de saúde dos pacientes? x
+A solução obtém e registra o consentimento do paciente ao
+propósito de uso das informações pessoais de saúde? x
+A solução cumpre as normas locais e a legislação vigente? x
+32
+
+Após a escolha da ferramenta, estruturação de infraestrutura, buscou-se um docente que
+ficasse responsável pela telemedicina para alinhamento de fluxos com os serviços parceiros,
+agendamentos, estruturação com os alunos e discussão com a coordenação de curso e com a
+gerência e diretoria regional da Inspirali. Por questões de CH disponível, conseguimos colocar um
+professor de referência apenas no UNIBH. Já na FASEH a enfermeira da CIS com a coordenação
+de curso ficou responsável pelos agendamentos e alinhamento com os serviços parceiros.
+Após essa estruturação, fez-se a discussão de qual processo de avaliação seria usado para
+avaliação de desempenho dos alunos. Em discussão realizada na comunidade MAPS, com o
+professor Valdez, optou-se por adaptar o Mini-CEX formativo que vem sendo utilizado em outras
+escolas no Brasil. O Mini-CEX foi adaptado para a realidade do currículo Inspirali para ser aplicado
+ao aluno do ambulatório que realiza atendimento presencial e telemedicina.
+Após a construção da ferramenta, todos os preceptores da FASEH e do UNIBH foram
+convidados a capacitação para conhecer a ferramenta, protocolo de atendimento e modelo dos
+atendimentos preconizados em ambulatório.
+Tabela 7 - Presença na capacitação ambulatório PMSUS
+ATUAÇÃO INSPIRALI Nº PRECEPTORES PRESENÇA
+FASEH 30 5
+UNIBH 62 19
+COORDENAÇÃO CURSO 4 3
+REGIONAL 2 2
+NACIONAL 3 3
+33
+
+Figura 13 - Modelo de Mini-CEX aplicado nos atendimentos de telemedicina
+Após as capacitações, criação dos fluxogramas, definição do professor referência,
+alinhamento com serviços e definição dos parceiros, começamos os atendimentos de falto, com
+os seguintes resultados:
+Todas as escolas de medicina da Inspirali que possuem CIS foram convidadas a iniciar o
+atendimento de telemedicina. Abaixo os números de consultas com representação de números
+das 11 experiências de telemedicina que ocorreram na Inspirali de 01/03/2022 a 31/12/2023:
+34
+
+Figura 14 - Número de teleconsultas realizadas por alunos da Inspirali.
+Gráfico 2 Evolução de realização de telemedicina na INSPIRALI
+35
+
+Figura 15 - Números de teleconsulta por escola, duração da chama e número de participantes
+Quando colocado em gráfico o número de consultas por telemedicina de todas as escolas
+Inspirali que aderiram à estratégia, verifica-se um bom desempenho do UNIBH em relação às
+demais escolas, tendo o 2º maior número de consultas realizadas por telemedicina, conforme
+gráfico 3.
+36
+
+Gráfico 3 - Número de consultas por telemedicina por escola Inspirali
+Consultas por telemedicina escolas Inspirali
+1 400
+1 200
+1 000
+800
+600
+400
+200
+0
+Nº de teleconsultas Nº de participantes Duração média das teleconsultas (min)
+Quando extraídos os dados para as duas escolas que foram implementadas e
+apresentadas neste estudo temos um total de 269 consultas realizadas por telemedicina, pelas
+duas escolas no período de 01/03/2022 a 32/12/2023, conforme Figura 16, o que configura
+38% de todas as consultas por telemedicina da Inspirali, conforme Gráfico 4:
+Gráfico 4 - Porcentagem de consulta por telemedicina UNIBH e FASEH comparado a Inspirali -
+38%
+Escolas Inspirali
+UNIBH/FASEH
+62%
+37
+
+Figura 16 -Total de consultas realizadas por telemedicina no UNIBH e FASEH
+Após termos o dado total nas duas escolas, foram extraídos os dados por cada uma das
+escolas. No mesmo período, de 01/03/2023 a 31/12/2023 a FASEH realizou 39 consultas por
+telemedicina e o UNIBH realizou 230 consultas por telemedicina, conforme apresentado nas
+Figuras 17 e 18.
+Figura 17 - Número de teleconsultas realizadas na FASEH em 01/03/2022 a 31/12/2023
+38
+
+Figura 18 - Número de teleconsultas realizadas no UNIBH em 01/03/2022 a 31/12/2023
+Portanto, quando comparado às consultas realizadas pelo UNIBH e FASEH, verificou-se
+uma porcentagem de atendimento maior realizadas no UNIBH do que na FASEH, conforme mostra
+o Gráfico 5.
+Gráfico 5 - Porcentagem de atendimentos realizado por telemedicina no UNIBH e FASEH
+Número de consultas por telemedicina
+478
+334
+269
+176
+99 54 5 0 40 39
+UNIBH FASEH TOTAL
+Série1 Série2
+39
+
+Quando comparado o número de atendimentos presenciais das duas escolas, as
+diferenças entre atendimentos presenciais em porcentagem são bem menores, o que mostra a
+cultura do atendimento presencial mais bem estabelecido nas duas escolas. Ao todo as duas
+escolas realizaram, no mesmo período extraído de telemedicina 01/03/2022 a 31/12/2023
+19.958 atendimentos presenciais, conforme Figura 19.
+Figura 19 - Atendimentos presenciais realizados na CIS UNIBH e FASEH
+Quando trabalhando esse dado por escola, a UNIBH nesse mesmo período, 01/03/2022
+a 31/12/2023 realizou 10.757 atendimentos e a FASEH realizou 9.201 atendimentos
+presenciais, considerando que o UNIBH possui 412 alunos a mais que a FASEH, o volume de
+atendimento presencial é muito parecido por aluno.
+40
+
+Figura 20 - Número de atendimentos presenciais realizados na CIS UNIBH
+Figura 21 - Número de atendimentos presenciais realizados na CIS FASEH
+Os atendimentos de telemedicina são distribuídos na organização do semestre e foram
+inseridos nas agendas do ambulatório, conforme gráfico de agendamento de consultas por
+telemedicina.
+41
+
+Gráfico 6 - Atendimentos de telemedicina ao longo dos meses no UNIBH e FASEH
+Todas as especialidades foram convidadas a realizar atendimento por telemedicina, porém
+nem todos os especialistas aceitaram o agendamento. As especialidades com maior número de
+agendamento por telemedicina estão representadas no gráfico abaixo:
+Gráfico 7 - Agendamento de telemedicina por especialidade
+Agendamento de telemedicina por
+especialidade
+153
+86 61 58 31 18 17 8 7 6
+Conseguimos mensurar também o tempo gasto por consulta de telemedicina nas duas
+IES, conforme gráfico 8.
+42
+
+Gráfico 8 - Tempo gasto por consulta de telemedicina
+Tempo de gasto no atendimento por
+telemedicina
+144
+75
+62 35 31
+Até 15 15 a 30,62 30 a 45 45 a 60 > 60
+Após essa coleta de dados, foi feito um breve feedback com os docentes que realizaram
+as consultas por telemedicina sobre a percepção da inserção da telemedicina como prática médica
+no currículo de graduação. Pontos trazidos como oportunidades e desafios foram relatados na
+tabela abaixo.
+Tabela 8 - Percepção dos docentes sobre a inserção da telemedicina como prática
+Oportunidades Desafios
+Vivência diferenciada (modelo de atendimento,
+cultura, acesso) Infraestrutura (Internet)
+Conciliar atendimento presencial e
+Suporte a pacientes sem acesso a especialistas telemedicina
+Interesse dos alunos em realizar
+Aprendizagem de uso de tecnologia atendimento por telemedicina
+Plataforma de teleatendimento integrada com Preparação dos docentes para
+plataforma de atendimento presencial atendimento por telemedicina
+Dificuldade em utilizar a avaliação durante
+Preparar o aluno para a realidade do mercado o atendimento por telemedicina
+43
+
+5 DISCUSSÃO E CONCLUSÃO
+5.1 Discussão
+Esse estudo teve como objetivo a implementação da telemedicina como prática do curso
+de graduação de duas escolas de medicina UNIBH e FASEH. A implementação ocorreu nas duas
+escolas a partir de março de 2022.
+Observou-se que apesar da telemedicina ser uma prática antiga, conforme relatado por
+Ferrer-Roca (2001), a cultura do uso dessa metodologia de atendimento médico na graduação é
+algo muito novo e desafiador de implementar. Conforme citado por França (2009), a medicina é
+entre as profissões técnicas a que menos se beneficia das tecnologias e a que menos se esforça
+para que isso melhore.
+O estudo mostrou que a iniciativa implementada de maneira repentina para atender a
+demanda da emergência sanitária do COVID em 2021 foi suficiente enquanto durou o processo,
+mas não desenvolveu a cultura de prática de medicina na graduação, apesar de ser entendido
+pelos alunos e docentes que a telemedicina democratiza o acesso e racionaliza os recursos,
+conforme citado por Noce (2022). Por isso, ela foi colocada como iniciativas de extensão e não
+como práticas contínuas na graduação o que não permitiu a vivência de todos os alunos em
+telemedicina, apesar de o Plano Nacional de Extensão afirmar que a atividade de extensão é
+indissociável do pensar e agir universitário, conforme afirmado por Almino et al., (2014).
+As questões de regulamentação da telemedicina no Brasil foram em alguns momentos
+entraves trazidos por docentes e alunos que se recusaram a participar das capacitações,
+treinamentos e iniciativas de extensão ligadas a telemedicina. Conforme citado por Lisboa et al.,
+(2023), a regulamentação da telemedicina no Brasil sofre oscilações e mudanças contínuas por
+parte do Conselho Regional de Medicina (CRM), por isso um dos motivos de apenas 26% da
+participação de docentes nas capacitações que foram promovidas durante todo o semestre
+anterior a implementação. Na FASEH apenas 17% dos preceptores compareceram às capacitações
+e foi a escola com maior dificuldade dos docentes em adaptar a tecnologia e o UNIBH 31% dos
+preceptores compareceram às capacitações com menor dificuldade de adaptação à tecnologia.
+Além disso, conforme citado Lisboa et al., (2023) é necessário um processo de aceitação
+do médico que terá a relação médico paciente alterada e o uso de tecnologias muitas vezes de
+difícil domínio desse profissional, o que gerou a participação de menos especialistas nos
+44
+
+ambulatórios de telemedicina do que os especialistas que atendem de forma presencial,
+evidenciado pelo número de consultas de forma presencial ser muito maior do que as consultas
+de telemedicina. Além disso, o tempo médio de consulta nas duas escolas evidenciou a dificuldade
+de adaptação da FASEH no processo de relação médico paciente de forma online. A FASEH
+apresentou tempo médio de consultas por telemedicina de 25 minutos e o UNIBH de 44 minutos,
+muito relacionado a dificuldade do profissional em estabelecer vínculo e de usar a tecnologia,
+enquanto no UNIBH o tempo médio ficou muito próximo do tempo médio de uma consulta
+presencial que é realizada na Clínica.
+Ter utilizado o Guia de Avaliação da Implementação da Telemedicina (Brasil, 2019) foi
+fundamental para a implementação em tempo correto, com a plataforma correta e com a
+infraestrutura correta, uma vez que ao aplicar a avaliação disponível do guia nossa estrutura
+contemplava 62% das respostas esperadas para uma boa implementação, o que garantiu uma
+boa conectividade com a plataforma, adequação da infraestrutura e segurança aos preceptores e
+alunos, permitindo menos faltas de pacientes e cancelamentos do atendimento, uma vez que o
+processo foi preparado e estruturado.
+Além de ter utilizado o Guia de avaliação da Implementação da Telemedicina a criação
+dos protocolos de agendamento, modelo de atendimento e encaminhamento do paciente pós
+consulta de telemedicina foi uma organização fundamental para o transcorrer correto da proposta
+no UNIBH, o que não ocorreu na FASEH por falta de uma construção dos docentes e dedicação a
+telemedicina. As Normas Éticas de Utilização da telemedicina da Associação Médica Mundial,
+citado por Costa et al., (2001) afirmam que a qualidade da telemedicina, eficácia e custos estão
+ligados a elaboração de normas e protocolos, junto com as unidades envolvidas para garantir a
+boa formação de médicos e outros profissionais de saúde.
+Segundo Modesto et al., (2022), a inserção de cursos em Saúde Digital no Brasil está
+entre as 7 prioridades no Documento Estratégia de Saúde Digital para o Brasil 2020- 2028, sendo
+descrita na prioridade número 5 que contempla a Formação e Capacitação de Recursos Humanos
+com perfil adequado para executar ações de saúde digital. Portanto ter tido uma experiência de
+239 atendimentos no UNIBH de telemedicina em 10 especialidades diferentes, especialidades
+essas que coincidem com a evidência citada por Totten et al., (2016), sendo elas Psiquiatria,
+Medicina de Família e Comunidade, Saúde da Mulher, Pediatria, entre outras que são citadas nas
+evidências como melhores experiências de teleatendimento médico. Já na FASEH a experiência
+de 39 atendimentos não contribuiu para essa vivência e essa formação em recursos humanos,
+45
+
+especialmente por falta de prática, sendo necessário contemplar maiores vivências e organização
+nos próximos semestres.
+A ferramenta de avaliação implementada para avaliação da prática da telemedicina foi
+usada pouquíssima pelos docentes e preceptores, impossibilitando uma avaliação mais adequada
+do desempenho dos alunos. Dos 10 ambulatórios que implementaram a telemedicina apenas 10%
+desses aplicou o Mini-CEX, o que prejudicou muito a avaliação do desempenho docente e o que
+confirma o estudo realizada no Reino Unido, citado por Modesto et al., (2022), que os docentes
+não estão preparados para o ensino de tecnologias pela sua própria falta de capacitação.
+Um ponto de destaque dos números alcançados de atendimento de telemedicina foi a
+inserção da telemedicina como rotina no ambulatório do UNIBH, o que não aconteceu na FASEH,
+onde ficou definido que a telemedicina ocorreria quando demanda de algum serviço de saúde e
+não como uma oferta constante do ambulatório. Brasil, 2019 afirma que para o sucesso de
+qualquer estratégia de telemedicina é essencial a integração da oferta com a rotina de trabalho
+das equipes de saúde.
+Quando avaliado o porquê da grande diferença de número de atendimentos do UNIBH em
+relação a FASEH, dois pontos se destacam muito: a capacitação de um docente com tempo
+exclusivo de dedicação a telemedicina no UNIBH e o maior investimento em infraestrutura e
+tecnologia nessa escola. Brasil, 2019, no Guia Metodológico para Programas e Serviços em
+Telessaúde, afirma que adequação de infraestrutura, investimento em tecnologia e dedicação de
+profissionais capacitados é investimento essencial para qualquer serviço de telemedicina.
+Outra importante diferença que pode ser destacada quando avaliado os números de
+atendimentos do UNIBH e FASEH é o público que foi envolvido como elegível pela telemedicina.
+Na FASEH por não termos um docente com carga horária dedicada a telemedicina alinhamos com
+os serviços de saúde próximos a clínica integral de saúde que a telemedicina seria feita com a
+população adscrita deles, o que não foi bem aceito pelos usuários, uma vez que o serviço era
+muito próximo da população. A telemedicina do UMIBH foi realizada com população privada de
+liberdade da Associação de Proteção e Assistência aos Condenados (APAC) e com a população de
+um município há 400 km da capital com dificuldade de acesso ao especialista. O que confirma o
+citado por França (2009) que diz que os paciente que mais se beneficiam pela telemedicina são
+os que não dispõe de acesso a especialista ou aqueles cuja atenção básica é precária ou
+inexistente.
+46
+
+Quando analisamos a percepção do docente quanto a potencialidades da telemedicina e
+desafios, os resultados alcançados confirmam muito o que vem sendo retratado em toda a
+literatura da telemedicina. Almino et al., (2014) relatam que o recurso da telemedicina representa
+uma troca de experiência entre universidades, entre profissionais e entre diferentes regiões,
+contribuindo assim para o aumento das atividades acadêmicas, maior resolutividade da
+assistência, aprimoramento das práticas clínicas e desenvolvimento do Estado e do país. Além
+disso, reforça que essa troca de saberes e experiências permite aprimoramento na qualidade da
+anamnese, exame físico, indicações de exames complementares, formulações diagnósticas, entre
+outras.
+E quanto aos desafios apresentados, esses também estão relatados na literatura de
+telemedicina com muita frequência, que são as questões de conectividade, ética, sobrecarga do
+médico, mudança da relação médico paciente e interesse dos médicos pela inserção de novas
+tecnologias em sua prática médica. Esses desafios são relatados por Maldonado et al., (2016),
+dizendo que a telemedicina significa mudança na relação médico/paciente uma vez que a
+substituição pelo presencial é um desafio para a medicina tradicional, enfrenta resistência dos
+profissionais de saúde gerando conflitos nas equipes que se dedicam a cuidar da telemedicina,
+sendo que na maioria das vezes se trata de uma equipe multiprofissional, médicos, enfermeiros,
+técnicos de informática, entre outros. Cultura conservadora, aversão a mudanças, processo de
+trabalho, incertezas e aversão ao risco geram resistência ao novo processo.
+É importante ressaltar que esse estudo terá continuidade com acompanhamento e
+aprimoramento da telemedicina no UNIBH, aprimoramento, investimento em infraestrutura,
+dedicação docente e treinamentos na FASEH. Além disso, a continuidade de implantação desse
+estudo prevê a implementação da telemedicina na Simulação, uma vez que como citado por Wen
+(2008), a realização da telemedicina ganha força com o apoio de instrumentos complementares
+de apoio como simuladores e jogos interativos, formando uma rede de aprendizagem interativa.
+Para finalizar é importante ressaltar as limitações metodológicas encontradas nesse
+estudo que são as limitações de estudos na literatura que correlacionam a telemedicina com a
+educação. Poucos são os estudos e artigos que trazem essa correlação e que falam sobre a
+telemedicina como práticas nos currículos.
+47
+
+5.2 Conclusão
+A telemedicina não é uma abordagem nova, pois possuem registros antigos do seu uso e
+dessa metodologia de atendimento, porém seu maior foco sempre foi a utilização para fornecer
+cuidados em áreas remotas e pacientes com problemas de saúde não urgentes e na grande
+maioria das vezes inserida na prática médica após a formação profissional.
+Com a expansão da formação médica no Brasil, com maior número de médicos,
+especialmente nas capitais e em cidades mais bem localizadas, a telemedicina se faz necessária
+como apoio a médicos em áreas remotas com o uso de segunda opinião, acesso de pacientes a
+especialistas e formação de recursos humanos. Além disso, é premissa da DNC a implementação
+no currículo de medicina a aprendizagem através da inserção de novas tecnologias.
+Porém para que essa formação de recursos humanos seja eficaz, é necessário que a
+telemedicina seja uma prática implementada na graduação e nos currículos dos cursos de
+medicina. Essa implementação da telemedicina como prática médica requer grandes
+investimentos em estruturação do projeto, infraestrutura, metodologia e capacitação da
+comunidade acadêmica para que o projeto ocorra. O que ficou bem evidenciado neste estudo foi
+que a falta de investimento, como ocorreu em uma das escolas, é um grande fator de fracasso da
+implantação da telemedicina.
+Além do investimento é necessário o desenvolvimento da cultura da telemedicina como
+prática para os médicos que são os docentes da escola médica. Uma grande parte dos médicos
+apresenta muita resistência à telemedicina, o que por vezes cria barreiras para ampliação e
+desenvolvimento desse estudo.
+Ficou claro nesse estudo que o uso da telemedicina inserida como prática do curso de
+medicina permitiu aos alunos novas vivências, oportunidade de novos aprendizados e discussões
+ampliadas sobre o uso da telemedicina na assistência médica. Permitiu também a melhoria de
+acesso a usuários que estavam sem acesso a médicos especialistas, garantindo assim dentro da
+formação médica o papel de impacto social dessa formação, sendo esse o maior ganho desse
+estudo, uma vez que garantir que a formação médica seja mediada por pilares de aprendizagem
+de novas tecnologias e impacto social é um dos objetivos dos projetos pedagógicos de curso e das
+diretrizes curriculares nacionais do curso de medicina.
+Ficou claro que o pilar ouro da formação médica são as práticas presenciais de
+atendimentos face a face com o usuário, porém inserir a telemedicina como uma alternativa
+48
+
+tecnologia permiti que os alunos vivenciem uma nova metodologia de atendimentos inclusive com
+aprimoramentos do modelo de cuidado, do exame físico, anamnese e plano de cuidado.
+Implantar a telemedicina como prática no currículo de graduação é possível, necessário e
+precisa ser urgente, uma vez que essa é a realidade do mercado médico, especialmente após a
+pandemia do COVID-19 e estamos falando de formação médica em uma país, Brasil, com
+condições demográficas e sociais que carecem e carecerão cada vez mais de médicos que
+possuam habilidades de atendimento via telemedicina.
+Por fim, é importante ressaltar que são necessários mais estudos como esse para que
+exista maior análise dessa implementação da telemedicina, principalmente quando falamos da
+telemedicina inserida em práticas simuladas e literatura com marcos da telemedicina como tempo
+esperando de um atendimento e volume de atendimento necessário para desenvolvimento de
+aprendizagem técnica do graduando em medicina.
+Além disso, vale ressaltar que esse estudo requer continuidade, uma vez que esse trabalho
+retrata apenas o início do processo de implementação, sendo necessária a continuidade do
+processo para que a telemedicina se consolide como prática na graduação e outros componentes
+sejam implementados como a telemedicina na simulação.
+49
+
+6 PERSPECTIVAS FUTURAS
+Esse estudo ainda não está concluído. A intencionalidade é que ele continue com as
+seguintes atividades:
+1- Implementação da telemedicina nas práticas de simulação;
+2- Implementação da telemedicina completa na FASEH;
+3- Implementação da telemedicina na Educação Médica continuada e;
+4- Publicação de artigo sobre o tema em revistas de educação e saúde.
+Para que esses próximos passos aconteçam, já foi criado um grupo de trabalho para a
+implementação da telemedicina na prática das simulações médicas com a construção de Termo
+de Referência e revisão de roteiros. Para a implementação da telemedicina na Faseh está sendo
+discutido como será feito o investimento em infraestrutura e formação docentes e com a Educação
+Médica Continuada estamos trabalhando em parceria para a implementação com várias
+especialidades e parceiros de serviços de saúde.
+A busca por tornar um trabalho maior, mais efetivo e com implementação de prática
+continua está sendo enorme e trará bons resultados para publicação e continuação dessa tese de
+mestrado.
+50
+
+REFERÊNCIAS
+Almino, M. A. F. B., Rodrigues, S. R., Barros, K. S. B., Fonteles, A. S., Alencar, L. B. L., Lima, L.
+L. D., & Jorge, M. S. B. (2014). Telemedicina: um instrumento de educação e promoção da
+saúde pediátrica. Revista Brasileira de Educação Médica, 38(3), 397-402.
+https://doi.org/10.1590/S0100-55022014000300015.
+Ânima Educação. (2022). Projetos de extensão 2021/2022.
+https://ri.animaeducacao.com.br/default.aspx?linguagem=pt
+Caetano, R., Silva, A. B., Guedes, A. C. C. M., Paiva, C. C. N. D., Ribeiro, G. D. R., Santos, D. L.,
+& Silva, R. M. D. (2020). Desafios e oportunidades para telessaúde em tempos da pandemia
+pela COVID-19: uma reflexão sobre os espaços e iniciativas no contexto brasileiro. Cadernos
+de saúde pública, 36(5), e00088920. ttps://doi.org/10.1590/0102-311X00088920.
+Ceccim, R. B., Feuerwerker, L. (2004). O quadrilátero da formação para a área da saúde: ensino,
+gestão, atenção e controle social. Physis: revista de saúde coletiva, 14(1), 41-65.
+https://doi.org/10.1590/S0103-73312004000100004.
+Conselho Federal de Medicina – CFM. (2023). CFM se manifesta sobre abertura de escolas
+médicas. https://portal.cfm.org.br/noticias/cfm-se-manifesta-sobre-abertura-de-escolas-
+medicas/
+Costa, K. L. D., Brasil, L. M., & Santos, N. F. (2001). Aspectos ético-legais da telemedicina. Revista
+Principia, 9(5), 27-32. http://dx.doi.org/10.18265/2447-9187a2001id7893
+Coury, Wilson (2020). RUTE, a Rede Universitária de Telemedicina.
+https://politics.org.br/edicoes/rute-rede-universit%C3%A1ria-de-telemedicina
+D’Avila, R. L. (2003). Responsabilidades e normas éticas na utilização da
+telemedicina. http://portal.cfm.org.br/index.php?option=com_content&view=article&id=20
+096:responsabilidades-e-normas-eticas-na-utilizacao-da-telemedicina&catid=46.
+Ferrer-Roca Olga. (2001). Telemedicina. Madrid: Panamericana.
+França, Genival Veloso da. (2009). Telemedicina: breves considerações ético-legais. Revista
+bioética, 8(1), 107-126.
+Gareev, I., Gallyametdinov, A., Beylerli, O., Valitov, E., Alyshov, A., Pavlov, V., ... & Zhao, S. (2021).
+The opportunities and challenges of telemedicine during COVID-19 pandemic. Frontiers in
+Bioscience-Elite, 13(2), 291-298. https://doi.org/10.52586/E885
+Godinho, A. M., de Meirelles Belliard, A., Efing, A. C., Cavet, C. A., Dantas, E., Schaefer, F., ... &
+Barreira, T. (2023). Telemedicina: desafios éticos e regulatórios. 2. ed. Foco.
+Gundim, R. S. (2009). Gestão dos fatores determinantes para sustentabilidade de centros de
+telemedicina (Tese de Doutorado), Faculdade de Medicina da Universidade de São Paulo.
+https://chaowen.med.br/wp-content/uploads/2016/12/Rosangela_Gundim.pdf
+51
+
+Harzheim, E., Katz, N., Ferri, C., Fernandes, J. G., & Barbosa, I. (2017). Guia de avaliação,
+implantação e monitoramento de programas e serviços em telemedicina e telessaúde. Porto
+Alegre: Universidade Federal do Rio Grande do Sul, Hospital Alemão Oswaldo Cruz.
+https://rebrats.saude.gov.br/images/MenuPrincipal/Guia_Avaliacao_telessaude_telemedic
+ina.pdf
+Hincapié, M. A., Gallego, J. C., Gempeler, A., Piñeros, J. A., Nasner, D., & Escobar, M. F. (2020).
+Implementation and usefulness of telemedicine during the COVID-19 pandemic: a scoping
+review. Journal of primary care & community health, 11, 2150132720980612.
+https://doi.org/10.1177/2150132720980612
+Inspirali. (2022). Rede de escolas médicas no Brasil. https://www.inspirali.com/
+Lei no 14.510, de 27 de dezembro de 2022 (2022, 27 de dezembro). Altera a Lei nº 8.080, de
+19 de setembro de 1990, para autorizar e disciplinar a prática da telessaúde em todo o
+território nacional, e a Lei nº 13.146, de 6 de julho de 2015; e revoga a Lei nº 13.989, de
+15 de abril de 2020. Diário Oficial da União.
+https://pesquisa.in.gov.br/imprensa/jsp/visualiza/index.jsp?jornal=515&pagina=1&data=2
+8/12/2022&totalArquivos=341.
+Lisboa, K. O., Hajjar, A. C., Sarmento, I. P., Sarmento, R. P., & Gonçalves, S. H. R. (2023). A
+história da telemedicina no Brasil: desafios e vantagens. Saúde e Sociedade, 32(1), 1-14.
+https://doi.org/10.1590/S0104-12902022210170pt.
+Maldonado, J. M. S. D. V., Marques, A. B., & Cruz, A. (2016). Telemedicina: desafios à sua difusão
+no Brasil. Cadernos de Saúde Pública, 32 (Suppl 2). https://doi.org/10.1590/0102-
+311X00155615.
+Ministério da Saúde. (2019). Guia Metodológico para Programas e Serviços em Telessaúde.
+Brasília: MS.
+https://bvsms.saude.gov.br/bvs/publicacoes/guia_metodologico_programas_servicos_tel
+essaude.pdf
+Ministério da Saúde. (2020). Estratégia de Saúde Digital para o Brasil 2020-2028. Brasília: MS.
+https://bvsms.saude.gov.br/bvs/publicacoes/estrategia_saude_digital_Brasil.pdf.
+Modesto, L. D. J. B., Oliveira, C. A. P., de Souza Gaspar, J., Ferlini, A., de Souza, A. C., de Melo
+Matos, R. W., ... & dos Santos, S. D. L. V. (2023). Prospecção de Cursos em Saúde Digital
+no Brasil. Journal of Health Informatics, 15(Especial). https://doi.org/10.59681/2175-
+4411.v15.iEspecial.2023.1098
+Nestor, M. L. (2001). Telemedicine and the internet: a collaboration and history of communication
+technologies. Dermatologic clinics, 19(2), 379-385. https://doi.org/10.1016/S0733-
+8635(05)70275-8.
+Noce, Leticia Gabriela. (2022). Percepção dos profissionais sobre o uso da telemedicina para a
+atenção integral a pessoas em situação de violência sexual em tempos de pandemia da
+COVID-19: um estudo qualitativo [Dissertação de Mestrado]. Universidade Federal de
+Uberlândia. http://doi.org/10.14393/ufu.di.2022.5077.
+52
+
+Organização Mundial de Saúde - OMS. (2020). COVID-19 e telemedicina: ferramenta de medição
+do nível de maturidade das instituições de saúde para implementar serviços de telemedicina.
+Genebra, PAHO. https://www3.paho.org/ish/images/toolkit/COVID-19-Telemedicine-Tool-
+pt.pdf
+Portaria nº 35 de 4 de janeiro 2007. (2007. 4 janeiro). Institui, no âmbito do Ministério da Saúde,
+o Programa Nacional de Telessaúde. Diário Oficial da União: MS.
+https://bvsms.saude.gov.br/bvs/saudelegis/gm/2007/prt0035_04_01_2007_comp.html
+.
+Resolução nº 1.974, de 14 de julho de 2011. (2011, 14 de julho) Estabelece os critérios
+norteadores da propaganda em Medicina, conceituando os anúncios, a divulgação de
+assuntos médicos, o sensacionalismo, a autopromoção e as proibições referentes à matéria.
+Diário Oficial da União: Seção I, Brasília.
+https://sistemas.cfm.org.br/normas/arquivos/resolucoes/BR/2011/1974_2011.pdf
+Resolução nº 2.227 de 13 de dezembro de 2018. (2019, 26 fevereiro). Define e disciplina a
+telemedicina como forma de prestação de serviços médicos mediados por tecnologias. Diário
+Oficial da União. https://abmes.org.br/arquivos/legislacoes/Resolucao-CFM-2227-2018-12-
+13.pdf
+Resolução nº 1.643, de 7 de agosto de 2002. (2002, 26 de agosto). Define e disciplina a prestação
+de serviços através da Telemedicina. Diário Oficial da União.
+https://pesquisa.in.gov.br/imprensa/jsp/visualiza/index.jsp?data=26/08/2002&jornal=1&
+pagina=205&totalArquivos=208.
+Resolução nº 3, de 20 de junho de 2014. (2014, 23 de junho). Institui Diretrizes Curriculares
+Nacionais do Curso de Graduação em Medicina e dá outras providências. Diário Oficial da
+União. https://abmes.org.br/arquivos/legislacoes/Res-CES-CNE-003-2014-06-20.pdf.
+Rocha, G. G. V., Lima, B. C., Ferreira, M. T., Ahlf, A. A., Waugha, L., Okuhara, M. R., ... & Macedo,
+C. R. (2021). O uso da telemedicina em tempos de COVID: sinopse de
+evidências. Diagnóstico e Tratamento, 26(4), 170-174.
+Santos, W. S., de Sousa Júnior, J. H., Soares, J. C., & Raasch, M. (2020). Reflexões acerca do uso
+da telemedicina no Brasil: oportunidade ou ameaça?. Revista de Gestão em Sistemas de
+Saúde, 9(3), 433-453. https://doi.org/10.5585/rgss.v9i3.17514.
+Sartori, L., & Musacchio, E. (2022). Telemedicina o consulto clinico a distanza: pro e contro per il
+paziente osteoporotico. Journal of Health Care Education in Practice, 4(1), 32-40.
+Totten, A. M., Womack, D. M., Eden, K. B., McDonagh, M. S., Griffin, J. C., Grusing, S., & Hersh,
+W. R. (2016). Telehealth: mapping the evidence for patient outcomes from systematic
+reviews. Agency for Healthcare Research and Quality (US).
+https://pubmed.ncbi.nlm.nih.gov/27536752/
+Umpierre, R. N. (2022). Desenvolvimento de consultas remotas no Hospital de Clínicas de Porto
+Alegre: descrição dos atendimentos, facilitadores para sua implantação e benefícios
+adicionais desta modalidade de atenção à saúde. [Dissertação de Mestrado]. Universidade
+53
+
+Federal do Rio Grande do Sul, Faculdade de Medicina. Lume.ufrgs.br.
+https://lume.ufrgs.br/handle/10183/249490.
+Wen, C. L. (2008). Telemedicina e Telessaúde: um panorama no Brasil. Informática Pública,
+10(2), 7-15.
+http://www.pbh.gov.br/informaticapublica/ANO10_N2_PDF/telemedicina_telesaude.pdf.
+54
+
+APÊNDICE
+Apêndice A – Aprovação Comitê de Ética
+55
+
+56
+
+ANEXOS
+Anexo A – Termo de compromisso para Utilização e Manuseio de Dados
+57
+
+Anexo B – Carta de Anuência para realização da pesquisa
+58

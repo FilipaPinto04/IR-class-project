@@ -19,7 +19,7 @@ async function apiFetch(endpoint, params = {}) {
   return res.json();
 }
 
-// ─── REQ-F81: URL ROUTING UTILITIES ──────────────────────────────────────────
+// ─── URL ROUTING UTILITIES ──────────────────────────────────────────
 function readSearchParams() {
   const p = new URLSearchParams(window.location.search);
   return {
@@ -45,7 +45,7 @@ function writeSearchParams(params) {
   window.history.replaceState(null, "", newUrl);
 }
 
-// ─── REQ-F63/F64: USER PREFERENCES ───────────────────────────────────────────
+// ─── USER PREFERENCES ───────────────────────────────────────────
 const PREF_KEY = "pri_user_prefs";
 const DEFAULT_PREFS = {
   rankMode: "custom",
@@ -77,7 +77,7 @@ function usePreferences() {
   return { prefs, update };
 }
 
-// ─── REQ-F10: QUERY VALIDATION ────────────────────────────────────────────────
+// ─── QUERY VALIDATION ────────────────────────────────────────────────
 const BOOLEAN_OPS = ["AND", "OR", "NOT"];
 
 function validateQuery(query, mode) {
@@ -328,7 +328,7 @@ const Pagination = ({ page, total, pageSize, onChange }) => {
   );
 };
 
-// ─── REQ-F46: ACTIVE FILTERS DISPLAY ─────────────────────────────────────────
+// ─── ACTIVE FILTERS DISPLAY ─────────────────────────────────────────
 const ActiveFilters = ({ year, yearTo, docType, fields, onRemove }) => {
   const filters = [];
   if (year || yearTo) filters.push({ key: "date", label: `Ano: ${year || "?"} – ${yearTo || "?"}` });
@@ -351,7 +351,7 @@ const ActiveFilters = ({ year, yearTo, docType, fields, onRemove }) => {
   );
 };
 
-// ─── REQ-F51/F52: COMPARISON VIEW ────────────────────────────────────────────
+// ─── COMPARISON VIEW ────────────────────────────────────────────
 const ComparisonPanel = ({ query, onAuthorClick }) => {
   const [customResults, setCustomResults] = useState(null);
   const [sklearnResults, setSklearnResults] = useState(null);
@@ -388,7 +388,7 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
     }
   };
 
-  // REQ-F54: Simple bar chart for score comparison
+  //  Simple bar chart for score comparison
   const ScoreChart = ({ customRes, sklearnRes }) => {
     if (!customRes?.results?.length) return null;
     const allUrls = [...new Set([
@@ -490,7 +490,7 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
             </div>
           )}
 
-          {/* REQ-F54: Score comparison chart */}
+          {/* Score comparison chart */}
           {activeTab === "chart" && customResults && sklearnResults && (
             <ScoreChart customRes={customResults} sklearnRes={sklearnResults} />
           )}
@@ -531,7 +531,7 @@ const ComparisonPanel = ({ query, onAuthorClick }) => {
   );
 };
 
-// ─── REQ-F53: PERFORMANCE METRICS ────────────────────────────────────────────
+// ───  PERFORMANCE METRICS ────────────────────────────────────────────
 const PerformanceMetrics = ({ searchTime, stats }) => {
   if (!searchTime && !stats) return null;
   return (
@@ -550,7 +550,7 @@ const PerformanceMetrics = ({ searchTime, stats }) => {
   );
 };
 
-// ─── REQ-F55/F56/F57: ANALYTICS DASHBOARD ─────────────────────────────────────
+// ─── ANALYTICS DASHBOARD ─────────────────────────────────────
 const AnalyticsDashboard = ({ stats }) => {
   const [queryLog, setQueryLog] = useState(() => {
     try { return JSON.parse(localStorage.getItem("pri_query_log") || "[]"); }
@@ -595,7 +595,7 @@ const AnalyticsDashboard = ({ stats }) => {
         ) : <p className="muted">Estatísticas não disponíveis.</p>}
       </div>
 
-      {/* REQ-F57: Most frequent queries */}
+      {/* Most frequent queries */}
       <div className="analytics-section">
         <h4>Queries mais frequentes</h4>
         {sortedQueries.length === 0
@@ -619,7 +619,7 @@ const AnalyticsDashboard = ({ stats }) => {
         }
       </div>
 
-      {/* REQ-F57: Mode usage breakdown */}
+      {/*Mode usage breakdown */}
       <div className="analytics-section">
         <h4>Modo de pesquisa utilizado</h4>
         {Object.keys(modeCount).length === 0
@@ -644,7 +644,7 @@ const AnalyticsDashboard = ({ stats }) => {
         }
       </div>
 
-      {/* REQ-F57: Top terms from index */}
+      {/* Top terms from index */}
       {stats?.top_20_terms_by_df && (
         <div className="analytics-section">
           <h4>Top 20 termos do índice (por frequência de documento)</h4>
@@ -830,7 +830,7 @@ const QueryBuilder = ({ onApply }) => {
   );
 };
 
-// ─── REQ-F37: AUTHOR COLLABORATION NETWORK ────────────────────────────────────
+// ─── AUTHOR COLLABORATION NETWORK ────────────────────────────────────
 const AuthorNetwork = ({ publications }) => {
   const canvasRef = useRef(null);
 
@@ -850,7 +850,6 @@ const AuthorNetwork = ({ publications }) => {
         }
       }
     });
-    // Keep top 20 authors by degree
     const authors = Object.entries(coauthor)
       .map(([name, conns]) => ({ name, degree: Object.keys(conns).length }))
       .sort((a, b) => b.degree - a.degree)
@@ -876,7 +875,6 @@ const AuthorNetwork = ({ publications }) => {
     const cx = W / 2, cy = H / 2;
     const r = Math.min(W, H) * 0.38;
 
-    // Place nodes in a circle
     const nodes = authors.map((name, i) => ({
       name,
       x: cx + r * Math.cos((2 * Math.PI * i) / authors.length - Math.PI / 2),
@@ -886,7 +884,6 @@ const AuthorNetwork = ({ publications }) => {
 
     ctx.clearRect(0, 0, W, H);
 
-    // Draw edges
     edges.forEach(({ a, b, w }) => {
       const na = nodeMap[a], nb = nodeMap[b];
       if (!na || !nb) return;
@@ -898,7 +895,6 @@ const AuthorNetwork = ({ publications }) => {
       ctx.stroke();
     });
 
-    // Draw nodes
     nodes.forEach(n => {
       ctx.beginPath();
       ctx.arc(n.x, n.y, 7, 0, 2 * Math.PI);
@@ -926,7 +922,7 @@ const AuthorNetwork = ({ publications }) => {
   );
 };
 
-// ─── REQ-F67: HELP PAGE ───────────────────────────────────────────────────────
+// ─── HELP PAGE ───────────────────────────────────────────────────────
 const HelpPage = () => {
   const [section, setSection] = useState("syntax");
   const sections = {
@@ -1027,7 +1023,7 @@ const HelpPage = () => {
   );
 };
 
-// ─── REQ-F63/F64: PREFERENCES PANEL ──────────────────────────────────────────
+// ─── PREFERENCES PANEL ──────────────────────────────────────────
 const PreferencesPanel = ({ prefs, update }) => {
   return (
     <div className="prefs-panel">
@@ -1143,7 +1139,7 @@ const AuthorPage = ({ name, onBack, onAuthorClick, saved, onSave, isSaved, allPu
               <span>{data.total_publications} publicações</span>
             </div>
           </div>
-          {/* REQ-F37: Collaboration network on author page */}
+          {/*Collaboration network on author page */}
           {allPublications?.length > 0 && (
             <AuthorNetwork publications={allPublications.filter(p => {
               let authors = p.authors || [];
@@ -1190,14 +1186,12 @@ export default function App() {
   // REQ-F63/F64: Load user preferences
 const { prefs, update: updatePrefs } = usePreferences();
 
-// Sincronizar preferências com o estado quando mudam
 useEffect(() => {
   setRankMode(prefs.rankMode);
   setReductionMode(prefs.reductionMode);
   setRemoveStopwords(prefs.removeStopwords);
   setPageSize(prefs.pageSize);
 }, [prefs]);
-  // REQ-F81: Initialise state from URL params
   const urlParams = readSearchParams();
 
   const [page, setPage] = useState("search");
@@ -1237,10 +1231,8 @@ useEffect(() => {
     apiFetch("/stats").then(setStats).catch(() => {});
   }, []);
 
-  // Auto-search if URL had a query on load
   useEffect(() => {
     if (urlParams.q) doSearch(urlParams.q, urlParams.page);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleInputChange = (val) => {
@@ -1272,7 +1264,6 @@ useEffect(() => {
     const t0 = performance.now();
     try {
       let data;
-      // Build year filter params: use year_from/year_to for range, year for exact match
       const yearParams = {};
       if (year && yearTo) {
         yearParams.year_from = year;
@@ -1282,7 +1273,6 @@ useEffect(() => {
       } else if (yearTo) {
         yearParams.year_to = yearTo;
       }
-      // fields param: "title", "abstract", or "" (all) — maps to API fields param
       const fieldsParam = fields || undefined;
       if (searchMode === "boolean") {
         data = await apiFetch("/search/boolean", { q, ...yearParams, fields: fieldsParam, doc_type: docType || undefined, page: pg, page_size: pageSize });
@@ -1296,12 +1286,10 @@ useEffect(() => {
       setSearchTime(((performance.now() - t0) / 1000).toFixed(3));
       addHistory({ q, mode: searchMode, ts: Date.now() });
 
-      // Log to analytics (REQ-F57)
       const log = JSON.parse(localStorage.getItem("pri_query_log") || "[]");
       log.unshift({ q, mode: searchMode, ts: Date.now() });
       localStorage.setItem("pri_query_log", JSON.stringify(log.slice(0, 200)));
 
-      // REQ-F81: Update URL
       writeSearchParams({ q, mode: searchMode, rankMode, year, docType, page: pg });
     } catch (e) { setError(e.message); }
     finally { setLoading(false); }
@@ -1322,7 +1310,6 @@ useEffect(() => {
     if (key === "fields") setFields("");
   };
 
-  // REQ-F81: Copy shareable link
   const handleShare = () => {
     writeSearchParams({ q: query, mode: searchMode, rankMode, year, docType, page: pageNum });
     navigator.clipboard.writeText(window.location.href).then(() => {
@@ -1345,7 +1332,6 @@ useEffect(() => {
     { id: "prefs", label: "Preferências", icon: "settings" },
   ];
 
-  // REQ-F13: Language label helper
   const lang = prefs.language || "pt";
   const t = (pt, en) => lang === "en" ? en : pt;
 
@@ -1416,7 +1402,7 @@ useEffect(() => {
                   )}
                 </div>
 
-                {/* REQ-F10: Real-time query validation */}
+                {/*  Real-time query validation */}
                 <QueryValidation query={inputVal} mode={searchMode} />
 
                 <div className="search-utils">
@@ -1649,10 +1635,10 @@ useEffect(() => {
           </div>
         )}
 
-        {/* REQ-F67: Help page */}
+        {/*  Help page */}
         {page === "help" && <div className="content-page"><HelpPage /></div>}
 
-        {/* REQ-F63/F64: Preferences page */}
+        {/* Preferences page */}
         {page === "prefs" && (
           <div className="content-page">
             <PreferencesPanel prefs={prefs} update={updatePrefs} />

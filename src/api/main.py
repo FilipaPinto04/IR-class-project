@@ -90,6 +90,7 @@ class PublicationResult(BaseModel):
     date: Optional[str] = None
     doi: Optional[str] = None
     pdf_link: Optional[str] = None
+    pdf_text_path: Optional[str] = None
     score: Optional[float] = None
 
 
@@ -238,7 +239,23 @@ def _build_result(
     if isinstance(authors, str):
         authors = [a.strip() for a in authors.split(";") if a.strip()]
     abstract = pub.get("abstract")
-    snippet  = _extract_snippet(abstract or "", query_tokens) if query_tokens is not None else None
+
+    # Build snippet: prefer abstract, fall back to PDF text file
+    snippet = None
+    if query_tokens is not None:
+        if abstract:
+            snippet = _extract_snippet(abstract, query_tokens)
+        if not snippet:
+            pdf_path = pub.get("pdf_text_path")
+            if pdf_path and os.path.exists(pdf_path):
+                try:
+                    import io as _io
+                    with open(pdf_path, "r", encoding="utf-8") as f:
+                        pdf_text = f.read(20000)  # read first 20k chars only
+                    snippet = _extract_snippet(pdf_text, query_tokens)
+                except Exception:
+                    pass
+
     return PublicationResult(
         url=url,
         title=pub.get("title"),
@@ -248,6 +265,7 @@ def _build_result(
         date=pub.get("date") or pub.get("publication_date") or pub.get("year"),
         doi=pub.get("doi"),
         pdf_link=pub.get("pdf_link") or pub.get("pdf_url"),
+        pdf_text_path=pub.get("pdf_text_path"),
         score=round(score, 6) if score is not None else None,
     )
 
@@ -347,10 +365,10 @@ def _filter_by_fields(urls: List[str], query: str, field_list: Optional[List[str
             if isinstance(posting, dict):
                 for field in field_list:
                     tf_key = "author_tf" if field == "authors" else f"{field}_tf"
-                    if posting.get(tf_key, 0) > 0:
-                        match = True
-                        break
-                    if not match and field in posting.get("fields", []):
+                    # FIX: as duas condições eram mutuamente exclusivas — a segunda
+                    # nunca era atingida porque o break anterior já saía do loop.
+                    # Agora verificamos tf_key E a lista "fields" de forma independente.
+                    if posting.get(tf_key, 0) > 0 or field in posting.get("fields", []):
                         match = True
                         break
             else:

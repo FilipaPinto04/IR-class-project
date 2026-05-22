@@ -1,0 +1,1029 @@
+Universidade do Minho
+Escola de Medicina
+Rita Matos Sousa
+Motivando Mentes Médicas: Adaptação da
+Escala de Motivação Académica no Âmbito
+da Teoria da Autodeterminação.
+abril de 2024
+oãçavitoM
+ed
+alacsE
+ad
+oãçatpadA
+:sacidéM
+setneM
+odnavitoM
+asuoS
+sotaM
+atiR
+4202
+|
+ohniMU
+.oãçanimretedotuA
+ad
+airoeT
+ad
+otibmÂ
+on
+acimédacA
+
+Universidade do Minho
+Escola de Medicina
+Rita Matos Sousa
+Motivando Mentes Médicas: Adaptação da
+Escala de Motivação Académica no Âmbito
+da Teoria da Autodeterminação.
+Dissertação de Mestrado
+Mestrado em Avaliação aplicado à formação das Profissões
+de Saúde
+Trabalho efetuado sob a orientação do
+Professor Doutor Vitor Hugo Pereira
+Professor Doutor John Norcini
+abril de 2024
+
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO
+TRABALHO POR TERCEIROS
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas
+as regras e boas práticas internacionalmente aceites, no que concerne aos direitos de autor e
+direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo
+indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em
+condições não previstas no licenciamento indicado, deverá contactar o autor, através do
+RepositóriUM da Universidade do Minho.
+Licença concedida aos utilizadores deste trabalho
+Atribuição-NãoComercial-SemDerivações
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+ii
+
+ACKNOWLEDGMENTS
+I would like to thank all the faculty of the Master in Assessment in Health Professions
+Education, in special to Vítor Hugo Pereira, MD, PhD, for encouraging me to pursuit my passion in
+medical education.
+I thank all my classmates for the great and enthusiastic discussion, where we were able
+to share our experiences, create a network for future collaborations and long-lasting friendships.
+I thank John Norcini, PhD for the guidance during this project, allowing me to develop my
+ideas and offering me a helping hand whenever I needed.
+I thank my parents and my brother for the patience and support during the past 2 years
+and for always encouraging me to keep moving forward.
+I thank Nuno Gonçalves for making this and all the journeys with me, helping me in every
+step of the way, listening to all the brainstorms and doubts. Thank you for believing in me and for
+your love.
+.
+Financial Support
+The work presented in this thesis was performed in the School of Medicine and in the Life
+and Health Sciences Research Institute, University of Minho. Financial support was provided by
+Grupo Fuste and 2CA Braga – Centro Clínico Académico, Braga.
+iii
+
+STATEMENT OF INTEGRITY
+I hereby declare having conducted this academic work with integrity. I confirm that I have
+not used plagiarism or any form of undue use of information or falsification of results along the
+process leading to its elaboration.
+I further declare that I have fully acknowledged the Code of Ethical Conduct of the
+University of Minho.
+iv
+
+Resumo
+Motivando Mentes Médicas: Adaptação da Escala de Motivação
+Académica no Âmbito da Teoria da Autodeterminação.
+Introdução: A motivação desempenha um papel crucial no sucesso académico e no
+desenvolvimento profissional dos estudantes de medicina. Compreender as complexidades da
+motivação no contexto da educação médica é essencial para a construção de intervenções eficazes
+e sistemas de apoio. Este artigo explora a adaptação da Escala de Motivação Académica (AMS) no
+âmbito da Teoria da Autodeterminação (SDT) e da Teoria da Autoeficácia para avaliar a motivação
+entre os estudantes de medicina.
+Métodos: O estudo utilizou uma metodologia rigorosa para adaptar a AMS ao contexto português,
+recorrendo à estrutura da SDT. Duas escalas portuguesas existentes, a MATAMS e a escala de
+Ribeiro et al., serviram como as bases fundamentais para o processo de adaptação. A Escala de
+Motivação Académica para estudantes de medicina do Minho (Minho-MEDAMS) resultante foi
+submetida a procedimentos de validação rigorosos para garantir as suas propriedades
+psicométricas e validade.
+Resultados: O processo de adaptação resultou numa escala refinada composta por cinco
+dimensões de motivação: motivação intrínseca, regulação identificada, regulação externa,
+regulação introjetada e amotivação. Análises psicométricas demonstraram uma forte
+confiabilidade e validade da Minho-MEDAMS, confirmando a sua adequação para avaliar a
+motivação entre os estudantes de medicina no contexto português.
+Discussão e Conclusão: A adaptação bem-sucedida da AMS dentro do quadro da SDT
+apresenta um instrumento valioso para avaliar a motivação nos estudantes de medicina. A Minho-
+MEDAMS oferece uma compreensão abrangente das dinâmicas motivacionais, facilitando
+intervenções direcionadas e mecanismos de apoio para melhorar o envolvimento e o sucesso dos
+estudantes. A sua validade e confiabilidade tornam-na uma ferramenta prática para educadores,
+administradores e investigadores no campo da educação médica. No final, a Minho-MEDAMS
+contribui para o avanço de estratégias destinadas a cultivar profissionais de saúde motivados e
+proficientes.
+Palavras-Chave: Escala de Motivação Académica Motivação, Teoria da Autodeterminação,
+Teoria da Auto-eficácia.
+v
+
+Abstract
+Motivating Medical Minds: Adapting the Academic Motivation Scale
+within the Framework of Self-Determination Theory
+Introduction: Motivation plays a crucial role in the academic success and professional
+development of medical students. Understanding the intricacies of motivation within the context of
+medical education is essential for designing effective interventions and support systems. This paper
+explores the adaptation of the Academic Motivation Scale (AMS) within the framework of Self-
+Determination Theory (SDT) and of Self-efficacy Theory to assess motivation among medical
+students.
+Methods: The study utilized a rigorous methodology to adapt the AMS to the Portuguese context,
+drawing upon insights from SDT. Two existing Portuguese scales, MATAMS and Ribeiro et al.'s
+scale, served as foundational frameworks for the adaptation process. The resulting Minho Medical
+Academic Motivation Scale (Minho-MEDAMS) underwent thorough validation procedures to ensure
+its psychometric properties and validity.
+Results: The adaptation process yielded a refined scale comprising five dimensions of motivation:
+intrinsic motivation, identified regulation, external regulation, introjected regulation, and
+amotivation. Psychometric analyses demonstrated strong reliability and validity of the Minho-
+MEDAMS, affirming its suitability for assessing motivation among medical students in the
+Portuguese context.
+Discussion and Conclusion: The successful adaptation of the AMS within the SDT framework
+presents a valuable instrument for assessing motivation in medical students. The Minho-MEDAMS
+offers a comprehensive understanding of motivational dynamics, facilitating targeted interventions
+and support mechanisms to enhance student engagement and success. Its validity and reliability
+render it a practical tool for educators, administrators, and researchers in the field of medical
+education. Ultimately, the Minho-MEDAMS contributes to the advancement of strategies aimed at
+cultivating motivated and proficient healthcare professionals.
+Key-words: Motivation, Self-determination Theory, Self-efficacy theory, Academic Motivation Scale
+vi
+
+Table of Contents
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS .............. ii
+ACKNOWLEDGMENTS .............................................................................................................. iii
+STATEMENT OF INTEGRITY ...................................................................................................... iv
+Resumo ..................................................................................................................................... v
+Abstract .................................................................................................................................... vi
+Figure Index ........................................................................................................................... viii
+Table Index ............................................................................................................................. viii
+List of Abbreviations.................................................................................................................. ix
+Introduction .............................................................................................................................. 1
+Objectives ................................................................................................................................. 4
+Materials and Methods ............................................................................................................. 5
+Study Design ..................................................................................................................................... 5
+Qualitative Perspective ....................................................................................................................... 5
+Participants .................................................................................................................................................. 6
+Measures ..................................................................................................................................................... 6
+Analyses ....................................................................................................................................................... 7
+Scale Development and Application ............................................................................................................... 7
+Quantitative Perspective .................................................................................................................... 8
+Participants .................................................................................................................................................. 8
+Analysis ........................................................................................................................................................ 9
+Results ................................................................................................................................... 11
+Qualitative Phase ............................................................................................................................. 11
+Step 1: Is the Motivation Concept relevant and understood in a new context? ............................................... 11
+Step 2: Are the motivation scale and its items understood? .......................................................................... 12
+Website development and result .................................................................................................................. 13
+Quantitative Phase .......................................................................................................................... 14
+Is the scale valid and reliable in the new context? ........................................................................................ 14
+Discussion .............................................................................................................................. 19
+vii
+
+Conclusion ............................................................................................................................. 22
+References ............................................................................................................................. 23
+Appendix ................................................................................................................................ 27
+Figure Index
+Figure 1 – The continuum of Self-Determination Theory ............................................................. 1
+Figure 2 – Website affluence during weeks of data collection. .................................................. 14
+Figure 3 – Confirmatory Factor Analysis – Minho-MEDAMS final measurement model. ............. 18
+Table Index
+Table 1 – Minho Medical Academic Motivation Scale – English Version. ................................... 15
+Table 2 - Descriptive statistics regarding the medical students that answered the Medical Students
+Motivation Scale. .................................................................................................................... 16
+Table 3 – Exploratory Factor Analysis ...................................................................................... 17
+viii
+
+List of Abbreviations
+AMOT – Amotivation
+AMS – Academic Motivation Scale
+CFA – Confirmatory Factor Analysis
+CFI - Comparative Index of Fitness
+EFA – Exploratory Factor Analysis
+EM – Extrinsic Motivation
+EMER – Extrinsic Motivation – External Regulation
+EMID - Extrinsic Motivation – Identified Regulation
+EMIR – Extrinsic Motivation – Introjected Regulation
+EM-UM – School of Medicine of the University of Minho
+IM – Intrinsic Motivation
+KMO – Kaiser-Meyer-Olkin
+Minho-MEDAMS – Minho Medical Academic Motivation Scale
+RMSEA – Root Mean Square Error of Approximation
+SDT – Self-Determination Theory
+VAS – Visual Analogue Scale
+ix
+
+Introduction
+Motivation serves as the driving force that imbues purpose and direction into behavior,
+manifesting itself at both conscious and unconscious levels. The study of motivation encompasses
+all aspects of an individual's needs, exploring the intricate processes and structures that link these
+needs to behavior. Theories of motivation organize the findings within this realm, with the pursuit
+of understanding the "why" of behavior at its core (1-3).
+One pivotal theory in the domain of motivation is the Self-Determination Theory (SDT). This
+theory offers a profound perspective on human motivation and personality, emphasizing the
+significance of internal resources for personality development and behavioral self-regulation (2).
+Within the framework of SDT, intrinsic and extrinsic sources of motivation can be defined,
+elucidating the roles of intrinsic motivation (IM) and various types of extrinsic motivation (EM) in
+cognitive and social development and individual differences. This conceptualization has led to the
+creation of a framework illustrating the continuum between motivation types, their regulatory styles,
+perceived causes, and relevant regulatory processes as can be seen in Figure 1, removed from
+Ryan and Deci, 2000 (4).
+Figure 1 – The continuum of Self-Determination Theory removed from Ryan and Deci, 2000, p.72.
+Conditions supporting an individual's experience of autonomy, competence, and peer
+relationships are considered essential in promoting volitional behaviors and high-quality motivation
+and engagement in activities, leading to improved performance, persistence, and creativity.
+Moreover, the theory posits that the absence of support for any of these three needs within a social
+context can significantly impact an individual's well-being within that context (4).
+1
+
+Another theory indirectly contributing to the construct of motivation is the theory of self-
+efficacy. This theory underscores the importance of an individual's perception of their personal
+capabilities as key determinants of successful outcomes. The theory of self-efficacy aligns with the
+democratic ideal that posits all individuals are competent and capable of success given the
+opportunities and self-efficacy required to pursue their goals. Embedded within the broader
+understanding of the social cognitive theory, the theory of self-efficacy provides a model for
+comprehending human emotion, behavior, cognition, and motivation, highlighting the active role
+individuals play in shaping their environment (5,6).
+These concepts are pivotal in the study of motivation, shedding light on how individuals
+modulate their motivational states and how these states translate into outcomes. As emphasized
+earlier, the context can significantly impact individuals, making the study of motivation in specific
+contexts particularly relevant.
+One context associated with high levels of stress, adaptation, resilience, and constant
+evolution is the field of Medicine and the extensive journey of medical training. The exploration of
+motivation in medical education research has witnessed significant growth, offering intriguing
+associations and perspectives that deepen our understanding of medical students' learning
+experiences (7-14). Some studies indicate a positive correlation between the motivation of medical
+students and the quality of their learning, the learning strategies they employ, their persistence,
+and, ultimately, their performance (10,15). Additionally, there is evidence suggesting that while
+teachers may not be solely responsible for their students' motivation to learn, their influence is
+substantial (16). These findings underscore the relevance and interest of educators in the topic
+and the promotion of learning and assessment strategies that enhance the motivation of their
+students. In this regard, Viau and Pelaccia have significantly contributed to the field by proposing
+a dynamic motivational model associating IM with observed learning outcomes (1). This model is
+grounded in three premises: i) the perceived value of an educational activity (or "subjective task
+value"), defined as the student's judgment of the interest and usefulness of completing a proposed
+activity based on their goals (16,17); ii) perceived self-efficacy (or "perceived competence"),
+defined as the student's judgment of their ability to successfully engage with the proposed
+educational activity (16); and iii) perceived controllability, defined as the degree of control a student
+believes they have over the progress of an activity (16).
+To comprehensively understand and study motivation in medical students, the availability
+of suitable and contextually adapted scales is imperative. The Academic Motivation Scale (AMS), a
+2
+
+widely used 28-item scale with seven subscales assessing three types of IM, three types of EM and
+amotivation (AMOT), has been utilized in many studies to evaluate motivation in medical students
+(18-21). However, considering the distinct characteristics of medical courses and the need for high
+levels of motivation there arises a rationale for the development of a motivation scale tailored for
+medical students.
+Therefore, this project proposes the development of a motivation scale, designed to be
+simple and intuitive for medical students, with the aim of measuring their motivation levels related
+to learning acquisition. The scale seeks to assess each dimension of motivation outlined in the
+SDT. This approach enables the quantification of each dimension of motivation, offering insights
+into the distribution across the motivation’ spectrum. With this data, it becomes possible to tailor
+incentives to the internal needs of medical students, understand how different incentives affect
+different students, and identify medical students who are intrinsically motivated or demotivated for
+targeted interventions.
+3
+
+Objectives
+The main objective of this study was:
+- To develop a valid and reliable motivation assessment scale tailored for medical students
+based on the SDT and through the adaptation of the AMS.
+4
+
+Materials and Methods
+Study Design
+We conducted an exploratory mixed-methods study to adapt the AMS based on a protocol
+for contextualized measurement scale adaptation (22). To do this, we took two different
+perspectives of the validation process: a qualitative and a quantitative phase, creating different but
+very valuable information.
+This study took place at the School of Medicine of the University of Minho (EM-UM). The
+experimental protocol was approved by the Ethics Committee of the University of Minho (CEICVS-
+121/2023) (see Appendix 1). Adherence to the Helsinki Declaration and the Convention on Human
+Rights of the Council of Europe was strictly observed (23,24). Written informed consent was
+obtained from each participant before data collection.
+A comprehensive literature review on motivation scales, with a primary focus on the AMS,
+including its variations, design, validation process, and impact assessment, was conducted through
+various databases (7-21).
+Qualitative Phase
+For the qualitative perspective, two distinct approaches were employed to address the
+research questions: Steps 1 and 2. In both steps, interviews were conducted following a semi-
+structured guideline.
+In Step 1, we used the grounded theory approach (25), which serves as a method for
+exploring the foundational aspects of a construct (26). This step involved investigating participants'
+comprehension of the concepts, constructs, and the new context. Grounded theory ensures a
+specific understanding of a concept in the new context, emerging organically from the collected
+data. Interviews continued until no additional information was acquired during the process.
+In Step 2, we employed think-aloud methods (27) to test the understanding of the
+measurement scale in the new context. Think-aloud reasoning is a method where participants
+verbalize their thoughts when choosing an answer for the items and express their reasoning and
+interpretation of the choice made.
+In both interviews, no answer options were presented, as the focus was solely on
+respondents' reasoning.
+5
+
+Participants
+We selected several groups of individuals involved in the issue of motivation in medical
+students, including medical students of different curricular years, alumni, and faculty members.
+These groups were defined during the interview process and the qualitative interviews for step 1,
+using the grounded theory approach, were conducted with 13 participants, comprising 6 medical
+students, 1 alumnus, and 6 faculty members. For step 2, we had a total of 10 medical students,
+2 alumni and 3 faculty members.
+Measures
+Following best practices, we used not only the original AMS, but also two already validated
+translations into Portuguese of the AMS, as the original framework (18,28,29).
+Academic Motivation Scale
+The AMS stands as a cornerstone in assessing students' drive for learning, widely
+employed across educational studies. The scale was originally developed by Vallerand et al. (18)
+in French and, in 1992, translated to English, creating the AMS. The scale comprises 28 items
+rated on a seven-point Likert scale, that are divided in seven subscales that respect the different
+dimensions of motivation described in the SDT: IM, EM and AMOT. Interestingly, Ryan and Deci,
+established with the SDT, the dimension of IM as a global construct, while Vallerand et al. divided
+this dimension into three subtypes: IM - to know; IM - to accomplish; and IM - to stimulate. The
+first subtype, “To Know”, refers to when a student does something for the pleasure and satisfaction
+experienced while learning, the second subtype “To Accomplish”, refers to when a student does
+something for the pleasure and satisfaction experienced while trying to accomplish things, and the
+third type “To Stimulate”, refers to when a student does something in order to experience
+stimulating sensations (30). Another interesting choice for the authors of the AMS was the exclusion
+of EM – Integrated Regulation (EMIR) from the original SDT motivation spectrum, explaining that
+this dimension of motivation only appears later in adult life with much less expression in the
+academic range (31). With these concepts present, the AMS was created with 28 items, distributed
+over the 3 dimensions defined by the SDT: 4 items for AMOT, 12 items for EM and 12 items for
+IM. The AMS follows some basic principles based on the SDT that pose that stronger positive
+correlations should be present between adjacent dimensions, opposed to the dimensions that are
+6
+
+further apart in the self-determination spectrum. Also, the strongest negative correlation should
+appear between AMOT items and the IM items (18,30,32,33).
+It is important to highlight that several studies have demonstrated a robust internal and
+external reliability across diverse research studies and countries (30,31,34-38).
+Analyses
+For Steps 1 and 2, qualitative content analysis was employed. Initially, the first author read
+four interview transcripts, inductively coding phrases, and clauses as thematic elements to create
+a coding system. This coding system was then discussed and validated with another author.
+Subsequently, it was used to code four additional interviews and, if necessary, complemented with
+additional codes. Finally, the coded interviews and all remaining interviews were analyzed using
+the more elaborate and validated coding system.
+Scale Development and Application
+Building upon the insights gained from the qualitative phases of Steps 1 and 2, a new
+adapted scale was crafted – the Minho Medical Academic Motivation Scale (Minho-MEDAMS). The
+qualitative findings provided a rich understanding of participants' comprehension of motivation
+concepts and their perspectives in the specific context under investigation, which, in turn, resulted
+in the adapted scale presented. The first version of Minho-MEDAMS was designed in the same
+model of the original AMS, with the influence of both the Portuguese scales, composed by 28 items
+and conceptually divided in 7 subdimensions: IM to Know, IM to Accomplish, IM to Stimulate,
+EMIR, EM – Identification (EMID), EM - External Regulation (EMER) and AMOT. The scale was then
+presented to the participants through a WordPress website developed by the researchers.
+When designing the Minho-MEDAMS, the authors also proposed to present the scale as a
+visual analogue scale (VAS). The VAS, first described by Hayes and Paterson, are rating scales in
+a continuous graphical format in which the participants are shown a straight line where they can
+mark any point on this line, corresponding to their degree of agreement (39). One of the advantages
+of using a VAS, is that answers are not restricted to a certain number of response options, but very
+fine gradations can be measured. They avoid the systematic bias of values resulting from scale
+coarseness, a problem present when using items with distinct response categories that are meant
+to measure a continuous latent variable (40,41).
+7
+
+After the adaptation of the scale, it was also discussed the best way for delivering the
+Minho-MEDAMS to the targeted population. With this in mind, an unexpected, yet valuable, skill
+development journey unfolded. Recognizing the increasing significance of an online presence in
+the academic and professional spheres, the author embarked on a self-directed learning path to
+master website development, particularly utilizing the WordPress platform. The decision to delve
+into website development was driven by the realization that an effective online presence can
+significantly amplify the impact of academic research. As the digital landscape becomes
+increasingly integral to scholarly communication, we identified the need to acquire proficiency in
+building and managing a website to showcase the research endeavors and create a platform for
+knowledge collection and dissemination. WordPress, renowned for its user-friendly interface and
+robust capabilities, emerged as the platform of choice. The decision to learn WordPress was not
+only driven by its widespread adoption but also by its flexibility in customization and its ability to
+cater to both novices and seasoned developers.
+The Minho-MEDAMS, with visual analogue items and shaped by the qualitative
+groundwork, was then applied to participants in the quantitative phase were the results not only
+provided valuable insights into the overall robustness of the adapted scale but also shed light on
+the specific contributions of each scale item to the measurement of motivation in the unique context
+of medical education at the EM-UM.
+This seamless progression from qualitative exploration to the development and quantitative
+assessment of the adapted scale underscores the rigor and comprehensiveness of our study
+design, ensuring that the resulting instrument is finely tuned to capture the intricacies of motivation
+within the targeted academic setting.
+Quantitative Phase
+In this phase we assessed the psychometric properties and performance of the Minho-
+MEDAMS, adhering to criteria for scale construction (42). The effectiveness of the quantitative
+measurement instrument in the new context was evaluated through several methods.
+Participants
+To assess the validity of the scale, we included all medical students from the first to the
+sixth year of medical school at the EM-UM. The sample size was calculated using a ratio of 10:1
+8
+
+(10 respondents for each scale item), with a minimum of 280 respondents for a total of 28 items
+(42). The final sample size for the scale validation was 281 respondents.
+Analysis
+To test the normality assumption, we used the following rules-of-thumb: absolute skewness
+(Sk) and kurtosis (K) values lower than 3.0 and 8.0, respectively, indicate normal distribution. Items
+with Sk and K over the limit were eliminated. In order to assess the validity and reliability of the
+Medical Students Motivation Scale, Exploratory Factor Analysis (EFA), Confirmatory Factor Analysis
+(CFA) and internal reliability Cronbach’s alpha scores were performed (43).
+Internal consistency
+Internal consistency reflects the extent to which the scale items are intercorrelated, or
+whether they are consistent in measuring the same construct. In this work we used the coefficient
+alpha (Cronbach’s alpha) to estimate the internal consistency of the scale. Cronbach's alpha ranges
+from 0 to 1 with α- 0 indicating no internal consistency, and α- 1 reflecting perfect internal
+consistency. Cronbach's alpha of at least 0.70 was considered to indicate adequate internal
+consistency.
+Factor Analysis
+To assess the construct validity of the Medical Students Motivation Scale, an EFA was
+performed. To test the suitability of the scale for the factor analysis, we used: 1) Kaiser-Meyer-Olkin
+(KMO), which measures sampling adequacy, ranging from 0 to 1, in which higher values mean
+higher suitability and a value of 0.6 is a suggested minimum and 2) Bartlett’s test of Sphericity,
+which tests the hypothesis that the correlation matrix is an identity matrix, which would indicate
+that the variables are unrelated and therefore unsuitable for structure detection. Taken together,
+these tests provide a minimum standard which should be passed before a factor analysis is
+conducted. After the suitability tests, we used the Maximum Likelihood analysis as the extraction
+method. On a second moment, a CFA was performed on the remaining variables, to test how well
+the measured variables represent the number of constructs.
+CFA tests a hypothesized structure with model fit statistics and parameter estimates (44).
+Model fit indices need to be judged against recommended thresholds. In this analysis we used the
+Comparative Index of Fitness (CFI) with values greater than 0.90 being considered to be a good fit.
+9
+
+Finally, the root mean square error of approximation (RMSEA) was examined. Values below 0.06
+indicate a good fit, and values that are above 0.08 indicate reasonable approximation errors.
+10
+
+Results
+Qualitative Phase
+Step 1: Is the Motivation Concept relevant and understood in a new context?
+For Step 1, the author used a previously determined coding system, obeying to seven
+parameters related to the SDT and the AMS motivation’ organization: IM - to know; IM – to
+accomplish; IM - to stimulate; EMID; EMIR; EMER; AMOT. It was applied to the interviews with 13
+participants, comprising 5 medical students, 2 alumni, and 6 faculty members.
+The participants gave several perspectives regarding motivation in medical students, which
+allowed the creation of a concept map regarding the topic. All participants perceived that motivation
+is a major player for medical students’ success, giving different justifications for this perception.
+“Motivation allows you to overcome those most difficult moments” and it is also “the
+stimulus that makes people have the willing, and the volition to do and achieve their goals.”
+On the other hand, some participants talked about how an amotivated student can be
+problematic, saying “I think that the student who is not motivated is not going to be the student
+that the society needs.”
+Regarding IM, the participants where asked what factors might play a key role in
+intrinsically motivating medical students and these factors appeared in several ways. Some referred
+to the feeling of accomplishment that is in fact present for medical students.
+“The social factor, the community factor of wanting to help, of wanting to evolve into
+society, of wanting to help people” and that drive to “always want to be better and always want to
+know a lot, which is also a direct or almost direct link between the more they study and the more
+they know, the better they will be able to help from a cognitive and technical point of view”.
+Other intrinsic dimensions were also noticed, such as the need of control of the situation
+“The person feels that they have a role in that process, that they have some control over what is
+asked of them” which may contribute to the notion that they are “building a path you're proud of.”
+Looking into IM to know, participants also talked about the excitement of learning and
+surpassing their own obstacles and difficulties. They count this as an important part of feeling
+intrinsically motivated because it gives them the drive to continuously pursuing better results –
+“I’m learning something new and I’m starting to make new connections – it’s starting to get
+11
+
+interesting which is very stimulating.” They also highlighted that “studying medicine is challenging
+but there is great satisfaction in learning things I’d never learned before.”
+When asking about EM, the answers of the participants were more fluid – “It is easier to
+think about what I want to obtain in return of my effort, than to think about what might drive me to
+start the effort from the beginning.”
+Regarding EM for identification, in which an external stimulus is perceived by the self as
+an individual choice or even when the external stimuli is the self, this specific type of motivation is
+one of the most frequently referred during the interviews – “I believe that being a doctor is a noble
+profession and I want that for myself.” On the other hand, some said that while studying medicine,
+they seem to have difficulty stopping review the content for exams because they do not want to fail
+themselves and would be embarrassed if they failed.
+When accounting for the society effect, some behaviors are indeed driven by external
+stimuli that the student interiorizes as a socially accepted behavior. Some of the participants said,
+“a lot of medical students chose to study medicine because when they finish high school, they
+have good grades, and everyone expects them to choose medicine.” While others added that “a
+good medical student will always study because that what they’re supposed to do.”
+Reaching the last dimension of EM, the true external regulation, many participants focused
+on external stimuli that directly affect medical students’ motivation. One of the biggest factors was,
+undoubtedly the assessments they are put through. External validation in form of a grade is
+perceived as being both a positive and negative stimulus for studying medicine. One participant
+referred that “most medical students are highly driven and competitive people, they compare
+themselves by their grades, but the system makes them that way.” The system referring to the
+several selections they go through in which they are selected by grade, mostly overlooking the
+remaining curricula. Other external stimuli are high salaries, social prestige, the possibility of having
+access to “good quality of life”.
+Finally, AMOT was regarded by most as a major problem when seen amongst medical
+students and perceived as being related to mental health issues such as depression, generalized
+anxiety and burn-out.
+Step 2: Are the motivation scale and its items understood?
+In Step 2, we tested whether the items of the newly adapted scale were understood in the
+new context: medical education. Based on the results of Step 1, we developed adapted items to
+12
+
+measure motivation in medical students. In this step, the participants were given the opportunity
+to read the full adapted scale and were asked to explain in their own words the purpose of the
+scale. Most participants referred that the scale’s purpose is to assess motivation in medical
+students while adjusting for specific stimuli that particularly apply to medical students. Some
+participants had some difficulties regarding the main question of the scale: “Why do I go to medical
+school?”. When asked why, most participants said that it seems more adjusted to specify “Why do
+I study medicine?” to be focused on the activity throughout the medical degree, while the first
+question seemed more appropriate for students starting medical school.
+When responding to the items by thinking aloud, participants perceived that the questions
+were specific for medical students and focused on specific stimuli that refer to different dimension
+of motivation. Initially items were written in the third person such as “Because they feel pleasure
+and satisfaction when learning new content about Medicine” but participants raised concerns if
+medical students would truly relate to the question, making the items more easily understood if
+they were written in the first person. Adjustments were made throughout the scale’s items to
+rephrase the items.
+Overall, the scales items were well understood and did not raise other significant concerns.
+Items in the negative form, which were specifically related to the AMOT dimension, were considered
+harder to understand for being generalist and abstract, such as “I don’t want to study Medicine”.
+Slight changes were made, and the final items are shown below:
+- I honestly don't know; I feel like I'm wasting my time studying medicine;
+- I once had good reasons to study medicine, but now I have doubts about continuing;
+- I don't understand why I study medicine and, honestly, I don't worry at all;
+- I don't know, I can't understand why I'm studying Medicine.
+The adapted questionnaire was tested and understood by the participants. By changing
+the initial question and rephrasing the items, we adapted the scale minimally but still precisely for
+the new cultural context. As a result of this qualitative step, wording and examples in the
+introduction were adapted, and the scale was cleared for pretesting in a quantitative study.
+Website development and result
+For the website development, we used the Wordpress interface and were able to develop
+a website with 3 pages: the main page with key information regarding the study, one page with
+more detailed information about motivation and the study and a third page with the interactive
+13
+
+scale with visual analogue items, where the participants could see the selected value for each scale
+item. The website is presented in detail in Appendix 2.
+After initial release on November 6th, the website had several visualizations (n=1283) and
+visitors (n=595). The author collected data until December 31st, comprising 8 weeks of data
+collection. More specific results are presented on Figure 2.
+Website affluence
+500 471
+417
+400
+n 300
+186 197
+200
+158
+137
+100 73 78 71
+46
+7 6 17 9 3 2
+0
+Week 1 Week 2 Week 3 Week 4 Week 5 Week 6 Week 7 Week 8
+Visualizations Visitors
+Figure 2 – Website affluence during weeks of data collection.
+Between week 3 and week 6, the author went to several seminars where several medical
+students were having class, in order to present the website and the scale, which justifies the higher
+visualizations and visitors’ numbers on those weeks. This was also highly associated with the
+number of responses to the scale.
+Quantitative Phase
+Is the scale valid and reliable in the new context?
+The first version of the Minho-MEDAMS’s, was composed by 28 items, scored with a VAS
+ranging from 1 to 10 (Table 1 for the English version and Appendix 3 for the Portuguese version).
+Higher scores indicate higher grade of correspondence of why the medical student studies
+medicine.
+14
+
+Table 1 – Minho Medical Academic Motivation Scale – English Version.
+Item Question
+Using the presented scale, rate the degree to which the following items correspond to the reasons why
+Intro
+you study Medicine.
+P1 Because I want to choose a specialty that allows me to have a better salary
+P2 Because I feel pleasure and satisfaction when learning new content about Medicine
+P3 To be better prepared for my career as a doctor.
+P4 Because I really like studying medicine
+P5 I honestly don't know; I feel like I'm wasting my time studying medicine
+P6 For the pleasure I feel in surpassing myself in the field of Medicine
+P7 To prove to myself that I'm capable of finishing medical school
+P8 To be able to choose a specialty that I consider more prestigious
+P9 For the pleasure I feel when I discover new things about Medicine that I had never learned before
+P10 Because eventually it will allow me to go into a specialty that I like
+P11 For the pleasure of sharing my knowledge and ideas on the topics with others
+P12 I once had good reasons to study medicine, but now I have doubts about continuing
+P13 For the pleasure I feel while I am achieving my personal goal of studying Medicine
+P14 Because if I'm a successful doctor, I'm going to feel important
+P15 Because I want to have a "good quality of life" later on
+P16 For the pleasure I feel in increasing my knowledge of Medicine
+P17 Because studying medicine is useful for my future
+For the pleasure I feel when I am completely absorbed by what the leading researchers in Medicine have
+P18
+written.
+P19 I don't understand why I study medicine and, honestly, I don't worry at all
+For the satisfaction I feel when I am in the process of overcoming difficult academic activities related to
+P20
+Medicine
+P21 To show myself that I'm an intelligent person
+P22 To increase the probability of choosing my first choice for the specialty
+P23 Because studying Medicine allows me to continue learning about an area that interests me
+P24 Because I feel it will make a difference in my health care delivery
+P25 For the enthusiasm I feel when I read interesting studies on Medicine
+P26 I don't know, I can't understand why I'm studying Medicine
+P27 Because studying Medicine makes me feel personal satisfaction in my pursuit of excellence in my studies.
+P28 Because I want to show myself that I can be a successful doctor
+The scale was tested on 281 students, with average age of 20,7 years-old, the majority
+being of the 1st year (n=99; 35,3%) and of the female gender (n=224, 79,7%) (Table 3). This
+distribution is in line with the general gender distribution of the students in EM-UM as is the average
+age. There were a total 281 answers and no missing values because every item was of mandatory
+response to be able to submit their answer.
+15
+
+Table 2 - Descriptive statistics regarding the medical students that answered the Medical Students Motivation Scale.
+n %
+Gender
+Female 224 79,7%
+Male 55 19,6%
+Other 2 0,7%
+Year
+1st year 99 35,2%
+2nd year 36 12,8%
+3rd year 37 13,2%
+4th year 48 17,1%
+5th year 32 11,4%
+6th year 29 10,3%
+Total 281 100,0%
+As the first step of the scale’s analysis, we tested the scale’s items for its normality
+assumption, using absolute skewness (Sk) and kurtosis (K) values. One item with absolute
+skewness scores above 3 and kurtosis higher than 8 showed a deviation from the normal
+distribution; for that reason, item P19 was excluded from the scale.
+In line with the literature, in this study EFA and CFA were simultaneously performed, in
+order to guarantee that all items of the new scale were grouped adequately by double-check
+analysis. If the EFA results indicate that each item is appropriately grouped and is corroborated by
+CFA results, showing a fit model, then it is safe to conclude that the items in the cluster can
+precisely measure the intended construct.
+The factor analysis was firstly assessed by an EFA on a 140 random sample of the results
+with Maximum Likelihood as the extraction method (Table 4). Test suitability was ensured by the
+KMO Measure (KMO=0,862) and the Bartlett’s Test of Sphericity (χ 2 (281) = 2161,015; df =
+351,0; p<0.001). Five factors were extracted, which are further detailed on Table 4 that presents
+the exploratory factor matrix regarding the 27 adapted items of the Minho-MEDAMS and their
+respective factor load, showing how variables are distributed into these five EFA ensuing factors.
+In this analysis, items P4 and P25 were not included in any factor, and after careful analysis, the
+authors decided by excluding both items from the final scale. Considering the original scale – the
+AMS – and the SDT already explained previously in this work, the authors classified the five factors
+as: IM, EMIR, EMID, AMOT and EMER.
+16
+
+Table 3 – Exploratory Factor Analysis
+Factor
+Construct Item
+1 2 3 4 5
+P2 0,435
+P6 0,521
+P9 0,623
+Intrinsic motivation P11 1,010
+P13 0,574
+P16 1,042
+P23 0,738
+P7 0,816
+P18 0,431
+Extrinsic motivation P20 0,475
+- Introjection P21 0,764
+P27 0,553
+P28 0,581
+P3 0,460
+P10 0,755
+Extrinsic motivation
+P17 0,446
+- Identification
+P22 0,810
+P24 0,606
+P5 0,855
+Amotivation P12 0,701
+P26 0,988
+P1 0,525
+Extrinsic motivation
+P8 0,405
+- External
+P14 0,500
+Regulation
+P15 0,874
+To confirm the EFA, we performed a CFA on a 141 random sample of the results and on
+a first model compiling five latent variables, as suggested by the EFA, revealing inadequate
+goodness of fit. The next step for the authors was to assess the R-squared value of each individual
+item. The R-squared of items refers to the proportion of variance in each observed item that is
+explained by its underlying latent construct or factor, measuring how well the latent factor accounts
+for the variability observed in each item. A higher R-squared value indicates that the latent factor
+explains a larger portion of the variance in the observed item, suggesting a stronger relationship
+between the item and the underlying construct, being interpreted as evidence of good construct
+validity, indicating that the item is a reliable and valid indicator of the intended construct. The post-
+hoc analysis of the model revealed low R-squared values for items P1, P10, P13, P18, P20, P22
+and P27. When looking closely to these items, the authors concluded they were distributed between
+the different factors, so, if removed, the authors considered there weren’t significant changes to
+the overall construct. For these reasons, those items were excluded from the final scale.
+17
+
+As such, the final model has good statistical results (χ2=199,249, p=<0.001, df=125,
+χ2/df=1,594, RMSEA=0.065, SRMR=0.079, GFI = 0.869, and CFI = 0.935). Also, the
+relationship between the dimensions of IM and AMOT showed a negatively correlation and, in the
+same way, the sub-dimensions of EMID and AMOT showed a negative relationship between them.
+The sub-dimensions of EMIR and EMER did not show a negative correlation with AMOT, but the
+strength of the correlation was low. There was positive relationship between the dimension of IM
+and the sub-dimensions of EM, with special remark to the EMID sub-dimension showing a very
+strong relationship with IM.
+Figure 3 – Confirmatory Factor Analysis – Minho-MEDAMS final measurement model.
+The evaluation of the internal consistency of the final version of the Minho-MEDAMS with
+18-items was finally assessed by the Cronbach’s Alpha revealing a value of 0,831, clearly higher
+than 0,70 which is considered the cut-off for good consistency. Considering that the 5-factor
+structural model that was adopted, the internal consistency of the factors was as follows: IM (α =
+0.876); EMIR (α = 0.774); EMID (α = 0.721); AMOT (α = 0.774), EMER (α = 0.880).
+18
+
+Discussion
+In this work we focused on the assessment of motivation levels in medical students in the
+Portuguese context. To do this, we followed a conceptual structure focused on the SDT and the
+theory of self-efficacy, both pivotal in the study of motivation, shedding light on how individuals
+modulate their motivational states and how these states translate into outcomes. One of the most
+important scales in this area that follows the SDT is the AMS. As previously showed, the AMS is a
+widely used scale to measure motivation in the academic setting and has been validated in various
+languages and different settings. However, we believe that the medical context deserves an
+adjusted perspective to fully understand what drives medical students’ motivation. For this reason,
+in this Thesis we adapted the AMS to the medical students’ context and submitted the new Minho-
+MEDAMS to a structured and rigorous validation.
+The process of adaptation and validation was performed in two different phases, starting
+with a qualitative analysis of motivation in the context of a Portuguese medical school, including
+not only medical students but also faculty and alumni, and moving on to a quantitative analysis
+focused on the validation of a new adapted motivation scale for medical students – Minho-
+MEDAMS. On the first phase we understood that motivation for medical students follows the
+purposes of the SDT and we identified several aspects that should be reinforced on a motivation
+scale for this population, such as the community’s acceptance, the choice of specialty and the
+notion of acquiring a good quality of life. Through several interviews, we were able to formulate
+items that respected the dimensions of motivation identified in the original scale but were tailored
+for medical students. The items were then submitted to syntax and comprehensive analysis by
+medical students, faculty and alumni to ensure they were clear and easily understood. Through
+this process, a first sample of the Minho-MEDAMS was created.
+The scale was then made public by the use of a website specifically created for the
+purpose: motivationmeded.com. Importantly, the website serves as an efficient hub to collect data,
+but also as a dynamic hub for disseminating our findings, engaging with a wider audience, and
+fostering collaborations within the academic community.
+After the results were collected through the website, the authors did a complete analysis
+to assess the validity and reliability of the Minho-MEDAMS. On the first step, one item (P19) was
+removed from the scale, to ensure a normal distribution of scores, using kurtosis and skewness
+cutoff values. We then proceeded to the Factor Analysis using the EFA and CFA. The EFA results
+19
+
+were satisfactory, with a KMO value of 0.862, and the extraction of 5 factors and the exclusion of
+P4 and P25. On the CFA, we analyzed two descriptive indices: the CFI and the RMSEA. On the first
+model assessed, the CFA revealed inadequate goodness of fit. In order to improve the model and
+create a more efficient scale, the authors identified the items with lower R-squared values: P1, P10,
+P13, P18, P20, P22 and P27; these items were distributed along the different identified factors
+but also the different conceptual subtypes defined at the beginning of the process: IM, EMID and
+EMER. At this point, the Minho-MEDAMS’s final version consisted of 18 items, 6 items for IM, 9
+items for EM (3 items for EMID, 3 items for EMIR and 3 items for EMER) and 3 items for AMOT.
+On note, the authors carefully analyzed the reduction of the scale’s items, with concern of
+maintaining the theoretical structure of the SDT while addressing the redundancy of some of the
+items within each dimension of the scale. We believe that the final version of the Minho-MEDAMS
+follows the principles of the SDT with significant representation of each dimension of motivation
+and the spectrum itself. This way, the structural theory that was used as the conceptual framework
+of this work was respected and applies to the Minho-MEDAMS. Regarding internal consistency,
+measured by Cronbach’s alpha, Minho-MEDAMS reveals high consistency for all five dimensions
+and excellent results if considered the total items of the scale which reflects that Minho-MEDAMS
+is an appropriate instrument to be used to measure motivation amongst medical students.
+As previously elucidated, the Minho-MEDAMS was conceived through the lens of SDT and
+serves as an adaptation of the AMS (18). To develop this scale in Portuguese, the authors drew
+upon two existing Portuguese scales that had already translated and validated the AMS into this
+language (28,29). One of these scales, the MATAMS, focused solely on mathematics and extracted
+seven factors, aligning closely with the dimensions of motivation in the AMS (29). Conversely, the
+scale by Ribeiro et al. that directly translated the AMS to the Portuguese language, was validated
+with only 5 factors that corresponded to the following dimensions of motivation: IM, AMOT, EMIR,
+EMER and EM – Integrated Regulation (28). This is an interesting finding that goes in line with the
+results of this work, where only 5 factors were extracted with the difference lying in the exclusion
+of the EMID dimension and inclusion of the EM subdimension of Integrated Regulation in the work
+of Ribeiro et al., whereas the Minho-MEDAMS included the EMID and excluded Integrated
+Regulation. These two dimensions lie closely on the SDT spectrum and that might be a sufficient
+explanation of why these two subdimensions might even be presented as one given their proximity
+in the spectrum (45). Another interesting topic of the Minho-MEDAMS is the lack of differentiation
+between the IM subdimensions. This follows the SDT that addresses IM as a whole and does not
+20
+
+describe the subdimensions proposed on the AMS (4,18). For this reason, we believe that the
+Minho-MEDAMS respects the SDT continuum and is a conceptually valid choice to remain only with
+the broader dimension of IM.
+With these results, we propose that the implementation of the Minho-MEDAMS will help
+medical educators get a better insight into the motivations of medical students, thereby
+empowering medical schools to tailor interventions and adapt strategies to bolster motivation levels
+while addressing the individualized needs of each student. In the end, motivation could contribute
+to elucidate the discrepancies in academic performance among students who undergo similar
+instruction. Understanding the diverse motivational orientations of students might be able to equip
+faculty and medical schools with the insights needed to implement more targeted and precise
+interventions aimed at fostering academic success across student populations.
+There are some limitations that should be considered when interpreting these results: i)
+the design of the study did not allow convergent and divergent validation mechanisms, which could
+be important to establish construct validity; ii) the number of participants, despite being adequate
+for validation, could still be improved in order to strengthen the results of this work; iii) students
+were recruited from a single Medical School; and iv) students from the 1st year of medical school
+had a slightly bigger representation in this study which may have influenced some of the results.
+Looking ahead, the application of the Minho-MEDAMS can another step closer to obtain
+valuable insights into the evolving landscape of medical student motivation, enabling educators
+and institutions to tailor interventions that align to the specific needs and aspirations of their
+learners. Moreover, the longitudinal use of the scale can facilitate tracking and understanding of
+motivational shifts throughout the medical education journey, thereby informing curriculum
+development and support services to optimize student engagement and success. In the future, the
+scale might be adaptable to other contexts within medicine but outside the academia, with potential
+applications in residency training and continuing medical education.
+21
+
+Conclusion
+In summary, the development and validation of the Minho-MEDAMS marks a new
+development in the area of medical education and motivation assessment, in the Portuguese
+context. By effectively capturing five essential dimensions of motivation with good psychometric
+properties, this scale presents itself as a valuable tool for examining and comprehending the
+motivational dynamics among medical students. The comprehensive validation process
+underscores the reliability and validity of the Minho-MEDAMS, confirming its suitability for use
+within the Portuguese context. Consequently, medical schools and faculty can employ this scale to
+evaluate and address the motivational needs of medical students, thereby fostering a supportive
+learning environment conducive to academic success and professional growth.
+22
+
+References
+1. Pelaccia, T., & Viau, R. (2017). Motivation in medical education. Medical Teacher, 39(2),
+136–140. https://doi.org/10.1080/0142159X.2016.1248924
+2. Ryan, R. M., Kuhl, J., & Deci, E. L. (1997). Nature and autonomy: An organizational view
+of social and neurobiological aspects of self-regulation in behavior and development.
+Development and Psychopathology, 9(4), 701–728.
+https://doi.org/10.1017/S0954579497001405
+3. Morris, L. S., Grehl, M. M., Rutter, S. B., Mehta, M., & Westwater, M. L. (2022). On what
+motivates us: A detailed review of intrinsic v. extrinsic motivation. Psychological Medicine,
+52(10), 1801–1816. https://doi.org/10.1017/S0033291722001611
+4. Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic
+motivation, social development, and well-being. American Psychologist, 55(1), 68–78.
+https://doi.org/10.1037/0003-066X.55.1.68
+5. Gallagher, S. (2012). Multiple aspects in the sense of agency. New Ideas in Psychology,
+30, 15–31.
+6. Schunk, D. H., & DiBenedetto, M. K. (2021). Self-efficacy and human motivation. In A. J.
+Elliot (Ed.), Advances in motivation science (pp. 153–179). Elsevier Academic Press.
+https://doi.org/10.1016/bs.adms.2020.10.001
+7. Kusurkar, R. A., Ten Cate, T. J., Vos, C. M., Westers, P., & Croiset, G. (2013). How
+motivation affects academic performance: A structural equation modelling analysis.
+Advances in Health Sciences Education, 18(1), 57–69. https://doi.org/10.1007/s10459-
+012-9354-3
+8. Kusurkar, R. A., Croiset, G., Mann, K. V., Custers, E., & Ten Cate, O. (2012). Have
+motivation theories guided the development and reform of medical education curricula? A
+review of the literature. Academic Medicine, 87(6), 735–743.
+https://doi.org/10.1097/ACM.0b013e318253cc0e
+9. Wu, H., Li, S., Zheng, J., & Guo, J. (2020). Medical students' motivation and academic
+performance: The mediating roles of self-efficacy and learning engagement. Medical
+Education Online, 25(1), 1742964. https://doi.org/10.1080/10872981.2020.1742964
+10. Assing Hvidt, E., Søndergaard, J., Wehberg, S., Hvidt, N. C., & Andersen, C. M. (2022). A
+cross-sectional study of student empathy across four medical schools in Denmark -
+Associations between empathy level and age, sex, specialty preferences and motivation.
+BMC Medical Education, 22(1), 489. https://doi.org/10.1186/s12909-022-03532-2
+11. Muntean, L. M., Nireștean, A., Sima-Comaniciu, A., Mărușteri, M., Zăgan, C. A., & Lukacs,
+E. (2022). The relationship between personality, motivation and academic performance at
+medical students from Romania. International Journal of Environmental Research and
+Public Health, 19(15), 8993. https://doi.org/10.3390/ijerph19158993
+12. Findyartini, A., Felaza, E., Setyorini, D., & Mustika, R. (2020). Relationship between
+empathy and motivation in undergraduate medical students. GMS Journal of Medical
+Education, 37(4), Doc43. https://doi.org/10.3205/zma001336
+13. Oláh, B., Münnich, Á., & Kósa, K. (2023). Identifying academic motivation profiles and
+their association with mental health in medical school. Medical Education Online, 28(1),
+2242597. https://doi.org/10.1080/10872981.2023.2242597
+14. Atalay, K. D., Can, G. F., Erdem, S. R., & Muderrisoglu, I. H. (2016). Assessment of mental
+workload and academic motivation in medical students. Journal of the Pakistan Medical
+Association, 66(5), 574–578.
+23
+
+15. Kunanitthaworn, N., Wongpakaran, T., & Wongpakaran, N., et al. (2018). Factors
+associated with motivation in medical education: A path analysis. BMC Medical Education,
+18, 140. https://doi.org/10.1186/s12909-018-1256-5
+16. Viau, R. (2009). La motivation en contexte scolaire (5th ed.). Pratiques Pédagogiques.
+ISBN-13: 9782804111489
+17. Eccles, J. S., Wigfield, A., & Schiefele, U. (1998). Motivation to succeed. In W. Damon &
+N. Eisenberg (Eds.), Handbook of child psychology: Social, emotional, and personality
+development (5th ed., pp. 1017–1095). John Wiley & Sons, Inc.
+18. Vallerand, R. J., Pelletier, L. G., Blais, M. R., Brière, N. M., Senécal, C. B., & Vallières, É.
+F. (1992). Academic Motivation Scale (AMS, AMS-C 28, EME). APA PsycTests.
+https://doi.org/10.1037/t25718-000
+19. Al Ansari, A. M., Kumar, A. P., AlSaleh, A. F. F., Arekat, M. R. K., & Deifalla, A. (2021).
+Validation of academic motivation scale among medical students using factor analysis and
+structural equation modeling: Middle Eastern perspective. Journal of Education and Health
+Promotion, 10, 364. https://doi.org/10.4103/jehp.jehp_1553_20
+20. Cadête Filho, A. de A., Peixoto, J. M., & Moura, E. P. (2021). Medical students’ academic
+motivation: An analysis from the perspective of the Theory of Self-Determination. Revista
+Brasileira de Educação Médica, 45(2), e086. https://doi.org/10.1590/1981-5271v45.2-
+20200129.ING
+21. Sobral, D. T. (2004). What kind of motivation drives medical students' learning quests?
+Medical Education, 38(9), 950–957. https://doi.org/10.1111/j.1365-
+2929.2004.01913.x
+22. Ambuehl, B., & Inauen, J. (2022). Contextualized Measurement Scale Adaptation: A 4-
+Step Tutorial for Health Psychology Research. International Journal of Environmental
+Research and Public Health, 19(19), 12775. https://doi.org/10.3390/ijerph191912775
+23. Convenção para a Proteção dos Direitos do Homem e da Dignidade do Ser Humano Face
+às Aplicações da Biologia e da Medicina: Convenção sobre os Direitos do Homem e da
+Biomedicina (Conselho da Europa, 1997). Resolução da Assembleia da República n.º
+1/2001, Diário da República – I Série A, nº 2, 3 de Janeiro de 2001. Disponível em:
+http://dre.pt/util/getpdf.asp?s=dip&serie=1&iddr=2001.2A&iddip=20010014
+24. Council for International Organizations of Medical Sciences. (1993). International Ethical
+Guidelines for Biomedical Research Involving Human Subjects. Geneva, Switzerland:
+CIOMS.
+25. Belgrave, L. L., & Seide, K. (2019). Grounded theory methodology: Principles and
+practices. In Handbook of Research Methods in Health Social Sciences (pp. 299–316).
+Springer.
+26. Jorgensen, B. S., & Stedman, R. C. (2001). Sense of place as an attitude: Lakeshore
+owners attitudes toward their properties. Journal of Environmental Psychology, 21, 233–
+248.
+27. Charters, E. (2003). The use of think-aloud methods in qualitative research: An
+introduction to think-aloud methods. Brock Education Journal, 12, 68–82.
+28. Ribeiro, M. F., Saraiva, V., Pereira, P., & Ribeiro, C. (2019). Escala de Motivação
+Académica: Validação no Ensino Superior Público Português. Revista de Administração
+Contemporânea. https://doi.org/10.1590/1982-7849rac2019180190
+29. Sousa, S. P., & Silva, R. (2021). Validity and Reliability of the Portuguese Version of
+Mathematics Academic Motivation Scale (MATAMS) among Third Cycle of Basic School
+Students. Mathematics, 9(17), 2049. https://doi.org/10.3390/math9172049
+24
+
+30. Vallerand, R., Pelletier, L., Blais, M., Brière, N., Senécal, C., & Vallières, E. (1993). On the
+Assessment of Intrinsic, Extrinsic, and Amotivation in Education: Evidence on the
+Concurrent and Construct Validity of the Academic Motivation Scale. Educational and
+Psychological Measurement - EDUC PSYCHOL MEAS, 53, 159-172.
+https://doi.org/10.1177/0013164493053001018
+31. Stover, J. B., de la Iglesia, G., Boubeta, A. R., & Liporace, M. F. (2012). Academic
+Motivation Scale: Adaptation and psychometric analyses for high school and college
+students. Psychology Research and Behavior Management, 5, 71.
+32. Fairchild, A. J., Horst, S. J., Finney, S. J., & Barron, K. E. (2005). Evaluating existing and
+new validity evidence for the Academic Motivation Scale. Contemporary Educational
+Psychology, 30, 331–358.
+33. Can, G. (2015). Turkish version of the academic motivation scale. Psychological Reports,
+116, 388–408.
+34. Utvær, B. K. S., & Haugan, G. (2016). The Academic Motivation Scale: Dimensionality,
+Reliability, and Construct Validity Among Vocational Students. Nordic Journal of Vocational
+Education and Training. https://doi.org/10.3384/njvet.2242-458X.166217
+35. Guay, F., Vallerand, R. J., & Blanchard, C. (2000). On the Assessment of Situational
+Intrinsic and Extrinsic Motivation: The Situational Motivation Scale (SIMS). Motivation and
+Emotion, 24(3), 175–213. https://doi.org/10.1023/A:1005614228250
+36. Ayub, N. (2010). Effect of Intrinsic and Extrinsic Motivation on Academic Performance.
+Pakistan Business Review, 12, 363-372.
+37. Alivernini, F., & Lucidi, F. (2011). Relationship between social context, self-efficacy,
+motivation, academic achievement, and intention to drop out of high school: A longitudinal
+study. Journal of Educational Research, 104, 241–252.
+38. Barkoukis, V., Tsorbatzoudis, H., Grouios, G., & Sideridis, G. (2008). The assessment of
+intrinsic and extrinsic motivation and amotivation: Validity and reliability of the Greek
+version of the Academic Motivation Scale. Assessment in Education: Principles, Policy &
+Practice, 15(1), 39–55.
+39. Hayes, J. E., Allen, A. L., & Bennett, S. M. (2013). Direct comparison of the generalized
+visual analog scale (gVAS) and general labeled magnitude scale (gLMS). Food Quality and
+Preference, 28, 36–44. https://doi.org/10.1016/j.foodqual.2012.07.012
+40. Aguinis, H., Pierce, C. A., & Culpepper, S. A. (2009). Scale coarseness as a methodological
+artifact: Correcting correlation coefficients attenuated from using coarse scales.
+Organizational Research Methods, 12(4), 623–652.
+https://doi.org/10.1177/1094428108318065
+41. Kuhlmann, T., Dantlgraber, M., & Reips, U. D. (2017). Investigating measurement
+equivalence of visual analogue scales and Likert-type scales in Internet-based personality
+questionnaires. Behavior Research Methods, 49(6), 2173–2181.
+https://doi.org/10.3758/s13428-016-0850-x
+42. Anthoine, E., Moret, L., Regnault, A., Sbille, V., & Hardouin, J. B. (2014). Sample size used
+to validate a scale: a review of publications on newly-developed patient reported outcomes
+measures. Health and Quality of Life Outcomes, 12, 176.
+43. Nunnally, J. C., & Bernstein, I. H. (1994). Psychometric theory (3rd ed.). New York:
+McGraw-Hill.
+44. Raykov, T., & Marcoulides, G. A. (2006). Estimation of generalizability coefficients via a
+structural equation modeling approach to scale reliability evaluation. International Journal
+of Testing, 6(1), 81–95.
+25
+
+45. Smith, K. J., Davy, J. A., & Rosenberg, D. L. (2012). An empirical analysis of an alternative
+configuration of the Academic Motivation Scale. Assessment in Education: Principles,
+Policy & Practice, 19(2), 231–250.
+26
+
+Appendix
+Appendix 1 – Ethics Committee Approval
+27
+
+Appendix 2 – Website
+28
+
+29
+
+Appendix 3 – Minho-MEDAMS Portuguese Version
+Item Questão
+Utilizando a escala apresentada, classifique o grau com que os seguintes itens correspondem às razões
+Intro
+pelas quais estuda.
+P1 Porque quero escolher uma especialidade que me permita ter um melhor salário
+P2 Porque sinto prazer e satisfação ao aprender conteúdos novos sobre Medicina
+P3 Para estar mais bem preparado para a minha carreira enquanto médico.
+P4 Pelo prazer de partilhar os meus conhecimentos e ideias sobre os temas com outras pessoas
+P5 Sinceramente, eu não sei; eu sinto que estou a perder o meu tempo a estudar Medicina
+P6 Pelo prazer que sinto ao superar-me na área da Medicina
+P7 Para provar a mim mesmo que sou capaz de terminar o curso de Medicina
+P8 Para poder escolher uma especialidade que considero mais prestigiada
+P9 Pelo prazer que sinto quando descubro coisas novas sobre Medicina que nunca tinha aprendido antes
+P10 Porque, eventualmente, irá permitir que eu entre para uma especialidade que eu gosto
+P11 Porque gosto realmente de estudar Medicina
+P12 Eu já tive boas razões para estudar Medicina, mas, agora, tenho dúvidas sobre continuar
+P13 Pelo prazer que sinto enquanto estou a alcançar a minha meta pessoal de estudar Medicina
+P14 Porque se eu for um médico bem-sucedido vou-me sentir importante
+P15 Porque quero ter “boa qualidade de vida” mais para a frente
+P16 Pelo prazer que sinto ao aumentar o meu conhecimento sobre Medicina
+P17 Porque estudar Medicina é útil para o meu futuro
+Pelo prazer que sinto quando estou completamente absorvido pelo que os principais investigadores em
+P18
+Medicina escreveram.
+P19 Eu não entendo porque é que estudo Medicina e, sinceramente, não me preocupo de todo
+Pela satisfação que sinto quando estou no processo de ultrapassar atividades académicas difíceis
+P20
+relacionadas com Medicina
+P21 Para mostrar a mim mesmo que sou uma pessoa inteligente
+P22 Para aumentar a probabilidade de escolher a minha primeira opção para a especialidade
+P23 Porque estudar Medicina permite-me continuar a aprender sobre uma área que me interessa
+P24 Porque sinto que irá fazer diferença na minha prestação de cuidados de saúde
+P25 Pelo entusiasmo que sinto quando leio estudos interessantes sobre Medicina
+P26 Eu não sei, não consigo perceber porque é que estou a estudar Medicina
+Porque estudar Medicina faz-me sentir satisfação pessoal na minha busca pela excelência nos meus
+P27
+estudos.
+P28 Porque quero mostrar a mim mesmo que posso ser um médico bem-sucedido
+30

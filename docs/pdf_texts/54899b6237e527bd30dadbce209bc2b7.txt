@@ -1,0 +1,2590 @@
+Universidade do Minho
+Escola de Medicina
+Beatriz Velosa da Fonseca
+Engineering Human Malaria Parasites for
+High-Throughput Multistage Drug
+Screening
+abril de 2024
+rof
+setisaraP
+airalaM
+namuH
+gnireenignE
+acesnoF
+ad
+asoleV
+zirtaeB
+4202
+|
+ohniMU
+gnineercS
+gurD
+egatsitluM
+tuphguorhT-hgiH
+
+Universidade do Minho
+Escola de Medicina
+Beatriz Velosa da Fonseca
+Engineering Human Malaria Parasites for
+High-Throughput Multistage Drug
+Screening
+Dissertação de Mestrado
+Ciência da Saúde
+Trabalho efetuado sob a orientação da
+Doutora Maria Isabel Mendes Veiga
+abril de 2024
+
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras
+e boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos
+conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não
+previstas no licenciamento indicado, deverá contactar o autor, através do RepositóriUM da
+Universidade do Minho.
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+ii
+
+ACKNOWLEDGMENT
+My major appreciation goes to my family, without their support this thesis was not possible to
+develop. To my beloved girlfriend Mariana Soares, to you, and only goes all my gratitude for the
+countless hours that you spent with me to give me the courage and strength to persevere on this
+demanding challenge, always giving me your lovely support. To my beautiful mother and father,
+without you all my victories would not be possible, thanks for always taking care of my academic
+future. However, I must emphasize that without the support and love from my mom, I would never
+have dreamed of being a young scientist and being able to be who I am. To my youngest sister
+whom I cherish with all my heart, I must mention all your support even when I was mentally
+unstable, you never stopped believing in me. Nonetheless, I would like to thank my friends Raquel
+Marques, Mariana Castro, Mariana Fernandes, Catarina Guimarães, and Ana Ribeiro, who did not
+let me give up on achieving my master's degree, for all the dialogue, and your support.
+My second major deep gratitude goes to the PEvoGen Team. Without them, I could not learn,
+deepen new knowledge, and upgrade my academic skills including oral presentations. To my
+Supervisor, Isabel Veiga, I thank all the support and guidance during my thesis academic year, and
+for being kind, comprehensive, and empathic towards myself and my health issues. Lastly, to
+Vitoria that was my eyes and cricket in the laboratory, always guiding me and my work towards a
+successful result.
+FINANCIAL SUPPORT
+The work presented was performed at the Life and Health Sciences Research Institute (ICVS),
+University of Minho. Financial support was provided by the projects NORTE-01-0145-FEDER-
+000039 and NORTE-01-0145-FEDER-085468, supported by National funds, through the
+Foundation for Science and Technology (FCT) - project project UIDB/50026/2020 (DOI
+10.54499/UIDB/50026/2020), UIDP/50026/2020 (DOI 10.54499/UIDP/50026/2020) and
+LA/P/0050/2020 (DOI 10.54499/LA/P/0050/2020).
+iii
+
+STATEMENT OF INTEGRITY
+I hereby declare having conducted this academic work with integrity. I confirm that I have not used
+plagiarism or any form of undue use of information or falsification of results along the process
+leading to its elaboration.
+I further declare that I have fully acknowledged the Code of Ethical Conduct of the University of
+Minho.
+iv
+
+OUTPUT
+Some of the research work was presented as poster exhibitions and presentations:
+Velosa da Fonseca, Beatriz; Freitas, Bruno; Baptista, Vitória; Osório, Nuno S.; Veiga, Maria
+Isabel. Corresponding author: Veiga, Maria Isabel. "Engineering Human Malaria Parasites for
+Highthroughput Gametocidal Drug Screening". Paper presented in XVI Jornadas Ibéricas de
+Genética e Biotecnologia, 2024.
+Freitas, Bruno; Velosa da Fonseca, Beatriz; Veiga, Maria Isabel. Corresponding author: Veiga,
+Maria Isabel. "Engineering Resistance: Using the CRISPR-Cas9 system to generate drug-resistant
+human malaria parasites". Paper presented in XVI Jornadas Ibéricas de Genética e Biotecnologia
+2024.
+Velosa da Fonseca, Beatriz; Baptista, Vitória; Pernaute-Lau, Leyre; Calçada, Carla; Osório, Nuno
+S.; Veiga, Maria Isabel. Corresponding author: Veiga, Maria Isabel. "Breaking Boundaries in
+Malaria Research: Design of a Genetic Tool for High-Throughput Gametocidal Drug Screening".
+Paper presented in SCI (Semana da Ciência e Inovação), 2024.
+Plasmid design and construction resulted in a scientific article as first author:
+Velosa da Fonseca, Beatriz; Baptista, Vitória; Pernaute-Lau, Leyre; Calçada, Carla; Osório, Nuno
+S.; Maria Isabel Mendes Veiga. Corresponding author: Maria Isabel Mendes Veiga. "Breaking
+Boundaries in Malaria Research: Design of a Genetic Tool for High-Throughput Gametocidal Drug
+Screening". Journal UMinho Science Vol.3 2024 (2024):
+https://revistas.uminho.pt/index.php/jus/article/view/5702.
+v
+
+RESUMO
+Contexto: A etiologia da malária envolve a infiltração de parasitas Plasmodium no corpo humano,
+tipicamente transmitida através da picada de mosquitos Anopheles fêmeas. Esta doença continua a ser um
+desafio significativo para a saúde global devido ao seu severo impacto e à transmissão eficiente entre
+humanos e mosquitos. Agravando o problema está o surgimento de resistência aos tratamentos de primeira
+linha atuais, como as terapias combinadas à base de artemisinina (ACTs), particularmente para casos não
+complicados de malária por P. falciparum. Abordar este desafio exige o desenvolvimento de fármacos
+inovadores e potentes. As abordagens terapêuticas futuras são concebidas para atacar não apenas o
+estágio sintomático, mas também o estágio de gametócitos que é menos metabolicamente ativo e muitas
+vezes negligenciado, crucial para interromper a transmissão de humano para mosquito. No entanto, um
+obstáculo significativo nesta busca é a escassez de medicamentos adaptados a este estágio de gametócitos
+não sintomáticos, em grande parte devido a limitações na produção em massa e na quantificação precisa,
+que dificultam os esforços de triagem de fármacos em grande escala.
+Objetivos: Construir uma linhagem de parasitas que pode ser geneticamente induzida para sofrer
+gametocitogénese. Além disso, pretendemos melhorar ainda mais esta linha incorporando fluorescência
+para deteção simplificada de gametócitos.
+Metodologia: Especificamente, empregamos metodologias de edição de genoma de parasitas, incluindo o
+sistema CRISPR-Cas9, o sistema de integrase Bxb1 e a integração vinculada à seleção (SLI), para construir
+uma linhagem de parasitas com relatório usando dois promotores específicos de estágio (para assexual e
+gametócito) a montante de proteínas fluorescentes distintas e um sistema induzível para promover a
+conversão sexual. Isso facilitará a deteção e quantificação precisas dos dois estágios através de citometria
+de fluxo ou outras leituras baseadas em imagem.
+Resultados: Começando com parasitas assexuais, um plasmídeo pSLI-HP1-GFP-glmS foi desenhado para
+marcar os parasitas assexuais com GFP através de integração vinculada à seleção, juntamente com um
+sistema glmS induzível para a redução condicional da proteína de heterocromatina 1 (HP1), o regulador do
+fator de transcrição AP2-G responsável pela gametocitogénese. Para gerar a linha repórter de gametócitos,
+tentamos introduzir uma fusão com uma proteína fluorescente vermelha-luciferase (EmiRFP670Luc) sob
+um promotor específico de gametócitos (pfs16) usando o sistema CRISPR-Cas9 e/ou o sistema de
+recombinase attP-attB. Construímos um plasmídeo CRISPR-Cas9 personalizado para inserir uma região
+attB na estirpe P. falciparum NF54, mas não conseguimos integrar a cassete repórter EmiRFP670Luc
+através do sistema de integrase Bxb1. Posteriormente, tentamos a expressão episomal de EmiRFP670Luc
+sob o promotor pfs16, mas não obtivemos parasitas editados. São necessárias investigações adicionais
+para alcançar o sucesso neste aspeto.
+Conclusão: Existe a necessidade urgente de novos fármacos antimaláricos que visem tanto os estágios
+sintomáticos como os não sintomáticos do ciclo de vida do parasita para interromper eficazmente a
+transmissão de humano para mosquito. Apesar dos desafios encontrados na construção de uma linha
+repórter de gametócitos, nossa abordagem inovadora usando metodologias de edição de genoma de
+parasitas lançou as bases para a deteção e quantificação precisas de estágios assexuais e gametócitos.
+Embora as tentativas iniciais de introduzir a cassete repórter EmiRFP670Luc não tenham sido bem-
+sucedidas, são necessárias investigações adicionais para superar estes obstáculos e avançar no
+desenvolvimento de terapias eficazes contra a malária.
+Palavras – Chave: Plasmodium falciparum; estratégias de edição genómica; gametócitos; drogas
+antimaláricas.
+vi
+
+ABSTRACT
+Background: The etiology of malaria involves the infiltration of Plasmodium parasites into the human body,
+typically transmitted through the bite of female Anopheles mosquitoes. This disease remains a significant
+global health challenge due to its severe impact and efficient transmission between humans and
+mosquitoes. In addition, we must consider the emergence of resistance to current first-line treatments, such
+as artemisinin-based combination therapies (ACTs), particularly for uncomplicated cases of P. falciparum
+malaria. Addressing this challenge necessitates the development of innovative and potent drugs. Future
+therapeutic approaches are envisioned to target not only the symptomatic stage but also the less
+metabolically active and often neglected gametocyte stage, which is essential for the interruption of the
+human-to-mosquito transmission. However, a significant obstacle in this pursuit is the scarcity of drugs
+tailored to this non-symptomatic gametocyte stage, largely due to limitations in mass production and
+accurate quantification, which hinder high-throughput drug screening efforts.
+Objectives: Engineer a gametocyte reporter line that can be genetically induced for gametocytogenesis.
+Moreover, we aim to further improve this line by incorporating fluorescence for streamlined detection of
+gametocytes.
+Methodology: Specifically, we employed parasite genome editing methodologies, including the CRISPR-Cas9
+system, Bxb1 integrase system, and selection-linked integration (SLI), to build a reporter parasite line using
+two stage-specific promoters (for asexual and gametocyte) upstream of distinct fluorescent proteins and an
+inducible system to promote gametocyte commitment. This will facilitate accurate detection and
+quantification of the two stages through flow cytometry or other imaging-based readouts.
+Results: Beginning with asexual parasites, a customized pSLI-HP1-GFP-glmS plasmid was engineered to
+label asexual parasites with GFP through selection-linked integration, along with an inducible glmS system
+to conditional knockdown of Heterochromatin protein 1 (HP1), the regulator of the AP2-G transcription factor
+responsible for gametocytogenesis. To generate a gametocyte reporter line, we attempted to introduce a
+red fluorescent protein-luciferase fusion (EmiRFP670Luc) under a gametocyte-specific promoter (pfs16)
+using the CRISPR-Cas9 system and/or attP-attB recombinase system. We constructed a customized
+CRISPR-Cas9 plasmid to insert an attB region into the P. falciparum NF54 strain but were not successful in
+integrating the EmiRFP670Luc reporter cassette through the Bxb1 integrase system. Subsequently, we
+attempted the episomal expression of EmiRFP670Luc under the pfs16 promoter but failed to obtain edited
+parasites. Further investigations are warranted to succeed in this endeavour.
+Conclusion: Our study underscores the urgent need for novel antimalarial drugs targeting both symptomatic
+and non-symptomatic stages of the parasite life cycle to effectively interrupt human-to-mosquito
+transmission. Despite encountering challenges in constructing a gametocyte reporter line, our innovative
+approach - using parasite genome editing - methodologies has laid the groundwork for accurate detection
+and quantification of asexual and gametocyte stages. While initial attempts to introduce the EmiRFP670Luc
+reporter cassette were unsuccessful, further investigations are warranted to overcome these obstacles and
+advance toward developing effective therapies against malaria.
+Keywords: Plasmodium falciparum; Gametocytes; genome – editing strategies; antimalarial drugs.
+vii
+
+Contents
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS .............. ii
+ACKNOWLEDGMENT ................................................................................................................ iii
+FINANCIAL SUPPORT ............................................................................................................... iii
+STATEMENT OF INTEGRITY ...................................................................................................... iv
+OUTPUT .................................................................................................................................... v
+RESUMO .................................................................................................................................. vi
+ABSTRACT .............................................................................................................................. vii
+LIST OF ABREVIATTIONS .......................................................................................................... xi
+LIST OF FIGURES .................................................................................................................... xiii
+LIST OF TABLES ...................................................................................................................... xvi
+CHAPTER 1 .............................................................................................................................. 1
+INTRODUCTION........................................................................................................................ 1
+1.1. Malaria Burden ........................................................................................................ 2
+1.2. Plasmodium falciparum Life Cycle ............................................................................ 4
+1.2.1. Human Host: Liver Stages ............................................................................... 4
+1.2.2. Human Host: Red Blood Cells Stage Exo – erythrocytic cycle ............................ 4
+1.2.3. Human Host: Red Blood Cells Stage: Intraerythrocytic cycle ............................. 4
+1.2.4. Mosquito Host: Sporogonic Development ......................................................... 5
+1.3. Beginning of the sexual pathway .................................................................................... 5
+1.3.1. Gametocyte Morphology ....................................................................................... 5
+1.3.2. Gametocyte Formation ..................................................................................... 6
+1.4. The Sexual Switch .................................................................................................... 8
+1.4.1. AP2-G – The Sexual Master Key Regulator ........................................................ 8
+1.4.2. The interplay between HP1 and GDV1 ............................................................ 10
+1.4.3. Gametocyte Development Genes .................................................................... 11
+1.5. Strategies to induce Gametocytogenesis in vitro ...................................................... 12
+1.5.1. Stress Protocol .............................................................................................. 12
+1.5.2. Genome–editing strategies ............................................................................. 14
+1.6. Quantification of Gametocytes ................................................................................ 19
+1.6.1. Classical Method ........................................................................................... 19
+1.6.2. Optical Readout Methods ............................................................................... 19
+1.7. Antimalarial Resistance and Effectiveness ............................................................... 21
+1.7.1. Genes related to Antimalarial drug resistance ................................................. 21
+1.7.2. Present Antimalarial treatment do not target vector transmission .................... 22
+1.7.3. The Key to the Interruption of Vector Transmission ......................................... 22
+CHAPTER 2 ............................................................................................................................ 24
+AIMS ...................................................................................................................................... 24
+viii
+
+CHAPTER 3 ............................................................................................................................ 26
+METHODS .............................................................................................................................. 26
+3.1. In vitro culture of Plasmodium falciparum ................................................................... 27
+3.2. Molecular Biology Methods ..................................................................................... 28
+3.2.1. In silico cloning strategy ........................................................................................ 28
+3.2.2. Ligation ......................................................................................................... 29
+3.2.3. Plasmid transformation into competent cells – Heat shock strategy ................ 30
+3.2.4. Plasmid DNA Extraction ................................................................................. 30
+3.2.5. Genomic DNA Extraction ................................................................................ 30
+3.2.6. Electrophoresis in Agarose gel ....................................................................... 31
+3.2.7. DNA Purification from Agarose Gel ................................................................. 31
+3.2.8. Colony PCR ................................................................................................... 31
+3.3. Engineering a transgenic Plasmodium falciparum HP1 – glmS – GFP parasite line .. 33
+3.4. Plasmid Construction for attB insertion into Plasmodium falciparum NF54 .............. 35
+3.4.1. Restriction – Ligation to originate pL6 – cas 9 – yDHODH ...................................... 36
+3.4.2. Construction of cg6 guideRNA into pL6 – cas 9 - yDHODH ...................................... 37
+3.4.3. Construction of cg6 homology boxes with attB region .............................................. 39
+3.4.4. Restriction – Ligation to obtain pL6_cas9_yDHOODH_5´cg6 – attB – 3`cg6 ......... 40
+3.4.5. Selection of attB integration in Plasmodium falciparum ........................................... 41
+3.4.6. Limited Dilution and Genotyping ............................................................................. 42
+3.5. Plasmid Construction for EmiRFP670Luc@s16 insertion into Plasmodium falciparum
+NF54….. ............................................................................................................................. 43
+3.5.1. Amplification of inserts ........................................................................................... 44
+3.5.2. Engineering the EmiRFP670Luc@s16 plasmid ........................................................ 47
+3.5.3. Transfection and Selection of NF54 EmiRFP670Luc@s16 episomal expression .......................... 49
+3.6. Stress Protocol ....................................................................................................... 50
+CHAPTER 4 ............................................................................................................................ 51
+RESULTS ................................................................................................................................ 51
+4.1. Engineered a transgenic parasite line to increase the sexual commitment
+(gametocytogenesis) ........................................................................................................... 52
+4.1.1. Engineering a transgenic Plasmodium falciparum NF54 HP1 – GFP – glmS line ..... 52
+4.1.2. Inducing gametocytogenesis through a Stress Protocol ........................................... 54
+4.2. Construction of a Plasmodium falciparum reporter line for the asexual and sexual
+parasite stages ................................................................................................................... 55
+4.2.1 Engineering GFP cassette for P. falciparum intraerythrocytic asexual stage detection…..
+.......................................................................................................................................... 55
+ix
+
+4.2.2. Engineering an EmiRFP670Luc@s16 cassette for gametocyte detection .................. 55
+4.2.3. Expression of the reporter cassettes in P. falciparum .............................................. 62
+4.2.3.1. Via Genome Integration .................................................................................... 62
+4.2.3.2. Via episomal expression ................................................................................... 65
+CHAPTER 5 ............................................................................................................................ 67
+DISCUSSION .......................................................................................................................... 67
+CHAPTER 6 ............................................................................................................................ 72
+FUTURE PERSPECTIVES AND FINAL REMARKS ...................................................................... 72
+CHAPTER 7 ............................................................................................................................ 74
+REFERENCES ......................................................................................................................... 74
+x
+
+LIST OF ABREVIATTIONS
+WHO – World Health Organization
+EFFs – Exoerythrocytic forms
+RBCs – Red Blood Cells
+SCC – Same Cycle Conversion
+NCC – Next Cycle Conversion
+HP1 – Heterochromatic Protein 1
+CD - Conserved Chromodomain
+CSD – Conserved chromoshadow domain
+GDV1 – Gametocyte Development Protein 1
+HDP1 – HomeoDomain – like protein 1
+Pfs16 – Plasmodium falciparum sexual stage – specific protein 16
+PfEB1 – Microtubule – associated End Binding protein 1
+gSNF2 – gametocyte sucrose nonfermentable 2
+GlcNac – N-Acetylglucosamine
+ZFNs – Zinc – Fingers Nucleases
+SLI – Selection – linked integration
+DSB – Double–strand break
+PAM – Protospacer adjacent motif
+CrRNAs – CRISPR RNAs
+tracrRNA – trans CRISPR RNAs
+HDR – Homology – directed Repair
+NHEJ – Non – homologous end joining
+SSA – Single – strand annealing pathway
+CRISPR – Clustered regularly interspaced short palindromic repeats
+GlcN – Glucosamine
+SLI – TDG – Selection linked integration with the target gene disruption
+GFP – Green fluorescent protein
+xi
+
+GOI – Gene of interest
+POI – Protein of interest
+LM – Light Microscope
+ACTs – Artemisinin-based compounds
+G6PD – Glucose – 6 – phosphate dehydrogenase
+PCR – Pair – Chain Reaction
+MCM – Malaria Complete Medium
+LB – Lysogenia Broth
+SOC – Super Optimal Catabolite
+TAE – Tris-acetate EDTA
+OPV – Original pellet volume
+gRNA – single guideRNA
+bp – base pair
+kb – kilobase pair
+bsd – Blasticidin S deaminase gene
+xii
+
+LIST OF FIGURES
+Figure 1 - Number of Indigenous Malaria Cases 2000 - 2022 according to the World Health Organization
+(WHO) ............................................................................................................................................. 2
+Figure 2 - Distribution of confirmed malaria cases by country, EU/EEA, 2020. .................................... 3
+Figure 3 - Plasmodium parasites Red Blood Cells (RBCs) stages morphology. Made in Biorender.com .. 3
+Figure 4 - Life Cycle of Plasmodium falciparum. Made in Biorender.com ............................................. 5
+Figure 5 - Plasmodium falciparum Gametocytes Morphology developmental stages. Made in
+Biorender.com ................................................................................................................................. 6
+Figure 6 - The three models for gametocyte commitment according to Carter and Miller, 1979. Made in
+Biorender.com. ................................................................................................................................ 7
+Figure 7 – Scheme of The Red Blood Cell stages undergoing two different pathways to commit to sexual
+differentiation (SCC, NCC). Made in Biorender.com ............................................................................. 8
+Figure 8 - Transcription Factor involved with sexual cascade to generate gametocytes. ......................... 9
+Figure 9 - Heterochromatin Protein 1 (HP1) structure.Made in Biorennder.com ................................... 9
+Figure 10 - Interaction AP2-G - HP1 - GDV1. The perinuclear protein gametocyte development 1 (GDV1)
+is the sexual commitment activator, which will sever the connection between HP1 and AP2-G gene (Figure
+8), expelling the first one and releasing the AP2-G gene that will be free to generate sexual parasites
+(gametocytes). Made in Biorender.com ............................................................................................ 10
+Figure 11 - The four key factors to produce gametocytes: Blood type, blood-serum dependent, parasite
+strain, and temperature. Made in Biorender.com ............................................................................... 13
+Figure 12 – Illustration of organism repair mechanisms: Homology-directed – Repair (HDR) and Non-
+Homologous end-joining (NHEJ). ...................................................................................................... 14
+Figure 13 - Depiction of CRISPR - Cas9 system: Protospacers adjacent motif (PAM) are transcribed to
+CRISPR RNAs (CrRNAs) and trans-activated the CRISPR-Cas9 (tracrRNA) originating a duplex that guides
+the Cas9 to a specific DNA sequence. .............................................................................................. 15
+Figure 14 – Bxb1 integrase system: attP – attB recombinase system. .............................................. 16
+Figure 15 - Illustration of Zinc finger nucleases (ZNFs). Made in Biorender.com ................................ 17
+Figure 16 – Conditional Knockdown with glmS system. ................................................................... 18
+Figure 17 – The selection–linked integration (SLI) system. ............................................................. 19
+Figure 18 - Different bioluminescent reporter proteins (Firefly Luciferase, Renilia Luciferase, and
+NanoLuc Luciferase). Source from ‘NanoLuc Bioluminescence-Driven Photodynamic Activation of
+Cholecystokinin 1 Receptor with Genetically-Encoded Protein Photosensitizer MiniSOG - PMC’. Accessed:
+Apr. 03, 2024. [Online]. Available: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7313028/ .......... 20
+Figure 19 – Depiction of the molecular processes present in immature and mature gametocytes, that
+can be targeted by novel drugs that can act directly or indirectly in gametocytes stages (I - V). Blue:
+nucleus, Red: DV, Green: mitochondria. PQ (primaquine), MB (methylene blue), ARTs (artemisinin
+derivatives), “?” signifies the potential of targeting this process. Taken from B. A. Munro and B. J.
+McMorran, ‘Antimalarial Drug Strategies to Target Plasmodium Gametocytes’, Parasitologia, vol. 2, no. 2,
+Art. no. 2, Jun. 2022, doi: 10.3390/parasitologia2020011. .............................................................. 22
+Figure 20 – Illustration of the effect of the antimalarial drug on gametocyte stages (I - V). .................. 23
+Figure 21 - Malaria culture care routine ......................................................................................... 27
+Figure 22 – A. Condition Knockdown of HP1. B. A pSLI plasmid with a neomycin cassette (NEO), with a
+glmS ribozyme region attached to a heterochromatin protein 1 (HP1) and a green fluorescent protein
+(GFP). Plasmodium falciparum NF54 recombinant: the ribozyme is inserted in the 3′-UTR after HP1 so
+xiii
+
+that it is present in the expressed mRNA. With the addition of the inducer, glucosamine (G), the mRNA
+self-cleaves resulting in degradation of the mRNA and knockdown of HP1-GFP. ................................... 33
+Figure 23 - Depiction of in silico design to obtain the pL6_cas9_yDHOODH - 5´cg6 - attB – 3`cg6. ... 35
+Figure 24 - Illustration of the pL6 plasmid and pUF1 plasmid. ......................................................... 36
+Figure 25 – Ligation - Restriction of pL6_cas9_yDHODH plasmid with 12 800 bp. ............................ 36
+Figure 26 – Restriction – ligation of the respective fragments from the donor plasmids pL6 and pUF1.37
+Figure 27 - In vivo assembly to insert the cg6 guideRNA into the pL6_cas9_yDHOODH. .................... 38
+Figure 28 – Depiction of the overlap between two homology regions (cg6 ) with an overlap region for the
+insertion of an attB sequence. ......................................................................................................... 40
+Figure 29 – Illustration of the in silico pL6_cas9_yDHOODH_cg6 gRNA_ 5´cg6 – attB – 3`cg6 final
+plasmid. ........................................................................................................................................ 41
+Figure 30 – Depiction of the in-silico design to originate the pDC2 – pfs16 – EmiRFP670 – Luciferase –
+BSD – attP. .................................................................................................................................... 43
+Figure 31 - Amplification with specific restriction site fragments (pfs16, emiRFP670, and luciferase) and
+Ligation into commercial plasmids (pJET and pNZY28). ..................................................................... 47
+Figure 32 – Final design of pDC2 – pfs16 – EmiRFP670 – Luciferase – bsd – attP plasmid. The
+EmiRFPLuc@s16 cassette can be integrated (through the attP – attB recombinase system) into the
+genome or episomal expressed (through BSD selection). ................................................................... 49
+Figure 33 – Design of Stress Protocol to induce gametocytogenesis: [1] Cultures healthy stressed, after
+day 3 they are supplemented with GlcNac for five days, following day 8 with only MCM medium
+supplementation; [2] Cultures healthy stressed, with only MCM medium. ............................................ 50
+Figure 34 – A. PCR genotyping to confirm the edited parasites HP1 – glmS – GFP, with primer P3 and
+P4 to confirm integration of the plasmid in the genome (1765 bp), and the primer P3 and P5 to confirm
+the wild–type. B. The edited parasites express GFP. .......................................................................... 53
+Figure 35 - Stress exposure to parasites in two conditions: MCM and MCM plus 50 uM GlcNac. ........ 54
+Figure 36 – A. Sanger sequencing 5´ region cover (primer P24) and 3`region (primer P22) cover of
+pfs16 promotor, following Sanger Sequencing of the promotor length with other primers P16, P23. B. In
+silico design of pNZY28 – pfs16; C. pNZY28 – pfs16 plasmid screening: L1 – 1 kb DNA Ladder (Thermo
+Scientific); L3 – plasmid screening with the expected pattern for a restriction BamHI and Nsil: 2862 bp,
+666 bp, 457 bp, and 184 bp. .......................................................................................................... 57
+Figure 37 – A. Sanger sequencing of Pjet – EmiRFPP670 plasmid covering the 5´UTR, and 3`UTR;B. In
+silico design Pjet – EmiRFP670 plasmid; C. 0.8% agarose gel – L1: 1kb DNA Ladder, L4: Restriction to
+confirm Pjet – EmiRFP670 plasmid with AvrII and BshTI (2974, and 933 bp). ..................................... 58
+Figure 38 - A. Sanger sequencing total coverage of luciferase with primer PU1 and PU2. B. In silico
+design of pJET – luc plasmid ; C. 1% Agarose gel: L1 – 1 kb DNA ladder, L2 - Screening of pJET –
+Luciferase with a BstBI restriction (3799, and 788 bp). ..................................................................... 59
+Figure 39 – A. Final plasmid screening pDC2 – pfs16 – EmiRFP670 – Luciferase – BSD – attP, results
+run in 0.8 % agarose gel: L1 - 1 kb DNA ladder (ThermoFisher). L2: Screening of pDC2 – pfcam –
+p
+EmiRFP670 – GFP with a restriction with AatlII and BamHI (3605 bp, 2210 bp, 2000 bp and 239 bp).
+L3: Screening of pDC2 – pfcam – EmiRFP670 – luciferase – BSD – attP with a restriction with SdaI and
+p
+NheI (6512 bp, 2525 bp, 10 bp), and BseRI and SdaI (6522 bp, 1584 bp, 941 bp). L4. Final plasmid
+pDC2 – psf16 – EmiRFP670 – Luciferase – BSD – attP with for a restriction with Xbal (6419 bp; 2839
+bp); B. In silico plasmid design (pDC2 – pfcam – EmiRFP670 – GFP – BSD- attP, pDC2 – pfcam –
+p p
+EmiRFP670 – BSD – attP, pDC2 – pfs16 – EmiRFP670 – Luciferase – BSD – attP). ........................... 61
+Figure 40 – A. Screening of pL6_cas9_yDHODH plasmid in 1% agarose gel. L1 – 1 kb DNA ladder
+(ThermoFisher). L2 - Restriction with NcoI, NotI and BamHI: 7026 bp, 4226 bp, and 1548 bp; L2:
+Restriction with HincII, BamHI and AatlII: 6165 bp, 3061 bp, 2989 bp, 585 bp; B. Screening of
+xiv
+
+pL6_cas9_yDHODH cg6 gRNA plasmid in 2.5% agarose gel. L1 – 1 kb DNA ladder (ThermoFisher). L2 –
+L7 – BseRI restriction of amplification of 153 bp with primer x and x: 83 bp and 70 bp (L7 presents the
+expected pattern); C. Sanger sequencing of pL6_cas9_yDHODH – cg6 gRNA with primer CP 5 and CP 6;
+D. Sanger sequencing of pL6_cas9_yDHODH – cg6 gRNA with the SEED highlight in the sequence; E.
+Sanger sequencing of pJET–cg6 attB plasmid with universal primer (PU1). F. Depiction in the sanger
+sequencing pJET–cg6 attB plasmid of the attB region. ....................................................................... 64
+Figure 41 – A. Final plasmid pL6_cas9_yDHODH – 5`cg6 – attB – 3`cg6 screening restriction BcuI
+and AatlII: 8217 bp, 4599 bp, and 802 bp in 0.8% agarose gel: L1 – 1 Kb DNA Ladder (Thermo
+Scientific); L6 – The expected pattern and the final plasmid pL6_cas9_yDHODH – 5`cg6 – attB – 3`cg6.
+B. Parasitaemia assessment post-transfection with DSM1 drug selection. C. Strategy for genotyping the
+edited – parasites with the attB. D. Genotyping the edited parasites (NF54attB) with a first set that confirms
+a successful edition (761 bp), and a second set that indicates a mixed culture with edited – parasites and
+wild-type (1239 bp). ........................................................................................................................ 65
+Figure 42 - Assessment of parasitaemia post – transfection with BSD selection for 5 days. ................ 66
+Figure 43 - Sanger Sequencing of Pfs16 covering all extension with 4 primers. As it can see, there is
+extremely difficulty to sequence Pfs16, having present lot of errors, deletions and insertion. ................. 84
+xv
+
+LIST OF TABLES
+TABLE 1 - Optimal PCR product quantity for ligation and respective amplicon size. ............................... 29
+Table 2 - Primer sequences (5`-3`) and PCR settings for each colony PCR. ...................................... 32
+Table 3 - Amplification of HP1 with primers with specific site restriction and his PCR settings. ............. 34
+Table 4 – Primer’s sequence (5´- 3`) for genotyping the edited – parasites HP1 – GFP – glmS. ....... 34
+Table 5 – Primer sequence (5`- 3`) and PCR settings for cg6 guideRNA. .......................................... 39
+Table 6 – PCR program for the 5´cg6 – attB – 3`cg6 overlap. ........................................................ 39
+Table 7 – Primer´s sequence (5` - 3`) for the obtention of 5`cg6 – attB – 3`cg6 PCR Overlap. ....... 40
+Table 8 – Primers sequences (5´- 3´) for NF54attB and HP1 – glmS – GFP attB. .................................... 42
+Table 9 – Combination of Primers to genotype the edited parasites with integration of attB on
+Plasmodium falciparum NF54 (P 12, P 13, P14, and P 15). .............................................................. 42
+Table 10 – PCR Master Mix for the three genes (pfs16, luciferase, and emiRFP670).......................... 44
+Table 11 – Primer sequence (5`- 3`) and PCR conditions for the amplification of the three genes. ..... 44
+The amplification of pfs16 was performed with 10 µL 2X Green Supreme Polymerase Master Mix, 10 µM
+P 16 primer and 10 µM P 17 primer, and 150 ng gDNA of Plasmodium falciparum 3D7, up to a final
+volume of 20 µL. The primers P 16 and P 17 were designed to introduce a recognition restriction site for
+the ApaI, and AvrII. The pfs16 promotor ligation with pNZY28 cloning vector was performed in ice with 10
+uL Reaction Buffer, 50 ng of pNZY28 cloning vector, 50 ng of pfs16 amplification product, 3 uL water, 1
+uL T4 DNA ligase, 1 uL ATP with a final volume a 30 uL at 4⁰ C overnight. The transformation was in 75
+uL competent cells and 1 uL of ligation. The colonies were screened with Nsil and BamHI. The positive
+colonies were outsourced for sanger sequencing with primers P16, P 22, P 23, and P 24 to fully cover the
+promotor extension. The amplification of luciferase was performed using 1 U iProof™ High-Fidelity DNA
+Polymerase (Biorad), 10 µM P 18 primer,10 µM P 19 primer, 150 ng Plasmodium falciparum MRA1217
+(NF54HT-GFP-luc) strain, up to a final volume 50 µL. The ligation was performed with 50 ng of pJET 1.2
+cloning vector and 50 ng of insert (luciferase ). The transformation was performed in 75 µL competent
+cells and 1 µL of ligation. The plasmid was screened with a restriction enzyme BstBI and sent to
+sequence with primer P12 and P13 to STAB VIDA. The amplification of emiRFP670 was obtained with 10
+µL 2X Phusion Green Hot Start II High-Fidelity PCR Master Mix (Thermo Scientific), 10 µM primer P 20,
+10 µM primer P 21, 250 ng pLAMP1 – EmiRFP670, 0.6 µL DSMO and water in a total volume of 20 µL.
+The ligation was performed with 50 ng of the insert, 1 µL of pJET 1.2 commercial plasmid, 1 U T4 DNA
+Ligase, 1 µL ATP, and 2 µL Reaction Buffer up to a final volume of 20 µL for 30 minutes at room
+temperature. The Heat-shock transformation contained30 µL of E. coli competent cells and 3 µL of
+Ligation. The colonies were screened with primers PU1 and PU2 for amplification of 952 bp present in
+Table 2, with double confirmation with a restriction enzyme BshTI and AvrII for 1 hour at 37ºC (Haerius®,
+Kendro B 6760), and sent to sequence with primer PU1 to STAB VIDA as shown in Table 12. able 12 –
+Primer Sequences (5` - 3`) sent to sequence in STAB VIDA. ............................................................. 45
+Table 13 - Primer sequences (5` - 3`) outsourced to STABVIDA to sequence the pDC2 - pfs16 -
+EmiRFP670 - Luciferase - bsd – attP plasmid. ................................................................................... 49
+xvi
+
+CHAPTER 1
+INTRODUCTION
+1
+
+1.1. Malaria Burden
+Malaria is a life-threatening illness caused by the transmission of Plasmodium parasites through
+the bite of an infected female mosquito of the Anopheles genus [1]. According to the World Health
+Organization (WHO), in 2022, there were an estimated 249 million cases of malaria across 84
+malaria-endemic countries [2]. Malaria stands as one of the deadliest diseases globally, with an
+estimated 608,000 deaths recorded in 2022 [2].
+Figure 1 - Number of Indigenous Malaria Cases 2000 - 2022 according to the World Health Organization (WHO)
+While the European region is free from indigenous cases of endemic malaria, as illustrated in
+Figure 1, approximately 85 countries across Africa, Asia, and the Americas still face the threat of
+this deadly disease [2]. Recent data from the European Cases 2020 report (Figure 2) indicates five
+cases acquired in France and Greece [3]. Moreover, there are emerging challenges in the
+prevention, control, and elimination of malaria. The WHO highlights the growing concern about
+antimalarial resistance and its impact on the effectiveness of treatment, which will be further
+addressed in this thesis. Additionally, a significant issue to be addressed is that common
+antimalarial drugs do not target vector transmission [4]. Therefore, this work focuses on
+addressing vector transmission, to combat malaria effectively.
+2
+
+Figure 2 - Distribution of confirmed malaria cases by country, EU/EEA, 2020.
+Malaria disease occurs due to the bite of infected female Anopheles mosquitos with Plasmodium
+parasites in the host skin [1]. Naturally, there are approximately 186 known species of
+Plasmodium. Five species are known to infect humans (Figure 3), namely Plasmodium falciparum,
+Plasmodium ovale, Plasmodium vivax, Plasmodium malariae, and P. knowlesi [4]. Because
+Plasmodium knowlesi is zoonotic and affects simians, our evolutionary relative, it is unclear if it is
+spontaneously transmitted to humans [5].
+Figure 3 - Plasmodium parasites Red Blood Cells (RBCs) stages morphology. Made in Biorender.com
+In this thesis, we focused our studies on Plasmodium falciparum, the deadliest species involved
+with the central nervous system (cerebral malaria), severe anemia, and acute renal failure/
+respiratory distress [6], [7], [8].
+3
+
+1.2. Plasmodium falciparum Life Cycle
+1.2.1. Human Host: Liver Stages
+When a female Anopheles mosquito takes a blood meal, it injects sporozoites into the human
+host's skin [9]. Once the sporozoites are in the skin, they can enter the bloodstream and migrate
+to the liver sinusoids through gliding motility [10], [11], [12]. Within the liver sinusoids, they
+traverse the inner membrane of blood vessels to reach the liver. Once in the liver, the sporozoites
+invade Kupffer cells and hepatocytes before initiating mass production of merozoites. The liver
+stage commences when sporozoites infect hepatocytes and form parasitophorous vacuoles, thus
+transforming into exoerythrocytic forms (EEFs) [13]. These EEFs undergo multiplication, each
+yielding thousands of merozoites. The Hepatocyte Stage marks the initial phase in the human host,
+typically lasting 7 to 14 days after infection, during which patients remain clinically
+asymptomatic[14].
+1.2.2. Human Host: Red Blood Cells Stage Exo – erythrocytic cycle
+In section 1.2.1, the liver merozoites undergo uncontrolled asexual replication, leading to their
+release into the bloodstream and subsequent invasion of red blood cells (RBCs) [12]. This outburst
+of merozoites into the bloodstream marks the initiation of the erythrocytic cycle [10]. Within this
+cycle, merozoites differentiate into rings, trophozoites, and schizonts, culminating in the release of
+16 to 32 new merozoites during theegress process known as exo-erythrocytic schizogony, which
+typically occurs 48 hours post-invasion [11], [12]. Moreover, the asexual replication and
+subsequent infection of RBCs are associated with the onset of clinical symptoms [13], [14].
+1.2.3. Human Host: Red Blood Cells Stage: Intraerythrocytic cycle
+Merozoites infect erythrocytes through penetration. Furthermore, these parasites undergo
+asexual replication, giving rise to rings, immature trophozoites, mature trophozoites, and schizonts,
+with cyclic transformations every 48 hours [9]. Simultaneously, a small number of immature
+trophozoites may undergo a stress stimulus and initiate the sexual pathway, becoming sexual
+parasites, and ultimately developing into gametocytes [12], [13]. While gametocytes themselves
+may not correspond to any clinical symptom’s manifestation, they facilitate disease transmission
+by serving as carriers and reservoirs [14]. These gametocytes undergo mitosis, resulting in the
+formation of haploid daughter cells (n) across five stages [15], [16]. Additionally, sexual parasites
+can differentiate into males (microgametocytes) and females (macrogametocytes), thus undergoing
+gametocytogenesis from stage IV to V [17], [18]. To produce eight flagellated microgametes, their
+4
+
+genome undertakes three replications. The release of mature males is referred to as exflagellation
+[19].
+1.2.4. Mosquito Host: Sporogonic Development
+To conclude the life cycle of Plasmodium falciparum (Figure 4), a female mosquito from the
+Anopheles genus feeds on an infected human, acquiring gametocytes [17]. Moreover, the fusion
+of female and male gametocytes is essential for the formation of a diploid zygote (2n) [18], [19].
+Following fusion, sporogonic development occurs on the mosquito midgut epithelium, leading to
+the mass production of haploid sporozoites[19]. The whole parasite life cycle is represented in
+Figure 4.
+Figure 4 - Life Cycle of Plasmodium falciparum. Made in Biorender.com
+1.3. Beginning of the sexual pathway
+1.3.1. Gametocyte Morphology
+Gametocytes represent the sexual form of Plasmodium falciparum parasites that develop inside
+human red blood cells. There are five developmental stages leading to fully mature and functional
+gametocytes (Figure 5). At stage I, gametocytes resemble young trophozoites with a round shape
+[20], [21]. During stage II, the gametocytes initially enlarge in their round shape and then elongate
+into the final D-shape. This sexual stage exhibits a pigmented and granular distribution in the food
+vacuoles and takes 1 day to mature into the next stage [20], [21]. Moving to stage III, gametocytes
+5
+
+assume a distorted oval morphology within the red blood cell, which requires 3 days to mature up
+to stage IV. Stage IV features an elongated, elegant structure with pointed tips, allowing for the
+distinction between females and males. This stage also takes 3 days to mature to stage V. In stage
+IV gametocytes, the pigments in the food vacuoles are more dispersed in males than in females
+(appearing thicker)[22]. Finally, stage V presents a falciform or crescent shape, with males
+exhibiting pale and thicker cytoplasm, and females having more blue cytoplasm under Giemsa
+staining. Stage V gametocytes can be observed in peripheral circulation after 10-12 days of
+maturation[23], [24]. While stages I to IV are typically detected in the bone marrow, stage V is
+primarily found in peripheral circulation [22].
+Figure 5 - Plasmodium falciparum Gametocytes Morphology developmental stages. Made in Biorender.com
+1.3.2. Gametocyte Formation
+The precise moment of the first appearance of gametocytes is yet unknown, although various
+theories have been proposed over time. In 1979, Carter and Miller exposed three different possible
+theories to explain this phenomenon [25]. Model I (Figure 6.1) suggest that the commitment
+towards becoming gametocytes occurs either during the merozoite stage or in the ring stage.
+According to this model, the decision to become either asexual parasites or gametocytes depends
+on a stress stimulus, indicating that the ring stage is neutral within this context[25]. In contrast,
+Model II (Figure 6.2) proposes that it occurs during the asexual phase while only expressing it in
+the subsequent generation [25]. However, in this scenario, all progenies will either exclusively
+consist of gametocytes or asexual parasites. The last hypothesis, Model III (Figure 6.3), resembles
+Model II but differs from it in its progeny composition. In this case, the same culture contains both
+gametocytes and asexual parasites from the same progeny [25]. These theories attempt to shed
+6
+
+light on the enigmatic process of gametocyte formation, highlighting the complexities involved in
+Plasmodium parasite sexual development.
+Figure 6 - The three models for gametocyte commitment according to Carter and Miller, 1979. Made in
+Biorender.com.
+Nowadays, studies reinforce Model II due to the multiple infections (different populations) that
+can occur in red blood cells, where a committed post-invasion single merozoite will differentiate
+into gametocytes or asexual parasites [26], [27], [28].
+7
+
+A recent discovery from 2021[29], acknowledges that the commitment of gametocytes can
+involve two different pathways. One can start from sexual rings (same cycle conversion – SCC)[18]
+or through trophozoites or schizonts (next cycle conversion – NCC)[29], as shown in Figure 7.
+Figure 7 – Scheme of The Red Blood Cell stages undergoing two different pathways to commit to sexual
+differentiation (SCC, NCC). Made in Biorender.com
+1.4. The Sexual Switch
+1.4.1. AP2-G – The Sexual Master Key Regulator
+The development of Plasmodium parasite gametocytes is guided by specific transcription factors,
+notably ApiAP2 (Apicomplexan AP2)[30]. ApiAP2, a DNA-binding protein family, is recognized as
+the orchestrator of all developmental transitions in Plasmodium. Among them, PfAP2-G serves as
+the master regulator responsible for the sexual switch and sexual commitment [31], [32], [33].
+Downstream of the key master PfAP2-G, several transcription factors have been identified, including
+AP2-G2[34], AP2-G3 [35], [36], [37], and AP2-G5[29]. AP2-G2 plays a critical role in gametocyte
+maturation, as it is expressed from very early trophozoite stages up to gametocyte stage V [34].
+On the other hand, AP2-G3, only recently discovered , facilitates the transmission of cytoplasmic
+signals to the nucleus, resulting in increased AP2-G transcription levels, with mild expression
+observed in gametocyte stages II-IV [36]. In contrast, AP2-G5 binds upstream of AP2-G, repressing
+the expression of early gametocyte genes and consequently inhibiting gametocytogenesis [29].
+8
+
+These findings shed light on the intricate regulatory mechanisms underlying gametocyte
+development, emphasizing the pivotal role of transcription factors in this process (Figure 8).
+Figure 8 - Transcription Factor involved with sexual cascade to generate gametocytes.
+The regulation of AP2-G genes is made by the presence of HP1 (Heterochromatic protein
+1)[38]. In addition, HP1 has three different domains (Figure 9): the N-terminus contains a
+conserved chromodomain (CD), that is responsible for the H3K9me3 binding; the C-terminus
+includes a conserved chromoshadow domain (CSD) [39] that allows HP1’s dimerization and its
+interaction with other chromatin motifs; and a third variable domain (hinge) which separates CD
+and CSD and interacts with the H1 histone, DNA or RNA[40]. Thus, HP1 expression occurs in all
+chromosomes in subtelomeric regions.
+Figure 9 - Heterochromatin Protein 1 (HP1) structure.Made in Biorennder.com
+Furthermore, HP1 is responsible for the silencing genes that barcoded the AP2-G, which is
+located near the internal part of H3K9me3/HP1 chromosomes – demarcated heterochromatic
+islands [41], [42], thus being crucial for asexual proliferation and the silencing of blood-stage genes
+[43], [44].
+9
+
+1.4.2. The interplay between HP1 and GDV1
+The Gametocyte Development Protein 1 (GDV1) is a perinuclear protein found in Plasmodium
+falciparum, holding a gametocytogenesis function that was reported for the first time in 2012 [45].
+Moreover, the overexpression of GDV1 has been shown to enhance gametocytes is production in
+parasites lacking gdv1, as observed in 3D7 strains [45]. Further studies [46] have reinforced the
+role of GDV1 in the regulation of molecular mechanisms underlying gametocytogenesis. GDV1 has
+been demonstrated to induce a sexual commitment by silencing HP1, a natural repressor of
+gametocytogenesis, through an epigenetic control strategy which involves GDV1-mediated
+heterochromatin impairment in Plasmodium falciparum (Figure 10)[46].
+Figure 10 - Interaction AP2-G - HP1 - GDV1. The perinuclear protein gametocyte development 1 (GDV1) is the sexual
+commitment activator, which will sever the connection between HP1 and AP2-G gene (Figure 8), expelling the first
+one and releasing the AP2-G gene that will be free to generate sexual parasites (gametocytes). Made in Biorender.com
+The question of how parasites maintain under control their sexual commitment has been
+addressed by recognizing several non-coding RNAs in Plasmodium falciparum, such as asdgv1: a
+multiexon antisense transcript, with the function of negatively regulating GDV1 is expression.
+However, there is still a lack of understanding regarding how environmental signals is transduction
+- mediated by asdgv1- contributes to sexual commitment and differentiation. [46], [47].
+In mid-2021, a mutation was discovered at GDV1 its C-terminus. This mutation, consisting of a
+39-amino-acid alteration in the C-terminal region, impairs GDV1 without affecting its interaction
+with HP1. Interestingly, this mutation alone is sufficient to disrupt the activation of the sexual
+cascade [48].
+10
+
+1.4.3. Gametocyte Development Genes
+a) Gametocyte Early Genes
+Although there is scarce knowledge of the molecular pathways and genes involved in
+gametogenesis, there are some molecular markers which help us track gametocytes, such as:
+HomeoDomain – like protein (HDP1) is involved in the falciform gametocytes [49]; H3K36me2
+and 3 mark theline between early and intermediate gametocyte development; GEXP2 signal is
+relevant withinthe early sexual ring stage; pfg14-744 in the erythrocyte cytoplasm when
+gametocytes startdeveloping [50]; pfg14-748, that is found near the parasitophorous vesicle [50],
+and Plasmodium falciparum sexual stage-specific protein 16 (Pfs16), which represents the earliest
+gametocyte marker [51].
+b) Gametocyte Late Genes
+There are only few gametocyte-related late genes known to date, such as Pfs28. Pfs28 is a sexual
+late marker expressed in stages IV and V of gametocytes [52]. It is a glycosylphosphatidylinositol-
+anchored protein, important for the impairment of gametes in the mosquito midgut [53]. Moreover,
+ithas been involved in the production of an antibody – the Pfs28/ Pfs25 vaccine, employed to
+block vector transmission [54]. Furthermore, Pfs25 has a similar function in relation to ookinetes’
+survival and parasite’s survival in the mosquito midgut [55].
+c) Pfs16: The Earliest Gametocyte Marker
+The Plasmodium falciparum sexual stage-specific protein 16 (Pfs16) is an early gene marker for
+gametocytes [56]. Pfs16 is expressed 35 hours post-merozoite invasion in the parasitophorous
+vacuole membrane in the parasite [57]. Pfs16’s expression is continuous during gametocytes stage
+I to V [58], making it a good candidate to report the presence of gametocytes and all sexual
+development.
+In early 2023, a new function of Psf16 was discovered, specifically with a silencing role in the
+mosquito’s immune system and promoting vector transmission [59].
+d) Sex Patterns Genes Differences
+Several studies have identified potential differences in commitment between males and females
+regarding sex differentiation. In males (producing microgametes), specific markers have been
+identified, such as a mutation on chromosome 12 known as PfMAP-2[60], essential for
+microgametocyte development and exflagellation. Additionally, the nuclear microtubule-associated
+End Binding protein 1 (PfEB1) plays a crucial role in male fertility [61]. Chromatin patterns
+11
+
+indicative of male differentiation are influenced by gametocyte sucrose nonfermentable 2 (gSNF2)
+during early gametocyte stages[62]. On the other hand, unique features in females include the
+transcription factor AP2-O3, which acts as a repressor of female gametocyte maturation, leading
+to the production of immature female gametocytes. Moreover, high expression levels of histones
+H2A.Z and H2B.Z have been observed in H3K9me3-associated heterochromatin in female
+gametocytes[63].
+Despite the scarce knowledge about sex differentiation and stage development in gametocytes,
+in 2023 novel targets related to gametocytes and sex differentiation were discovered. However,
+there is a need to further analyze and dive deeper in the parasite genome and proteomics in order
+to discover novel genes to target the interruption of vector transmission using transmission-blocking
+strategies. The drug screening differentiation between males and females is crucial to understand
+the interruption of vector transmission as stated by natural law.
+1.5. Strategies to induce Gametocytogenesis in vitro
+1.5.1. Stress Protocol
+To ensure optimal quantity and quality of gametocyte production, attention must be paid to four
+key factors: parasite strain, serum, blood, and temperature (Figure 11)[64]. The choice of the
+parasite strain is crucial, with a preference for a strain that yields a high number of gametocytes,
+ideally from a fresh culture[65]. Over time, parasite strains may lose their ability to generate new
+gametocytes with each multiplication, making it essential to use fresh cultures [66]. The
+Plasmodium falciparum NF54 strain represents an excellent candidate within this context, allowing
+a high-scale production and maintenance of gametocytes for over two months [64]. Serum
+selection is blood-dependent and highly variable for optimal gametocyte production [67], [68].
+Therefore, blood must be compatible with the serum, with O+ and A+ blood types being commonly
+utilized; the use of fresh blood is advised [64]. Temperature plays a critical role in determining
+gametocyte appearance, with cultures ideally being maintained at 37°C [64], [69]. It's important
+to note that serum preparation, sterilization, parasite strain selection, timing and culture volumes,
+represent important steps, which protocols should be optimized according to each laboratory
+condition setting [64], [70].
+12
+
+Figure 11 - The four key factors to produce gametocytes: Blood type, blood-serum dependent, parasite strain, and
+temperature. Made in Biorender.com
+According to evolution, it was suggested that Plasmodium falciparum parasites suffer a sexual
+commitment when triggered by environmental stress. Since the 20th century, obtaining
+gametocytes in vitro cultures in the laboratory has been achieved byinducing healthy stress into
+Plasmodium falciparum parasites. This stress can be related to drug pressure such as the addition
+of quinoline[71], to the increase of cAMP signaling [70], to differences in the medium conditions,
+and to higher parasitaemia levels. Also, the addition of Lactic acid [72] and unpolyunsaturated fatty
+acids [73] promotes gametocytogenesis.
+The stress method is a commonly used approach to obtain viable gametocytes. However, working
+with gametocyte cultures in vitro presents several challenges. Firstly, in continuous cultures,
+parasites often lose their ability to generate new gametocytes over time. Additionally, gametocytes
+take approximately 10 to 15 days to fully mature through the five stages of development [64].
+Furthermore, the requirement for daily medium changes is an addition s to the labor-intensive
+nature of the process. Finally, there is a risk of biased results, which further complicates the
+experimental process. Overall, these challenges contribute to an expensive, labor-intensive, and
+time-consuming method for producing gametocytes.
+As postulated by Fivelman, gametocyte production is dependent on initial parasitaemia to find
+the optimal percentage of medium change [74]. According to the well–known stress protocol, high
+parasitemia not only hampers asexual development but also increases cell death. The addition of
+N-Acetylglucosamine (GlcNac) is crucial for the clearance of the mixed cultures, where the effect is
+upon trophozoites and schizonts [64], [74].
+We aim to optimize the mass production of gametocytes through genetic–editing strategies, in
+order to be able to detect and quantify them through optical readout for drug screening purposes.
+13
+
+1.5.2. Genome–editing strategies
+Several gene-editing strategies have been employed to understand Plasmodium falciparum is
+biology and molecular mechanisms, aiming at the identification of novel drug targets. These
+strategies involve gene deletion or insertion techniques, capitalizing on natural repair mechanisms
+within the organism.
+Living organisms possess two main repair mechanisms: non-homologous end joining (NHEJ) and
+homology-directed repair (HDR), which are activated in response to nuclease-induced double-
+strand breaks (DSBs) in the genome (Figure 12) [75]. NHEJ repairs breaks by directly attaching
+DNA ends, often resulting in small insertions or deletions at the break site[76]. In some cases,
+such as when DSB occurs between homologous repeat regions in the same direction, a deletion
+of one repeat can occur, followed by break closure mediated by a single-strand annealing pathway
+(SSA). Conversely, HDR utilizes an external DNA template with identical homology arms to integrate
+transgenes into the flanking region of DSB [77]. It is noteworthy that transgene integration via HDR
+repair is more prone to failure compared to gene disruption with NHEJ repair. Optimal efficiency
+of site-specific integration with HDR repair requires a high rate of replication of homologous sister
+chromatids cells, with only around 30% of cells achieving the desired integration [78].
+Figure 12 – Illustration of organism repair mechanisms: Homology-directed – Repair (HDR) and Non-Homologous
+end-joining (NHEJ).
+Plasmodium lacks the NHEJ machinery present in other organisms, relying instead on alternative
+end-joining pathways during the G1 phase of mitosis and homologous recombination during phases
+14
+
+S, G2, and M when asynchronous mitosis and sister chromatids are present [79]. However, this
+parasite uses A-T rich DNA templates for HDR cloning posing a challenge in fragment stability and
+maintenance in Escherichia coli [80], [81].
+Genetic engineering techniques such as CRISPR-Cas9[82], attP-attB site-specific recombination
+[83], and Zinc-Finger Nucleases (ZFNs) [84] have been extensively employed for transgene
+integration in Plasmodium falciparum’s genome. Within this context, the selection-linked integration
+(SLI) and the riboswitch-inducible system (glmS) [85] are two systems that will be explored further
+in this thesis.
+a) CRISPR – Cas9 system
+The Clustered regularly interspaced short palindromic repeats (CRISPR – Cas9) system is an
+adaptive immune system found in prokaryotes, in which specific RNAs guide endonucleases
+towards target genes[86]. The Cas9 endonuclease protein, derived from Streptococcus
+thermophilus, contains a protospacer adjacent motif (PAM) next to the target DNA sequence,
+crucial for Cas9 binding. Spacers are transcribed into CRISPR RNAs (crRNAs) and trans-activating
+CRISPR RNA (tracrRNA), forming a duplex that guides Cas9 to the target DNA sequence [87].
+Single guide RNA directs Cas9 to generate a double-strand break (DSB) in the genome, with each
+crRNA unit containing a 20-nucleotide guide sequence (Figure 13). This system has been utilized
+to produce inducible gametocyte lines and transgenic reporter parasite lines. For instance, Boltryk's
+research focused on engineering a reporter line to mark GDV1 via the CRISPR-Cas9 system, and
+successfully transmitting mutant parasites to the mosquito and liver stage [88]. Another study
+achieved conditional expression upstream of PfAP2-G to enhance sexual conversion [89]. CRISPR-
+Cas9 has proven to be a highly successful gene editing technique in Plasmodium falciparum’s
+genome using small insertions[90].
+15
+Protospacer
+tracrRNA
+crRNA
+Spacer
+PAM
+Figure 13 - Depiction of CRISPR - Cas9 system: Protospacers adjacent motif (PAM) are transcribed to CRISPR
+RNAs (CrRNAs) and trans-activated the CRISPR-Cas9 (tracrRNA) originating a duplex that guides the Cas9 to a
+specific DNA sequence.
+.
+
+b) Bxb1 integrase system
+The specific double recombination between an attP sequence in the phage and an attB sequence
+in the parasite genomes is catalysed by Bxb1 mycobacteriophage serine integrase [91]. The Bxb1
+integrase promotes a double-strand break in the parasite’s genome allowing the homologous
+recombination of the gene of interest’s insertion into the genome. Plasmodium falciparum has
+been used to generate reporter lines that are detected by fluorescence or luminescence for
+functional and biological studies [92]. Nevertheless, the Bxb1 integrase system has been widely
+used in malaria research and is advisable for larger insertions in the genome compared to the
+CRISPR–Cas9 system [83], [91].
+attB
+PlasmidGOI -attP
+Bxb1 Integrase
+PlasmidGOI -attP attP
+HomologousRecombination Bxb1 Integrase
+Plasmodiumfalciparum attB
+attP
+HomologousRecombination
+attB
+Plasmodiumfalciparum attB L attB R
+Figure 14 – Bxb1 integrase system: attP – attB recombinase system.
+c) Zinc – Finger Nucleases (ZFNs)
+The Zinc-Finger Nucleases (ZFNs) are protein domains capable of binding to specific sequences
+in the genome, facilitated by a balance of zinc ions [93]. They are engineered by combining a
+designed zinc finger protein with the cleavage domain of the FokI endonuclease [94]. ZFNs operate
+as dimers, comprising two monomer sequences, one of which encodes a half-target region typically
+16
+
+spanning from 9 to 18 base pairs [95]. Upon dimerization, the FokI endonuclease cleaves the
+sequence, creating a 5 to 7-base pair spacer fragmnets that separates the left and right zinc-finger
+binding regions [84]. These nucleases induce double-strand breaks at the targeted genomic site
+(Figure 15). However, with the emergence of the CRISPR–Cas9 genome-editing system, ZFNs have
+been largely supplanted.
+Figure 15 - Illustration of Zinc finger nucleases (ZNFs). Made in Biorender.com
+d) Riboswitch – inducible system (glmS)
+The glmS ribozyme, found in Gram-positive bacteria, is unique and relies on a specific co-factor,
+glucosamine (GlcN)[96], [97]. This ribozyme has been shown to regulate the expression of reporter
+genes when glucosamine is added in yeast. Prommana et al. applied this concept by inserting the
+ribozyme into the gene of interest in Plasmodium falciparum, resulting in the expression of a
+chimeric RNA containing the ribozyme RNA at the 3' untranslated region (UTR) [85]. Conditional
+knockdown of the gene of interest is achieved by adjusting the glucosamine concentration in the
+parasite’s culture medium [85]. The ribozyme is positioned near the 3' UTR after the coding region,
+causing the mRNA to self-cleave when glucosamine binds to the ribozyme, thereby leading to the
+knockdown of protein expression (Figure 16)[85].
+17
+
+Figure 16 – Conditional Knockdown with glmS system.
+e) Selection – Linked Integration (SLI)
+The selection–linked integration is used to tag the protein of interest (POI) by fusing them with
+GFP, and a selectable marker (Neomycin) [98]. The plasmid to be integrated into the genome
+requires a homologous sequence to the target gene, which will promote an homologous
+recombination mechanism [99]. Moreover, the C-terminus chosen tag is fused to the T2A skip
+peptide and a selectable marker. The selectable marker for the selection–linked integration is
+represented by neomycin. Once it is integrated into the genome, it expresses the desired tag and
+SLI resistance, under the endogenous promotor expression [98]. The parasites that successfully
+achieve integration are susceptible to selection with Neomycin. the SLI – TGD (Selection – linked
+integration with targeted gene disruption) represents a variant of the traditional SLI approach
+(Figure 17), by targeting the sequence in the N – terminus of the POI. When it is selected and the
+plasmid is integrated in the genome, it causes the target gene’s disruption[98].
+18
+
+Figure 17 – The selection–linked integration (SLI) system.
+In conclusion, we aim to optimize a gametocyte-producing protocol using genome editing
+strategies in order to be able to test several drugs that can block the transmission between humans
+and the Anopheles mosquito vector.
+1.6. Quantification of Gametocytes
+1.6.1. Classical Method
+Since the primordial ages, malaria parasites have been analyzed with Light Microscopy (LM).
+The LM method is used for counting the differential stages and parasitemia, and is also accounted
+by WHO to verify all suspected cases of malaria [100]. Although this method is available in almost
+all laboratories, it requires a well-trained microscopist. Moreover, LM, allows low cost in diagnosis,
+standard sensitivity for clinical examination, differentiation between malaria species and stages,
+and the parasite density countdown [101]. Thin blood smears with Giemsa staining are used as
+gloden standard to measure parasitaemia. It is important to note that LM is labor-intensive and
+time-consuming, and it is not useful for high-throughput drug screenings.
+1.6.2. Optical Readout Methods
+Technological advancements are paramount for innovative research in Health Science
+Investigations, particularly in molecular biology when considering molecular mechanisms and
+proteins from various organisms. Luminescent and fluorescent proteins play vital roles in molecular
+biology as markers for genes or proteins. Consequently, there is a demand for engineering new
+and improved fluorescent and bioluminescent proteins with specific wavelengths across the
+multicolor light spectrum, featuring diverse emission and excitation peaks.
+19
+
+In the past decade, numerous fluorochromes and fluorescent proteins have been developed for
+transfection, including mCherry, mOrange, GFP, mNeptune, E2-Crimson, and enhanced
+fluorescent proteins like EmiRFP670 [102]. For our focus, we consider Green Fluorescent Proteins
+(GFP) [103] and EmiRFP670 [104]. While GFP, originating from the luminous jellyfish Aequorea
+victoria, was the first to be utilized[105], there has been the development of a new monomeric set
+of infra-red fluorescent proteins (iRFP). iRFPs are enhanced by supplementation with Biliverdin
+(BV), exhibiting superior brightness compared to infra-red proteins (IFPs) in mammalian cells[102].
+The optical window for RFP spans 650–900 nm and is characterized by low autofluorescence and
+reduced cell toxicity. Recently, Matlashov and his team developed enhanced infra-red fluorescent
+proteins, comprising a monomeric set with distinct spectra of light action, such as EmiRFP670 and
+EmiRFP720 [104].
+Bioluminescent proteins (Figure 18), sourced from various luminous organisms (e.g., Vibrio
+harveyi, Photinus pyralis, Aequorea victoria), serve as reporters for gene expression and in vivo
+imaging in eukaryotic cells[106]. Notably, Nanoluciferase boasts higher specificity, solubility,
+thermostability, and slower decay of the reporter signal[107], [108].
+Figure 18 - Different bioluminescent reporter proteins (Firefly Luciferase, Renilia Luciferase, and NanoLuc
+Luciferase). Source from ‘NanoLuc Bioluminescence-Driven Photodynamic Activation of Cholecystokinin 1 Receptor
+with Genetically-Encoded Protein Photosensitizer MiniSOG - PMC’. Accessed: Apr. 03, 2024. [Online]. Available:
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7313028/
+Luminescence assays are utilized in biological cultures transfected with the several types of
+luciferase reporter gene, providing a flexible tool for transcriptional studies [99]. This biochemical
+reaction catalyses the oxidation of a substrate (D-luciferin), emitting light, that is measurable as
+luciferase activity. The assay, employed for reporter gene assays, involves the fusion ofa luciferase
+reporter gene with a gene of interest (GOI) or a promotor to study their roles and transcriptional
+20
+
+expression. Despite its high sensitivity and reproducibility, the assay faces challenges such as
+energy demand and the need for a substrate. Genetic engineer Marin-Mogollon developed a
+Plasmodium falciparum NF54 reporter line expressing luciferase and mCherry, exemplifying the
+integration of fluorescence and luminescence technologies for reading expression in gametocytes,
+sporozoites, and liver stage [101]. However, it is essential to note that fluorescent proteins (e.g.,
+Ypet, GFP, DsRed) exhibit slower kinetics and sensitivity compared to Firefly luciferases [103],
+[109], [110].
+1.7. Antimalarial Resistance and Effectiveness
+Artemisinin-based combination therapies (ACTs) serve as the primary treatment for
+uncomplicated P. falciparum malaria cases, as recommended by the World Health Organization
+(WHO). ACTs involve combining an artemisinin-based compound, known for its rapid action, with
+another drug that acts more slowly [111]. Artemisinin drugs play a critical role in reducing
+parasitemia in the early stages of infection, typically acting within the first hour. The partner drug
+is crucial for continued parasite clearance, preventing disease relapse in the same host [111]. This
+combination is vital for achieving successful clinical and parasitological recovery and for preventing
+the development of drug resistance [112].
+1.7.1. Genes related to Antimalarial drug resistance
+Since 2015, there has been a rise in antimalarial drug resistance, even in the current
+treatments. Nowadays, several genes are related to the antimalarial resistance and effectiveness
+in Plasmodium falciparum such as Plasmodium falciparum chloroquine transporter (pfcrt),
+Plasmodium falciparum dihydrofolate reductase (pfdhfr), Plasmodium falciparum dihydropteroate
+synthase (pfdhps), Plasmodium falciparum Kelch 13 gene (pfk13) and Plasmodium falciparum
+multidrug resistance 1 (pfmdr1). Mutations at the pfcrt are related to chloroquine resistance and
+are known to modulate other antimalarial drugs response, being disseminated among all the
+endemic malaria countries [113], [114]. Mutations at the pfdhfr and pfdhps confer resistance to
+pyrimethamine and sulphadoxine, respectively, with high alleles mutated globally widespread
+[115], [116] [117], [118]. Mutations at the pfk13 have been shown to confer artemisinin tolerance
+and are emergent in the African region [119]. Mutations and gene copy numbers at the pfmdr1
+gene are associated with the resistance of several antimalarials including chloroquine lumefantrine
+and mefloquine [120]. According to the World Health Organization, this is a threat to the elimination
+of malaria disease.
+21
+
+1.7.2. Present Antimalarial treatment do not target vector transmission
+According to the Malaria Eradication Agenda, future therapies involve the combinination of drugs
+that target the symptomatic stage, such as most of the available antimalarials, but also, the less
+metabolically active and non-replicating gametocytes that block human mosquito transmission
+[121]. Recent studies show that only a small portion of antimalarials can target gametocytes. As
+advised by WHO, primaquine is the only clinical treatment available that kills maturegametocytes
+(I - V) [122]. Several studies show that most antimalarials cause environmental stress, thus
+increasing the gametocyte's commitment and stimulating the dissemination of the disease[123].
+1.7.3. The Key to the Interruption of Vector Transmission
+The key to addressing gametocytes in the human body is by targeting the molecular pathways
+responsible for the transcriptional regulation of sexual commitment (Figure 19) [124]. Chloroquine,
+a 4-aminoquinoline drug, disrupts hemoglobin is catabolism, leading to the accumulation of free
+heme, which is highly toxic to the parasites [125], [126], [127]. However, chloroquine is ineffective
+against gametocytes in stage V, as their development is slower [128]. Only gametocytes stages I
+to IV fully consume host hemoglobin, making them immature and susceptible to chloroquine [129],
+[130]. Other 4-aminoquinolines like piperaquine and amodiaquine demonstrate efficacy against
+gametocytes in vitro [92]. Piperaquine targets gametocytes stages II and III in vitro cultures, while
+amodiaquine selectively kills immature gametocytes in vitro, inhibiting male ex-flagellation [92],
+[131].
+Figure 19 – Depiction of the molecular processes present in immature and mature gametocytes, that can be targeted
+by novel drugs that can act directly or indirectly in gametocytes stages (I - V). Blue: nucleus, Red: DV, Green:
+mitochondria. PQ (primaquine), MB (methylene blue), ARTs (artemisinin derivatives), “?” signifies the potential of
+targeting this process. Taken from B. A. Munro and B. J. McMorran, ‘Antimalarial Drug Strategies to Target
+Plasmodium Gametocytes’, Parasitologia, vol. 2, no. 2, Art. no. 2, Jun. 2022, doi: 10.3390/parasitologia2020011.
+22
+
+Interestingly, among a comprehensive list of drugs (Figure 20), only two are known to effectively
+eliminate or prevent gametocyte formation and disease transmission: primaquine and methylene
+blue [132]. Since the 1950s, primaquine has been demonstrated to directly kill mature
+gametocytes, thereby preventing transmission to vectors. However, this treatment poses significant
+toxicity risks for individuals with glucose-6-phosphate dehydrogenase (G6PD) deficiency, a frequent
+genetic condition in malaria-endemic regions [133]. Tafenoquine represents a potentially safer
+alternative to primaquine [134], [135]. Nonetheless, tafenoquine, which belongs to the same drug
+family as primaquine, is also related to the risk of causing hemolytic toxicity in G6PD-deficient
+individuals and others [134], [135]. In the 19th century, in Germany, malaria patients were
+administered a synthetic dye known as methylene blue. While methylene blue exhibits potent
+activity against all stages and genders of gametocytes (I – V) in vitro, its use is associated with side
+effects and is not suitable for treating individuals with G6PD deficiency [136].
+Therefore, the discovery of new drugs capable of effectively eliminating gametocytes and
+interrupting vector transmission is essential for malaria control and elimination efforts.
+Figure 20 – Illustration of the effect of the antimalarial drug on gametocyte stages (I - V).
+23
+
+CHAPTER 2
+AIMS
+24
+
+A foremost limitation related to the lack of drugs targeting the non-symptomatic and “neglected”
+parasite gametocyte stage, is the challenge to produce large quantities and accurate quantification,
+immensely reducing the capacity for high-throughput drug screening. Gametocytes are the key
+within the parasite’s life cycle and in the dissemination of the disease. This master thesis aims to
+generate a new transgenic parasite line for multi-stage drug screening, targeting the symptomatic
+intra-erythrocyte parasite stage and most importantly, the gametocyte stage. Different genome-
+editing strategies will be employed to modify the parasite transcriptional regulation of the sexual
+commitment to induce gametocytogenesis, leading to large-scale gametocyte production. We also
+aims to constitutively express fluorescent and/or luminescent protein in those lines, to generate a
+P. falciparum reporter parasite for easy, fast, and accurate stage-specific quantification through
+optical readout.
+Specifically:
+1. Transgene integration in the Plasmodium falciparum genome:
+a) Engineer a transgenic parasite line that can increase sexual commitment
+(gametocytogenesis). For this, the glmS ribozyme system will be used to generate a
+conditional knockdown of the heterochromatic protein 1 (HP1), a natural repressor of the
+PfAP2 – G transcription factor fundamental to sexual commitment. The SLI system will be
+used to integrate the glmS cassette downstream of the pfhp1 gene.
+b) Construct a Plasmodium falciparum reporter line for asexual and sexual parasite stages.
+To detect the asexual forms, a green fluorescent protein (GFP) will be linked downstream
+to the hp1 gene which will be silenced if the parasite is sexually committed. To detect
+gametocytes, a red fluorescent protein-luciferase fusion (EmiRFP670Luc) will be expressed
+under a gametocyte-stage specific promoter (pfs16), which will be integrated into the cg6
+gene locus of the NF54attB parasite line through the attP-attB recombinase system. To be
+able to use the attP-attB recombinase system, the CRISPR-Cas9 system will be used to
+introduce the attB sequence in the cg6 locus of the NF54 parasite line.
+25
+
+CHAPTER 3
+METHODS
+26
+
+3.1. In vitro culture of Plasmodium falciparum
+The plasmodium falciparum strains used in this thesis were NF54 WT (MRA - 1000, BEI
+Resources), NF54 – GFP – Luciferase (MRA - 1217, BEI Resources), 3D7 (MRA - 102, BEI
+Resources), Dd2 (MRA - 150, BEI Resources).
+The asexual parasites were cultivated in culture flasks or culture plates in a hypoxia chamber
+(Billups-Rothenberg, Inc., CA, USA) in an incubator at 37°C. Each culture flask contains Malaria
+Complete Medium (MCM) composed of RPMI medium 1640 (Gibco, Thermo Fisher Scientific,
+USA), 2.3 g/L sodium bicarbonate (Sigma-Aldrich, USA), 2.5 g/L AlbuMAX® (Gibco, Thermo
+Fisher Scientific, USA), 0.05 g/L of hypoxanthine (Sigma-Aldrich, USA) and 10 mg/L gentamicin
+(Gibco, Thermo Fisher Scientific, USA). The cultures were under a controlled environment of 5%
+CO/ 3% O/ 92 % N (Figure 21). The cultures were maintained at 4% hematocrit (Healthy red
+2 2 2
+blood cells provided by the Immuno-hemotherapy services at Hospital de Braga) in 25 cm2 flasks,
+1% hematocrit in 200 µL MCM on 96 – wells plate, and 2% hematocrit in 2 mL MCM on 24 – well
+plate. The parasitemia and the health monitorization of the cultures were obtained by the traditional
+method: giemsa staining under a light microscope observation. The Giemsa staining is prepared
+with of 100% methanol fixation and 10% Giemsa stain in thin blood smears. The medium must be
+changed daily. The 5% D-sorbitol solution (Millipore, 1.07758) was used to obtain synchronized
+ring cultures.
+Figure 21 - Malaria culture care routine
+The parasite strains were kept in cryogeny, being frozen when reaching more than 2% of
+parasitemia at the ring stage. The freezing process involves the use of an equal volume of freezing
+medium [28% glycerol (Sigma, G5516), 3% sorbitol (Millipore, 1.07758), and 0.65% NaCl)] and
+27
+
+packed red blood cells with parasites, which is placed quickly in liquid N2. On the other hand,
+frozen parasites are thawed by carefully adding 0.2 X original pellet volume (OPV) of 12% NaCl
+solution, incubated for 5 minutes at room temperature, followed by the addition of 10X OPV of
+1.6% NaCl, and centrifugated for 5 minutes at 1500 rpm. The pellet resuspension in 10 X OPV of
+0.9% NaCl and 0.2% Dextrose is followed by a 5-minute centrifugation at 1500 rpm. The final pellet
+is resuspended in 5 mL of MCM at 4% hematocrit and added to a 25 cm2 flask culture. Parasites
+were stored at – 80ºC for short-term time and in liquid N for long–term storage.
+2
+For parasite transfection, the culture and blood were washed with cytomix [10 mM
+K2HPO4/KH2PO4, 120 mM KCl, 0.15 mM CaCl2, 5 mM MgCl2, 25 mM HEPES (Gibco,
+15630080), 2 mM EDTA (Supelco, 1.08418)]. Mix the 300 µL washed culture pellet with 50 µg
+of the plasmid of interest to a final volume of 500 µL for each transfection. Place the mixture into
+a 0.2 cm cuvette in ice. It was electroporated the mixture under the following conditions: 0.31 kV
+of voltage, 950 ufD of capacitance, and 10 – 14 ms at the constant time (Gene pulser X, BIORAD).
+3.2. Molecular Biology Methods
+3.2.1. In silico cloning strategy
+All in silico constructions were performed using ApE v3.1.4, SnapGene Viewer v7.0.3, SnapGene
+and Geneious Prime. Sanger sequencing confirmation was performed by STABVIDA and data
+analysis with Geneious Prime 2024.0. All the graphics were set up using GraphPad Prism v8.4.2.
+The genomic DNA sequences were traced using the database PlasmoDB (www.plasmodb.org)
+and the NCBI BLAST® software (www.ncbi.nlm.nih.gov/BLAST/). The EmiRFP670 reporter
+protein sequence was acquired from NLM (www.ncbi.nlm.nih.gov/). The sequence of the cg6 gene
+from the Plasmodium falciparum NF54, the sequence of the pfs16 gene from Plasmodium
+falciparum 3D7, and the Heterochromatin Protein 1 (HP1) sequence from Plasmodium falciparum
+NF54 were obtained from PlasmoDB, while the sequence of the luciferase gene of Plasmodium
+falciparum NF54 – Luciferase from NBCI BLAST®.
+The plasmid sequence of pUF1 and pL6 was provided by a collaboration from the Pasteur
+Institute; pDC2 plasmid with Bxb1 integrase system was kindly given by David Fidock laboratory,
+Columbia University; pINT was provided by the Malaria Research and Reference Reagent Resource
+28
+
+Center (MR4). The pLAMP1 – EmiRFP670 plasmid (www.addgene.org/136570/) was acquired
+from Addgene.
+3.2.2. Ligation
+The ligation of an insert into a vector was performed using 1 U T4 DNA Ligase (Thermo Scientific),
+2 µL 2 X Reaction Buffer (Thermo Scientific), 1 µL of ATP, and water to reach 20 µL total volume,
+with a molar ratio of 1:3 or 1:10 (vector: insert) using the ligation calculator available
+(www.insilico.uniduesseldorf.de/Lig_Input.html). The reaction was kept on ice for up to 2 hours at
+room temperature or overnight at 4ºC.
+Ligation was used for restriction – ligation, and with commercial cloning kits such as cloneJET
+kit ligation and NZY-A PCR cloning kit:
+• For restriction–ligations: the use of restriction endonucleases produces DNA fragments with
+specific complementary end sequences, which can then be joined together using a DNA
+ligase, as explained in the standard ligation before the transformation.
+• For cloneJET kit ligation involves the use of a pJET 1.2 blunt (a linearized vector) plasmid that
+contains a lethal gene that is disrupted when the insertion of the interested fragment is
+successful, thus only the bacteria that will have our vector will be present in the plates and as
+optimal PCR product quantity for ligation.
+TABLE 1 - Optimal PCR product quantity for ligation and respective amplicon size.
+Optimal PCR product quantity for
+Amplicon Size
+Ligation
+100 5 ng
+300 15 ng
+500 25 ng
+1000 50 ng
+2000 100 ng
+• regarding the NZY-A PCR cloning kit: it is advised to directly clone PCR products with 3´- A
+overhangs into a linear plasmid with compatible overhangs. This PCR cloning kit is ideal for
+the amplicons from a non-proofreading DNA polymerase (ex: Supreme Taq Polymerase).
+29
+
+3.2.3. Plasmid transformation into competent cells – Heat shock strategy
+The heat shock method transformation was performed in NZYStar Competent Cells (NZYtech) or
+MAX Efficiency™ Stbl2™ Competent Cells (Invitrogen™). The competent cells were thawed in ice
+and up to 5 µL of the DNA was added to 25 µL E. coli competent cells. The reaction was performed
+in ice for 20 minutes. After this incubation, the cells were heat shocked for 40 seconds at 42ºC in
+a termoblocker (AccuBlockTM, Labnet), and then put in ice for 2 minutes immediately. Following the
+procedure, we used 300 µL of SOC (Super Optimal Catabolite)medium [0.5 (w/v) yeast extract,
+2% Tryptone, 10 mM MgCl2, 2.5 KCl, 10 m nM NaCl, 10 mM MgSO4 and 20 mM Glucose] and
+incubated at 37º C for 1 hour at 200 rotation per minute (rpm). The cells were spread into solid
+Lysogenia Broth (LB) agar plates [10 g/L bacto-tryptone, 5 g/L yeast extract, 10 g/L NaCl, and
+15g/L] with a specific antibiotic (Carbenicilin/Ampicilin/Kanamycin). The specific antibiotic is
+chosen according to the resistance cassette present in the E.coli. The LB agar plates were
+incubated overnight at 37ºC (Heraeus, Kendro Laboratory products).
+3.2.4. Plasmid DNA Extraction
+To perform plasmid DNA extraction, we must expand our bacterial culture containing the
+construct of inteestwithin a Lysogenia Broth (LB) medium and antibiotic (carbenicillin or
+kanamycin). In order to to obtain a concentration of 150 ng/µL – 600 ng/µL plasmid DNA
+following extraction, normally it is necessary to use 5 mL of LB and 5 uL of antibiotic. The plasmid
+DNA was extracted following the guidelines of the manufacturer's instructions of NZYtech Miniprep
+(https://www.nzytech.com/en/mb010-nzyminiprep/ ). To achieve a 300 – 500 ug high–copy
+number plasmid DNA, we should use 400 mL of LB and 400 uL of antibiotic, and perform an
+extraction following the manufacturer instructions of NZYtech Maxiprep
+(https://www.nzytech.com/en/mb051-nzymaxiprep/ ).
+3.2.5. Genomic DNA Extraction
+The genomic parasite DNA was extracted following the guidelines provided by the manufacturer
+of NZY Tissue gDNA isolation kit (https://www.nzytech.com/en/mb135-nzy-tissue-gdna-isolation-
+kit/).
+30
+
+3.2.6. Electrophoresis in Agarose gel
+The electrophoresis was set at 180 or 250 V for 1 hour in an agarose Gel (0.8% - 3%). The 1%
+agarose gel was prepared by adding agarose to Tris-acetate – EDTA (TAE) 1X buffer (20 mM
+acetic acid, 1 mM EDTA, 40 mM Tris [pH 7.6] ) in a final concentration of 1%. The agarose gel
+must be heated to the melting point (be careful with overboiling the solution) and cooled down
+under running water until it reaches 50 ºC ( bearable to touch the skin). After this point, we add
+NZYTech GreenSafe Premium to the mixture, allowing the visualitìzation of DNA bands under
+ultraviolet light exposure. The solution is poured into a gel tray and left to solidify at room
+temperature. For each each run we use a a GeneRuler™ 1kb or 50 bp DNA Ladder (Thermo
+Scientific) for comparison, depending on the molecular weight of the DNA bands. The samples
+were stained with the respective colored kit buffers or with 6 X DNA Loading Dye (Thermo
+Scientific). Gel images were recorded using Gel Doc™ EZ System (Bio-Rad).
+3.2.7. DNA Purification from Agarose Gel
+The DNA purification from Agarose Gels was performed using NZYGelpure kit following the
+manufacturer`s instructions (https://www.nzytech.com/en/mb011-nzygelpure/ ).
+3.2.8. Colony PCR
+A colony PCR was performed in order to amplify regions of interest to screen for the positive
+colonies that probably will contain the requested plasmid. The PCR colony was performed by
+picking with a sterile tip the colonies in the LB plates and mixing the colonies with water. They are
+later subjected to denaturation at 95ºC (MJ Mini ™ Personal Thermal Cycler, BIORAD) to obtain
+free circular DNA from bacteria. The final master mix is composed of 2x Supreme Green Master
+Mix, 10 µM Forward primer, 10 µM Reverse primer, and 8 µL Colony DNA in a total volume of 20
+µL. One primer must be in the interested insert and the second primer must be in the vector. The
+primer sequences and PCR settings for each colony PCR are presented in Table 2. We used the
+Eppendorf Mastercycler® ep Gradient S for the PCR amplification. The amplicons were analyzed
+under UV.
+31
+
+Table 2 - Primer sequences (5`-3`) and PCR settings for each colony PCR.
+Plasmid Name Primers (5` - 3´) PCR Settings
+95 °C – 5´; 35 cycles:
+CP1 – CGGACTAGCCTTATTTTAACTTGCTATTTCTAGCTCTAAA 94 ºC – 30``, 55 ºC –
+pL6_cas9_yDHODH
+CP2 - GATAGCGATTTTTTTTACTGTCTG 30``, 72 ºC –
+1´22``; 72 ºC – 10`
+95 °C – 5´; 35 cycles:
+pL6_cas9_yDHODH_gRNA CP5 - GAGTAACCAAAATGCATAATTTTTCCT 94 ºC – 30``, 60 ºC –
+cg6 CP6 – CGACTCGGTGCCACTTTTTC 30``, 72 ºC –
+16``;72 ºC – 10`
+95 °C – 5´; 25 cycles:
+PU1 – CGACTCACTATAGGGAGAGCGGC 94 ºC – 30``, 60 ºC –
+cg6_attB - pJET
+PU2 - AAGAACATCGATTTTCCATGGCAG 30``, 72 ºC –
+16``;72 ºC – 10`
+95 °C – 5´; 25 cycles:
+PU1 – CGACTCACTATAGGGAGAGCGGC 94 ºC – 30``, 60 ºC –
+EmiRFP670 - pJET
+PU2 - AAGAACATCGATTTTCCATGGCAG 30``, 72 ºC –
+16``;72 ºC – 10`
+95 °C – 5´; 35 cycles:
+pL6_cas9_yDHODH_gRNA CP7 – TATCCAATGGCCCCTTTCCG 94 ºC – 30``, 55 ºC –
+3´ cg6 – attB 5´ CP8 - TAATGACCATGGCTTTAATTTTATTTTGGTCATGC 30``, 72 ºC –
+30``;72 ºC – 10`
+95 °C – 5´; 35 cycles:
+pDC2 – pfcam – CP9 – ATGATCTGGGTATCTCGCAAAGCA 94 ºC – 30``,57ºC –
+p
+EmiRFP670 - GFP CP10 - GAATACCAGGCCGTGGCCT 30``, 72 ºC –
+20``;72 ºC – 10`
+95 °C – 3´; 35 cycles:
+pDC2 –pfcam– CP11 – ATGGTGTATCGTTTCGATGAGCAA 94 ºC – 30`, 50.6ºC –
+p
+EmiRFP670 - Luciferase CP 12 - CCTAGGGTTGAAGAAAGTATAAATAGAAAAATGGC 30``, 72 ºC –
+55``;72 ºC – 10`
+95 °C – 3´; 35 cycles:
+pDC2 – pfs16 – CP13 - ATGATAAACCGGGCGCGGT 94 ºC – 30`, 50.6ºC –
+EmiRFP670 - Luciferase CP14 - GGTCAAGAGGTCAGGCTGCC 30``, 72 ºC –
+55``;72 ºC – 10`
+32
+
+3.3. Engineering a transgenic Plasmodium falciparum HP1 – glmS – GFP parasite
+line
+To enhance sexual conversion, we performed a conditional knockdown of Heterochromatin
+Protein 1 (HP1). HP1 is a natural repressor of sexual conversion, repressing the ap2-g, and
+therefore inhibiting gametocytogenesis. Once it is performed a knockdown of HP1 protein, it is
+expected a decrease in HP1 expression levels, and thus an increase of sexual conversion.
+Moreover, using an inducible gmlS ribozyme system we expected to knockdown HP1. The glmS
+will be placed a 3´of the protein of the interest HP1 fused with a GFP, and a selection marker
+Neomycin (Figure 22). The edited parasites were identified through GFP expression and genotyped
+with a PCR. Using a pSLI – GFP – glmS in-house plasmid, it was performed a amplification of the
+HP1 to insert a 5`UTR of the GFP.
+Figure 22 – A. Condition Knockdown of HP1. B. A pSLI plasmid with a neomycin cassette (NEO), with a glmS
+ribozyme region attached to a heterochromatin protein 1 (HP1) and a green fluorescent protein (GFP). Plasmodium
+falciparum NF54 recombinant: the ribozyme is inserted in the 3′-UTR after HP1 so that it is present in the expressed
+mRNA. With the addition of the inducer, glucosamine (G), the mRNA self-cleaves resulting in degradation of the
+mRNA and knockdown of HP1-GFP.
+The amplification of HP1 was performed by addition of 0.25 µM dNTPS, 2,5 µM of primer P1,
+and P2, 1 U of iProof High-Fidelity DNA Polymerase, and 100 ng of Plasmodium falciparum 3D7
+genomic DNA in a total volume of 25 µL with the following PCR conditions (Table 3). The
+amplification primers were designed with specific recognition sites: NotI and MluI. The pSLI with
+glmS ribozyme system was restricted with NotI and MluI. The amplification and the restriction were
+run in the 0.8% agarose gel, and the gel band was extracted according to GelPure NZYtech kit
+manufacturers' instructions. The HP1 insert was ligated with pSLI plasmid (vector) in a proportion
+of 1:3 (vector/insert). The ligation was performed with 50 ng of vector, 20 ng of insert, 1U ATP,
+33
+
+and 1 U T4 DNA Ligase. Then, the product was transformed in E.coli competent cells. The positive
+recombinants were screened by restriction using Mlul and NotI.
+Table 3 - Amplification of HP1 with primers with specific site restriction and his PCR settings.
+Primer Restriction
+Primer Sequence (5` - 3`) PCR settings
+Name sites
+98 °C – 2´; 35
+cycles: 98 °C – 20´´,
+P1 Mlul TTACTACAGGTATATCTATAAACATATGT
+55 °C – 30´´,
+P2 NotI CACACATACACAATATACCTACTTGTAC
+72 °C – 45´´; 72 °C
+– 5´.
+The HP1 – glmS – GFP plasmid was transfected inPlasmodium falciparum NF54 line. The
+plasmid possesses a fluorescent protein tag (GFP) which helps us localize the edited – parasites,
+and a neomycin resistance marker that confers resistance to the G418 drug for selection. The
+transfected culture was selected with the G418 drug at a concentration of 250 µg/mL. The plasmid
+integration in the vital cultures was confirmed with a PCR (Table 4) and by fluorescence microscope
+using the GFP signal.
+Table 4 – Primer’s sequence (5´- 3`) for genotyping the edited – parasites HP1 – GFP – glmS.
+Pair of Primers Primers Sequence (5´- 3´) Amplicon Parasite
+P3 CACACATACACAATATACCTACTTGTAC 905 bp Wild - Type
+P4 TTACTACAGGTATATCTATAAACATATGT
+P3 CACACATACACAATATACCTACTTGTAC 1765 bp Mutant
+P5 GCCCAGTCATAGCCGAATAG
+34
+
+3.4. Plasmid Construction for attB insertion into Plasmodium
+falciparum NF54
+Restriction Ligation
+Insert
+Insert BcuI(7) BcuI(809)
+BcuI(6018)
+BcuI BcuI
+5` cg6 attB 3` cg6
+5'cg6-attB-3'cg6
+820 bp
+OverlapExtensionPCR
+Overlapand amplify Overlapand amplify
+1 434 bp 1 430 bp
+In vivo 1 434 bp 1 430 bp
+assembly
+ReplaceBtgZI (9726) BtgZI (9764)
+Cg6 Homology Box 1 Cg6 Homology Box 2
+434 bp 430 bp
+AnnealingPCR PCR PCR
+1 ..50 bp Amplify1 379 bp Amplify441 814 bp
+cg6 -gRNA HB1 HB2
+Insert
+Replace Restriction Ligation NotI(2) NcoI (8575)
+NotI (2) NcoI (5304)
+cg6 gRNA
+50 bp Cg6 BcuI_ Fw Cg6 attB_Fw
+5 cg6 3
+Cg6 attB_Rv Cg6 BcuI_Rv
+SEED
+1 50
+Cg6 Homology Box 1 Cg6 Homology Box 2
+434 bp 430 bp
+cg6-PF3D7_0709200
+1070 bp
+Figure 23 - Depiction of in silico design to obtain the pL6_cas9_yDHOODH - 5´cg6 - attB – 3`cg6.
+35
+
+The pL6 and pUF1 are plasmids used within the CRISPR – Cas9 system to insert a gene of
+interest in the genome of Plasmodium falciparum (Figure 24). This genome–editing strategy was
+designed to insert an attB site in the cg6 gene of Plasmodium falciparum NF54 line. The attB is
+important as it allows the use of the Bxb1 integrase system to insert a large cassette of genes in
+the genome. The pL6 must be specific for the cg6 gene, where a SEED sequence encoded by a
+specific guide RNA leads the cas9 endonuclease enzyme to induce sequence-specific double-
+stranded breaks in the cg6. The homology boxes must also be specific for cg6 and added to the
+left side of the hDHFR sequence. The pUF1 plasmid contains a cas9 endonuclease sequence and
+is marked with a resistance marker for the DSM1 drug, namely the yDHODH gene.
+Figure 24 - Illustration of the pL6 plasmid and pUF1 plasmid.
+3.4.1. Restriction – Ligation to originate pL6 – cas 9 – yDHODH
+The 1 µg of pL6 plasmid was restricted with 1 U NcoI (Fast Digest, Thermo Scientific), NotI (Fast
+Digest, Thermo Scientific), and BamHI (Anza, Invitrogen) restriction enzymes at 37°C for 1 hour.
+The 1 µg of pUF1 plasmid was restricted with 1 U of NcoI (Fast Digest, Thermo Scientific), NotI
+(Fast Digest, Thermo Scientific) restriction enzyme for 1 hour at 37°C. The result of the restriction
+was run in 1% agarose gel. The fragment U6 – AmpR (4226 bp) in the pL6 restriction and the
+fragment yDHODH K7 – Cas 9 (8575 bp) in the pUF1 restriction were excised from the agarose
+gel and purified using the GelPure kit following the manufacturer´s instructions. Ligation of these
+two fragments was performed with 1 U T4 DNA Ligase with a 1:10 vector/insert ratio The ligation
+was performed using 50 ng of vector (yDHODH K7 – cas 9), the insert (U6 – AmpR) and 5 µL of
+deionized water to make up a final volume of 30 µL for 30 minutes at room temperature. The
+transformation was 10:1 (competent cells: ligation). The obtained colonies were screened by colony
+PCR, with amplification of 1500 bp with primers CP1 and CP2. The positive colonies plasmid
+extraction was performed using theMiniprep NZYtech (NZY) kit following the respective
+manufacturer’s instructions. For further confirmation of the plasmid, two different sets of
+36
+
+restrictions reactions were performed: with BamHI (Anza), NotI (Fast Digest, Thermo Scientific),
+and NcoI (Fast Digest, Thermo Scientific), and the second with HincIII (Anza, Invitrogen), BamHI
+(Anza, Invitrogen), and AatII (Anza, Invitrogen). The pL6 – cas 9 – yDHODH in silico design is
+presented in Figure 26.
+Figure 26 – Restriction – ligation of the respective fragments from the donor plasmids pL6 and pUF1.
+3.4.2. Construction of cg6 guideRNA into pL6 – cas 9 - yDHODH
+Two plasmids (pL6 and pUF1) were modified to create a new pL6 – cas 9 – yDHODH plasmid.
+The single guide RNA (gRNA) was modified to target the cg6 gene, which represents a non-essential
+gene in the red blood cells stages. The new plasmid pL6 – cas9 – yDHODH contains a trRNA that
+is under a U6 promotor and terminator control (Figure 27). A web tool was used to create single
+guide RNAs to target the cg6 (ww.chopchop.cbu.uib.no/).
+37
+
+Figure 27 - In vivo assembly to insert the cg6 guideRNA into the pL6_cas9_yDHOODH.
+The 2 µg of pL6 – cas9 – yDHODH plasmid were linearized with 1 U BtgZI (New England Biolabs)
+restriction enzyme at 60ºC for 2 hours and heat-inactivated at 80ºC for 20 minutes. The result of
+the restriction was run in 1% agarose gel, the fragment (12792 bp) was excised with a clean and
+sharp blade from the gel agarose and purified using the GelPure kit following the manufacturer´s
+instructions. The single guide RNA was obtained by annealing two oligonucleotides, using 100 µM
+Primer P6 and Primer P7, and 1X T4 DNA Ligase Buffer (New England Biolabs), in a final volume
+of 22.5 µL. The oligonucleotides and annealing conditions are presented in Table 3. The 100 ng
+of vector were joined with 1.5 uL of 5 µM annealed oligos at room temperature in a PCR tube. The
+transformation was performed in vivo in 80 µL of competent cells using 8 µL of Reaction Mix. The
+obtained colonies were screened with a colony PCR using CP 5 and CP6 primers , for a183 bp
+amplification product (Table 2), after a restriction with 1 U BseRI (New England Biolabs). Only the
+positive colonies are subjected to the cut. The plasmid of positive colonies was extracted using a
+38
+
+Miniprep NZYtech (NZY) kit following the respective manufacturer’s instructions and sent for
+standard Sanger sequencing with the primer CP6.
+Table 5 – Primer sequence (5`- 3`) and PCR settings for cg6 guideRNA.
+Plasmid Name Primer sequence (5´ – 3´) Settings
+95 °C – 30’’;
+ramp-down
+pL6_cas9_yDHO P6 - TAAGTATATAATATTATGTTCATGCTCCTCAACAAGTTTTAGAGCTAGAA
+from 70 °C
+ODH_cg6 gRNA P7 – TTCTAGCTCTAAAACTTGTTGAGGAGCATGAACATAATATTATATACTTA
+to 20 °C at
+5°C/15’’
+3.4.3. Construction of cg6 homology boxes with attB region
+Firstly, the cg6 homology boxes is amplified using 2X Supreme Green Master Mix, 10 µM Primer
+8, 10 µM Primer 9, 100 ng of 3D7 DNA template, and water in a total volume of 20 µL. At the same
+time, we amplified the second cg6 homology boxes with 2x Supreme Green Master Mix, 10 µM
+Primer 10, 10 µM Primer 11, 100 ng of 3D7 DNA template, and water in a total volume of 20 µL.
+The amplification was visualized under UV light, and we purified the band of interest in the gel (near
+430 bp) using a NZYtech GelPure kit according to manufacturer instructions in 3.2.7. After obtaining
+the fragments from the cg6 gene (HB), an overlap PCR was performed to obtain the full-length fusion
+between the two cg6 homology boxes with an attB site (Figure 28).
+Table 6 – PCR program for the 5´cg6 – attB – 3`cg6 overlap.
+Nº PCR settings
+HB 95ºC – 5`; 35 Cycles: 94ºC – 30´´, 60ºC – 30``, 72ºC – 15``; 72ºC – 10´; 4ºC - ∞.
+94ºC – 30``; 9 Cycles: 94ºC – 15``, 72ºC (- 0.5º/cycle) – 30``; 5 Cycles: 94ºC – 15``, 67.5ºC (-
+O1
+0.5ºC/cycle) – 15``, 72ºC – 30``; 72ºC – 2`; 10ºC - ∞.
+94ºC – 30``; 17 Cycles: 94ºC – 15``, 67ºC (- 0.5º/cycle) – 15``, 72ºC – 30``; 23 Cycles: 94ºC –
+O2
+15``, 59ºC (- 0.5ºC/cycle) – 15``, 72ºC – 30``; 72ºC – 2`; 10ºC - ∞.
+The first step of the Overlap PCR (O1) was performed with 25 µL 2X Phusion Green Hot Start II
+High-Fidelity PCR Master Mix, 100 ng Homology Box P (HP), 100 ng Homology Box I (HI), and
+water in a total volume of 50 µL with the PCR setting present in Table 4. The second step of the
+Overlap PCR (O2) involved 25 µL 2X Phusion Green Hot Start II High-Fidelity PCR Master Mix, 10
+µL PCR Reaction (PR), 1.5 µM Primer 8, 1.5 µM Primer 11, and water in a total volume of 50 µL.
+39
+
+It was analyzed under UV light and purified with NZYtech Gel Pure according to the manufacturer’s
+instructions. we performed a ligation into the pJET vector with 1 U T4 DNA Ligase (Thermo
+Scientific), 2 µL Reaction Buffer, 1 µL pJET 1.2 blunt vector, 50 ng of fragment insert, 1 µL ATP,
+up to a final volume of 20 µL. The colonies were screened using universal primers (PU1, PU2).
+For further confirmation, the plasmid was screened with a set of restriction enzymes and sent to
+sequence with PU1 primer.
+Table 7 – Primer´s sequence (5` - 3`) for the obtention of 5`cg6 – attB – 3`cg6 PCR Overlap.
+Nº Name Restriction Site Sequence (5` - 3`)
+P 8 cg6_BcuI_Fw BcuI TAATGAACTAGTATGAACAAATACATAAGAGCGCC
+CCGCGATGATCCTGACGACGGAGACCGCCGTCGTCGACAAGCCGTAACAAAA
+P 9 cg6_attB_Rv
+GGTTTGATGAATTG
+CGGCTTGTCGACGACGGCGGTCTCCGTCGTCAGGATCATCGCGGTGAATATG
+P 10 cg6_attB_Fw
+TTAATGATAAATG
+P 11 cg6_BcuI_Rv BcuI TAATGAACTAGTTAATATCTTTAATTTTATTTTGGTCATGCAATTC
+PU1 pJET_Fw CGACTCACTATAGGGAGAGCGGC
+PU2 pJET_Rv AAGAACATCGATTTTCCATGGCAG
+3.4.4. Restriction – Ligation to obtain pL6_cas9_yDHOODH_5´cg6 – attB – 3`cg6
+The 1 µg pJET – cg6_attB plasmid was restricted with a restriction enzyme 1 U of BcuI (Fast
+Digest) for 1-hour incubation at 37ºC. The pL6_cas9_yDHODH _ gRNA cg6 was linearized with a
+restriction enzyme 1 U of BcuI (Fast Digest, Thermo Scientific) for 1-hour incubation at 37ºC. Both
+restrictions were run in an electrophoresis gel. The interested fragments in
+40
+5´ H om ologyB oxes 3´ H om ologyB oxes
+Figure 28 – Depiction of the overlap between two homology regions (cg6 ) with an overlap region for the insertion
+of an attB sequence.
+
+pL6_cas9_yDHODH_gRNA cg6 (12 786 bp) and pJET - cg6_attB (802 bp) were cut and purified
+with GelPure NZYtech kit following the manufacturer’s instructions. The ligation was performed
+with 1 U T4 DNA Ligase (Thermo Scientific) in a proportion of 1 to 10 (vector/insert) overnight at
+4ºC. The transformation was with 5 uL of Ligation and 50 uL of E. coli competent cells. The colonies
+were screened with PCR cloning with CP 7 and CP 8 with the conditions in Table 2. To finally
+confirm of the plasmid we used BcuI (Fast Digest, Thermo Scientific) and AatlII restriction enzymes
+(Fast Digest, Thermo Scientific).
+Figure 29 – Illustration of the in silico pL6_cas9_yDHOODH_cg6 gRNA_ 5´cg6 – attB – 3`cg6 final plasmid.
+3.4.5. Selection of attB integration in Plasmodium falciparum
+Plasmodium falciparum parasites NF54 and HP1 – GFP – glmS were kept at high parasitemia
+(more than 2%) in 25 cm3 culture flasks to transfect the pL6_cas9_yDHODH_cg6 gRNA - 5´cg6 –
+attB – 3`cg6 plasmids and insert the attB region into the cg6 gene already present in the parasite’s
+genome by an electroporation transfection. The transfections were successfully performed, and the
+transfected parasites were maintained under controlled conditions until they reached 4% of
+parasitemia between day 2 and day 5. The cultures were selected with 1.5 uM DSM1 drug. The
+DMS1 drug was added to the culture for 7 days, until there were no visibly viable parasites in the
+culture smear. After selection, the cultures were cultivated in MCM until they reached optimal
+growth to be extracted. The cultures were confirmed with a PCR to be able to verify the success of
+the genetic engineering alteration. The PCR amplification (Mastercycler ® ep Gradient S,
+Eppendorf) was performed with NZYTaq II 2× Green Master Mix, 10 µM of each primer, and 100
+ng of DNA template from the transfected cultures.
+41
+
+3.4.6. Limited Dilution and Genotyping
+The bulk culture of parasites was genotyped with a Polymerase Chain Reaction (PCR). The
+amplification of the region of interest was with NZYTaq II 2× Green Master Mix, 10 uM Primer
+Forward (P 12), 10 uM Primer Reverse (P 13, P 14, and P 15), and water to a final volume of 20
+uL. The primer sequences are shown in Table 8. The PCR conditions, the amplicon size, and the
+definition of Wild-Type or an NF54attB for each set of primers are shown in Table 9.
+Table 8 – Primers sequences (5´- 3´) for NF54attB and HP1 – glmS – GFP attB.
+Primer Sequence (5` - 3`)
+P 12 TGCACATATTCGCTCCTTCA
+P13 TGCAACTTGTCTATGCCACCT
+P14 AAAACAAAGTGGACATATATATAAA
+P15 CGATGATCCTGACGACGGAG
+Table 9 – Combination of Primers to genotype the edited parasites with integration of attB on Plasmodium falciparum
+NF54 (P 12, P 13, P14, and P 15).
+Set of Primers PCR Conditions Amplicon Parasite
+Primers (bp)
+1 P 12 + P 15 95 °C – 3´; 35 cycles: 94 ºC – 30``, 49.1ºC 761 bp Mutant
+– 30``, 72 ºC – 45``;72 ºC – 10`
+2 P 12 + P13 95 °C – 3´; 35 cycles: 94 ºC – 30``, 49.1ºC 1239 bp Wild – Type
+– 30``, 72 ºC – 45``;72 ºC – 10`
+3 P 12 + P 14 95 °C – 3´; 35 cycles: 94 ºC – 30``, 49.1ºC 1122 bp Wild – Type
+– 30``, 72 ºC – 45``;72 ºC – 10`
+42
+
+3.5. Plasmid Construction for EmiRFP670Luc@s16 insertion into
+Plasmodium falciparum NF54
+9222 bp
+Restriction-Ligation
+8266 bp
+Restriction-Ligation
+8054 bp
+Restriction-Ligation
+BshTI AvrII BglII
+hoI EmiRFP670 Pfs16 Luciferase
+BglII AvrII ApaI hoI
+BshTI
+7799 bp pJET -EmiRFP670 pNZY28 Pfs16 pJET -Luciferase
+AvrII Ligation Ligation Ligation
+ApaI
+AvrII Em 9 iR 47 F P b 6 p 70BshTI ApaI 1 P 2 f 9 s 0 1 6 bp AvrII BglII Lu 1 c 6 i 7 f 6 e r b a p se hoI
+PCR PCR PCR
+pLAMP1 3D7 MRA 127
+EmiRFP670
+Figure 30 – Depiction of the in-silico design to originate the pDC2 – pfs16 – EmiRFP670 – Luciferase – BSD – attP.
+43
+
+3.5.1. Amplification of inserts
+A PCR reaction was performed to obtain an amplification of the pfs16 gene, luciferase, and
+emiRFP670 genes (Table 10). The obtained genomic DNA concentration was approximately 250
+– 600 ng/µL. The PCR programs are exhibited in Table 11 and were performed in the Eppendorf
+Mastercycler® ep Gradient S PCR machine. The three genes were amplified with primers
+containing specific restriction sites to allow restriction–ligation reaction between the three genes
+and the backbone plasmid (ApaI, AvrII, BshTI, BglII, and XhoI ) as represented in Figure 31.
+Table 10 – PCR Master Mix for the three genes (pfs16, luciferase, and emiRFP670).
+Fragment PCR Reaction Mix
+10 uL 2x Supreme Green Master Mix, 10 µM Forward primer, 10 µM Reverse primer, 1 uL 3D7
+pfs16
+DNA, and water in a total volume of 20 uL
+1 U iProof™ High-Fidelity DNA Polymerase (BioRad),10 µM Forward primer, 10 µM Reverse primer,
+luciferase
+5 uL DNA template, 200 µM dNTPs, the final volume of 50 µL.
+10 µL 2X Phusion Green Hot Start II High-Fidelity PCR Master Mix, 10 µM Forward primer, 10 µM
+emiRFP670
+Reverse primer, 1 µL pLAMP1 – EmiRFP670, 0.6 µL DSMO and water in a total volume of 20 µL.
+Table 11 – Primer sequence (5`- 3`) and PCR conditions for the amplification of the three genes.
+Fragment Restriction Primer sequences (5´- 3´) Settings Amplicon
+site size (bp)
+pfs16 AvrII P16 -CCTAGGGTTGAAGAAAGTATAAATAGAAAAATGGC 95 º C – 5`; 40 1296
+ApaI P 17 – GGGCCCGTAGCTATCCAAAAATAAATATCC Cycles: 94 ºC –
+30``, ºC –
+30``, 72 ºC -; 72
+ºC – 10´.
+luciferase BglII P 18 – GCAGATCTGGGATCCTGGCTAGCCA 98 º C – 2`; 40 1686
+XhoI P 19 – GCCTCGAGTTACACGGCGATCTTTCCGC Cycles: 98º C –
+10``, 59ºC –
+20``, 72º C -
+45``; 72ºC –
+10`
+emiRFP670 AvrII P 20 – TAAGCACCTAGGATGGCGGAAGGCTCCG 98ºC – 30``; 35 933
+BshTI P 21 – TAAGCAACCGGTGCTCTCAAGCGCGGTG Cycles: 98ºC –
+7``, 66.6ºC –
+25``, 72ºC –
+27``; 72ºC –
+10`; 4ºC - ∞.
+44
+
+To alter the plasmid with a EmiRFP670Luc@s16 cassette insertion, we used pDC2 – pfcam–
+p
+Snf7- GFP – BSD – attP as backbone vector, to construct the EmiRFP670Luc@s16 cassette
+(plasmid pDC2 – pfs16 – EmiRFP670 – Luciferase – BSD – attP), to easily and accurately detect
+and quantify gametocytes through optical readout. The backbone plasmid contains an attP site that
+allows the recombination of the Bxb1 integrase system with a genome with the attB region.
+Nonetheless, the plasmid also includes episomal expression through selection with blasticidin – S
+– deaminase (bsd ).
+The amplification of pfs16 was performed with 10 µL 2X Green Supreme Polymerase Master
+Mix, 10 µM P 16 primer and 10 µM P 17 primer, and 150 ng gDNA of Plasmodium falciparum
+3D7, up to a final volume of 20 µL. The primers P 16 and P 17 were designed to introduce a
+recognition restriction site for the ApaI, and AvrII. The pfs16 promotor ligation with pNZY28 cloning
+vector was performed in ice with 10 uL Reaction Buffer, 50 ng of pNZY28 cloning vector, 50 ng of
+pfs16 amplification product, 3 uL water, 1 uL T4 DNA ligase, 1 uL ATP with a final volume a 30
+uL at 4⁰ C overnight. The transformation was in 75 uL competent cells and 1 uL of ligation. The
+colonies were screened with Nsil and BamHI. The positive colonies were outsourced for sanger
+sequencing with primers P16, P 22, P 23, and P 24 to fully cover the promotor extension. The
+amplification of luciferase was performed using 1 U iProof™ High-Fidelity DNA Polymerase (Biorad),
+10 µM P 18 primer,10 µM P 19 primer, 150 ng Plasmodium falciparum MRA1217 (NF54HT-GFP-
+luc) strain, up to a final volume 50 µL. The ligation was performed with 50 ng of pJET 1.2 cloning
+vector and 50 ng of insert (luciferase ). The transformation was performed in 75 µL competent
+cells and 1 µL of ligation. The plasmid was screened with a restriction enzyme BstBI and sent to
+sequence with primer P12 and P13 to STAB VIDA. The amplification of emiRFP670 was obtained
+with 10 µL 2X Phusion Green Hot Start II High-Fidelity PCR Master Mix (Thermo Scientific), 10 µM
+primer P 20, 10 µM primer P 21, 250 ng pLAMP1 – EmiRFP670, 0.6 µL DSMO and water in a
+total volume of 20 µL. The ligation was performed with 50 ng of the insert, 1 µL of pJET 1.2
+commercial plasmid, 1 U T4 DNA Ligase, 1 µL ATP, and 2 µL Reaction Buffer up to a final volume
+of 20 µL for 30 minutes at room temperature. The Heat-shock transformation contained30 µL of
+E. coli competent cells and 3 µL of Ligation. The colonies were screened with primers PU1 and
+PU2 for amplification of 952 bp present in Table 2, with double confirmation with a restriction
+enzyme BshTI and AvrII for 1 hour at 37ºC (Haerius®, Kendro B 6760), and sent to sequence with
+primer PU1 to STAB VIDA as shown in Table 12. able 12 – Primer Sequences (5` - 3`) sent to sequence
+in STAB VIDA.
+45
+
+Plasmid Name Nº Primer Primer sequence (5` - 3`)
+pNZY28 – pfs16 P 16 CCTAGGGTTGAAGAAAGTATAAATAGAAAAATGGC
+P 22 GGTCTCCCTATAGTGAGTCG
+AGGCATACTATATATAAATGCA
+P 23
+P 24 AGTTATCTATATATAAAAAGGCATACT
+pJET – Luciferase P 18 GCAGATCTGGGATCCTGGCTAGCCA
+P 19 GCCTCGAGTTACACGGCGATCTTTCCGC
+P 25 ATCCTTGTCGTATCCCTGG
+pJET –
+PU1 CGACTCACTATAGGGAGAGCGGC
+EmiRFP670
+After the psf16 promotor, Luciferase reporter protein and EmiRFP670 reporter protein were
+successfully amplified and incorporated into the pJET and pNZY28 commercial plasmids with site-
+directed restrictions in the 5´and 3´region (Figure 34). Different sets of restriction–ligation
+reactions were performed to obtain the new pDC2 – pfs16 – EmiRFP670 – Luciferase – BSD –
+attP. Restriction and ligation cloning of each fragment into the backbone plasmid pDC2 – pfcam
+p
+– Snf7 – GFP – BSD – attP was achieved using ApaI and AvrII, BshTI and AvrII, and BglII and XhoI
+restriction sites.
+46
+
+Figure 31 - Amplification with specific restriction site fragments (pfs16, emiRFP670, and luciferase) and Ligation
+into commercial plasmids (pJET and pNZY28).
+3.5.2. Engineering the EmiRFP670Luc@s16 plasmid
+The pDC2 – pfcam – Snf7 – GFP – BSD – attP was restricted with 1 U of BshTI (Fast Digest)
+p
+and AvrII (Thermo Scientific) for 1 hour at 37ºC. The pJET – EmiRFP670 was restricted with 1 U
+of BshTI (Anza, Invitrogen) and 1 µL of AvrII (Thermo Scientific) for 1 hour at 37ºC (Haerius®,
+Kendro B 6760). The restriction results were run in agel tray by electrophoresis in 1% agarose gel.
+The interest gel bands from the pDC2 – pfcam – GFP – BSD – attP (7107 bp) and pJET –
+p
+EmiRFP670 (947 bp) were cut and purified with the NZYtech GelPure kit according to the
+manufacturer’s instructions. The ligation was done with 1 U T4 DNA Ligase, according to the
+standard 1 to 3 proportion (vector/insert). The ligation was performed with 50 ng of linearized
+vector (pDC2 – pfcam – GFP – BSD – attP) and 20 ng of insert (EmiRFP670). The heat shock
+p
+transformation was done with 30 µL of E. coli competent cells and 3 µL of Ligation. The colony
+was screened with the primer CP 9, and CP 10 with an amplification of 774 bp. A restriction
+reaction with AatlII (Fast Digest, Thermo Scientific) and BamHI (Anza, Invitrogen) was performed
+to further screen the right placement of the middle vector.
+The pDC2 – pfcam – EmiRFP670 – GFP – BSD – attP was restricted with 1 U of BglII (Fast
+p
+Digest), XhoI (Fast Digest, Thermo Scientific), and Eco72i (Anza, Invitrogen) was kept overnight at
+37ºC (Haerius®, Kendro B 6760). The Luciferase insert (1676 bp) was amplified from a pJET –
+Luciferase plasmid using 25 µL of 2X Phusion Green Hot Start II High–Fidelity PCR Master Mix
+(Thermo Scientific), 10 uM primer P 18 and P19, 200 ng of template (pJET - Luciferase) up to 50
+47
+
+µL final volume. The restrictions were run by electrophoresis in 0.8% agarose gel. The bands of
+interest in the gel from pDC2 – EmiRFP670 - BSD – attP ( 8204 bp) and pJET – luc (1676 bp)
+were cut and purified with NZYtech GelPure kit following manufacturer instructions (NZYtech). The
+ligation reaction was realized with a vector (pDC2 – EmiRFP670 – Luciferase – BSD – attP) with
+an insert (luciferase) in a ratio of 1 to 3 (vector/insert). Ligation was done with 1 U T4 DNA ligase
+(Thermo Scientific), 50 ng of linearized pDC2 plasmid, 20 ng DNA insert (Luciferase) up to 30 µL
+final volume overnight at 4ºC. The transformation with 20 µL of E. coli competent cells and 2 µL
+of Ligation. The colony was screened with primer CP 11 and CP 12, with an amplification product
+of 1740 bp. The plasmid was screened with two sets of restriction enzymes: SdaI (Fast Digest,
+Thermo Scientific) and NheI (Thermo Scientific) and SdaI (Fast Digest, Thermo Scientific) and
+BseRI (New England Biolabs) for 1 hour at 37ºC (Haerius®, Kendro B 6760).
+The pDC2 – pfcam – EmiRFP670 – Luc – BSD – attP was restricted with 1 U ApaI (Fast Digest,
+p
+Thermo Scientific) and AvrII (Thermo Scientific) restriction enzymes overnight at 37ºC (Haerius®,
+Kendro B 6760). The pNZY28 – pfs16 plasmid was restricted with 1 U ApaI (Fast Digest, Thermo
+Scientific) and AvrII (Thermo Scientific) restriction enzymes at 37ºC for 1 hour. The restriction
+result was run in 0.8 % agarose gel electrophoresis. The restriction of the respective products from
+pDC2 – snf7 – Luc – BSD – attP (7969 bp) and pNZY28 – pfs16 (1290 bp) were excised and
+cleaned with NZYtech GelPure following manufacturer instructions. The ligation reaction was
+performed with a 50 ng of vector (pDC2 - pfcam– Snf7 – BSD – attP) with a 20 ng of insert (pfs16)
+p
+in a ratio of 1 to 3. Ligation was done with 1 U T4 DNA ligase (Thermo Scientific), 50 ng of linearized
+pDC2 plasmid, and 20 ng DNA insert (pfs16 ) overnight at 4ºC. The transformation with 20 µL of
+MAX Efficiency Stbl2 competent cells and 2 µL of Ligation. The colony was screened with primer
+CP 11 and CP 12, with an amplification of 1325 bp. The final plasmid was screened with Xbal
+(Fast Digest, Thermo Scientific) restriction for 1 hour at 37ºC (Haerius®, Kendro B 6760). The
+plasmid was outsourced to sequence with primer P 26 and P 27. The final plasmid in silico design
+is depicted in Figure 32.
+48
+
+Table 13 - Primer sequences (5` - 3`) outsourced to STABVIDA to sequence the pDC2 - pfs16 - EmiRFP670 -
+Luciferase - bsd – attP plasmid.
+Plasmid Name Nº Primer Primer sequence (5` - 3`)
+pDC2 – pfs16 –
+EmiRFP670– P 26 ATGGTGTATCGTTTCGATGAGCAA
+Luciferase – bsd – P 27 ATGATAAACCGGGCGCGGT
+attP
+pDC2 – pfs16 – EmiRFP670 –
+Luc – bsd – attP
+Figure 32 – Final design of pDC2 – pfs16 – EmiRFP670 – Luciferase – bsd – attP plasmid. The EmiRFPLuc@s16
+cassette can be integrated (through the attP – attB recombinase system) into the genome or episomal expressed
+(through BSD selection).
+3.5.3. Transfection and Selection of NF54 EmiRFP670Luc@s16 episomal expression
+The Plasmodium falciparum NF54 lines were transfected with pDC2 – pfs16 – EmiRFP670 –
+BSD – attP. The plasmid has two types of plasmid expression: the genome integration through attP
+– attB recombination promoted by the presence of integrase and the episomal expression. The
+transfection was done to promote the episomal expression of a cassette transgene
+EmiRFPLuc@s16 into the Plasmodium falciparum NF54 with a vital supplementation of 10 mg/mL
+Blasticidin (Invitrogen) per day.
+49
+
+3.6. Stress Protocol
+The bulk culture was divided into two flasks, one for the asexual maintenance and the other to
+perform a stress protocol on gametocytes. The assay took 12 days in total to generate the five
+stages of gametocytes. Seventy-five percent of the medium required to be changed in the first three
+days (twice per day), while in the following days only 50%. From day 3 to day 8, the medium was
+supplemented with 50 mM GlcNac to synchronize and clean the culture from the asexual parasites.
+The cultures were kept in a six-well plate, maintained with 4% of hematocrit in 5 mL final volume
+starting with a parasitemia of 0.5% in each well at 37ºC. The stress protocol was performed with
+fast culture care to minimize the temperature imbalance. The reagents (MCM, GlcNac) were kept
+always at 37ºC. Stress levels and parasitemia were monitored every day doing a culture’s thin
+smear stained with Giemsa under microscope visualization. The design of the protocol stress is
+depicted in Figure 33.
+Figure 33 – Design of Stress Protocol to induce gametocytogenesis: [1] Cultures healthy stressed, after day 3 they
+are supplemented with GlcNac for five days, following day 8 with only MCM medium supplementation; [2] Cultures
+healthy stressed, with only MCM medium.
+50
+
+CHAPTER 4
+RESULTS
+51
+
+The Results mirror the primary goal of engineering a transgenic parasite line with enhanced
+sexual conversion, using the pSLI–TGD system. This system was employed to specifically target
+the endogenous HP1 gene, genetically tagged with a GFP, and which simultaneously confers
+neomycin resistance, resulting in the visualization of asexual parasites in green fluorescence. To
+facilitate the conditional enhancement of the sexual conversion, the glmS system was integrated
+into the 3´UTR region of the pSLI plasmid, targeting HP1, a natural suppressor of sexual
+conversion. This strategic modification enabled a precise control over the sexual conversion
+process. With the successful completion of this task, the genetically modified parasites were poised
+for further study and potential applications. Furthermore, EmiRFP670Luc@s16 was effectively built
+through the construction of a plasmid (pDC2 – pfs16 – EmiRFP670 – Luciferase – BSD - attP),
+serving as a versatile gene-editing tool for marking, detecting, and quantifying gametocytes. This
+innovative construct incorporates reporter genes, namely EmiRFP670 and Luciferase, strategically
+linked downstream of a sexual promoter (pfs16). The inclusion of the red fluorescent protein
+EmiRFP670, coupled with Luciferase, enables a robust visualization and quantification of
+gametocytes with multiple readouts. This engineered plasmid represents a significant advancement
+in parasite research, offering a powerful tool for studying gametocyte dynamics and facilitating the
+development of novel interventions targeting malaria transmission. Additionally, the attB insertion
+in the parasite genome was effectively accomplished through the development of a CRISPR–Cas9
+customized plasmid designed to introduce an attB site into the cg6 gene, a non-essential gene
+within the RBCs parasite stage. This strategic insertion facilitated the use of an alternative genome-
+editing approach, specifically the attP - attB recombinase system. The utilization of a single plasmid
+demonstrated remarkable efficacy in generating genetically edited parasites within both the NF54
+and HP1 – glmS – GFP parasite lines. This successful implementation showcases the versatility
+and precision of the gene-editing techniques employed, paving the way for further advancements
+in parasite research and potential therapeutic applications.
+4.1. Engineered a transgenic parasite line to increase the sexual
+commitment (gametocytogenesis)
+4.1.1. Engineering a transgenic Plasmodium falciparum NF54 HP1 – GFP – glmS line
+Taking advantage of a customized pSLI plasmid, we performed a conditional knockdown of HP1
+(a repressor of sexual conversion) in Plasmodium falciparum NF54 using homologous
+recombination with the homologous region. The presence of a reporter gene (GFP) linked to the
+52
+
+HP1 gene enabled us to verify the success of the knockdown. The selection-linked integration (SLI)
+involved a promoterless targeting region on the plasmid (HP1) linked with a selectable marker
+(Neomycin), separated by a skip peptide (T2A). The HP1 knockdown was achieved using an
+inducible glmS ribozyme system.
+Parasites were transfected with the HP1-glmS-GFP plasmid, which confers neomycin resistance
+(NEO). Parasites were then positively selected using neomycin. Healthiness and parasite growth
+were monitored daily via thin blood smears. After 30 days, post-transfection edited parasites
+emerged in the culture. The integration of the HP1-GFP-glmS plasmid was confirmed through PCR
+and fluorescence microscopy, as asexual parasites emitted green fluorescence (Figure 34B). The
+edited parasites were successfully obtained as shown in Figure 34A. Due to technical constraints,
+the edited – parasites were preserved via cryogeny.
+Figure 34 – A. PCR genotyping to confirm the edited parasites HP1 – glmS – GFP, with primer P3 and P4 to
+confirm integration of the plasmid in the genome (1765 bp), and the primer P3 and P5 to confirm the wild–type. B.
+The edited parasites express GFP.
+53
+
+4.1.2. Inducing gametocytogenesis through a Stress Protocol
+The stress protocol was implemented to induce gametocyte production in the cultures, offering a
+rigorous and labor-intensive approach for comparison with the HP1 – GFP – glmS edited parasites.
+The comparison with HP1 –GFP - glmS edited parasites with the control and GlcNac was not
+possible due to technical constraints. However, in this approach to induce gametocytogenesis, the
+addition of glucosamine is relevant in order to perform a successful knockdown of HP1. The stress
+protocol was performed under two conditions – control (solely supplemented with MCM) and
+GlcNac (supplemented with GlcNac from day 3 to day 8) –, and general observations were
+registred. Initially, from day 0 to day 4, ring and trophozoite forms were observed, with a
+differentiation into trophozoites and gametocyte stage I which was not discernible. However, from
+day 4 to day 6, distinct gametocyte stage II and early gametocyte stage III were observable. Despite
+overall similarities between the conditions, a notable discrepancy emerged in the control culture,
+where the development into the five gametocyte stages proceeded at a slower pace compared to
+the GlcNac-supplemented culture. The differences between the conditions became evident along
+time, with the GlcNac condition exhibiting a cleaner and more gametocyte-enriched population
+compared to the control (Figure 35). Furthermore, a higher incidence of cell death was observed
+in the control culture compared to the GlcNac-supplemented culture (Figure 35). These
+observations underscore the efficacy of GlcNac supplementation in promoting gametocyte
+development and highlights its potential as a valuable tool in malaria research protocols.
+Figure 35 - Stress exposure to parasites in two conditions: MCM and MCM plus 50 uM GlcNac.
+54
+
+4.2. Construction of a Plasmodium falciparum reporter line for the
+asexual and sexual parasite stages
+In addressing the urgent need for efficient gametocyte production and evaluation methods for
+antimalarial drug research, it is crucial to overcome the challenges associated with accurately
+identifying gametocytes amidst a mix of asexual stages. Presently, conventional methods are either
+too laborious and subject to individual interpretation or fail to differentiate between asexual and
+sexual forms effectively. To surmount this obstacle, the development of reporter lines may
+represents promising solution. These lines incorporate genetic markers or reporter genes that
+provide an easily identifiable readout, simplifying the process of gametocyte and asexual forms
+identification. By introducing fluorescent proteins or luciferase genes specifically expressed in
+gametocytes, researchers can achieve rapid and reliable detection, thus distinguishing sexual
+forms from asexual stages with accuracy. Such reporter lines not only streamline the gametocyte
+production process but also enhance the evaluation of antimalarial drug efficacy. With clear and
+distinct markers indicating the presence of gametocytes, researchers can accurately assess the
+impact of antimalarial treatments on transmission-stage parasites, facilitating the development of
+more effective strategies to prevent disease transmission.
+4.2.1 Engineering GFP cassette for P. falciparum intraerythrocytic asexual stage detection
+The system described in section 4.1 targets the endogenous HP1 gene, which naturally
+suppresses sexual conversion in parasites if activated. This gene is genetically tagged with a GFP,
+enabling the visualization of asexual parasites through green fluorescence when HP1 is activated.
+specifically, this system operates under the inducible glmS system. When HP1 is repressed, the
+linked GFP cassette is also suppressed. Consequently, the knockdown of HP1 leads to the
+activation of sexual commitment pathways within the parasites. This genetic tool allows for precise
+control over sexual conversion processes, with the GPF solely being expressed in the asexual forms.
+4.2.2 Engineering an EmiRFP670Luc@s16 cassette for gametocyte detection
+The expression plasmid was based on a pDC2 in-house plasmid which contains the attP site-
+specific recombinase sequence for an att site-based recombination reporter system. To this
+plasmid, we added a EmiRFP670Luc@s16 cassette containing a red fluorescent protein
+(EmiRFP670)-luciferase fused under the control of a gametocyte-specific Pfs16 promoter.
+The pfs16 promoter sequence was amplified from Plasmodium falciparum 3D7 genomic DNA.
+The primers were designed with ApaI and AvrII restriction recognition sites to amplify the pfs16
+55
+
+promoter region. After several PCR optimizations, we successfully amplified the promoter which
+amplicon, of 1283bp, was ligated into the pNZY28 commercial vector and transformed. The
+plasmid was extracted from the positive recombinant’s colonies, and further screened with a
+restriction reaction using Nsil, BamHI (Figure 36C) and outsourced for Sanger sequencing with
+primer P16, P22, P23, and P24 to fully cover the promotor extension as shown in Figures 1, and
+2 in the supplementary data (Figure 36A). The sequencing of the promoter region of the pfs16
+gene presented several challenges due to its complex sequence and specific characteristics, such
+as the presence fo a hight AT content or repetitive sequences like short tandem repeats. These
+sequences resulted in difficulties in accurately aligning sequencing reads and resolving ambiguities
+in the sequence assembly. To fully cover the amplicon region of pfs16 (Figure 43) we sequenced
+the 1283bp sequence with 4 sequencing primers. the alignment with a 3D7 reference sequence
+revealed some base pair insertion and deletions at the level of the repetitive sequences. Figure 36,
+represents the plasmid sequence with less errors for which we decided to move forward with the
+reporter cassette.
+The red fluorescent protein, EmiRFP670, was amplified from a donor plasmid pLAMP1 –
+EmiRFP670 (https://www.addgene.org/136570/sequences/) with primers with BshTI and AvrII
+restriction recognition sites, ligated into a pJET 1.2 cloning vector and transformed. The positive
+recombinants colonies were discovered through a colony PCR with PU1 and PU2 (Table 2), further
+mapping the plasmids with restriction reaction with AvrII and BshTI as shown in Figure 37C, and
+outsourced to sequence with PU1 (Figure 37A).
+The Luciferase was amplified from Plasmodium falciparum NF54 – GFP – Luc (MRA – 1217,
+BEI Resources) genomic DNA using primers with restriction recognition sites (XhoI and BglII) and
+ligated into Pjet prior to transformation. The positive recombinants were screened with a restriction
+reaction using BstBI and outsourced for sequencing using primer PU1, and PU2 (Table 2) as shown
+in Figure 38.
+56
+
+Figure 36 – A. Sanger sequencing 5´ region cover (primer P24) and 3`region (primer P22) cover of pfs16
+promotor, following Sanger Sequencing of the promotor length with other primers P16, P23. B. In silico design of
+pNZY28 – pfs16; C. pNZY28 – pfs16 plasmid screening: L1 – 1 kb DNA Ladder (Thermo Scientific); L3 – plasmid
+screening with the expected pattern for a restriction BamHI and Nsil: 2862 bp, 666 bp, 457 bp, and 184 bp.
+57
+
+Figure 37 – A. Sanger sequencing of Pjet – EmiRFPP670 plasmid covering the 5´UTR, and 3`UTR;B. In silico design
+Pjet – EmiRFP670 plasmid; C. 0.8% agarose gel – L1: 1kb DNA Ladder, L4: Restriction to confirm Pjet – EmiRFP670
+plasmid with AvrII and BshTI (2974, and 933 bp).
+58
+
+Figure 38 - A. Sanger sequencing total coverage of luciferase with primer PU1 and PU2. B. In silico design of pJET
+– luc plasmid ; C. 1% Agarose gel: L1 – 1 kb DNA ladder, L2 - Screening of pJET – Luciferase with a BstBI restriction
+(3799, and 788 bp).
+59
+
+The Pjet – EmiRFP670, and the backbone plasmid Pdc2 – pfcam– Snf7 – GFP – BSD – attP
+p
+were restricted with BshTI and AvrII, and the fragments of interest were ligated and transformed
+into competent E. coli cells. Positive recombinants were found in a colony PCR with Primer CP 9,
+and CP 10, screened with a restriction reaction BamHI and AatlII as represented in Figure 39A,
+generating the plasmid Pdc2 – pfcam – EmiRFP670 – GFP – BSD – attP.
+p
+The pJET – Luciferase, and the backbone plasmid Pdc2 – pfcam – EmiRFP670 – GFP – BSD
+p
+– attP were restricted with XhoI and BglII, and the fragments of interest were ligated and
+transformed into competent E. coli cells. Positive recombinants were found in a PCR colony with
+Primer CP 11, and CP 12. For futher confirmation, the plasmids were screened with a restriction
+reaction with SdaI, NheI, and BseRI and SdaI represented in Figure 39A, generating the plasmid
+pDC2 – pfcam – EmiRFP670 – Luciferase – BSD – attP.
+p
+The pNZY28 – pfs16, and the backbone plasmid pDC2 – pfcam – EmiRFP670 – Luciferase –
+p
+BSD – attP were restricted with ApaI and AvrII, and the fragments of interest were ligated and
+transformed into competent cells. Positive recombinants were found in a PCR colony with Primer
+CP 13, and CP14. For a robust confirmation, the plasmid were screened with a restriction reaction
+Xbal as represented in Figure 39A generating the final plasmid pDC2 – pfs16 – EmiRFP670 –
+Luciferase – BSD – attP.
+60
+
+Figure 39 – A. Final plasmid screening pDC2 – pfs16 – EmiRFP670 – Luciferase – BSD – attP, results run in 0.8 %
+agarose gel: L1 - 1 kb DNA ladder (ThermoFisher). L2: Screening of pDC2 – pfcam – EmiRFP670 – GFP with a
+p
+restriction with AatlII and BamHI (3605 bp, 2210 bp, 2000 bp and 239 bp). L3: Screening of pDC2 – pfcam –
+p
+EmiRFP670 – luciferase – BSD – attP with a restriction with SdaI and NheI (6512 bp, 2525 bp, 10 bp), and BseRI
+and SdaI (6522 bp, 1584 bp, 941 bp). L4. Final plasmid pDC2 – psf16 – EmiRFP670 – Luciferase – BSD – attP with
+for a restriction with Xbal (6419 bp; 2839 bp); B. In silico plasmid design (pDC2 – pfcam – EmiRFP670 – GFP –
+p
+BSD- attP, pDC2 – pfcam – EmiRFP670 – BSD – attP, pDC2 – pfs16 – EmiRFP670 – Luciferase – BSD – attP).
+p
+61
+
+4.2.3. Expression of the reporter cassettes in P. falciparum
+4.2.3.1 Via Genome Integration
+As previously exposed, the Bxb1 integrase system allows faster and larger integrations into the
+parasite genome. For this to happen, the parasite line must contain an attB region. Thus, using
+the CRISPR–Cas9 system, we aimed at introducing an attB site in the cg6 locus (a non–essential
+gene for the RBCs stages) of the Plasmodium falciparum NF54 line, to further be able to integrate
+a gametocyte reporter system at this locus.
+To perform a small site integration (attB sequence) in the parasite genome through CRISPR -
+cas9, two plasmids were used.the pL6 contains a U6 region containing the homology region for
+cg6, in addition to a a gRNA specific for the cg6 gene (non–essential gene in the RBCs stages).
+The other donor plasmid pUF1, will contain the cas9 endonuclease and the resistance cassette
+yDHODH (confers resistance to DSM1 drug).
+To increase transfection efficiency, we decided to combine the pL6 and pUF1 essential cassettes
+of the CRISPR-cas9 system into a single plasmid. To obtain pL6 – cas9 – yDHODH, both donor
+plasmids were restricted with NotI and NcoI, prior to ligation and E.coli competent cells
+transformation. The positive recombinants were screened by a restriction reaction with two sets of
+enzymes (NcoI, NotI, BamHI and HincII, BamHI and AatlII ) shown in Figure 40A. Moreover, one
+guide RNA targeting the cg6 gene was introduced in the BtgZI restriction site of pL6 – yDHODH –
+cas9 plasmid through in vivo assembly. The positive recombinant was discovered through colony
+PCR with primer CP 3 and CP 4, followed by BseRI restriction as demonstrated in Figure 40B, and
+outsourced for confirmation by Sanger Sequencing (Figure 40C, D).
+To introduce an attB site within the cg6 gene, the 5´UTR and 3´UTR of the cg6 gene were
+amplified from Plasmodium falciparum 3D7. The primers designed for the amplification contain
+the attB sequence and BcuI restriction site in the tails, which allow through overlap PCR to achieve
+5´UTR cg6 – attB – 3´cg6 UTR. The PCR product was inserted into the pJET 1.2 with BcuI
+restriction sites in the tail’s plasmid (5´UTR and 3´UTR). Positive recombinants were screened
+with colony PCR using universal primers from pJET (PU1, PU2), and outsourced for Sanger
+sequencing for confirmation as presented in Figure 40E, F.
+62
+
+The 5´cg6 – attB – 3´cg6 – pJET and the backbone plasmid pL6 – cas9 – yDHODH – cg6
+gRNA were linearized with BcuI, and the fragments of interest were ligated and transformed into
+competent cells. Positive recombinants were found by performing a restriction reaction using AatII
+and BcuI, as depicted in Figure 41A.
+The final plasmid was transfected through electroporation in a Plasmodium falciparum NF54
+strain, and the in–house NF54 recombinant line, containing the downregulation system of HP1
+(Plasmodium falciparum NF54 HP1 – glmS – GFP). After a cycle of replication (48 hours) following
+the transfection, mutant parasites containing the plasmid were selected by exposure to DSM1 (1.5
+uM) for eight days and cultured in MCM until parasites reemerge in the culture. Parasitaemia was
+maintained under control following transfection to ensure parasite's healthiness (Figure 41B). After
+three weeks post-transfection, Plasmodium falciparum NF54 parasites reemerged. On the other
+hand, no parasites were detected after transfection with the Plasmodium falciparum NF54 HP1 –
+glmS – GFP line. DNA was extracted from the bulk culture of the transfected and reemerged NF54
+parasites to confirm the genomic integration. A PCR was performed to cover the 5´cg6 UTR, 3´cg6
+UTR, and specifically for attB site integration as shown in Figure 41C,D. Figure 41D describes the
+successful PCR that indicates a mixed culture with edited – parasites and wild-type (1239 bp). To
+select the attB-positive parasites, the bulk culture was cloned through limited dilution.
+Unfortunately, technical experimental constraints occurred, such as culture contaminations that
+impaired the cloning and resulted in the loss of the bulk culture. Transfections will be repeated in
+the future.
+63
+
+Figure 40 – A. Screening of pL6_cas9_yDHODH plasmid in 1% agarose gel. L1 – 1 kb DNA ladder
+(ThermoFisher). L2 - Restriction with NcoI, NotI and BamHI: 7026 bp, 4226 bp, and 1548 bp; L2: Restriction with
+HincII, BamHI and AatlII: 6165 bp, 3061 bp, 2989 bp, 585 bp; B. Screening of pL6_cas9_yDHODH cg6 gRNA
+plasmid in 2.5% agarose gel. L1 – 1 kb DNA ladder (ThermoFisher). L2 – L7 – BseRI restriction of amplification of
+153 bp with primer x and x: 83 bp and 70 bp (L7 presents the expected pattern); C. Sanger sequencing of
+pL6_cas9_yDHODH – cg6 gRNA with primer CP 5 and CP 6; D. Sanger sequencing of pL6_cas9_yDHODH – cg6
+gRNA with the SEED highlight in the sequence; E. Sanger sequencing of pJET–cg6 attB plasmid with universal
+primer (PU1). F. Depiction in the sanger sequencing pJET–cg6 attB plasmid of the attB region.
+64
+
+Figure 41 – A. Final plasmid pL6_cas9_yDHODH – 5`cg6 – attB – 3`cg6 screening restriction BcuI and AatlII:
+8217 bp, 4599 bp, and 802 bp in 0.8% agarose gel: L1 – 1 Kb DNA Ladder (Thermo Scientific); L6 – The expected
+pattern and the final plasmid pL6_cas9_yDHODH – 5`cg6 – attB – 3`cg6. B. Parasitaemia assessment post-
+transfection with DSM1 drug selection. C. Strategy for genotyping the edited – parasites with the attB. D. Genotyping
+the edited parasites (NF54attB) with a first set that confirms a successful edition (761 bp), and a second set that
+indicates a mixed culture with edited – parasites and wild-type (1239 bp).
+4.2.3.2 Via episomal expression
+The expression of the RFPLuc@s16 cassette into P. falciparum can also be experienced at an
+episomal level, avoiding genome integration. The drawback is that plasmid selection with DSM1
+for constitutive expression must be continuous to prevent plasmid loss. Nevertheless, it represents
+a faster alternative to generate a gametocyte reporter line. The final pDC2 plasmid was transfected
+through electroporation in a Plasmodium falciparum NF54 strain. After a cycle of replication (48
+hours) following the transfection, mutant parasites were selected by exposure to BSD (10 uM) for
+five days and cultured in MCM and BSD, until parasites reemerge in the culture. Parasitaemia was
+65
+
+recorded following transfection to ensure parasite's healthiness as shown in Figure 42. However,
+Plasmodium falciparum NF54EmiRFP670Luc@s16 parasites were not detectable in the culture.
+Figure 42 - Assessment of parasitaemia post – transfection with BSD selection for 5 days.
+In summary, while the engineering of new transgenic line HP1 – GFP – glmS, and the
+construction of plasmids (pL6 – cas9 – yDHODH – 5´cg6 – attB – 3´cg6), and the
+EmiRFP670luc@s16 were successful, the creation of the new HP1 – GFP – glmS with integration
+of attB and the EmiRFP670Luc@s16 cassette transgenic parasites, and subsequent validation
+remain elusive.
+66
+
+CHAPTER 5
+DISCUSSION
+67
+
+Malaria is one of the deadliest diseases in the world and is epidemic in 85 countries [2]. While
+chemotherapy remains at the front-line for malaria treatment and prevention, present treatments
+fail to tackle the disease transmission form – which specifically refers to the gametocytes stage of
+the parasite’s life cycle. Gametocytes circulate in patients’ blood without causing clinical symptoms
+and stand as a reservoir for transmission[137]. Thus, to control malaria, the discovery and
+development of transmission-blocking drugs represent a medical need. Nevertheless, this requires
+a deeper understanding of the gametocyte’s biology, thus depending on experimental methods for
+large-scale gametocyte production, detection, and quantification. Currently, the standard method
+for gametocyte production in vitro relies on the exposure of parasites to stress conditions including
+high parasitaemia and nutrient starvation [74] .Furthermore, gametocytaemia is analyzed by labor-
+intensive and user-dependent light microscopy. Therefore, herein, we developed a genetic-based
+tool for gametocyte identification and quantification through fluorescence and/or luminescence.
+This genetic tool comprises the pfs16 gametocytes-promoter (for expression of this biosensor in
+gametocytes), EmiRFP670, and Luciferase reporter protein, and was obtained by using the
+CRISPR-cas9 and Bxb1 integrase systems. This reporter line itself represents a novel tool for high-
+throughput multistage drug screening, distinguishing between asexual parasites (marked by GFP)
+and gametocytes (marked by EmiRFP670, and Luciferase) using different fluorescent proteins,
+along with a conditional increase in sexual conversion facilitated by the gmlS ribozyme system.
+Despite the construction of reporter lines incorporating fluorescent proteins into sexual proteins
+throughout the literature, such as the GDV1 conditional expression tagged with GFP through FKBP
+destabilization domains and activated with Shield-1 supplementation, still remains costly heavy and
+with low specificity. Other studies have attempted to engineer reporter lines with cassettes to
+identify proteins of interest or relevant stages but have faced limitations in accurately marking
+asexual parasites and fully tracking gametocyte development [46]. There are some studies that
+explore the engineering of reporter lines with a cassette attempting at identifying with fluorescence
+the proteins of interest or the relevant stages. Researchers were able to create a fluorescent and
+luminescent cassette (mCherry-luc@etramp10.3) that failed to mark asexual parasites and to follow
+all the gametocytes development [138]. A study for quantitative assessment of the gametocyte’s
+stages I, II, and III, failed to follow through the whole sexual development[139]. Although it is
+important to be able to follow a signal between the five stages, stage V is the most relatable to
+68
+
+vector transmission, and therefore it is important to deepen our knowledge about it and focus on
+tackling even more this gametocyte stage.
+In this thesis, despite numerous endeavours aimed at establishing a resilient and economically
+viable reporter line, our developed system, initiated with the HP1-GFP-glmS construct, proved to
+not only facilitate the monitoring of asexual parasites through distinctive green fluorescence but
+also grants the ability for the selective suppression of the upstream sexual repressor, HP1, under
+specific conditions. Knocking down HP1 is expected to decrease 4 - to 5 - fold the HP1 expression,
+and therefore increase sexual conversion [140]. Additionally, to track sexual conversion and
+gametocytes, we aimed to insert a fluorescent and bioluminescent cassette into the cg6 (a non-
+essential gene in the RBC stages) and utilize the sexual-specific promoter pfs16, known for its
+reliability in detecting and quantifying gametocytes. While the acquisition of this transgenic line was
+unsuccessful under the timeframe of this thesis, its potential remains promising. It holds the
+prospect of enabling a more cost-effective, stage-specific, and dependable high-throughput
+multistage drug screening approach. This reporter line stands as a pioneering tool for high-
+throughput multistage drug screening, distinguishing asexual parasites (marked by GFP) and
+gametocytes (indicated by EmiRFP670 and Luciferase) through distinct fluorescent and
+luminescent proteins. Additionally, it incorporates a conditional enhancement of sexual conversion
+facilitated by the glmS ribozyme system. While other constructed reporter lines add fluorescent
+proteins to sexual proteins, such as the GDV1 conditional expression tagged with GFP via FKBP
+destabilization domains, their maintenance with Shield-1 supplementation proves excessively costly
+for laboratory upkeep [120][90]. In a recent 2020 study, researchers explored the potential of
+inducing massive sexual conversion in parasites through the utilization of the Cre – LoxP system.
+This approach allows for the conditional expression increase of pfap2-g, a crucial gene involved in
+sexual conversion, by employing a specific strain containing the DiCre region. Recombination is
+triggered upon induction by rapamycin through dimerization, leading to the desired effect [89]. In
+a related study [88], glmS was employed as a complementary subexpression of GDV1 to promote
+sexual conversion [121]. By conducting numerous attempts to develop a robust, feasible, and cost-
+effective reporter line, our research aimed to create a reporter line that specifically targets asexual
+parasites while addressing all stages of gametocyte development.
+The bxb1 integrase system facilitates genome recombination by integrating an attB site into the
+parasite genome, in this thesis specifically targeting the NF54 P. falciparum strain, known for its
+propensity to produce gametocytes. To achieve this, we employed the CRISPR-Cas9 system, a
+69
+
+cutting-edge genetic-editing tool allowing precise genome insertion. However, this method posed
+challenges, including difficulty in editing all parasites within a population and low transfection
+efficiency in P. falciparum compared to other organisms[141]. While many researchers utilize a
+two-plasmid system for CRISPR-Cas9, we optimized the process by employing a single-plasmid
+approach, merging the Cas9 endonuclease cassette with the region of interest. Troubleshooting
+involved adjusting vector concentration, employing technical adaptations, and optimizing
+transformation conditions.
+Post-transfection, genotyping proved a successful editing within some of the parasites, confirming
+the presence of NF54 with attB sites to implement the golden attP – attB recombinase system.
+This well-established method allows for rapid gene edits, including larger insertions compared to
+CRISPR-Cas9, despite the requirement for an integrase. We propose the use fo this system to insert
+a larger cassette containing a sexual-specific promoter expressing fluorescent and luciferase
+reporter proteins. While the system has drawbacks, such as residual plasmid presence post-
+insertion, it offers benefits like diverse gene modifications and low off-target recombination risks.
+In this thesis, we introduce a workflow which features as backbone the plasmid pDC2-pfcam
+p-
+Snf7-GFP-BSD-attP, facilitating both genome integration and episomal expression. Genome
+integration ensures stable and heritable expression across generations, eliminating the need for
+continuous drug selection, unlike episomal expression, which requires constant maintenance. This
+underscores the significance of genome integration in achieving reliable and enduring gene
+expression in host organisms.
+The pfs16 gene has emerged as a leading candidate for targeting gametocytes via reporter
+products. Research indicates that pfs16 undergoes upregulation approximately 35 hours post-
+invasion and serves as a specific sexual gene present throughout all five stages of gametocyte
+development, maintaining consistent expression levels despite the presence of other genes[56].
+By introducing the EmiRFP670Luc@s16 cassette into the parasites, we can effectively quantify and
+detect gametocytes across their developmental stages, from early stages that resemble asexual
+parasites under the microscope up to late stages. This transgenic line will enable detection through
+both fluorescence and luminescence, providing a comprehensive tool for studying and monitoring
+gametocyte dynamics.
+In the dissertation timeline, the final objective of this thesis, which aimed to validate the newest
+transgenic line, unfortunately, could not be achieved. As outlined, the HP1 – GFP – glmS edited
+70
+
+parasites were intended to undergo transfection with pL6 – cas 9 – yDHODH – 5´cg6 – attB –
+3´cg6, to insert an attB site into the cg6 gene. Subsequently, a cassette containing
+EmiRFP670Luc@s16 would have been introduced to track gametocytes.
+Despite this setback, the new reporter line not only distinguishes asexual parasites through green
+fluorescence but also enables conditional enhancement of sexual conversion. This allows for the
+identification and quantification of gametocytes, marked by red fluorescence, at various stages of
+RBC development. This tool addresses the dual challenge of enhancing sexual conversion in
+Plasmodium falciparum parasites and accurately identifying and quantifying sexual versus asexual
+parasites.
+In addition to its fluorescent properties - by using this tool - gametocytes will express a
+bioluminescent reporter protein, which complements the limitations of fluorescence by reducing
+signal noise and enhancing its sensitivity. Fluorescence will be particularly valuable for assessing
+drug effects, by visualizing red fluorescent gametocytes, and identifying the localization of pfs16
+within them through live imaging.
+Comparing fluorescence to luminescence, luminescence involves the emission of light by a
+substance without the need for an external light source, while fluorescence specifically refers to
+the absorption and re-emission of light at a longer wavelength. Luminescence assays tend to be
+highly sensitive and stable, whereas fluorescence offers high brightness and spatial resolution,
+making it ideal for imaging applications[107].
+71
+
+CHAPTER 6
+FUTURE PERSPECTIVES AND FINAL
+REMARKS
+72
+
+In conclusion, this work included a successful construction of plasmids for the genomic
+manipulation of Plasmodium falciparum lines. Specifically, the engineering of the CRISPR-Cas9
+plasmid facilitated the insertion of an attB region into the genome of the NF54 parasite line through
+homology-directed recombination. Additionally, the successful creation of the pDC2 – pfs16 –
+EmiRFP670 – Luc – bsd – attP plasmid was accomplished. Despite the successful integration of
+the attB site, a contamination led to the loss of the mutant bulk culture, hindering the completion
+of the NF54attB construction. Furthermore, optimization of a stress protocol for gametocyte
+production was completed, in order to ensure quantitative and qualitative results for gametocytes
+production. However, the need to induce sexual commitment to trigger the appearance of
+gametocytes and optimize gametocyte detection through optical readout requires further
+investigations.
+Moving forward, the future perspective of this work is to generate the HP1 – glmS – GFP attB
+transgenic line to produce gametocytes in high quantities through conditional knockdown of HP1,
+an upstream repressor of sexual differentiation. Integration into the genome using the attP – attB
+recombinase system, along with the transgene cassette EmiRFP670Luc@s16, will enable the
+detection and quantification of gametocytes for high-throughput multistage drug screening via
+optical readouts. The Plasmodium falciparum NF54 HP1 – glmS – GFP EmiRFP670Luc@s16
+transgenic line remains a promise for the development of new therapeutics targeting both asexual
+parasites and gametocytes, thereby preventing malaria transmission.
+This research is in line with the goals set forth by the World Health Organization (WHO) to combat
+the disease. By possessing a transgenic parasite line capable of screening every drug effect in
+gametocytes and asexual RBC stages, research and innovation in malaria treatment will be
+enriched, potentially leading to the discovery of revolutionary treatments for malaria.
+73
+
+CHAPTER 7
+REFERENCES
+74
+
+[1] C.-C. for D. C. nd Prevention, ‘CDC - M l ri - About M l ri - iology’. Accessed: Sep.
+14, 2023. [Online]. Av il ble: h ps://www.cdc.gov/m l ri / bout/biology/index.html
+[2] ‘World m l ri report 2023’. Accessed: M r. 30, 2024. [Online]. Av il ble:
+h ps://www.who.int/te ms/glob l-m l ri -progr mme/reports/world-m l ri -report-
+2023
+[3] ‘M l ri - Annu l Epidemiologic l Report 2020’. Accessed: M r. 30, 2024. [Online].
+Av il ble: h ps://www.ecdc.europ .eu/en/public tions-d t /m l ri - nnu l-
+epidemiologic l-report-2020
+[4] S. S to, ‘Pl smodium— brief introduction to the p r sites c using hum n m l ri nd
+their b sic biology’, J. hy . Anth ., vol. 40, no. 1, p. 1, J n. 2021, doi:
+10.1186/s40101-020-00251-9.
+[5] W.-C. Lee et ., ‘Pl smodium knowlesi: the g me ch nger for m l ri er dic tion’,
+M . J., vol. 21, no. 1, p. 140, M y 2022, doi: 10.1186/s12936-022-04131-8.
+[6] E. A. Ashley, A. Py e Phyo, nd C. J. Woodrow, ‘M l ri ’, L n et L n . Eng ., vol. 391, no.
+10130, pp. 1608–1621, Apr. 2018, doi: 10.1016/S0140-6736(18)30324-6.
+[7] ‘Severe M l ri - 2014 - Tropic l Medicine & mp; Intern tion l He lth - Wiley Online
+Libr ry’. Accessed: Sep. 14, 2023. [Online]. Av il ble:
+h ps://onlinelibr ry.wiley.com/doi/10.1111/tmi.12313_2
+[8] G. . d Silv , J. R. Pinto, E. J. G. rros, G. M. N. F ri s, nd E. D. F. D her, ‘Kidney
+involvement in m l ri : n upd te’, Rev. In t. Me . T . Sã , vol. 59, p. e53, Aug.
+2017, doi: 10.1590/S1678-9946201759053.
+[9] J. P. V nderberg, ‘Studies on the motility of Pl smodium sporozoites’, J. t z ., vol.
+21, no. 4, pp. 527–537, Oct. 1974, doi: 10.1111/j.1550-7408.1974.tb03693.x.
+[10] P. Sinnis nd A. Coppi, ‘A Long nd Winding Ro d: The Pl smodium Sporozoite’s Journey
+in the M mm li n Host’, t . Int., vol. 56, no. 3, pp. 171–178, Sep. 2007, doi:
+10.1016/j.p rint.2007.04.002.
+[11] A. rtoloni nd L. Z mm rchi, ‘Clinic l Aspects of Uncomplic ted nd Severe M l ri ’,
+Me te . J. He t . In e t. D ., vol. 4, no. 1, p. e2012026, M y 2012, doi:
+10.4084/MJHID.2012.026.
+[12] A. F. Cowm n et ., ‘Function l n lysis of proteins involved in Pl smodium f lcip rum
+merozoite inv sion of red blood cells’, FE S Le ., vol. 476, no. 1, pp. 84–88, Jun. 2000,
+doi: 10.1016/S0014-5793(00)01703-8.
+[13] P. R. Gilson nd . S. Cr bb, ‘Morphology nd kinetics of the three distinct ph ses of red
+blood cell inv sion by Pl smodium f lcip rum merozoites’, Int. J. t ., vol. 39, no.
+1, pp. 91–96, J n. 2009, doi: 10.1016/j.ijp r .2008.09.007.
+[14] S. Eksi nd K. C. Willi mson, ‘Protein T rgeting to the P r sitophorous V cuole
+Membr ne of Pl smodium f lcip rum’, E k y t. Ce , vol. 10, no. 6, pp. 744–752, M y
+2011, doi: 10.1128/ec.00008-11.
+[15] L. H. nnister, J. M. Hopkins, R. E. Fowler, S. Krishn , nd G. H. Mitchell, ‘A rief
+Illustr ted Guide to the Ultr structure of Pl smodium f lcip rum Asexu l lood St ges’,
+t . T y, vol. 16, no. 10, pp. 427–433, Oct. 2000, doi: 10.1016/S0169-
+4758(00)01755-5.
+[16] L. Tilley, M. W. A. Dixon, nd K. Kirk, ‘The Pl smodium f lcip rum-infected red blood
+cell’, Int. J. he . Ce ., vol. 43, no. 6, pp. 839–842, Jun. 2011, doi:
+10.1016/j.biocel.2011.03.012.
+[17] A. M. Dondorp et ., ‘The rel tionship between ge nd the m nifest tions of nd
+mort lity ssoci ted with severe m l ri ’, C n. In e t. D . Off. b . In e t. D . S . A .,
+vol. 47, no. 2, pp. 151–157, Jul. 2008, doi: 10.1086/589287.
+[18] C. ncells et ., ‘Revisiting the initi l steps of sexu l development in the m l ri
+p r site Pl smodium f lcip rum’, N t. M b ., vol. 4, no. 1, pp. 144–154, J n. 2019,
+doi: 10.1038/s41564-018-0291-7.
+75
+
+[19] G. A. Josling nd M. Llinás, ‘Sexu l development in Pl smodium p r sites: knowing
+when it’s time to commit’, N t. Rev. M b ., vol. 13, no. 9, pp. 573–587, Sep. 2015,
+doi: 10.1038/nrmicro3519.
+[20] F. H wking, M. E. Wilson, nd K. G mm ge, ‘Evidence for cyclic development nd short-
+lived m turity in the g metocytes of Pl smodium f lcip rum.’, T n . R. S . T . Me .
+Hyg., vol. 65, no. 5, pp. 549–59, 1971.
+[21] J. W. Field nd P. G. Shute, ‘The Microscopic Di gnosis of Hum n M l ri . II. A
+Morphologic l Study of the Erythroeytic P r sites.’, 1956. Accessed: Sep. 16, 2023.
+[Online]. Av il ble: h ps://www.sem nticschol r.org/p per/The-Microscopic-Di gnosis-
+of-Hum n-M l ri .-II.-A-Field-Shute/4d2310230eedbb7870e29cdd92 b62c406e1e536
+[22] C. Ngw , T. Ferreir de Ar ujo Ros , nd G. Pr del, ‘The iology of M l ri
+G metocytes’, 2016. doi: 10.5772/65464.
+[23] R. S. r y, ‘Studies on m l ri in chimp nzees. VI. L ver ni f lcip rum’, A . J. T .
+Me . Hyg., vol. 7, no. 1, pp. 20–24, J n. 1958, doi: 10.4269/ jtmh.1958.7.20.
+[24] F. H wking, M. J. Worms, nd K. G mm ge, ‘24- nd 48-hour cycles of m l ri p r sites
+in the blood; their purpose, production nd control’, T n . R. S . T . Me . Hyg., vol.
+62, no. 6, pp. 731–760, J n. 1968, doi: 10.1016/0035-9203(68)90001-1.
+[25] R. C rter nd L. H. Miller, ‘Recent developments in production nd purific tion of
+m l ri ntigens: Evidence for environment l modul tion of g metocytogenesis in
+Pl smodium f lcip rum in continuous culture’, . W He th O g n., vol. 57, no.
+Suppl, pp. 37–52, 1979.
+[26] T. G. Smith, P. Lourenço, R. C rter, D. W lliker, nd L. C. R nford-C rtwright,
+‘Commitment to sexu l differenti tion in the hum n m l ri p r site, Pl smodium
+f lcip rum’, t gy, vol. 121, no. 2, pp. 127–133, Aug. 2000, doi:
+10.1017/S0031182099006265.
+[27] R. C rter nd L. H. Miller, ‘Evidence for environment l modul tion of g metocytogenesis
+in Pl smodium f lcip rum in continuous culture’, . W He th O g n., vol. 57
+Suppl 1, pp. 37–52, 1979.
+[28] M. C. ruce, P. Al no, S. Duthie, nd R. C rter, ‘Commitment of the m l ri p r site
+Pl smodium f lcip rum to sexu l nd sexu l development’, t gy, vol. 100 Pt 2,
+pp. 191–200, Apr. 1990, doi: 10.1017/s0031182000061199.
+[29] X. Sh ng et ., ‘A c sc de of tr nscription l repression determines sexu l commitment
+nd development in Pl smodium f lcip rum’, N e A Re ., vol. 49, no. 16, pp.
+9264–9279, Sep. 2021, doi: 10.1093/n r/gk b683.
+[30] G. Neveu, D. eri, nd . F. K fs ck, ‘Met bolic regul tion of sexu l commitment in
+Pl smodium f lcip rum’, C . O n. M b ., vol. 58, pp. 93–98, Dec. 2020, doi:
+10.1016/j.mib.2020.09.004.
+[31] E. K. De Silv et ., ‘Specific DNA-binding by Apicomplex n AP2 tr nscription f ctors’,
+. N t . A . S ., vol. 105, no. 24, pp. 8393–8398, Jun. 2008, doi:
+10.1073/pn s.0801993105.
+[32] T. L. C mpbell, E. K. D. Silv , K. L. Olszewski, O. Elemento, nd M. Llinás, ‘Identific tion
+nd Genome-Wide Prediction of DNA inding Specificities for the ApiAP2 F mily of
+Regul tors from the M l ri P r site’, LOS th g., vol. 6, no. 10, p. e1001165, Oct.
+2010, doi: 10.1371/journ l.pp t.1001165.
+[33] K. Modrzynsk et ., ‘A Knockout Screen of ApiAP2 Genes Reve ls Networks of
+Inter cting Tr nscription l Regul tors Controlling the Pl smodium Life Cycle’, Ce H t
+M be, vol. 21, no. 1, pp. 11–22, J n. 2017, doi: 10.1016/j.chom.2016.12.003.
+[34] S. Singh et ., ‘The PfAP2-G2 tr nscription f ctor is critic l regul tor of g metocyte
+m tur tion’, M . M b ., vol. 115, no. 5, pp. 1005–1024, M y 2021, doi:
+10.1111/mmi.14676.
+[35] S. A. R lph nd A. Cortés, ‘Pl smodium sexu l differenti tion: how to m ke fem le’,
+M . M b ., vol. 112, no. 6, pp. 1627–1631, 2019, doi: 10.1111/mmi.14340.
+76
+
+[36] E. Qu ns h et ., ‘ApiAP2 Gene-Network Regul tes G metocytogenesis in
+P r sites’, Ce . M b ., vol. 2022, p. e5796578, Jul. 2022, doi:
+10.1155/2022/5796578.
+[37] M. Usui et ., ‘Pl smodium f lcip rum sexu l differenti tion in m l ri p tients is
+ssoci ted with host f ctors nd GDV1-dependent genes’, N t. C n., vol. 10, no. 1,
+Art. no. 1, M y 2019, doi: 10.1038/s41467-019-10172-6.
+[38] N. M. . r ncucci et ., ‘Heterochrom tin Protein 1 Secures Surviv l nd Tr nsmission
+of M l ri P r sites’, Ce H t M be, vol. 16, no. 2, pp. 165–176, Aug. 2014, doi:
+10.1016/j.chom.2014.07.004.
+[39] Y. Liu et ., ‘Peptide recognition by heterochrom tin protein 1 (HP1) chromosh dow
+dom ins revisited: Pl sticity in the pseudosymmetric histone binding site of hum n
+HP1’, J. . Che ., vol. 292, no. 14, pp. 5655–5664, Apr. 2017, doi:
+10.1074/jbc.M116.768374.
+[40] R. A sl nd nd A. F. Stew rt, ‘The chromo sh dow dom in, second chromo dom in in
+heterochrom tin-binding protein 1, HP1.’, N e A Re ., vol. 23, no. 16, pp. 3168–
+3173, Aug. 1995.
+[41] C. Flueck et ., ‘Pl smodium f lcip rum heterochrom tin protein 1 m rks genomic loci
+linked to phenotypic v ri tion of exported virulence f ctors’, L S th g., vol. 5, no. 9,
+p. e1000569, Sep. 2009, doi: 10.1371/journ l.pp t.1000569.
+[42] S. A. Fr schk et ., ‘Comp r tive Heterochrom tin Profiling Reve ls Conserved nd
+Unique Epigenome Sign tures Linked to Ad pt tion nd Development of M l ri
+P r sites’, Ce H t M be, vol. 23, no. 3, pp. 407-420.e8, M r. 2018, doi:
+10.1016/j.chom.2018.01.008.
+[43] H. T. N. ui, A. P ssecker, N. M. . r ncucci, nd T. S. Voss, ‘Investig tion of
+Heterochrom tin Protein 1 Function in the M l ri P r site Pl smodium f lcip rum
+Using Condition l Dom in Deletion nd Sw pping Appro ch’, S he e, vol. 6, no. 1,
+pp. e01220-20, Feb. 2021, doi: 10.1128/mSphere.01220-20.
+[44] A. R. Strom et ., ‘HP1α is chrom tin crosslinker th t controls nucle r nd mitotic
+chromosome mech nics’, eL e, vol. 10, p. e63972, Jun. 2021, doi: 10.7554/eLife.63972.
+[45] S. Eksi et ., ‘Pl smodium f lcip rum G metocyte Development 1 (Pfgdv1) nd
+G metocytogenesis E rly Gene Identific tion nd Commitment to Sexu l Development’,
+L S th g., vol. 8, no. 10, p. e1002964, Oct. 2012, doi:
+10.1371/journ l.pp t.1002964.
+[46] M. Fil rsky et ., ‘GDV1 induces sexu l commitment of m l ri p r sites by
+nt gonizing HP1-dependent gene silencing’, S en e, vol. 359, no. 6381, pp. 1259–
+1263, M r. 2018, doi: 10.1126/science. n6042.
+[47] K. M. ro dbent, J. C. ro dbent, U. Rib cke, D. Wirth, J. L. Rinn, nd P. C. S beti,
+‘Str nd-specific RNA sequencing in Pl smodium f lcip rum m l ri identifies
+development lly regul ted long non-coding RNA nd circul r RNA’, MC Gen , vol.
+16, no. 1, p. 454, Jun. 2015, doi: 10.1186/s12864-015-1603-4.
+[48] M. Tibúrcio et ., ‘A 39-Amino-Acid C-Termin l Trunc tion of GDV1 Disrupts Sexu l
+Commitment in Pl smodium f lcip rum’, S he e, vol. 6, no. 3, pp. e01093-20, doi:
+10.1128/mSphere.01093-20.
+[49] R. A. C mpelo Morillo et ., ‘The tr nscription l regul tor HDP1 controls exp nsion of
+the inner membr ne complex during e rly sexu l differenti tion of m l ri p r sites’,
+N t. M b ., vol. 7, no. 2, pp. 289–299, Feb. 2022, doi: 10.1038/s41564-021-01045-0.
+[50] S. Eksi, Y. H ile, T. Furuy , L. M , X. Su, nd K. C. Willi mson, ‘Identific tion of
+subtelomeric gene f mily expressed during the sexu l–sexu l st ge tr nsition in
+Pl smodium f lcip rum’, M . he . t ., vol. 143, no. 1, pp. 90–99, Sep. 2005,
+doi: 10.1016/j.molbiop r .2005.05.010.
+77
+
+[51] C. A. Lobo nd N. Kum r, ‘Sexu l differenti tion nd development in the m l ri
+p r site’, t . T y e . E , vol. 14, no. 4, pp. 146–150, Apr. 1998, doi:
+10.1016/s0169-4758(97)01210-6.
+[52] H. Ik d i et ., ‘Tr nsposon mut genesis identifies genes essenti l for Pl smodium
+f lcip rum g metocytogenesis’, . N t . A . S . U. S. A., vol. 110, no. 18, pp.
+E1676-1684, Apr. 2013, doi: 10.1073/pn s.1217712110.
+[53] J. A. Gregory et ., ‘Alg e-Produced Pfs25 Elicits Antibodies Th t Inhibit M l ri
+Tr nsmission’, LOS ONE, vol. 7, no. 5, p. e37179, M y 2012, doi:
+10.1371/journ l.pone.0037179.
+[54] N. Shukl , W. K. T ng, nd N. H. Toli , ‘Structur l n lysis of Pl smodium f lcip rum
+ookinete surf ce ntigen Pfs28 relev nt for m l ri v ccine design’, S . Re ., vol. 12, p.
+19556, Nov. 2022, doi: 10.1038/s41598-022-24054-3.
+[55] A. K. S xen , Y. Wu, nd D. N. G rboczi, ‘Pl smodium P25 nd P28 Surf ce Proteins:
+Potenti l Tr nsmission- locking V ccines’, E k y t. Ce , vol. 6, no. 8, pp. 1260–1265,
+Aug. 2007, doi: 10.1128/ec.00060-07.
+[56] K. J. Dechering, J. Thompson, H. J. Dodemont, W. Eling, nd R. N. H. Konings,
+‘Development lly regul ted expression of pfs16, m rker for sexu l differenti tion of
+the hum n m l ri p r site Pl smodium f lcip rum’, M . he . t ., vol. 89,
+no. 2, pp. 235–244, Nov. 1997, doi: 10.1016/S0166-6851(97)00123-0.
+[57] M. C. ruce, R. N. C rter, K. N k mur , M. Aik w , nd R. C rter, ‘Cellul r loc tion nd
+tempor l expression of the Pl smodium f lcip rum sexu l st ge ntigen Pfs16’, M .
+he . t ., vol. 65, no. 1, pp. 11–22, M y 1994, doi: 10.1016/0166-
+6851(94)90111-2.
+[58] C.-A. Lobo, N. H. Ruud, Konings, nd N. Kum r, ‘Expression of e rly g metocyte-st ge
+ntigens Pfg27 nd Pfs16 in synchronized g metocytes nd non-g metocyte producing
+clones of Pl smodium f lcip rum’, M . he . t ., vol. 68, no. 1, pp. 151–154,
+Nov. 1994, doi: 10.1016/0166-6851(94)00155-3.
+[59] J. R melow, Y. Kelet , G. Niu, X. W ng, nd J. Li, ‘Pl smodium p r sitophorous v cuole
+membr ne protein Pfs16 promotes m l ri tr nsmission by silencing mosquito
+immunity’, J. . Che ., vol. 299, no. 6, p. 104824, M y 2023, doi:
+10.1016/j.jbc.2023.104824.
+[60] E. Hitz, A. C. lestr , M. rochet, nd T. S. Voss, ‘PfMAP-2 is essenti l for m le
+g metogenesis in the m l ri p r site Pl smodium f lcip rum’, S . Re ., vol. 10, no. 1,
+Art. no. 1, Jul. 2020, doi: 10.1038/s41598-020-68717-5.
+[61] S. M uer, N. C m rgo, . A. Ab tiyow, O. R. G rg ro, S. H. I. K ppe, nd S. Kum r,
+‘Pl smodium microtubule-binding protein E 1 is critic l for p rtitioning of nuclei in m le
+g metogenesis’, , vol. 14, no. 4, p. e0082223, Aug. 2023, doi: 10.1128/mbio.00822-
+23.
+[62] I. K neko, T. Nishi, S. Iw n g , nd M. Yud , ‘Differenti tion of Pl smodium m le
+g metocytes is initi ted by the recruitment of chrom tin remodeler to m le-specific
+cis-element’, . N t . A . S . U. S. A., vol. 120, no. 20, p. e2303432120, M y 2023,
+doi: 10.1073/pn s.2303432120.
+[63] M. D. Jening , J. T ng, S. A. Selv r j h, A. G. M ier, M. F. Duffy, nd M. Pe er,
+‘Pl smodium f lcip rum g metocytes displ y glob l chrom tin remodelling during
+sexu l differenti tion’, MC ., vol. 21, no. 1, p. 65, Apr. 2023, doi: 10.1186/s12915-
+023-01568-4.
+[64] M. J. Delves et ., ‘Routine in vitro culture of P. f lcip rum g metocytes to ev lu te
+novel tr nsmission-blocking interventions’, N t. t ., vol. 11, no. 9, pp. 1668–1680,
+Sep. 2016, doi: 10.1038/nprot.2016.096.
+[65] P. Al no, L. Roc , D. Smith, D. Re d, R. C rter, nd K. D y, ‘Pl smodium f lcip rum:
+p r sites defective in e rly st ges of g metocytogenesis’, Ex . t ., vol. 81, no. 2,
+pp. 227–235, Sep. 1995, doi: 10.1006/expr.1995.1112.
+78
+
+[66] T. Furuy et ., ‘Disruption of Pl smodium f lcip rum gene linked to m le sexu l
+development c uses e rly rrest in g metocytogenesis’, . N t . A . S . U. S. A.,
+vol. 102, no. 46, pp. 16813–16818, Nov. 2005, doi: 10.1073/pn s.0501858102.
+[67] K. Miur et ., ‘Qu lific tion of st nd rd membr ne-feeding ss y with Pl smodium
+f lcip rum m l ri nd potenti l improvements for future ss ys’, S One, vol. 8, no.
+3, p. e57909, 2013, doi: 10.1371/journ l.pone.0057909.
+[68] J. M. olscher et ., ‘A combin tion of new screening ss ys for prioritiz tion of
+tr nsmission-blocking ntim l ri ls reve ls distinct dyn mics of m rketed nd
+experiment l drugs’, J. Anti b. Che the ., vol. 70, no. 5, pp. 1357–1366, M y
+2015, doi: 10.1093/j c/dkv003.
+[69] R. A. Ogw n’g, J. K. Mw ngi, J. Githure, J. . Were, C. R. Roberts, nd S. K. M rtin,
+‘F ctors ffecting exfl gell tion of in vitro-cultiv ted Pl smodium f lcip rum
+g metocytes’, A . J. T . Me . Hyg., vol. 49, no. 1, pp. 25–29, Jul. 1993, doi:
+10.4269/ jtmh.1993.49.25.
+[70] M. Dixon, C. Pe tey, D. G rdiner, nd K. Trenholme, ‘A green fluorescent protein-b sed
+ss y for determining g metocyte production in Pl smodium f lcip rum’, M . he .
+t ., vol. 163, no. 2, pp. 123–126, Feb. 2009, doi:
+10.1016/j.molbiop r .2008.10.004.
+[71] C. L. Pe tey, T. S. Skinner-Ad ms, M. W. A. Dixon, J. S. McC rthy, D. L. G rdiner, nd K. R.
+Trenholme, ‘Effect of ntim l ri l drugs on Pl smodium f lcip rum g metocytes’, J.
+In e t. D ., vol. 200, no. 10, pp. 1518–1521, Nov. 2009, doi: 10.1086/644645.
+[72] R. West nd D. J. Sulliv n, ‘L ctic Acid Supplement tion Incre ses Qu ntity nd Qu lity
+of G metocytes in Pl smodium f lcip rum Culture’, In e t. I n., vol. 89, no. 1, pp.
+e00635-20, Dec. 2020, doi: 10.1128/IAI.00635-20.
+[73] T. Q. T n k et ., ‘Polyuns tur ted f y cids promote Pl smodium f lcip rum
+g metocytogenesis’, . O en, vol. 8, no. 7, p. bio042259, Jul. 2019, doi:
+10.1242/bio.042259.
+[74] Q. L. Fivelm n et ., ‘Improved synchronous production of Pl smodium f lcip rum
+g metocytes in vitro’, M . he . t ., vol. 154, no. 1, pp. 119–123, Jul. 2007,
+doi: 10.1016/j.molbiop r .2007.04.008.
+[75] R. Scully, A. P nd y, R. El ngo, nd N. A. Willis, ‘DNA double-str nd bre k rep ir-
+p thw y choice in som tic m mm li n cells’, N t. Rev. M . Ce ., vol. 20, no. 11, pp.
+698–714, Nov. 2019, doi: 10.1038/s41580-019-0152-0.
+[76] M. R. Lieber, ‘The mech nism of hum n nonhomologous DNA end joining’, J. .
+Che ., vol. 283, no. 1, pp. 1–5, J n. 2008, doi: 10.1074/jbc.R700039200.
+[77] M. J sin nd R. Rothstein, ‘Rep ir of Str nd re ks by Homologous Recombin tion’, C
+S ng H b. e e t. ., vol. 5, no. 11, pp. 012740– 012740, Nov. 2013, doi:
+10.1101/cshperspect. 012740.
+[78] O. I ncu et ., ‘Multiplex HDR for dise se nd correction modeling of SCID by CRISPR
+genome editing in hum n HSPCs’, M . The . - N e A , vol. 31, pp. 105–121, M r.
+2023, doi: 10.1016/j.omtn.2022.12.006.
+[79] A. H. Lee, L. S. Symington, nd D. A. Fidock, ‘DNA Rep ir Mech nisms nd Their
+iologic l Roles in the M l ri P r site Pl smodium f lcip rum’, M b . M . .
+Rev. MM R, vol. 78, no. 3, pp. 469–486, Sep. 2014, doi: 10.1128/MM R.00059-13.
+[80] C. Pf nder et ., ‘A sc l ble pipeline for highly effective genetic modific tion of
+m l ri p r site’, N t. Meth , vol. 8, no. 12, pp. 1078–1082, Oct. 2011, doi:
+10.1038/nmeth.1742.
+[81] . lu, N. Singh, S. P. M her, nd J. H. Ad ms, ‘A Genetic Screen for A enu ted Growth
+Identifies Genes Cruci l for Intr erythrocytic Development of Pl smodium f lcip rum’,
+L S ONE, vol. 5, no. 10, p. e13282, Oct. 2010, doi: 10.1371/journ l.pone.0013282.
+[82] M. Ghorb l, M. Gorm n, C. R. M cpherson, R. M. M rtins, A. Scherf, nd J.-J. Lopez-
+Rubio, ‘Genome editing in the hum n m l ri p r site Pl smodium f lcip rum using the
+79
+
+CRISPR-C s9 system’, N t. te hn ., vol. 32, no. 8, pp. 819–821, Aug. 2014, doi:
+10.1038/nbt.2925.
+[83] L. J. Nkrum h et ., ‘Efficient site-specific integr tion in Pl smodium f lcip rum
+chromosomes medi ted by mycob cterioph ge xb1 integr se’, N t. Meth , vol. 3,
+no. 8, pp. 615–621, Aug. 2006, doi: 10.1038/nmeth904.
+[84] J. Smith, M. ibikov , F. G. Whitby, A. R. Reddy, S. Ch ndr seg r n, nd D. C rroll,
+‘Requirements for double-str nd cle v ge by chimeric restriction enzymes with zinc
+finger DNA-recognition dom ins’, N e A Re ., vol. 28, no. 17, pp. 3361–3369, Sep.
+2000, doi: 10.1093/n r/28.17.3361.
+[85] P. Promm n et ., ‘Inducible Knockdown of Pl smodium Gene Expression Using the
+glmS Ribozyme’, LOS ONE, vol. 8, no. 8, p. e73783, Aug. 2013, doi:
+10.1371/journ l.pone.0073783.
+[86] T. Nishi, N. Shinz w , M. Yud , nd S. Iw n g , ‘Highly efficient CRISPR/C s9 system in
+Pl smodium f lcip rum using C s9-expressing p r sites nd line r donor templ te’,
+S . Re ., vol. 11, no. 1, p. 18501, Sep. 2021, doi: 10.1038/s41598-021-97984-z.
+[87] M. Jinek, K. Chylinski, I. Fonf r , M. H uer, J. A. Doudn , nd E. Ch rpentier, ‘A
+progr mm ble du l-RNA-guided DNA endonucle se in d ptive b cteri l immunity’,
+S en e, vol. 337, no. 6096, pp. 816–821, Aug. 2012, doi: 10.1126/science.1225829.
+[88] S. oltryk et ., CRIS R/C 9-eng nee e n b e g et yte e ne n ve
+t b n e e e h n t n n
+t ge . 2020. doi: 10.1101/2020.10.05.326868.
+[89] O. Llorà- tlle et ., ‘Condition l expression of PfAP2-G for controlled m ssive sexu l
+conversion in Pl smodium f lcip rum’, S . A v., vol. 6, no. 24, p. e z5057, Jun. 2020,
+doi: 10.1126/sci dv. z5057.
+[90] T. Li et ., ‘CRISPR/C s9 ther peutics: progress nd prospects’, S gn T n t. T get.
+The ., vol. 8, no. 1, Art. no. 1, J n. 2023, doi: 10.1038/s41392-023-01309-7.
+[91] P. l b sk r n-Nin nd S. A. Des i, ‘Diverse t rget gene modific tions in Pl smodium
+f lcip rum using xb1 integr se nd n intronic ’, t. Ve t , vol. 11, p. 548,
+Oct. 2018, doi: 10.1186/s13071-018-3129-5.
+[92] S. H. Adj lley et ., ‘Qu ntit tive ssessment of Pl smodium f lcip rum sexu l
+development reve ls potent tr nsmission-blocking ctivity by methylene blue’, .
+N t . A . S . U. S. A., vol. 108, no. 47, pp. E1214–E1223, Nov. 2011, doi:
+10.1073/pn s.1112037108.
+[93] T. G j, S. J. Sirk, S. Shui, nd J. Liu, ‘Genome-Editing Technologies: Principles nd
+Applic tions’, C S ng H b. e e t. ., vol. 8, no. 12, p. 023754, Dec. 2016, doi:
+10.1101/cshperspect. 023754.
+[94] Y. G. Kim, J. Ch , nd S. Ch ndr seg r n, ‘Hybrid restriction enzymes: zinc finger fusions
+to Fok I cle v ge dom in’, . N t . A . S . U. S. A., vol. 93, no. 3, pp. 1156–1160,
+Feb. 1996, doi: 10.1073/pn s.93.3.1156.
+[95] T. G j, J. Guo, Y. K to, S. J. Sirk, nd C. F. rb s, ‘T rgeted gene knockout by direct
+delivery of zinc-finger nucle se proteins’, N t. Meth , vol. 9, no. 8, pp. 805–807, Jul.
+2012, doi: 10.1038/nmeth.2030.
+[96] P. Y. W tson nd M. J. Fedor, ‘The glmS riboswitch integr tes sign ls from ctiv ting nd
+inhibitory met bolites in vivo’, N t. St t. M . ., vol. 18, no. 3, Art. no. 3, M r.
+2011, doi: 10.1038/nsmb.1989.
+[97] W. C. Winkler, A. N hvi, A. Roth, J. A. Collins, nd R. R. re ker, ‘Control of gene
+expression by n tur l met bolite-responsive ribozyme’, N t e, vol. 428, no. 6980, Art.
+no. 6980, M r. 2004, doi: 10.1038/n ture02362.
+[98] ‘Selection linked integr tion (SLI) for endogenous gene t gging nd knock sidew ys in
+Pl smodium f lcip rum p r sites’. Accessed: Feb. 03, 2024. [Online]. Av il ble:
+h ps://www.rese rchsqu re.com
+80
+
+[99] R. I. Omeli nczyk et ., ‘R pid ctiv tion of distinct members of multigene f milies in
+Pl smodium spp’, C n. ., vol. 3, no. 1, pp. 1–11, Jul. 2020, doi: 10.1038/s42003-
+020-1081-3.
+[100] W. H. Org niz tion, M M y Q ty A n e M n - Ve n 2. World
+He lth Org niz tion, 2016.
+[101] M. L. Wilson, ‘L bor tory Di gnosis of M l ri : Convention l nd R pid Di gnostic
+Methods’, A h. th . L b. Me ., vol. 137, no. 6, pp. 805–811, Jun. 2013, doi:
+10.5858/ rp .2011-0602-RA.
+[102] A. A. Shemetov, O. S. Oliinyk, nd V. V. Verkhush , ‘How to Incre se rightness of Ne r-
+Infr red Fluorescent Proteins in M mm li n Cells’, Ce Che . ., vol. 24, no. 6, pp.
+758-766.e3, Jun. 2017, doi: 10.1016/j.chembiol.2017.05.018.
+[103] K. H kkil , M. M ksimow, M. K rp, nd M. Virt , ‘Reporter Genes lucFF, luxCDA E, gfp,
+nd dsred H ve Different Ch r cteristics in Whole-Cell cteri l Sensors’, An .
+he ., vol. 301, no. 2, pp. 235–242, Feb. 2002, doi: 10.1006/ bio.2001.5517.
+[104] M. E. M tl shov et ., ‘A set of monomeric ne r-infr red fluorescent proteins for
+multicolor im ging cross sc les’, N t. C n., vol. 11, no. 1, p. 239, Dec. 2020, doi:
+10.1038/s41467-019-13897-6.
+[105] A. S. Mishin, F. V. Sub ch, I. V. Y mpolsky, W. King, K. A. Luky nov, nd V. V. Verkhush ,
+‘The First Mut nt of the Aequore victori Green Fluorescent Protein Th t Forms Red
+Chromophore’, he t y, vol. 47, no. 16, pp. 4666–4673, Apr. 2008, doi:
+10.1021/bi702130s.
+[106] E. S. Vysotski, ‘ ioluminescent nd Fluorescent Proteins: Molecul r Mech nisms nd
+Modern Applic tions’, Int. J. M . S ., vol. 24, no. 1, J n. 2023, doi:
+10.3390/ijms24010281.
+[107] Y. Li nd Z. J. Cui, ‘N noLuc ioluminescence-Driven Photodyn mic Activ tion of
+Cholecystokinin 1 Receptor with Genetic lly-Encoded Protein Photosensitizer MiniSOG’,
+Int. J. M . S ., vol. 21, no. 11, p. 3763, M y 2020, doi: 10.3390/ijms21113763.
+[108] ‘Minim l Promoter-Driven N noLuc® Genetic Reporter Vectors’. Accessed: Apr. 06, 2024.
+[Online]. Av il ble: h ps://worldwide.promeg .com/products/lucifer se-
+ss ys/genetic-reporter-vectors- nd-cell-lines/minim l-promoter-driven-n noluc-
+genetic-reporter-vectors/
+[109] S. M. Yoon, W. N mkung, nd J. Lee, ‘A comp rison of Ypet nd firefly lucifer se s
+reporter proteins for high-throughput screening’, . te hn . he ., vol. 77,
+no. 11, pp. 2328–2330, 2013, doi: 10.1271/bbb.130537.
+[110] M. Neefjes, . . C. Housm ns, G. G. H. v n den Akker, L. W. v n Rhijn, T. J. M. Welting,
+nd P. M. v n der Kr n, ‘Reporter gene comp rison demonstr tes interference of
+complex body fluids with secreted lucifer se ctivity’, S . Re ., vol. 11, no. 1, Art. no. 1,
+J n. 2021, doi: 10.1038/s41598-020-80451-6.
+[111] F. Nosten nd N. J. White, A te n n- e C b n ti n T e t ent F
+M . Americ n Society of Tropic l Medicine nd Hygiene, 2007. Accessed: M y 23,
+2022. [Online]. Av il ble: h ps://www.ncbi.nlm.nih.gov/books/N K1713/
+[112] W. Shibeshi, G. Alemkere, A. Mulu, nd E. Engid work, ‘Effic cy nd s fety of
+rtemisinin-b sed combin tion ther pies for the tre tment of uncomplic ted m l ri in
+pedi trics: system tic review nd met - n lysis’, MC In e t. D ., vol. 21, no. 1, p.
+326, Dec. 2021, doi: 10.1186/s12879-021-06018-6.
+[113] R. G. Ridley, ‘Medic l need, scientific opportunity nd the drive for ntim l ri l drugs’,
+N t e, vol. 415, no. 6872, pp. 686–693, Feb. 2002, doi: 10.1038/415686 .
+[114] A. . S. Sidhu, D. Verdier-Pin rd, nd D. A. Fidock, ‘Chloroquine resist nce in
+Pl smodium f lcip rum m l ri p r sites conferred by pfcrt mut tions’, S en e, vol.
+298, no. 5591, pp. 210–213, Oct. 2002, doi: 10.1126/science.1074045.
+[115] D. K. Dosoo et ., ‘The prev lence of molecul r m rkers of resist nce to sulf doxine-
+pyrimeth mine mong pregn nt women t first nten t l clinic end nce nd delivery
+81
+
+in the forest-s v nn h re of Gh n ’, LOS ONE, vol. 17, no. 8, p. e0271489, Aug. 2022,
+doi: 10.1371/journ l.pone.0271489.
+[116] X. W ng, X. Zh ng, H. Chen, Q. Lu, W. Ru n, nd Z. Chen, ‘Molecul r Determin nts of
+Sulf doxine-Pyrimeth mine Resist nce in Pl smodium f lcip rum Isol tes from Centr l
+Afric between 2016 nd 2021: Wide Geogr phic Spre d of Highly Mut ted Pfdhfr nd
+Pfdhps Alleles’, M b . S e t ., vol. 10, no. 5, pp. e02005-22, Sep. 2022, doi:
+10.1128/spectrum.02005-22.
+[117] R. D. Gosling, M. E. C irns, R. M. Chico, nd D. Ch ndr moh n, ‘Intermi ent preventive
+tre tment g inst m l ri : n upd te’, Ex e t Rev. Anti In e t. The ., vol. 8, no. 5, pp.
+589–606, M y 2010, doi: 10.1586/eri.10.36.
+[118] A. T. Kon té et ., ‘Intermi ent preventive tre tment of m l ri provides subst nti l
+protection g inst m l ri in children lre dy protected by n insecticide-tre ted
+bednet in urkin F so: r ndomised, double-blind, pl cebo-controlled tri l’, L S
+Me ., vol. 8, no. 2, p. e1000408, Feb. 2011, doi: 10.1371/journ l.pmed.1000408.
+[119] L. Ndwig et ., ‘A review of the frequencies of Pl smodium f lcip rum Kelch 13
+rtemisinin resist nce mut tions in Afric ’, Int. J. t . D g D g Re t., vol. 16,
+pp. 155–161, Aug. 2021, doi: 10.1016/j.ijpddr.2021.06.001.
+[120] R. N. Price et ., ‘Molecul r nd Ph rm cologic l Determin nts of the Ther peutic
+Response to Artemether-Lumef ntrine in Multidrug-Resist nt Pl smodium f lcip rum
+M l ri ’, C n. In e t. D ., vol. 42, no. 11, pp. 1570–1577, Jun. 2006, doi:
+10.1086/503423.
+[121] P. Omondi et ., ‘G metocyte cle r nce in children, from western Keny , with
+uncomplic ted Pl smodium f lcip rum m l ri fter rtemether–lumef ntrine or
+dihydro rtemisinin–piper quine tre tment’, M . J., vol. 18, p. 398, Dec. 2019, doi:
+10.1186/s12936-019-3032-3.
+[122] ‘World m l ri report 2022’. Accessed: Sep. 14, 2023. [Online]. Av il ble:
+h ps://www.who.int/te ms/glob l-m l ri -progr mme/reports/world-m l ri -report-
+2022
+[123] J. Ch wl , J. Oberst ller, nd J. H. Ad ms, ‘T rgeting G metocytes of the M l ri P r site
+Pl smodium f lcip rum in Function l Genomics Er : Next Steps’, th gen , vol. 10,
+no. 3, p. 346, M r. 2021, doi: 10.3390/p thogens10030346.
+[124] . A. Munro nd . J. McMorr n, ‘Antim l ri l Drug Str tegies to T rget Pl smodium
+G metocytes’, t g , vol. 2, no. 2, Art. no. 2, Jun. 2022, doi:
+10.3390/p r sitologi 2020011.
+[125] S. E. Fr ncis, D. J. Sulliv n, Goldberg, nd D. E, ‘Hemoglobin Met bolism in the M l ri
+P r site Pl smodium F lcip rum’, Ann . Rev. M b ., vol. 51, no. 1, pp. 97–123,
+1997, doi: 10.1146/ nnurev.micro.51.1.97.
+[126] K. N. Ol fson, M. A. Ketchum, J. D. Rimer, nd P. G. Vekilov, ‘Mech nisms of hem tin
+cryst lliz tion nd inhibition by the ntim l ri l drug chloroquine’, . N t . A . S .,
+vol. 112, no. 16, pp. 4946–4951, Apr. 2015, doi: 10.1073/pn s.1501023112.
+[127] T. J. Eg n, D. C. Ross, nd P. A. Ad ms, ‘Quinoline nti-m l ri l drugs inhibit spont neous
+form tion of bet -h em tin (m l ri pigment)’, FE S Le ., vol. 352, no. 1, pp. 54–57,
+Sep. 1994, doi: 10.1016/0014-5793(94)00921-x.
+[128] S. Duffy nd V. M. Avery, ‘Identific tion of inhibitors of Pl smodium f lcip rum
+g metocyte development’, M . J., vol. 12, p. 408, Nov. 2013, doi: 10.1186/1475-2875-
+12-408.
+[129] D. M. Plouffe et ., ‘High-Throughput Ass y nd Discovery of Sm ll Molecules th t
+Interrupt M l ri Tr nsmission’, Ce H t M be, vol. 19, no. 1, pp. 114–126, J n.
+2016, doi: 10.1016/j.chom.2015.12.001.
+[130] E. H nssen et ., ‘Soft X-r y microscopy n lysis of cell volume nd hemoglobin content
+in erythrocytes infected with sexu l nd sexu l st ges of Pl smodium f lcip rum’, J.
+St t. ., vol. 177, no. 2, pp. 224–232, Feb. 2012, doi: 10.1016/j.jsb.2011.09.003.
+82
+
+[131] M. Delves et ., ‘The Activities of Current Antim l ri l Drugs on the Life Cycle St ges of
+Pl smodium: A Comp r tive Study with Hum n nd Rodent P r sites’, LOS Me ., vol.
+9, no. 2, p. e1001169, Feb. 2012, doi: 10.1371/journ l.pmed.1001169.
+[132] A. Dicko et ., ‘Effic cy nd s fety of prim quine nd methylene blue for prevention of
+Pl smodium f lcip rum tr nsmission in M li: ph se 2, single-blind, r ndomised
+controlled tri l’, L n et In e t. D ., vol. 18, no. 6, pp. 627–639, Jun. 2018, doi:
+10.1016/S1473-3099(18)30044-6.
+[133] ‘G6PD Deficiency Prev lence nd Estim tes of Affected Popul tions in M l ri Endemic
+Countries: A Geost tistic l Model- sed M p | PLOS Medicine’. Accessed: M r. 10,
+2024. [Online]. Av il ble:
+h ps://journ ls.plos.org/plosmedicine/ rticle?id=10.1371/journ l.pmed.1001339
+[134] M. Crocke nd K. C. K in, ‘T fenoquine: promising new ntim l ri l gent’, Ex e t
+O n. Inve tig. D g , vol. 16, no. 5, pp. 705–715, M y 2007, doi:
+10.1517/13543784.16.5.705.
+[135] J. E. Fr mpton, ‘T fenoquine: First Glob l Approv l’, D g , vol. 78, no. 14, pp. 1517–
+1523, Sep. 2018, doi: 10.1007/s40265-018-0979-2.
+[136] G. Lu et ., ‘Effic cy nd s fety of methylene blue in the tre tment of m l ri :
+system tic review’, MC Me ., vol. 16, no. 1, p. 59, Apr. 2018, doi: 10.1186/s12916-018-
+1045-3.
+[137] T. Gebru, A. L lremru t , P. G. Kremsner, . Mordmüller, nd J. Held, ‘Life-sp n of in vitro
+differenti ted Pl smodium f lcip rum g metocytes’, M . J., vol. 16, no. 1, p. 330, Aug.
+2017, doi: 10.1186/s12936-017-1986-6.
+[138] C. M rin-Mogollon et ., ‘A P. f lcip rum NF54 Reporter Line Expressing mCherry-
+Lucifer se in G metocytes, Sporozoites, nd Liver-St ges’, F nt. Ce . In e t. M b .,
+vol. 9, 2019, Accessed: Sep. 26, 2022. [Online]. Av il ble:
+h ps://www.frontiersin.org/ rticles/10.3389/fcimb.2019.00096
+[139] H. P. Portug liz , O. Llorà- tlle, A. Ros n s-Urgell, nd A. Cortés, ‘Reporter lines b sed
+on the gexp02 promoter en ble e rly qu ntific tion of sexu l conversion r tes in the
+m l ri p r site Pl smodium f lcip rum’, S . Re ., vol. 9, no. 1, Art. no. 1, Oct. 2019,
+doi: 10.1038/s41598-019-50768-y.
+[140] . E. Sleebs et ., ‘Inhibition of Pl smepsin V Activity Demonstr tes Its Essenti l Role in
+Protein Export, PfEMP1 Displ y, nd Surviv l of M l ri P r sites’, L S ., vol. 12, no.
+7, p. e1001897, Jul. 2014, doi: 10.1371/journ l.pbio.1001897.
+[141] M. C. S. Lee, S. E. Lindner, J.-J. Lopez-Rubio, nd M. Llinás, ‘Cutting b ck m l ri :
+CRISPR/C s9 genome editing of Pl smodium’, e . F n t. Gen , vol. 18, no. 5, pp.
+281–289, Sep. 2019, doi: 10.1093/bfgp/elz012.
+83
+
+SUPPLEMENTARY DATA
+Figure 43 - Sanger Sequencing of Pfs16 covering all extension with 4 primers. As it can
+see, there is extremely difficulty to sequence Pfs16, having present lot of errors, deletions
+and insertion.
+84

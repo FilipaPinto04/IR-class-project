@@ -1,0 +1,1645 @@
+André Santa Cruz João
+Implicações da comunidade de prática no
+raciocínio moral e ético: estudo de caso
+abril de 2024
+osac
+ed
+odutse
+:ocité
+e
+larom
+oinícoicar
+on
+acitárp
+ed
+edadinumoc
+ad
+seõçacilpmI
+oãoJ
+zurC
+atnaS
+érdnA
+4202|ohniMU
+Universidade do Minho
+Escola de Medicina
+
+Universidade do Minho
+Escola de Medicina
+André Santa Cruz João
+Implicações da comunidade de prática no
+raciocínio moral e ético: estudo de caso
+Dissertação de Mestrado
+Mestrado em Avaliação Aplicada à Formação nas
+Profissões da Saúde
+Trabalho efetuado sob a orientação do
+Professor Doutor Nuno Sousa
+abril de 2024
+
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras e
+boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não
+previstas no licenciamento indicado, deverá contactar o autor, através do RepositóriUM da Universidade
+do Minho.
+Licença concedida aos utilizadores deste trabalho
+Atribuição-NãoComercial-SemDerivações
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+ii
+
+AGRADECIMENTOS
+A todas as comunidades de prática a que pertenço ou pertenci, pelo que aprendi,
+Aos meus colegas e amigos do Mestrado em Avaliação Aplicada à Formação das Profissões de Saúde,
+pela partilha da vida, dos conhecimentos e das experiências,
+A todo o Serviço de Medicina Interna do Hospital de Braga, em particular à equipa médica da
+Enfermaria de Vigilância Avançada, pela viva ligação entre todos e pela preciosa colaboração,
+Ao corpo docente do Mestrado em Avaliação Aplicada à Formação das Profissões de Saúde,
+verdadeiros professores pela excelência e pela vontade de levar a aprender,
+Agradeço especialmente ao Professor Doutor Nuno Sousa, pela proximidade desde o início deste
+caminho no MAPS, pela disponibilidade para orientar esta tese, mas sobretudo por todos estes anos,
+pela sua visão, sentido de missão e pela força do seu exemplo.
+Apoio Financeiro
+O trabalho apresentado nesta tese foi desenvolvido na Escola de Medicina e Instituto de Investigação
+em Ciências da Vida e Saúde (ICVS) da Universidade do Minho. Agradece-se ao Grupo Fuste e ao 2CA
+Braga – Centro Clínico Académico pelo apoio financeiro.
+iii
+
+DECLARAÇÃO DE INTEGRIDADE
+Declaro ter atuado com integridade na elaboração do presente trabalho académico e confirmo
+que não recorri à prática de plágio nem a qualquer forma de utilização indevida ou falsificação de
+informações ou resultados em nenhuma das etapas conducente à sua elaboração.
+Mais declaro que conheço e que respeitei o Código de Conduta Ética da Universidade do Minho.
+iv
+
+RESUMO
+Título: Implicações da comunidade de prática no raciocínio moral e ético: estudo de caso
+Introdução: A Ética médica é uma dimensão fundamental do profissionalismo e da boa prática
+clínica, pelo que a adesão aos seus princípios deve ser conseguida e mantida ao longo da carreira. No
+entanto, têm surgido sinais de existir uma erosão ética ao longo da vida, provavelmente secundária à
+existência de um curriculum oculto. Tornar-se-á então necessária uma intervenção que contrarie esse
+fenómeno. Nas perspetivas mais recentes, a formação em Ética clínica deverá utilizar estratégias ativas
+de aprendizagem, como a discussão entre pares de casos clínicos reais, numa correspondência
+evidente com a teoria de aprendizagem da Comunidade de Prática.
+Objetivos: Estimar a existência de erosão ética numa comunidade médica; Criar uma formação atual
+em Ética Clínica; Avaliar o impacto da comunidade no raciocínio ético dos seus membros; Avaliar a
+satisfação dos participantes e os benefícios para a comunidade deste tipo de formação;
+Métodos: Aplicou-se o Defining Issues Test-2 (DIT-2) aos membros do Serviço de Medicina Interna do
+Hospital de Braga. Desenhou-se uma formação em Ética Clínica para um pequeno grupo, avaliando-se
+o seu impacto a nível individual e coletivo através da aplicação de questionários em cada sessão e no
+final da formação e utilização de métodos de análise quantitativos e qualitativos.
+Resultados: A análise dos dados do teste DIT-2 mostrou que existe uma correlação negativa fraca
+estatisticamente significativa entre a idade e o score N2. Adicionalmente, médicos mais jovens (idade ≤
+35 anos), pontuam significativamente melhor no teste do que o grupo dos médicos mais velhos. Na
+outra tarefa, os formandos manifestaram um grau de satisfação muito elevado com a formação no que
+respeita à metodologia utilizada, ao modo, ao predomínio prático, à aplicabilidade e ao impacto
+individual e coletivo percecionado. Os participantes acreditam que este tipo de formações fortalece a
+comunidade de prática, nas suas características essenciais de ligação e pertença, partilha de valores e
+alinhamento. Por outro lado, através de uma análise das respostas aos questionários aplicados no final
+de cada sessão, foi notório o grande impacto que a comunidade de prática tem na formação do
+julgamento ou raciocínio ético dos seus elementos.
+Conclusão: Parece existir o fenómeno de erosão ética na comunidade estudada. O elevado impacto
+da comunidade de prática nos seus membros obriga a que futuras intervenções pedagógicas no campo
+da Ética Clínica sejam dirigidas preferencialmente à comunidade e não a indivíduos isolados.
+Palavras-chave: Comunidade Prática; Erosão; Ética Clínica.
+v
+
+ABSTRACT
+Title: Implications of the community of practice in moral and ethical reasoning: a case study
+Introduction: Clinical Ethics is a crucial factor to professionalism and good clinical practice.
+Compliance to ethical principles must be reached and maintained throughout the medical career.
+However, evidence suggests the existence of ethical erosion, probably due to the effects of a hidden
+curriculum. Some sort of intervention becomes necessary to counter that phenomenon. According to
+the most recent perspectives, a training program in Clinical Ethics shall use active learning strategies,
+with discussion of real clinical cases between colleagues, in a clear correspondence to the learning
+theory “Community of Practice”.
+Objectives: Estimate the existence of ethical erosion in a certain medical community; Create a modern
+training program in Clinical Ethics; Evaluate the impact of the community in its members’ ethical
+reasoning; Evaluate participants’ satisfaction and benefits of a training program to the community.
+Methods: The Defining Issues Test (DIT-2) was delivered to the doctors of the Internal Medicine
+department, Braga Hospital. A small group also started a training program in Clinical Ethics whose
+impact was evaluated at individual and collective levels through the application of questionnaires in each
+session and at the end of the program. Data was analysed through quantitative and qualitative methods.
+Results: Data analysis from the DIT-2 test showed that there is a significant weak negative correlation
+between age and N2 score. Also, younger practitioners (≤ 35 years of age) have significantly better
+scores in the test than older doctors. On the other task, participants expressed a very high level of
+satisfaction with the program in terms of methodology used, mode, practicality, applicability and
+perceived individual and collective impact. Participants believe that this kind of programs strengthens
+the community of practice and its pillars: connection, belonging, shared values and alignment. On the
+other hand, by analysing the answers to the questionnaires delivered at the end of each session, it
+became very clear the great impact of the community of practice in its members’ ethical reasoning or
+judgment.
+Conclusion: Ethical erosion seems to exist in the studied community. The high impact of the
+community of practice in its members, makes it mandatory that future pedagogic interventions in the
+field of Clinical Ethics are directed to the community instead of single individuals.
+Keywords: Community of Practice; Erosion; Clinical Ethics.
+vi
+
+ÍNDICE
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS ........ ii
+AGRADECIMENTOS ........................................................................................................................ iii
+DECLARAÇÃO DE INTEGRIDADE .................................................................................................. iv
+RESUMO ........................................................................................................................................... v
+ABSTRACT ....................................................................................................................................... vi
+LISTA DE ABREVIATURAS E SIGLAS .......................................................................................... viii
+LISTA DE FIGURAS ......................................................................................................................... ix
+LISTA DE TABELAS .......................................................................................................................... x
+I. INTRODUÇÃO .......................................................................................................................... 1
+II. OBJECTIVOS ............................................................................................................................ 7
+III. MATERIAL E MÉTODOS ......................................................................................................... 8
+Avaliação do desenvolvimento moral dos médicos do Serviço de Medicina Interna ........................... 8
+Formação em Ética Clínica para os médicos do Serviço de Medicina Interna................................... 11
+Considerações éticas ..................................................................................................................... 14
+IV. RESULTADOS ......................................................................................................................... 15
+Avaliação do desenvolvimento moral dos médicos do Serviço de Medicina Interna .......................... 15
+Resultados da formação em Ética Clínica no Serviço de Medicina Interna .......................................18
+V. DISCUSSÃO ............................................................................................................................ 31
+Desenvolvimento moral dos médicos do Serviço de Medicina Interna .............................................. 31
+Resultados da formação em Ética Clínica no Serviço de Medicina Interna ...................................... 33
+VI. LIMITAÇÕES .......................................................................................................................... 38
+VII. CONCLUSÃO .......................................................................................................................... 39
+VIII. BIBLIOGRAFIA ....................................................................................................................... 40
+ANEXOS ......................................................................................................................................... 45
+Anexo 1 ........................................................................................................................................ 45
+Anexo 2 ........................................................................................................................................ 49
+Anexo 3 ........................................................................................................................................ 50
+vii
+
+LISTA DE ABREVIATURAS E SIGLAS
+AG Assistente Graduado
+AGS Assistente Graduado Sénior
+AH Assistente Hospitalar
+AIQ Amplitude interquartil
+DIT-2 Defining Issues Test - 2
+IFE Interno de Formação Específica
+IFG Interno de Formação Geral
+OSCE Objective Structured Clinical Examination
+viii
+
+LISTA DE FIGURAS
+Figura 1 - Correlação de Spearman entre as variáveis idade e Score N2.............................................. 16
+Figura 2 - Nuvem de palavras baseada na frequência das mesmas ao longo das atas realizadas ......... 24
+Figura 3 - Resultados do questionário individual de satisfação (Parte A) ............................................. 26
+Figura 4 - Resultados do questionário individual de satisfação (Parte B) ............................................. 27
+Figura 5 - Resultados do questionário individual de satisfação (Parte C) ............................................. 28
+Figura 6 - Resultados do questionário individual de satisfação (Parte D) ............................................. 29
+Figura 7 - Resultados do questionário individual de satisfação (Parte E) ............................................. 30
+ix
+
+LISTA DE TABELAS
+Tabela 1 - Pontuação no teste DIT-2 por sexo e idade e análise estatística ........................................... 15
+Tabela 2 - Resultados do teste DIT-2 por categoria profissional ............................................................ 17
+Tabela 3 - Tabela de contigência para os perfis dos participantes por grau de carreira ........................18
+Tabela 4 - Distribuição do conteúdo das respostas ao questionário por categoria e pergunta .............. 20
+Tabela 5 - Listagem das palavras mais frequentes e seus derivados ................................................... 25
+x
+
+I. INTRODUÇÃO
+A aptidão para a prática médica e o desenvolvimento de capacidades clínicas após a graduação,
+depende do desenvolvimento contínuo do conhecimento, das competências e do profissionalismo1. Se
+o conhecimento e as competências podem ter uma definição mais objectiva ou tangível, o
+profissionalismo é uma dimensão da prática clínica definida de formas diversas, que variam de acordo
+com a entidade que as publica, do seu contexto, ou até do momento em que são publicadas2.
+Comportamento, valores éticos ou morais, sensibilidade para os problemas dos doentes ou de
+populações específicas, altruísmo, confiabilidade, autonomia e capacidade de regulação própria,
+iniciativa e resiliência, capacidade de comunicação ou de trabalho em equipa, são apenas algumas das
+vertentes incluídas nas descrições de profissionalismo da American Medical Association (AMA),
+American Board of Internal Medicine Foundation (ABIM) ou American Board of Family Medicine (ABFM),
+apenas para considerar entidades médicas de um único país2. A estas, haverá que juntar definições
+provenientes de outras latitudes e também de entidades não-médicas que são partes interessadas do
+contrato social e da existência de uma boa prática clínica. De qualquer modo, independentemente da
+diversidade de definições, no seu âmago, o profissionalismo deve ser encarado como um conjunto de
+comportamentos e atitudes que devem ser aprendidos, particados, avaliados e melhorados ao longo da
+vida como qualquer outra competência clínica3.
+Um conceito tão amplo de profissionalismo, que no limite representa quase tudo o que um médico
+realiza enquanto profissional mas também o seu conjunto de atitudes e valores que não é directamente
+observável, requer algum grau de refinamento do ponto de vista operacional para a sua aprendizagem
+e avaliação. Este projecto foca-se na vertente da ética médica, pilar das definições de profissionalismo,
+presente em qualquer decisão clínica ou acto médico e por isso altamente relevante4.
+De facto, a tomada de decisões clínicas pode ser bastante difícil e complexa. Decisões em
+situações limite ou sobre temas sensíveis, acarretam as maiores consequências para o doente, para os
+seus familiares e trazem elevada carga emocional para o médico e/ou para o corpo clínico5. Essa carga
+emocional pode perdurar indefinidamente e deixar uma marca indelével na pessoa ou no grupo,
+sobretudo se a decisão não tiver sido reflectida ou baseada em valores morais ou princípios éticos6.
+Essas ferramentas devem ser ainda mais utilizadas quando clinicamente é legítimo abordar o doente
+ou gerir um problema de forma diversa, em que a decisão é tomada muitas vezes com base em valores
+ou sensibilidades individuais ou colectivas, do doente, dos seus familiares e dos profissionais, inseridos
+1
+
+num determinado local e contexto. De facto, a capacidade de raciocínio moral e sensibilidade ética, foi
+já associada à melhor qualidade de cuidados clínicos7,8.
+Enquanto o médico se preocupa primordialmente com o doente, devem as organizações
+preocupar-se com os seus profissionais, providenciando-lhes o suporte e a capacitação que precisam.
+Os currículos da formação pré-graduada insistem sobretudo nas aptidões cognitivas e técnicas, não
+dando espaço suficiente para um raciocínio crítico sobre a prática médica, para a problematização ética
+e para a construção de um Eu profissional9. Mostrando isso, num estudo que reuniu 11 escolas
+médicas do Reino Unido, apenas 55% das escolas apresentaram no seu curriculum uma unidade
+curricular de Ética Médica, sendo de 38 horas o tempo médio de contacto9. Para além disso, o ensino
+é feito sobretudo nos primeiros anos do curso, quando a tendência mais actual é a apologia de que
+estes aspectos devam ser abordados mais tarde e sejam necessariamente apurados ao longo da vida,
+à medida que ocorre também um desenvolvimento pessoal e profissional do indivíduo e mudanças no
+contexto da prática clínica, por motivos tão variados como a disponibilidade de recursos ou aspectos
+sociais e económicos10,11. Um estudo semelhante efectuado nas 44 escolas médicas espanholas,
+apenas diferiu no facto de todas oferecerem um tempo formal dedicado à Ética e à Deontologia, já que
+se mantiveram as 38 horas de tempo médio de contacto, um número diminuído de créditos atribuído a
+essas unidades sobretudo nas Escolas públicas mais antigas e um predomínio do ensino nos primeiros
+anos do curso12. Por outro lado, na opinião de vários autores, e ao contrário do descrito nos estudos
+referentes ao Reino Unido e a Espanha que reportam um ensino mais teórico, baseado em seminários,
+a aprendizagem da ética deve ser, tanto quanto possível, enquadrada em contextos específicos
+concretos com o estudo de vinhetas clínicas, treino com doentes simulados ou idealmente a
+incorporação da ética na abordagem dos doentes observados em plena prática clínica4,9–11,13–15. Essa é
+também a visão da Organização Mundial de Saúde16. De forma muito interessante, vários estudos
+sugerem que os próprios alunos de Medicina desejam ampliar a sua formação em Ética, abrindo-se
+uma excelente oportunidade para a estruturação de currículos que resultem do interesse dos
+estudantes, o que pode aumentar logo à partida o seu nível de engagement 17–19.
+Considerando a margem para optimização ao nível da aprendizagem da ética médica no curso pré-
+graduado, e a necessidade de uma contínua melhoria ao longo da vida, foi já declarado pelo
+Accreditation Council for Graduate Medical Education (ACGME), a entidade que acredita a maioria dos
+programas de internato e fellowship nos Estados Unidos, a obrigatoriedade do treino e a demonstração
+de adesão aos princípios da ética médica durante o internato20. Contudo, como é demonstrado por
+duas revisões sobre especialidades nucleares (Medicina Geral Familiar e Pediatria) e por uma terceira
+2
+
+de âmbito mais geral, a forma como esse objectivo é atingido encontra-se largamente sob a
+prerrogativa de comités locais de formação que definem os seus programas individuais21–23. De facto,
+falta clareza nos milestones necessários, a informação educativa é escassa e a comparação entre
+instituições é praticamente inexistente21–23. Infelizmente, a avaliação da formação pós-graduada
+mantem-se globalmente obediente a uma lógica de certificação baseada em parâmetros
+exclusivamente quantitativos, não incluindo outros aspectos mais subjectivos que também determinam
+a qualidade da prática clínica.
+Outra das dificuldades na aprendizagem da Ética Médica passa pela existência de um curriculum
+oculto que pode desviar alunos de Medicina e médicos da melhor prática, já que segundo alguns
+autores terá um peso maior que o curriculum formal na aprendizagem da Ética24,25. No Canadá, cerca
+de metade dos estudantes de Medicina de anos avançados que foram entrevistados reportaram que já
+foram pressionados a executar algum ato de forma não ética e cerca de dois terços já testemunharam
+um docente a fazê-lo26. No Reino Unido, a ausência de vigilância ou compreensão dos princípios éticos
+pelos médicos cria nos alunos a noção de que a aprendizagem da ética é opcional ou desnecessária9.
+Eventualmente relacionado com estes dados, tem sido sugerida a existência de um fenómeno
+igualmente preocupante, o de erosão ética ou desgaste ético, que define a perda de sensibilidade ética
+ao longo do tempo.
+De facto, essa perda foi já reportada em vários trabalhos, de diversas metodologias, nem sempre
+recorrendo a ferramentas validadas, mas em que são sugeridos alguns fatores que contribuirão para
+esse fenómeno: o processo de socialização dos médicos, com a importância do exemplo, do poder e
+da manutenção da cultura médica vigente, a visão mecanística da pessoa doente que é reduzida a um
+conjunto de processos fisiopatológicos, a inconsistência entre uma mensagem teórica e a aplicação
+prática, as mensagens opostas, duplas ou latas, o stress ou burnout e a perda de empatia24,25,27–29. De
+forma interessante, foi sugerido já no passado que o processo de erosão ética se inicia na pré-
+graduação e que se verifica unicamente em estudantes de Medicina, quando comparados com outros
+estudantes universitários cuja sensibilidade ética e moral vai aumentando ao longo do curso (“college
+effect”)30.
+Apesar destas descrições, o fenómeno de erosão ética não deve ser aceite sem reservas e de
+forma universal. Na verdade, é um processo pouco estudado, e que será necessariamente dependente
+do contexto social, cultural e educativo das instituições de formação pré- e pós-graduada a determinado
+momento, para além de um provável efeito de coorte. Do mesmo modo, os fatores que a esse
+fenómeno poderão levar, não serão seguramente os mesmos em todas as realidades culturais e
+3
+
+contextuais: por exemplo, do pouco que se conhece da realidade portuguesa e brasileira, a perda de
+empatia não se verificou em estudantes de Medicina ao longo do seu curso31,32. Olhando para esta
+problemática na carreira pós-graduada é possível admitir que, bem longe de ser o factor preponderante,
+a empatia interfira desde logo na escolha da especialidade clínica, no exemplo óbvio da velha questão
+“nature or nurture”32,33. Sublinhe-se uma vez mais, que essa relação não se repete em todos os
+estudos mesmo dentro do grupo de países de matriz anglo-saxónica34.
+Independentemente do ponto de partida de cada grupo profissional e do potencial impacto do
+curriculum oculto, é relevante procurar na literatura exemplos de intervenções no campo da Ética
+Médica que se tenham traduzido em ganho ou efeitos positivos na prática clínica. Uma revisão
+sistemática recente debruçou-se precisamente sobre a forma de medir os resultados dessas
+intervenções35, encontrando instrumentos que variam entre a aplicação de testes ou questionários
+escritos baseados em vinhetas clínicas ou OSCEs, mas não encontrando infelizmente nenhum caso de
+avaliação que envolvesse observação direta em ambiente de trabalho. Outras ferramentas de avaliação
+da ética são possíveis, embora não sejam tão adequadas para medir o impacto de intervenções
+pedagógicas, como o uso de ensaios curtos e longos, prática reflexiva, portefólios, debates, discussões
+ou role-playing36,37. Assim, estamos num tema em que a informação sobre o impacto destas formações
+é escassa, várias vezes contraditória, o que não é de surpreender pela diferença nas intervenções,
+tamanho amostral ou características dos instrumentos de medida35,38. Sobre este último ponto, a
+grande maioria dos estudos, de facto, não se baseia em ferramentas estandardizadas e devidamente
+validadas para o contexto médico. Philip Hébert, médico e Professor da Universidade de Toronto, foi
+pioneiro em 1990 na sugestão de uma ferramenta inovadora baseada em 4 vinhetas clínicas para
+avaliação estandardizada da sensibilidade ética em estudantes de Medicina – o Problem Identification
+Test 39. Os alunos deveriam ser capazes de identificar os 4 princípios éticos clássicos presentes em
+cada vinheta, descrevendo-os no contexto e produzindo argumentação adequada. Apesar da sua
+validação em 199240, o teste foi pouco aplicado depois disso e não está validado em português. Na
+ausência de ferramentas específicas, podem ser usadas outras de âmbito geral, como os dois
+exemplos seguintes, que estão devidamente traduzidas e validadas em português e com as quais existe
+ampla experiência:
+1) o Defining Issues Test 2 (DIT-2), da Universidade de Alabama, baseado nas fases do
+desenvolvimento moral de Kohlberg e validado para a avaliação do desenvolvimento moral e
+competência de julgamento moral. Este teste consiste em 5 dilemas morais seguidos de um conjunto
+de frases que o participante deve classificar e ordenar de acordo com a importância moral que lhes
+4
+
+atribui. O resultado do teste é quantitativo (score N2) e traduz dois aspetos: a proporção em que os
+itens pós-convencionais da teoria de Kohlberg são priorizados (semelhante ao antigo P-score) e a
+proporção em que os itens de interesse pessoal recebem ratings mais baixos que os itens pós-
+convencionais.
+2) o Moral Competence Test (MCT) desenvolvido por Georg Lind, que avalia a capacidade de tomar
+decisões e emitir juízos morais (baseados em princípios internos) e agir de acordo com tais juízos,
+explorando dimensões cognitivas e afetivas. Este teste consiste em dois problemas reais em que os
+protagonistas de cada história tomam uma decisão. Os participantes são então expostos a 6
+argumentos a favor e 6 argumentos contra a decisão do protagonista. Os participantes devem assinalar
+numa escala o seu grau de concordância ou discordância (-4 a +4) com cada um dos 12 argumentos
+de cada problema. O resultado do teste (C-score) é calculado em ferramenta própria, sendo quantitativo
+(de 0 a 100). Infelizmente, este teste deixou de estar disponível pelo falecimento precoce do seu autor.
+Importa ressalvar, no entanto, que a Ética Clínica, correspondendo a uma parte da disciplina de
+Bioética, é mais limitada que esta no seu âmbito e que o bom desenvolvimento do profissional no
+campo da Ética Clínica pode não se traduzir em melhores resultados nos testes acima referidos,
+desenhados para dilemas mais globais. Isso mesmo foi demonstrado num estudo realizado em
+Espanha, que mostra que uma formação realizada para médicos não alterou o desenvolvimento moral
+avaliado pelo teste de DIT, embora tenha melhorado significativamente a sensibilidade ética, avaliada
+pelo teste PIT de Hébert (Toronto)41. A demonstração da existência de uma intervenção eficaz para a
+melhoria das competências dos médicos em Ética, representa um importante avanço para os
+profissionais, utentes e instituições na redução de uma potencial erosão ética. Por outro lado, este tipo
+de resultados faz refletir se, de facto, a criação dos chamados “médicos virtuosos”, capazes de
+discussão ampla em Bioética, pode ser um objectivo demasiado ambicioso para as Escolas Médicas,
+provavelmente inatingível e, por conseguinte, desadequado. Fará mais sentido que as Escolas Médicas
+se concentrem sobretudo na demonstração da aprendizagem da Ética Clínica, ou seja, na formação de
+médicos capazes de praticar a medicina de forma eticamente irrepreensível. Já os Serviços Clínicos
+devem garantir que os médicos permaneçam aderentes a essas boas práticas, mantendo e
+melhorando ao longo dos anos as suas competências neste campo, a bem da qualidade dos cuidados
+prestados aos doentes.
+Duas personalidades de referência no campo da Ética Clínica, Laura Weiss Roberts e Mark Siegler
+afirmaram, de forma complementar, que: “a boa prática clínica é necessariamente uma prática ética”;
+e “os médicos não podem praticar boa medicina (…) se não conhecerem ou não souberem aplicar os
+5
+
+princípios éticos”42. O mesmo Siegler propõe uma aplicação prática dos conceitos de Ética Clínica
+através da abordagem de 4 tópicos, muito útil para a tomada de decisões médicas e inclusivamente
+utilizada por Comissões de Ética por todo o mundo quando chamadas a pronunciar-se sobre
+determinado caso concreto42. Com esta abordagem, pretende-se dar a um tema extenso e complexo
+um enquadramento muito prático. Ao mesmo tempo, parece tornar mais exequível a aquisição e
+demonstração de competências nesta área.
+Finalmente, tem ocorrido alguma discussão sobre a necessidade de incluir nas intervenções
+formativas um corpo docente especialmente capacitado em Ética Clínica. Na verdade, considerando as
+tendências mais atuais, em que o currículo pode ser desenhado com base nas necessidades e vontade
+dos próprios estudantes, em que existe um peso muito baixo dos seminários comparando com as
+discussões entre pares ou exercícios de prática reflexiva ou ensaio, e que a aprendizagem deve passar
+por casos clínicos reais ou vinhetas clínicas apreciados entre pares, o papel de um docente
+especializado em Ética Clínica parece ser bem menos preponderante do que no desenho
+tradicional18,37. Para além disso, a ampla disponibilidade de conteúdos ou de ferramentas práticas
+como a abordagem de 4 tópicos proposta por Siegler pode permitir que as comunidades de prática se
+desenvolvam autonomamente nesta área. Caberá provavelmente ao docente unicamente a tarefa de
+supervisão, guiando os participantes e tutores clínicos numa fase inicial e/ou fornecendo feedback de
+trabalhos escritos.
+Em resumo, parece ser consensual a relevância do estudo e da aplicação da Ética na prática
+clínica, como forma de melhoria do desempenho profissional ao longo da vida e dos cuidados de saúde
+prestados aos doentes. Deverá, pois, ser desenvolvido um programa baseado na discussão de casos
+clínicos reais ou realistas num contexto local de prática que, por meio da avaliação do trabalho
+realizado, sirva também de demonstração de competências adquiridas. Qualquer programa de
+intervenção deve ser igualmente avaliado.
+Com este trabalho, pretende-se avaliar, pela primeira vez em território nacional, se existe
+alguma evidência do fenómeno de erosão ética durante a carreira médica. Por outro lado, pretende-se
+avaliar se uma intervenção curta baseada em casos clínicos discutidos entre pares sem a participação
+de peritos, permite a aquisição de competências pelos indivíduos e melhoria de uma determinada
+comunidade. Por último, pretende-se perceber que valor os participantes atribuem a este tipo de
+formação.
+6
+
+II. OBJECTIVOS
+- Estimar a existência de erosão ética nos médicos que compõem o Serviço de Medicina
+Interna do Hospital de Braga;
+- Criar uma formação em Ética Clínica para médicos do Serviço de Medicina Interna do
+Hospital de Braga que seja baseada nas perspetivas mais atuais da aprendizagem;
+- Avaliar se a comunidade de prática sem a intervenção de um perito é capaz de reconhecer as
+questões éticas presentes em cada caso clínico, os princípios respetivos e se foi capaz de
+discutir a melhor opção a tomar;
+- Compreender o conjunto de aprendizagens individuais reportado pelos participantes;
+- Perceber o grau de satisfação dos participantes e o valor por eles atribuído à formação para a
+sua prática clínica.
+7
+
+III. MATERIAL E MÉTODOS
+Avaliação do desenvolvimento moral dos médicos do Serviço de Medicina Interna
+O Defining Issues Test 2
+Para avaliação do desenvolvimento moral dos médicos do Serviço de Medicina Interna, foi
+escolhido o teste DIT-2. Segundo a bibliografia recomendada pelo Center for the Study of Ethical
+Development, da University of Alabama43, que detém a guarda e propriedade intelectual do teste, o
+teste DIT-2 radica na teoria de Kohlberg (1984) na qual se defende que o desenvolvimento do
+julgamento moral passa pela progressão através de seis estádios, evoluindo os indivíduos ao longo da
+vida desde os pensamentos mais simples (castigo, satisfação pessoal), passando pelos intermédios
+(aprovação externa, normas e respeito pela autoridade) até aos mais complexos, chamados de pós-
+convencionais (autonomia, contrato social, princípios individuais e escolha). Em 1999 Rest e Thoma44,
+apresentaram a primeira versão do teste DIT empregando uma abordagem neo-Kohlberguiana da
+moralidade, o chamado Modelo de Quatro Componentes, no qual o funcionamento moral resulta da
+interação de quatro processos: 1) sensibilidade moral, que significa reconhecer situações e requisitos;
+2) julgamento moral, que significa a capacidade de ponderar o que fazer em circunstâncias em que um
+bem moral esteja a ser ameaçado e justificar a escolha; 3) motivação moral, que inclui priorização,
+opção e manutenção de escolhas e 4) carácter moral que envolve a realização de ações ou respostas
+(reações) entendidas como boas. O teste de DIT preocupa-se apenas com o julgamento moral que será
+operado em três níveis: códigos de conduta rígidos, aplicação de conceitos intermédios (como
+honestidade ou justiça) e esquemas de princípios sólidos. O teste de DIT avalia apenas diretamente
+estes últimos através de três esquemas: esquema moral de Interesse Pessoal (derivado do estádio 2/3
+de Kohlberg); esquema moral de Manutenção das Normas (estádio 4) e esquema moral pós-
+convencional (estádio 5/6). O teste DIT-2 difere do teste DIT no sentido em que os problemas foram
+atualizados, os itens de resposta também, o teste tornou-se mais breve, as instruções mais claras e foi
+criado um score final adicional (N2). Durante a realização do teste, os participantes são confrontados
+com 5 problemas éticos diferentes. Em cada um deles devem começar por indicar a ação que deverá
+ser tomada pelo protagonista da história, depois devem classificar de 1 a 5 a importância que cada um
+de 12 argumentos/itens listados tem na tomada de decisão e, por último, devem indicar e ordenar, dos
+12, os 4 itens mais importantes na sua tomada de decisão. O resultado do teste é por isso um
+construto psicológico que caracteriza o processo pelo qual os participantes determinam que um curso
+de ação numa situação particular é moralmente correto e outro é errado.
+8
+
+A pontuação do teste é sempre feita pela Universidade de Alabama, através de métricas
+reservadas. As normas do teste DIT-2 foram atualizadas em 202343, trabalho que resultou da aplicação
+do teste a mais de 150.000 participantes desde 2010. Após a análise da consistência interna e outros
+parâmetros de qualidade que poderão fazer excluir o participante, são produzidos 4 índices (Interesse
+Pessoal; Manutenção das Normas; Pós-convencional e score N2), alguns perfis de desenvolvimento e
+um indicador de fase de desenvolvimento. Os resultados dos 4 índices estão em relação com a
+classificação e importância que o participante deu a cada item na resolução de cada problema. O
+índice mais importante é o score N2 que congrega num único valor a relação entre a escolha de items
+pós-convencionais e de itens de outros esquemas (interesse pessoal ou normativo), usando informação
+tanto da tarefa de classificação como de ordenação dos itens.
+Acesso e distribuição do DIT-2
+Para efeitos desta tese de Mestrado, foi solicitado ao Center for the Study of Ethical Development
+da University of Alabama, o acesso ao teste DIT-2. O pedido foi submetido através do formulário
+constante no website do centro (https://ethicaldevelopment.ua.edu/order-form.html), tendo sido
+enviado para o email do investigador o manual do teste e a versão validada em Português de Portugal.
+Tal como sugerido pelo Centro, o investigador criou uma conta pessoal gratuita e sem partilha de
+acesso na plataforma Qualtrics.com, desenvolvida por QualtricsXM, Utah - EUA, para que aí pudesse
+criar, distribuir o questionário e mais tarde recolher as respostas ao mesmo. Foi introduzida nessa
+plataforma a versão portuguesa do teste utilizando-se para esse efeito um ficheiro disponibilizado pelo
+Centro com a estrutura habitual do questionário em inglês. Após estar concluída a introdução do
+questionário, foi gerado um link de acesso anonimizado.
+Com o acordo dos médicos do Serviço de Medicina Interna (internos de formação geral, internos
+de formação específica e assistentes), foi enviado para o email de cada elemento do Serviço um convite
+para preenchimento do questionário através do referido link anonimizado. Em alternativa, de forma a
+facilitar a adesão de todos, foram deixados questionários iguais em papel em dois pontos específicos
+do Serviço, junto a caixa de correio fechada com cadeado do investigador. Os questionários em papel
+foram recolhidos e introduzidos manualmente pelo investigador na plataforma, utilizando o link
+anonimizado.
+Ao iniciar o preenchimento do questionário, na primeira página, era solicitado ao participante a
+concordância com a utilização do seu questionário pelo investigador principal para fins de investigação
+conducente ao Grau de Mestre e era pedida a idade, o sexo, a categoria profissional (interno de
+9
+
+formação geral; interno de formação específica; assistente hospitalar; assistente graduado/assistente
+graduado sénior). Como em nenhum momento se requeria qualquer dado que permitisse ao
+investigador principal identificar o participante, era pedido que o respondente indicasse um código de
+três algarismos cujo significado apenas ele conhecesse. Dessa forma, caso mais tarde o participante
+quisesse saber a sua pontuação no teste ou pretendesse que as suas respostas não fossem utilizadas,
+bastaria fornecer esse código ao investigador principal.
+Scoring do teste
+No final do período de respostas (21 dias), foram extraídas da plataforma Qualtrics.com as
+respostas obtidas, em ficheiro Excel (Microsoft, EUA), formato numérico. O ficheiro foi depois carregado
+pelo investigador principal na pasta Dropbox criada pela Universidade de Alabama para esse efeito.
+Apenas o investigador e os responsáveis do centro tinham acesso à pasta. Três dias depois, foi
+disponibilizado pela Universidade de Alabama um ficheiro Excel com os resultados do teste de todos os
+participantes, de acordo com o acima referido. Nenhum teste foi excluído por baixa qualidade das
+respostas ou baixa consistência interna.
+Análise estatística
+Os dados constantes no ficheiro Excel foram carregados no software JASP® 0.18.3 (Open-
+source, Universidade de Amsterdão, Países Baixos), para se proceder à análise estatística. Foi efetuada
+análise descritiva de cada variável e comparadas as frequências utilizando-se o teste Chi-quadrado no
+caso dos seus pressupostos serem verificados ou, caso contrário, o teste exacto de Fisher (extensão
+Freeman-Halton) para tabelas de contingência 4*2 com baixo número de indivíduos por célula. Para
+comparação das medidas de tendência central, começou-se por testar a normalidade pelo teste de
+Shapiro–Wilk (baixo número de participantes) e, de acordo com o resultado, foi utilizado o teste
+paramétrico t-student ou o teste não paramétrico de Mann-Whitney. Para comparação dos resultados de
+mais do que dois grupos foi utilizado ANOVA. Para averiguar a existência de correlação entre variáveis
+contínuas foi usado o teste de correlações de Spearman. Para melhor apresentação de resultados,
+foram gerados gráficos e tabelas no mesmo software.
+10
+
+Formação em Ética Clínica para os médicos do Serviço de Medicina Interna
+A segunda fase do projeto correspondeu à implementação de uma formação em Ética Clínica, com
+uma sessão teórica inicial e uma componente reflexiva baseada na discussão entre pares de casos
+clínicos concretos, do conhecimento de todos os participantes envolvidos e sugeridos por estes.
+Eram objetivos de aprendizagem para cada formando:
+- Conhecer as principais definições de Ética Clínica e seus princípios
+- Entender o papel da Ética Clínica no exercício da Medicina
+- Reconhecer questões éticas na prática clínica
+- Formular, apresentar e defender uma perspetiva moral ou ética
+- Capacitar para a inclusão da ética na tomada de decisão, individualmente ou em grupo
+- Facilitar a construção consciente de uma identidade profissional
+Eram objectivos para o grupo:
+- Fortalecer a Comunidade de Prática (ligação, alinhamento, valores, experiência)
+- Melhoria dos cuidados aos doentes
+Teorias de Aprendizagem
+A formação teve por base as teorias de aprendizagem da Comunidade de Prática e a teoria
+Construtivista45,46. Pela lente da primeira, pretende-se reconhecer o papel da comunidade na formação
+da identidade, na contextualização social e cultural da aprendizagem, no alinhamento entre os
+membros da comunidade, na partilha de experiências, de reflexão e de role-modeling. Pela lente da
+segunda, reconhece-se o papel do indivíduo como o principal agente no processo de aprendizagem: o
+formando através de novas experiências é capaz de contruir um novo conhecimento que não é uma
+cópia da realidade, mas uma construção interna que partiu de aprendizagens anteriores.
+Estrutura da Formação e das Sessões
+A formação iniciou-se com uma sessão teórica de 45 minutos de duração, com o título “Bioética
+na Medicina Interna”, aberta a todo o Serviço de Medicina Interna do Hospital de Braga, que teve como
+palestrante o Prof. Doutor António Maia Gonçalves, especialista em Medicina Interna e Medicina
+Intensiva, doutorado em Bioética e atualmente Coordenador da Comissão de Ética e Deontologia
+Médica da Secção Regional do Norte da Ordem dos Médicos e teve como moderador o investigador
+11
+
+principal. Nessa sessão, de carácter facultativo, abordou-se a relação médico doente, a Medicina
+centrada na pessoa doente, as decisões ético-clínicas mais comuns na Medicina Interna, os desafios do
+doente crónico e do aumento da longevidade.
+Depois disso, iniciaram-se sessões práticas de discussão de casos clínicos. Uma vez que se
+pretendia que todos os médicos envolvidos conhecessem o caso clínico concreto a discussão, optou-se
+por restringir a formação a uma equipa específica de médicos, a equipa da Enfermaria de Vigilância
+Avançada do Serviço de Medicina Interna do Hospital de Braga onde o investigador principal exerce a
+sua atividade clínica. Dessa equipa fazem parte 8 especialistas de Medicina Interna, 3 deles com o
+grau de assistente hospitalar graduado, 4 internos de formação específica e 4 internos de formação
+geral que vão variando ao longo do ano. Esse grupo, com muitos elementos trabalhando juntos
+diariamente há vários anos, mas com elementos mais novos sempre a surgir, correspondem à
+definição de uma verdadeira comunidade de prática. Nenhum elemento recusou participar nas
+sessões. Optou-se ainda por não excluir elementos a partir da comunidade referida, uma vez que com
+horários díspares, férias ou ausências, nunca foi possível juntar todos os elementos na sessão. Se por
+um lado se pode perder alguma continuidade dos conteúdos pela variabilidade do grupo, por outro
+lado, ao incorporar estas reuniões na rotina semanal, adquire-se mais realismo e replicabilidade.
+Na primeira sessão, com duração de cerca de uma hora, apresentou-se o plano de formação:
+os objetivos da formação, as teorias de aprendizagem, as metodologias de ensino-aprendizagem a
+utilizar, a estrutura das sessões e os dados recolhidos. Explicou-se as vantagens do trabalho em grupo
+que, para além de fundamental à luz da teoria da comunidade de prática, apresenta segundo Burgess47
+inúmeras vantagens para a aprendizagem nas profissões de saúde: permite abordar falhas no
+conhecimento, encoraja a aprendizagem dirigida pelo próprio, permite que os elementos apreendam
+diferentes perspetivas dos seus pares, permite que os formandos testem as suas ideias e atitudes com
+os seus pares, promove a vontade de partilhar ideias, fornece oportunidades de partilha de ideias, de
+oferecer e receber feedback e ajuda os formandos a desenvolverem competências de raciocínio crítico,
+resolução de problemas, comunicação, trabalho de equipa e liderança. Explicou-se que se discutiria um
+caso por sessão, selecionando-se casos com desafios éticos importantes e apelou-se aos formandos
+para que apresentassem eles próprios os casos. Por serem do âmbito da Medicina Interna e por
+surgirem muitas vezes referidos, sugeriram-se os seguintes temas: 1) Limitação terapêutica; 2) Acesso
+a novos tratamentos; 3) Priorização de recursos; 4) Não adesão ao tratamento; 5) Doente com
+mudança de atitude; 6) Doente incapaz de tomar decisões; 7) Sistema de crenças diferente; 8)
+12
+
+Membros da equipa com visão e objetivos diferentes; 9) Conflitos entre pares / carga de trabalho; 10)
+Testemunho de má prática; 11) O contrato social do médico; 12) Relação com a indústria farmacêutica;
+As sessões seguintes, com periodicidade variável (entre semanal a quinzenal) tiveram a duração
+programada de uma hora e seguiram a seguinte estrutura: 1) Leitura e correção da acta da sessão
+anterior (se aplicável); 2) Apresentação do novo caso em vinheta breve escrita; 3) Perguntas de
+clarificação; 4) Identificação dos dilemas; 5) Identificação dos princípios éticos envolvidos; 6) Tempo
+para pesquisa em caso de dúvidas sobre legislação; 7) O que é mais relevante para o doente?; 8)
+Decisão de um plano de atuação; 9) Resumo dos argumentos do grupo; 10) Take-home message.
+As sessões eram moderadas pelo investigador principal. Ocasionalmente, em algumas sessões,
+depois do ponto 9, o moderador poderia assumir um papel de facilitador, entregando ao grupo a
+ferramenta de 4 tópicos proposta por Siegler42, já referida previamente e traduzida para Português
+(Anexo 2) a fim de o grupo poder refletir se alguma pergunta importante teria sido esquecida. Ainda
+nesse ponto, em ligação para as Take-home messages, poderiam ser lidos ao grupo alguns parágrafos
+selecionados do livro Clinical Ethics: A Practical Approach to Ethical Decisions in Clinical Medicine, 9e
+42, do capítulo que mais se adaptasse ao caso clínico discutido, por vezes providenciando outros
+exemplos aí contidos.
+Avaliação dos formandos
+No final de cada sessão, seguindo um formulário adaptado de Chen48(Anexo3), cada formando
+era convidado a responder a duas perguntas de auto-avaliação, preenchendo numa escala Likert (0-10)
+qual o seu ponto prévio de conhecimento em relação aos tópicos abordados e qual o seu ponto de
+competências práticas prévias sobre os tópicos analisados. Por outro lado, era convidado a responder a
+duas perguntas abertas: “O que aprendeu hoje?” e “O que mais o marcou?”. A intenção do
+investigador é que essas perguntas sirvam de demonstração de aprendizagens efetuadas no campo da
+Ética Clínica. Por outro lado, a informação preenchida nesses campos foi alvo de análise qualitativa.
+Primeiro, o conteúdo foi categorizado manualmente e depois, dentro da mesma categoria, as respostas
+semelhantes foram agrupadas.
+Avaliação da Comunidade de Práticas
+Para além do contributo das respostas às perguntas acima referidas, a fim de se procurar
+perceber se este modelo de formação é eficiente e por forma a demonstrar a aptidão da comunidade
+de Práticas para a prática clínica baseada em princípios éticos, optou-se por convidar um perito em
+13
+
+Bioética a emitir a sua opinião sobre as atas produzidas. Considerou-se que a comunidade de práticas
+teria tido um bom desempenho sempre que o perito não acrescentasse pontos major à discussão
+realizada. Por outro lado, no final da formação, todas as atas de todas as sessões foram reunidas num
+único ficheiro Word (Microsoft, EUA) e o mesmo importado para o software Nvivo® 14 (Lumivero,
+Denver, EUA), onde se obteve a frequência de cada palavra no texto e se construiu uma nuvem de
+palavras. Dessa forma, pretendia-se observar quais os tópicos mais vezes referidos pelo grupo para a
+tomada de decisão.
+Avaliação da Formação
+Para melhor se compreender o valor da formação proposta, no questionário já referido, entregue
+a cada formando no final de cada sessão, constavam ainda duas perguntas, em escala de Likert (0-10):
+“Qual o seu grau de satisfação global com a sessão?” e “Qual o impacto previsível na sua prática
+clínica?” (Anexo 3). No final da formação, os participantes foram também convidados a avaliar a
+formação no geral, através de link para um formulário online Google (Google LLC, EUA). Esse
+questionário, mais completo, consistia na atribuição de pontos numa escala Likert (5 pontos, Discordo
+completamente a Concordo completamente) a 25 itens que se referiam à importância da formação
+para o próprio e para a comunidade, às metodologias utilizadas e à adequação dos recursos (Anexo 3).
+Análise dos dados recolhidos
+Os dados quantitativos recolhidos nos questionários foram analisados com recurso a estatística
+descritiva, como descrito anteriormente, sendo também criados gráficos para mais fácil visualização
+dos dados. O texto recolhido nos questionários em campos de resposta longa livre foi catalogado
+conforme o seu conteúdo, procedendo-se depois à sua descrição qualitativa. O texto produzido a partir
+do trabalho de grupo e compilado em ata foi analisado através do software Nvivo® 14 (Lumivero,
+Denver, EUA).
+Considerações éticas
+O protocolo de investigação deste projeto foi aprovado pela Comissão de Ética do Hospital de Braga e
+pela Comissão de Ética para a Investigação em Ciências da Vida e da Saúde da Universidade do Minho
+(Anexo 1).
+.
+14
+
+IV. RESULTADOS
+Avaliação do desenvolvimento moral dos médicos do Serviço de Medicina Interna
+Obtiveram-se 43 respostas completas ao questionário DIT-2 e nenhum participante foi excluído
+após análise da consistência interna e de outros parâmetros de qualidade realizada pela Universidade
+de Alabama. O número total de questionários corresponde a uma taxa de participação global de 46%
+(35% para IFG, 39% para IFE, 54% para AH e 56% para AG/AGS). Como consta das tabelas seguintes, a
+amostra em análise é formada em 35% por AH (15 participantes), em 26% por IFE (11 participantes),
+em 23% por AG/AGS (10 participantes) e em 16% por IFG (7 participantes), que nesta altura do ano
+representam os recém-graduados, sem experiência profissional médica.
+Começou por fazer-se uma análise aos resultados do teste por sexo e por idade, uma vez que,
+segundo os dados de validação do teste DIT-2, poderão registar-se diferenças na pontuação do teste de
+acordo com o sexo (mulheres com níveis de educação superior costumam pontuar mais que os seus
+pares masculinos) e com a idade (será de esperar na população geral uma transição para estádios
+superiores ao longo da vida).
+Tabela 1 - Pontuação no teste DIT-2 por sexo e idade e análise estatística
+Shapiro Valor Idade ≤ Idade ≥ Valor
+Total Homens Mulheres p-valor p-valor
+-Wilk estat. 35 36 estat.
+Questionários
+43 13 30 - - 24 19 - -
+válidos (n)
+Idade (anos), W =
+35 ± 13,5 <0,001 38 ± 28 34 ± 13 0,121* 27 ± 7 41 ± 13,5 - -
+mediana ± AIQ; 254
+minímo; máximo; 23; 66 - 25; 66 23; 58 - - 23; 35 37; 66
+n masc / n femin 13 / 30 - - - - - 6 / 18 7 /12
+X2 =
+% homens / % ,401
+30 % / 70 % - - - - - 25% /75% 37% / 63% 0,705
+mulheres
+Estadio 2-3
+W = W =
+mediana ± AIQ 26 ± 16 0,013 26 ± 18 26 ± 13 0,482* 21 ± 10 30 ± 13 ,007*
+222 118
+média ± DP 27,6 ± 11,3 29,1 ± 10,6 27,0 ± 11,8 23,3 ± 8,2 33,2 ± 12,5
+Estadio 4P,
+t = - t = -
+mediana ± AIQ 26 ± 15 0,502 24 ± 10 27 ± 17 0,927** 26 ± 14,5 24 ±17 ,531**
+0,092 0,632
+média ± DP 26,7 ± 11,0 26,5 ± 8,5 26,8 ± 12,0 25,8 ± 10,2 27,9 ±12,1
+Pscore,
+t = - t = ,002*
+mediana ± AIQ 42 ± 20 0,386 34 ± 20 44 ± 21 0,277** 46 ± 10,5 30 ± 19
+1,102 3,359 *
+média ± DP 40,1 ± 14,3 36,5 ± 12,3 41,7 ± 15,0 45,9 ±11,4 32,7 ±14,3
+Score N2,
+t = - t = ,008*
+mediana ± AIQ 39,7 ± 17,2 0,519 32,0 ± 18,2 42,8 ± 15,9 0,277** 44,2 ± 12,2 33,2 ± 12,6
+1,227 2,789 *
+média ± DP 39,0 ± 12,8 35,4 ± 12,1 40,6 ± 13,0 43,5 ± 10,6 33,3 ± 13,3
+Score N2,
+50,24 - 41,0 50,2 - - 45,4 50,3 - -
+intervalo
+Score N2,
+11,3 - 61,6 - 12,8 – 53,7 11,3 – 61,6 - - 14,2 – 59,6 11,3 - 61,6 - -
+mínimo – máximo
+Tabela 1 * Teste Mann-Whitney U ** Teste t-student; AIQ = amplitude inter-quartil; DP = desvio padrão; femin =
+indivíduos do sexo feminino; masc = indivíduos do sexo masculino; Valor estat. = Valor estatístico;
+15
+
+Dessa primeira análise, constante na Tabela 1, verificou-se que o sexo não teve influência
+estatisticamente significativa em nenhum dos resultados do teste DIT-2. Por outro lado, dividindo a
+amostra pela média de idade dos 43 participantes (36,1 anos), constituíram-se dois grupos
+independentes: idade até 35 anos, inclusive, ou idade igual ou superior a 36 anos. Como consta na
+tabela 1, o grupo dos indivíduos mais velhos teve um pior resultado no teste DIT-2 (N2 score),
+estatisticamente significativo (t (41) = 2.789, p < 0,01). De facto, na resolução de problemas éticos,
+este grupo de participantes valorizou com mais frequência argumentos relacionados com o interesse
+pessoal do sujeito (U = 118, p < 0.01), e com menos frequência itens pós-convencionais (t (41) = 3,359,
+p < 0,01). Não se verificaram diferenças na frequência de escolha de itens de carácter normativo.
+Para explorar melhor a relação entre a idade dos participantes e o resultado global no DIT-2, foi
+estudada a hipótese de correlação entre estas variáveis, tendo-se encontrado uma correlação negativa
+fraca (Spearman r(41) = - 0,340, p = .013, one-tailed, negative correlation). A mesma é apresentada no
+gráfico 1.
+Figura 1 - Correlação de Spearman entre as variáveis idade e Score N2
+Score N2
+Idade (anos)
+Procedeu-se a uma segunda análise, complementar, presente na tabela 2, em que se avalia se o
+grau de carreira se relaciona de forma estatisticamente significativa com o resultado no DIT-2.
+Utilizaram-se os resultados obtidos pelos quatro grupos referidos (IFGs, IFEs, AH e AG/AGS).
+16
+
+Tabela 2 - Resultados do teste DIT-2 por categoria profissional
+Valor
+IFG IFE AH AG/AGS p-valor
+estat.
+Questionários válidos (n) 7 11 15 10 - -
+Idade (anos), mediana ± AIQ 25 ± 1 27 ± 5 35 ± 5.5 53 ± 15 F = 44,86 <0,001*
+n homens / n mulheres 1 / 6 4 / 7 2 / 13 6 / 4
+na 0,078**
+% homens / % mulheres 14% / 86% 36% / 64% 13% / 87% 60% / 40%
+Estadio 2-3 26,0 26,0 20,0 34,0 F =1,248 0,306*
+Estadio 4P 24,0 26,0 28,0 23,0 F = 0,480 0,698*
+Pscore 23,0 44,0 42,0 31,0 F = 2,079 0,119*
+Score N2, mediana ± AIQ 44,5 ± 8,4 38,4 ± 15,7 39,7 ± 16,7 29,2 ± 18,2 F = 1,782 0,167*
+Score N2, intervalo 19,44 26,82 45,37 50,24 - -
+Score N2, mínimo – máximo 37,6 - 57,0 24.6 - 51,4 14.2 - 59,6 11,3 - 61,6 - -
+Tabela 2. * teste ANOVA ** teste Exacto de Fisher, extensão Freeman-Halton; AIQ = amplitude inter-quartil; Valor estat. =
+Valor estatístico;
+Um teste de ANOVA foi realizado para averiguar se existiam diferenças significativas na idade
+dos grupos. O teste revelou que existia uma diferença significativa na média de idades dos grupos,
+como era perfeitamente expectável, entre pelo menos dois grupos (F(3,39) = [44,860], p = < 0,001). O
+teste de Tukey para comparações múltiplas encontrou diferenças significativas na idade entre todos os
+grupos excepto na comparação das idades de IFGs e IFEs, os grupos mais jovens.
+Dado não estarem cumpridos os pressupostos para o teste Chi-quadrado, foi realizado um teste
+exacto de Fisher, extensão Freeman-Halton, para avaliar se existiram diferenças significativas na
+proporção de participantes do sexo masculino e feminino nos vários grupos. O teste não mostrou
+diferenças estatisticamente significativas (two-tailed p = .078).
+Posteriormente, avaliou-se se os grupos teriam resultados díspares no teste DIT-2. Apesar de
+haver uma progressiva queda no score N2, mais acentuada aparentemente na passagem de IFG para
+IFE e de AH para AG/AGS, não se verificaram diferenças estatisticamente significativas pelo teste
+ANOVA. Questiona-se se o tamanho reduzido de cada grupo será o motivo da ausência de diferenças ou
+se isso se deve à heterogeneidade do grupo de assistentes hospitalares.
+De forma interessante, na tabela, é percetível que a amplitude interquartil e o intervalo entre o
+melhor e o pior resultado vão aumentando progressivamente da esquerda para a direita.
+Aparentemente, isso deve-se sobretudo ao facto de o mínimo de cada grupo ser normalmente inferior
+ao mínimo do grupo anterior. Resumindo, partindo de uma fase de alguma homogeneidade (IFGs), os
+grupos vão-se tornando aparentemente cada vez mais heterogéneos. Há participantes dos grupos de
+assistentes que conseguem obter resultados muito bons (preferindo itens com raciocínio mais
+complexo, os itens pós-convencionais), mas outras pessoas existem que escolhem frequentemente
+itens mais simplistas, relacionados com preferências pessoais, ou seja, focados nas consequências que
+determinada ação tem para o protagonista e não para a sociedade.
+17
+
+Por último, construiu-se uma tabela de contingência relacionando a categoria profissional com o
+perfil encontrado no teste DIT-2. Recordemos que o teste atribui a cada indivíduo um determinado perfil
+que pode ir de: tipo 1 e 2 – indivíduos predominantemente no esquema mental de preferências
+individuais, tipo 3, 4 e 5 – indivíduos predominantemente no esquema mental normativo e tipo 6 e 7-
+indivíduos preferencialmente em esquemas mentais pós-convencionais. Os perfis 1, 4 e 7 são perfis
+consolidados enquanto os perfis 2, 3, 5 e 6 são perfis de transição. Como se pode observar, enquanto
+o grupo dos IFG tem todos os seus elementos num perfil pós-convencional, o grupo dos AG/AGS é
+aquele que mais elementos tem no perfil 1 e 2. De qualquer modo, o teste exacto de Fisher não
+mostrou diferenças estatisticamente significativas (p= .2687).
+Tabela 3 - Tabela de contigência para os perfis dos participantes por grau de carreira
+Tipos simplificados IFG IFE AH AG/AGS Total
+1,2 0 2 2 4 8
+3,4,5 0 3 4 2 9
+6,7 7 6 9 4 26
+Total 7 11 15 10 43
+Resultados da formação em Ética Clínica no Serviço de Medicina Interna
+Estrutura e conteúdos
+Levaram-se a cabo um total de 5 sessões de discussão de casos clínicos que por questões de
+confidencialidade não podem ser descritos em detalhe.
+Na primeira sessão abordou-se o caso de uma doente internada com insuficiência cardíaca
+avançada com mau prognóstico no curto espaço de tempo, que, apesar de orientada e colaborante não
+parecia reunir todas as condições de decisão e cujo familiar mais próximo pedia que a sua vida fosse
+mantida por todos os meios possíveis. Discutiu-se, entre outros, a Autonomia, Beneficência e não
+maleficência, alocação de recursos e contexto.
+Na segunda sessão abordou-se o caso de uma doente jovem com várias comorbilidades,
+incumpridora da maioria da terapêutica prescrita, com seguimento médico muito irregular em
+ambulatório, a quem, em agudização, é determinada, por outrem, uma limitação do esforço terapêutico
+dado o seu historial de incumprimento. Foi discutido o caso, sendo abordados os princípios de
+Beneficência e de Justiça, entre outras considerações.
+18
+
+Na terceira sessão discutiu-se o caso de um doente totalmente autónomo, que é internado com
+infeção grave do sistema nervoso central. Apesar dos vários sinais de agravamento que foram surgindo
+dia após dia, foram sendo sempre acrescentadas medidas terapêuticas ou de suporte que se
+revelariam fúteis. Entre outros tópicos, foi discutida a beneficência, a futilidade, a proporcionalidade e a
+justiça.
+Na quarta sessão foi discutido o caso de um doente com várias comorbilidades, que requeria
+cuidados de terceiros durante o dia e que foi internado por encefalopatia urémica. Discutiu-se o início
+de terapêutica de substituição da função renal. Assim, discutiu-se a beneficência, futilidade,
+proporcionalidade, não maleficência, autonomia, qualidade de vida e justiça;
+Na quinta sessão foi abordada a problemática da escassez de recursos, com necessidade de
+suspensão de suporte ventilatório a um doente para priorização de outro. Foram abordados os
+princípios de beneficência, futilidade e justiça.
+Valor das sessões de formação
+A mediana do número de presenças nas sessões foi de 10, com um máximo de 12 e um
+mínimo de 6. No questionário individual entregue no final de cada sessão à pergunta de auto-avaliação
+“conhecimento teórico prévio sobre os tópicos analisados”, respondida de 0-10 numa escala de Likert,
+no total das sessões, observou-se uma média de 7,00 pontos e à pergunta “competências práticas
+prévias sobre os tópicos analisados” observou-se uma média de 6,93 pontos. O valor mais elevado em
+ambas foi atingido na última sessão: 7,60 e 7,50 pontos respetivamente.
+Já sobre a pergunta “Qual o seu grau de satisfação global com a sessão?” no questionário
+individual preenchido no final de cada sessão, a média global foi de 9,35 pontos numa escala de Likert
+de 0 a 10 (mínimo de 9,1 na primeira e quinta sessões e máximo de 9,8 na segunda sessão). Na
+pergunta “Qual o impacto previsível na sua prática clínica?”, a média global foi de 9,11 pontos (mínimo
+de 9,0 na segunda, terceira e quinta sessões e máximo de 9,38 na primeira sessão).
+Numa apreciação global, parece ser seguro afirmar que os formandos consideram que a sua
+preparação prévia para a abordagem de casos clínicos do ponto de vista da ética médica não é a
+melhor, mesmo para casos que são próximos da sua prática. Os formandos parecem reconhecer um
+muito elevado grau de importância da formação para a sua prática clínica e um grau de satisfação
+ainda maior com as sessões realizadas.
+19
+
+Aprendizagem e perceções individuais
+Para fins de registo das aprendizagens efetuadas na sessão, os formandos deveriam responder a
+duas perguntas de resposta livre: “O que aprendeu hoje?” e “O que mais o/a marcou?”. Essas
+respostas seguiram um método de análise qualitativa, sendo categorizadas pelo investigador principal.
+O investigador encontrou 4 categorias principais: 1) Teoria ou ferramentas práticas; 2) Contributo ou
+desenvolvimento da comunidade; 3) Processos de decisão e escolha; 4) Relação Médico – Doente /
+Comportamento;
+No somatório de todos os inquéritos, 92 campos poderiam ser preenchidos. Quinze não o
+foram e cinco foram preenchidos de forma demasiado vaga para que o seu conteúdo pudesse ser
+catalogado. Quatro campos apresentaram conteúdo extenso e multidimensional, pelo que foram
+fragmentados e catalogados de acordo. A tabela seguinte resume a frequência de cada categoria de
+conteúdo.
+Tabela 4 - Distribuição do conteúdo das respostas ao questionário por categoria e pergunta
+“O que aprendeu “O que mais o/a
+Total
+hoje?” marcou?”
+1) Teoria ou ferramentas práticas 17 0 17
+2) Contributo ou desenvolvimento da comunidade 4 23 27
+3) Processos de decisão e escolha 17 10 27
+4) Relação Médico – Doente / Comportamento 3 2 5
+Informação vaga, não catalogada 2 3 5
+Por preencher 5 10 15
+Por estes dados pode-se já entender que as categorias mais representadas globalmente são a
+2 e 3, com informação em 27 campos cada. A categoria 1 (Teoria ou ferramentas práticas) está apenas
+representada na pergunta que remete diretamente para a aprendizagem. As respostas à pergunta “O
+que aprendeu hoje?” são dominadas por conteúdo dessa categoria e da categoria 3 (Processos de
+decisão e escolha), em igualdade de frequência com 17 campos cada. Já as respostas à pergunta “O
+que mais o/a marcou?” são dominadas pela categoria 2 (Contributo ou desenvolvimento da
+comunidade). Por aqui parece perceber-se o impacto relevante da comunidade nos formandos.
+Dentro de cada categoria, o investigador agrupou as respostas dadas de acordo com a sua
+semelhança, constituindo subgrupos, de forma a escolher posteriormente alguns exemplos mais
+relevantes. De seguida apresenta-se o resumo das observações transmitidas pelos formandos.
+20
+
+1) Teoria ou ferramentas práticas
+Nesta categoria, foram comuns respostas relacionadas com os conceitos e princípios éticos no
+geral, com o emprego de verbos como reavivar, relembrar, consolidar ou reforçar. Foram referidos
+alguns exemplos concretos como o princípio da proporcionalidade, da justiça ou o conceito de
+futilidade, aspetos teóricos da relação médico-doente com um doente não cooperante, assim como a
+comparação entre a ética da relação médico-doente e a ética das populações. Outras respostas
+elegeram a aplicação de uma ferramenta prática, a tabela de 4 tópicos de Siegler, como o ponto de
+aprendizagem mais importante da sessão.
+Por último, salientam-se duas respostas de carácter geral: “Mesmo em situações clínicas
+aparentemente claras existem questões éticas que devem ser colocadas pois podem ou devem
+potencialmente alterar as decisões” e “os cuidados de saúde devem ser orientados pelos princípios
+éticos”.
+2) Contributo ou desenvolvimento da comunidade
+Nesta categoria, um conjunto importante de respostas valorizou a participação e a interação
+entre os elementos da comunidade e a expressão de opiniões diversas. Sobretudo na pergunta sobre o
+aspeto mais marcante da sessão foram dadas respostas como “a participação pertinente e global da
+equipa”, “a troca de experiências entre os pares”, “toda a discussão do caso, a opinião dos colegas”,
+“a qualidade da intervenção dos participantes” ou “as diferentes perceções dos profissionais de saúde
+sobre o tema. Também aí devemos aprender com os colegas para melhor tratar os doentes”.
+Curiosamente, em duas sessões, um especialista valoriza a aprendizagem relacionada com a tabela de
+4 tópicos, mas considera a discussão dos casos em grupo como o aspeto mais marcante de ambas.
+Este tipo de respostas faz acreditar que de facto a comunidade pode ter um peso mais forte que as
+ferramentas teórico-práticas, o que é, obviamente, um risco, mas também uma virtude da comunidade.
+A diferença de perspetivas continuou a ser descrita: “a diversidade na definição do que é a
+qualidade de vida e futilidade do tratamento médico a instituir” ou “a diversidade de opiniões
+relativamente à atitude terapêutica de um doente com baixa reserva funcional e necessidade de um
+tratamento invasivo” ou “a facilidade com que um caso relativamente simples (…) pode originar
+opiniões tão díspares no que toca às implicações éticas do tratamento e das intervenções”, mas ao
+mesmo tempo também valorizada como se observa pelas respostas “A partilha de opiniões e
+experiências foi relevante para nos questionarmos sobre os nossos preconceitos.” ou “A subjectividade
+humana nos processos de decisão clínica e como as reuniões (necessárias) aumentam a complexidade
+21
+
+destes processos, ainda que de forma construtiva e enriquecedora” ou “A discussão em equipa é
+essencial para a proposta terapêutica individualizada”.
+Se os formandos reconheceram o contributo individual dos seus companheiros na diversidade
+de opiniões, também apreciaram o alinhamento de ideias, aspeto fundamental numa comunidade
+saudável, segundo a teoria de comunidade de práticas. As seguintes respostas atestam isso: “A forma
+como a exposição das perspetivas está alinhada na comunidade e a forma como se acrescenta formas
+de pensar e decidir após discussão de casos.” ou “Uniformizar algumas opiniões sobre temas éticos
+com aplicação prática no nosso dia-a-dia. A uniformização dentro de um grupo de trabalho que deve ter
+uma visão mais ou menos concordante sobre os temas.” ou “A importância da partilha e tomada de
+decisões em equipa” ou “A ideia do grupo, uniformizada sobre o tratamento dos doentes, mesmo os
+incumpridores” ou “A posição praticamente unânime na questão de aplicar o tratamento ao doente e o
+facto de não haver "questões" relativamente a esse tratamento”.
+Desse alinhamento, resultam vantagens percecionadas pelos formandos: “Que as decisões
+clínicas são multifatoriais, intrinsecamente complicadas e que o clínico necessita do apoio dos seus
+pares para as realizar.” ou “A discussão interpares consolida decisões” ou, noutra resposta, a
+referência ao “conforto interpares nos limites de cuidados”.
+Por último, os formandos reconheceram também questões identitárias próprias da sua
+comunidade, diferente de outras comunidades do Hospital: “A divergência de opiniões conforme o
+Serviço a que nos referimos”; “O facto de [para nós] o contexto social não impedir a realização de
+hemodiálise no doente.” ou “A questão da problemática social ter sido tão relevante nas decisões
+propostas pelos colegas de outras especialidades [mas não para nós]” ou “A não limitação do
+tratamento da doente com base num aspeto multifatorial como a não adesão [em oposição a uma
+decisão prévia]”.
+3) Processos de decisão e escolha
+Ao contrário da categoria anterior, nesta, o conteúdo foi maioritariamente encontrado nas
+respostas à pergunta “O que aprendeu hoje?”. Pode ser introduzida esta categoria com a frase: “A
+decisão solitária é mais leve se for convenientemente fundamentada, mesmo tendo implicações vitais”,
+que pode ser complementada com a resposta “o médico não é Deus nem juíz”, ou seja, tem de
+suportar as suas decisões adequadamente. E “Que nada em medicina é "preto e branco"”.
+De facto, nesta categoria, os formandos insistiram sobre a fundamentação das decisões
+clínicas: “Conhecimentos sólidos do ponto de vista científico ajudam muito à racionalidade das
+22
+
+decisões, mas não bastam para a humanidade das decisões. Quando parar? Quando não começar?”
+Para estas questões há reflexões a fazer e ferramentas a auxiliar”. Os formandos reconheceram que “A
+dificuldade / complexidade de certas decisões clínicas muitas vezes não é reportada em diretrizes que
+deveriam auxiliar os profissionais de forma clara e expedita” e que “A individualidade da decisão
+conforme o caso dificulta a criação de algoritmos de tomada de decisão.”. Reconheceu-se ainda “A
+necessidade ou importância de incluir fatores “não clínicos” na tomada de decisão”.
+Expressou-se a necessidade de “sistematizar questões que devemos colocar perante casos que
+nos suscitam questões éticas.”, de ter “atenção aos detalhes”, “ao contexto do doente, às crenças e
+convicções”, à “vontade do doente (antes da vontade do familiar)”, “à recusa autónoma na posse de
+capacidade de decisão”, à “ponderação do risco-benefício de cada ato médico”, “à avaliação da
+qualidade de vida tendencialmente feita pelo doente”, à “revisão regular das indicações terapêuticas”,
+à necessária “racionalidade em contextos de seleção de doentes para admissão em unidades”
+diferenciadas, à “priorização de recursos” ou à sua “escassez, modeladora da atividade clínica”. Houve
+quem sublinhasse que “a emoção ultrapassa a razão mesmo numa análise posterior dos casos. Os
+sentimentos podem limitar a aplicação dos princípios”.
+Os formandos voltaram a referir, no processo de tomada de decisão, o trabalho em equipa. “A
+discussão em equipa é essencial”, “Trabalhar em equipa, verdadeiramente e de forma consistente, é
+fundamental”, e a “A necessidade de envolver a equipa nos processos de decisão”.
+4) Relação Médico – Doente / Comportamento
+Por último, algumas respostas incidiram sobre a relação médico-doente, comunicação ou
+comportamento. Alguns formandos referiram que “as decisões que tomamos nem sempre são
+adequadamente comunicadas aos doentes” e que há espaço de melhoria da “atitude médica perante o
+incumprimento terapêutico”. Referiram que o doente deveria ser mais envolvido, “o doente no centro. O
+doente como cooperante”, assim como, se adequado, as suas famílias, sendo necessário por vezes
+“explicar e preparar o desfecho negativo de forma atempada”. Um formando falou da “análise dos
+limites éticos da relação médico-doente”, mas infelizmente não concretizou.
+23
+
+Atas das sessões de formação
+Tal como descrito previamente, no final de cada sessão era tomada uma decisão de grupo e a
+mesma era resumidamente fundamentada. Posteriormente, uma ata da sessão era elaborada, sem
+transcrições de participações individuais, mas com o resumo do pensamento do grupo, sendo a
+mesma lida e corrigida na sessão seguinte. Dessa forma, procurava-se também recordar ao grupo, ou
+informar os ausentes na sessão anterior, dos conteúdos discutidos.
+A ideia original de uma avaliação exaustiva da ata por um perito em Bioética ou Ética Clínica,
+eventualmente com recurso à tabela de 4 tópicos de Siegler, não foi exequível dado o dever de
+confidencialidade que impediu a transmissão de informação clínica ou pessoal detalhada. O conteúdo
+das atas, que não descrevem o caso nem possuem dados sensíveis, foi, no entanto, considerado
+aparentemente adequado.
+Procurou-se então perceber, pela análise textual das atas através do software Nvivo, qual o
+conteúdo que foi mais relevante na elaboração das mesmas, admitindo-se que as atas sejam um
+espelho do que foi discutido em reunião. Através da análise de frequências de palavras, construiu-se a
+nuvem presente na figura 2.
+Figura 2 - Nuvem de palavras baseada na frequência das mesmas ao longo das actas realizadas
+24
+
+Apresenta-se na seguinte tabela a contagem das palavras mais completas e sua família.
+Tabela 5 - Listagem das palavras mais frequentes e seus derivados
+Percentual
+Palavra representada Contagem Palavras similares
+Ponderado
+Doente 52 4,03 Doente, doentes
+Tratamento 36 2,79 Tratamento, tratamentos
+Benefício 22 1,71 Benefício, benefícios
+Médicos 17 1,32 Médica, médico, médicos
+Avaliação 13 1,01 Avaliação
+Terapêutico 11 0,85 Terapêutica, terapêuticas, terapêutico
+Doença 9 0,70 Doença, doenças
+Melhor 8 0,62 Melhor, melhores, melhoria
+Motivos 8 0,62 Motivação, motivações, motivo, motivos
+Princípio 8 0,62 Princípio
+Qualidade 8 0,62 Qualidade
+Recursos 8 0,62 Recurso, recursos
+Por esta informação se pode inferir que o doente e o benefício do tratamento estiveram no
+centro das preocupações durante a escrita das atas. De facto, menos vezes surge a palavra médico.
+Quanto às restantes questões da tabela de 4 tópicos, a palavra que surge mais vezes é “qualidade”
+(remetendo para o quadrante da qualidade de vida), surgindo só depois a autonomia (embora a
+expressão “preferências do doente” possa substituí-la muitas vezes) e a não maleficência. Questões de
+contexto poderão eventualmente estar representadas com a palavra “recursos”.
+Apreciação global da formação
+Como já descrito, duas semanas após o final da formação, os formandos que participaram em
+pelo menos duas formações foram convidados a responder online a um questionário sobre a formação
+no seu geral: as metodologias usadas, o modo como as sessões decorreram e o impacto previsível da
+mesma a nível individual e coletivo. Em cada um dos 25 itens que compunha o questionário, os
+respondentes expressavam a sua discordância ou concordância (discordo totalmente; tendo a
+discordar; neutro; tendo a concordar; concordo totalmente).
+Todas as pessoas convidadas responderam ao questionário (13 participantes), tendo todos os
+participantes respondido a todas as perguntas (0 missings). Para mais fácil análise e visualização,
+agruparam-se os itens de acordo com o seu conteúdo, como se segue.
+25
+
+A) Disposição, metodologia e âmbito
+Q1. A ideia de uma formação em Ética causou-me à partida estranheza ou desconfiança.
+Q2. O modelo de discussão em grupo é muito adequado.
+Q3. A utilização de casos clínicos conhecidos de todos enriquece a discussão.
+Q4. É vantajoso discutirmos apenas casos do âmbito da nossa especialidade.
+Q5. Senti falta de um perito em Ética Clínica para ajudar na discussão dos casos.
+Q6. Senti que fazia falta mais conteúdo teórico em cada sessão
+Figura 3 - Resultados do questionário individual de satisfação (Parte A)
+Discordo totalmente Tendo a discordar Neutro Tendo a concordar Concordo totalmente
+É percetível que as pessoas não ofereciam à partida resistência à formação (Q1). Os
+participantes identificaram-se claramente com a metodologia utilizada, nomeadamente a discussão em
+grupo de casos clínicos (Q2) conhecidos de todos os envolvidos (Q3). Como moderador, o investigador
+sentiu que o facto de as pessoas conhecerem os doentes tanto do ponto de vista clínico como pessoal,
+bem como os seus familiares, permitia obviar muitas questões de clarificação (previstas na estrutura da
+sessão). Pela Q6 torna-se clara também a preferência da globalidade dos formandos por sessões sem
+conteúdo teórico formalmente exposto (tal como ocorreram), apenas com a evocação natural de alguns
+conceitos teóricos à medida que vão surgindo na discussão. Pela Q4, os formandos revelam abertura à
+discussão de casos clínicos de outras especialidades, pese embora isso seja difícil de conciliar com o
+conhecimento real dos doentes. Por último, na Q5, existe uma divisão total no grupo quanto ao
+benefício da presença de um perito em Bioética. A introdução desse perito terá de ser bem ponderada
+pois, se não fizer parte da comunidade, poderá limitar a frequência das discussões, introduzir maior
+conteúdo teórico (algo que o grupo claramente rejeita) ou não estar alinhado.
+26
+
+B) Modo
+Q7. Senti que havia diversidade de opiniões.
+Q8. Senti que todos puderam expressar livremente a sua opinião.
+Q9. Senti que as pessoas tinham boas intervenções.
+Q10. Senti que o papel de moderador é dispensável.
+Figura 4 - Resultados do questionário individual de satisfação (Parte B)
+Discordo totalmente Tendo a discordar Neutro Tendo a concordar Concordo totalmente
+Neste grupo de questões, os formandos revelaram que as pessoas puderam expressar
+livremente as suas opiniões (Q8), que as mesmas eram diversas (Q7) e que as intervenções dos
+participantes tinham qualidade (Q9), dados que são compatíveis com a análise dos resultados dos
+questionários individuais entregues no final de cada sessão. Curiosamente, apesar desta opinião geral,
+as pessoas rejeitam claramente a ideia de prescindir de um moderador (Q10). Não é certo com que
+sentido respondem a esta pergunta (Q10): se vêm no moderador alguém que vai lançando novas
+questões, imprimindo dinâmica à sessão e ajudando o grupo a progredir (algo que se aproximaria mais
+da definição de facilitador) ou se alguém que procura um equilíbrio na participação de todos e a
+produção de consensos no respeito pelo tempo destinado à sessão. Na ótica do investigador, que
+estava responsável pela moderação das sessões, na quase totalidade do tempo atuou como
+moderador, mas, pontualmente atuou como facilitador para poder introduzir uma ou outra pergunta ou
+nomear um ou outro princípio ou conceito. Como descrito nos métodos, no final da discussão, poderia
+apresentar ao grupo alguma explanação teórica do livro Clinical Ethics, de Siegler.
+27
+
+C) Efeito individual
+Q11. Senti que a ferramenta de 4 tópicos é útil na abordagem de casos desafiantes.
+Q12. A formação em Ética despertou questões importantes nas quais dificilmente refletiria.
+Q13. A formação despertou em mim a vontade de aprender mais sobre o tema.
+Q14. Sinto que agora estou mais preparado/a para abordar um caso clínico do ponto de vista ético.
+Q15. A formação em Ética ajudará a construir a minha identidade profissional.
+Figura 5 - Resultados do questionário individual de satisfação (Parte C)
+Discordo totalmente Tendo a discordar Neutro Tendo a concordar Concordo totalmente
+Neste quadrante, com perguntas todas feitas pela positiva, é notório que as os participantes
+consideram que existe um impacto individual significativo da formação em Ética. Por um lado, sentem-
+se mais capazes de abordar um caso clínico que levante desafios éticos (Q14) e entendem que a tabela
+de 4 tópicos proposta por Siegler será útil nessa tarefa (Q11). Apesar de nem todos os participantes
+sentirem que esta formação lhes trouxe questões às quais não chegariam normalmente (Q12), também
+é notória a humildade e a vontade de aprender mais sobre o tema (Q13), o que é um ótimo pronúncio
+para a continuação destas formações. Por último, os formandos compreendem a necessidade de
+construir uma identidade profissional e que a formação em Ética os pode ajudar nisso (Q15). De facto,
+esse era um grande objetivo desta formação na ótica do investigador: a noção da necessidade de
+construção de um Eu Profissional, processo para o qual será necessária a capacidade de refletir sobre
+si próprio e sobre a realidade envolvente.
+28
+
+D) Efeito na comunidade
+Q16. A formação em Ética é importante para o grupo apenas do ponto de vista cognitivo.
+Q17. A discussão de casos clínicos permite-me conhecer melhor os outros.
+Q18. A formação em Ética é importante para a tomada de decisões individuais e em grupo.
+Q19. Sinto que o grupo é realmente importante para a melhor abordagem dos doentes.
+Q20. A formação em Ética melhora o alinhamento dos elementos da comunidade.
+Q21. A discussão de casos em grupo fortalece no geral a comunidade de prática.
+Figura 6 - Resultados do questionário individual de satisfação (Parte D)
+Discordo totalmente Tendo a discordar Neutro Tendo a concordar Concordo totalmente
+Neste bloco de perguntas, os participantes começam por rejeitar que esta formação seja importante
+para o grupo apenas do ponto de vista cognitivo (Q16). Os formandos sentem que este tipo de
+discussão de casos clínicos permite conhecer melhor os seus pares (Q17) seguramente sobre as suas
+perfectivas e posicionamentos perante determinados dilemas. É praticamente unânime a concordância
+total com a ideia de que a Ética é importante para a tomada de decisões clínicas (Q18) e, por
+conseguinte, para a melhor abordagem dos doentes (Q19). Por fim, questionaram-se dois aspetos
+fundamentais na teoria de comunidade de práticas: o primeiro, o alinhamento (Q20) e em segundo, a
+ligação entre os elementos. (Q21). De facto, estas são características das comunidades de práticas que
+serão tanto mais fortes quanto mais alinhados e vinculados estiverem os seus membros. A questão que
+fica em aberto é se a discussão de casos melhora por si o sentimento de pertença ou se as discussões
+de temas potencialmente fraturantes só poderão ser profícuas se houver já um espírito forte de
+comunidade (identidade, alinhamento, pertença). Esta pergunta não pode responder a isso, pelo que
+29
+
+fica apenas a visão deste grupo: a de que as discussões em grupo de casos clínicos melhoram no geral
+a comunidade.
+E) Aplicação prática e apreciação geral
+Q22. Após a formação sinto que a Ética Clínica é menos teórica e mais prática.
+Q23. Após a formação sinto que a Ética Clínica é mais aplicável no meu dia-a-dia.
+Q24. A formação em Ética permitirá melhorar a minha prática clínica no futuro.
+Q25. Sinto que valeu a pena a formação em Ética Clínica.
+Figura 7 - Resultados do questionário individual de satisfação (Parte E)
+Discordo totalmente Tendo a discordar Neutro Tendo a concordar Concordo totalmente
+Através deste grupo de perguntas tentou-se perceber a praticidade desta formação em Ética. A
+Ética é normalmente observada como uma especialidade teórica, complexa, inteligível apenas para os
+que a ela se dedicam, sendo difícil de transpor para a prática. Foi esse o contexto deste tipo de
+questões. De facto, na generalidade, as pessoas concordam que esta formação permitiu dar uma outra
+visão da Ética Clínica, uma visão mais prática (Q22) e, como tal, mais aplicável no dia-a-dia (Q23).
+Todos os inquiridos, em maior ou menor grau, entendem que a sua atuação clínica melhorará ao
+colocar em prática esta formação (Q24). Por último, na pergunta mais generalista de todas, as pessoas
+manifestam sem reservas a sua satisfação com a formação (Q25).
+Em resumo, os inquiridos manifestaram altos níveis de satisfação com a metodologia escolhida
+e com o modo como decorreram as sessões, estão confiantes num elevado impacto individual e
+coletivo da formação que vai para além da esfera cognitiva e sentem que a mesma os ajudará a
+melhorar a sua prática clínica e a construir uma identidade individual. Os formandos não pretendem
+maior componente teórica, mas ao mesmo tempo dividem-se sobre o benefício da inclusão neste
+processo de um perito em Bioética.
+30
+
+V. DISCUSSÃO
+Desenvolvimento moral dos médicos do Serviço de Medicina Interna
+Segundo a lista de publicações elaborada pela Universidade de Alabama e disponível no site
+local, a aplicação do teste DIT-2 a profissionais de saúde não é frequente, sendo apesar de tudo mais
+comum em alunos de Medicina. Tanto quanto é do conhecimento do investigador, estamos perante o
+primeiro trabalho em que esse esforço foi realizado em Portugal. Decorre dessa originalidade e do facto
+de os números serem relativamente baixos, provenientes de um único centro e obtidos de forma
+transversal que os resultados sejam interpretados com prudência. Outro aspeto que não poderá ser
+confundido é o âmbito do teste DIT-2 (Bioética), diferente do âmbito da Ética Clínica em que os
+profissionais habitualmente se movem. Por outras palavras, o seu resultado não traduzirá o valor dado
+à ética ou à aplicação das questões éticas na prática clínica dos participantes neste estudo.
+No entanto, o facto de ser um teste extensamente validado e do qual existe uma ampla
+experiência de utilização permitiu caracterizar a população em que foi aplicado, permitirá comparações
+futuras com outros grupos e permitirá, desde já, avançar com algumas hipóteses de trabalho. Assim, a
+primeira comparação que pode ser feita é entre os resultados obtidos e as novas normas do teste
+recentemente publicadas e que resultam da sua aplicação em larga escala43. Nas normas, os grupos
+detentores de grau profissional, mestrado ou doutoramento, obtiveram scores N2 entre os 42,41 e os
+38,38 (média) ou entre os 43,7 e os 39,0 (mediana). Na nossa amostra, obteve-se um score N2
+médio de 39 e mediano de 39,7, o que está perfeitamente alinhado com a norma do teste. No entanto,
+por norma, são escolhidos menos vezes os itens de interesse pessoal (22,7 conta 27,6 na amostra) e
+mais vezes itens normativos (33,8 contra 26,7 na amostra). Por outro lado, na amostra estudada, o
+grupo IFG e o grupo dos médicos com menos de 35 anos, tem uma performance claramente acima da
+norma, enquanto o grupo dos médicos mais velhos, sobretudo os AHG/S, tem uma performance
+claramente abaixo da norma. Na norma publicada em 2023, existe algum declínio no resultado do
+teste com a idade, situado ao redor dos 3 pontos no score N2, mas na amostra estudada observamos
+quedas da ordem dos 11 a 15 pontos, sendo estatisticamente significativa a correlação negativa entre o
+score N2 e a idade.
+Parece justo concluir que os resultados obtidos não são os desejáveis. Em primeiro lugar,
+sendo a ética tão importante na conceptualização e no exercício da profissão médica, seria porventura
+desejável que os médicos obtivessem scores acima da média da população neste tema basilar. Por
+31
+
+outro lado, parece existir uma divergência clara de alguns indivíduos em relação a outros, que se
+acentua ao longo da idade. Não é crível, à luz das teorias de desenvolvimento moral, que os indivíduos
+que têm uma pontuação baixa não tenham já atingido na sua vida patamares superiores de raciocínio
+moral do que aquele em que este teste os situa agora. É muito provável que os tenham atingido, mas
+que posteriormente tenham regredido. Sobre essa possibilidade de retrocesso, saliente-se o estudo de
+Hren que pela análise longitudinal de alunos pré-graduados, através do teste DIT-2, mostrou a
+regressão do desenvolvimento moral com a entrada nos anos clínicos49. Também o facto de os médicos
+mais jovens da amostra terem scores mais altos favorece a proposta de erosão ética. Apenas um
+estudo longitudinal, de seguimento a longo prazo dos mesmos indivíduos poderia esclarecer
+definitivamente se estamos perante um fenómeno de erosão ética ou uma diferença geracional, em
+que os médicos mais jovens estão disponíveis para procurar o debate de ideias e princípios partilhados
+numa coerência lógica em vez de dependerem de modos estabelecidos de atuação ou de decidirem
+apenas com base nas implicações para o sujeito50,51.
+Independentemente destas considerações, parece óbvio que existe espaço para melhoria na
+comunidade estudada. A confirmação do fenómeno de erosão ética acarretará imediatamente um
+conjunto de obrigações para o período de formação pós-graduada, em mais uma manifestação óbvia
+da necessidade de aprendizagem ao longo da vida. A primeira pode ser a de procurar localizar na
+comunidade, mais finamente, os indivíduos que devem melhorar. De facto, dos dados obtidos resulta
+que a população é heterogénea e que existem médicos “virtuosos” em qualquer idade ou categoria
+profissional. A segunda é a de tentar conhecer os mecanismos que levam ao fenómeno indesejado
+para que melhor neles se atue. Como descrito previamente, a falta de empatia, a dessensibilização, o
+stress ou burnout, o uso de tecnologia, a redução do doente a mecanismos fisiopatológicos, ou o
+curriculum oculto são algumas das causas apontadas para o fenómeno27,29,52,53. A terceira é a de
+procurar contrariá-lo, formando os elementos da comunidade, ou melhorando a comunidade para que
+os seus elementos também melhorem. Algumas intervenções já foram realizadas neste campo, com
+resultados variáveis54,55.
+Na óptica do investigador, pode ser dispensável identificar à priori os indivíduos que
+beneficiariam mais da intervenção, ou conhecer à priori os mecanismos de erosão ética. É plausível
+acreditar que, por exemplo, o aumento dos momentos de discussão em grupo, em que pessoas com
+diferentes perfis podem interagir, se traduza em benefícios para todos, não só cognitivos como de
+vivência em comunidade, com o fortalecimento das relações, dos princípios, dos valores e da
+identidade comum.
+32
+
+Resultados da formação em Ética Clínica no Serviço de Medicina Interna
+Muitas são as formações possíveis em Ética Clínica, ou em Bioética, na lógica mais abrangente
+do tema, sendo muito difícil estabelecer-se comparações entre elas. Como já referido na introdução, a
+tendência atual é para que a formação em Ética Médica esteja presente ao longo da vida, seja cada vez
+menos teórica e mais próxima da prática ou aconteça mesmo durante a prática médica diária. Havendo
+muitos modelos, grupos e locais bem diferentes de aplicação, não é possível estabelecer comparações
+fiáveis de resultados35.
+Neste caso, optou-se por uma formação dirigida a uma equipa clínica já estabelecida,
+relativamente estável, baseada na discussão em grupo de casos reais, conhecidos de todos, com
+recurso a moderador, sem facilitador ou perito. Infelizmente, por vicissitudes inerentes ao trabalho
+assistencial ou períodos de ausência, o número de sessões realizadas acabou por ser inferior ao
+previsto, o que limitou parcialmente a diversidade de temas a tratar. Os casos foram também
+exclusivamente selecionados pelo investigador, embora normalmente após sugestão de colegas. No
+entanto, o investigador esperava que se pudesse atingir já um nível de participação em que os
+formandos de forma espontânea ou planeada escolhessem, apresentassem e moderassem as sessões.
+Este é ainda um projeto em curso, inacabado, pelo que esses objetivos poderão ser atingidos no futuro.
+Apesar disso, a noção de que o grupo valorizou muito esta formação atravessa todo o leque de
+resultados. De facto, pela auto-avaliação dos participantes em cada sessão, é evidente que as pessoas
+sentem que podem melhorar as suas competências nesta área e demonstram vontade de saber mais
+sobre o tema, continuando uma formação que as satisfez bastante. É justo questionar-se, no entanto,
+se a noção individual e subjetiva de aprendizagem se traduzirá em aprendizagens efetivas medidas por
+instrumentos de avaliação. Infelizmente, como referido na introdução e como será debatido mais à
+frente, não existe uma ferramenta sólida que permita avaliar as formações neste campo. Mais, a
+utilização de ferramentas validadas noutros contextos que não o nacional, poderiam dar uma noção
+errada da evolução dos participantes, isto se admitirmos que a Ética é um espaço de liberdade em que
+fatores locais estão presentes. Mesmo o teste DIT-2, apesar de ser uma ferramenta muito validada a
+nível mundial, apresenta um âmbito muito mais genérico que o da Ética Clínica, motivo pelo qual os
+seus resultados devem ser encarados com cautela. Não existindo ferramentas perfeitas, o investigador
+principal tem o objetivo de voltar a aplicar o teste DIT-2 a este grupo de formandos. No entanto, o teste
+só deve ser reaplicado com um intervalo de tempo razoável e não demasiadas vezes, pelo que mais
+tempo e mais sessões deverão ainda mediar essa nova aplicação.
+33
+
+Por outro lado, o investigador gostaria que as atas das reuniões fossem validadas por um
+especialista em Bioética. No entanto, questões relacionadas com a exigência de confidencialidade de
+dados clínicos, impossibilitaram uma análise aprofundada. De qualquer modo, as mesmas pareceram
+bastante adequadas, sendo que o investigador gostaria de, no futuro, após um maior número de
+sessões reunir todos os formandos para uma nova leitura das atas e a partir desse material poder ser
+escrita uma Carta de Grupo, onde estivessem reunidas as questões de identidade da comunidade. De
+facto, foram discutidos aspetos relacionados com a relação médico-doente, a necessidade de
+consentimento informado, a partilha de decisões com o doente ou seu representante, a noção de
+benefício, de qualidade de vida, de gratuitidade de apoios sociais, de limitação do esforço terapêutico,
+entre outros, em que a visão da comunidade imperou e se percebeu que é diferente da de outras
+comunidades do Hospital, não encontrando também equivalência em trabalhos publicados no campo
+da Ética médica. A exploração dessa questão identitária poderá ser muito interessante e trazer novos
+ganhos.
+Para além disso, o conteúdo da participação dos formandos nas sessões poderia ser conhecido
+na íntegra, se se tivesse pensado num método de gravação das mesmas, o que obviamente obrigaria a
+medidas adicionais de garantia da confidencialidade e ao consentimento informado dos colegas para a
+gravação das sessões. Não pareceu ao investigador que isso fosse viável, para além de que poderia
+comprometer sobremaneira a adesão das pessoas às formações. Esse tipo de estudos só parece
+adequado após a confiança no processo e no grupo estar bem estabelecida. No entanto, a gravação
+das sessões e a análise das mesmas em software de análise qualitativa que permita esclarecer melhor
+os processos de tomada de decisão parece ser um caminho promissor.
+A novidade deste trabalho é a forma como se procura entender o pensamento moral e ético à
+luz da teoria da comunidade de prática. De facto, os dados são praticamente inexistentes no
+cruzamento entre esta teoria e a aprendizagem da Ética Clínica. Este trabalho procura ser inovador
+nesse ponto, sendo-o certamente no contexto nacional.
+Essa novidade, a pergunta principal, acaba por surgir sob a forma de múltiplas perguntas
+colocadas aos participantes no Questionário Final de satisfação, em que aí as pessoas reconhecem que
+este tipo de formações melhora a comunidade de prática de uma forma geral, incluindo no aspeto
+relacional, de alinhamento e ligação. Apesar deste contributo, para o investigador principal, outros
+dados pareceram mais valiosos, como os resultantes dos inquéritos individuais preenchidos no final de
+cada sessão.
+34
+
+Da análise feita às respostas ao questionário, sobretudo às perguntas “O que aprendeu hoje?”
+e “O que mais o/a marcou?” percebemos como as pessoas valorizam a comunidade. Acima do valor
+de muitos dados teóricos, que nem desejam, está a influência dos pares, a partilha de perspetivas e
+opiniões. Isso será verdade em muitas e variadas comunidades, em algumas logo desde o seu início,
+sobretudo quando os elementos que as compõem dispõem de maturidade. Há nas comunidades
+saudáveis uma noção de identidade coletiva, de pertença e de alinhamento, uma forma mais ou menos
+implícita de fazer escolhas ou de viver, que é valorizada e que terá um maior peso do que a teoria ética
+formal. Reconheceremos aqui facilmente os três currículos: o curriculum formal, o curriculum real e um
+curriculum oculto, tantas vezes difícil de captar nos estudos de aprendizagem da Medicina ou, mais
+particularmente, da Ética Clínica. A Ética como espaço de liberdade, vive no seu contexto local,
+marcado necessariamente por matrizes de valores, por questões sociais ou económicas e dinâmicas no
+tempo. A Ética na, e da, prática médica, estará mais ou menos presente, mais ou menos visível ou
+explícita. Noutro campo, ou no mesmo campo das Humanidades, Manuel Clemente, enquanto
+historiador convidado para o prefácio de um livro de história local56, escrevia: “Mais uma vez se
+comprova que a história local não é um “género menor” da historiografia. Muito pelo contrário, será um
+dos mais seguros, pois faz incidir num espaço, numa população e num itinerário mais concretos as
+luzes disponíveis em todas as fontes apuráveis. Do perto ao longe, é relance mais certeiro. E não se
+perde a floresta, se se integra a árvore no arvoredo. Antes se respeita o conjunto na integridade das
+partes, sem se abstrair da realidade pela aplicação indiferenciada de generalidades.”
+Os dados encontrados neste estudo, que favorecem um peso grande da comunidade na prática
+não surpreendem, mas são relevantes na medida em que as teorias permanecem mais facilmente se
+se encontrar demonstração das mesmas. Não surpreendem porque seremos gregários desde que
+nascemos. Recordando a teoria de Kohlberg, desenvolvemos a nossa moralidade com uma influência
+externa grande, desde os graus mais básicos de evicção do castigo ou do “good boy” até aos estádios
+normativos e só a partir de então finalmente entramos num nível pós-convencional, que é
+necessariamente individual, mas discutido, e que provavelmente não rompe com estádios anteriores.
+A influência dos pares marca-nos. Essa influência exercer-se-á até no campo das emoções que
+terão por sua vez relevo na criação de memórias duradouras e na aprendizagem. O fenómeno de
+aprendizagem é seguramente complexo, e na aprendizagem da ética fica clara a existência desse
+currículo oculto. Um estudo interessante sobre algo tão local como o humor no dia-a-dia dos médicos57,
+mostra como até comportamentos entendidos como indesejáveis por alunos de Medicina, podem ser
+posteriormente adotados pelos mesmos. Será isso erosão ética, um exemplo da influência negativa dos
+35
+
+pares no desenvolvimento do indivíduo, uma tentativa sub-reptícia de manter um “status quo” ou tudo
+isso?
+A grande dúvida que subsiste é como evitar essa espiral negativa, como levar a comunidade a
+manter-se aderente aos melhores princípios éticos e a lutar por melhorar os seus indivíduos. Como
+criar uma comunidade virtuosa e mantê-la desse modo é, pois, uma pergunta a que esta tese não
+responde e que carece de clarificação. Pese embora os resultados do teste DIT-2 estejam perfeitamente
+alinhados com o esperado para a população geral, ou seja, não estaremos a falar de um grupo de
+formandos excecionalmente virtuoso, este trabalho poderia ter eventualmente um resultado diferente
+noutra comunidade.
+A ideia de prescindir de um perito, dando liberdade à comunidade, parecerá disruptiva. De
+facto, estamos habituados a que haja algumas balizas estabelecidas ou que ocorra validação das
+aprendizagens por alguém competente na área objeto de avaliação. No entanto, importa comparar com
+o panorama real, em que a grande maioria das decisões médicas, individuais ou em grupo, são
+tomadas sem nenhum perito presente. Competência e expertise ou mestria, são conceitos diferentes.
+Seria até paralisante, e ainda mais para as especialidades de âmbito mais generalista, mas mesmo
+para as outras, que apenas alguém hiperespecializado pudesse observar, abordar, decidir ou tratar. A
+competência, sendo nuclear, tem de existir, mas não necessariamente o expertise. O que é relevante é
+que indivíduos cada vez mais competentes existam nas comunidades de prática, já que esta parece ser
+fundamental, na opinião dos participantes deste estudo. Observámos também que a competência
+específica não existirá provavelmente em todos os indivíduos que compõem a comunidade, mas a
+discussão em grupo funcionará como uma salvaguarda das boas práticas médicas. A presença de um
+perito, ocasionalmente, certamente ajudará a comunidade a progredir, mas essa presença não deve
+ser, na óptica do investigador, indispensável para que a comunidade procure ativamente desenvolver-se
+em determinado campo, ainda para mais nos tempos atuais, em que a disponibilidade ampla de
+literatura de qualidade permite a implantação de estratégias ativas de aprendizagem a nível pós-
+graduado com se viu neste caso. Se assim não fosse, a comunidade ficaria refém da disponibilidade do
+perito, sendo isso incompatível com a prática clínica diária. Esta visão não impede, nem retira valor, a
+que membros da comunidade decidam, por exemplo, obter certificação como consultores em Ética
+Médica, o que provavelmente beneficiará a comunidade como um todo. Ressalve-se ainda obviamente
+que, mesmo admitindo uma comunidade bem desenvolvida neste tema, poderão surgir casos de
+grande complexidade em que aí sim, tal como noutras áreas da Medicina, fará sentido o apoio de
+alguém mais especializado.
+36
+
+Fica claro para o investigador, pelos dados expostos e pelos argumentos acima descritos, que a
+decisão de intervenção numa comunidade para a melhorar no tema da Ética Clínica não deve ser feita
+no plano individual, na teorização, com casos clínicos desfasados da prática dos profissionais. A
+intervenção deve ser desenhada para a comunidade em conjunto, beneficiando da heterogeneidade
+dos indivíduos, para que toda ela melhore.
+Ponto diferente e indiscutivelmente relevante é a demonstração e validação da aprendizagem,
+aspeto já exigido por agências de acreditação na sua avaliação de programas de internato, tal como
+descrito na introdução. Admite o investigador que possa ser suficiente a demonstração em currículos e
+portfólios da discussão e reflexão sobre determinados casos clínicos que levantem questões éticas
+importantes. Essa pode ser uma solução bem promissora para o imediato já que não existem
+ferramentas ainda validadas para a avaliação da aplicação da Ética na prática diária (métodos de
+observação direta) e a utilização de simulação ou vinhetas clínicas com estandardização das respostas
+é logo em si uma limitação para a aplicação do problema em contextos diferentes. Entre os dois,
+claramente o investigador optaria por um programa de simulação ou de OSCE, mais próximos do
+contexto real, em que comités locais teriam liberdade de definição. A realidade é, apesar de tudo,
+potencialmente mais imersiva.
+Outro dos temas que esta tese deixa em aberto é a possibilidade de certificação do grupo.
+Estamos habituados a que Serviços clínicos lutem para atingir o nível de excelência no tratamento de
+uma determinada patologia ou área de patologias, sendo esse nível devidamente certificado. No
+entanto, tanto quanto é do conhecimento do investigador, mesmo após pesquisa, não existem
+programas de certificação de Serviços em Ética Clínica. Atualmente, até com o apoio de meios
+tecnológicos facilmente acessíveis, tal pretensão não parece impossível de concretizar. Haja
+oportunidade de desenhar e disponibilizar esses programas de acreditação.
+37
+
+VI. LIMITAÇÕES
+Como é natural, este estudo apresenta várias limitações que já foram referidas durante a
+discussão, pelo que se salientam neste tópico apenas algumas.
+Sendo um estudo de caso, colocam-se dúvidas legítimas sobre a aplicabilidade dos fenómenos
+aqui descritos noutras comunidades de prática. A dimensão das amostras, tanto na aplicação do
+questionário DIT-2 como nas sessões de formação é pequena, aceitando-se um resultado diferente com
+a expansão do estudo.
+Por outro lado, nas formações, não existindo uma ferramenta devidamente validada para a
+avaliação da aprendizagem da Ética Clínica que pudesse ser aplicada antes e depois da formação, não
+é possível garantir que existe uma real aprendizagem, ficando a avaliação do resultado dependente
+unicamente de noções subjetivas dos participantes.
+38
+
+VII. CONCLUSÃO
+Este é, do conhecimento do investigador, o primeiro estudo em Portugal a aplicar o teste DIT-2 a
+uma população de médicos graduados, desde o início da carreira até às fases mais avançadas. Dele
+resultou a evidência de uma aparente erosão ética, já que os médicos mais velhos (≥36 anos)
+apresentaram um score N2 significativamente mais baixo que os médicos mais jovens. Observou-se
+ainda uma correlação negativa estatisticamente significativa entre a idade e o score N2. Estes dados,
+embora tenham de ser encarados com cautela, obrigam à busca dos motivos para tal fenómeno e à
+implementação de estratégias adequadas para o contrariar.
+Este estudo criou também uma formação em Ética Clínica à luz da teoria de aprendizagem da
+Comunidade de Prática e de acordo com as tendências mais atuais: curriculum flexível, estratégias
+ativas de aprendizagem, discussão em pequeno grupo de casos clínicos reais e conhecidos de todos,
+com menor pendor teórico e mais próximos da prática médica, sem recurso a um perito na área. Da
+análise das respostas dos formandos, observa-se que os mesmos consideram que as suas
+competências prévias em Ética Clínica se situam abaixo do desejável e declararam-se bastante
+satisfeitos com a metodologia escolhida, modo e praticidade da formação. Mais relevante ainda, é a
+forma como os formandos reconhecem o impacto da comunidade de prática na resolução de
+problemas ético-clínicos. Os participantes no estudo valorizam a discussão em grupo, com a
+participação de todos, a diversidade de opiniões, mas ao mesmo tempo valorizam o alinhamento entre
+os membros, a tomada de decisões em conjunto, reconhecem o papel da comunidade na qualidade
+dos cuidados prestados ao doente e reconhecem a sua comunidade como tendo uma identidade
+própria, distinta de outras. Ao mesmo tempo, entendem que este tipo de formações fortalece a
+comunidade de prática, nas suas características essenciais de ligação e pertença, partilha de valores e
+alinhamento.
+Pelos dados e argumentos explanados ao longo desta dissertação, ficam claras as implicações da
+comunidade de prática no raciocínio ético. Esta constatação obrigará a que, no futuro, sempre que se
+queira desenhar uma intervenção pedagógica no campo da Ética Clínica a mesma seja realizada
+preferencialmente numa lógica de comunidade e não numa lógica individual.
+39
+
+VIII. BIBLIOGRAFIA
+1. Naylor CD, Gerace R, Redelmeier DA. Maintaining physician competence and professionalism:
+Canada’s fine balance. JAMA - J Am Med Assoc. 2015;313(18):1825-1826.
+doi:10.1001/jama.2015.3705
+2. Livingston EH, Ginsburg S, Levinson W. Introducing JAMA professionalism. JAMA - J Am Med
+Assoc. 2016;316(7):720-721. doi:10.1001/jama.2016.9854
+3. Levinson W, & Ginsburg S, & Hafferty F.W. & LCR. Understanding Medical Professionalism.
+McGraw Hill; 2014.
+https://accessmedicine.mhmedical.com/content.aspx?bookid=1058&sectionid=59865986
+4. Varkey B. Principles of Clinical Ethics and Their Application to Practice. Published online
+2021:17-28. doi:10.1159/000509119
+5. Cheval B, Mongin D, Cullati S, et al. International Journal of Nursing Studies Associations of
+emotional burden and coping strategies with sick leave among healthcare professionals : A
+longitudinal observational study. Int J Nurs Stud. 2021;115:103869.
+doi:10.1016/j.ijnurstu.2021.103869
+6. Hazel E, Ph D, Dunagan WC, Levinson W, Fraser VJ, Gallagher TH. The Emotional Impact of
+Medical Errors on Practicing Physicians in the United. Jt Comm J Qual Patient Saf.
+2007;33(8):467-476. doi:10.1016/S1553-7250(07)33050-X
+7. Sheehan TJ, Husted SDR, Candee D, Cook CD BM. Moral Judgment as a Predictor of Clinical
+Performance. Eval Health Prof. 1980;3(4):393. doi:doi:10.1177/016327878000300404
+8. Sisola SW. Moral reasoning as a predictor of clinical practice: The development of physical
+therapy students across the professional curriculum. J Phys Ther Educ. 2000;14(3).
+doi:10.1097/00001416-200010000-00006
+9. Brooks L, Bell D. Teaching , learning and assessment of medical ethics at the UK medical
+schools. Published online 2016:1-7. doi:10.1136/medethics-2015-103189
+10. Sokol D. When is the best time to teach medical ethics ? Bmj. 2022;376:2022.
+doi:10.1136/bmj.o504
+11. Howard BS, Newhart L, Burke SK. Comparing Moral Reasoning across Graduate Occupational
+and Physical Therapy Students and Practitioners. 2020;4(3).
+12. Ferreira-Padilla G, Ferrández-Antón T, Lolas-Stepke F, Almeida-Cabrera R, Brunet J, Bosch-
+Barrera J. Ethics competences in the undergraduate medical education curriculum: The Spanish
+40
+
+experience. Croat Med J. 2016;57(5):493-503. doi:10.3325/cmj.2016.57.493
+13. Mark Siegler M. Lessons from 30 Years of Teaching Clinical Ethics. Virtual Mentor.
+2001;3(10):318-322. doi:10.1001/virtualmentor.2001.3.10.medu1-0110
+14. Scher S, Kozlowska K. RETHINKING HEALTH CARE ETHICS Stephen Scher. Palgrave
+MacMillan; 2018.
+15. Carrese JA, Malek J, Watson K, et al. The Essential Role of Medical Ethics Education in
+Achieving Professionalism : The Romanell Report. 2015;90(6):744-752.
+doi:10.1097/ACM.0000000000000715
+16. WHO Regional Office for South-East Asia. Module for Teaching Medical Ethics to
+Undergraduates.; 2009. https://apps.who.int/iris/handle/10665/205534
+17. Faihs L, Neumann-Opitz C, Kainberger F, Druml C. Ethics teaching in medical school: the
+perception of medical students. Wien Klin Wochenschr. Published online 2022.
+doi:10.1007/s00508-022-02127-7
+18. Sullivan BT, Defoor MT, Hwang B, Flowers WJ, Strong W. A Novel Peer-Directed Curriculum to
+Enhance Medical Ethics Training for Medical Students : A Single-Institution Experience.
+Published online 2020. doi:10.1177/2382120519899148
+19. Defoor MT, Chung Y, Zadinsky JK, Dowling J, Ii RWS. An interprofessional cohort analysis of
+student interest in medical ethics education : a survey-based quantitative study. Published online
+2020:1-9.
+20. Revision E. ACGME Common Program Requirements (Residency). 2022;(March):1-56.
+https://www.acgme.org/globalassets/PFAssets/ProgramRequirements/CPRResidency_2022v2
+.pdf
+21. Hurst DJ. Ethics education in US and Canadian family medicine residency programs : a review
+of the literature. Published online 2019:73-82.
+22. Deonandan R, Khan H. Ethics education for pediatric residents : a review of the literature.
+2015;6(1):61-67.
+23. Hong DZ, Goh JL, Ong ZY, et al. Postgraduate ethics training programs : a systematic scoping
+review. Published online 2021:1-17.
+24. Hafferty, F W; Franks R. The hidden curriculum, ethics teaching, and the structure of medical
+education. Acad Med. 1994;69(11):861-871.
+25. Feudtner C, Christakis DA, Christakis NA. Do clinical clerks suffer ethical erosion? Studentsʼ
+perceptions of their ethical environment and personal development. Acad Med. 1994;69(8):670-
+41
+
+679. doi:10.1097/00001888-199408000-00017
+26. Hicks LK, Lin Y, Robertson DW, Robinson DL, Woodrow SI. Understanding the clinical dilemmas
+that shape medical students ’ ethical development : questionnaire survey and focus group study
+Sex differences in speed of emergence and quality of recovery after anaesthesia : cohort study.
+2001;322(March):709-710.
+27. Stratta EC, Riding DM, Baker P. Ethical erosion in newly qualified doctors: perceptions of
+empathy decline. Int J Med Educ. 2016;7:286-292. doi:10.5116/ijme.57b8.48e4
+28. Griffith CH, Wilson JF. The loss of idealism throughout internship. Eval Heal Prof.
+2003;26(4):415-426. doi:10.1177/0163278703258107
+29. Johnson JC, Kim H, Johnson PA. Pedagogy in Perspective: Ethical Erosion and Effects on
+Empathy Levels in Healthcare Education. Med Sci Educ. 2021;31(3):1173-1175.
+doi:10.1007/s40670-021-01273-3
+30. Narvaez D, Rest J. The college experience and moral development. In: Kurtines, William;
+Gewirtz, Jacob; Lamb J, ed. Handbook of Moral Behavior and Development, Volume II.
+Lawrence Erlbaum Associates, Publishers Hillsdale; 1991:229-245.
+31. Magalhães E, Salgueira AP, Costa P, Costa MJ. Empathy in senior year and first year medical
+students: A cross-sectional study. BMC Med Educ. 2011;11(1). doi:10.1186/1472-6920-11-52
+32. Santos MA, Grosseman S, Morelli TC, Giuliano ICB, Erdmann TR. Empathy differences by
+gender and specialty preference in medical students: a study in Brazil. Int J Med Educ.
+2016;7:149-153. doi:10.5116/ijme.572f.115f
+33. Hojat M, Gonnella JS, Nasca TJ, Mangione S, Vergare M, Magee M. Physician empathy:
+Definition, components, measurement, and relationship to gender and specialty. Am J
+Psychiatry. 2002;159(9):1563-1569. doi:10.1176/appi.ajp.159.9.1563
+34. O’Tuathaigh CMP, Idris AN, Duggan E, Costa P, Costa MJ. Medical students’ empathy and
+attitudes towards professionalism: Relationship with personality, specialty preference and
+medical programme. PLoS One. 2019;14(5):1-15. doi:10.1371/journal.pone.0215675
+35. Ignatowicz A, Slowther AM, Bassford C, Griffiths F, Johnson S, Rees K. Evaluating interventions
+to improve ethical decision making in clinical practice: a review of the literature and reflections
+on the challenges posed. J Med Ethics. 2023;49(2):136 LP - 142. doi:10.1136/medethics-
+2021-107966
+36. Fenwick A, Johnston C, Knight R, Testa G, Tillyard A. Medical Ethics and Law A Practical Guide
+to the Assessment of the Core Content of Learning A Report from the Education Steering Group
+42
+
+of the Institute of Medical Ethics.
+37. Souza AD, Vaswani V. Diversity in approach to teaching and assessing ethics education for
+medical undergraduates: A scoping review. Ann Med Surg. 2020;56(May):178-185.
+doi:10.1016/j.amsu.2020.06.028
+38. Andersson H, Svensson A, Frank C, Rantala A, Holmberg M, Bremer A. Ethics education to
+support ethical competence learning in healthcare: an integrative systematic review. BMC Med
+Ethics. 2022;23(1):1-26. doi:10.1186/s12910-022-00766-z
+39. Hebert P, Meslin EM, Byrne N, Ross Reid S, Dunn E V. Evaluating ethical sensitivity in medical
+students: using vignettes as an instrument. J Med Ethics. 1990;16(3):141-145.
+doi:10.1136/jme.16.3.141
+40. Hebert PC, Meslin EM, Dunn E V. Measuring the ethical sensitivity of medical students: A study
+at the University of Toronto. J Med Ethics. 1992;18(3):142-147. doi:10.1136/jme.18.3.142
+41. Esquerda M, Pifarré J, Roig H, Busquets E, Yuguero O, Viñas J. Assessing bioethics education:
+Teaching to be virtuous doctors or just doctors with practical ethical skills. Aten Primaria.
+2019;51(2):99-104. doi:10.1016/j.aprim.2017.05.018
+42. Jonsen AR, Siegler M, Winslade WJ. No Title. In: Clinical Ethics: A Practical Approach to Ethical
+Decisions in Clinical Medicine, 9e. McGraw-Hill Education; 2022.
+http://accessmedicine.mhmedical.com/content.aspx?aid=1186670882
+43. Gungordu N, Nabizadehchianeh G, O’Connor E, Ma W, Walker DI. Moral reasoning development:
+norms for Defining Issue Test-2 (DIT2). Ethics Behav. 2023;00(00):1-18.
+doi:10.1080/10508422.2023.2206573
+44. Rest J, Narvaez D, Bebeau M, Thoma S. Postconventional moral thinking: a Neo-Kohlbergian
+approach. Choice Rev Online. 1999;37(04):37-2297-37-2297. doi:10.5860/choice.37-2297
+45. Cruess RL, Cruess SR, Steinert Y. Medicine as a Community of Practice: Implications for
+Medical Education. 2018;93(2):185-191. doi:10.1097/ACM.0000000000001826
+46. Rillo AG, Martínez-carrillo BE, Castillo-cardiel JA, Rementería-salinas JM. Constructivism : An
+Interpretation from Medical Education. 2020;10(3):1-12. doi:10.9790/7388-1003070112
+47. Burgess A, Diggele C Van, Roberts C, Mellis C. Facilitating small group learning in the health
+professions. BMC Med Educ. 2020;20(Suppl 2):1-6. doi:10.1186/s12909-020-02282-3
+48. Chen WT, Fu CP, Chang Y Di, Shiao YC, Chen PY, Wang CC. Developing an innovative medical
+ethics and law curriculum — constructing a situation ‑ based , interdisciplinary , court ‑ based
+learning course : a mixed methods study. BMC Med Educ. Published online 2022:1-8.
+43
+
+doi:10.1186/s12909-022-03349-z
+49. Hren D, Marušić M, Marušić A. Regression of moral reasoning during medical education:
+Combined design study to evaluate the effect of clinical study years. PLoS One. 2011;6(3).
+doi:10.1371/journal.pone.0017406
+50. Rest J, Narvaez D, Bebeau M, Thoma S. A Neo-Kohlbergian Approach: The DIT and Schema
+Theory. Educ Psychol Rev. 1999;11(4):291-324. doi:10.1023/A:1022053215271
+51. Rest JR, Narvaez D, Thoma SJ, Bebeau MJ. A Neo-Kohlbergian approach to morality research. J
+Moral Educ. 2000;29(4):381-395. doi:10.1080/713679390
+52. Yuguero O, Esquerda M, Viñas J, Soler-Gonzalez J, Pifarré J. Ethics and empathy: The
+relationship between moral reasoning, ethical sensitivity and empathy in medical students. Rev
+Clínica Española (English Ed. 2019;219(2):73-78. doi:10.1016/j.rceng.2018.09.009
+53. Patenaude J, Niyonsenga T, Fafard D. Changes in students’ moral development during medical
+school: a cohort study. Published online 2003:3-7.
+54. Molloy, C.; Tyrrell M. The impact of an end-of-life healthcare ethics educational intervention. Clin
+Ethics. 2016;11(1):28–37. doi:10.1177/1477750915622037
+55. Swisher LL, Kessel G Van, Jones M, Beckstead J, Edwards I. Evaluating moral reasoning
+outcomes in physical therapy ethics education : stage , schema , phase , and type. Phys Ther
+Rev. 2012;17(June):167-175. doi:10.1179/1743288X12Y.0000000011
+56. Fontes JLI. A Dos Cunhados: Itinerários Da Memória. 1st ed. (Pro-Memoria, ed.). Pro-Memoria;
+2002.
+57. Wear D, Aultman JM, Varley JD, Zarconi J. Making fun of patients: Medical students’ perceptions
+and use of derogatory and cynical humor in clinical settings. Acad Med. 2006;81(5):454-462.
+doi:10.1097/01.ACM.0000222277.21200.a1
+44
+
+ANEXOS
+Anexo 1
+45
+
+46
+
+47
+
+48
+
+Anexo 2
+A Tabela de 4 tópicos
+INDICAÇÕES MÉDICAS PREFERÊNCIAS DO DOENTE
+Princípios de Beneficência e não maleficência Princípio de Respeito pela autonomia do doente
+ Qual é o problema médico do doente? História? Diagnóstico?  Está o doente mentalmente capaz e legalmente competente?
+Prognóstico? Existe evidência da sua capacidade ou incapacidade?
+ O problema é agudo? Crónico? Crítico? Emergente? Reversível?  Se competente, o que declara o doente sobre as suas
+Terminal? preferências de tratamento?
+ Quais são os objetivos do tratamento?  Foi o doente informado dos benefícios e riscos de
+ Quais são as probabilidades de sucesso das várias opções recomendações diagnósticas e terapêuticas, entendeu esta
+terapêuticas? informação e deu consentimento informado?
+ Em que circunstâncias estarão os tratamentos médicos não  Se não capacitado, o doente expressou preferências prévias (ie,
+indicados? manifestação antecipada de vontades?)
+ Quais são os planos em caso de falência terapêutica?  Se não capacitado, quem o pode substituir? Essa pessoa usa
+ Em suma, como é que este doente pode ser beneficiado pelos padrões apropriados para tomar decisões?
+cuidados de medicina e enfermagem, e como é que o dano pode  Está o doente relutante ou incapaz de colaborar com o
+ser evitado? tratamento? Se sim, porquê?
+ Em suma, está o direito de escolha dos doentes a ser respeitado
+na extensão possível da ética e da lei?
+QUALIDADE DE VIDA CARACTERÍSTICAS DO CONTEXTO
+Os Princípios da Beneficência, não-maleficência e respeito Lealdade e Justiça
+pela autonomia do doente  Existem algumas questões familiares que possam influenciar
+ Quais são as perspetivas, com ou sem tratamento, para o as decisões sobre tratamento?
+regresso a uma vida normal?  Existem alguns interesses profissionais, interprofissionais ou
+ Que défices físicos, mentais e sociais será provável que o doente comerciais que possam criar conflitos de interesse no
+experiencie se o tratamento for bem-sucedido? tratamento dos doentes?
+ Se o doente não puder emitir a sua opinião, a condição presente  Existem algumas questões dos cuidadores (médicos ou
+ou futura do doente é tal que a continuação da vida poderá ser enfermeiros) que possam influenciar as decisões terapêuticas?
+julgada por outrem como indesejável?  Quais são os limites impostos à confidencialidade pelo legítimo
+ Existem vieses que possam prejudicar a avaliação feita pelos interesse de terceiros?
+médicos da qualidade de vida dos doentes?  Existem fatores económicos ou financeiros que possam criar
+ Que questões éticas surgem quando se fala em melhorar ou conflitos de interesse ou outros?
+reforçar a qualidade de vida de um doente?  Existem fatores religiosos ou culturais?
+ Existe algum plano ou racional para desistir do tratamento?  Existem limites na confidencialidade?
+ A avaliação da qualidade de vida pode contribuir para uma  Existem problemas na alocação de recursos que afetem as
+mudança de atitude, tal como desistir do tratamento? decisões?
+ Existem planos para conforto e cuidados paliativos?  Como é que a lei ou os limites legais afetam as decisões de
+ É a morte medicamente assistida eticamente ou legalmente tratamento?
+permitida?  O ensino ou a investigação clínica estão a influenciar decisões?
+ Qual é o status legal e ético do suicídio?  Existe algum conflito de interesse da parte dos cuidadores ou
+da instituição?
+ Existem considerações de saúde pública e segurança que
+influenciam as decisões clínicas?
+Adaptado de:
+Albert R. Jonsen, Mark Siegler, William J. Winslade, Clinical Ethics: A Practical Approach to Ethical Decisions in Clinical
+Medicine, 9ed, Lange
+Schumann, John Henning and David Alfandre. “Clinical ethical deciSion making: the Four toPicS aPProach.” Seminars in
+Medical Practice (2008)
+49
+
+Anexo 3
+Avaliação da Sessão NR ____
+Auto-avaliação (0-10 valores)
+- Conhecimento teórico prévio sobre os tópicos analisados _____
+- Competências práticas prévias sobre os tópicos analisados _____
+Avaliação da sessão
+De 0-10 valores:
+- Qual o seu grau de satisfação global com a sessão? _____
+- Qual o impacto previsível na sua prática clínica? _____
+- O que aprendeu hoje?
+- O que mais o/a marcou?
+Adaptado de
+Chen, BMC Med Educ. Published online 2022:1-8. doi:10.1186/s12909-022-03349-z
+50
+
+AVALIAÇÃO GLOBAL DA FORMAÇÃO
+1 = Discordo totalmente
+2 = Tendo a discordar
+3= Neutro
+4 = Tendo a concordar
+5 = Concordo totalmente
+1 2 3 4 5
+A ideia de uma formação em Ética causou-me à partida estranheza ou desconfiança.
+O modelo de discussão em grupo é muito adequado.
+A utilização de casos clínicos conhecidos de todos enriquece a discussão.
+É vantajoso discutirmos apenas casos do âmbito da nossa especialidade.
+Senti que havia diversidade de opiniões.
+Senti que todos puderam expressar livremente a sua opinião.
+Senti que as pessoas tinham boas intervenções.
+Senti falta de um perito em Ética Clínica para ajudar à discussão dos casos.
+Senti que o papel de moderador é dispensável.
+Senti que fazia falta mais conteúdo teórico em cada sessão.
+Senti que a ferramenta dos 4 tópicos é útil na abordagem de casos desafiantes.
+Sinto que agora estou mais preparado/a para abordar um caso clínico do ponto de vista ético.
+A formação em Ética é importante para a tomada de decisões individuais e em grupo.
+A formação em Ética é importante para a comunidade apenas do ponto de vista cognitivo.
+A formação em Ética melhora o alinhamento dos elementos da comunidade.
+A discussão de casos em grupo fortalece no geral a comunidade de prática.
+A discussão de casos clínicos permite-me conhecer melhor os outros.
+Sinto que o grupo é realmente importante para a melhor abordagem dos doentes.
+A formação em Ética permitirá melhorar a minha prática clínica no futuro.
+A formação em Ética ajudará a construir a minha identidade profissional.
+A formação em Ética despertou questões importantes nas quais dificilmente refletiria.
+A formação despertou em mim a vontade de aprender mais sobre o tema.
+Após a formação sinto que a Ética Clínica é mais aplicável no meu dia-a-dia.
+Após a formação sinto que a Ética Clínica é menos teórica e mais prática.
+Sinto que valeu a pena a formação em Ética Clínica.
+Importado para Google Forms. Enviado por link anonimizado.
+51

@@ -1,0 +1,919 @@
+Hugo Miguel do Vale Leite Santos de Almeida
+Using Artificial Intelligence/Machine
+Learning to identify assessment needs
+and to assist faculty decisions
+abril de 2024
+snoisiced
+ytlucaf
+tsissa
+ot
+dna
+sdeen
+tnemssessa
+yfitnedi
+ot
+gninraeL
+enihcaM/ecnegilletnI
+laicifitrA
+gnisU
+adiemlA
+ed
+sotnaS
+etieL
+elaV
+od
+leugiM
+oguH
+4202|ohniMU
+Universidade do Minho
+Escola de Medicina
+
+Universidade do Minho
+Escola de Medicina
+Hugo Miguel do Vale Leite Santos de Almeida
+Using Artificial Intelligence/Machine
+Learning to identify assessment needs
+and to assist faculty decisions
+Dissertação de Mestrado
+Mestrado em Avaliação Aplicada à Formação nas Profissões
+de Saúde
+Trabalho efetuado sob a orientação do
+Professor Doutor José Miguel Pêgo
+abril de 2024
+
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras e
+boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não
+previstas no licenciamento indicado, deverá contactar o autor, através do RepositóriUM da Universidade
+do Minho.
+Atribuição-NãoComercial-SemDerivações
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+ii
+
+ACKNOWLEDGEMENTS
+I would like to express my deepest gratitude to my supervisor and friend, José Miguel Pêgo for the
+unwavering support, invaluable guidance, and constant encouragement throughout this journey. His
+expertise, dedication, and mentorship have been instrumental in shaping this work.
+I am grateful to the teaching staff at MAPS for their dedication to excellence and their commitment to
+fostering a dynamic learning environment. To my colleagues on both sides of the Atlantic “Sei que há
+léguas a nos separar, tanto mar, tanto mar. Sei, também, quanto é preciso, pá. Navegar, navegar”
+(Chico Buarque); your collaboration and insights have enriched my research immeasurably.
+A heartfelt thank you to the Mapians of all Mapians, Beatriz.
+To my dear friends, your encouragement and understanding have been a source of strength during the
+challenges of this endeavor.
+To my family, particularly to my beloved son Ivo, for the patience and support.
+Financial Support
+The work presented in this thesis was performed in the School of Medicine and in the Life and Health
+Sciences Research Institute (ICVS), University of Minho. Financial Support was provided by Grupo Fuste
+and 2CA Braga – Centro Clínico e Académico, Braga.
+iii
+
+STATEMENT OF INTEGRITY
+I hereby declare having conducted this academic work with integrity. I confirm that I have not used
+plagiarism or any form of undue use of information or falsification of results along the process leading
+to its elaboration.
+I further declare that I have fully acknowledged the Code of Ethical Conduct of the University of Minho.
+iv
+
+Using Artificial Intelligence/Machine Learning to identify assessment needs and to assist
+faculty decisions
+SUMMARY
+Medical education is a discipline in constant evolution, where advancements in medical knowledge,
+technology, education and societal trends converge. It adapts to a highly mutable landscape and is
+permeable to emerging trends and innovations. Among the most transformative developments in recent
+years is the widespread proliferation of artificial intelligence (AI), that is revolutionizing all sectors of
+society, including healthcare and education. In this thesis, AI is succinctly defined, on its evolution and
+key characteristics.
+Central to this dissertation is the exploration of the intersection between AI and medical education. A
+review of literature reveals the myriad applications of AI-associated technologies across different
+domains of medical education. From automated assessment and feedback mechanisms to
+personalized learning platforms, virtual patient simulations, and intelligent tutoring systems, AI-driven
+tools offer unparalleled opportunities for enhancing learning outcomes and optimizing educational
+processes. Evidence suggests that the integration of AI-based strategies produces tangible benefits,
+facilitating the generation of teaching materials, delivering effective feedback, and enhancing
+performance at both educational and operational levels. However, despite the clear advantages
+demonstrated by these technologies, their widespread adoption in medical school remains limited.
+More, AI is not a topic in most programs. This gap leaves students and healthcare professionals with a
+unilateral understanding of AI, overlooking its potential to revolutionize healthcare delivery and medical
+education. Addressing this disparity is paramount, as it ensures that future generations of healthcare
+providers are equipped with the requisite skills and knowledge to navigate a rapidly evolving healthcare
+landscape.
+Keywords: Artificial Intelligence; Assessment and Feedback; Curriculum Design; Medical education;
+Personalized Learning.
+v
+
+A Inteligência Artificial no contexto da identificação de necessidades de avaliação e
+apoio às decisões do corpo docente
+RESUMO
+A educação médica é uma disciplina em constante evolução, onde convergem avanços no
+conhecimento médico, tecnologia e educação. É por definição altamente permeável a tendências e
+inovações emergentes. Entre os desenvolvimentos mais transformadores dos últimos anos está a
+proliferação da inteligência artificial (IA). Esta afeta todos os setores da sociedade, incluindo saúde e
+educação. Nesta tese, a IA é definida sucintamente, a sua evolução e características-chave.
+A interseção entre IA e educação médica é central nesta dissertação. É apresentada uma revisão da
+literatura sobre as inúmeras aplicações das tecnologias associadas à IA em diferentes domínios da
+educação médica nomeadamente nos mecanismos de avaliação e feedback, plataformas de
+aprendizagem personalizada, simulações de pacientes virtuais e sistemas de tutoria inteligente. A
+evidência sugere que a integração de estratégias baseadas em IA produz benefícios tangíveis,
+facilitando a geração de materiais de ensino, fornecendo feedback eficaz e melhorando o desempenho
+em níveis educacionais e operacionais. No entanto, apesar das claras vantagens demonstradas por
+essas tecnologias, sua adoção generalizada nas escolas médicas permanece limitada. Além disso, a IA
+não é um tópico na maioria dos programas.
+Essa lacuna deixa estudantes e profissionais de saúde com uma compreensão unilateral da IA,
+limitando o seu potencial. Abordar essa disparidade é fundamental para garantir que as futuras
+gerações de alunos e profissionais de saúde estejam equipadas com o conhecimento necessário para
+navegar em cenários de assistência médica em rápida evolução.
+Palavras-chave: Aprendizagem Personalizada; Avaliação e Orientações; Desenho Curricular;
+Educação médica; Inteligência Artificial.
+vi
+
+INDEX
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS ii
+ACKNOWLEDGEMENTS iii
+STATEMENT OF INTEGRITY iv
+SUMMARY v
+RESUMO vi
+List of Abbreviations ix
+List of Figures x
+List of Tables xi
+INTRODUCTION 1
+1. Artificial Intelligence 2
+1.1. A brief history of artificial intelligence 2
+1.2. Machine learning 4
+1.3. The widespread use of Artificial Intelligence 5
+1.4. Objectives 7
+METHODS 8
+2. Methods 9
+ARTIFICIAL INTELLIGENCE IN MEDICAL EDUCATION 10
+3. Medical Education 11
+3.1. Medicine throughout times 11
+3.2. Medical education 12
+3.2.1. Curriculum Development 12
+3.2.2. Teaching and Learning Methods 12
+3.2.3. Assessment and Evaluation 13
+3.2.4. Faculty Development 13
+3.2.5. Student Selection and Admissions 13
+3.2.6. Professionalism and Ethics 13
+3.2.7. Interprofessional Education 13
+3.2.8. Continuing Medical Education 14
+3.3. Artificial Intelligence in Medical Education 14
+vii
+
+CONCLUSIONS 21
+4. Conclusions 22
+REFERENCES 24
+5. References 25
+viii
+
+List of Abbreviations
+AI Artificial intelligence
+AI-DSS Artificial intelligence-based decision support system
+AIBA AI-based assessments
+CDS Clinical decision support
+CME Continuing medical education
+EBA Expert-based assessments
+GANs Generative adversarial networks
+GPT Generative pre-trained transformer
+GOFAI Good old fashioned artificial intelligence
+IPE Interprofessional education
+ML Machine learning
+MRI Magnetic resonance imaging
+NLP Natural language processing
+OSCE Objective structured clinical examinations
+ix
+
+List of Figures
+Figure 1. PubMed timeline results by year for the search query (Medical education[MeSH Major
+Topic]) AND ((Artificial intelligence[Title])) made on February 9, 2024. ............................................... 14
+Figure 2. Expert consensus (Delphi method) on AI competencies to be introduced in medical
+programs. ........................................................................................................................................ 16
+x
+
+List of Tables
+Table 1. The field of artificial intelligence.. ......................................................................................... 4
+Table 2. The widespread use field of artificial intelligence. ................................................................. 6
+Table 3. Artificial intelligence in medical education. ......................................................................... 17
+Table 4. Review on studies reporting AI applications in different domains of medical education. ....... 19
+xi
+
+INTRODUCTION
+1
+
+1. Artificial Intelligence
+A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.
+A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
+The Three Laws of Robotics. Isaac Asimov (1942). "Runaround"
+1.1. A brief history of artificial intelligence
+The ability to use intelligence to conceptualize and construct models about intelligence itself is the
+fascinating outcome of billions of years of evolution and has prompted the creative minds of
+philosophers, scientists and novelists throughout the times. What some authors refers as meta-
+intelligence comprises the understanding, control, and coordination of higher cognitive processes
+(Sternberg, 2022; Sternberg et al., 2021). In other words, it involves the ability to teach and utilize
+intelligence – and artificial intelligence (AI) – effectively. For centuries various cultures have had myths,
+stories, and legends featuring artificial beings endowed with intelligence or consciousness. The myth of
+Pygmalion, in which the sculptor Pygmalion creates a statue that comes to life or the story of Talos, a
+giant automaton made of bronze that protected the island of Crete in Greek mythology, are just
+amongst the many tales that survived through our times (Mayor, 2018). However, only much later,
+always at the borders between philosophy, biology and technology, theories and models to explain how
+the mind works start to arise. From the XVII century on several philosophers contributed to the
+development of symbolic logic and formal systems of reasoning thereby providing the theoretical
+framework for later advancements in mathematics, logic, and computer science. Particularly, René
+Descartes (1596-1650), Gottfried Wilhelm Leibniz (1646-1716) and George Boole (1815-1864) are
+considered that most contributed to the foundations. Descartes is best known for his philosophical
+work, including the formulation of Cartesian dualism and his famous statement "Cogito, ergo sum".
+While he did not directly contribute to symbolic logic in the same way as Leibniz and Boole, his
+emphasis on rational thought and clear, systematic reasoning laid the foundation for later developments
+in logic. Leibniz made significant contributions to mathematics particularly he developed calculus,
+2
+
+philosophy, and logic. He also developed the binary number system, which represents numbers using
+only two digits (0 and 1) and is fundamental to modern computing and forms the basis of digital
+computers. Finally, Boole was also a mathematician and logician, best known for his work on Boolean
+algebra, a branch of mathematics that deals with logical operations and binary relationships that laid
+the foundation for symbolic logic and modern formal logic. Boole's book "The Laws of Thought" (1854)
+introduced the concept of Boolean algebra. His algebraic notation for logical operations, such as AND,
+OR, and NOT, became fundamental to the development of digital logic circuits and computer science.
+The idea of mechanical manipulation of symbols is considered one of the most influential concept
+in the history of AI (Abrahams, 1969). This concept refers to the idea that human thought processes
+can be represented and understood as the manipulation of abstract symbols according to predefined
+rules or algorithms. This notion is central to symbolic AI, also known as classical AI or Good Old-
+Fashioned Artificial Intelligence (GOFAI; Haugeland, 1985). In the context of AI, it involves creating
+computer programs that operate on symbolic representations of knowledge, rules and reasoning
+processes. These programs use logical rules and algorithms to manipulate symbols, perform
+computations and make decisions. Alternative approaches, like machine learning (ML; see below)
+emerged attempting to overcome the limitations of symbolic AI namely difficulties with tasks that
+involve handling uncertainty, learning from large amounts of data or dealing with complex, unstructured
+information.
+It was from this interplay between philosophical inquiry into the nature of thought and
+mathematics that eventually led to the development of early AI systems, particularly in the mid-20th
+century when advances in computing technology made it possible to implement symbolic reasoning
+processes on computers (see Table 1).
+3
+
+Table 1. The field of artificial intelligence. Milestones and significant advancements from early conceptualization to recent breakthroughs
+in deep learning and neural networks (ChatGPT generated; multiple sources).
+Year Milestone
+1950 Alan Turing publishes "Computing Machinery and Intelligence," proposing the Turing Test as a measure of a machine's
+intelligence.
+1956 The Dartmouth Conference, organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon, marks the
+birth of artificial intelligence as a field.
+1958 John McCarthy develops the programming language LISP, which becomes a common language for AI research.
+1965 Joseph Weizenbaum develops ELIZA, an early natural language processing program capable of engaging in rudimentary
+conversation.
+1969 The Shakey project at Stanford Research Institute (SRI) develops a mobile robot with reasoning and planning capabilities,
+marking a significant milestone in robotics and AI.
+1973 The UK government's Artificial Intelligence in Society report triggers the first "AI winter," a period of reduced funding and interest
+in AI research due to unmet expectations.
+1980s Expert systems, which use knowledge bases to reason and make decisions, become popular in various domains such as
+medicine, finance, and engineering.
+1997 IBM's Deep Blue defeats world chess champion Garry Kasparov in a six-game match, showcasing the power of machine learning
+and computational methods in gaming.
+2011 IBM's Watson defeats human champions on the quiz show Jeopardy!, demonstrating advancements in natural language
+processing and question-answering systems.
+2012 Google Brain's deep learning project, led by Andrew Ng and Jeff Dean, achieves breakthrough performance in image
+recognition, sparking a resurgence of interest in neural networks and deep learning.
+2014 DeepMind's AlphaGo defeats professional Go player Lee Sedol, showcasing the capabilities of deep reinforcement learning in
+mastering complex games.
+2018 OpenAI's GPT (Generative Pre-trained Transformer) model demonstrates significant advancements in natural language
+processing and generation, enabling tasks like text completion and language translation.
+1.2. Machine learning
+Among the significant milestones in the history of machine learning (ML), these particular events
+warrant special recognition. Alan Turing (1912-1954) was the first to propose the idea of a “learning
+machine” in his seminal paper “Computing Machinery and Intelligence” (Turing, 1950). Although his
+focus was more on artificial intelligence in general and the question of whether machines could exhibit
+intelligent behavior comparable to humans, his ideas laid the groundwork for later developments in ML
+– see also (Copeland, 2004). However, the actual term “machine learning” was coined by Arthur
+Samuel (1901-1990); he developed the first self-learning program, a checkers-playing program, which
+improved performance with experience (Samuel, 1959). The development of the percepton (Rosenblatt,
+1957), one of the earliest models of an artificial neural network, contributed to the development of
+neural network-based learning algorithms (Sarker, 2021). Finally, Tom M. Mitchell (1951- ) provided a
+4
+
+formal definition of ML in his influential book “Machine Learning” (Mitchell, 1997). There he states
+“The field of machine learning is concerned with the question of how to construct computer programs
+that automatically improve with experience.” Or, on a more formal wat “A computer program is said to
+learn from experience E with respect to some class of tasks T and performance measure P, if its
+performance at tasks in T, as measured by P, improves with experience E.”. This formal construct still is
+transversal to the ML field despite its enormous growth with contributions from researchers in computer
+science, statistics, mathematics, and other disciplines. It encompasses a wide range of algorithms and
+techniques that enable computers to learn from data and make predictions or decisions without being
+explicitly programmed.
+1.3. The widespread use of Artificial Intelligence
+In an almost imperceptibly way AI is becoming part of almost all our activities (see Table 2) –
+critical assays (Bryson, 2018). The impact is immense. Just to mention a few, AI enables the
+automation of repetitive tasks, leading to increased efficiency and productivity. Algorithms can process
+large amounts of data and identify accurate and reliably patterns invisible to the human eye. Vast
+amounts of data can be analyzed to provide personalized experiences and recommendations. Also, AI
+algorithms can forecast future trends and behaviors based on historical data, allowing to allocate
+resource and mitigate risks as well as to enhance safety and security by detecting and preventing
+potential threats in areas such as cybersecurity, surveillance, and autonomous vehicles. AI-powered
+technologies can increase the inclusion of individuals with disabilities by providing assistive features
+such as speech recognition, text-to-speech, and computer vision applications. It goes without saying
+that on the other side many have argued on the perils of such technologies. Among those more on the
+public eye are: i. job displacement due to automation; ii. bias generated by the data used to train AI
+which might led to unfair or discriminatory outcomes; iii. privacy concerns and misuse of sensitive
+information associated with the AI capability to use large amounts of personal data (Qian et al., 2024);
+and iv. environmental impact due to energy consumption (and/or carbon emissions) associated with
+the large-scale computing resources. All these aspects raise ethical dilemmas associated with
+algorithmic accountability, autonomy and potential misuse in social control and autonomous decisions.
+Regarding this latter aspect, it important to note that some AI algorithms, particularly deep learning
+models, operate as "black boxes" making it challenging to understand how they arrive at their decisions
+or predictions. Overreliance on technology might be catastrophic in virtually all areas of human activity
+5
+
+(e.g. health, trade, transports, etc) upon systems failures. It can generate economic inequality and
+affect the social tissue in many ways (loss of human interaction and empathy, for instance).
+Table 2. The widespread use field of artificial intelligence. The table below summarizes AI-powered technologies that are disseminated in
+routine activities. The information in the table was itself collected using an AI algorithm (ChatGPT generated; multiple sources). AI –
+artificial intelligence; NLP - natural language processing;
+Technology Description
+Personal Assistants AI-powered personal assistants like Siri, Google Assistant, and Alexa help users with tasks such as
+setting reminders, sending messages, and searching the web using NPL.
+Smart Home Devices AI is used in smart home devices to automate tasks like adjusting thermostats, turning lights on and off,
+and managing security systems based on user preferences and behavior patterns.
+Recommendation Systems AI algorithms power recommendation systems used by platforms like Netflix, Amazon, and Spotify to
+suggest movies, products, and music based on user preferences and past interactions.
+Social Media AI is used in social media platforms to curate feeds, detect and filter out inappropriate content, and
+personalize user experiences through targeted advertising. traffic conditions.
+Navigation Apps Navigation apps like Google Maps and Waze use AI algorithms to provide real-time traffic updates,
+suggest alternate routes, and estimate arrival times based on historical data and current traffic
+conditions.
+Virtual Health Assistants AI-powered virtual health assistants provide personalized health advice, medication reminders, and
+symptom assessments based on user input and medical knowledge.
+Language Translation AI-driven language translation services like Google Translate use machine learning algorithms to
+translate text and speech between different languages in real-time.
+Fraud Detection AI is used in financial institutions to detect and prevent fraudulent activities by analyzing patterns in
+transactions and identifying anomalies in real-time.
+Customer Service Chatbots AI-powered chatbots assist customers by answering frequently asked questions, troubleshooting issues,
+and providing support on websites and mobile apps.
+Smartphone Photography AI enhances smartphone photography by improving image quality, adjusting settings automatically
+based on the scene, and adding effects like portrait mode and night mode
+Email Spam Filtering AI algorithms are used to filter out spam emails and prioritize important messages based on content
+analysis and user behavior patterns.
+Predictive Text AI-powered predictive text algorithms suggest words and phrases as users type, improving typing speed
+and accuracy on keyboards and messaging apps.
+Tools to deal with such significant threats and challenges are necessary but as in many research
+and development areas, the rapid advancement of AI has outpaced the development of specific
+regulatory frameworks. In between the excitement given by AI-associated possibilities and the threats
+and challenges posed by its intrinsic characteristics as just discussed, the field of medical education
+has been rapidly incorporating technologies and processes that rely on AI. In this thesis, I argue that AI
+6
+
+is an inevitable companion for both students and teachers, as its presence becomes increasingly
+ubiquitous. I contend that AI has the potential to assist in all domains of education. Ignoring the
+integration of AI in education poses a real danger, as it could lead to missed opportunities for improving
+learning outcomes and educational experiences.
+1.4. Objectives
+This thesis was conducted to gather information on the incorporation of AI in medical education
+both as a tool on its different branches (e.g. curriculum development, assessment, teaching
+methodologies, etc) and/or as a curricular topic.
+Specific aims are:
+(1) Perform a literature search;
+(2) Organize information according to the type of report, and
+(3) when applicable, to classify information according the Medical Education branch;
+(4) Conduct a critical analysis of the literature;
+7
+
+METHODS
+8
+
+2. Methods
+Following the objectives presented above, a comprehensive scope review on the intersection of artificial
+intelligence (AI) and machine learning (ML) in medical education, was performed. The search strategy
+combined the terms "artificial intelligence" and "machine learning" with the Medical Subject Headings
+(MeSH) term "Medical Education". The search was executed on PubMed in January 2024. Relevant
+articles were identified through the assessment of titles and abstracts.. The resulting information was
+organized into distinct topics pertinent to the application of AI and ML in medical education. These
+topics include Personalized Learning, Virtual Patient Simulations, Intelligent Tutoring Systems,
+Automated Assessment and Feedback, Predictive Analytics, and Curriculum Design and Optimization.
+Each topic was scrutinized to extract key insights, methodologies, and findings from the selected
+literature. Data extraction involved categorizing studies based on their objectives, methodologies,
+participants, outcomes, and implications for medical education. The synthesis of information from
+diverse sources facilitated a comprehensive understanding of the current landscape of AI and ML
+applications in medical education. A critical evaluation of this literature is presented in the final chapter
+of the thesis.
+9
+
+ARTIFICIAL INTELLIGENCE IN
+MEDICAL EDUCATION
+10
+
+3. Medical Education
+Se vogliamo che tutto rimanga come è, bisogna che tutto cambi
+(If we want everything to remain as it is, everything must change).
+Il Gattopardo, (Giuseppe Tomasi di Lampedusa, 1958)
+“The imminent arrival of artificial intelligence, deep learning and forms of automation
+such as robotics are about to transform health care and education, just as powerfully
+as the arrival of machine computing at NASA .”
+Brian D. Hodges (Hodges, 2018)
+3.1. Medicine throughout times
+Medicine has undergone dramatic transformations propelled by scientific advancements, cultural
+shifts, and the efforts of a community of physicians and researchers – (Bynum, 2008); see for a
+possible timeline (Hajar, 2015). Initially, mythology, religion and superstition were part of the practice.
+The rudiments of what can be considered a systematic records and practice can be traced be to
+ancient civilizations in Egypt, Mesopotamia, China, and India. The ancient Greeks, particularly figures
+like Hippocrates, contributed significantly to the foundations of Western medicine and is frequently
+considered the pioneer of modern medical practice for his advocacy of meticulous observation,
+documentation and ethical conduct (Finger, 1994). The Renaissance a resurgence of scientific
+exploration takes place. Through meticulous dissections anatomists like Andreas Vesalius (1514–1564)
+challenged old anatomical misconceptions, laying the groundwork for modern anatomical
+understanding (Finger, 1994). But it was in the 19th and 20th centuries that an unparalleled
+advancement in medicine started until today driven by breakthroughs in microbiology, physiology, and
+pharmacology and supported by unprecedent technological advances culminating in diagnostic
+techniques like X-rays or MRI just to mention 2 examples. In the 21st century, the pace of medical
+evolution shows no signs of slowing, with emerging technologies like AI, nanotechnology and
+regenerative medicine poised to revolutionize healthcare delivery and outcomes, all underpinned by the
+enduring commitment of healthcare professionals.
+11
+
+3.2. Medical education
+Medical education evolved in parallel with medicine and its practise, reflecting its complexification
+and concomitant need of specialization – a number of reviews and books have been published (Custers
+and ten Cate, 2018; Fulton, 1953). It is difficult to establish an origin but many scholars consider that it
+began in ancient Greece with the formation of “schools” such as that of Cos which Hippocrates was
+part of (Finger, 1994). Medical education as a formal discipline began to take shape in the 18th and
+19th centuries with the establishment of medical schools and the standardization of medical training
+programs. Prior to this period, medical education was often informal and apprenticeship-based, with
+aspiring physicians learning through apprenticeships with practicing doctors or through self-directed
+study of medical texts. The Flexner Report, published in 1910 by Abraham Flexner, also played a
+significant role in shaping modern medical education (Flexner, 1919). The report evaluated medical
+schools in the United States and Canada, advocating for higher standards in medical education,
+including rigorous admission criteria, standardized curricula, and emphasis on scientific principles
+(Drake, 2014). As a result of the Flexner Report, many medical schools underwent reforms to meet
+these new standards, leading to the establishment of modern medical education as a formalized
+discipline. Presently, medical education reflects in the one hand the complexification of medical
+practice and, on the other, the multitude of pedagogical instruments that surfaced in the past decades.
+It is a multidisciplinary field that encompasses a wide range of topics and disciplines, including
+curriculum development, teaching and learning methods, assessment and evaluation, faculty
+development, and educational research.
+3.2.1. Curriculum Development
+Curriculum development involves the creation, evaluation, and revision of educational curricula
+to ensure alignment with educational guideline, evolving needs of healthcare delivery and meet
+accreditation standards – see for a recent article selection on the topic (Lai et al., 2024). It
+encompasses topics such as instructional design, competency-based education, and integration of
+basic sciences and clinical medicine. While core to the educative process, frequently those involved in
+the process have no specific training (Schlegel et al., 2021; Thomas and Kern, 2004).
+3.2.2. Teaching and Learning Methods
+Medical education research explores various pedagogical approaches and teaching techniques
+to enhance student learning and engagement. This includes active learning methodologies such as
+12
+
+problem-based learning, team-based learning, simulation-based education as well as the use of
+technology in medical education. AI systems can be used to generate teaching materials. It has been
+suggested the use of generative adversarial networks (GANs) to create novel data, upon training on
+existing data sets. For instances, in the context of radiology GANs could be used to produce synthetic
+images for training without data protection and confidentiality concerns (Arora, 2020).
+3.2.3. Assessment and Evaluation
+Assessment research examines methods for measuring learner competence, performance, and
+progression throughout medical training. This includes the development of reliable and valid
+assessment tools, such as standardized exams, objective structured clinical examinations (OSCEs), and
+workplace-based assessments.
+3.2.4. Faculty Development
+Faculty development focuses on supporting the professional development of medical educators,
+including faculty members and clinical preceptors. Research in faculty development addresses topics
+such as teaching skills training, mentorship, career advancement, and promoting a culture of teaching
+excellence within academic medical institutions.
+3.2.5. Student Selection and Admissions
+Studies in this area explore admissions processes, selection criteria, and predictors of success
+in medical school. Research may examine the impact of admissions policies on student diversity,
+academic performance and career outcomes.
+3.2.6. Professionalism and Ethics
+Medical education emphasizes the importance of instilling professionalism, ethical reasoning,
+and communication skills in future healthcare providers. Research in this area explores strategies for
+teaching and assessing professionalism, as well as interventions to address lapses in professional
+behavior.
+3.2.7. Interprofessional Education
+With the recognition of the importance of collaborative practice in healthcare, there is growing
+interest in Interprofessional Education (IPE). Studies in IPE investigate approaches to fostering
+13
+
+teamwork, communication, and mutual respect among healthcare professionals from different
+disciplines.
+3.2.8. Continuing Medical Education
+Research in Continuing Medical Education (CME) focuses on strategies for lifelong learning and
+professional development among practicing clinicians. This includes evaluating the effectiveness of
+CME activities, identifying barriers to participation, and exploring innovative delivery formats.
+3.3. Artificial Intelligence in Medical Education
+History shows that medical education as a discipline has not only been open to innovation but it
+also thinks prospectively (Sherbino et al., 2014). In this regard, the incorporation of AI and associated
+technologies in the different medical education areas is not surprising. Such is reflected in the number
+of publications dedicated to AI in medical education that is steadily increasing since 2017 (see Figure
+1). With the exception of reviews and commentaries – see for instance (Garg, 2020; Masters, 2019;
+Wartman and Combs, 2018; Webster, 2021) – the vast majority of the published studies can be divided
+in 2 main groups. The first includes studies that focus on the inclusion of AI in medical education
+programmes; in other words, AI education in medicine. The studies on the second group focus on the
+application of AI and AI-based technologies on the different fields of activity of medical education as
+defined above (2.2.1. – 2.2.8.) and in the resulting outcomes of such implementation.
+Figure 1. PubMed timeline results by year for the search query (Medical education[MeSH Major Topic]) AND ((Artificial
+intelligence[Title])) made on February 9, 2024. 1977(1), 2004(1), 2006(1), 2017(1), 2018(5), 2019(8), 2020(15), 2021(17), 2022(19),
+2023(30) and 2024(5).
+According to a systematic review of the literature by Sapci and Sapci the first group is
+outnumbered by the second in a relation of 39% to 69% (Sapci and Sapci, 2020). Regarding the first
+14
+
+group of papers, they reflect an increasing awareness on the ubiquity of AI and on the necessity to deal
+with such reality. Indeed, some medical schools across the globe have active AI teaching programmes.
+These syllabuses are obviously heterogenous varying in duration – from 1 month, up to several years –
+content covered and compulsory/elective character – see (Ng et al., 2023) and references within.
+There is yet little agreement on how to implement AI programs in medical schools, regarding aspects
+such as content or duration (Lee et al., 2021). In a e-Delphi study involving experts covering different
+backgrounds – healthcare; computer and data science; law and ethics – as well as students,
+agreement was reached regarding 27 competencies (23 with strong consensus). Of notice, the board
+selected as top competencies: i. uses health data in accordance with legal and ethical norms; ii. acts in
+accordance with ethical principles while using Al technologies; iii. uses artificial intelligence applications
+in accordance with its purpose (Caliskan et al., 2022) – see Figure 2. While there is a recognized need
+to integrate AI content, there remains a significant disparity between this recognition and actual
+implementation. Surveys conducted among undergraduate students across 17 Canadian medical
+schools revealed that most students believe that AI tools will become commonplace and are viewed
+positively. However, these very students also expressed agreement that opportunities for AI-related
+learning were either non-existent or inadequate (Pucchio et al., 2022). Similar sentiments, particularly
+regarding the scarcity of opportunities, were echoed in studies conducted in Turkey (Civaner et al.,
+2022) and Germany (Mosch et al., 2022).
+15
+
+Figure 2. Expert consensus (Delphi method) on AI competencies to be introduced in medical programs. Image from (Caliskan et al.,
+2022).
+At the postgraduate level, a significant majority of residents in a radiology residency program
+expressed support for the integration of AI into the curriculum. In this context, they predominantly view
+AI as an auxiliary tool rather than a primary determinant in diagnosis (Shiang et al., 2022). This
+appear to be a relatively universal opinion across different medical specialization including radiology
+(Collado-Mesa et al., 2018; Duong et al., 2019; Fischetti et al., 2022; Forney and McBride, 2020;
+Guerrero and Asaad, 2023; Lindqwister et al., 2021; Ooi et al., 2021; Simpson and Cook, 2020;
+Weisberg and Fishman, 2020), ophthalmology (Valikodath et al., 2021a; Valikodath et al., 2021b),
+oncological surgery (Ward et al., 2021), vascular surgery (Lareyre et al., 2020) and neurosurgery
+(Winkler-Schwartz et al., 2019). Similarly, for teachers, and following the very same reasons as above, it
+is essential to introduce AI in faculty development programs. Some institutions have already recognized
+the need and are actively creating opportunities for faculty development in AI and also in other
+emergent areas – see for instances (Coleman et al., 2018).
+16
+
+Table 3. Artificial intelligence in medical education. The table below summarizes current and/or potential use of AI-powered technologies
+in the different domains of medical education (ChatGPT generated; multiple sources). AI – artificial intelligence; NLP - natural language
+processing;
+Domain Application
+Personalized Learning AI-powered adaptive learning platforms can tailor educational content to the individual needs and
+learning styles of learners. By analyzing user data and performance metrics, these platforms can
+dynamically adjust the difficulty level of content, provide targeted feedback, and offer personalized
+recommendations for further study.
+Virtual Patient Simulations AI-driven virtual patient simulations allow medical students to practice clinical skills and decision-making
+in realistic patient scenarios. These simulations can provide valuable hands-on experience in a safe and
+controlled environment, helping students develop critical thinking skills and clinical competence.
+Intelligent Tutoring Systems AI-based tutoring systems can provide real-time guidance and support to learners as they navigate
+complex medical concepts and procedures. These systems use natural language processing and
+machine learning algorithms to understand learner input, answer questions, and offer explanations or
+demonstrations as needed.
+Automated Assessment and AI can streamline the process of assessing learner performance and providing feedback. Natural
+Feedback language processing algorithms can analyze written responses to open-ended questions, while machine
+learning models can evaluate diagnostic reasoning and clinical decision-making skills based on virtual
+patient interactions. This allows educators to provide timely and targeted feedback to students,
+facilitating their learning and growth.
+Predictive Analytics AI-powered analytics tools can analyze large datasets of learner performance data to identify patterns,
+trends, and areas for improvement. By predicting student performance and learning outcomes, these
+tools can help educators identify at-risk students early on and intervene with targeted support strategies.
+Curriculum Design and AI can assist in the design and optimization of medical curricula by analyzing educational objectives,
+Optimization learning objectives, and competency frameworks. Machine learning algorithms can identify gaps in
+curriculum coverage, suggest relevant learning resources, and optimize the sequencing of instructional
+content to maximize learning outcomes.
+AI and associated applications hold immense potential for revolutionizing medical education across
+various domains (see Table 3.). It can span from personalized learning tailored to individual student
+needs, to virtual patient simulations offering immersive, realistic training scenarios. Intelligent tutoring
+systems can provide personalized guidance and support, while automated assessment and feedback
+can make the evaluation process more efficient. Predictive analytics offer insights into student
+performance and learning trends, aiding educators in optimizing curriculum design and delivery. An
+interesting number of papers have been published since 2019 reporting real-world applications of AI in
+educational scenarios with undergraduate students and/or medical residents (summarized in Table 4.)
+and that are part of the second group of articles as defined above. These studies are very different in
+their objectives, and thereby in their outcomes, as well as in structure and reporting style. Such
+17
+
+hampers an integrated analysis. There has been an effort by some authors to provide reporting
+frameworks in specific areas (virtual reality surgical simulation and machine learning algorithms;
+Winkler-Schwartz et al., 2019) in order to facilitate the assessment of manuscripts’ quality and
+deficiencies. In a similar vein, the AMEE Guide No. 156 provides guidelines for those wanting to engage
+in AI research; more specifically i. “practical considerations involved in reading and conducting studies
+in medical education using AI”, ii. “basic terminology” and iii. “identify which medical education
+problems and data are ideally-suited for using AI” (Tolsgaard et al., 2023).
+Keeping these limitations in mind and the fact that the number of selected studies is relatively
+small, it is still possible to have an overview of the multifaceted applications of AI in medical education
+and training. Practice (essentially in surgical context) and feedback were the 2 main areas of research.
+AI demonstrated its potential is in enhancing surgical performance assessment. Through the utilization
+of AI algorithms, novel metrics for evaluating surgical proficiency were uncovered, enabling a more
+comprehensive understanding of surgical skills beyond traditional assessment methods (Bissonnette et
+al., 2019). Moreover, AI differentiated senior and junior surgeons in virtual reality simulations. Such
+offers the opportunity for tailored feedback and guidance based on individual skill levels. This not only
+aids in the objective evaluation of surgical competence but also facilitates personalized training
+interventions to address specific learning needs. Furthermore, it has the potential to be translated to
+other teaching/learning areas with similar operational characteristics. In fact, the integration of AI
+tutoring alongside expert-led sessions significantly enhances the acquisition of essential surgical skills
+among interns (Yang and Shulruf, 2019). By combining AI-driven guidance with expert mentorship,
+interns demonstrated improved suturing and ligature skills, as well as heightened self-assessed
+confidence.
+18
+
+Table 4. Review on studies reporting AI applications in different domains of medical education: •Automated assessment and feedback;
+•Practice and Personalized Learning; •Virtual Patient Simulations; •Intelligent Tutoring Systems. AI – artificial intelligence; AI-DSS –
+artificial intelligence-based decision support system; AIBA – AI-based assessments; CDS – clinical decision support; EBA – expert-based
+assessments; GPT – Generative Pre-trained Transformer; ML – machine learning; MRI – Magnetic resonance imaging; NPL – Natural
+Language Processing;
+Dom. Objective Outcome Reference
+•• Uncover novel metrics of surgical performance; AI defined novel metrics of surgical performance; AI (Bissonnette et al., 2019)
+Differentiate senior vs junior executers in a virtual distinguished training levels in a virtual reality spinal simulation
+reality hemilaminectomy; procedure;
+•• Improve suturing/ligature skills acquisition of interns performance and self-assessed confidence were highest in (Yang and Shulruf, 2019)
+with expert-led or expert-led/AI tutoring; expert-led/AI group;
+• Identify feedback characteristics associated with Entrustment was associated with feedback detail levels, its (Gin et al., 2022)
+supervisors entrustment decisions using AI; characteristics (constructive vs reinforcing) and task type;
+•• Evaluated the feasibility of a AI-driven AI simulation was feasible; rated equal or superior to traditional (Merritt et al., 2022)
+communication simulation for pediatric residents; tools; lack of realism;
+• Evaluate residents' real-time experiences and Positive evaluations from the residents particularly in aspects (Shiang et al., 2022)
+perceptions using AI-DSS in clinical settings; pertaining with decision support and troubleshooting;
+• Examine case logging trends in general surgery ML had a positive impact on the number of cases captured in (Thanawala et al., 2022)
+training programs with and with ML assisted tools; logs;
+• Develop and evaluate a NLP algorithm that The NLP model recognized the feedback language of (Booth et al., 2023)
+automatically categorizes narrative feedback; anesthesiologists; rapid organization of narrative feedback
+• Use ChatGPT-4 to write a 210 multi choice questions GPT-4 can be used as an adjunctive tool; rigorous inspection by (Klang et al., 2023)
+examination; specialist physicians remains pivotal;
+•• assess ChatGPT performance in ChatGPT provided accurate responses even in complex clinical (Riedel et al., 2023)
+obstetrics/gynecology problem assessment; scenarios;
+•• Investigate the use of a CDS software to provide Educational value for simulation cases with CDS rated slightly (Shah et al., 2023)
+feedback in MRI examinations; higher when compared to cases without CDS;
+• Improve the learning and academic performance Improved learning outcomes (Castellano et al., 2024)
+human anatomy through a gamification tool
+w/recommendation systems
+• compare the assessment of a complex clinical skill Issues relating to construct underrepresentation, lack of (Johnsson et al., 2024)
+based on AIBA and trained clinical experts EBA explainability and threats to robustness were potential weak
+links in the AIBA vs EBA validity argument.
+•• Assess the validity of AI generated scoring measures Video review by AI and humans were globally similar; (Ryder et al., 2024)
+of laparoscopic simulation videos by comparing to
+human-generated scores;
+This collaborative approach not only optimized learning outcomes but also empowered trainees to
+navigate complex surgical procedures with greater proficiency and assurance. Also, in clinical settings
+AI-driven decision support systems (AI-DSS), were evaluated in a positive way particularly regarding
+decision support and troubleshooting capabilities (Shiang et al., 2022). This underscores the value of AI
+in providing timely and contextually relevant guidance to medical professionals. The potential of AI to
+identify feedback characteristics associated with entrustment was also explored. Through these
+19
+
+approaches educators gained insights into the feedback-associated factors capable of influencing
+trainee competence, thereby informing on the development of more effective feedback strategies (Gin et
+al., 2022). On a similar vein, natural language processing (NLP) algorithms automate the categorization
+of narrative feedback, facilitating rapid organization and analysis (Booth et al., 2023). Still on feedback,
+clinical decision support (CDS) software feedback in simulated MRI examinations improved
+performance (even if marginally) when compared to the control situation (Shah et al., 2023). Beyond
+performance assessment and skill acquisition, AI can contribute to enhancing communication skills
+and decision-making abilities among medical trainees (Merritt et al., 2022). The feasibility of AI-driven
+communication simulations for pediatric residents was explored and the outcomes were suggestive of a
+positive impact in fostering effective patient interactions.
+Regarding assessment, the use of ChatGPT-4 as an adjunctive tool in creating a comprehensive
+multiple-choice examination was demonstrated. This highlights its potential to aid in educational
+assessment (Klang et al., 2023). The evaluation of ChatGPT's performance in obstetrics/gynecology
+problem assessment demonstrates its ability to provide accurate responses even in complex clinical
+scenarios, showcasing its potential in clinical decision-making support (Riedel et al., 2023). In both
+cases, i tis demonstrated that ChatGPT can be used for instances for on-demand informal assessment.
+Moreover, AI technologies such as gamification tools with recommendation systems, resulted in
+improved learning outcomes (Castellano et al., 2024). However, in one case the comparison between
+AI-based assessment (AIBA) and expert-based assessment (EBA) uncovered potential weaknesses in
+the AIBA approach, including issues related to construct underrepresentation (Johnsson et al., 2024).
+Finally, 1 study assessed the validity of AI-generated scoring measures in laparoscopic simulation
+videos, revealing global similarities between video reviews conducted by AI and humans (Ryder et al.,
+2024). Such showcases the potential of AI to bring the assessment processes to an entirely different
+level where students can for instances practice in the absence of an expert while still having feedback.
+Overall, the research underscores the transformative potential of AI in medical education while also
+emphasizing the need for careful validationand ongoing evaluation to ensure its effectiveness.
+20
+
+CONCLUSIONS
+21
+
+4. Conclusions
+The future is already here – it's just not evenly distributed.
+(often credit to) William Gibson
+Cognitive psychology, artificial intelligence, and computer technology have advanced to
+the point where it is feasible to build computer systems that are as effective as
+intelligent human tutors.
+John Anderson, C. Franklin Boyle and Brain Reiser (1985)
+In the paper “Defining the Key Roles and Competencies of the Clinician–Educator of the 21st Century”
+published nearly 10 years ago (quote) “Domains of clinician–educator competence endorsed by >85%
+of respondents as important or very important were assessment, communication, curriculum
+development, education theory, leadership, scholarship, and teaching” (Sherbino et al., 2014).
+However, notably absent from these domains were references to artificial intelligence, machine
+learning, or even to general informatic-related concepts. A decade has passed, and an entirely new
+landscape has emerged, characterized by rapid advancements in technology, particularly in the realm
+of healthcare informatics. A shift toward information management, rather than mere acquisition, should
+become the new norm. Effective communication skills and empathy remain crucial complements to
+these technical competencies (Lee et al., 2021; Wartman and Combs, 2019).
+AI has the potential to revolutionize all areas of human intervention. Medical education is no exception.
+AI can offer tools and techniques that can greatly enhance training for future healthcare professionals.
+Among those personalized learning experiences, immersive simulations and adaptive algorithms are
+just a few examples. Alongside these opportunities, there are risks that are inherent to the nature of AI
+and therefore not exclusive of medical education. These include ethical concerns such as bias,
+overreliance on technology and privacy breaches. Addressing these risks is crucial to ensuring the
+responsible integration of AI into medical education. Increased knowledge on AI is one way of
+increasing awareness and mitigating potential risks. This involves not only utilizing AI tools within
+educational frameworks but also incorporating AI as a topic within the curricula. As AI increasingly
+22
+
+permeates educational and clinical workflows, a thorough understanding of its capabilities and
+limitations becomes indispensable for all stakeholders, students, healthcare providers and services.
+It may seem like an entire decade has passed, but ChatGPT, possibly the most widely used chatbot,
+has been available for just over a year (since November 2022). While predicting its long-term impact is
+challenging, the immediate potential for its application in medical education appears immense
+(Boscardin et al., 2024; Rampton et al., 2020). However, it is essential to recognize that ChatGPT is
+just one among many AI tools. In the context of this dissertation, literature on AI applications in medical
+education was reviewed, revealing a relatively limited and inconsistent use of AI-based approaches. The
+reasons for this limitation, whether stemming from novelty, unpreparedness or potential implementation
+costs, remains unclear. While models like ChatGPT exemplify AI's potential, there are still considerable
+unexploited opportunities. Several authors have made recommendations in this regard—see, for
+instance, (Jowsey et al., 2023). Following the literature review presented in the dissertation, consistent
+implementation of AI in educational programs, along with the routine use of AI tools, is highly
+recommended. Faculty alignment on this matter is crucial to the success of the entire process. The
+citation opening this section, "Cognitive psychology, artificial intelligence, and computer technology
+have advanced to the point where it is feasible to build computer systems that are as effective as
+intelligent human tutors" (Anderson et al., 1985), remains as relevant today as it was almost 40 years
+ago. AI is not a new concept; rather, it is becoming more evenly distributed. It is our responsibility as
+educators to ensure that our students receive their deserved and necessary share of AI-enabled
+learning opportunities.
+23
+
+REFERENCES
+24
+
+5. References
+Abrahams, P.W., 1969. Symbol Manipulation Languages. Advances in Computers 9, 51-111.
+Anderson, J.R., Boyle, C.F., Reiser, B.J., 1985. Intelligent tutoring systems. Science 228, 456-462.
+Arora, A., 2020. Disrupting clinical education: Using artificial intelligence to create training material.
+Clin Teach 17, 357-359.
+Asimov, I. 1942. Runaround. In: Astounding Science Fiction.
+Bissonnette, V., Mirchi, N., Ledwos, N., Alsidieri, G., Winkler-Schwartz, A., Del Maestro, R.F.,
+Neurosurgical, S., Artificial Intelligence Learning, C., 2019. Artificial Intelligence Distinguishes Surgical
+Training Levels in a Virtual Reality Spinal Task. J Bone Joint Surg Am 101, e127.
+Boole, G., 1854. The Laws of Thought
+Booth, G.J., Ross, B., Cronin, W.A., McElrath, A., Cyr, K.L., Hodgson, J.A., Sibley, C., Ismawan, J.M.,
+Zuehl, A., Slotto, J.G., Higgs, M., Haldeman, M., Geiger, P., Jardine, D., 2023. Competency-Based
+Assessments: Leveraging Artificial Intelligence to Predict Subcompetency Content. Acad Med 98, 497-
+504.
+Boscardin, C.K., Gin, B., Golde, P.B., Hauer, K.E., 2024. ChatGPT and Generative Artificial Intelligence
+for Medical Education: Potential Impact and Opportunity. Acad Med 99, 22-27.
+Bryson, J.J. 2018. The Past Decade and Future of AI’s Impact on Society. In: Towards a New
+Enlightenment? A Transcendent Decade. BBVA: Madrid.
+Bynum, W., 2008. The History of Medicine: A Very Short Introduction.
+Caliskan, S.A., Demir, K., Karaca, O., 2022. Artificial intelligence in medical education curriculum: An
+e-Delphi study for competencies. PLoS One 17, e0271872.
+Castellano, M.S., Contreras-McKay, I., Neyem, A., Farfan, E., Inzunza, O., Ottone, N.E., Del Sol, M.,
+Alario-Hoyos, C., Alvarado, M.S., Tubbs, R.S., 2024. Empowering human anatomy education through
+25
+
+gamification and artificial intelligence: An innovative approach to knowledge appropriation. Clin Anat
+37, 12-24.
+Civaner, M.M., Uncu, Y., Bulut, F., Chalil, E.G., Tatli, A., 2022. Artificial intelligence in medical
+education: a cross-sectional needs assessment. BMC Med Educ 22, 772.
+Coleman, D.L., Tannock, L.R., Pignone, M., Amin, A.N., Finn, P.W., 2018. Developing Faculty in
+Emerging Areas of Interdisciplinary Research. Am J Med 131, 1257-1262.
+Collado-Mesa, F., Alvarez, E., Arheart, K., 2018. The Role of Artificial Intelligence in Diagnostic
+Radiology: A Survey at a Single Radiology Residency Training Program. J Am Coll Radiol 15, 1753-1757.
+Copeland, J., 2004. The Essential Turing: The Ideas that Gave Birth to the Computer Age: Oxford:
+Clarendon Press.
+Custers, E.J.F.M., ten Cate, O., 2018. The History of Medical Education in Europe and the United
+States, With Respect to Time and Proficiency. Acad Med 93, S49-S54.
+Drake, R.L., 2014. A retrospective and prospective look at medical education in the United States:
+trends shaping anatomical sciences education. J Anat 224, 256-260.
+Duong, M.T., Rauschecker, A.M., Rudie, J.D., Chen, P.H., Cook, T.S., Bryan, R.N., Mohan, S., 2019.
+Artificial intelligence for precision education in radiology. Br J Radiol 92, 20190389.
+Finger, S., 1994. Origins of Neuroscience: A History of Explorations into Brain Function. Oxford
+University Press: New York.
+Fischetti, C., Bhatter, P., Frisch, E., Sidhu, A., Helmy, M., Lungren, M., Duhaime, E., 2022. The
+Evolving Importance of Artificial Intelligence and Radiology in Medical Trainee Education. Acad Radiol
+29 Suppl 5, S70-S75.
+Flexner, A. (1919) Medical Education in the United States and Canada: A Report to the Carnegie
+Foundation for the Advancement of Teaching.: Boston.
+Forney, M.C., McBride, A.F., 2020. Artificial Intelligence in Radiology Residency Training. Semin
+Musculoskelet Radiol 24, 74-80.
+26
+
+Fulton, J.F., 1953. History of medical education. Br Med J 2, 457-461.
+Garg, T., 2020. Artificial Intelligence in Medical Education. Am J Med 133, e68.
+Gin, B.C., Ten Cate, O., O'Sullivan, P.S., Hauer, K.E., Boscardin, C., 2022. Exploring how feedback
+reflects entrustment decisions using artificial intelligence. Med Educ 56, 303-311.
+Guerrero, D.T., Asaad, M., 2023. Practice Makes Perfect: Why Surgical Residency Programs Must
+Embrace Artificial Intelligence. Acad Med 98, 1345-1345.
+Hajar, R., 2015. History of medicine timeline. Heart Views 16, 43-45.
+Haugeland, J., 1985. Artificial Intelligence: The Very Idea. Mass: MIT Press: Cambridge.
+Hodges, B.D., 2018. Learning from Dorothy Vaughan: artificial intelligence and the health professions.
+Med Educ 52, 11-13.
+Johnsson, V., Sondergaard, M.B., Kulasegaram, K., Sundberg, K., Tiblad, E., Herling, L., Petersen,
+O.B., Tolsgaard, M.G., 2024. Validity evidence supporting clinical skills assessment by artificial
+intelligence compared with trained clinician raters. Med Educ 58, 105-117.
+Jowsey, T., Stokes-Parish, J., Singleton, R., Todorovic, M., 2023. Medical education empowered by
+generative artificial intelligence large language models. Trends Mol Med 29, 971-973.
+Klang, E., Portugez, S., Gross, R., Lerner, R.L., Brenner, A., Gilboa, M., Ortal, T., Ron, S., Robinzon, V.,
+Meiri, H., Segal, G., 2023. Advantages and pitfalls in utilizing artificial intelligence for crafting medical
+examinations: a medical education pilot study with GPT-4. BMC Med Educ 23, 772.
+Lai, S., Buchheit, B.M., Kitamura, K., Cook, M.R., Yarris, L.M., Chen, G., Kwon, A., Jordan, J., 2024.
+Five Key Articles on Curriculum Development for Graduate Medical Educators. J Grad Med Educ 16, 75-
+79.
+Lareyre, F., Adam, C., Carrier, M., Chakfe, N., Raffort, J., 2020. Artificial Intelligence for Education of
+Vascular Surgeons. Eur J Vasc Endovasc Surg 59, 870-871.
+Lee, J., Wu, A.S., Li, D., Kulasegaram, K.M., 2021. Artificial Intelligence in Undergraduate Medical
+Education: A Scoping Review. Acad Med 96, S62-S70.
+27
+
+Lindqwister, A.L., Hassanpour, S., Lewis, P.J., Sin, J.M., 2021. AI-RADS: An Artificial Intelligence
+Curriculum for Residents. Acad Radiol 28, 1810-1816.
+Masters, K., 2019. Artificial intelligence in medical education. Med Teach 41, 976-980.
+Mayor, A., 2018. Gods and Robots: Myths, Machines, and Ancient Dreams of Technology. Princeton
+University Press.
+Merritt, C., Glisson, M., Dewan, M., Klein, M., Zackoff, M., 2022. Implementation and Evaluation of an
+Artificial Intelligence Driven Simulation to Improve Resident Communication With Primary Care
+Providers. Acad Pediatr 22, 503-505.
+Mitchell, T., 1997. Machine Learning. McGraw Hill.
+Mosch, L., Agha-Mir-Salim, L., Sarica, M.M., Balzer, F., Poncette, A.S., 2022. Artificial Intelligence in
+Undergraduate Medical Education. Stud Health Technol Inform 294, 821-822.
+Ng, F.Y.C., Thirunavukarasu, A.J., Cheng, H., Tan, T.F., Gutierrez, L., Lan, Y., Ong, J.C.L., Chong, Y.S.,
+Ngiam, K.Y., Ho, D., Wong, T.Y., Kwek, K., Doshi-Velez, F., Lucey, C., Coffman, T., Ting, D.S.W., 2023.
+Artificial intelligence education: An evidence-based medicine approach for consumers, translators, and
+developers. Cell Rep Med 4, 101230.
+Ooi, S.K.G., Makmur, A., Soon, A.Y.Q., Fook-Chong, S., Liew, C., Sia, S.Y., Ting, Y.H., Lim, C.Y., 2021.
+Attitudes toward artificial intelligence in radiology with learner needs assessment within radiology
+residency programmes: a national multi-programme survey. Singapore Med J 62, 126-134.
+Pucchio, A., Rathagirishnan, R., Caton, N., Gariscsak, P.J., Del Papa, J., Nabhen, J.J., Vo, V., Lee, W.,
+Moraes, F.Y., 2022. Exploration of exposure to artificial intelligence in undergraduate medical
+education: a Canadian cross-sectional mixed-methods study. BMC Med Educ 22, 815.
+Qian, Y., Siau, K.L., Nah, F.F., 2024. Societal Impacts of Artificial Intelligence: Ethical, Legal, and
+Governance Issues. Societal Impacts, 100040.
+Rampton, V., Mittelman, M., Goldhahn, J., 2020. Implications of artificial intelligence for medical
+education. Lancet Digit Health 2, e111-e112.
+28
+
+Riedel, M., Kaefinger, K., Stuehrenberg, A., Ritter, V., Amann, N., Graf, A., Recker, F., Klein, E., Kiechle,
+M., Riedel, F., Meyer, B., 2023. ChatGPT's performance in German OB/GYN exams - paving the way for
+AI-enhanced medical education and clinical practice. Front Med (Lausanne) 10, 1296615.
+Rosenblatt, F., 1957. The Perceptron—a perceiving and recognizing automaton. Cornell Aeronautical
+Laboratory. Report 85-460-1.
+Ryder, C.Y., Mott, N.M., Gross, C.L., Anidi, C., Shigut, L., Bidwell, S.S., Kim, E., Zhao, Y., Ngam, B.N.,
+Snell, M.J., Yu, B.J., Forczmanski, P., Rooney, D.M., Jeffcoach, D.R., Kim, G.J., 2024. Using Artificial
+Intelligence to Gauge Competency on a Novel Laparoscopic Training System. J Surg Educ 81, 267-274.
+Samuel, A.L., 1959. Some Studies in Machine Learning Using the Game of Checkers. IBM Journal of
+Research and Development 44, 206-226.
+Sapci, A.H., Sapci, H.A., 2020. Artificial Intelligence Education and Tools for Medical and Health
+Informatics Students: Systematic Review. JMIR Med Educ 6, e19285.
+Sarker, I.H., 2021. Deep Learning: A Comprehensive Overview on Techniques, Taxonomy, Applications
+and Research Directions. SN Comput Sci 2, 420.
+Schlegel, E.F.M., Bird, J.B., Burns, C.M., Cassara, M., O'Neil, J., Weisholtz, Y., Le, T.T., 2021.
+Curriculum Design and Scholarship for New Educators: A Professional Development Workshop for
+Medical Students. MedEdPORTAL 17, 11130.
+Shah, C., Davtyan, K., Nasrallah, I., Bryan, R.N., Mohan, S., 2023. Artificial Intelligence-Powered
+Clinical Decision Support and Simulation Platform for Radiology Trainee Education. J Digit Imaging 36,
+11-16.
+Sherbino, J., Frank, J.R., Snell, L., 2014. Defining the key roles and competencies of the clinician-
+educator of the 21st century: a national mixed-methods study. Acad Med 89, 783-789.
+Shiang, T., Garwood, E., Debenedectis, C.M., 2022. Artificial intelligence-based decision support
+system (AI-DSS) implementation in radiology residency: Introducing residents to AI in the clinical
+setting. Clin Imaging 92, 32-37.
+29
+
+Simpson, S.A., Cook, T.S., 2020. Artificial Intelligence and the Trainee Experience in Radiology. J Am
+Coll Radiol 17, 1388-1393.
+Sternberg, R.J. 2022. Meta-Intelligence: Understanding, Control, and Coordination of Higher Cognitive
+Processes. In: Intelligence - Theories and Applications. pp. 339-349. Eds. R.M. Holm-Hadulla, J. Funke,
+M. Wink.
+Sternberg, R.J., Glaveanu, V., Karami, S., Kaufman, J.C., Phillipson, S.N., Preiss, D.D., 2021. Meta-
+Intelligence: Understanding, Control, and Interactivity between Creative, Analytical, Practical, and
+Wisdom-Based Approaches in Problem Solving. J Intell 9.
+Thanawala, R., Jesneck, J., Shelton, J., Rhee, R., Seymour, N.E., 2022. Overcoming Systems Factors in
+Case Logging with Artificial Intelligence Tools. J Surg Educ 79, 1024-1030.
+Thomas, P.A., Kern, D.E., 2004. Internet resources for curriculum development in medical education:
+an annotated bibliography. J Gen Intern Med 19, 599-605.
+Tolsgaard, M.G., Pusic, M.V., Sebok-Syer, S.S., Gin, B., Svendsen, M.B., Syer, M.D., Brydges, R., Cuddy,
+M.M., Boscardin, C.K., 2023. The fundamentals of Artificial Intelligence in medical education research:
+AMEE Guide No. 156. Med Teach 45, 565-573.
+Turing, A.M., 1950. Computing machinery and intelligence. Mind LIX, 433-460.
+Valikodath, N.G., Al-Khaled, T., Cole, E., Ting, D.S.W., Tu, E.Y., Campbell, J.P., Chiang, M.F., Hallak,
+J.A., Chan, R.V.P., 2021a. Evaluation of pediatric ophthalmologists' perspectives of artificial intelligence
+in ophthalmology. J AAPOS 25, 164 e161-164 e165.
+Valikodath, N.G., Cole, E., Ting, D.S.W., Campbell, J.P., Pasquale, L.R., Chiang, M.F., Chan, R.V.P.,
+American Academy of Ophthalmology Task Force on Artificial, I., 2021b. Impact of Artificial Intelligence
+on Medical Education in Ophthalmology. Transl Vis Sci Technol 10, 14.
+Ward, T.M., Mascagni, P., Madani, A., Padoy, N., Perretta, S., Hashimoto, D.A., 2021. Surgical data
+science and artificial intelligence for surgical education. J Surg Oncol 124, 221-230.
+Wartman, S.A., Combs, C.D., 2018. Medical Education Must Move From the Information Age to the Age
+of Artificial Intelligence. Acad Med 93, 1107-1109.
+30
+
+Wartman, S.A., Combs, C.D., 2019. Reimagining Medical Education in the Age of AI. AMA J Ethics 21,
+E146-152.
+Webster, C.S., 2021. Artificial intelligence and the adoption of new technology in medical education.
+Med Educ 55, 6-7.
+Weisberg, E.M., Fishman, E.K., 2020. Developing a curriculum in artificial intelligence for emergency
+radiology. Emerg Radiol 27, 359-360.
+Winkler-Schwartz, A., Bissonnette, V., Mirchi, N., Ponnudurai, N., Yilmaz, R., Ledwos, N., Siyar, S.,
+Azarnoush, H., Karlik, B., Del Maestro, R.F., 2019. Artificial Intelligence in Medical Education: Best
+Practices Using Machine Learning to Assess Surgical Expertise in Virtual Reality Simulation. J Surg
+Educ 76, 1681-1690.
+Yang, Y.Y., Shulruf, B., 2019. Expert-led and artificial intelligence (AI) system-assisted tutoring course
+increase confidence of Chinese medical interns on suturing and ligature skills: prospective pilot study. J
+Educ Eval Health Prof 16, 7.
+31

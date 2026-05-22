@@ -2,15 +2,17 @@ import nltk
 from nltk.corpus import stopwords, wordnet
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer, WordNetLemmatizer
+from nltk import pos_tag
 from unidecode import unidecode
 import string
 from enum import Enum
 
 # Required NLTK resources download
-nltk.download('punkt_tab', quiet=True)   
-nltk.download('stopwords', quiet=True)  
-nltk.download('wordnet', quiet=True)   
-nltk.download('omw-1.4', quiet=True)    
+nltk.download('punkt_tab', quiet=True)
+nltk.download('stopwords', quiet=True)
+nltk.download('wordnet', quiet=True)
+nltk.download('omw-1.4', quiet=True)
+nltk.download('averaged_perceptron_tagger_eng', quiet=True)
 
 
 class ReductionMode(str, Enum):
@@ -26,6 +28,22 @@ class ReductionMode(str, Enum):
     LEMMATIZATION = "lemmatization"
     BOTH = "both"
     NONE = "none"
+
+
+# Operadores booleanos e pontuação extra que não devem ser indexados
+_BOOLEAN_OPERATORS = {'and', 'or', 'not', 'near'}
+
+
+def _get_wordnet_pos(treebank_tag: str) -> str:
+    """Converte POS tag do Penn Treebank para o formato do WordNet."""
+    if treebank_tag.startswith('J'):
+        return wordnet.ADJ
+    elif treebank_tag.startswith('V'):
+        return wordnet.VERB
+    elif treebank_tag.startswith('R'):
+        return wordnet.ADV
+    else:
+        return wordnet.NOUN
 
 
 def preprocess(
@@ -51,10 +69,12 @@ def preprocess(
     # Tokenization
     tokens = word_tokenize(text)
 
-    # Bilingual Stopword Removal 
+    # Bilingual Stopword Removal
     if remove_stopwords:
         stop_words = set(stopwords.words('portuguese')).union(set(stopwords.words('english')))
         stop_words = {unidecode(sw) for sw in stop_words}
+        # Garantir que operadores booleanos são sempre removidos
+        stop_words.update(_BOOLEAN_OPERATORS)
     else:
         stop_words = set()
 
@@ -62,17 +82,30 @@ def preprocess(
     stemmer = PorterStemmer() if reduction_mode in (ReductionMode.STEMMING, ReductionMode.BOTH) else None
     lemmatizer = WordNetLemmatizer() if reduction_mode in (ReductionMode.LEMMATIZATION, ReductionMode.BOTH) else None
 
+    # POS tagging apenas se necessário para lematização
+    pos_tags: dict[str, str] = {}
+    if lemmatizer is not None:
+        # Filtrar tokens candidatos antes do POS tag para não passar pontuação
+        candidates = [w for w in tokens if w not in stop_words and w not in string.punctuation and len(w) > 1]
+        if candidates:
+            tagged = pos_tag(candidates)
+            pos_tags = {w: _get_wordnet_pos(tag) for w, tag in tagged}
+
     filtered_tokens = []
     for w in tokens:
-        if w in stop_words or w in string.punctuation or len(w) <= 2:
+        # FIX: era `<= 2`, o que eliminava tokens de 2 caracteres como "ai", "ml"
+        if w in stop_words or w in string.punctuation or len(w) <= 1:
             continue
 
         # REQ-B18 — Apply the configured reduction strategy
         if reduction_mode == ReductionMode.BOTH:
-            w = lemmatizer.lemmatize(w)
+            # FIX: lematização com POS correto em vez de assumir sempre substantivo
+            wn_pos = pos_tags.get(w, wordnet.NOUN)
+            w = lemmatizer.lemmatize(w, pos=wn_pos)
             w = stemmer.stem(w)
         elif reduction_mode == ReductionMode.LEMMATIZATION:
-            w = lemmatizer.lemmatize(w)
+            wn_pos = pos_tags.get(w, wordnet.NOUN)
+            w = lemmatizer.lemmatize(w, pos=wn_pos)
         elif reduction_mode == ReductionMode.STEMMING:
             w = stemmer.stem(w)
         # ReductionMode.NONE: token kept as-is
@@ -127,8 +160,8 @@ def expand_query(
     if not tokens:
         return tokens
 
-    expanded = list(tokens)        
-    seen = set(tokens)              
+    expanded = list(tokens)
+    seen = set(tokens)
 
     for token in tokens:
         synonyms_added = 0
@@ -143,7 +176,8 @@ def expand_query(
 
                 raw = lemma.name().replace('_', ' ').replace('-', ' ').split()[0]
 
-                if len(raw) <= 2 or raw.lower() == token.lower():
+                # FIX: era `<= 2`, consistente com a correção no preprocess
+                if len(raw) <= 1 or raw.lower() == token.lower():
                     continue
 
                 processed = preprocess(raw, reduction_mode=reduction_mode)

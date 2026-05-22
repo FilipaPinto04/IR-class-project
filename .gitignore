@@ -18,6 +18,3 @@ chrome-linux64/
 # OS
 .DS_Store
 Thumbs.db
-
-# Output files
-scraper_results.json

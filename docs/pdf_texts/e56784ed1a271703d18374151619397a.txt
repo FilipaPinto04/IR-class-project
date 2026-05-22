@@ -1,0 +1,1704 @@
+Universidade do Minho
+Escola de Medicina
+Sara Cláudia Santos Hora Gomes
+Development and Implementation of
+Entrustable Professional Activities
+in Portuguese Anesthesia Residency
+Program – a pilot study
+abril de 2024
+lanoisseforP
+elbatsurtnE
+fo
+noitatnemelpmI
+dna
+tnempoleveD
+semoG
+aroH
+sotnaS
+aiduálC
+araS
+4202
+|
+ohniMU
+yduts
+tolip
+a
+–
+margorP
+ycnediseR
+aisehtsenA
+eseugutroP
+ni
+seitivitcA
+
+Universidade do Minho
+Escola de Medicina
+Sara Cláudia Santos Hora Gomes
+Development and Implementation of
+Entrustable Professional Activities in
+Portuguese Anesthesia Residency
+Program – a pilot study
+Dissertação de Mestrado
+Mestrado em Avaliação Aplicada à Formação das
+Profissões de Saúde
+Trabalho efetuado sob a orientação do
+Professor Doutor Peter Scoles
+e do
+Professo Doutor Nuno Jorge Carvalho de Sousa
+abril de 2024
+
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras e
+boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não previstas
+no licenciamento indicado, deverá contactar o autor, através do RepositóriUM da Universidade do Minho.
+Atribuição-NãoComercial-SemDerivações
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+[Esta é a mais restritiva das nossas seis licenças principais, só permitindo que outros façam
+download dos seus trabalhos e os compartilhem desde que lhe sejam atribuídos a si os
+devidos créditos, mas sem que possam alterá-los de nenhuma forma ou utilizá-los para fins
+comerciais.]
+ii
+
+ACKNOWLEDGEMENTS
+I would like to express my gratitude to my supervisors, Professor Peter Scoles and Professor Nuno Sousa
+for their expertise and guidance throughout this project. I sincerely hope to collaborate with both on future
+projects.
+I must convey my sincere appreciation to Professor Peter Scoles for the dedication to the project and time
+spent on intercontinental online meetings. He has been an attentive observer and experienced leader.
+His calm wisdom has always inspired me.
+This project would not have been possible without the collaboration and efforts of the Portuguese
+anesthesia community in general, and the InAnesthesia community, in particular. To them, l extend my
+heartfelt gratitude.
+A very special thanks and admiration to Dr. Adrian Marty, who created and provided access to the
+preparedEPA application. This work could not be so complete without this partnership.
+I offer my sincere thanks to all my friends from MAPS for the shared conversations that contributed to
+my personal and professional growth.
+To my close friends and family, I express my appreciation for believing in me and for supporting this
+project.
+I want to dedicate my final words to my children, Maria Luís and Guilherme. Thank you for your
+unconditional support, care, patience, and sweet hugs that I will never forget. I will always love you!
+For José Miguel, my beloved companion, my gratitude for your love and support in this path and in life.
+Financial Support
+The work presented in this thesis was performed in the School of Medicine and in the Life and Health
+Sciences Research Institute (ICVS), University of Minho. Financial support was provided by Grupo Fuste
+and 2CA Braga – Centro Clínico e Académico, Braga.
+iii
+
+STATEMENT OF INTEGRITY
+I hereby declare having conducted this academic work with integrity. I confirm that I have not used
+plagiarism or any form of undue use of information or falsification of results along the process leading to
+its elaboration.
+I further declare that I have fully acknowledged the Code of Ethical Conduct of the University of Minho.
+iv
+
+Desenvolvimento e Implementação de Atividades Profissionais Confiáveis na Formação
+Específica de Anestesiologia em Portugal – estudo piloto
+Resumo
+Introdução: Nas últimas décadas, a educação médica pós-graduada está em mudança para um novo
+paradigma baseado em competências e centrado no resultado. As atividades profissionais confiáveis
+(APC) são “unidades de trabalho” que são observadas e que podem ser avaliadas, estando em linha com
+a mudança de paradigma educacional. A formação específica em Anestesiologia, em Portugal, ainda não
+contempla um currículo baseado na competência, sendo ainda residual a avaliação no local de trabalho.
+Este estudo piloto pretende promover o desenvolvimento e a implementação das APC no programa da
+formação específica em Anestesiologia em Portugal. O presente estudo pretendeu (1) caracterizar o
+interesse da comunidade de anestesistas em APC; (2) promover ações de formação; (3) elaborar uma
+APC piloto; (4) implementar e avaliar a APC piloto. Métodos: (1) Através de um inquérito à comunidade
+de anestesiologistas foi realizada a caracterização demográfica, interesse e familiaridade com as APC;
+foi questionado o interesse em melhorar os conhecimentos, bem como a motivação para fazer parte do
+processo de implementação. (2) Foram realizadas reuniões de formação e criada uma plataforma online
+para e-learning. (3) Foi desenvolvida uma APC piloto em grupo focal e (4) a sua implementação e
+avaliação foi realizada com recurso a uma aplicação móvel. Resultados: (1) 142 participantes
+responderam ao inquérito inicial. Dos respondentes, 53% eram internos; 47% eram especialistas, dos
+quais 42% possuem mais de 10 anos de experiência clínica. Verificou-se que 61% não conheciam o
+conceito de APC e 98% desejavam aumentar o seu conhecimento. Mais, 93% consideram relevante iniciar
+a implementação de APC e 92% gostariam de fazer parte do processo de implementação. (2)
+Promoveram-se 6 reuniões de formação, realizadas em 5 hospitais, envolvendo um total de 167
+especialistas e 51 internos. (3) A APC elaborada foi “Indução anestésica em doente ASA I/II com jejum
+pré-operatório, sem sinais de via aérea difícil, para procedimento de baixo risco”. (4) A APC piloto foi
+implementada em 5 hospitais. A avaliação formativa desta APC vai ser realizada através da aplicação
+móvel preparedEPA. Conclusão: A implementação de APC na formação específica em Anestesiologia é
+exequível. Internos e especialistas devem ser parte integrante da implementação. O primeiro passo deve
+ser a formação dos formadores.
+Palavras-chave: atividades profissionais confiáveis, anestesia, avaliação no local de trabalho
+v
+
+Development and Implementation of Entrustable Professional Activities in Portuguese
+Anesthesia Residency program – a pilot study
+Abstract
+Introduction: In the last decades postgraduate medical education is changing to a competence-based
+system centred on outcome. The Entrustable Professional Activities (EPA) are a “units of work” that can
+be done, observed, and assessed and are aligned with the new educational paradigm. Portuguese
+anesthesia residency training does not include a competence-based curriculum, and in this domain has
+residual workplace-based assessment. This pilot study wants to promote the development and the
+implementation of EPA in Portuguese anesthesia residency programs. The present study aimed to (1)
+characterize Portuguese stakeholder’s interest on EPA; (2) promote faculty development on Competence-
+Based Medical Education (CBME) concept; (3) develop one pilot EPA and (4) implement and assess the
+pilot EPA in a small group of Portuguese hospitals. Methods: (1) A survey was distributed to the
+Portuguese Anesthesia Community. Demographic characterization; interest and familiarity with EPAs;
+sources of knowledge; interest in improving knowledge on the field as well as motivation to be enrolled in
+implementation process, were surveyed. (2) Faculty development initiatives were created as presential
+meetings and online e-learning sessions. (3) A pilot EPA was developed after focus group discussions. (4)
+The pilot EPA was implemented through workplace-based assessment, using a mobile application.
+Questionnaires to evaluate the experience and the usability of the application will be sent and analyzed.
+Results: (1) 142 participants answered the initial survey. Among the participants, 53% were residents and
+42% were consultants with 10-20 years of experience. 61% of participants were not familiar with the
+concept of EPA; 98% wanted to improve their knowledge on EPA; 93% found it relevant to initiate EPA
+implementation, and 92% wished to be enrolled in the process. (2) 6 faculty development initiatives
+meetings were conducted in 5 hospitals. A total of 167 consultants and 51 residents were invited. (3)
+Induction of Anesthesia for ASA I/II fasting patient with no difficult airway for a low-risk procedure, was
+the pilot EPA developed. (4) The pilot EPA was implemented in 5 hospitals, and its assessment was done
+using mobile the preparedEPA application. Conclusions: The implementation of EPA in Portuguese
+anesthesia residency programs is feasible. Residents and consultants should be recruited for the
+implementation process. The first step should focus on faculty development.
+Keywords: entrustable professional activities, anesthesia, workplace-based, assessment
+vi
+
+CONTENTS
+1. INTRODUCTION ................................................................................................................................ 2
+1.1. COMPETENCE-BASED MEDICAL EDUCATION ............................................................................................................. 2
+1.2. COMPETENCE-BASED MEDICAL EDUCATION IN RESIDENCY PROGRAMS .......................................................................... 5
+1.3. KEYS STEPS FOR EPA IMPLEMENTATION ................................................................................................................. 6
+1.4. DEVELOPMENT OF ENTRUSTABLE PROFESSIONAL ACTIVITIES ....................................................................................... 7
+2. AIMS .............................................................................................................................................. 10
+3. METHODS ...................................................................................................................................... 12
+3.1. ETHICAL APPROVAL ........................................................................................................................................... 12
+3.2. STUDY DATE .................................................................................................................................................... 12
+3.3. STUDY DESIGN ................................................................................................................................................ 12
+4. RESULTS ........................................................................................................................................ 17
+4.1. FIRST STEP – ONLINE SURVEY ............................................................................................................................ 17
+4.2. SECOND STEP – FACULTY DEVELOPMENT .............................................................................................................. 19
+4.3. THIRD STEP – DEVELOPMENT OF ONE ENTRUSTABLE PROFESSIONAL ACTIVITY .............................................................. 19
+4.4. FOURTH STEP – EPA IMPLEMENTATION AND ASSESSMENT THROUGHOUT THE PREPAREDEPA .......................................... 21
+5. DISCUSSION. .................................................................................................................................. 23
+LIMITATIONS AND FUTURE PERSPECTIVES ............................................................................................................................. 24
+6. CONCLUSIONS ............................................................................................................................... 27
+7. REFERENCES ................................................................................................................................. 39
+8. APPENDIXES .................................................................................................................................. 34
+vii
+
+LIST OF ABBREVIATIONS
+ACGME - Accreditation Council for Graduate Medical Education
+APC – Atividades Profissionais Confiáveis
+CanMEDs – Canadian Medical Education Directives for Specialists
+CEICVS - Comissão de Ética para a Investigação em Ciências da Vida e da Saúde
+CBME – Competence-Based Medical Education
+EPA – Entrustable Professional Activity
+FD – Faculty development
+preparedEPA – Mobile software application for EPA Assessment
+n - Absolute Frequency
+% - Percentage
+viii
+
+LIST OF FIGURES
+Figure 1. Structure of the focus group discussion sessions
+Figure 2. Participants’ opinion about implementation of EPA in Portuguese Anesthesia residency
+program.
+Figure 3. Participants’ opinion about being enrolled in the EPA’s implementation process.
+ix
+
+LIST OF TABLES
+Table 1. Descriptive statistics - Demographic data from survey participants.
+Table 2. Descriptive statistics - Participants’ experience with EPA in anesthesia residency training,
+sources of knowledge and interest in improving knowledge.
+Table 3. Descriptive statistics - Demographic characteristic of expert panel.
+Table 4. Descriptive statistics - Hospital, category and gender distribution from participants using
+preparedEPA.
+x
+
+Chapter 1
+INTRODUCTION
+1
+
+1. INTRODUCTION
+1.1. Competence-based Medical Education
+1.1.1. Historic Perspective and Definition
+A significant evolution has been undertaken in medical education guidelines over the last decades, shaped
+by changes in society, advances in technology and healthcare and the theoretical support of effective
+learning methods. Before the 20th century, medical education policies were heterogeneous and erratic. At
+that time, no practical courses were mandatory, and it was possible to graduate without having contact
+with patients. In 1910, Flexner reported key problems in medical education, namely lack of
+standardization and integration and failure to focus on professional identity formation (Riggs, 2010). His
+report conducted the first reform in medical curricula towards a science-based model where patient care,
+investigation and teaching were connected (Irby, 2010). In the middle of the century, another educational
+reform was implemented, the problem-based learning model. In this approach, the training experience
+was based on clinical rotations and relied on exposure to specific contents for a fixed and limited time,
+regardless the individual acquisition of competencies. In the late 80s, with the foundation of the
+Accreditation Council for Graduate Medical Education (ACGME), undergraduate and postgraduate medical
+training become regimented, which reduced training heterogenicity between American medical schools.
+Two contributions were fundamental for the educational paradigm change. The first was the pyramid
+framework to guide assessment in health professionals conceptualized by Dr. George E. Miller. He
+organized a model in a four-step pyramid representing from the base to the top, the domain of knowledge
+(knows), competence (knows how), performance (shows) and act (does). The last step represents the
+outcome of medical education defined by World Health Organization (WHO) – a professional acting in the
+real workplace with proficiency in accordance with the local conditions and community needs (Custers,
+2018). Miller also highlighted the need to embrace subjective clinical impressions on the domain of the
+does from the workplace, and to develop strategies for a reliable assessment on performance in real
+world (Miller, 1990).
+The second contribution was given by Kolb that introduced the experimental learning as a framework that
+describes adults learning throughout experience (Reynolds, 2020). The permanent cycle of concrete
+experience, reflection on the experience, abstract conceptualization, and active experimentation allowed
+the learner to be self-conscious about their performance and needs of improvement and simultaneously
+foster the acquisition of competences necessary to act as a professional. This process motivates self-
+2
+
+regulation learning, which is fundamental for the life-long learning and the creation of the professionalism
+identity (Brydges, 2015).
+Two institutions started the foundations of the CBME in Canada and United States of America. The
+CanMEDs (Canadian Medical Education Directives for Specialists) framework for CBME and Outcome
+Project from ACGME (Accreditation Council for Graduate Medical Education) clarified and provided
+structure to the pathway for the change in medical education with relevance on education and
+assessment, in this new model (Ten Cate, 2017). Both institutions defined domains of competence
+(CanMEDS – Medical expert, Communicator, Collaborator, Leader, Health advocate, Scholar and
+Professional and ACGME – Patient care and procedure skills, Medical Knowledge, Practice-based learning
+and improvement, Interprofessional and communication skills, Professionalism, System-based practice)
+that guided and supported the theoretical foundations of the CBME. Those competences should and can
+be taught, observed, and assessed in the clinical setting. So, the previous model of medical education,
+based on time and theoretical acquisition was replaced by an educational framework centered on the
+outcome and focused on the learner pathway for the acquisition of competence in the real workplace,
+regardless of time (Flenk, 2010).
+In conclusion, competence-based medical curriculum is a structure for education that emphasizes
+learner’s and patients’ outcomes, learner’s abilities, and competences, promotes learner’s engagement
+in the learning process and is time-flexible (Frank, 2010).
+1.1.2. Milestones
+Following the creation of the CBME curriculum, in 2013, with competencies and sub-competencies, the
+ACGME formally introduced milestones. A milestone represents a significant point in the development of
+a professional who transitions from an observer to an independent practitioner (Englander, 2017). These
+milestones serve as a formative and summative assessment process for learners, supervisors and
+institutions, guiding residents’ self-assessment and reflection. These, subsequently, lead to the creation
+of learning plans to achieve the recommended goals (ACGME, 2020). Given that the focus of CBME is
+centered in patient and learner, the assessment of the achieved milestones is only feasible within the
+clinical work. The emphasis on clinical practice ensures a holistic evaluation aligned with the goals and
+principles of CBME.
+3
+
+1.1.3. Workplace-based assessment
+In a CBME model, the workplace serves as the primary context for most of the learning. It is within this
+setting that the integration of knowledge, skills and attitudes take place (Ten Cate and Billet, 2014). Over
+the years, many tools, such as mini-CEX and multiple observable practice activities (OPA) have been
+developed and implemented for workplace-based assessment in many medical schools and postgraduate
+programs (Norcini, 2003; Kelleher, 2020). The intended outcome utilizing these instruments is to
+enhance the quality of clinical practice and ultimately, ensure patient safety.
+Considering that, from a CBME perspective, the “outcome is a physician that can practice medicine at a
+defined level of proficiency, in accord with local conditions, to meet local needs”, there is a requirement
+for the development of workplace-based assessment to support proficiency in the clinical setting (Ten
+Cate, 2017). Entrustable Professional Activities (EPA) have emerged as the link connecting competency
+frameworks, milestones and workplace-based assessment in clinical practice (Ten Cate, 2017; Tanaka,
+2023).
+1.1.3.1. Entrustable Professional Activity
+In 2005, Ten Cate defined Entrustable Professional Activity (EPA) as a specific task within a specialty that
+professionals should perform without direct supervision, once sufficient competence has been
+demonstrated (Ten Cate, 2005). Those “units of work” include knowledge, skills and behavior and may
+reflect one or more competencies across various domains of competence acquired during the training.
+As tasks in the clinical work, they are observed, entrusted, and subject to assessment by supervisors
+daily, in a formative or summative approach. The adoption of EPAs allowed residency programs to provide
+support to learners throughout their training while ensuring competence gains across all domains before
+complete autonomy. Trainees are assessed on EPAs based on a certain level of entrustment from their
+supervisors. During their training program, residents progress from a high level of supervision, functioning
+as direct observers to competent experts capable of performing clinical work independently and even
+supervising other residents or junior doctors. Therefore, the concept of EPA aggregates both final
+objectives of medical schools and residency programs: (1) confirming knowledge, competence,
+performance, and the ability to independently provide patient care – the tetrad of Miller’s concept and (2)
+ensuring and protecting the quality of patient care – the confidence/trust on health professional’s care
+(Ten Cate, 2021).
+4
+
+1.2. Competence-based Medical Education in Residency Programs
+It is important to highlight that many residency programs still rely on structural and process-based
+assessments. In these programs, residents are exposed to contents during a standard period, and the
+assessment is limited to the acquired knowledge. They operate on a mentorship model, with a national
+examination serving as a certification for independent practice. Consequently, in many countries there
+remains a gap between the CBME approach in medical schools and the assessment methods employed
+during residency programs. Establishing a continuum from medical school to postgraduate programs is
+imperative.
+The implementation of CBME, milestones and EPAs in medical specialties postgraduation program is
+growing worldwide. Many postgraduate programs have adopted competency frameworks and delineate
+the domains of competence and milestones each trainee need to achieve during the training. Specifically
+for postgraduate anesthesia training program, this approach has been adopted, developed, and
+implemented in many countries namely in Canada (Bailey, 2024), the Netherlands (Wisman-Zwarter,
+2016), Switzerland (Tanaka, 2023) and USA (Porter, 2022; Ten Cate, 2010). The outcomes from these
+programs serve as promising models for other countries to be followed (Savoldelli, 2016; Ten Cate,
+2021).
+1.2.1. Portuguese Anesthesia Residency Program
+The anesthesia residency program in Portugal is well-organized and structured under the guidelines set
+forth by the Anesthesiology College from Portuguese Medical Association. The most recent reform,
+implemented in 2016, defined a training period of 60 months (Diário República, 2016). This training
+includes 54 months of clinical rotations in a time-dependent sequence, followed by an additional 6 months
+for optional practice defined by the trainee. General and specific goals for all the clinical rotations are
+established, along with well-structured competencies expected to be acquired during the training. The
+assessment of residents is primarily retrospective, occurring at multiple time-points: (1) at the end of each
+clinical rotation; (2) at the end of each year; and at (3) the end of the entire training period throughout a
+national examination for certification (Portaria nº92-A/2016). In the beginning of the training program,
+each resident is assigned a supervisor who monitors their professional development. However, as the
+training progresses, residents work with different tutors based on the specific clinical rotation they are
+attending. Despite the tradition of supervisor responsibility for providing feedback on trainee’s
+5
+
+performance and outcomes, opportunities for formative feedback and reflection can be scarce or even
+absent, during the training. This creates a gap between the CBME approach of the training program and
+assessment based on daily practice. To bridge this gap, integrating programmatic assessment focused
+on learner progression and outcomes in Portuguese anesthesia training program is crucial for the next
+years. The introduction of EPAs could be considered as the initial step in this process (Heeneman, 2021;
+Torre, 2021).
+1.3. Keys steps for EPA Implementation
+The transformative change to a competence-based medical curriculum in the context of a residency
+program requires key elements to guarantee success. In a recently published work, Stoffman enumerated
+three elements that contribute to the achievement of this process: (1) Stakeholders’ engagement and
+leadership; (2) Faculty development; and (3) Educational and technological support (Stoffman, 2022).
+Each element will be discussed separately.
+1.3.1. Stakeholders’ engagement and leadership
+Intrinsic collaboration and the creation of a community of practices for the implementation of CBME are
+strategies for success, as they facilitate interaction, motivation, and improvement among various
+elements (Railer, 2020). Indeed, stakeholders’ engagement, ranging from educational leaders to patients,
+is essential for the success of an innovative curriculum reform (Boet, 2016).
+1.3.2. Faculty development
+Faculty development is fundamental for the implementation of CBME. These activities are considered as
+planned interventions designed to improve individual knowledge, skills, and behaviors in educational field,
+and is one of the challenges in the context of CBME (Dath, 2010). Faculty development equips supervisors
+and mentors with the competence to provide adequate active learning strategies and reliable assessment
+tools in a programmatic approach. The traditional teacher that evaluated only knowledge, in the CBME
+context is a facilitator that can track his learner progression and provide constructive feedback, daily
+(Fraser, 2016). Simultaneously, faculty members are conscientious about the principles of CBME and
+contribute to disseminating the concept within their departments. Their role is essential for a consistent
+and reliable assessment. The development of these skills in faculty members also enhances
+6
+
+trustworthiness and commitment within the individuals, the organization, and the system, thereby
+contributing to a successful implementation. Many strategies have been studied to promote faculty
+development such as workshops, presentations, ground rounds, email updates, video tutorials and online
+modules (Steinert, 2006). However, a continuum approach to faculty development is needed to maintain
+high levels of supervisors’ performance. Residents also need profound understanding of the CBME
+curriculum to actively engage with the concept. They also play a role on faculty development as their
+feedback can contribute to the improvement of supervisors.
+1.3.3. Educational and technological support
+Although dependent on the local capabilities, technological support can promote and enhance the
+engagement of residents and supervisors with the assessment (Mann 2020). The increased number of
+assessments in a CBME curriculum may create a burden on supervisors who are already overloaded with
+clinical, administrative, and educational tasks. These requirements pose obstacles for the ongoing
+process of CBME and can potentially compromise its implementation.
+1.4. Development of Entrustable Professional Activities
+Each residency program has autonomy to decide the number and nature of competencies, milestones
+and EPAs that best represent its specialty. This program must be designed in accordance with the
+institutions and community’s needs in which it is integrated. In the process of developing an EPA, there
+are two main issues to consider: (1) mapping of competencies and sub-competencies of the specialty
+and (2) identifying the real professional work/task that must done, representing and characterizing the
+specialty (Ten Cate et al., 2015; Fernandes et al., 2022). In recent years, residency programs have
+chosen to develop their EPAs, initiating their implementation and assessment in a daily practice. The
+methodologies used to define EPAs in different medical fields have been diverse. Nevertheless, there is a
+need for introspection into what characterizes the daily work performed by these qualified doctors.
+Numerous strategies have been described in literature to validate EPAs among experts including expert
+meetings discussions (Cheng, 2016; Stalmeijer, 2014), surveys (Boyce, 2011), delphi procedure
+(Fessler, 2014) nominal groups technique (Touchie, 2014), and interviews. Regardless of the approach
+used for validation, an EPA must be relevant for the clinical work and be aligned with the recommendation
+for graduates in the program (Ten Cate et al., 2015).
+7
+
+1.4.1. Technology for assessment
+There is a growing development of technology for medical education. The implementation of EPAs in a
+graduated program demands multiple assessments on each working day, with multiple sources of
+formative and summative data that are challenging to store in a paper-based system. The use of off-the-
+shelf electronic platforms for assessment, available in mobile phones and tablets with easy accessibility,
+favors and supports the opportunities for evaluation. In recent years, a new web and mobile application,
+named preparedEPA, was developed and implemented in many Residency Programs over Europe and US.
+This application enables the documentation of workplace-based assessment towards programmatic
+assessment (Marty, 2022).
+8
+
+Chapter 2
+AIMS
+9
+
+2. AIMS
+This work was conducted to promote the development and the implementation of Entustable Professional
+Activities (EPA) in the Anesthesia Residency Program in Portugal.
+The study aims to:
+(1) Characterize the interest and knowledge regarding EPAs among consultants and residents in
+Portuguese Anesthesiology Departments.
+(2) Promote faculty development for stakeholders (consultants, supervisors, mentors, tutors, and
+residents on Competence-Based Medical Education (CBME) and EPAs.
+(3) Develop a pilot EPA based on a focus group discussion.
+(4) Implement and assess the developed EPA in the Portuguese Anesthesiology Residency Program,
+supported by a mobile application
+10
+
+Chapter 3
+METHODS
+11
+
+3. METHODS
+3.1. Ethical approval
+This study was conducted following relevant guidelines and regulations and received institutional approval
+from the Ethical Committee for Institute of Life and Health Sciences (CEICVS006/2024) of School of
+Medicine, University of Braga, Braga, Portugal (Appendix 1). Participants in the study included consultants
+and residents from Anesthesia Departments from Portuguese Hospitals. Participation was voluntary and
+all participants gave verbal and written informed consent.
+3.2. Study date
+The study took place at the School of Medicine, University of Minho, Braga, Portugal, from October 2022
+to February 2024.
+3.3. Study Design
+The study was developed in 4 steps.
+3.3.1. First step – Online survey
+An online survey was developed by the author, using a Google form. The questionnaire was unrestricted
+to members (consultants and residents) of the InAnesthesia Community (through WhatsApp channels), a
+group consisting of trainers and trainees from all secondary and tertiary hospitals with anesthesia
+residency programs in Portugal, totaling 532 participants. The survey remained open for 60 days after
+the initial message, a single follow-up reminder was sent to all members, 30 days after the initial invitation.
+Written consent was necessary for participation.
+The study aimed to characterize responders in terms of gender; professional category
+(resident/consultant); year of residency program/years working as consultant; hospital where they
+performed clinical activity. It also investigated participants’ familiarity with the use of EPAs in anesthesia
+training program and their sources of knowledge on the concept of EPAs. Participants expressed their
+interest in being involved in the EPA implementation process and provided their opinion on the relevance
+of starting the implementation of EPAs in Portuguese anesthesia training program, each according to a
+5-point Likert scale (Strongly disagree, Disagree, Neutral, Agree, Strongly agree) (Appendix 2). From a
+12
+
+population of 532, an estimated sample of 224 responders (50%) is required for a confidence level of
+95% and a confidence interval (CI) of 5%.
+3.3.2. Second step – Faculty development
+Well-planned faculty development initiatives were offered by the principal investigator to the Portuguese
+Anesthesia Departments interested in participating in the study, in accordance with the answers from the
+previous survey. Conceptual presentations on CBME and EPAs were conducted at official department
+meetings, either in person or online. Simultaneously, an unrestricted online e-learning platform was
+developed to support the theoretical foundations of the CBME and EPA available on demand. The platform
+included videos, relevant articles and presentations and was available to the entire anesthesia community
+at: https://padlet.com/inanestesia/anesthesia-faculty-development-in-assessment-jjczmm9b2il6nqiw
+(Appendix 3). This platform was facilitated by a shared password provided by the principal investigator.
+3.3.3. Third Step – Development of an Entrustable Professional Activity
+Educational coordinators of the anesthesia departments were invited via email to participate in two online
+exploratory research sessions through a focus group discussion. The aim was to gather opinions for the
+elaboration of one EPA for use as a pilot. These sessions were conducted between November 2022 and
+March 2023. The moderator prepared a presentation for the first meeting on the foundations of CBME
+and the role of EPA in the workplace-based assessment and formulated a set of semi-structured questions
+for discussion. After the first meeting, experts individually sent their list of possible EPAs by email to the
+moderator. One week before the second focus group, the moderator sent back a compiled list of EPAs.
+The focus group deeply analyzed the list, identified the EPA, and developed its description, competences,
+and sub-competences. (Figure 1)
+13
+
+Structure of the focus group sessions
+Figure 1. Structure of the focus group discussion sessions.
+3.3.4. Fourth step – EPA Implementation and Assessment through preparedEPA
+This study used the preparedEPA as a technological tool to facilitate the implementation, constructive
+feedback and formative assessment of the pilot EPA. Specific settings were created in the platform for
+this study (PortugalAnesthesia-prepared), namely name of Portuguese hospitals; details of the pilot EPA,
+namely title, description, competencies and sub-competencies, and assessment methods. All relevant
+information was in Portuguese language. Portuguese hospitals with Anesthesia training programs were
+recruited to initiate the implementation of the pilot EPA. In each hospital a face-to-face meeting was
+conducted to explain the implementation process to directors, consultants, and residents. A manual
+explaining the pilot EPA was created and sent by email to all participants. (Appendix 4) An user’s manual
+was also developed to facilitate the use of the mobile application. (Appendix 5) The implementation of the
+program is being fully monitored by the principal investigator.
+At the end of the program, a final survey will be sent by email to participants. The survey contains 11
+items using a 5-point Likert-scale (Strongly disagree, Disagree, Neutral, Agree, Strongly agree) and two
+short-answer questions. The questionaries included residents’ (Appendix 6) and consultants’ (Appendix
+7) opinions about the usefulness of the pilot EPA in improving knowledge, skills and behavior and in
+helping residents to prepare for their daily tasks. The survey also aimed to evaluate whether self-reflection
+moments and feedback were useful for the learning process; if the feedback was constructive and if the
+supervisors were adequately prepared for the task. Participants were asked about the role of
+1 s t
+•••
+Pa
+F o c u s G r o u p
+B a c k g ro u n d o n C B M E a n d E P A
+H o w m a n y E P A fo r A n e s th e s ia ?
+W h ic h E P A s h o u ld b e th e p ilo t?
+a rtic ip a n ts s e n d in d iv id u a lly
+lis t o f E P A to M o d e ra to r
+M o d e ra
+lis t o f E
+n d 2 F o c u s G r o u p
+D e e p a n a ly s is o f th e lis t o f E P A •
+Id e n tify th e p ilo t E P A •
+D e v e lo p m e n t o f th e p ilo t E P A •
+to r s e n d th e c o m p ile d
+P A to P a rtic ip a n ts
+s
+14
+
+implementing EPA in anesthesia residency program in terms of resident’s awareness about their progress
+in knowledge, skills, and attitude; to track residents’ progression towards the learning goals in each step,
+and as a strategy to enhance residents’ autonomy. Difficulties in the implementation of the process will
+be also explored.
+At the end, participants will complete a usability questionnaire survey regarding their experience with the
+preparedEPA. The usability test has Likert scale questions designed to assess residents’ and consultants’
+level of agreement with 12 sentences, according to a 5-point Likert-scale (Strongly disagree, Disagree,
+Neutral, Agree, Strongly agree). (Appendix 8)
+15
+
+Chapter 4
+RESULTS
+16
+
+4. RESULTS
+4.1. First step – Online Survey
+The online survey was distributed to 532 members of InAnesthesia Community WhatsApp Group and
+142 participants responded, resulting in a response rate of 27%.
+Among the responders 97 (68%) were females, and 45 (32%) were males. A total of 75 (53%) were
+residents, primarily from the 1st, 2nd, and 3rd years of training. Of the participants, 67(47%) were anesthesia
+consultants, with the majority having 10 to 20 years of experience working in that capacity. All participants
+were affiliated with hospitals offering anesthesia training program. (Table 1)
+Demographic data
+Variable n %
+Gender
+Male 45 32
+Female 97 68
+Work category
+Resident 75 53
+Consultant 67 47
+Residents 1st 24 32
+(years of training) 2nd 17 22
+3rd 15 20
+4th 13 17
+5th 6 8
+Consultants < 5 13 19
+(years of working) 5-10 18 27
+10-20 28 42
+> 20 8 12
+Hospital with Anesthesia Training Program
+Yes 142 100
+No 0 0
+Table 1. Descriptive statistics – Demographic
+data from survey participants
+Most responders (87 out of 142, 61%) were not familiar with the use of EPAs in Anesthesia Training
+Program. Among those who were aware of the use of EPAs, the primary source of information was
+informal conversation with colleagues (22 out of 55, 40%). For this specific question, responders were
+instructed to select as many choices as applicable to their experience. A significant number of responders
+expressed a desire to improve their knowledge in this area (139 out of 142, 98%). (Table 2)
+17
+
+Online survey results
+Variable Response n %
+Are you familiar with the use of EPA in Anesthesia residency Yes/No 55/87 39/61
+program?
+Resident Yes/No 25/50 33/67
+Consultant Yes/No 30/37 45/55
+Sources of Knowledge
+Informal information from colleagues 22 40
+Meetings from my Department 20 36
+National and International Anesthesia Meetings 17 31
+Scientific literature 14 26
+Portuguese Medical College Information 11 20
+Other 4 7
+Would you like to improve your knowledge? Yes/No 139/3 98/2
+Resident Yes/No 73/2 97/3
+Consultant Yes/No 66/1 99/1
+Table 2. Descriptive statistics – Participants’ experience with EPA in anesthesia residency training,
+sources of knowledge and interest in improving knowledge.
+One hundred and thirty-two (93%) responders strongly agreed or agreed that implementing EPAs in
+Portuguese Anesthesia Residency program is relevant, and simultaneously, 131(92%) expressed interest
+in being enrolled in the implementation process. (Figure 2 and 3)
+EPA Implementation
+40
+37
+31
+24
+7
+3
+Strongly Disagree Neutral Agree Strongly Agree
+disagree
+Residents Consultants
+Figure 2. Descriptive statistics – Participants’ opinion about
+implementation of EPA in Portuguese Anesthesia residency program.
+18
+
+Implementation enrollment
+41
+38
+30
+22
+1 3 3
+Strongly Disagree Neutral Agree Strongly Agree
+disagree
+Residents Consultants
+Figure 3. Descriptive statistics – Participants’ opinion about being
+enrolled in EPA’s implementation process.
+4.2. Second step – Faculty development
+Five Portuguese Anesthesia Departments participated in faculty development initiatives, involving 169
+consultants and 51 residents. (IPO, ULS-Matosinhos, Hospital de Guimarães, Hospital de Braga, Hospital
+de Setúbal). Six meetings, each lasting 60 minutes, were conducted from May to December 2023,
+featuring conceptual presentation on CBME and EPAs.
+The online e-learning platform supporting the theoretical foundations of the EPAs was accessible at:
+https://padlet.com/inanestesia/anesthesia-faculty-development-in-assessment-jjczmm9b2il6nqiw
+(Appendix 3)
+4.3. Third Step – Development of one Entrustable Professional Activity
+Thirteen educational coordinators of anesthesia training program, from the Portuguese Hospitals, were
+confirmed for the focus group, but only ten (77%) participated in the discussion. The demographic
+characteristics of participants are presented in table 3. The geographic distribution of the hospitals
+involved were representative of the country, including elements from Hospital de Braga, Hospital de
+Guimarães, Hospital de Setúbal, Hospital de Vila Nova de Gaia/Espinho, Centro Hospitalar de Lisboa
+Norte, Centro Hospitalar de Lisboa Ocidental, Centro Hospitalar e Universitário S. João e Hospital Central
+do Funchal. Two consultants were from the same hospital. Because most participants did not possess
+19
+
+advanced knowledge on competence-based medical education or on Entrustable Professional Activities,
+the moderator started the first session by presenting the background support from CBME. This session
+was also crucial for reflecting on how many EPA are needed for the Portuguese Anesthesia Residency
+and which one(s) should be used as a pilot. Participants individually listed a panel of EPAs and send it to
+the moderator. The compiled list of EPAs was presented in the second focus group discussion (Appendix
+9). A deep analysis of each EPA was conducted, including the resources for implementation and general
+applicability in the training program. In the final session, the focus group approved the pilot EPA titled –
+“Induction of Anesthesia for ASA I/II fasting patient, with no predictable difficult airway for a low-risk
+procedure” and developed its description, competences, knowledge, skills, attitudes, and assessment
+methods. (Appendix 10)
+Expert panel data
+n %
+Gender
+Male 3 30
+Female 7 70
+Age
+<30 0 0
+30-40 2 20
+40-50 7 70
+>50 1 10
+Clinical experience (years)
+<5 1 10
+5-10 2 20
+10-20 4 40
+>20 3 30
+Active years in anesthesia education program
+<5 2 20
+5-10 1 10
+10-20 6 60
+>20 1 10
+Position
+Consultant 9 90
+Chief doctor 1 10
+Hospital
+Secondary 5 50
+Tertiary 5 50
+Expertise in EPAs
+Yes 1 10
+No 9 90
+Table 3. Demographic characteristic of expert panel.
+20
+
+4.4. Fourth step – EPA Implementation and Assessment throughout the preparedEPA
+The implementation of the EPA with preparedEPA started on the 15th of January 2024 and is still an ongoing
+process. Currently, 35 supervisors and 15 residents are using the application. The distribution of hospital
+and gender of participants is presented in table 4.
+Participants using preparedEPA
+Hospital Hospital IPO Porto ULS- Hospital
+Guimarães Braga Matosinhos Setúbal
+n (%) 14(28) 12(24) 10(20) 8(16) 6(12)
+Consultants Male/Female
+1/9 2/7 2/6 3/0 1/4
+Residents Male/Female
+0/4 1/2 0/2 1/4 0/1
+Table 4. Hospital and gender distribution from participants using preparedEPA
+At the present date, final surveys and usability questionnaires have not been administered, as the
+experience with the pilot EPA and the use of the preparedEPA is recent. More time to exposure is needed
+to achieve reliable results.
+21
+
+Chapter 5
+DISCUSSION
+22
+
+5. DISCUSSION
+The results from the present work show that despite a significant lack of knowledge there is a strong
+willingness for the implementation of EPA in anesthesia training, as most responders showed interest in
+participating in the process.
+The implementation of the EPAs in a residency training program represents a significant change in the
+paradigm of the current training and assessment model. In Portugal, the change is particularly demanding
+since all training programs are centrally regulated by Specialty Colleges of the Portuguese Medical
+Association. So, any adjustment on educational model needs to be well-organized, structured, and based
+on deep research and must have reliable results. This system ensures an informed decision-making
+process based on elevated standards of quality but makes the process time-consuming.
+Pilot studies on medical education have been useful to (1) demonstrate the feasibility of processes; (2)
+find weaknesses and gaps in knowledge, process implementation and validation and (3) obtain the
+primary data for the intended outcomes (Hassan, 2006). The results from this work highlight many gaps
+that need to be addressed before the implementation of EPA. Familiarity with the concept of CBME and
+EPAs was relatively low for most of the responders (61%), especially if we look for the group of consultants
+(45%). This means that many concepts of CBME, milestones, workplace-based assessment and EPAs are
+missing. This fact is not surprising, as many departments and institutions worldwide faced similar
+difficulties in the beginning of the implementation process (Tannenbaum, 2019).
+Faculty development on medical education is, thus, in this context, a critical step in the process of
+curriculum implementation (Leslie, 2013; Sirianni, 2020). Improving knowledge, skills and attitudes
+among faculty members increases confidence and competence in educational clinicians who lead the
+implementation strategy (Steinert, 2011). Nevertheless, faculty development is time-consuming for
+mentors and attendants. Anesthesia departments organize weekly meetings for clinical presentations,
+institutional and organization needs that are attended by most of the consultants and residents. In this
+study, the principal investigator presented the department meeting to promote faculty development in
+competence-based medical education, in general, and in EPAs, in particular. Due to the anesthetists’
+work schedule, it was not always possible for the entire clinical staff to attend the meetings. Lack of time
+among anesthetists is a commonly identified barrier to accomplish faculty development initiatives (Fraser,
+2016). So, to increase those opportunities, the author created extensive online documentation on a digital
+platform – Padlet, accessed through a link. In this online platform, the most relevant articles, videos,
+links, and presentations were easily accessible during the study period. Padlet has been considered a
+23
+
+helpful platform for learning since it allows the organization of contents on different boards and is user-
+friendly (Naamati-Schneider, 2023).
+The next step was to validate an EPA. Focus group discussions have been used as a technique to validate
+EPAs (Ten Cate, 2015; Cheng, 2016). In the present study, only consultants in anesthesia were recruited
+for the group discussion, missing the constructivist paradigm of the method (Stalmeijer, 2014). In fact,
+other relevant stakeholders such as members of the Anesthesia Council form Portuguese Medical
+Association, department directors and residents from different years of training could be enrolled on the
+group. While this was not the ideal composition of the focus groups it was, nevertheless, the starting point
+of discussion on this field in Portugal. The pilot EPA is aligned with the requirements from the blueprint
+and publications from the Anesthesia College from Portuguese Medical Association as the competence
+of a resident at the end of the first 24 months of training (Diário da República, 2016).
+The preparedEPA is user-friendly, and because it is based on mobile phones and tables, allows workplace
+application and immediate feedback (Woodworth et al, 2021). Although there are many relevant biases
+related with the use of the application, namely resident, supervisor or patient factors, validity and interrater
+reliability that need to be explored, we expect that supervisors and residents become proficient with the
+frequent use of preparedEPA since we believe that it can support the implementation of EPA in Portuguese
+Anesthesia Residency Program.
+Despite the significant amount of work done, this study represents a small drop in a big ocean. This pilot
+study demonstrated that it is feasible to start the implementation of Entrustable Professional Activities in
+the Portuguese Anesthesia Training Program. But there is a lot of work that must be done, mainly in the
+domains of leadership and faculty development; competence-based curriculum developers and on
+assessment tools.
+Limitations and Future Perspectives
+The study has some limitations that need to be highlighted. First, the response rate to the initial survey
+was relatively low; however, it must be said that the results are in accordance with the average of online
+survey response rate in medical literature (18-20%) (Tait, 2015).
+The commitment to faculty development was relatively low, considering the entire anesthesia community.
+One way to improve participation is to consider mandatory enrollment for supervisors or to provide
+incentives for faculty development attendance (Steinert, 2016). Although the present work only explores
+24
+
+FD in the domain of theoretical foundations of CBME, there are other initiatives that are equally relevant
+and complementary, namely observations of workplace-based assessment, feedback and coaching on
+assessment, self-evaluation and reflective, and consideration to build a community of practice (Favreau,
+2017; Baldwin, 2017; Bray, 2021).
+Although there were qualitative appreciations from the use of the padlet platform by faculty members, it
+was not possible to count the number of accesses which could have provided estimates of the impact of
+the training sessions on the audience and of the interest raised by it.
+Meanwhile, the present work was already presented to the president of Anesthesia College from
+Portuguese Medical Association and there are lot of perspectives for this curricular change. In addition,
+the project is ongoing with programed FD initiatives in other three hospitals and the next step will be to
+present on the annual meeting of Portuguese Society of Anesthesiology and to all the Portuguese
+Anesthesia Community.
+Finally, the major limitation of the study relates with time. Medical education takes time and resilience,
+with many initial steps forwards and backwards. However, the seeds are sown, and the springtime is
+coming. I hope I can contribute to this innovative curriculum transformation.
+25
+
+Chapter 6
+CONCLUSIONS
+26
+
+6. CONCLUSIONS
+This study demonstrated that there is an interest, among the Portuguese Anesthesia community, in
+changing to a competence-based medical education curriculum in Portuguese Anesthesia Residency
+program with the focus on workplace-based assessment. The result from the present study suggests that
+despite widespread general awareness of the CBME concept and its major constructs, there is a gap in
+knowledge related to Entrustable Professional Activities. Therefore, there is a need for faculty development
+towards the implementation of the CBME and EPA that should be generalized at a national level.
+PreparedEPA can be a useful application to facilitate the transition to EPA and workplace-based assessment.
+27
+
+Chapter 7
+REFERENCES
+28
+
+7. REFERENCES
+Al-Eraky, M., & Marei, H. (2016). A fresh look at Miller's pyramid: assessment at the 'Is' and 'Do'
+levels. Medical education, 50(12), 1253–1257.
+American College of Graduate Medical Education (ACGME). 2020. The Milestones Guidebook.
+https://www.acme.org/globalassets/milestonesguidebook.pdf
+Bailey, K., West, N. C., & Matava, C. (2022). Competency-Based Medical Education: Are Canadian
+Pediatric Anesthesiologists Ready?. Cureus, 14(2), e22344.
+Boet, S., Pigford, A. A., & Naik, V. N. (2016). Program director and resident perspectives of a competency-
+based medical education anesthesia residency program in Canada: a needs assessment. Korean
+journal of medical education, 28(2), 157–168.
+Boyce, P., Spratt, C., Davies, M., & McEvoy, P. (2011). Using entrustable professional activities to guide
+curriculum development in psychiatry training. BMC medical education, 11, 96.
+Bray, M. J., Bradley, E. B., Martindale, J. R., & Gusic, M. E. (2021). Implementing Systematic Faculty
+Development to Support an EPA-Based Program of Assessment: Strategies, Outcomes, and
+Lessons Learned. Teaching and learning in medicine, 33(4), 434–444.
+https://doi.org/10.1080/10401334.2020.1857256
+Brydges, R., Manzone, J., Shanks, D., Hatala, R., Hamstra, S. J., Zendejas, B., & Cook, D. A. (2015).
+Self-regulated learning in simulation-based training: a systematic review and meta-
+analysis. Medical education, 49(4), 368–378.
+Chen, H. C., McNamara, M., Teherani, A., Cate, O. T., & O'Sullivan, P. (2016). Developing Entrustable
+Professional Activities for Entry Into Clerkship. Academic medicine: journal of the Association of
+American Medical Colleges, 91(2), 247–255.
+Custers, E. J. F. M., & Cate, O. T. (2018). The History of Medical Education in Europe and the United
+States, With Respect to Time and Proficiency. Academic medicine: journal of the Association of
+American Medical Colleges, 93(3S Competency-Based, Time-Variable Education in the Health
+Professions), S49–S54.
+Dath, D., & Iobst, W. (2010). The importance of faculty development in the transition to competency-
+based medical education. Medical teacher, 32(8), 683–686.
+Portaria nº 92-A/2016 do Ministério da Saúde (2016). Diário da república nº74/2016, 1º suplemento,
+Série I de 2016-04-15, páginas 2 – 11. http://diariodarepublica.pt/dr/detalhe/diario-
+republica/74-2016-74163204.
+Englander, R., Frank, J. R., Carraccio, C., Sherbino, J., Ross, S., Snell, L., & ICBME Collaborators (2017).
+Toward a shared language for competency-based medical education. Medical teacher, 39(6),
+582–587.
+29
+
+Favreau, M. A., Tewksbury, L., Lupi, C., Cutrer, W. B., Jokela, J. A., Yarris, L. M., & AAMC Core Entrustable
+Professional Activities for Entering Residency Faculty Development Concept Group (2017).
+Constructing a Shared Mental Model for Faculty Development for the Core Entrustable
+Professional Activities for Entering Residency. Academic medicine: journal of the Association of
+American Medical Colleges, 92(6), 759–764.
+Fernandes N., Ribeiro J., Pêgo JM. (2022, 10-12 November) Consensus Study on Entrustable
+Professional Activities for a post-graduate medical rotation in Portugal – a protocol. Paper
+presentation. European Board of Medical Assessors Annual Conference, Helsinki, Finland.
+Fessler, H. E., et al. (2014). Entrustable professional activities and curricular milestones for fellowship
+training in pulmonary and critical care medicine: report of a multisociety working
+group. Chest, 146(3), 813–834.
+Fisk, D., Clendenning, B., St John, P., & Francois, J. (2024). Multi-stakeholder validation of entrustable
+professional activities for a family medicine care of the elderly residency program: A focus group
+study. Gerontology & geriatrics education, 45(1), 12–25.
+Frank, J. R., et al. (2010). Competency-based medical education: theory to practice. Medical
+teacher, 32(8), 638–645.
+Fraser, A. B., Stodel, E. J., Jee, R., Dubois, D. A., & Chaput, A. J. (2016). Preparing anesthesiology faculty
+for competency-based medical education. Introduction de la formation médicale fondée sur les
+compétences en anesthésiologie: comment préparer le corps professoral?. Canadian journal of
+anaesthesia = Journal canadien d'anesthesie, 63(12), 1364–1373.
+Frenk, J., et al. (2010). Health professionals for a new century: transforming education to strengthen
+health systems in an interdependent world. Lancet (London, England), 376(9756), 1923–1958.
+Grande, B., Zalunardo, M. P., & Kolbe, M. (2022). How to train thoracic anesthesia for residents and
+consultants?. Current opinion in anaesthesiology, 35(1), 69–74.
+Hassan, Z. A., Schattner, P., & Mazza, D. (2006). Doing A Pilot Study: Why Is It Essential? Malaysian
+family physician: the official journal of the Academy of Family Physicians of Malaysia, 1(2-3), 70–
+73.
+Heeneman, S., et al. (2021). Ottawa 2020 consensus statement for programmatic assessment - 1.
+Agreement on the principles. Medical teacher, 43(10), 1139–1148.
+Irby, D. M., Cooke, M., & O'Brien, B. C. (2010). Calls for reform of medical education by the Carnegie
+Foundation for the Advancement of Teaching: 1910 and 2010. Academic medicine: journal of
+the Association of American Medical Colleges, 85(2), 220–227.
+Leslie, K., Baker, L., Egan-Lee, E., Esdaile, M., & Reeves, S. (2013). Advancing faculty development in
+medical education: a systematic review. Academic medicine : journal of the Association of
+American Medical Colleges, 88(7), 1038–1045.
+30
+
+Mann, S., Truelove, A. H., Beesley, T., Howden, S., & Egan, R. (2020). Resident perceptions of
+Competency-Based Medical Education. Canadian medical education journal, 11(5), e31–e43.
+Marty, A. P., Braun, J., Schick, C., Zalunardo, M. P., Spahn, D. R., & Breckwoldt, J. (2022). A mobile
+application to facilitate implementation of programmatic assessment in anaesthesia
+training. British journal of anaesthesia, 128(6), 990–996.
+Naamati-Schneider, L., & Alt, D. (2023). Online collaborative Padlet-mediated learning in health
+management studies. Frontiers in psychology, 14, 1157621.
+Norcini, J. J., Blank, L. L., Duffy, F. D., & Fortna, G. S. (2003). The mini-CEX: a method for assessing
+clinical skills. Annals of internal medicine, 138(6), 476–481.
+Porter, S., et al. (2022). Development of entrustable professional activities for regional anesthesia and
+pain medicine fellowship training. Regional anesthesia and pain medicine, rapm-2022-103854.
+Advance online publication.
+Railer, J., Stockley, D., Flynn, L., Hastings-Truelove, A., & Hussain, A. (2020). Using outcome harvesting:
+Assessing the efficacy of CBME implementation. Journal of evaluation in clinical practice, 26(4),
+1132–1152.
+Reynolds, Q. J., Gilliland, K. O., Smith, K., Walker, J. A., & Beck Dallaghan, G. L. (2020). Differences in
+medical student performance on examinations: exploring score variance between Kolb's Learning
+Style Inventory classifications. BMC medical education, 20(1), 423.
+Riggs G. (2010). Commentary: Are we ready to embrace the rest of the Flexner Report?. Academic
+medicine: journal of the Association of American Medical Colleges, 85(11), 1669–1671.
+Savoldelli, G. L., & Van Gessel, E. F. (2016). 'Entrustable professional activities': the way to go for
+competency-based curriculum?. European journal of anaesthesiology, 33(8), 557–558.
+Sirianni, G., Glover Takahashi, S., & Myers, J. (2020). Taking stock of what is known about faculty
+development in competency-based medical education: A scoping review paper. Medical
+teacher, 42(8), 909–915.
+Stalmeijer, R. E., Mcnaughton, N., & Van Mook, W. N. (2014). Using focus groups in medical education
+research: AMEE Guide No. 91. Medical teacher, 36(11), 923–939.
+Steinert Y. 2011. Commentary: faculty development: the road less traveled. Acad Med. 86(4):409–411.
+Steinert, Y., et al. (2006). A systematic review of faculty development initiatives designed to improve
+teaching effectiveness in medical education: BEME Guide No. 8. Medical teacher, 28(6), 497–
+526.
+31
+
+Stoffman J. M. (2022). Overcoming the barriers to implementation of competence-based medical
+education in post-graduate medical education: a narrative literature review. Medical education
+online, 27(1), 2112012.
+Tait, A. R., & Voepel-Lewis, T. (2015). Survey research: it's just a few questions, right?. Paediatric
+anaesthesia, 25(7), 656–662.
+Tanaka, P., Marty, A., et al. (2023). Defining entrustable professional activities for first year anesthesiology
+residents: A Delphi study. Journal of clinical anesthesia, 88, 111116.
+Tannenbaum, E., Furmli, H., Kent, N., Dore, S., Sagle, M., & Caccia, N. (2020). Exploring Faculty
+Perceptions of Competency-Based Medical Education and Assessing Needs for Implementation
+in Obstetrics and Gynaecology Residency. Journal of obstetrics and gynaecology Canada : JOGC
+= Journal d'obstetrique et gynecologie du Canada : JOGC, 42(6), 707–717.
+Ten Cate O. (2005). Entrustability of professional activities and competency-based training. Medical
+education, 39(12), 1176–1177.
+Ten Cate O. (2017). Competency-Based Postgraduate Medical Education: Past, Present and Future. GMS
+journal for medical education, 34(5), Doc69.
+Ten Cate, O., & Billett, S. (2014). Competency-based medical education: origins, perspectives and
+potentialities. Medical education, 48(3), 325–332.
+Ten Cate, O., et al. (2021). Entrustment Decision Making: Extending Miller's Pyramid. Academic
+medicine: journal of the Association of American Medical Colleges, 96(2), 199–204.
+Ten Cate, O., Chen, H. C., Hoff, R. G., Peters, H., Bok, H., & van der Schaaf, M. (2015). Curriculum
+development for the workplace using Entrustable Professional Activities (EPAs): AMEE Guide No.
+99. Medical teacher, 37(11), 983–1002.
+Ten Cate, O., Snell, L., & Carraccio, C. (2010). Medical competence: the interplay between individual
+ability and the health care environment. Medical teacher, 32(8), 669–675.
+Torre, D., Rice, N. E., et al. (2021). Ottawa 2020 consensus statements for programmatic assessment -
+2. Implementation and practice. Medical teacher, 43(10), 1149–1160.
+Touchie, C., De Champlain, A., Pugh, D., Downing, S., & Bordage, G. (2014). Supervising incoming first-
+year residents: faculty expectations versus residents' experiences. Medical education, 48(9),
+921–929.
+Weissenbacher, A., et al. (2022). Development and consensus of entrustable professional activities for
+final-year medical students in anaesthesiology. BMC anesthesiology, 22(1), 128.
+32
+
+Wisman-Zwarter, N., et al. (2016). Transforming the learning outcomes of anaesthesiology training into
+entrustable professional activities: A Delphi study. European journal of anaesthesiology, 33(8),
+559–567.
+Woodworth, G. E., et al. (2021). Development and Pilot Testing of Entrustable Professional Activities for
+US Anesthesiology Residency Training. Anesthesia and analgesia, 132(6), 1579–1591.
+33
+
+Chapter 8
+APPENDIXES
+34
+
+________________________________________________________________________
+APPENDIX 1 – Ethical Committee Approval
+35
+
+Conselho de Ética
+Comissão de Ética para a Investigação em Ciências da Vida e da Saúde
+(CEICVS)
+Identificação do documento: CEICVS 006/2024
+Título do projeto: Desenvolvimento e Implementação de Atividades
+Profissionais Confiáveis na Formação Específica de Anestesiologia –
+estudo piloto
+Investigadora Responsável: Sara Hora Gomes, Escola de Medici-
+na, Universidade do Minho
+Orientação: Nuno Sousa, Escola de Medicina, Universidade do Mi-
+nho; Centro Clínico Académico - Braga (2CA); Hospital de Braga;
+Centro de Medicina Digital P5; Peter Scoles, Escola de Medicina,
+Universidade do Minho
+Unidade Orgânica Promotora: Escola de Medicina da Universi-
+dade do Minho
+PARECER
+De acordo com a documentação apresentada, o projeto insere-se no âmbito da obtenção do grau de Mestre no
+Mestrado em Avaliação Aplicado às Profissões de Saúde da Escola de Medicina da Universidade do Minho.
+Trata-se de um estudo de intervenção cujo objetivo é criar uma estratégia de formação de atividades profissio-
+nais confiáveis (APC), no internato de formação específica de anestesiologia, implementar a sua utilização na
+prática de cada dia de trabalho e avaliar o impacto da mesma.
+Após verificação e análise dos documentos associados ao processo de pedido de emissão de parecer ético sobre
+o projeto em apreço, a que reporta sumariamente a respetiva “Grelha de verificação e avaliação ética”, conside-
+ra-se que (i) o processo está devidamente instruído, (ii) a análise dos documentos apresentados sobre o estudo a
+realizar obedecem às regras de conduta ética e requisitos exigidos para as boas práticas na experimentação com
+humanos e (iii) estão em conformidade com o Guião para submissão de processos a pedido de Parecer Ético na
+UMinho.
+36
+
+Atendendo à recolha de dados através de questionários online, deverá ser acautelado o cumprimento com o
+estipulado no Capítulo V, Transferências de dados pessoais para países terceiros ou organizações internacionais
+(artigos 44.º-50.º), do Regulamento Geral sobre a Proteção de Dados (RGPD).
+Face ao exposto, a Comissão de Ética para a Investigação em Ciências da Vida e da Saúde (CEICVS) nada tem a
+opor à realização do projeto, emitindo o seu parecer favorável, que foi aprovado por unanimidade dos seus
+membros.
+Braga, 8 de fevereiro de 2024.
+A Presidente da CEICVS
+………………………………………………………………………………………………………………………………………
+ANÁLISE E JUSTIFICAÇÃO DO PARECER
+Grelha de verificação e de avaliação ética
+(Processo submetido em suporte eletrónico - documentos recebidos assinalados com X e respetiva avaliação ética)
+Avaliação
+Não se
+Documentos Sim Não
+aplica
+Técnico-ética
+Pedido de apreciação de projeto enviado à CEICVS a) x Adequado
+Quando aplicável, identificação da Unidade Curricular (UC) no âmbito da qual Presente
+se insere o projeto (designação do curso, designação da UC e respetivo ano
+x
+curricular, identificação do/s coordenador/es da UC, nome e número meca-
+nográfico do estudante)
+Carta de Apoio/Autorização da(s) Unidade(s) ou Serviço(s) onde decorrerá o Adequada
+x
+projeto a)
+Quando aplicável, informação do Orientador da Tese sobre apoio e/ou en- Presente
+x
+quadramento do projeto
+Protocolo do estudo
+elaborado de acordo
+com os requisitos e
+Protocolo do estudo, incluindo, se aplicável, os instrumentos de recolha de
+x
+normas éticas de boas
+dados e/ou informação para o participante a) práticas em experimen-
+tação envolvendo hu-
+manos.
+Adequado
+Cronograma de execução do projeto x
+x Presente
+Curriculum Vitae abreviado do Investigador Responsável e dos membros da
+37
+
+equipa e/ou orientadores a)
+Quando aplicável, documento de Consentimento Informado, elaborado e Adequado
+X
+referenciado de acordo com a alínea c) abaixo indicada
+Declaração de Compromisso de Confidencialidade (e/ou Termo de Respon- Adequada
+x
+sabilidade)
+Quando aplicável, informação sobre financiamento para o cumprimento do
+projeto, incluindo, se aplicável, cabimento/inscrição no orçamento da Unida-
+x
+de/Serviço em que decorrerá e/ou com fonte de financiamento nacio-
+nal/internacional
+NOTA: O desenvolvimento do projeto ocorrerá mediante Parecer/Autorização ética local da unidade de saúde onde
+serão obtidos os dados clínicos dos pacientes participantes no estudo de investigação.
+a) Documentos obrigatórios de acordo com as normas orientadoras para submissão de processos a apreciar pelo Conselho de Ética da UMinho.
+b) Documentos obrigatórios de acordo com o funcionamento da Comissão de Ética para a Saúde do Hospital de Braga (CESHB).
+c) Documento de Consentimento Informado, Livre e Esclarecido para Participação em Investigação de acordo com a Declaração de Helsínquia1, a Convenção
+de Oviedo2 e o Regulamento Geral de Proteção de Dados (RGPD)3. Guião na elaboração do consentimento informado é disponibilizado pela ARSN4 e através
+do “Documento CEIC sobre o Regulamento Geral de Proteção de Dados (RGPD) no contexto da Investigação Clínica”5.
+Acesso aos documentos da alínea c):
+1http://portal.arsnorte.minsaude.pt/portal/page/portal/ARSNorte/Comiss%C3%A3o%20de%20%C3%89tica/Ficheiros/Declaracao_Helsinquia_2008.pdf
+2http://dre.pt/pdf1sdip/2001/01/002A00/00140036.pdf
+3https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=celex%3A32016R0679
+4http://www.arsnorte.min-saude.pt/consentimento-informado/
+5http://www.ceic.pt/documents/20727/0/Documento+CEIC+sobre+o+Regulamento+Geral+de+Prote%C3%A7%C3%A3o+de+Dados+%28RGPD%29_public
+a%C3%A7%C3%A3o/ced81411-5fe4-46f5-a613-c7c716abbb4b
+6 https://dre.pt/home/-/dre/123815982/details/maximized
+Justificação do Parecer
+Trata-se de um projeto a realizar no âmbito da obtenção do grau de Mestre no Mestrado em Avaliação Aplicado
+às Profissões de Saúde da Escola de Medicina da Universidade do Minho.
+A Investigadora Responsável (IR), tem formação académica adequada e é orientada por uma equipa com com-
+petência compatível aos objetivos propostos.
+Os objetivos específicos são: i) criar uma estratégia de formação e de divulgação para internos, especialistas,
+tutores e orientadores, bem como responsáveis pela formação e avaliação do internato, criando uma acultura-
+ção; ii) desenvolver uma APC e implementar a sua utilização na prática de cada dia de trabalho; e iii) implemen-
+tar a avaliação formativa e feedback reflexivo da APC desenvolvida.
+Trata-se de um estudo de intervenção, sendo os dados recolhidos através de questionários online e de grupos de
+discussão focal, mediante consentimento informado. A população em estudo compreenderá médicos em forma-
+ção específica de anestesiologia, de diferentes anos de internato, e especialistas supervisores.
+38
+
+Toda a informação será recolhida, guardada e tratada de forma confidencial, anonimizada e codificada. Não ha-
+verá qualquer divulgação ou comunicação de resultados individuais. Os dados recolhidos serão exclusivamente
+utilizados para este estudo. Apenas os investigadores envolvidos no projeto terão acesso aos dados e estão obri-
+gados a sigilo profissional.
+O risco de dano para os participantes é mínimo e o benefício científico-social considerado relevante.
+Está garantido o uso responsável e racional dos recursos para a investigação.
+Não se declara a existência de conflitos de interesse.
+Documentos recebidos no órgão institucional de ética da UMinho
+Foram recebidos os seguintes documentos:
+- Protocolo de investigação e/ou caderno de recolha de dados e/ou guião da entrevista
+- Curriculum vitae abreviado do investigador responsável e do Orientador do estudo
+- Parecer do(a) diretor(a) do centro de investigação e/ou unidade
+- Declaração do orientador no compromisso na orientação e/ou Termo de Responsabilidade
+- Declaração de confidencialidade e responsabilidade do Investigador Responsável
+- Modelo de Consentimento Informado, Livre e Esclarecido para Participação em Investigação de acordo
+com a Declaração de Helsínquia e a Convenção de Oviedo
+39
+
+________________________________________________________________________
+APPENDIX 2 – Online Survey
+40
+
+Desenvolvimento e Implementação de Entrustable Professional
+Activities (Atividades Profissionais Confiáveis) na Formação
+Específica de Anestesiologia
+Sara Hora Gomes
+Questionário Inicial
+Caro Colega,
+Venho por este meio solicitar a sua colaboração no Projeto Piloto - Desenvolvimento e Implementação de
+Atividades Profissionais Confiáveis no Internato de Anestesiologia em Portugal.
+A transformação da educação médica para uma estratégia de ensino e de avaliação baseada em
+competências exigiu uma mudança no paradigma da avaliação dos profissionais de saúde. As atividades
+profissionais confiáveis (APC) permitem uma avaliação e feed-back contínuos, o que parece contribuir
+para o ganho de autonomia por parte do interno. Este estudo faz parte da tese de Mestrado em Avaliação
+das Profissões de Saúde da Universidade do Minho de Sara Hora Gomes. O estudo compreende a
+avaliação geral dos participantes me relação ao conceito de atividades profissionais confiáveis (EPA).
+Tem como objetivos promover o desenvolvimento e a implementação de EPA no internato de
+Anestesiologia em Portugal e compreende as fases desde desenvolvimento conceptual até à
+implementação e avaliação. Obrigada.
+Na página seguinte encontra informação e o consentimento informado.
+1. Concorda em participar no estudo SIM/NÃO
+2. Data. __/__/____
+3. Email _________________________
+4. Hospital em que trabalha. _______________________________
+5. É especialista SIM/NÃO - Se sim há quantos anos?___________________
+6. É interno SIM/NÃO - Se sim de que ano?__________________________
+7. Está familiarizado com a utilização das Atividades Profissionais Confiáveis na formação específica
+de anestesiologia? SIM/NÃO
+41
+
+8. Se sim, em que circunstâncias teve contacto com as
+APC?_______________________________
+9. Está interessado em obter mais formação nesta área?
+SIM/NÃO__________________________
+Relativamente às seguintes frases, indique qual a opção que mais se adequa à sua opinião sobre o
+tema. Seguindo a escala: 1 – discordo completamente, 2- discordo, 3- neutro, 4. Concordo, 5-
+concordo completamente
+10. Considero relevante iniciar a implementação de APC na formação específica de anestesiologia
+_____________________________________________________________________
+11. Gostaria de participar do processo de implementação das APC na formação específica de
+anestesiologia.
+_____________________________________________________________________
+42
+
+________________________________________________________________________
+APPENDIX 3 – Online Platform for Faculty Development
+43
+
+44
+
+________________________________________________________________________
+APPENDIX 4 – Manual of the Pilot EPA
+45
+
+Development and Implementation of Entrustable Professional Activities in
+Portuguese Anesthesia Residency Program
+– a pilot study
+Desenvolvimento e Implementação de Atividades Profissionais Confiáveis na
+Formação Específica de Anestesiologia – estudo piloto
+Sara Hora Gomes
+Background and Aim
+The last 30 years were marked by a profound change in medical education from a time-based to an
+outcome-based system. This change allows a healthcare professional to follow their learning path focused
+on the acquisition of competence in different aspects of patient care, regardless of time. But to ensure
+that the clinician acquired the needed clinical competence in patient care, new strategies of workplace-
+based assessment are needed.
+Entrustable Professional Activities are units of professional work, that must be done during a clinical day,
+that can be assigned, measured, and observed. It is a way to teach and assess. At the end of the training
+program, a supervisor can trust a learner to do the EPA independently or unsupervised. Simultaneously,
+EPA are a way to track learners’ path and identify those who need more support. in the acquisition of
+competences
+The concept of EPA contains knowledge, skills and behaviour and is better suited for assessment in
+everyday work, since it is a more holistic view of a concrete observable clinical activity. One EPA contains
+many competences and sub-competences. The table 1, presents the EPA to be used. The metric for
+competence is the level of “required supervision”, in a 5 points scale. (table 2) Because ever clinical
+situation is a suitable opportunity for learning and assessing, the use of a friendly application could
+improve the engagement of residents and tutors in the process.
+Induction of general anesthesia in a fating adult ASA1-2 for a low-risk procedure
+Adapted from: Weissenbacher, A., Bolz, R., Stehr, S.N. et al. Development and consensus of
+entrustable professional activities for final-year medical students in anaesthesiology. BMC
+Anesthesiol 22, 128 (2022). https://doi.org/10.1186/s12871-022-01668-8
+Table 1
+Entrusted Level Explanation
+1 Trainee observed supervisor performing the EPA
+46
+
+2 Direct supervision (proactive supervision, supervisor is present in the
+room)
+3 Indirect supervision (reactive supervision: trainee executes the EPA and
+asks for help if needed, supervisor readily available within seconds or a
+few minutes
+4 Distant supervision (supervisor not readily available, e.g. within 30
+minutes, post-hoc, or on the phone)
+5 Supervise others (trainee is ready to supervise more junior colleagues in
+performing this task)
+Table 2. (adapted from preparedEPA APP)
+PreparedEPA Application is a mobile application that was developed by Dr. Adrian Marty (Anesthesiologist
+from Switzerland) and has been used in many countries not only for anesthesia training program, but
+also for other specialties.
+Any clinical situation in which a supervisor is working with a trainee can be documented in less than 2
+minutes. For this reason, we would like to encourage all participating trainees and supervisors to use the
+APP as often as possible - even several times a day. As an option, feedback and learning goals can be
+documented.
+For this study we will only test the EPA – Anesthesia Induction – that is described in preparedEPA APP (see
+below).
+Título
+Indução de anestesia em doente ASA 1 ou ASA 2, em jejum, sem via aérea difícil previsível para
+intervenção de baixo risco.
+Descrição
+Esta Atividade profissional confiável inclui o período desde a entrada do doente na sala de
+indução/sala operatória até ao início da cirurgia. Esta EPA inclui a avaliação de conhecimento,
+competências técnicas e comportamento.
+Competências e Sub-competências
+- Preparou-se de acordo com o plano anestésico escolhido (conhece o doente e ambiente de trabalho)
+- Cumpre o regulamento de higiene local
+- Assegura condições de segurança e de utilização de dispositivos necessários para a intervenção
+anestésica (ventilador, monitor, sistema de perfusão, etc)
+- Garante a realização das check-list de segurança (Cirurgia Segura da OMS, lista de verificação pré-
+indução)
+- Comunica adequadamente com o paciente (explica o que vai acontecer)
+47
+
+- É capaz de colocar acesso venoso periférico ou central (se necessário)
+- É capaz de colocar cateter arterial (se necessário)
+- É capaz de manusear uma via aérea não difícil
+- Realiza a monitorização adequada ao doente e à intervenção
+- Inclui a análise de dados laboratoriais do paciente, sendo capaz de interpretar os seus resultados e
+de atuar em conformidade (reconhecendo problemas e complicações e tratando-os)
+- Administra os medicamentos necessários de forma adequada, segura e atempada (incluindo
+antibioterapia – se necessário)
+- Garante a profundidade adequada da anestesia e o relaxamento muscular (se necessário) para o
+início da intervenção cirúrgica
+- Organiza o transporte do paciente da área de indução para a sala operatória de forma segura (se
+aplicável)
+- Realiza os registos clínicos de forma correta
+- Comunica de forma eficaz com os restantes membros da equipa do bloco operatório (equipa de
+enfermagem, auxiliar, equipa cirúrgica, especialista, colega de internato)
+- Delega tarefas de forma adequada (se necessário)
+- Re-avalia a situação continuamente e ajusta as prioridades de forma dinâmica (tem um plano B)
+- Pede ajuda de forma adequada (conhece os limites da sua experiência)
+Métodos de avaliação
+Observação direta; entrustment-based discussion; case-based discussion
+Maximum data security: Each data point (any documentation of an assessment) is stored encrypted and
+can only be evaluated in an anonymized form for study purposes. The trainees have maximum control
+over their personal competency profile.
+The most important things in advance
+1. With your participation you can help shape the future of the assessment: We are very much looking
+forward to your feedback!
+2. Participation is voluntary and most welcome
+3. The only technical tool needed is your smartphone (instructions below)
+4. The rating only takes about 1 min per situation and includes knowledge, skills AND attitudes
+48
+
+5. Trainees AND Supervisors can use simultaneously use the APP for a rating during clinical work:
+Trainee shows QR code and Supervisor scans QR code (all included in the app)
+6. You will find additional information and consent form during login and directly in the APP 7. If
+desired, feedback and learning goals can also be documented
+8. Assessment data collected during study will not be used for formal assessments.
+In the next table you can find the procedure to START using the platform with your tutors and residents.
+How to get preparedEPA
+1. Download the App
+2. Once you have it:
+please with your
+•For : you can start using the App a soon you have
+registered
+•For : to ensure valid ratings your role will have
+to be confirmed before you start
+•Info: there is a web version: epa.prepared.app
+Questions or feedback? àinfo@prepared.app
+Table 3. Instructions to START the application.
+Any information needed, please contact:
+Email: saragomes@med.uminho.pt
+Phone: 351934258374
+For further readings:
+https://www.scielo.br/j/rbem/a/PmSDPQLHDY3tSQStqGctbNn/?lang=pt
+Online platform of the Project
+https://padlet.com/inanestesia/implementation-of-epa-in-anesthesia-residency-program-
+jjczmm9b2il6nqiw
+49
+
+________________________________________________________________________
+APPENDIX 5 – PreparedEPA - User’s Manual
+50
+
+Manual de Instruções para a utilização
+da plataforma Prepared
+EPA
+Sara Hora Gomes
+Introdução
+A preparedEPA é uma plataforma online que permite o feedback contínuo pelos supervisores, tutores e orientadores durante
+o internato médico e simultaneamente a auto-reflexão dos internos em relação à sua autonomia para o desempenho das suas
+atividades clínicas. Este feedback, realizado diretamente no local de trabalho e em cada tarefa realizada, segue os princípios
+da avaliação baseada nas atividades profissionais confiáveis (EPA-entrustable professional activities).
+Como o objetivo de iniciar o desenvolvimento e a implementação das EPA na formação específica de Anestesiologia,
+desenvolvemos este projeto com utilização da plataforma preparedEPA ® . Nesta plataforma vai apenas encontrar uma EPA
+piloto – a Indução de Anestesia Geral, num doente ASA I-II, com jejum pré-operatório e sem sinais clínicos de uma via aérea
+difícil.
+Para isso, foi criado um módulo para ser utilizado apenas neste projeto e, portanto, acessível a todos os colegas especialistas
+(tutores, mentores, orientadores) e internos (de todos os anos da formação específica) que tenham demonstrado interesse
+em participar no projeto.
+Este manual tem por objetivo ajudar na utilização da plataforma, por isso, leia por favor com atenção todo o documento.
+Quaisquer dúvidas podem contactar-me através do email: saragomes@med.uminho.pt
+ou do telemóvel: 934258374.
+Agradeço a todos em meu nome e em nome da comunidade científica e de investigação da Escola de Medicina da
+Universidade do Minho e do Mestrado em Avaliação Aplicado à Formação das Profissões de Saúde.
+Como começar?
+Realizar download da aplicação através dos links em baixo ou do QR code.
+https://www.prepared.app/epa
+Através da app store: https://apps.apple.com/ch/app/preparedepa/id1533667853
+Através do Google Play: https://play.google.com/store/apps/details?id=com.radity.prepared
+51
+
+How to get preparedEPA
+1. Download the App
+2. Once you have it:
+H Se o m rá a ri n o a s de imersão please with your
+Provisório
+V3.20.02.2022
+• For : you can start using the App a soon you have
+registered
+• For : to ensure valid ratings your role will have
+to be confirmed before you start
+• Info: there is a web version: epa.prepared.app
+Questions or feedback? à info@prepared.app
+Sign up
+Realize o sign-up com o seu email privado
+Preencher os seguintes campos:
+Username
+Name
+Last Name
+Gender
+preparedEPA Version - Anesthesiology (PortugalAnesthesia-prepared)
+Institution – escolher o hospital onde trabalha
+Role – escolher se trainee (interno) ou Supervisor (especialista, tutor)
+Data privacy settings
+Colocar o cursor para a direita em todos os itens:
+- Allow data access by your institution
+- Tailored teaching and assessing
+- Implementation of preparedEPA
+- Allow data usage for research and statistics
+- Your institution
+- Reputable scientists
+Clicar em SAVE
+Se for interno de formação específica, a plataforma fica pronta para ser utilizada.
+Se for supervisor, vai precisar de uma autorização central que demora menos de uma hora a ficar ativa.
+52
+
+LAYOUT da plataforma para os INTERNOS
+Home - Página principal do layout Settings – nesta página pode editar o seu Colocar a sua identificação, versão, instituição
+perfil e função
+53
+
+Deslizar o ecrã mais para baixo Aceitar todos os itens e colocar o cursor Voltar a HOME. A partir desta página pode
+para a direita aceder ao nº de feedbacks obtidos e auto-
+reflexões realizadas no próprio dia
+(assessments), bem como aceder a toda a
+estatística (Statistics).
+54
+
+Em Statistics pode ver todos os seus My ePortefólio, pode construir o seu com No menu My Curriculum, pode encontrar as
+momentos de feedback obtidos, por dia, as suas rotações clínicas e cursos EPA ativas no seu hospital e abrir o menu da
+semana e mês. realizados EPA ativa neste projeto
+55
+
+Neste menu aparece a EPA piloto do estudo Opção Share, pode partilhar com o seu Se optar por partilhar com o seu tutor, pode
+com os descritores. Se pretender pode de supervisor, tutor ou especialista com quem definir o período. A partilha pode ser realizada
+imediato realizar uma nova avaliação ou trabalhou ou pode exportar em pdf todas as através de um novo QR-code ou procurando o
+documentar uma autoavaliação. EPA realizadas. supervisor do seu hospital, clicando em Select
+a Supervisor
+56
+
+Uma outra forma de aceder a uma nova Escolher Anesthesia Induction A plataforma vai gerar um QR code que deve
+avaliação é através do menu principal - New mostrar ao especialista. Simultaneamente
+Assessment. Aparece no menu Pilot EPA, depois de realizar a tarefa pode fazer uma
+clicar em pilot EPA auto-reflexão.
+57
+
+Cada momento em que pedir feedback, vai Pode classificar a tarefa como simples ou Neste momento deve assinalar a opção que
+ter que classificar a tarefa como simples ou complexa, consoante a definição da mais de adequa ao seu grau de autonomia, se
+complexa. A sua auto-reflexão a este nível plataforma. Carregando na barra simples tiver de desempenhar a mesma tarefa
+vais ser comparada com a do supervisor ou complex, vai aparecer uma nova página. amanhã. Clicando no i de cada nível, encontra
+(ver mais em baixo. Neste ecrã, se clicar no o descritivo. Se clicar na barra que se adequa
+i vai aparecer a definição da tarefa simples à sua situação, aparece uma nova página.
+ou complexa
+58
+
+Nesta página pode optar por realizar uma Esta página é dirigida para a auto-reflexão, Simultaneamente tem a opção de escrever
+reflexão clicando na 1º barra – “yes! Let’s mas é igual à página de feedback do um pequeno texto – texto; colocar uma foto –
+go for it... supervisor. Pode ser assinalada a área do photo, adicionar um vídeo, realizar um audio
+conhecimento, competências técnicas ou ou adicionar um documento em pdf (podem
+atitude e comportamento. Relativamente ser artigos, guidelines, etc). Estes dados vão
+aos learning goals o tutor/interno pode aparecer no menu Goals – My goals.
+assinalar áreas de desenvolvimento que
+deve iniciar, parar ou continuar
+59
+
+Se optar por não fazer a auto-reflexão, clicar Aparece a seguinte página e deve voltar à Página inicial disponível para nova tarefa.
+em “No, thanks” página inicial.
+60
+
+No menu principal, também pode aceder Neste menu, pode clicar em i para Neste caso, apresenta 13 auto-reflexões
+ao seu Profile conhecer os diversos níveis de autonomia (símbolo quadrado) na EPA simples e 4 na
+e símbolos utilizados (figura ao lado). EPA complexa. No caso da simples, já poderia
+supervisionar outros e na complexa ainda só
+como observador.
+61
+
+Se clicar em reticências (...) Clicando em Task details, vai poder conhecer Descrição da EPA
+vai aparecer o menu desta figura. Aqui as tarefas inerentes à sua EPA: Descrição,
+pode optar pode pedir novo feedback, o que conhecimento, competências técnicas e
+irá gerar um QR code para apresentar ao atitudes e metodologia de avaliação
+especialista; realizar uma auto-reflexão
+(como vimos anteriormente), e conhecer os
+detalhes desta EPA.
+62
+
+Conhecimentos, competências e atitudes. Metodologia de avaliação Voltar ao menu anterior
+Aqui encontra todo o descritivo da EPA
+63
+
+Clicando em (...) na barra – Anesthesia Neste menu, pode escolher a barra: Onboarding Nesta página pode assinalar o nível de
+Induction vai aceder novamente ao menu Process que leva a nova página supervisão que considera necessário ter
+seguinte para esta EPA em ambas as versões
+simple e complexa. No final clicar em
+done.
+64
+
+Exemplo de uma resposta. Cada um dos Goals, neste menu, pode encontrar os Observar os seus goals, ou criar novos
+quadrados coloridos significa um grau de learning goals sugeridos pelos objetivos. Ao clicar no botão +, vai aceder a
+autonomia, em que o verde-claro supervisores. (ver mais à frente no layout página de auto-reflexão (ver em cima).
+representa o nível, apenas observação e o de supervisor). Se clicar nas ... pode Também pode aceder aos goals previamente
+cinza mais escuro, capaz de supervisionar assumir estes learning goals como my atingidos, clicando em Achive.
+outros. goals
+65
+
+LAYOUT da plataforma para os SUPERVISORES, TUTORES, ORIENTADORES
+O menu inicial do supervisor permite Statistics – mostra o nº de vezes que deu My ePortefolio – aparecem de forma
+conhecer quantos feedbacks já realizou no feedback (dia, semana e mês) e o nº de organizada os seus cursos e feedback dados.
+dia e a estatística dá o número de internos a que deu feedback. Pode introduzir cursos que realizou ou que
+feedbacks dados (Statistics) pretenda realizar
+66
+
+Em My curriculum vão aparecer as EPA Export – Pode exportar o seu ePortefolio Scan QR-Code - A partir do menu principal por
+ativas no seu Hospital, aceder cada EPA vai para um ficheiro em PDF. fazer scan de um QR-code apresentado pelo
+conhecer o descritivo da mesma (ver em seu interno de forma a poder dar feedback
+cima layout de interno)
+67
+
+Aponte o seu telemóvel para o telemóvel do Deve classificar esta EPA como simples ou Neste momento deve assinalar a opção que
+interno com QR-code e aguarde a leitura. complexa, escolhendo uma das barras. mais de adequa ao grau de autonomia do
+Encontra a definição de simple/complex se interno.
+carregar no i
+68
+
+A plataforma vai mostrar a sua avaliação A plataforma faz o upload da auto- Seguidamente pode optar por dar ou não
+reflexão do interno que é partilhada feedback.
+apenas com ambos (interno e
+especialista)
+69
+
+Se decidir dar feedback pode escolher uma My way, pode escolher as opções do menu Pode ainda adicionar um texto, uma
+das duas formas. Se optar por My Way e escrever um pequeno texto nos objetivos fotografia, um vídeo, audio ou um pdf
+(start, stop e continue). Estes learning goals (artigo, guideline, etc). Confirme no final e
+vão aparecer na plataforma do interno como volte à página principal.
+suggested goals
+70
+
+Se decidir dar feedback através de Guided Guided feedback conversation, a plataforma
+feedback conversation. dá algumas dicas para dar feedback
+construtivo.
+71
+
+Seguidamente a plataforma remete para a
+página de learning goals, para que possa
+registar o seu feedback e serem assumidos
+como suggested goals (como vimos
+anteriormente)
+72
+
+Trainees, pode ainda visualizar os internos a QR-code menu permite duas opções Scan um QR code de interno ou gerar um QR
+quem tem dado feedback. apresentadas na figura em anexo. code (esta última função está a ser
+desenvolvida)
+Informações complementares
+Para mais informações sobre a plataforma preparedEPA:
+https://youtu.be/t1xa3z6GPNs
+73
+
+________________________________________________________________________
+APPENDIX 6 – Resident’s Final Questionnaire
+74
+
+Inquérito Final - Internos
+Desenvolvimento e Implementação de APC na formação específica
+de Anestesiologia
+Sara Hora Gomes
+Janeiro 2024
+Caro colega,
+Agradecemos a sua colaboração com o Projeto piloto de desenvolvimento e implementação de EPA na formação específica
+de Anestesiologia e em relação ao qual já forneceu o seu consentimento informado.
+Gostaríamos de ter o seu feedback em a este programa. As suas respostas vão ser tratadas confidencialmente. Agradecemos
+o tempo e a dedicação dispensada nesta tarefa. Muito obrigada
+Email
+Ano de formação específica
+Hospital em que trabalha
+Secção 1
+Relativamente ao seu desenvolvimento profissional, indique a opção mais adequada em relação a cada uma das frases seguintes, utilizando
+a seguinte classificação. 1- concordo fortemente, 2- concordo, 3- neutro, 4- discordp, 5- discordo fortemente, 6- sem opinião.
+1. A utilização desta EPA permitiu desenvolver o meu nível de conhecimento nesta área_____
+2. A utilização desta EPA permitiu desenvolver as minhas capacidades técnicas nesta área ____
+3. A utilização desta EPA permitiu melhorar as minhas atitudes e comportamentos nesta área___
+4. A utilização desta EPA permitiu preparar-me para as atividades do dia-a-dia____
+5. Para mim, os momentos de autorreflexão foram úteis para melhorar o meu processo de aprendizagem____
+6. Para mim, os momentos de feedback e avaliação pelos supervisores foram úteis____
+7. Obtive feedback construtivo por parte dos supervisores____
+8. Considero que os meus supervisores estavam bem preparados para a tarefa que desempenharam___
+9. Considero que a implementação de EPA na formação específica de Anestesiologia permite que o interno conheça melhor o seu
+grau de conhecimento, capacidade técnicas e atitudes.______
+10. Considero que a implementação de EPA na formação específica de Anestesiologia ajuda na orientação do interno de forma a
+atingir as das metas, planos e objetivos adequados para cada ano.____
+11. Considero que a implementação de EPA na formação específica de Anestesiologia pode ajudar no desenvolvimento de maior
+autonomia _____
+12. Sabemos que os programas de implementação de EPA são complexos. Gostaríamos de saber a sua opinião em relação às
+dificuldades que percecionou durante este projeto.__________________________________________
+13. Agradecemos as suas sugestões. (texto livre)________________________
+75
+
+________________________________________________________________________
+APPENDIX 7 – Consultant’s Final Questionnaire
+76
+
+Inquérito Final - Especialistas
+Desenvolvimento e Implementação de APC na formação específica
+de Anestesiologia
+Sara Hora Gomes
+Janeiro 2024
+Caro colega,
+Agradecemos a sua colaboração com o Projeto piloto de desenvolvimento e implementação de EPA na formação específica de Anestesiologia
+para o qual já deu o seu consentimento informado.
+Gostaríamos de ter o seu feedback em a este programa. As suas respostas vão ser tratadas confidencialmente. Agradecemos o tempo e a
+dedicação dispensada nesta tarefa.
+Email
+Hospital em que trabalha
+Secção 1
+Relativamente à sua experiência neste estudo piloto, indique a opção mais adequada em relação a cada uma das frases seguintes, utilizando
+a seguinte classificação. 1- concordo fortemente, 2- concordo, 3- neutro, 4- discordp, 5- discordo fortemente, 6- sem opinião.
+1. A utilização desta EPA permitiu aos internos o desenvolvimento do seu nível de conhecimento nesta área____
+2. A utilização desta EPA permitiu aos internos o desenvolvimento das suas minhas capacidades técnicas nesta área _
+3. A utilização desta EPA permitiu aos internos melhorar as suas atitudes e comportamentos nesta área____
+4. A utilização desta EPA permitiu a preparação dos internos para as atividades do dia-a-dia____
+5. Considero que os momentos de auto-reflexão realizado pelos internos foram úteis para o seu desenvolvimento___
+6. Para mim, os momentos de feedback e avaliação foram úteis para melhorar o processo de aprendizagem do interno__
+7. Considero que dei feedback construtivo, na maioria das vezes____
+8. Considero que estava bem preparado para a tarefa que desempenhei___
+9. Considero que preciso de mais formação para o desenvolvimento de EPAs____
+10. Considero que a implementação de EPA na formação específica de Anestesiologia permite que o interno conheça melhor o seu
+grau de conhecimento, capacidade técnicas e atitudes.____
+11. Considero que a implementação de EPA na formação específica de Anestesiologia ajuda na orientação do interno de forma a
+atingir as das metas, planos e objetivos adequados para cada ano.____
+12. Considero que a implementação de EPA na formação específica de Anestesiologia pode ajudar no desenvolvimento de maior
+autonomia ______
+13. Sabemos que os programas de implementação de EPA são complexos. Gostaríamos de saber a sua opinião em relação às
+dificuldades que percecionou durante este projeto._________________________________________________
+14. Agradecemos as suas sugestões. (texto livre)________________________________________________________
+Muito obrigada
+77
+
+________________________________________________________________________
+APPENDIX 8 – PreparedEPA - Usability questionnaire
+78
+
+Questionário de usabilidade da
+Plataforma PreparedEPA
+Sara Hora Gomes
+Janeiro 2024
+Caro colega,
+Serve este pequeno inquérito para obter a sua avaliação sobre a aplicação prEPAred que utilizou durante este projeto piloto.
+Este estudo faz parte da tese de Mestrado em Avaliação das Profissões de Saúde da Universidade do Minho de Sara Hora Gomes. O estudo
+compreende a avaliação geral dos participantes me relação ao conceito de atividades profissionais confiáveis (EPA). Tem como objetivos
+promover o desenvolvimento e a implementação de EPA no internato de Anestesiologia em Portugal e compreende as fases desde
+desenvolvimento conceptual até à implementação e avaliação.
+O estudo tem o apoio institucional da Escola de Medicina da Universidade do Minho e autorização pela sua Comissão de Ética (CEICVS).
+O questionário é muito simples e rápido.
+Obrigada pela sua colaboração
+Sara Hora Gomes
+Secção 1
+1. Data
+2. Email
+3. Em que Hospital trabalha?
+4. É especialista
+5. Utilizou a aplicação prEPAred?
+Secção 2
+Avalie a usabilidade da aplicação PreparedEPA. Por favor, classifique as afirmações como considerar mais adequado, seguindo a escala:
+1-Concordo fortemente, 2-concordo, 3-neutro, 4-discordo, 5-discordo fortemente, 6-sem opinião
+1. Gostaria de utilizar esta aplicação frequentemente
+2. Considero que a aplicação é simples de utilizar
+3. Considero que a aplicação é demasiado complexa
+4. Acho que preciso do suporte de um técnico para ser capaz de utilizar a aplicação
+5. Eu imagino que a maior parte das pessoas aprende com facilidade a utilizar esta aplicação
+6. Eu considero a aplicação demasiado estranha
+7. Senti-me muito confiante em utilizar esta aplicação
+8. Precisei de usar algum tempo com a aplicação até conseguir utilizá-la eficazmente
+9. Gostaria de utilizar esta aplicação para submeter pequenas avaliações realizadas no dia-a-dia da prática clínica
+10. Os dados coletados da aplicação são úteis para avaliar as competências dos internos
+11. Prefiro a forma de avaliação da aplicação comparada com a forma de avaliação utilizada no serviço
+12. É útil ver a auto-avaliação do interno em paralelo com a do tutor
+79
+
+Secção 3
+13. Discuti com o interno a forma como realizei a avaliação (complexidade e nível de supervisão)
+1- Todas as vezes
+2- A maioria das vezes
+3- Frequentemente
+4- Algumas vezes (infrequentemente)
+5- Nunca
+6- Sem opinião
+14. Globalmente, avalio a facilidade de utilização desta aplicação como
+1- Excelente
+2- Boa
+3- Neutra
+4-Má
+5- Horrível
+6- Sem opinião
+15. Quantas vezes utilizei a aplicação
+1. 0-5
+2. 6-10
+3. 11-20
+4. 21-50
+5. 51-100
+6. >100
+16. Porque não utilizou a aplicação?
+1. Não estou interessado(a) neste novo sistema de avaliação
+2. Não estou tecnicamente capaz de usar a aplicação (telemóvel antigo, sem memória)
+3. Estava preocupado(a) com a segurança dos dados
+4. Era demasiado complicado fazer o download e instalar a aplicação
+5. Estava demasiado ocupado
+6. Outra razão
+17. Se outra razão, especifique, por favor
+80
+
+________________________________________________________________________
+APPENDIX 9 – Focus Group Discussion – List of EPAs
+81
+
+Discussão de Grupo Focal
+Lista de Atividades Profissionais Confiáveis
+Sara Hora Gomes
+• Avaliação Anestésica e optimização do doente para cirurgia
+• Cuidado per-operatório do doente adulto, ASA III
+• Cuidado per-operatório do doente adulto, ASA I/II
+• Cuidado per-operatório do doente para cirurgia urgente/programada
+• Manuseio de doente com dor crónica
+• Gestão da dor intra-operatória
+• Manuseio do doente com dor aguda
+• Cuidado do doente pós-operatório
+• Abordagem da via aérea básica
+• Realizar Anestesia regional do neuro-eixo
+• Cuidado per-operatório do doente em cirurgia electiva
+• Anestesia regional periférica
+• Trabalhar em equipa multidisciplinar
+• Anestesia no doente em regime de ambulatório
+• Manuseio do posicionamento durante a cirurgia e suas complicações
+• Abordagem anestésica peri-operatória de doentes adultos ASA 1 ou superior
+• Gestão da analgesia de trabalho de parto em grávidas saudáveis com gravidezes não
+complicadas
+• Abordagem anestésica peri-operatória de doentes pediátricos com idade superior a 3 anos para
+cirurgia não complexa
+• Indicações e execução de ecografia diagnóstica point-of-care (ex. FAST) em emergência,
+incluindo a definição de planos terapêuticos consequentes
+• Abordagem da Via Aérea Difícil
+• Abordagem segundo os princípios do patient blood management, incluindo a gestão em
+contexto de hemorragia maciça
+• Abordagem anestésica de doentes adultos para procedimentos fora do Bloco Operatório
+• Ressuscitação cardiopulmonar no adulto, incluindo transferência do doente crítico
+Abordagem integrada de doentes críticos com sépsis e falência multi-orgânica em contexto de
+medicina intensiva
+• Gestão de discussões de metas de cuidados com doentes críticos e famílias
+82
+
+________________________________________________________________________
+APPENDIX 10 – Developed pilot EPA
+83
+
+Atividade Profissional Confiável desenvolvida
+pelo projeto
+Sara Hora Gomes
+Título
+Indução de anestesia em doente ASA 1 ou ASA 2, em jejum, sem via aérea difícil previsível para intervenção de baixo
+risco.
+Descrição
+Esta Atividade profissional confiável inclui o período desde a entrada do doente na sala de indução/sala operatória até
+ao início da cirurgia. Esta EPA inclui a avaliação de conhecimento, competências técnicas e comportamento.
+Competências e Sub-competências
+- Preparou-se de acordo com o plano anestésico escolhido (conhece o doente e ambiente de trabalho)
+- Cumpre o regulamento de higiene local
+- Assegura condições de segurança e de utilização de dispositivos necessários para a intervenção anestésica (ventilador,
+monitor, sistema de perfusão, etc)
+- Garante a realização das check-list de segurança (Cirurgia Segura da OMS, lista de verificação pré-indução)
+- Comunica adequadamente com o paciente (explica o que vai acontecer)
+- É capaz de colocar acesso venoso periférico ou central (se necessário)
+- É capaz de colocar cateter arterial (se necessário)
+- É capaz de manusear uma via aérea não difícil
+- Realiza a monitorização adequada ao doente e à intervenção
+- Inclui a análise de dados laboratoriais do paciente, sendo capaz de interpretar os seus resultados e de atuar em
+conformidade (reconhecendo problemas e complicações e tratando-os)
+- Administra os medicamentos necessários de forma adequada, segura e atempada (incluindo antibioterapia – se
+necessário)
+- Garante a profundidade adequada da anestesia e o relaxamento muscular (se necessário) para o início da intervenção
+cirúrgica
+- Organiza o transporte do paciente da área de indução para a sala operatória de forma segura (se aplicável)
+- Realiza os registos clínicos de forma correta
+- Comunica de forma eficaz com os restantes membros da equipa do bloco operatório (equipa de enfermagem, auxiliar,
+equipa cirúrgica, especialista, colega de internato)
+- Delega tarefas de forma adequada (se necessário)
+- Re-avalia a situação continuamente e ajusta as prioridades de forma dinâmica (tem um plano B)
+- Pede ajuda de forma adequada (conhece os limites da sua experiência)
+Métodos de avaliação
+Observação direta; entrustment-based discussion; case-based discussion
+84

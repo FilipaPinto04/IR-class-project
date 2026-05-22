@@ -1,0 +1,1979 @@
+Lucimara Alves de Souza
+Avaliação de um programa de
+desenvolvimento em preceptoria
+outubro de 2024
+airotpecerp
+me
+otnemivlovneseded
+amargorp
+mu
+ed
+oãçailavA
+azuoS
+ed
+sevlA
+aramicuL
+4202|ohniMU
+Universidade do Minho
+Escola de Medicina
+
+Universidade do Minho
+Escola de Medicina
+Lucimara Alves de Souza
+Avaliação de um programa de
+desenvolvimento em preceptoria
+Dissertação de Mestrado
+Mestrado em Avaliação Aplicada à Formação nas Profissões
+da Saúde
+Trabalho efetuado sob a orientação do
+Professor Doutor João José Fernandes Cardoso
+Araújo Cerqueira
+outubro de 2024
+
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras e
+boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não
+previstas no licenciamento indicado, deverá contactar o autor, através do RepositóriUM da Universidade
+do Minho.
+Atribuição-Não Comercial-Sem Derivações
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+ii
+
+AGRADECIMENTOS
+À professora Profa. Rosa Malena Delbone que incentivou e viabilizou a concretização deste sonho, sou
+imensamente grata.
+À Santa Casa BH que proporcionou as condições para a realização deste mestrado, expresso meu
+reconhecimento.
+Ao Prof. João Cerqueira, meu orientador, agradeço por sua orientação cuidadosa, paciência e
+direcionamento ao longo deste processo.
+À Profa. Suelen Rosa de Oliveira, pelas suas orientações, sua disponibilidade, paciência e pela maneira
+como me apoiou nessa jornada.
+Ao Prof. Nuno Sousa que fez toda a diferença nesta jornada acadêmica. Seu acolhimento, orientação e
+suporte foram fundamentais para o meu crescimento e desenvolvimento ao longo deste mestrado.
+Aos demais professores do mestrado, meu agradecimento pela partilha de conhecimento e pelos
+ensinamentos.
+Aos meus colegas do MAPS, pela troca de experiências, pelo companheirismo e pelo apoio ao longo
+dessa jornada desafiadora.
+Ao meu pai, José, que mesmo não estando fisicamente presente, foi e sempre será uma inspiração em
+minha vida. Seu exemplo, sua crença inabalável no poder transformador da educação e seu legado de
+determinação foram a luz que guiou meus passos nesta caminhada.
+À minha mãe, Geralda, por sua força e pelas orações que foram um alicerce, sustentando-me nos
+momentos desafiadores.
+Ao meu esposo, Alexandre, por compartilhar das minhas alegrias e desafios. Seu apoio incondicional e
+compreensão foram fundamentais para que eu alcançasse este objetivo. Aos nossos filhos, Beatriz e
+Tomaz, expresso minha gratidão por compreenderem os momentos que precisei me dedicar aos
+estudos.
+Aos meus colegas de trabalho, à minha família e a todos que, de alguma forma, contribuíram para a
+concretização deste trabalho.
+iii
+
+DECLARAÇÃO DE INTEGRIDADE
+Declaro ter atuado com integridade na elaboração do presente trabalho académico e confirmo que não
+recorri à prática de plágio nem a qualquer forma de utilização indevida ou falsificação de informações
+ou resultados em nenhuma das etapas conducente à sua elaboração.
+Mas declaro que conheço e que respeitei o Código de Conduta Ética da Universidade do Minho.
+iv
+
+Avaliação de um programa de desenvolvimento em preceptoria
+RESUMO
+Um programa de desenvolvimento em preceptoria consiste em um curso ou conjunto de atividades
+estrategicamente planejadas para promover o desenvolvimento de profissionais de saúde preparando-
+os para desempenhar o papel de preceptores. Visando avaliar a contribuição do "Módulo Básico” de
+um programa de desenvolvimento em preceptoria para a formação de preceptores de um hospital de
+grande porte do Brasil, este estudo buscou compreender a percepção dos preceptores do impacto do
+Programa de Desenvolvimento em Preceptoria - PRODEP sobre a aquisição de competências docentes,
+a identificação das potencialidades e desafios de um programa de desenvolvimento voltado para a
+preceptoria e a percepção dos preceptores sobre o impacto do curso em seu comportamento,
+ocasionando mudança na prática da preceptoria. A avaliação foi baseada no modelo de Kirkpatrick,
+que considera quatro níveis: reação, aprendizado, comportamento e resultados. Para isso, a pesquisa
+fundamentou-se na descrição do contexto e dos sujeitos envolvidos e considerando os propósitos e as
+características do tema em estudo, o método de pesquisa adotado foi de caráter misto, qualitativo e
+quantitativo. Numa primeira fase procurou-se quantificar, através de questionários estruturados com
+perguntas cuja resposta era uma escala de Likert (1 a 5), as impressões dos participantes acerca do
+curso e da aprendizagem. Na segunda fase, foram utilizados métodos qualitativos para explorar os
+motivos e o significado daquelas avaliações e compreender melhor os processos e práticas avaliados.
+O cenário da pesquisa foi o Hospital Santa Casa de Belo Horizonte e envolveu os profissionais que
+concluíram o PRODEP, nos anos de 2019 e de 2022, e atuam na preceptoria de profissionais de saúde
+em formação. Sobre o procedimento de coleta de dados foram utilizados questionário e entrevista
+semiestruturada. Para análise das entrevistas, optou-se pela utilização da técnica de análise de
+conteúdo, especificamente a sua modalidade de análise temática. Da análise emergiram três
+categorias empíricas: “Pertinência e metodologia do curso”; “Papel de educador” e “Mudança na
+prática da preceptoria”.
+A pesquisa conclui que o PRODEP influenciou positivamente a prática dos preceptores, evidenciando a
+importância de programas de desenvolvimento em preceptoria na educação na saúde.
+Palavras-chave: Desenvolvimento docente, educação permanente; preceptoria.
+v
+
+Evaluation of a preceptorship development program
+ABSTRACT
+A preceptorship development program consists of a course or set of strategically planned activities to
+promote the development of health professionals preparing them to play the role of preceptors. Aiming
+to evaluate the contribution of the “Basic Module” of a preceptorship development program to the
+training of preceptors in a large hospital in Brazil, this study sought to understand preceptors’
+perception of the impact of Preceptorship Development Program - PRODEP o the acquisition of teaching
+skills. the identification of the potentialities and challenges of a development program aimed at
+preceptorship and the preceptors’ perception of the impact of the course on their behavior. causing
+changes in the practice of preceptorship. The evaluation was based on the Kirkpatrick model, which
+considers four levels: reaction, learning, behavior and results. For this, the research was based on the
+description of the context and the subjects involved and considering the purposes and characteristics of
+the topic under study, the research method adopted was of a mixed, qualitative and quantitative nature.
+The first phase sought to quantify, through structured questionnaires with questions whose answers
+were on a Likert scale, the participants’ impressions about the course and learning. In the second
+phase, qualitative methods were used to explore the reasons and meaning of those evaluations and
+better understand the processes and practices evaluated. The research setting was Hospital Santa Casa
+de Belo Horizonte and involved professional who completed the PRODEP, in 2019 and 2022, and work
+in preceptorship of health professional in training. Regarding the data collection procedure, the
+questionnaire and semi-structured interview were used. To analyze the interviews, we chose to use the
+content analysis technique, specifically its thematic analysis modality. Three empirical categories
+emerged from the analysis: “Relevance and methodology of the course”; “Role of educator” and
+“Change in the practice of preceptorship”.
+The research concludes that PRODEP positively influenced the practice of preceptors, highlighting the
+importance of preceptorship development programs in health education.
+Keywords: Continuing education; preceptorship; teacher development.
+vi
+
+ÍNDICE
+1 INTRODUÇÃO ....................................................................................................................... 1
+1.1 Desvendando a preceptoria na saúde: origens e desafios contemporâneos ............................. 6
+1.2 Os programas de residência ................................................................................................... 9
+1.2.1 Residência médica no Brasil .............................................................................................10
+1.2.2 Residência multiprofissional no Brasil................................................................................14
+1.3 Educação na saúde: abordagens pedagógicas e desenvolvimento profissional .......................16
+2 OBJETIVOS ........................................................................................................................ 22
+2.1. Objetivo geral ......................................................................................................................22
+2.2 Objetivos específicos ............................................................................................................22
+3 METODOLOGIA................................................................................................................... 23
+3.1 Local de estudo ...................................................................................................................23
+3.1.1 A organização do PRODEP ................................................................................................24
+3.2 Os participantes da pesquisa ...............................................................................................27
+3.3 Instrumentos e procedimentos para a coleta de dados .........................................................28
+3.4 Análise dos dados ................................................................................................................30
+4 RESULTADOS ..................................................................................................................... 33
+4.1 Perfil dos participantes .........................................................................................................33
+4.2 Resultados das avaliações do PRODEP .................................................................................37
+4.3 Percepção dos preceptores sobre o PRODEP e a sua contribuição na prática da preceptoria. 40
+4.3.1 Percepções acerca da pertinência e metodologia do curso ................................................40
+4.3.1.1 Reflexões sobre o curso .................................................................................................40
+4.3.1.2 Metodologia adotada no curso .......................................................................................41
+4.3.1.3 Sugestões e desafios .....................................................................................................42
+4.3.2 O papel de educador ........................................................................................................44
+4.3.2.1 Reflexão sobre a prática .................................................................................................44
+vii
+
+4.3.2.2 Reflexão sobre o papel de educador ...............................................................................44
+4.3.3 Mudança na prática da preceptoria após a realização do PRODEP .....................................46
+4.3.3.1 Aplicação de estratégias pedagógicas.............................................................................46
+4.3.3.2 Relacionamento com os residentes/especializandos ......................................................47
+4.3.3.3 Avaliação dos residentes/especializandos ......................................................................48
+5 DISCUSSÃO ........................................................................................................................ 50
+6 CONCLUSÃO ...................................................................................................................... 54
+REFERÊNCIAS ....................................................................................................................... 55
+APÊNDICES ........................................................................................................................... 61
+ANEXO .................................................................................................................................. 71
+viii
+
+LISTA DE ABREVIAÇÕES
+CEREM Comissão Estadual de Residência Médica
+CNRMS Comissão Nacional de Residência Multiprofissional
+Coreme Comissão de Residência Médica
+COREMU Comissão de Residência Multiprofissional em Saúde
+EPAs Entrustable Professional Activities
+FAIMER Foundation for Advancement of International Medical Education and Research
+FSCBH Faculdade Santa Casa BH
+MEC Ministério da Educação
+MS Ministério da Saúde
+NDAE Núcleo Docente-Assistencial Estruturante
+NEDUC Núcleo de Estudos e Desenvolvimento em Educação na Saúde da Faculdade Santa
+Casa de Belo Horizonte
+NPS Net Promoter Score
+OMS Organização Mundial de Saúde
+PDI Plano de Desenvolvimento Institucional
+PRODEP Programa de Desenvolvimento em Preceptoria
+SUS Sistema Único de Saúde
+ix
+
+LISTA DE FIGURAS
+Figura 1 - Modelo de resultados educacionais de Kirkpatrick ................................................................ 5
+Figura 2 - Hierarquia de regulação, supervisão e avaliação da Residência Médica no Brasil. ...................................... 13
+Figura 3 - Dimensões da Residência Médica - Política e Educativa ......................................................14
+Figura 4 - Net Promoter Score ...........................................................................................................38
+x
+
+LISTA DE TABELAS
+Tabela 1 - Comparação das duas edições do PRODEP .......................................................................27
+Tabela 2 - PRODEP por ano e formação .............................................................................................28
+Tabela 3 - Analisando os dados ..........................................................................................................32
+Tabela 4 - Avaliação de reação PRODEP 2019 ...................................................................................37
+Tabela 5 - Resultado do NPS por encontro - PRODEP 2022 ................................................................38
+Tabela 6 - Pesquisa retrospectiva pós-pré ...........................................................................................39
+xi
+
+LISTA DE GRÁFICOS
+Gráfico 1 - Ano de conclusão do PRODEP...........................................................................................33
+Gráfico 2 - Faixa etária .......................................................................................................................34
+Gráfico 3 - Tempo de formação (anos) ...............................................................................................35
+Gráfico 4 - Tempo de experiência na preceptoria (anos) .....................................................................35
+Gráfico 5 - Área de graduação dos preceptores ..................................................................................36
+Gráfico 6 - Área de ensino de atuação do preceptor ............................................................................37
+xii
+
+1 INTRODUÇÃO
+Um programa de formação em preceptoria é um curso ou conjunto de atividades planejadas
+para o desenvolvimento de profissionais de saúde, como médicos, enfermeiros, fisioterapeutas,
+dentistas e outros, para atuarem como preceptores. Esses programas de formação visam desenvolver
+competências específicas para o papel de preceptor na supervisão, acompanhamento e orientação de
+aprendizes. Segundo Sheets e Schwenk (1990), estes apresentam como meta ajudar os professores e
+demais profissionais da educação a aprimorar habilidades essenciais para a instituição, adequadas à
+posição que ocupam e garantindo sua força tanto no momento atual quanto no futuro.
+A preceptoria, no contexto da formação em saúde, desempenha um papel crucial na transição
+dos estudantes para profissionais competentes e éticos. Conforme definição da Comissão Nacional de
+Residência Multiprofissional - CNRMS “o preceptor atua na supervisão direta das atividades práticas
+realizadas pelos discentes nos serviços de saúde onde se desenvolve a preceptoria, a qual é exercida
+por profissional vinculado à instituição formadora ou executora, com formação mínima de especialista”
+(Resolução nº 2, 2012).
+A necessidade de programas de desenvolvimento em preceptoria tornou-se cada vez mais
+evidente tanto no Brasil quanto em nível global, apoiando-se a importância do aprimoramento
+constante das competências dos preceptores para a educação em saúde. A Organização Mundial de
+Saúde (OMS), em publicação de 2013, emite suas primeiras diretrizes para “Transformar e ampliar a
+educação e o treinamento dos profissionais de saúde” descrevendo que os profissionais em atuação
+normalmente têm competências clínicas e científicas adequadas, mas raramente têm a preparação
+pedagógica (comunicação, princípios de aprendizagem de adultos, uso de novas tecnologias da
+informação, etc.) necessária para funcionar no ambiente em transformação. O desenvolvimento do
+corpo docente é, portanto, importante para garantir que professores e preceptores estejam bem
+preparados para assumir suas responsabilidades como educadores. (WHO, 2013)
+Na mesma publicação, o desenvolvimento do corpo docente é definido como um programa
+planejado de eventos destinados a preparar indivíduos para seus papéis como professores, clínicos,
+pesquisadores e administradores com o objetivo de permitir que a instituição atinja seus objetivos,
+visão e missão, e suas responsabilidades sociais e morais para com as comunidades. (WHO, 2013;
+Frenk, et al., 2010).
+No contexto internacional, a “Foundation for Advancement of International Medical Education
+and Research” (FAIMER) emergiu como uma referência na promoção do desenvolvimento profissional.
+1
+
+“Em 2000, a Educational Commision for Foregin Medical Graduates (ECFMG®), localizada na
+Filadélfia, Pensilvânia (EUA), criou a “The Foundation for Advancement of International Medical
+Education and Research” (FAIMER) com a intenção de colaborar com a melhoria da saúde global
+através da melhoria da formação dos profissionais de saúde. A FAIMER concentra seus esforços nas
+regiões de desenvolvimento do sul da Ásia, África e América Latina, e foca em três estratégias
+principais: “desenvolvimento docente, pesquisas específicas sobre políticas e práticas de formação de
+recursos humanos e desenvolvimento de bases de dados que auxiliam na qualificação da tomada de
+decisões em educação” (FAIMER, 2023). É oferecido um programa de desenvolvimento docente de
+dois anos para educadores de profissões da saúde, com o objetivo de construir liderança na educação
+para melhorar a saúde. (Amaral et al., 2012).
+No cenário brasileiro, iniciativas como o Programa Nacional de Reorientação da Formação
+Profissional em Saúde (PRÓ-Saúde), promovido pelo Ministério da Saúde, investiu na reorientação da
+formação para atender às demandas do SUS por profissionais de saúde com formação mais
+humanista, socialmente comprometida, orientada ao conceito ampliado de saúde, com foco na atenção
+primária (Ferreira et al., 2012). O PRÓ-Saúde foi baseado em três eixos: orientação teórica, cenários de
+prática e orientação pedagógica (Ministério da Educação, 2007). Nesse mesmo contexto, em 2008, o
+Programa de Educação pelo Trabalho para a Saúde (PET Saúde) foi estabelecido com o objetivo de
+facilitar a capacitação, especialização no ambiente de trabalho, introdução às práticas profissionais,
+avanços e imersões. Este programa foi direcionado a profissionais, estudantes da área da saúde e
+usuários dos serviços de saúde, alinhando-se às demandas do Sistema Único de Saúde (SUS) no
+Brasil, desempenhando um papel significativo na capacitação de preceptores, buscando integrar teoria
+e prática para aprimorar a formação dos estudantes em saúde e a integração ensino-serviço-
+comunidade (Ministério da Saúde, 2010a).
+No âmbito das instituições de ensino, segundo Rodrigues (2020), a mais antiga estratégia
+identificada parece ser o Curso de Formação Pedagógica para Preceptores do Internato Médico da
+UFRJ – Universidade Federal do Rio de Janeiro, iniciado em 2006. É um curso que utiliza uma
+plataforma semipresencial e a distância, centrada nos eixos educação, trabalho e saúde, com módulos
+distribuídos ao longo de um mês. A partir de 2011, o curso ampliou sua abordagem para incluir
+profissionais de diversas áreas da saúde, indo além do âmbito exclusivo de seu hospital universitário.
+Posteriormente, outras instituições implementaram programas semelhantes, incluindo, em 2019, a
+Santa Casa de Belo Horizonte, cujo Programa de Desenvolvimento em Preceptoria (PRODEP) que será
+analisado na presente tese.
+2
+
+A avaliação de um programa educacional de desenvolvimento docente/preceptor é
+extremamente importante. Com efeito, tal como destacado por Nóvoa (1995): "a formação não se
+constrói por acumulação (de cursos, de conhecimentos ou de técnicas), mas, sim, através de uma
+reflexividade crítica sobre as práticas e de (re)construção permanente de uma identidade pessoal”.
+Tradicionalmente, a avaliação dos programas de desenvolvimento de professores tem seguido
+uma abordagem linear, na qual os participantes são impactados positivamente pelas atividades
+oferecidas, influenciando, por sua vez, o processo de ensino-aprendizagem dos aprendizes, refletindo-
+se diretamente na prestação de cuidados aos pacientes e na assistência à saúde de modo geral (Lieff,
+2010; O'sullivan & Irby, 2011). Na atualidade, os programas de desenvolvimento de
+docentes/preceptores estão seguindo uma tendência que se afasta do foco exclusivo no aprendizado
+individual do professor. Em vez disso, estão se expandindo para incluir o engajamento dos profissionais
+diretamente envolvidos no processo de ensino-aprendizagem nos contextos práticos em que ocorrem
+(O'sullivan & Irby, 2011).
+Essa abordagem centraliza a observação do ensino-aprendizagem em contextos reais,
+buscando identificar oportunidades de aprimoramento das habilidades e competências dos docentes
+nesses cenários específicos (Baker et al., 2018; O'sullivan & Irby, 2011).
+Barr et al., (2000) fizeram uma revisão crítica das avaliações da educação interprofissional. No
+estudo foram examinadas diversas avaliações de programas educacionais interprofissionais. Barr e sua
+equipe destacam a necessidade de uma abordagem crítica na avaliação desses programas,
+considerando não apenas os resultados imediatos, mas também os efeitos a longo prazo nas práticas
+profissionais e nos resultados dos cuidados de saúde, ressaltando ainda a complexidade da avaliação
+desses programas. Destaca-se ainda que na análise realizada houve predomínio de estudos baseados
+em dados quantitativos e de interpretação limitada, ressaltando a necessidade de mais estudos
+interpretativos e críticos (Barr et al., 2000).
+Dos diversos modelos de avaliação de programas educacionais e desenvolvimento docente
+descritos na literatura, o modelo proposto por Don Kirpatrick na década de 1950 é uma das
+ferramentas mais utilizadas e possui uma organização estrutural, representada em quatro níveis de
+avaliação (Kirkpatrick; Kirkpatrick, 2006):
+1) Reação - Avalia as opiniões imediatas dos participantes sobre o treinamento. A reação do
+treinamento é avaliada com base no objetivo atingido ou não, relevância do conteúdo do
+treinamento, o material didático utilizado, a carga horária, seus instrutores e os recursos
+3
+
+utilizados de maneira a oferecer informações valiosas aos responsáveis pelos treinamentos, a
+fim de melhorar suas próximas realizações.
+2) Aprendizado - Analisa o conhecimento, as habilidades e as atitudes adquiridas durante o
+treinamento. Papel importante de verificar se os conhecimentos oferecidos no treinamento
+foram de fato absorvidos, se houve melhorias nas habilidades dos participantes e se suas
+atitudes foram modificadas em função do conteúdo apresentado. Para Kirkpatrick, pelo menos
+um desses quesitos (conhecimentos, habilidades e atitudes) deve ser modificado para que a
+mudança de comportamento do participante no trabalho realmente aconteça.
+3) Comportamento - Verifica a aplicação prática do aprendizado no ambiente de trabalho. Esse nível de
+avaliação busca respostas para o que acontece depois que os participantes deixam as salas de
+aula e voltam a seus trabalhos. Ou seja, verifica se o participante, de volta ao seu posto de
+trabalho, coloca em prática o conteúdo aprendido.
+4) Resultados - Avalia os impactos finais do treinamento, como melhorias no desempenho
+organizacional, aumento da eficiência ou outros resultados tangíveis. Verifica se a aplicação do
+conteúdo no trabalho foi capaz de causar impactos positivos no resultado da organização. O
+nível de avaliação de resultados, segundo Kirkpatrick, é o mais importante e o mais difícil de
+realizar. Avaliar os resultados significa apurar que mudanças ocorreram nas organizações.
+No estudo realizado por Barr et al., (2000), foi reconhecido o valor do modelo de Kirkpatrick
+para resumir os resultados educacionais.
+4
+
+Figura 1 - Modelo de resultados educacionais de Kirkpatrick
+Fonte: Traduzido de Barr et al., (2000)
+Kirkpatrick e Kirkpatrick (2016), reforçam que a avaliação no modelo Kirkpatrick não é apenas
+sobre análises e métricas. É mais sobre o espírito humano por trás das medidas e a necessidade de
+uma interface humana consistente ao longo do caminho e o quanto deve estar presente em todas as
+fases do treinamento e desenvolvimento.
+Com uma sólida experiência em planejamento educacional na área de formação das profissões
+da saúde, minha trajetória profissional tem sido um catalisador para meu interesse contínuo na
+avaliação do desenvolvimento docente/preceptor no âmbito do ensino superior. Em vista disso, este
+estudo tem como propósito avaliar a contribuição do Programa de Desenvolvimento em Preceptoria
+(PRODEP), de acordo com os níveis de Kirkpatrick, considerando as turmas que concluíram o curso -
+2019 e 2022 - em um hospital de ensino no Brasil.
+Para fins deste estudo, o preceptor é considerado como o profissional que colabora com aprendizes
+em diferentes níveis de formação (graduandos ou pós graduandos) no desenvolvimento de
+competências específicas dentro de sua área, independentemente de possuir ou não o título de
+professor. A função de preceptoria é fundamentalmente educativa, pois o preceptor se envolve em
+atividades que capacitam futuros profissionais para a prática, muitas vezes integrando elementos
+teóricos nessas interações. Portanto, os termos “preceptor” e “docente” poderão ser utilizados de
+forma intercambiável, com o mesmo significado.
+5
+
+1.1 Desvendando a preceptoria na saúde: origens e desafios contemporâneos
+A figura do preceptor é reconhecida historicamente. Desde os tempos mais antigos, nas
+comunidades tribais primordiais, os indivíduos aspirantes à função de pajé eram escolhidos
+meticulosamente e submetidos a um treinamento especializado. A transmissão sobre a arte da cura, à
+semelhança do aprendizado de muitas outras profissões, se iniciou de maneira informal, por meio de
+um treinamento profissional orientado por um prático (Macedo,1999; Mattos, 1997& Botti & Rego,
+2008).
+A palavra preceptor vem do latim praecipio, "mandar com império aos que lhe são inferiores".
+Era aplicada aos mestres das ordens militares, mas, desde o século XVI (já aparece com este sentido
+em 1540) é usada para designar aquele que dá preceitos ou instruções, educador, mentor, instrutor.
+Mais tarde, passou a identificar alguém que educa uma criança ou um jovem, geralmente na casa do
+educando (Botti & Rego, 2008).
+O termo preceptor refere-se ao indivíduo que fornece orientações e instruções. É, portanto,
+aquele profissional que pauta seu ensino no compartilhamento de experiências com o objetivo de
+melhorar a competência clínica e ajudar o profissional em formação a se adaptar ao cotidiano da
+profissão (Botti, 2012). De acordo com o Ministério da Saúde do Brasil, a preceptoria consiste na
+supervisão docente-assistencial por área específica de atuação ou de especialidade profissional, que
+exerça atividade de organização do processo de aprendizagem especializado e de orientação técnica
+aos estudantes, em aperfeiçoamento ou especialização ou em estágio ou vivência de graduação ou de
+extensão (Portaria n. 1.111/GM, 2005).
+Na literatura, encontram-se diferentes funções para o preceptor, sendo essenciais as de
+orientar, dar suporte, ensinar e compartilhar experiências que melhorem a competência clínica e
+ajudem o graduando e o recém-graduado a se adaptar ao exercício da profissão (Stewart & Krueger,
+1996; Botti, 2012).
+Botti, (2012) destaca que a principal é: “ensinar a clinicar, por meio de instruções formais e
+com determinados objetivos e metas.” Nesse sentido, o preceptor se preocupa principalmente com a
+competência clínica e com os aspectos de ensino-aprendizagem do desenvolvimento profissional,
+favorecendo a aquisição de competências pelos aprendizes, em situações clínicas reais, no próprio
+ambiente de trabalho. É importante lembrar, ainda, que as avaliações formais fazem parte também da
+preceptoria (Botti, 2012; Armitage & Burnard 1991; Ricer., 1998; & Stuart-Siddal & Haberlin, 1985).
+6
+
+É uma função que atualmente cresce em importância, considerando o ambiente de trabalho
+em constante mudança, exigindo que os novos profissionais se adaptem constantemente, muitas vezes
+enfrentando desafios na reconfiguração de sua percepção desse cenário e no aproveitamento dos
+conhecimentos adquiridos durante a graduação (Botti, 2012). Neste contexto, cabe ao preceptor a
+responsabilidade de reduzir a lacuna entre a teoria e a prática (Botti, 2012; Bain, 1996 & Armitage &
+Burnard, 1991).
+As escolhas dos profissionais para atuarem como preceptores, geralmente, se baseiam nos
+méritos profissionais, o que significa que nem sempre os designados para essa função possuem
+preparo pedagógico para o processo de ensino-aprendizagem. Desse modo, na área médica, por
+exemplo, um bom professor seria um médico com boa reputação em sua especialidade, não
+importando sua competência como docente (Marins, 2011).
+Rocha e Ribeiro (2012) destacam, entretanto, que esse foco está mudando. O docente, seja
+ele um preceptor na área médica ou não, desempenha o papel crucial de não apenas transmitir
+conhecimento, mas também de ser um facilitador ativo da aprendizagem. Isso implica dominar
+estratégias de ensino ativas, explorar tecnologias educacionais e adotar uma abordagem de avaliação
+que não apenas motive o aprendiz, mas também seja um indicador da competência docente no
+processo de aprendizagem.
+No exercício da preceptoria, o profissional precisa ter domínio não apenas do conhecimento
+clínico, mas ser capaz de transformar a vivência do campo profissional em experiências de
+aprendizagem, associado ao conhecimento pedagógico (Ribeiro; Prado, 2014). Cabe ao preceptor não
+apenas desenvolver práticas que favoreçam o aprendizado, mas também proporcionar um clima de
+segurança para que os aprendizes possuam um aprendizado profundo e desenvolvam competências
+necessárias para a atuação profissional. Destaca-se a necessidade de preparação do preceptor para
+assumir a formação de profissionais devidamente capacitados para atender às necessidades da área
+da saúde e atendimento à população. O desenvolvimento das competências em preceptoria é
+fundamental para preparar e auxiliar os preceptores na realização das práticas de ensino em serviço.
+Ensinar envolve uma relação dialógica entre professor e aluno, onde ambos são ativos no
+processo educacional. Assim, ensinar significa criar oportunidades para que o aprendiz desenvolva sua
+capacidade de pensar criticamente, questionar, analisar e interpretar o mundo ao seu redor. Quem
+ensina aprende ao ensinar e quem aprende ensina ao aprender. Ensinar inexiste sem aprender e vice-
+versa (Freire, 2009).
+7
+
+Paula (2019) fez a revisão de 55 estudos sobre o papel do preceptor na formação profissional
+no contexto do SUS e destaca diversos pontos-chave: a emergência do preceptor como figura
+fundamental na reorientação do modelo de formação; sua função de acompanhar, supervisionar e
+ensinar os estudantes com base na realidade dos serviços; a necessidade de definir melhor seu papel
+e criar diálogo entre preceptores e instituições de ensino para fortalecer a integração ensino-serviço-
+comunidade. A demanda por capacitação pedagógica dos preceptores é destacada, juntamente com
+desafios como falta de preparação pedagógica e infraestrutura tecnológica. Reconhece-se o papel
+crucial dos preceptores na formação dos profissionais de saúde, valorizando sua atuação e
+institucionalizando seu papel. Destaca-se que a preceptoria humaniza as relações, aproxima
+estudantes, profissionais e usuários dos serviços e promove uma formação crítica-reflexiva dos
+profissionais de saúde, refletindo na qualidade da assistência prestada.
+O autor Fajardo (2011) em uma pesquisa realizada com preceptores de um programa de
+residência em área profissional da saúde, identificou quatro categorias para classificar as atividades por
+eles desempenhadas: administrativas, assistenciais, docentes e institucionais.
+Dependendo da área e do contexto de aprendizagem, a relação do preceptor pode variar
+bastante. Alguns atuam com estudantes de graduação e residentes, outros apenas com residentes.
+Alguns são especificamente contratados como preceptores, enquanto outros têm vínculos assistenciais
+e também desempenham essa função. Na medicina, preceptores, internos e residentes estão
+integrados organicamente no trabalho, seja na enfermaria, ambulatório ou emergência. Para outras
+áreas da saúde, a inserção varia. Essa distinção é crucial, já que afeta a forma como estudantes e
+profissionais da saúde vivenciam a aprendizagem nos serviços de saúde. Feuerwerker (2011), destaca
+que, “para os médicos, esse lugar da preceptoria é construído dentro da conformação das
+especialidades. No entanto, não acontece o mesmo com as outras profissões da saúde. A preceptoria é
+novidade, é uma coisa a mais, por fora da construção do itinerário da carreira profissional, e se mostra
+com características distintas.”
+Feuerwerker (2011) destaca ainda que a mediação desempenhada pelo preceptor é
+fundamental para criar atividades relevantes que beneficiem tanto os estudantes quanto as unidades
+de saúde. A tensão entre as responsabilidades assistenciais e docentes varia de acordo com a
+familiaridade do preceptor com essas funções. Quando o preceptor é um professor ou foi designado
+especificamente para o papel, mas não faz parte da equipe da unidade, os desafios envolvem
+estabelecer relações com a equipe e colaborar de maneira integrada. Essas tensões são inerentes ao
+papel do preceptor e variam de acordo com os arranjos e profissões envolvidas.
+8
+
+1.2 Os programas de residência
+Quando se fala em residência, naturalmente pode-se pensar em uma definição mais próxima
+daquilo que é familiar, associando-a a um lugar de habitação, ao invés de uma forma de educação.
+Porém, a palavra Residência possui diversos significados. Nos dicionários da língua portuguesa, entre
+outras definições, encontra-se casa ou lugar onde se reside, no sentido de moradia. A origem da
+modalidade de ensino denominada Residência está ligada ao significado de moradia, pois,
+historicamente, um dos requisitos básicos aos candidatos desse tipo de curso era o de residir na
+instituição onde se desenvolvia o programa de formação em serviço (Ministério da Saúde, 2010b).
+Atualmente, os programas de Residência não exigem que os residentes morem no local do
+curso, mas ainda é um critério requerido que se dedique integralmente. Isso mantém a ideia de que a
+aprendizagem do residente deve ocorrer principalmente na instituição de saúde que oferece esse tipo
+de ensino (Ministério da Saúde, 2010b).
+Os programas de residência/especialização em saúde consistem em formação lato sensu
+fundamentados na educação no trabalho e o processo de ensino-aprendizagem acontece no serviço,
+articulando teoria e prática. Nesse contexto, o preceptor e o residente compartilham o ensinar e
+aprender, a partir da troca de experiências, reflexões sobre a prática e (re) construção do conhecimento
+em cenários reais da atenção à saúde (Ribeiro; Prado, 2014). É um modelo educacional, no qual os
+aprendizes aprofundam conhecimentos e melhoram habilidades e atitudes; ou seja, desenvolvem
+competências específicas para um melhor cuidado. O treinamento em serviço articula ensino e
+aprendizagem de forma coesa. (Michel et al., 2011).
+A implementação da Residência Médica como um método de formação de profissionais na
+área médica teve origem nos Estados Unidos durante meados do século XIX. Em 1848, o Conselho de
+Hospitais e Ensino Médico da Associação Médica Americana expressou, por meio de uma resolução,
+seu apoio a um sistema de instrução médica centrado no ensino clínico e na utilização da
+infraestrutura hospitalar para a formação. Esse momento marcou o início de uma abordagem
+inovadora na capacitação de recursos humanos na área médica, enfatizando o ensino prático em
+ambiente hospitalar e o desenvolvimento profissional através do treinamento em serviço. (Michel et al.,
+2011; Feuerwerker, 1997).
+O modelo de residência médica rapidamente se disseminou para outros hospitais nos Estados
+Unidos e, posteriormente, para outros países ao redor do mundo. Esse sistema ofereceu uma
+9
+
+oportunidade para médicos recém-formados aprimorarem suas habilidades clínicas, adquirirem
+experiência prática e se especializarem em uma área específica da medicina.
+Ao longo do tempo o conceito de residência médica evoluiu, adaptando-se às mudanças nas
+práticas médicas, nos avanços tecnológicos e nas demandas da sociedade. No final do século XX,
+muitos países já haviam estabelecido sistemas formais de residência médica em diversas
+especialidades, expandindo o modelo também para outras áreas profissionais e organizações de saúde
+desempenhando um papel importante na padronização e regulamentação desses programas.
+1.2.1 Residência médica no Brasil
+No Brasil, a Residência Médica iniciou, influenciada pelo modelo americano, que priorizava o
+treinamento técnico em hospitais, refletindo a clínica tradicional predominante na área da Saúde
+(Ministério da Saúde, 2010b). A implantação aconteceu quase simultaneamente no Rio de Janeiro e
+em São Paulo. O primeiro programa oficial ocorreu no Departamento de Ortopedia da USP em 1944,
+seguido por um programa no Hospital dos Servidores do Estado do Rio de Janeiro, em 1948 (Michel et
+al., 2011; Feuerwerker,1997).
+Inicialmente, a residência não era considerada necessária para a formação profissional, era
+vista como um caminho de exceção e restrito a hospitais públicos tradicionais ou restritos a
+universidades públicas. A maioria dos graduados em medicina seguia um modelo profissional liberal,
+trabalhando em consultório próprio, com apenas cerca de 10% optando pela residência. Na década
+seguinte, a residência médica ganhou mais adesão entre os graduados, visto como uma especialização
+necessária para o aprimoramento profissional. O estágio hospitalar (internato) tornou-se obrigatório na
+formação médica. Além disso, houve uma expansão dos programas de residência para instituições
+privadas (Botti, 2009).
+A Comissão Nacional de Residência Médica (CNRM) foi criada em 5 de setembro de 1977,
+pelo decreto presidencial 80.281, com o objetivo de regulamentar essa modalidade de ensino no País,
+atendendo à demanda dos médicos residentes que organizavam um movimento nacional. Esse marco
+regulamenta a residência médica não apenas como um aspecto educacional, mas também como uma
+questão social e de trabalho. A criação da CNRM iniciou um período de elaboração intensa de normas
+e regulamentações sobre os aspectos sociais, de trabalho e de ensino da residência médica (Botti,
+2009).
+10
+
+Nos anos 70, o país testemunhou dois movimentos significativos: por um lado, na esfera
+educacional, a disseminação da abordagem de alfabetização de adultos promovida por Paulo Freire,
+enfatizando-a como um processo de conscientização, engajamento histórico, transformação da
+realidade e emancipação. Por outro lado, na área da Saúde, emergiu o movimento da Reforma
+Sanitária. Resultou na promulgação da Constituição de 1988, que consagrou a saúde como um direito
+de todos e um dever do Estado, atribuindo ao Sistema Único de Saúde (SUS) a responsabilidade pela
+organização da formação de profissionais de saúde (Constituição da República Federativa do Brasil,
+1988; Medeiros, 2015).
+Os acontecimentos da Reforma Sanitária Brasileira, Constituição de 1988, criação do SUS em
+1990, dentre outros, provocaram impactos na formação profissional em saúde. Destaca-se a
+necessidade de reformulação das práticas de saúde, promovendo a integralidade do cuidado, a
+horizontalidade nas relações e a autonomia dos indivíduos na construção de seus projetos terapêuticos.
+Esse movimento desloca o poder dos profissionais de saúde, buscando práticas mais colaborativas e
+dialógicas entre usuários, equipes de saúde e serviços, rompendo com o modelo médico-centrado,
+intervencionista e medicamentoso. Assim, a abordagem no cuidado, além da cura, demanda novas
+competências profissionais (Pereira et al, 2018).
+Há estudos que dividem a história da residência médica em dois períodos. O primeiro, que se
+estende de 1947-48 a 1977-78, abrange os primeiros programas de residência e a luta pela
+regulamentação dessa prática. O segundo período, de 1977-78 a 2007-08, é caracterizado pelo
+decreto e a formalização da residência médica (Michel et al., 2011.
+Outros estudos classificam a residência em quatro períodos distintos:
+ Primeiro (até 1955): definição inicial e estabelecimento de programas com poucos
+graduados buscando essa formação.
+ Segundo (1956 a 1971): expansão gradual dos programas, principalmente em instituições
+oficiais, acompanhando a procura crescente de médicos recém-formados.
+ Terceiro (a partir de 1972): rápida expansão dos programas devido ao aumento no número
+de escolas médicas, levando à criação de residências de qualidade variada, algumas
+focadas em mão de obra médica de baixo custo.
+ Quarto (iniciando em 1977): criação da Comissão Nacional de Residência Médica (CNRM)
+para regulamentar a residência médica como modalidade de pós-graduação em nível
+nacional. (Sousa, 2021).
+11
+
+O principal marco legal da residência médica é a lei 6.932, de 7 de julho de 1981, proclamada
+após o decreto nº 80.281, de 5 de setembro de 1977, que regulamentou a residência médica e criou a
+Comissão Nacional de Residência Médica (CNRM). A lei 6.932 “define a residência médica como
+modalidade de ensino de pós-graduação destinada a médicos, sob a forma de cursos de
+especialização, caracterizada por treinamento em serviço, funcionando sob a responsabilidade de
+instituições de saúde, universitárias ou não, com a orientação de profissionais de elevada qualificação
+ética e profissional.” Esta lei, por meio de seus artigos, estabelece as regras gerais de funcionamento
+da residência médica e assegura os direitos dos médicos residentes. Desde então, os programas de
+residência médica precisam ser oficialmente aprovados pela CNRM, após cumprir os requisitos atuais
+e oferecer uma bolsa de estudos com um valor mínimo estipulado por lei. O decreto 91.364, datado de
+21 de junho de 1985, estabelece novos parâmetros para a composição e o funcionamento da CNRM,
+uma entidade consultiva vinculada à Secretaria de Ensino Superior (Sesu) do Ministério da Educação.
+(Michel et al., 2011)
+A Comissão Estadual de Residência Médica (cerem), subordinada à CNRM, foi criada a partir
+da resolução CNRM/Sesu/MEC nº 15, de 6 de abril de 1987, tendo como principal atribuição
+recepcionar e sindicar os assuntos de residência médica nos estados. Ela, portanto, facilita o trânsito
+de informações e o controle da residência médica. Idealmente, busca identificar as especificidades da
+formação médica especializada em cada unidade da federação. Nos locais de funcionamento dos
+programas, devem-se constituir as Comissões de Residência Médica (Coreme), formadas por
+representantes dos médicos residentes e dos supervisores dos programas. As Coreme representam a
+unidade institucional de controle e desenvolvimento da residência médica no sistema. As Coremes
+devem ter regimento próprio, porém desenhados e com funcionamento de acordo com as
+determinações da CNRM. (Michel et al., 2011)
+12
+
+Figura 2 - Hierarquia de regulação, supervisão e avaliação da Residência Médica no Brasil.
+Fonte: Nunes, (2011)
+Cabe ao Ministério da Educação (MEC), como responsável pelo segmento de pós-graduação, o
+papel de regular, supervisionar e avaliar instituições e programas de residência médica. “Segundo
+Decreto Presidencial nº. 7.5629 de 15 de setembro de 2011, a CNRM é instância colegiada de caráter
+consultivo e deliberativo do Ministério da Educação que tem a finalidade de regular, supervisionar e
+avaliar as instituições e os programas de residência médica” (Michel et al., 2011 & Nunes et al., 2011)
+As instituições e os programas de residência médica são avaliados usando instrumentos
+padronizados para coletar dados. Isso inclui entrevistas estruturadas com dirigentes, coordenadores da
+Comissão de Residência Médica (Coreme), supervisores do programa, preceptores, residentes e
+profissionais de saúde. Além disso, há visitas presenciais aos locais de treinamento e atendimento para
+verificar a infraestrutura física e os recursos disponíveis. Não há, contudo, um procedimento instituído
+de avaliação do corpo docente da residência médica. (Nunes et al., 2011).
+O lançamento do Programa Nacional de Apoio à Formação de Médicos Especialistas - Pró-
+Residência, em outubro de 2009, representa um ponto de referência na criação e aplicação de uma
+política pública voltada para estimular a formação especializada de médicos, levando em consideração
+as demandas de saúde no país. (Nunes et al., 2011)
+A Residência Médica integra formação e prática, sendo mais do que um programa isolado de
+especialização. É essencial que as dimensões de formação e prática se desenvolvam em equilíbrio para
+garantir um sistema de educação na saúde saudável, evitando o afastamento do conhecimento das
+necessidades reais ou a exploração excessiva do trabalho em detrimento do aprendizado
+supervisionado. (Nunes et al., 2011)
+13
+
+Figura 3 - Dimensões da Residência Médica - Política e Educativa
+Fonte: Nunes et al., (2011)
+Devido à sua conexão direta com o sistema de saúde e o ambiente de trabalho, a residência
+médica se entrelaça e precisa estar alinhada com as políticas de saúde pública e as demandas da
+sociedade. (Nunes et al., 2011)
+1.2.2 Residência multiprofissional no Brasil
+A Residência Multiprofissional em Saúde teve sua origem em 1976 na Escola de Saúde Pública
+do Rio Grande do Sul (ESP/RS), ligada à Secretaria Estadual de Saúde. O programa inaugural ocorreu
+no Centro de Saúde Escola Murialdo, em Porto Alegre. Intitulada Residência Integrada em Saúde
+Coletiva, essa nova abordagem de formação em saúde foi implementada na atenção básica,
+oferecendo um currículo unificado para assistentes sociais, enfermeiros, médicos e médicos
+veterinários (Uebel; Rocha & Mello, 2003).
+Somente em 2005 que a Residência Multiprofissional teve sua regulamentação estabelecida
+com a promulgação da Lei nº 11.129. A Comissão Nacional de Residência Multiprofissional em Saúde
+(CNRMS) foi prevista pela Portaria Interministerial MEC/MS Nº 2.117, de 2005 e criada dois anos
+depois. Sua instituição foi regulamentada pela Portaria Interministerial MEC/MS nº 45/2007. Essa
+portaria foi substituída pela Portaria Interministerial nº 1.077/2009. (Portaria Interministerial nº 1.077,
+2009)
+Inspiradas na tradição da residência médica, as residências multiprofissionais e em área
+profissional da saúde abrangem diversas profissões, como Biomedicina, Ciências Biológicas, Educação
+Física, Enfermagem, Farmácia, Fisioterapia, Fonoaudiologia, Medicina Veterinária, Nutrição,
+14
+
+Odontologia, Psicologia, Serviço Social e Terapia Ocupacional (Portaria n. 1.111/GM,2005; Ministério
+da Saúde, 2009). Houve alterações pela Portaria Interministerial 1.224/2012 e, atualmente, encontra-
+se vigente a Portaria Interministerial MEC/MS nº 7, de 16 de setembro de 2021, que dispõe sobre a
+estrutura, a organização e o funcionamento da Comissão Nacional de Residência Multiprofissional em
+Saúde – CNRMS de que trata o art. 14 da Lei nº 11.129, de 30 de junho de 2005, e institui o
+Programa Nacional de Bolsas para Residências Multiprofissionais e em Área Profissional da Saúde.
+Totalmente reformulada, a Comissão realizou treze plenárias, quando foram aprovadas normativas por
+meio de Resoluções, como os Regimentos das Comissões Descentralizadas Multiprofissionais de
+Residência (CODEMU) e das Câmaras Técnicas, e a primeira matriz de competências de um Programa
+de Residência em Área Profissional da Saúde. (Lei nº 11.129, 2005; Ministério da Saúde, 2023).
+Entre suas atribuições, a CNRMS tem o papel de regulamentar critérios para credenciamento
+de instituições formadoras e unidades de saúde, aprovar os programas de residência propostos,
+determinar a carga horária e conteúdos mínimos exigidos para cada área de atuação, além de avaliar e
+credenciar as instituições de saúde para a realização dos programas.
+De acordo com o art. 13 da Lei nº 11.129 que criou a Residência Multiprofissional e em Área
+Profissional da Saúde, esta modalidade de Residência se constitui como de ensino de Pós-Graduação
+Lato Sensu, voltada para a Educação em Serviço e destinada às categorias profissionais que integram
+a área de saúde, exceto médicos. Conforme estabelecido pelo MEC, as Residências Multiprofissional e
+em Área Profissional da Saúde são uma ação voltada para educação em serviço, orientadas pelos
+princípios e diretrizes do SUS, a partir das necessidades e realidades locais e regionais, abrangendo as
+diversas profissões da área da saúde. (Ministério da Saúde, 2023)
+Em consonância com os princípios e diretrizes do Sistema Único de Saúde (SUS), de acordo
+com a Portaria Interministerial nº 1.077 de 12 de novembro de 2009, são uma colaboração entre
+instituições de formação e gestores, visando a inserção qualificada de jovens profissionais em áreas
+prioritárias do sistema de saúde. Eles devem ser desenvolvidos considerando a realidade local,
+incluindo modelo de gestão, necessidades regionais e compromisso com os objetivos da Residência em
+Saúde. (Portaria Interministerial nº 1.077, 2009)
+Os autores Martins et al., (2010) destacam que a residência multiprofissional em saúde possui
+dois principais objetivos: aprimorar a formação de profissionais da saúde e promover mudanças
+significativas alinhadas com o Sistema Único de Saúde (SUS), visando um atendimento integral. As
+autoras também ressaltam a diversidade existente nos programas no Brasil, abrangendo diferentes
+15
+
+cenários de prática, metodologias, natureza das instituições de ensino ou serviço (pública, privada,
+filantrópica) e a qualificação dos preceptores, entre outros aspectos.
+1.3 Educação na saúde: abordagens pedagógicas e desenvolvimento profissional
+A Educação em Serviço na área da saúde é um componente vital na formação de profissionais
+capacitados e atualizados para lidar com os desafios complexos do setor. Este método educacional
+destina-se a fornecer experiências práticas e aprofundadas, integrando teoria e prática para o
+aprimoramento contínuo dos profissionais de saúde.
+Segundo Paschoal, Mantovani e Méier et al., (2007) a Educação em Serviço é uma prática
+educativa que se integra ao processo de educação no ambiente de trabalho, caracterizando-se como
+um processo aplicado nas interações humanas laborais. Seu objetivo primordial é o desenvolvimento
+das capacidades cognitivas, psicomotoras e relacionais dos indivíduos, buscando, ao mesmo tempo,
+aprimorar suas habilidades em resposta aos avanços tecnológicos. Dessa forma, a Educação em
+Serviço não apenas contribui para o aprimoramento profissional, mas também para o fortalecimento
+institucional, valorizando tanto o indivíduo quanto a organização em que está inserida
+Para melhor compreensão é importante fazer a distinção entre "Educação em Saúde" e
+"Educação na Saúde". Tomando como base estudo de Nogueira et al., (2022) que utilizou artigos
+científicos, documentos legais do Ministério da Saúde brasileiro, livros e literatura dos últimos 20 anos
+e abordou questões sobre as diferenças entre "Educação em Saúde" e "Educação na Saúde". A
+Educação em Saúde é definida como “o processo educativo que objetiva a apropriação de temas
+relacionados à Saúde pela população” e Educação Na Saúde como “produção e sistematização de
+conhecimentos relativos à formação e ao desenvolvimento para a atuação em saúde, envolvendo
+práticas de ensino, diretrizes didáticas e orientação curricular”. Esta compreende a formação técnica, a
+graduação, a Educação Continuada e a Educação Permanente.
+A Educação Continuada ocorre por meio de experiências, vivências, educação formal,
+participação institucional ou externa após a graduação. É uma estratégia que se concentra no
+desenvolvimento profissional através de cursos sequenciais, com duração definida, visando grupos
+específicos de profissionais em determinado campo, como é o caso dos programas de residência
+médica e multiprofissional.
+No entanto, devido à natureza subjetiva do trabalho em Saúde, é essencial que os profissionais
+possuam formação qualificada, competências e habilidades para responder às necessidades
+16
+
+emergentes. Assim, Nogueira et al., (2022), destacam a Educação Permanente na Saúde “como uma
+prática da Educação na Saúde cuja ação educativa está baseada na problematização do trabalho em
+Saúde, tendo por finalidade transformar as práticas profissionais e a própria organização do
+trabalho…”. Baseada na aprendizagem significativa e na mudança das práticas profissionais, a
+Educação Permanente se fundamenta na autonomia, cidadania e subjetividade dos envolvidos,
+enfatizando a aprendizagem para, pela e na prática. Isso assegura que os profissionais não apenas
+mantenham, mas também ampliem suas competências.
+A base teórica e metodológica das práticas educativas é essencial para compreender e
+fundamentar adequadamente a Educação Permanente. Nogueira et al., (2022), enfatizam que para
+identificar a abordagem pedagógica que fundamenta a Educação Permanente, é crucial considerar
+suas bases teóricas e metodológicas. Dentre as diversas classificações dos modelos pedagógicos
+propostos por autores como Libâneo (1990), Mizukami (1986) e Luckesi (2011), destaca-se a
+importância de reconhecer a abordagem sociocultural difundida por Paulo Freire nos anos 1960. A
+abordagem sociocultural, promovida por Freire, enfatiza uma educação problematizadora, buscando
+desenvolver a consciência crítica e a liberdade dos envolvidos. Esta abordagem se baseia em uma
+relação horizontal entre aluno e professor, utilizando o diálogo como ferramenta para transformar
+ideologias dominantes, valorizando a linguagem e a cultura.
+A Educação Permanente se destaca por ser uma proposta pedagógica e metodológica que
+estimula a transformação da realidade ao fomentar o questionamento e a desacomodação. Além disso,
+como proposta político-pedagógica na educação e formação em saúde, promove descentralização,
+ascensão e abordagem transdisciplinar, contribuindo para a democratização institucional e o constante
+aprimoramento da qualidade do cuidado em saúde. Nogueira et al., (2022) definem que a
+problematização, enquanto estratégia norteadora da Educação Permanente, tem como ponto de
+partida para a produção do conhecimento a análise crítica do cotidiano, a horizontalidade entre
+educador e educando, a prática dialógica e o conceito de aprendizagem significativa. Além disso, as
+metodologias ativas são reconhecidas como um modelo de formação profissional mais condizente com
+os princípios e necessidades de saúde, “apresentando métodos que se ancoram na pedagogia crítica e
+que se utilizam de situações-problema para a aquisição de conhecimentos e habilidades.” Dessa
+forma, essa abordagem educacional valoriza a aprendizagem significativa e a aprendizagem
+experiencial como uma estratégia chave para a evolução das práticas profissionais.
+A aprendizagem significativa, proposta por David Ausubel, um psicólogo e educador
+americano, destaca a importância de relacionar novos conhecimentos com o que já está presente na
+17
+
+estrutura cognitiva do indivíduo. Isso implica que a nova informação deve ser integrada de maneira
+lógica e coerente com os conhecimentos prévios do aprendiz. Quando alguém é capaz de conectar os
+novos conhecimentos com conceitos familiares e relevantes, essa aprendizagem se torna mais
+significativa e duradoura. Esse processo envolve uma compreensão profunda e uma aplicação prática
+dos conceitos aprendidos. (Ausubel, 1982).
+Romão et al., (2021) defendem que a teoria da aprendizagem experiencial se aplica
+perfeitamente ao contexto da aprendizagem em serviço, caracterizada pelos programas de residência.
+Seus princípios auxiliam na compreensão do processo de aprendizagem a partir da prática, assim
+como na formação da identidade profissional. Estes autores apresentam a aprendizagem experiencial
+como “a construção de conhecimento e significado a partir de experiências da vida real. Um
+importante teórico da aprendizagem experiencial é o educador norte-americano David A. Kolb. Sua
+teoria, desenvolvida em 1984, destaca a significativa contribuição da experimentação pessoal no
+processo de adquirir habilidades profissionais. Kolb enfatiza que o desenvolvimento dessas habilidades
+demanda a integração entre o conhecimento teórico e o conhecimento experiencial.
+Ambas as abordagens são valiosas e, muitas vezes, complementares. A aprendizagem
+significativa busca a conexão entre conhecimentos anteriores e novos, enquanto a aprendizagem
+experiencial enfatiza a importância da prática e da reflexão para uma compreensão mais profunda.
+Juntas, essas abordagens podem enriquecer e aprimorar o processo de aprendizagem, tornando-o
+mais significativo, prático e duradouro.
+Dado que os residentes são adultos, a especialização é otimizada quando orientada pelos
+princípios da andragogia, como responsabilização pelo próprio aprendizado, motivação consciente,
+percepção da necessidade, aplicabilidade do tema estudado e valorização das experiências anteriores.
+Considerando que a andragogia é um termo que se refere à ciência e arte de educar adultos. A palavra
+"andragogia" foi cunhada por Malcolm Knowles na década de 1960 e desde então tem sido
+amplamente utilizada no campo da educação de adultos, tendo como princípios: (Taylor & Hamdy,
+2013)
+1. Autodireção: Os adultos tendem a assumir a responsabilidade pelo próprio aprendizado,
+participando ativamente na definição de objetivos educacionais e métodos de ensino.
+2.Experiência prévia: Valorização da bagagem de experiências anteriores dos adultos, que são
+recursos valiosos para conectar novos conhecimentos e tornar a aprendizagem mais
+significativa.
+18
+
+3.Relevância: A aprendizagem é mais eficaz quando os adultos percebem sua aplicabilidade
+direta em suas vidas pessoais ou profissionais, buscando conhecimento que possa ser
+imediatamente utilizado.
+4. Orientação para o problema: Adultos estão mais motivados a aprender quando o ensino está
+centrado na resolução de problemas práticos e situacionais do mundo real.
+5. Respeito: Reconhecimento da maturidade dos adultos, suas experiências e opiniões,
+proporcionando um ambiente de aprendizagem seguro e que valoriza suas contribuições
+individuais.
+Taylor e Hamdy (2013) destacam a importância de integrar a reflexão na prática clínica diária,
+incentivando os profissionais a analisar criticamente suas ações enquanto as executam. Além disso,
+ressalta a relevância da reflexão após as experiências clínicas para promover uma aprendizagem mais
+significativa e uma prática mais eficaz.
+A Teoria da Prática Reflexiva de Donald Schön é uma abordagem importante no campo da
+educação e do desenvolvimento profissional. Ele introduziu o conceito de "reflexão na ação" e "reflexão
+sobre a ação" para compreender como os profissionais lidam com situações complexas e incertas em
+seu trabalho diário.
+Os programas de residência em saúde, apesar de terem autonomia para propor processos
+pedagógicos específicos, com diferentes lógicas organizacionais, devem seguir regulamentações da
+Comissão Nacional de Residência Médica (CNRM) e da Comissão Nacional de Residência
+Multiprofissional (CNRMS), órgãos vinculados ao Ministério da Educação (MEC). Essas entidades
+contam com representação governamental, profissional e dos próprios programas de residência,
+incluindo coordenadores, preceptores, tutores e residentes. As normas propostas por essas comissões
+incluem a formação de um corpo docente-assistencial, Núcleo Docente-Assistencial Estruturante
+(NDAE), COREME e Comissão de Residência Multiprofissional em Saúde (COREMU). Essas estruturas
+abrangem diferentes profissionais, como preceptores dos serviços, tutores das instituições de ensino,
+docentes, orientadores de serviço, orientadores de trabalhos de conclusão e supervisores especialistas,
+contribuindo com todos com suporte clínico e educacional especializado para os residentes (Pereira et
+al., 2018).
+A elaboração da matriz de competências é uma responsabilidade dos coordenadores dos
+programas de residência, em conformidade com as diretrizes estabelecidas pelos órgãos reguladores.
+A matriz de competências dos programas de residência é uma ferramenta que organiza e explicita as
+habilidades e conhecimentos que os residentes devem adquirir ao longo do programa de formação.
+19
+
+Essa matriz serve como um guia para estruturar o currículo da residência, garantindo que os
+profissionais em formação desenvolvam competências específicas para atuar em determinada
+especialidade ou área multiprofissional.
+De acordo com Perrenoud e Thurler (2002), “competência é a capacidade de mobilizar e
+integrar conhecimentos, habilidades e atitudes para resolver problemas num contexto profissional
+específico”. Conforme Santos (2011), no currículo por competências, os resultados a serem obtidos ou
+alcançados, dirigem o processo educacional. Assim, primeiramente se definem os resultados, depois
+os processos necessários para alcançá-los.
+Desde a década de 1990, o Royal College of Physicians and Surgeons of Canada desenvolveu
+uma estrutura de competências para a educação médica. Tais competências foram inicialmente
+estabelecidas como objetivos para a graduação em medicina, mas posteriormente também aplicáveis a
+treinamentos de médicos especialistas. (Frank, 2005; Frank, Snell & Sherbino, 2015).
+Segundo Delbone e Moura (2022), as Entrustable Professional Activities (EPAs), introduzidas
+por Olle ten Cate no início do século XXI, constituem uma ponte entre a educação baseada em
+competências e a aprendizagem nos serviços de saúde, com o objetivo de avaliar o que é essencial
+para o exercício profissional. Essas atividades são caracterizadas pelo seu alinhamento com as práticas
+diárias dos profissionais de saúde, demandando a mobilização de diversas competências. Em resumo,
+a realização de uma EPA representa o ápice da educação baseada em competências, pois implica na
+aplicação das competências adquiridas ao longo da formação para desempenhar atividades
+profissionais específicas.
+Ten Cate (2005) define o conceito de EPAs como atividades profissionais que podem ser
+delegadas a um aprendiz quando este demonstra as competências necessárias para realizá-las sem
+supervisão. Os níveis de autonomia para uma EPA variam de 1 a 5:
+Nível 1 - o aprendiz pode somente observar a realização da EPA pelo supervisor/preceptor;
+Nível 2 - o aprendiz pode realizar a EPA com supervisão direta do supervisor/preceptor;
+Nível 3 - o aprendiz pode realizar a EPA com supervisão reativa do supervisor/preceptor;
+Nível 4 - o aprendiz pode realizar a EPA sem supervisão;
+Nível 5 - o aprendiz pode supervisionar a realização da EPA por novatos.
+A avaliação da autonomia do aprendiz em relação a uma EPA é feita com base no
+desempenho acumulado ao longo do tempo, sendo conduzida por meio de observações diretas e
+Feedback imediato de supervisores/preceptores. Ao longo do período de formação, o aprendiz é
+avaliado em diversas ocasiões, em diferentes situações clínicas, permitindo a coleta de Feedbacks
+20
+
+detalhados sobre seu desempenho nas EPAs. Essa compilação de Feedbacks é registrada,
+posteriormente avaliada e a EPA certificada para um determinado nível de autonomia por um Comitê
+de Competências Clínicas - CCC, composto por supervisores/preceptores e outros representantes do
+programa educacional.
+Esse contexto reforça a importância do desenvolvimento de habilidades pedagógicas nos
+serviços que servem como ambientes de prática para residências. Dessa forma, a formação de
+preceptores e tutores tornou-se uma prioridade para as instituições de ensino que oferecem programas
+de residência (Pereira et al., 2018).
+Ao considerar a complexidade do campo da Educação na Saúde, é essencial refletir sobre a
+interseção entre duas esferas distintas: Saúde e Educação. A Saúde, por sua natureza dinâmica e
+multidisciplinar, demanda profissionais capacitados e reflexivos, capazes de enfrentar desafios
+complexos e promover a excelência no cuidado. Por outro lado, a Educação, com suas teorias e
+metodologias, desempenha um papel crucial na formação desses profissionais, proporcionando
+experiências práticas, fomentando o questionamento crítico e a aprendizagem ao longo da vida.
+21
+
+2 OBJETIVOS
+2.1. Objetivo geral
+ Avaliar a contribuição do "Módulo Básico” do programa de desenvolvimento em preceptoria -
+PRODEP para a formação de preceptores de um hospital de grande porte do Brasil.
+2.2 Objetivos específicos
+ Analisar a percepção dos preceptores do impacto do PRODEP sobre a aquisição de
+competências docentes.
+ Identificar as potencialidades e desafios de um programa de capacitação voltado para a
+preceptoria.
+ Analisar a percepção dos preceptores sobre o impacto da capacitação em seu
+comportamento.
+22
+
+3 METODOLOGIA
+Considerando os propósitos da pesquisa e as características do tema em estudo, o método de
+pesquisa adotado é de caráter misto, qualitativo e quantitativo. Numa primeira fase procurou-se
+quantificar, através de questionários estruturados com perguntas cuja resposta era uma escala de
+Likert (1 a 5), as impressões dos participantes acerca do curso e do impacto do mesmo na sua prática.
+Na segunda fase, utilizaram-se métodos qualitativos para explorar os motivos e o significado daquelas
+avaliações e compreender melhor os processos e práticas avaliados.
+Segundo Câmara (2013), a utilização de procedimentos mistos em pesquisas sociais é
+bastante usual, pois permite a apreensão do fenômeno e do objeto de estudo por prismas, por vezes,
+distintos. Com a utilização de instrumentos quantitativos ganha-se em generalidade e perdem-se
+especificidades; identifica-se o visível, mas não se sabe o que está por trás dele; obtém-se a objetivação
+e não se apreende o processo de subjetivação mais completo.
+Sobre a pesquisa qualitativa, esta não busca primariamente quantificar, mas sim compreender
+e explicar os aspectos intrincados das relações sociais, considerando fundamentais e resultantes da
+atividade humana, que abrangem aspectos criativos, afetivos e racionais. Essa compreensão é obtida
+por meio da observação do cotidiano, da experiência vivencial e da explicação do conhecimento
+comum. A pesquisa qualitativa trabalha com o universo dos significados, motivos, aspirações, crenças,
+valores e atitudes, o que corresponde a um espaço mais profundo das relações, dos processos e dos
+fenômenos que não podem ser reduzidos à operacionalização de variáveis (Minayo, 1992).
+O percurso metodológico utilizado buscou detalhar o contexto, os sujeitos participantes, assim
+como a descrição da coleta e a análise dos dados que seguem abaixo.
+3.1 Local de estudo
+A pesquisa foi realizada na Santa Casa de Belo Horizonte e envolveu os profissionais que
+concluíram o PRODEP, nos anos de 2019 e de 2022, e atuam na preceptoria de profissionais de saúde
+em formação.
+A Santa Casa de Belo Horizonte - SCBH é o maior hospital filantrópico 100% SUS do Brasil,
+fundado em 21 de maio de 1899 e há mais de 120 anos é referência em atenção e promoção à saúde
+para todo o estado de Minas Gerais, ocupando posição de destaque também no cenário nacional, com
+mais de 1.000 leitos. Assim como protagoniza uma atuação secular no cuidado em saúde, a SCBH
+23
+
+também é pioneira na formação de profissionais de saúde, sendo mantenedora de um dos maiores
+conjuntos de Programas de Residência e Especialização Médica do Brasil, com 39 especialidades;
+Programa de Residência e Especialização Multiprofissional; além de sediar estágios curriculares
+supervisionados de cursos da área da saúde (Faculdade Santa Casa BH, 2021).
+A Residência Multiprofissional, credenciada pela CNRMS, tem um programa no Eixo de Terapia
+Intensiva adulto, compreendendo a Psicologia, Farmácia, Enfermagem e Nutrição. Os programas de
+especialização multiprofissional contemplam os seguintes eixos: Terapia Intensiva adulto nas áreas
+profissionais de: Enfermagem, Farmácia, Nutrição, Fisioterapia e Odontologia; Terapia Intensiva
+neonatal e pediátrica nas áreas profissionais de: Enfermagem, Fisioterapia, Nutrição e Psicologia.
+3.1.1 A organização do PRODEP
+A Faculdade de Saúde Santa Casa BH, credenciada pelo MEC em 2019, é a responsável pela
+gestão educacional dos programas de estágio e residência médica e multiprofissional da Santa Casa
+BH. Em sua estrutura organizacional foi instituído o NEDUC - Núcleo de Estudos e Desenvolvimento em
+Educação na Saúde da Faculdade Santa Casa de BH que é um órgão assessor da Superintendência
+Acadêmica, de natureza interprofissional, com finalidade de apoio ao ensino e tem entre seus objetivos,
+conforme previsto no PDI - Plano de Desenvolvimento Institucional: Conduzir os Programas
+Institucionais de Desenvolvimento Docente (PRODED) e de desenvolvimento de preceptores (PRODEP).
+O PRODEP é um programa institucional permanente. Busca desenvolver continuamente os
+preceptores da Faculdade de Saúde Santa Casa BH em sua jornada como educadores, por meio de
+oficinas, workshops, cursos online, materiais de aprendizagem e orientações pedagógicas. Os
+programas possuem como objetivo desenvolver preceptores para (Faculdade Santa Casa BH, 2021):
+I. Usar metodologias de ensino-aprendizagem adequadas aos diferentes perfis geracionais com
+os quais irá se relacionar, favorecendo o engajamento ativo dos estudantes no processo de
+busca e construção do conhecimento.
+II. Utilizar diferentes modalidades de avaliação de desempenho do estudante, nos âmbitos
+formativo e somativo.
+III. Realizar planejamento educacional norteado pelas EPAs (Atividades Profissionais Confiáveis)
+centrais do currículo e baseado em competências essenciais.
+24
+
+IV. Desempenhar os diferentes papéis do docente/preceptor, ou seja, facilitador, mentor, modelo,
+provedor de conhecimento, avaliador, gestor e produtor de material instrucional, conforme
+descrito por Ronald Harden.
+V. Utilizar o método clínico centrado na pessoa como modelo de atendimento clínico, tanto no
+cenário simulado quanto no real.
+VI. Realizar a autogestão do conhecimento em educação médica.
+Em 2019 o NEDUC realizou a primeira edição do PRODEP ofertado aos coordenadores e
+preceptores dos programas de residência médica, multiprofissional e/ou internato médico, com a
+participação também da equipe pedagógica da Faculdade. O curso foi organizado em nove encontros
+presenciais, sendo um encontro por mês, no período de fevereiro a novembro de 2019, com a carga
+horária de quatro horas por encontro, totalizando 36 horas. Na primeira sessão foi realizada a abertura
+do curso, abordando os objetivos educacionais do PRODEP, com contextualização da importância da
+formação pedagógica dos preceptores. Nas aulas seguintes, nos minutos iniciais foram abordados os
+principais tópicos da sessão anterior e, em seguida, a abordagem dos temas propostos, sempre
+fazendo uso de estratégias educacionais interativas, estimulando a participação ativa de todos os
+presentes. Ao final de cada sessão os participantes responderam uma avaliação de reação sobre o
+módulo.
+Temas abordados na 1ª edição do PRODEP
+Encontro 1: Princípios da aprendizagem de adultos
+Encontro 2: Metodologias ativas de aprendizagem
+Encontro 3: Educação baseada em competências
+Encontro 4: Cenário simulado x cenário real
+Encontro 5: Ensinando o raciocínio clínico
+Encontro 6: Estratégias educacionais em preceptoria
+Encontro 7: Feedback como avaliação formativa
+Encontro 8: Como avaliar em cenário real
+Encontro 9: Entrustable Professional Activities - EPA
+A turma seguinte estava prevista para o ano subsequente, mas, em função da pandemia global
+que emergiu em 2020 e obrigou uma interrupção temporária dos eventos presenciais, não se realizou.
+25
+
+Foi um período dedicado ao suporte de como desenvolver atividades on-line em preceptoria, por meio
+de encontros remotos.
+A 2ª edição do PRODEP aconteceu em 2022, nos meses de outubro e novembro, organizada
+em três módulos presenciais (módulos: 1, 4 e 8) e cinco remotos e assíncronos, totalizando uma carga
+horária de 24 horas. Nos módulos remotos a Faculdade utilizou a plataforma G Suite for Education,
+agora denominada Google Workplace for Education, como ferramenta no processo de ensino-
+aprendizagem buscando uma experiência positiva para os participantes. Trata-se de uma plataforma de
+fácil utilização e que possibilita a interação entre professor e aluno onde quer que estejam, usando as
+mais diversas metodologias e tipos de dispositivos. Os módulos assíncronos foram organizados no
+Google Classroom, contendo: videoaula, materiais de apoio e estudo e atividades avaliativas para
+conclusão de cada módulo. Para os módulos presenciais foram disponibilizadas videoaulas e materiais
+para leitura prévia e nos encontros em sala de aula estratégias educacionais variadas, como: exposição
+dialogada, discussão em grupos e role play de Feedback. Ao final de cada sessão os participantes
+responderam uma avaliação de reação sobre o módulo em questão.
+Temas abordados na 2ª edição do PRODEP:
+Encontro 1: Competências em preceptoria
+Encontro 2: Princípios da aprendizagem de adultos
+Encontro 3: Desenvolvimento do raciocínio clínico
+Encontro 4: Atividades Profissionais Confiáveis - EPAs
+Encontro 5: Ensino-aprendizagem em cenário real
+Encontro 6: Estratégias para o ensino clínico
+Encontro 7: Avaliação em cenário clínico
+Encontro 8: Feedback: avaliação para aprendizagem
+A divulgação antecipada ocorreu nos canais de comunicação da Faculdade e da Santa Casa
+BH, juntamente com lembretes enviados por e-mail aos inscritos antes do início de cada módulo. O
+espaço físico utilizado foi uma sala de aula espaçosa dentro do Hospital, equipada com recursos de
+multimídia, cadeiras e bancadas.
+A primeira edição teve um total de 82 inscritos e a segunda contou com 84 inscritos. Da
+primeira turma, 24 concluíram, obedecendo o critério de cumprimento de 75% da frequência, no
+mínimo, para conclusão. Na segunda turma, o certificado foi considerado por módulo concluído. Dessa
+forma, 46 participantes concluíram.
+26
+
+Tabela 1 - comparativo das duas edições do PRODEP
+Módulo Programação - PRODEP 2019 Programação - PRODEP 2022
+1 Princípios da aprendizagem de adultos Competências em preceptoria
+2 Metodologias ativas de aprendizagem Princípios da aprendizagem de adultos
+3 Educação baseada em competências Desenvolvimento do raciocínio clínico
+4 Cenário simulado x cenário real Atividades Profissionais Confiáveis - EPAs
+5 Ensinando o raciocínio clínico Ensino-aprendizagem em cenário real
+6 Estratégias educacionais em preceptoria Estratégias para o ensino clínico
+7 Feedback como avaliação formativa Avaliação em cenário clínico
+8 Como avaliar em cenário real Feedback: avaliação para aprendizagem
+9 Entrustable Professional Activities - EPA
+3.2 Os participantes da pesquisa
+Os participantes deste estudo foram os preceptores dos programas de residência médica e
+multiprofissional. A partir do levantamento realizado na documentação do PRODEP, da Faculdade de
+Saúde Santa Casa BH, foi identificado que, dos 166 inscritos no PRODEP, 82 em 2019 e 84 em 2022,
+houve um total de 70 participantes que concluíram o curso. Considerando os participantes que
+estavam com endereço de e-mail correto, excluídos também 4 que participaram na validação prévia do
+questionário, permaneceram 57 preceptores.
+A Santa Casa de Belo Horizonte - SCBH tem atualmente Programas de Residência e
+Especialização Médica em 39 especialidades, Programa de Residência Multiprofissional no eixo de
+Terapia Intensiva Adulto e Especialização Multiprofissional nos eixos Terapia Intensiva Adulto e Terapia
+Intensiva Neonatal e Pediátrica; além de sediar estágios curriculares supervisionados de cursos de
+graduação da área da saúde. São mais de 500 (quinhentos) preceptores, de diversas áreas, envolvidos
+na formação destes novos profissionais.
+Abaixo uma tabela demonstrando o número de preceptores que se inscreveram e os que
+concluíram o PRODEP, nas duas edições, por área de formação. Aqueles cuja área de formação não
+pôde ser identificada ou que pertencem a diferentes campos, como os pedagogos que participaram,
+foram categorizados como "outros".
+27
+
+Tabela 2 - PRODEP por ano e formação
+Total de Total de
+Área de Ano: 2019 Ano: 2022 participantes participantes
+formação que que
+concluíram retornaram
+questionário
+(%)
+Inscritos Concluíram Inscritos Concluíram
+Medicina 63 20 24 7 27 8 (29,6%)
+Fisioterapia 1 1 29 23 24 5 (20,8%)
+Enfermagem 5 1 12 7 8 1 (12,5%)
+Psicologia 3 1 8 2 3 1 (33,3%)
+Nutrição 2 0 2 2 2 2 (100%)
+Odontologia 2 0 2 2 2 0 (0%)
+Farmácia 0 0 3 3 3 1 (33,3%)
+Outros 6 1 4 0 1
+Não detalhada 1
+Como dito anteriormente, dos 70 preceptores que concluíram o PRODEP, 57 atendiam aos
+critérios para responder ao questionário e serem entrevistados. O questionário foi enviado, no formato
+de formulário do Google (Google Forms), via e-mail, aos 57 preceptores. Este ficou durante 30 dias
+aberto para receber as respostas, e, no total, 19 preceptores responderam (33%). Na tabela 2 pode ser
+consultada a distribuição dos preceptores que responderam por área de formação. Na etapa seguinte
+foram realizadas entrevistas semiestruturadas, com 8 preceptores que expressaram a sua
+disponibilidade em participar de uma entrevista pela plataforma Google Meet.
+3.3 Instrumentos e procedimentos para a coleta de dados
+Análise de documentos e resultados relacionados ao processo educacional, questionários e
+entrevistas.
+Foi enviada, via e-mail, uma carta convite explicando a pesquisa que estava sendo
+desenvolvida, solicitando a colaboração para a concretização desse trabalho e o preenchimento de
+uma avaliação retrospectiva pré-teste-pós-teste. Destes, 19 (dezenove) retornaram.
+A avaliação retrospectiva pós-pré, foi realizada por meio de questionário contendo questões
+abertas e fechadas, divididas em duas seções: a primeira, com o intuito de caracterizar os preceptores,
+solicitando seus dados pessoais (nome, e-mail, telefones, endereço, gênero e faixa etária), dados
+referentes à formação acadêmica, titulação, atuação profissional enquanto preceptor e o ano que
+realizou o PRODEP. A segunda continha um questionário baseado na utilização da escala Likert, de
+28
+
+avaliação retrospectiva pré-teste-pós-teste em que cada participante indicou seu grau de conhecimento
+em cada tema abordado no curso, comparando o momento em que chegou para fazer a capacitação e
+o momento final (Bhanji et al., 2012). O questionário foi escolhido como método para identificar os
+participantes da pesquisa e construir um perfil dos mesmos. Esse recurso permite alcançar múltiplas
+pessoas simultaneamente. Além disso, proporciona maior liberdade nas respostas, evitando possíveis
+influências por parte do entrevistador (Boni & Quaresma, 2005). Segundo Lakatos & Marconi (2003),
+“depois de redigido, o questionário precisa ser testado antes de sua utilização definitiva, aplicando-se
+alguns exemplares em uma pequena população escolhida.” Os questionários foram pré-validados,
+conforme Apêndice A, por um conjunto de 4 preceptores que participaram no PRODEP em 2019 e
+2022.
+A pesquisa retrospectiva pós-pré é uma abordagem de avaliação que visa controlar o viés de
+mudança de resposta no design tradicional pré-pós. Neste método, os alunos refletem e avaliam seu
+conhecimento, habilidades, atitudes ou comportamentos ao mesmo tempo, evitando a sensibilidade
+pré-teste e o viés de mudança de resposta associados ao desenho pré-pós tradicional. Ao coletar
+informações antes e depois do programa educacional simultaneamente, essa abordagem busca uma
+avaliação mais eficiente, menos intrusiva e mais precisa das mudanças autorrelatadas pelos alunos
+(HOWARD, 1980; Pratt, McGuigan & Katzev, 2000; Lam & Bengo, 2003; Klatt & Taylor-Powell, 2005).
+A escolha da entrevista como técnica de coleta de dados, baseou-se em Boni e Quaresma
+(2005) que indicam que a entrevista enquanto coleta de dados sobre um determinado tema científico é
+a técnica mais utilizada no processo de trabalho de campo. Através dela os pesquisadores buscam
+obter informações, ou seja, coletar dados objetivos e subjetivos. E destacam que a entrevista possibilita
+a correção de enganos dos informantes, enganos que muitas vezes não poderão ser corrigidos no caso
+da utilização do questionário escrito.
+Além disso, trata-se de uma abordagem que promove uma interação mais ampla entre
+entrevistador e entrevistado, possibilitando esclarecimentos e ajustes durante o processo, tornando-a
+eficaz na obtenção das informações almejadas. As entrevistas foram utilizadas com o intuito de
+analisar, por meio das colocações dos preceptores, em que aspecto o PRODEP pode ter contribuído
+para mudança na prática da preceptoria. Estas foram previamente agendadas, realizadas de forma
+virtual, com duração média de quinze minutos, e gravadas, com consentimento dos participantes.
+Sendo assim, o roteiro da entrevista partiu da questão norteadora: O “Módulo Básico” do
+programa de desenvolvimento em Preceptoria - PRODEP da Faculdade de Saúde Santa Casa BH
+influenciou mudanças nas práticas da preceptoria? e apresentava cinco tópicos, conforme roteiro
+29
+
+(Apêndice B), seguindo as orientações de Minayo (2014) de que o guia de entrevista deve conter
+apenas alguns itens indispensáveis para o delineamento do objeto em relação à realidade empírica,
+facilitando abertura, ampliação e aprofundamento da comunicação.
+As questões centraram-se na percepção dos preceptores acerca de sua avaliação em relação
+ao curso de formação de preceptores, no que tange à metodologia do curso e pertinência do curso e se
+essa experiência provocou alguma alteração em suas práticas de preceptoria.
+Após a organização do roteiro, foi iniciada a etapa de entrevistas com os preceptores que
+manifestaram interesse de participar, com as datas e horários previamente acordados. Após as
+entrevistas, as transcrições foram realizadas pela pesquisadora, respeitando-se os discursos em sua
+integridade e cada entrevistado recebeu um número, com o objetivo de manter a privacidade,
+preservando a identidade dos participantes.
+Mendes e Miskulin (2017), ressaltam que esse processo vai além da simples transferência do
+discurso gravado para o papel, reforçando que, a transcrição não deve ser uma simples reprodução
+das gravações, mas sim uma tentativa de refletir os tropeços, as frases interrompidas, as prolongadas,
+os suspiros, as exclamações e as contrariedades.
+Após a conclusão das transcrições de todas as entrevistas, foi iniciada a etapa de organização
+e análise dos dados. Para tal, tornou-se necessário selecionar uma técnica de análise mais alinhada
+com os propósitos da pesquisa.
+3.4 Análise dos dados
+Os dados coletados de documentos e questionários relativos às turmas dos anos de 2019 e
+2022 foram compilados em tabelas e gráficos e analisados.
+Para análise das entrevistas, optou-se pela utilização da técnica de análise de conteúdo. Esta,
+destaca-se como uma das abordagens mais utilizadas pelos pesquisadores e segundo a perspectiva de
+Bardin (2011), consiste em uma técnica metodológica que se pode aplicar em discursos diversos e a
+todas as formas de comunicação, seja qual for à natureza do seu suporte. Nessa análise, busca-se
+compreender as características, estruturas ou modelos que estão por trás dos fragmentos de
+mensagens tornados em consideração. O esforço do analista é, então, duplo: entender o sentido da
+comunicação, como se fosse o receptor normal, e, principalmente, desviar o olhar, buscando outra
+significação, outra mensagem, passível de se enxergar por meio ou ao lado da primeira. (Câmara,
+2013)
+30
+
+A análise de conteúdo (especificamente a sua modalidade de análise temática) foi organizada
+em três momentos distintos, seguindo as orientações de Bardin (2011): pré-análise, exploração do
+material e tratamento dos resultados, assim apresentadas por Mendes e Miskulin (2017):
+a) Pré-análise - compreende a seleção dos documentos a serem analisados. Esta fase se divide
+em três etapas: leitura flutuante do conjunto de mensagens obtidas; formação do corpus,
+referente à totalidade do material estudado; e formulação de hipóteses e objetivos; b)
+Exploração do material - Nessa fase, o corpus estabelecido é examinado em detalhes para
+identificar as unidades de registro e unidades de contexto. A análise se concentra em registros
+orais e escritos, explorando os dados por meio de temas e unidades de significação e c)
+Tratamento dos resultados - no qual são realizadas as inferências e interpretações dos dados
+obtidos na pesquisa. Os resultados brutos são tratados para serem significativos e válidos.
+Assim, a pré-análise consistiu na organização do material. À medida que eram realizadas, as
+entrevistas foram transcritas e armazenadas. Cada participante foi identificado com a letra “P”
+(referindo-se ao termo “preceptor”) seguida de um número cardinal (1, 2, 3, 4...), que se referia a
+ordem que as entrevistas foram sendo realizadas (sujeito “P1” foi o primeiro a ser entrevistado e o
+“P8”, o último), com o objetivo de manter a privacidade e preservação da identidade dos preceptores.
+Ainda na fase de pré-análise, realizou-se uma leitura flutuante de todo o material coletado por
+meio das entrevistas, retomando os objetivos iniciais da pesquisa para a escolha das categorias,
+buscando uma primeira percepção das mensagens contidas no material.
+No segundo momento, de exploração do material, foi realizada uma leitura mais aprofundada
+com o objetivo de estabelecer as unidades de registro. Foi escolhido o tema como unidade de registro
+devido à sua natureza como declaração sobre um assunto específico, abrangendo não apenas
+elementos racionais, mas também aspectos ideológicos, afetivos e emocionais. (Mendes & Miskulin,
+2017).
+Os recortes foram agrupados de acordo com o tema emergente, o que permitiu o
+reconhecimento de categorias. Após a definição das categorias, os recortes foram reorganizados dentro
+de cada categoria, o que permitiu a identificação das subcategorias. Nesse processo, foi desenvolvida
+uma matriz com 10 (dez) colunas, onde na primeira se encontra a categoria, seguida da subcategoria e
+nas restantes os recortes distribuídos. Como exemplo, segue a tabela 3:
+31
+
+Tabela 3 - Analisando os dados
+Categorias Subcategorias P1 P2 P3 P4 P5 P6 P7 P8
+Analíticas
+Mudança na Aplicação de estratégias “E foi interessante
+prática após pedagógicas porque depois que eu
+o PRODEP aprendi e eu vi as
+metodologias de
+ensino, como: OMP,
+SNAPPS e demais,
+eu pensei assim: eu
+já faço isso no dia a
+dia, mas eu não tinha
+essa visão de como
+que eu aplicava
+isso..."
+Relacionamento com os “Outra coisa
+residentes/especializandos também, ter
+um pouco
+mais de
+paciência com
+o residente,
+entender como
+ele precisa de
+mim para
+progredir
+dentro do
+curso..."
+Após a elaboração das categorias, procedeu-se à definição de cada categoria, baseada nas
+verbalizações relacionadas aos temas.
+A terceira etapa da análise, tratamento dos resultados, possibilitou ir além da superfície dos
+dados, revelando significados mais profundos a partir das falas dos preceptores em suas respectivas
+categorias e subcategorias, facilitando assim, as inferências e interpretações dos dados obtidos por
+meio das entrevistas, à luz da teoria estudada.
+32
+
+4 RESULTADOS
+Os resultados foram organizados em três tópicos:
+4.1 Perfil dos participantes;
+4.2 Resultados das avaliações do PRODEP
+4.3 Percepção dos preceptores sobre o PRODEP e sua contribuição na prática da
+preceptoria.
+4.1 Perfil dos participantes
+A partir das informações reunidas através desse instrumento de coleta, foi possível traçar um
+perfil geral dos sujeitos participantes dessa pesquisa, baseando nos seguintes aspectos:
+a) ano de conclusão do PRODEP; b) sexo; c) faixa etária; d) tempo de formação; e) tempo de
+atuação na preceptoria; f) titulação; g) área de formação; h) em qual nível de ensino atua; os
+resultados serão apresentados e analisados a seguir.
+Em relação aos participantes do curso que responderam a pesquisa, 15 realizaram em 2022,
+correspondendo a 78,9% dos que responderam, e 4 realizaram o curso em 2019, correspondendo a
+21,1% dos respondentes.
+Gráfico 1 - Ano de conclusão do PRODEP
+33
+
+Esses resultados indicam uma maior participação na pesquisa por parte dos preceptores que
+concluíram o curso em 2022 em comparação com aqueles que concluíram em 2019. Nota-se que
+32,6% (15 em 46) dos participantes do PRODEP em 2022 responderam à pesquisa em comparação
+com 16,7% (4 em 24) dos preceptores que finalizaram o PRODEP em 2019, podendo indicar um maior
+reflexo das experiências daqueles que concluíram o curso em 2022, nesta etapa da pesquisa.
+Em relação ao gênero, 68,4% dos profissionais participantes foram do sexo feminino e 31,6%
+do masculino.
+Quanto à idade do grupo pesquisado, a partir da informação da idade no questionário, foram
+distribuídos nas seguintes faixas etárias: a primeira corresponde entre 21 a 30 anos; a segunda, entre
+31 a 40 anos; a terceira, entre 41 a 50 anos; e a última faixa, entre 51 a 60 anos; não teve nenhum
+respondente com idade superior a 60 anos. É possível afirmar que o grupo em questão tem a maior
+concentração de participantes entre 31 a 50 anos de idade, totalizando 12 respondentes nessa faixa
+etária.
+Gráfico 2 - Faixa etária
+Em relação ao tempo de formação, cada participante indicou no questionário o tempo em
+anos. A distribuição por idade foi classificada conforme gráfico a seguir:
+34
+
+Gráfico 3 - Tempo de formação (anos)
+Percebe-se uma maior concentração de profissionais que concluíram a graduação nos últimos
+20 anos. A maior proporção dos participantes (42,10%) concluiu entre 10 e 20 anos atrás. A
+distribuição entre os que concluíram há menos de 10 anos (26,31%) e os que têm entre 21 a 30 anos
+de formados (26,31%), ficou equilibrada. A minoria (5,26%) concluiu a formação há mais de 30 anos.
+De maneira geral, pode-se inferir que dentre os participantes há uma parcela significativa de
+profissionais que já acumularam um período substancial de experiência. O gráfico a seguir apresenta a
+perspectiva em tempo de experiência na preceptoria.
+Gráfico 4 - Tempo de experiência na preceptoria (anos)
+35
+
+A maioria dos participantes (68,42%) possui menos de 10 anos de experiência na preceptoria.
+Nota-se uma desconexão entre o tempo de formação e a experiência na preceptoria, visto que, no
+tempo de formação a concentração maior é de 10 a 20 anos de formados.
+Em relação à titulação, 78,9% dos participantes informaram ser especialistas, seguidos de
+15,8% de mestres.
+Ao se analisar a formação de graduação dos participantes (ver tabela 2 e gráfico 5), 42,1%
+eram médicos; seguidos de 26,3% de fisioterapeutas, 10,5% de nutricionistas e a mesma percentagem
+de farmacêuticos (5,3%), enfermeiros e psicólogos. Um dos participantes não indicou a área de
+formação.
+Gráfico 5 - Área de graduação dos preceptores
+Em relação ao nível de ensino que atuam na preceptoria, 57,9%, indicaram que atuam na
+preceptoria da residência/especialização multiprofissional e 42,1% na residência/especialização
+médica. Nenhum preceptor indicou atuação na preceptoria de estudantes da graduação.
+36
+
+Gráfico 6 - Área de ensino de atuação do preceptor
+4.2 Resultados das avaliações do PRODEP
+A análise da avaliação de reação se baseou nos questionários pós módulo preenchidos pelos
+participantes. Na edição de 2019 foi utilizado um questionário em escala likert, no qual para cada
+afirmativa os participantes assinalavam:
+1.Discordo totalmente - DT
+2.Discordo - D
+3.Nem discordo nem concordo - N
+4.Concordo - C
+5.Concordo totalmente - CT
+Resultados apresentados na tabela 4 a seguir:
+Tabela 4 - Avaliação de reação PRODEP 2019
+Pergunta DT D N C CT
+O tema estava contextualizado às suas necessidades como preceptor(a) 28,1% 71,9%
+Os facilitadores contribuíram para os esclarecimentos de suas dúvidas 0,5% 30,8% 68,7%
+A metodologia utilizada no encontro permitiu que você expusesse e discutisse suas 2,6% 28,1% 69,4%
+ideias
+Este encontro foi relevante para seu desenvolvimento como preceptor(a) 0,5% 25,5% 74%
+37
+
+Para a afirmativa 1, o percentual de concordo e concordo totalmente, ficou em 100% e nas
+afirmativas 2, 3 e 4, ficou bem próximo deste percentual. Esse resultado está de acordo com a maioria
+dos estudos sobre o tema que demonstram a avaliação de reação como positiva.
+Os pontos positivos destacados foram: possibilidade de reflexão sobre a prática, interação
+entre os preceptores de diferentes áreas e oferta de um curso para desenvolvimento da preceptoria.
+Como pontos de melhoria houve sugestões para disponibilização prévia para leitura do material de
+cada encontro.
+Na edição de 2022, a avaliação de reação ao final de cada encontro utilizou a pesquisa NPS
+(Net Promoter Score). O NPS é uma métrica criada por Fred Reichheld nos EUA, com o objetivo de
+realizar a mensuração do grau de lealdade cos consumidores de qualquer tipo de empresa. Ele pode
+ser usado para mensurar a relação com a empresa como um todo, é o NPS Relacional ou para medir a
+satisfação em pontos específicos, é o NPS Transacional. (Duarte & Queiroz, 2023)
+O NPS é classificado por uma pergunta simples. No caso do PRODEP, ao final de cada
+encontro, os participantes recebiam a seguinte pergunta: Em uma escala de 0 a 10, o quanto você
+indicaria esse módulo do PRODEP para um colega? Para calcular o NPS, basta seguir a seguinte
+fórmula:
+Net Promoter Score = % CLIENTES PROMOTORES – % CLIENTES DETRATORES = %NPS.
+Figura 4 - Net Promoter Score
+Tabela 5 - Resultado do NPS por encontro - PRODEP 2022
+Encontro Resultado do NPS
+Encontro 1 81
+Encontro 2 73
+Encontro 3 83
+Encontro 4 86
+Encontro 5 92
+Encontro 6 90
+Encontro 7 83
+Encontro 8 96
+38
+
+O NPS global ficou em 83, considerada como Zona de excelência. Conforme as notas
+do NPS, é possível categorizar em cinco Zonas de Classificação. As zonas são Duarte & Queiroz,
+(2023):
+○ Zona de Encantamento – NPS entre 91 e 100
+○ Zona de Excelência – NPS entre 76 e 90
+○ Zona de Qualidade – NPS entre 51 e 75
+○ Zona de Aperfeiçoamento – NPS entre 1 e 50
+○ Zona Crítica – NPS entre -100 e 0
+Os pontos positivos destacados foram: material, conteúdo, facilitadores, a metodologia,
+reflexão sobre a prática e sobre a importância do desenvolvimento contínuo. Como pontos de melhoria,
+os participantes trouxeram sugestões em relação ao aumento do tempo de duração de alguns módulos
+e também para oferta de novos cursos. Houve duas pontuações relacionadas à dificuldade na leitura
+de artigos, do módulo sobre aprendizagem do adulto, com a alegação da complexidade de termos
+relacionados à área da educação.
+Em relação à avaliação retrospectiva pós-pré, o questionário de pesquisa foi elaborado levando
+em consideração os temas principais que integraram o programa teórico do PRODEP. Nele, cada
+participante indicou o seu nível de conhecimento em cada tema abordado durante o PRODEP, fazendo
+uma comparação entre o momento de início da capacitação e o momento final.
+Tabela 6 - Pesquisa retrospectiva pós-pré
+Antes do PRODEP Após participar do PRODEP
+Pergunta DT D N C CT DT D N C CT
+Sinto-me capacitado para desenvolver a atividade de
+preceptoria 5,3% 42,1% 52,6% 15,8% 84,2%
+Levo em consideração os princípios da aprendizagem de
+adultos ao escolher minhas estratégias de ensino como
+preceptor 5,3% 15,8% 36,8% 42,1% 26,3% 73,7%
+Contribuo com o desenvolvimento do raciocínio clínico
+aplicando métodos de ensino bem definidos 5,3% 10,5% 52,6% 31,6% 42,1% 57,9%
+Conheço o conceito de EPA (Entrustable Professional
+Activities) 31,6% 10,5% 10,5% 5,3% 47,4% 31,6% 68,4%
+Sinto-me preparado para implementar EPAs no meu
+contexto (clínica, especialidade) 31,6% 5,3% 15,8% 31,6% 15,8% 5,3% 52,6% 42,1%
+Adoto estratégias de ensino estruturadas como OMP ou
+SNAPPS 31,6% 10,5% 10,5% 36,8% 10,5% 5,3% 68,4% 26,3%
+Tenho segurança para avaliar a aprendizagem em cenário
+real de maneira abrangente e precisa 5,3% 10,5% 5,3% 57,9% 21,1% 47,4% 52,6%
+Ofereço Feedback após a realização da atividade pelo
+aprendiz ou sempre que for oportuno para promover a
+aprendizagem 5,3% 52,6% 47,4% 21,1% 78,9%
+39
+
+4.3 Percepção dos preceptores sobre o PRODEP e a sua contribuição na prática da
+preceptoria.
+Com o objetivo de identificar a percepção dos preceptores acerca da contribuição do PRODEP
+para a prática da preceptoria, foi realizado contato com os 19 preceptores que responderam à
+avaliação retrospectiva pós-pré. Destes, 8 aceitaram participar da etapa de entrevistas, sendo, 4
+preceptores da residência médica e 4 da residência multiprofissional.
+Concluídas as entrevistas, deu-se início à transcrição e análise dos registros. Optou-se pela
+abordagem da análise de conteúdo. Nesse processo, as falas dos participantes foram categorizadas de
+acordo com as etapas estabelecidas para a análise de conteúdo, a saber: pré-análise, exploração do
+material e tratamento dos dados, conforme detalhado no capítulo anterior. Após análise, foram
+evidenciadas três categorias analíticas: percepções acerca da pertinência e metodologia do curso; o
+papel de educador; mudança na prática da preceptoria após a realização do PRODEP, com suas
+respectivas subcategorias.
+4.3.1 Percepções acerca da pertinência e metodologia do curso
+4.3.1.1 Reflexões sobre o curso
+Essa subcategoria emergiu a partir das considerações e análises dos entrevistados acerca do
+curso, englobando reflexões, avaliações, comentários, experiências vivenciadas e percepções gerais.
+Ao analisar as considerações dos preceptores sobre o curso, identificam-se pontos positivos,
+como a relevância do desenvolvimento em preceptoria, a abrangência do curso, além das diferentes
+experiências e impressões, conforme falas a seguir:
+“Prá mim tudo foi válido porque foi o primeiro programa que a gente teve, o primeiro auxílio que a
+gente teve de orientar e acolher a gente como preceptor.” (P1)
+Alguns entrevistados destacaram a relevância do curso para o seu desenvolvimento:
+“Foi extremamente importante para o meu processo aqui, inclusive, de formação como preceptora e
+como coordenadora de eixo…Então, prá mim foi muito transformador." (P3)
+40
+
+Outros englobam a abrangência do curso e a importância de mais profissionais se
+desenvolverem:
+“As pessoas acham que só um treinamento a mais e não é só um treinamento a mais! É formativo!
+Inclusive, devia fazer parte do currículo de todo mundo que faz mestrado.” (P4)
+Embora os principais pontos levantados nas entrevistas, em relação a este tema, já tenham
+sido evidenciados na avaliação de reação, essa apreciação geral sobre o curso foi confirmada pelos
+entrevistados. A análise das percepções sobre o curso, corroborada pelos entrevistados, reforça a
+significativa contribuição do programa para o aprimoramento profissional e o papel fundamental que
+desempenha na formação de preceptores.
+4.3.1.2 Metodologia adotada no curso
+Nessa subcategoria foi discutido o conjunto de abordagens e estratégias adotadas para facilitar
+o processo de aprendizagem ao longo do curso.
+Os entrevistados reconhecem elementos positivos, como a dinâmica do curso, conforme falas
+a seguir:
+“... professores colocavam a gente para participar, comentando, davam depoimentos e essa interação
+foi boa.” (P1)
+Ressaltaram também os métodos de avaliação:
+“Do ponto de vista metodológico do curso eu acho que foi muito bom, inclusive, porque nos fez estudar
+de uma maneira mais significativa. Teve os testes que é uma maneira de ver exatamente o que eu
+aprendi, principalmente, naquele exercício de fazer as EPAs…” (P4)
+Foram evidenciadas também apreciações sobre o material didático e conteúdo:
+“...ter um material para ler, para registrar…acho que fez a diferença também.” (P4)
+“Os conteúdos muito relacionados ao que a gente vivencia na prática.” (P8)
+41
+
+Em relação ao formato do curso os entrevistados destacaram a flexibilidade proporcionada pelo
+formato híbrido, sem abrir mão dos encontros presenciais, conforme falas a seguir:
+“Gostei mais híbrido do que o presencial completo. Você pode fazer no seu horário de folga…Mas,os
+encontros presenciais com a possibilidade de discutir com o orientador que está lá, é interessante.”
+(P2)
+“Ter esse formato híbrido também - uma parte on-line e outra presencial - mas acho importante ter
+presencial, não tem a mesma troca quando é on-line…” (P6)
+“Eu achei interessante porque foi híbrido, algumas aulas eram presenciais, algumas on-line e isso já
+dava uma flexibilidade maior de horários…Eu acredito que o presencial ainda tem um valor muito
+importante…nas aulas presenciais tivemos experiências muito ricas. O networking é muito
+importante…, Mas como teve a junção das duas, conseguiu um desempenho muito interessante. “(P7)
+A análise dos dados permitiu identificar a aprovação dos preceptores em relação à flexibilidade
+proporcionada pelo formato híbrido (presencial e online), embora enfatizem a importância dos
+encontros presenciais para o aprendizado e troca de experiências. Essas considerações evidenciam
+uma abordagem multifacetada e adaptativa na metodologia do curso, atendendo às diversas
+necessidades e preferências dos participantes.
+4.3.1.3 Sugestões e desafios
+Essa subcategoria emergiu de Feedbacks e propostas apresentadas pelos entrevistados,
+indicando áreas de aprimoramento e pontos positivos relacionados ao curso. Refere-se às
+recomendações e obstáculos identificados pelos entrevistados.
+Algumas sugestões envolvem melhorias na divulgação do curso, como o entrevistado P4:
+“E sinto falta de mais divulgação nesse sentido, da importância do PRODEP - não só como um
+programa de desenvolvimento de preceptores, mas como desenvolvimento de pessoas que se propõem
+a trabalhar numa instituição que é educativa.” (P4)
+42
+
+Outro aspecto abordado pelos entrevistados, refere-se à necessidade de tornar o curso mais
+frequente.
+“Acho que ter o curso de forma anual ou a cada dois anos faz toda diferença para quem está em
+contato direto com os alunos.” (P3)
+“O que eu acho que é um programa que a gente tem que ter atualizações, tem que tá revendo, não
+pode ter uma vez e interromper, ser mais constante…Teria que ter um espaço de tempo mais curto…”
+(P8)
+Outros entrevistados endossam o pedido para que o curso tenha um intervalo menor entre
+uma oferta e outra e também maior carga horária. Apresentam também sugestões no sentido de
+aprofundar alguns temas ou mesmo mudar a abordagem:
+“A única coisa que eu achei que poderia ter sido melhor foi em relação aos artigos. Como prá gente
+alguns temas eram novidade, alguns artigos eram de difícil entendimento… A distância foi grande entre
+uma aula e outra e o curso em si poderia ter sido mais extenso. Considero que ainda temos muito a
+aprender.” (P6)
+“A gente fica com a sensação de querer mais. Então, talvez até ter mais dinâmicas, ter mais alguma
+outra metodologia, presencial - Por exemplo: a parte de construção de EPAs foi feita de modo
+autônomo. Talvez, se tivesse sido feito em grupo, poderia ser mais rico porque cada um traria sua
+contribuição e isso poderia otimizar o processo…” (P7)
+Em relação aos desafios, os participantes abordam questões específicas, como a elaboração
+das Entrustable Professional Activities (EPAs):
+“Elaboração das EPAs. É novo pra mim e eu acho que ainda é um desafio porque eu ainda não
+consegui concluir e vejo como muito importante para o desenvolvimento dos residentes.” (P1)
+A partir da análise das entrevistas, foi possível identificar pontos que podem contribuir para o
+aperfeiçoamento de programas de desenvolvimento em preceptoria, especialmente dentro da proposta
+43
+
+de educação permanente dos profissionais envolvidos nesta atividade. Sobre este último, destaca-se
+que o PRODEP é um programa institucional e tem a previsão de continuidade da oferta do módulo
+básico, assim como a oferta de módulos avançados para atender a necessidade de desenvolvimento
+contínuo dos preceptores.
+4.3.2 O papel de educador
+4.3.2.1 Reflexão sobre a prática
+Essa subcategoria emerge com um olhar na perspectiva de autorreflexão da própria prática, na
+qual os relatos apontam para desafios associados à preceptoria, como: lidar com a diversidade de
+residentes ao longo dos anos e a questão da aprendizagem empírica.
+“Eu assumi a preceptoria e depois a coordenação da residência e a gente vai trabalhando com mais
+pessoas, a cada ano entram pessoas novas, épocas diferentes, expectativas as mais variadas
+possíveis.” (P1)
+“Enquanto médico, a nossa inserção no mercado de trabalho, é inicialmente bem assistencial…No
+meu caso, foi assim! E, ao longo do meu exercício profissional, eu fui sendo exposta à função de
+preceptora. Então, eu não vim para ser preceptora, eu vim para ser uma assistente que se viu no papel
+de preceptora.” (P4)
+“Acabava que era um pouco empírico o que a gente fazia. A gente vai fazendo o que aprendeu quando
+era residente e vai passando isso prá frente.” (P7)
+4.3.2.2 Reflexão sobre o papel de educador
+Nessa subcategoria construiu-se uma análise a partir de como os participantes percebem seu
+papel como educadores.
+Os entrevistados trazem percepções acerca da necessidade de estarem atualizados, tanto em
+suas áreas de atuação profissional quanto na formação pedagógica, desenvolvendo maturidade
+pedagógica e aprimoramento na educação de adultos e Feedback.
+44
+
+A partir da análise do material foi possível identificar reflexões sobre o papel de educador,
+como na fala do P4:
+“Eu sinto falta de que as pessoas entendam o quão importante é ter essa visão como educador, como
+preceptor, quando você está dentro de uma instituição que recebe residentes…Outra coisa também, ter
+um pouco mais de paciência com o residente, entender como ele precisa de mim para progredir dentro
+do curso dele de especialização. Também faz nos perceber num papel ativo na preceptoria.” (P4)
+Observa-se uma ênfase na importância do curso para desenvolver habilidades de
+acompanhamento individualizado, compreensão do tempo de aprendizado de cada residente e
+valorização da autonomia progressiva.
+“Quando eu fiz o PRODEP me ajudou muito porque, muitas vezes, eu esperava o residente chegando
+pronto…durante o PRODEP pude ver que é importante acompanhar cada um com as suas demandas.
+(P1)
+“Desde a parte da educação médica em cirurgia até na parte da educação de adultos. Porque um dos
+objetivos da educação de adultos é essa autonomia…” (P5)
+A análise dos dados permitiu identificar o desenvolvimento de maturidade e fundamentação
+pedagógica, destacada na fala do P3:
+“Se eu for analisar de quando eu peguei minha primeira oportunidade, primeira turma, em março de
+2017; se eu for analisar toda essa trajetória ao ponto que a gente tá hoje, é uma trajetória que está
+muito mais madura, mais fundamentada do ponto de vista pedagógico. Aí eu vejo que principalmente
+depois do PRODEP, houve uma mudança…” (P3)
+Destacam também alteração na percepção sobre ser exemplo para os residentes
+“O residente deve se espelhar em você em muita coisa. Eu sempre fui próximo dos meus residentes,
+mas assim, essa vontade de querer ser exemplo, tocou muito em mim.” (P2)
+45
+
+Alguns entrevistados trazem experiências de mudanças na percepção da importância do
+Feedback.
+“Principalmente, a importância do Feedback, como construir essas pontes de educação, como criar
+um cenário para um aluno desenvolver suas habilidades.” (P7)
+4.3.3 Mudança na prática da preceptoria após a realização do PRODEP
+4.3.3.1 Aplicação de estratégias pedagógicas
+A subcategoria emergiu a partir da implementação do que foi aprendido no programa de
+desenvolvimento em preceptoria.
+A partir da análise do material, é possível inferir que os preceptores expressam a influência
+positiva do PRODEP na adoção de estratégias pedagógicas na preceptoria. Os entrevistados expressam
+melhorias no planejamento, aplicação de metodologias de ensino e condução de ações educacionais,
+enfatizando a conexão entre teoria e prática:
+“O PRODEP me ajudou muito nisso e eu percebo uma diferença grande no meu trabalho antes e
+depois do PRODEP...De ouvir, fazer reunião, registrar…Eu fui montando um (portfólio) e adequando ele
+prá cá...a gente consegue unir teoria e prática. E com o passar do tempo elas (as residentes)
+conseguem avaliar e observar o crescimento delas (as residentes), quando chegam na residência e
+com o passar do tempo o que evoluíram. O PRODEP me ajudou muito nisso!” (P1)
+“Tive a oportunidade de me atualizar nas metodologias e trazer isso e aplicar na ponta…Para os
+especializandos na época eu já comecei a fundamentar, mostrar pra eles os cinco níveis (de
+autonomia) que eu acho que ajuda muito na avaliação, principalmente na avaliação deles. Dá uma
+fundamentação mais robusta…” (P3)
+Percebe-se também uma fundamentação teórica, relacionada às EPAs, níveis de autonomia
+associados, metodologias de ensino adequadas ao nível de formação e objetivos de aprendizagem,
+trazendo embasamento para a prática e mudanças na formação dos residentes e especializandos.
+46
+
+“Principalmente nessa questão de tentar aplicar - não vou dizer que eu consegui aplicar cada método
+que aprendi de maneira completa em todos os residentes porque a gente trabalha com residentes
+iniciantes, mais avançados, enfim…mas eu consegui enxergar qual residente se encaixava melhor na
+maneira que eu estava ensinando…E foi interessante porque depois que eu aprendi e eu vi as
+metodologias de ensino, como: OMP, SNAPPS e demais, eu pensei assim: eu já faço isso no dia a dia,
+mas eu não tinha essa visão de como que eu aplicava isso. E aí, eu consegui aprendendo como são,
+aplicá-las de maneira mais correta…” (P4)
+“Até porque logo depois do PRODEP mudou o currículo. Acho que mesmo sem o PRODEP mudaria
+alguma coisa. Mas, o PRODEP serviu para preparar para o novo currículo. Todo mundo que fez teve
+essa sensação de: “ainda bem que fiz porque preparou para receber essas novas atividades - no
+preenchimento das EPAs, a entender o significado de cada nível de autonomia.” (P5)
+“Eu achei muito interessante porque faz uma quebra do olhar e a gente vê a importância de usar
+algumas ferramentas, por exemplo: metodologia de avaliação como EPAs, que, apesar de já saber,
+entender o contexto todo por trás foi muito importante” (P7)
+4.3.3.2 Relacionamento com os residentes/especializandos
+Esta subcategoria engloba a transformação nas relações entre os preceptores e os residentes,
+resultante da participação no PRODEP.
+Essa transformação inclui uma mudança na abordagem, valorizando o acompanhamento
+individualizado das demandas de cada residente, sensibilizando os preceptores para compreender as
+expectativas dos residentes e oferecer suporte personalizado.
+“…Durante o PRODEP pude ver que é importante acompanhar cada um com as suas
+demandas…Então eu começo a valorizar e respeitar mais o tempo de cada um, puxando mais um,
+ajudando mais outro, soltando um pouco a mais a medida que a pessoa vai adquirindo autonomia. O
+PRODEP me ajudou a enxergar isso com muito mais clareza…(P1)
+“Começa a enxergar as pessoas de outra maneira…O curso acho que ele sensibiliza a gente prá
+mostrar o que o residente espera da gente e o que a gente tem para oferecer prá ele também.” (P2)
+47
+
+Corroborando a sensibilização, há uma ênfase na paciência, tolerância e cuidado na
+comunicação, evitando abordagens imediatas ou constrangedoras.
+“...ter um pouco mais de paciência com o residente, entender como ele precisa de mim para progredir
+dentro do curso dele de especialização…Então aquela questão assim do imediatismo, de chamar a
+atenção na hora, as vezes, na frente de todo mundo…Coisas que eu fazia no passado, hoje eu tenho
+maior cuidado…A gente percebe até no Feedback que recebe deles… falam de como aproveitaram, o
+quanto aprenderam, me agradecem pela experiência…coisa que há anos atrás não era tão frenquente
+acontecer. Então você ver que vai melhorando como professor, preceptor e até como pessoa.” (P4)
+“Acho que teve sim essa diferença até do olhar de expectativa que a gente tinha pelo residente. Porque
+a gente às vezes queria que ele tivesse uma proatividade que eu tinha na minha época e ele não tinha,
+aí ficava um pouco mais resistente com essa pessoa. A gente passa a entender que tem que criar
+abordagens diferentes para pessoas diferentes…Eu acho que a gente vai adquirindo bagagem e vai
+mudando a percepção das coisas. A gente acaba tendo os filtros de inferência, né: “na minha época foi
+dessa forma…”, “quando eu fui residente eu me comportava dessa forma…”, e no PRODEP a gente
+começa a entender que cada aluno tem suas particularidades e a gente tem que tentar encaixar qual
+metodologia vai ser mais adequada para cada um.” (P7)
+4.3.3.3 Avaliação dos residentes/especializandos
+Outra subcategoria que emergiu dentro de mudança na prática da preceptoria, aponta uma
+abordagem mais estruturada na avaliação do residente.
+Nesse aspecto, nota-se uma ênfase significativa no papel do Feedback na prática de
+preceptoria, revelando estratégias específicas e mudanças observadas pelos entrevistados. Os
+entrevistados destacam a importância do Feedback individual, evidenciado por reuniões e encontros
+específicos com cada residente. Essa abordagem personalizada permite uma comunicação mais direta,
+a identificação de dificuldades e a oferta de suporte de maneira mais eficaz. Relatam também a
+realização de reuniões conjuntas e a formação de comitês para avaliação, o que indica um esforço
+coordenado na análise do desempenho dos residentes e o uso de critérios avaliativos e a identificação
+do nível de autonomia, com base nas EPAs (Entrustable Professional Activities).
+48
+
+“Sempre a gente numa conversa, num bate papo, numa discussão de caso aqui dá prá dar um
+retorno, escutar um pouco, perceber uma dificuldade, pontuar alguma coisa, tentar ajudar de alguma
+forma, como preceptor…Faço reunião junto e faço reunião individual para dar retorno, sem expor…Aí
+eu me sento com cada um de forma individual, passo o que foi discutido nessa reunião e aí eu
+formalizo esse encontro meu com eles também de forma individualizada, prá dar o Feedback.” (P1)
+“...Quando a gente faz a avaliação, a gente utiliza a metodologia de fazer uma reunião com todos os
+preceptores, faz um comitê de avaliação, que é inclusive uma das diretrizes. A partir desse Comitê, a
+gente faz a avaliação padrão e eu procuro acrescentar em qual nível (autonomia) de EPA aquele aluno
+está, até prá gente conseguir visualizar de uma maneira mais clara como está sendo a evolução da
+formação do aluno.” (P3)
+E demonstram a aplicação do Feedback como parte do processo de avaliação dos
+residentes/especializandos:
+“Eu falei que uma das aulas que mais me marcou foi sobre Feedback. A gente o tempo todo está
+ensinando, naquela correria, meio que automatismo e esquece de falar com o residente o que foi de
+bom o que foi de ruim. Às vezes a gente fala mais do que foi ruim…As EPAs acabaram me resgatando
+isso. É um momento que eu sento e avalio, faço um texto…”desempenhou a técnica…” “precisa
+melhorar, estudar, aprimorar…”. Na EPA eu tenho dado o Feedback. Eu tenho exercido mais
+frequentemente essa questão do retorno ao residente depois do PRODEP.” (P4)
+“Porque a gente já tendia a incentivar a autonomia dos residentes, mas acabava segurando porque não
+tinha uma base para seguir, era muito no feeling, quando eu sentia que podia dar mais autonomia. Aí,
+depois do PRODEP, eu vi que aquilo é bem estabelecido, que tem os critérios avaliativos e, como
+passou para o currículo baseado em EPAs, a gente sabe exatamente em qual momento…” (P5)
+“Acho que melhorei em relação ao Feedback, tentar ensinar de acordo com o ritmo de aprendizado.”
+(P6)
+“Eu acho que talvez o Feedback que eu pude aplicar mais. (P8)
+49
+
+5 DISCUSSÃO
+A maioria dos participantes da pesquisa completou o PRODEP em 2022, sendo
+predominantemente do sexo feminino, concentrando-se na faixa etária de 30 a 50 anos. A maior parte
+possui mais de 10 anos de formação, com menos de 10 anos de experiência na preceptoria. Além
+disso, a maioria detém uma titulação de especialista, e há uma distribuição equilibrada entre aqueles
+que atuam na preceptoria de residência/especialização médica e multiprofissional.
+A avaliação de reação teve resultados positivos, tanto da edição de 2019 quanto da edição de
+2022, corroborando com os resultados apontados na literatura. No modelo de Kirkpatrick para
+avaliação de treinamentos, a reação é definida como a percepção sobre o treinamento, abrangendo
+tanto aspectos afetivos (como gostar do treinamento) quanto instrumentais (como perceber a utilidade
+do treinamento), constitui o primeiro nível de avaliação do impacto do treinamento. Conforme
+destacado por Kirkpatrick (2016), é imperativo avaliar todos os programas neste nível como um meio
+de impulsionar melhorias. Uma reação positiva não assegura, obrigatoriamente, o processo de
+aprendizagem, no entanto, a reação negativa e a insatisfação certamente diminuem as chances de
+efetiva aprendizagem.
+Os resultados da avaliação retrospectiva pós-pré revelam mudanças nos níveis de
+conhecimento dos preceptores após a participação no curso. A análise dos resultados demonstrou que
+os participantes se tornaram mais conscientes em relação ao aprendizado em cada tema estudado.
+Isso pode ser inferido a partir do aumento de respostas indicando que concordam totalmente em cada
+uma das afirmativas.
+Levinson et al., (1990), investigou a eficácia da avaliação de cursos por meio de
+autoavaliações, com foco na mudança de resposta dos participantes. Comparando um método
+convencional pré-pós com um método retrospectivo, com uma avaliação retrospectiva pós-pré, os
+resultados indicaram que a coleta de autoavaliações retrospectivas em um único momento pode ser
+mais eficaz e precisa do que o método convencional pré-pós para avaliar a eficácia de programas
+educacionais. Skeff et al., (1992), compararam as mudanças nas classificações de autoavaliação pré-
+pós tradicionais com as mudanças nas classificações de autoavaliação pós-pré retrospectivas, na
+avaliação de um programa nacional de desenvolvimento docente e revelou que as comparações
+retrospectivas pós-pré foram mais sensíveis e válidas, indicando mudanças significativas no
+desempenho e atitudes docentes em comparação com as abordagens tradicionais.
+50
+
+As entrevistas realizadas com preceptores da residência médica e multiprofissional foram
+analisadas pela metodologia de análise de conteúdo. Esta abordagem permitiu uma organização
+sistemática das falas dos participantes, e, após um processo cuidadoso de categorização, foram
+identificadas três categorias principais: percepções acerca da pertinência e metodologia do curso; o
+papel de educador; mudança na prática da preceptoria após a realização do PRODEP.
+A análise das percepções sobre o curso, corroborada pelos entrevistados, reforça a significativa
+contribuição do programa para o aprimoramento profissional e o papel fundamental que desempenha
+na formação de preceptores, evidenciado pela aprovação da metodologia do curso. A flexibilidade
+proporcionada pelo formato híbrido do curso ressaltada pelos preceptores vai de encontro às
+recomendações de Autonomo et al., (2015), que defendem a incorporação de estratégias flexíveis e
+adaptativas nos programas de formação de preceptores para atender às diversas necessidades e
+preferências dos participantes.
+Os preceptores destacaram a relevância do curso para o desenvolvimento profissional,
+mencionando a importância da abordagem formativa. Nesse contexto, Barreto et al. (2011) enfatizam a
+necessidade de programas de formação de preceptores que vão além de simples repasses de
+conhecimentos, promovendo uma visão formativa e reflexiva da prática educacional. Os autores
+destacam que a formação de preceptores deve abordar não apenas aspectos técnicos, mas também as
+habilidades interpessoais necessárias para uma atuação eficaz.
+Em relação ao papel como educadores, os relatos são compatíveis com os dados encontrados
+na literatura no sentido de que, embora os preceptores possuam expertise técnica em suas áreas de
+atuação, a habilidade pedagógica muitas vezes é adquirida de forma empírica, resultando em lacunas
+no desenvolvimento de estratégias eficazes de ensino-aprendizagem. A análise dos dados permite
+demonstrar a natureza dinâmica e adaptativa do papel de preceptor, moldado pela interação com
+diferentes perfis de residentes e experiências pessoais.
+As reflexões dos preceptores sobre seu papel como educadores remetem à importância do
+desenvolvimento de maturidade pedagógica, destacada por Autonomo et al. (2015). A necessidade de
+atualização nas áreas de atuação profissional e formação pedagógica ressoam com a ideia de que a
+preceptoria vai além do conhecimento técnico, exigindo habilidades específicas relacionadas à
+educação de adultos.
+A mudança percebida na aplicação de estratégias pedagógicas, evidenciada pelos preceptores,
+reflete uma abordagem mais estruturada e fundamentada na prática educativa. McLean et al., (2008)
+destaca a importância do nível "micro" em processos de mudança, concentrando-se nas interações e
+51
+
+relacionamentos diários que moldam as atividades individuais, identificando quatro condições cruciais:
+o desejo de mudar, o conhecimento sobre o que fazer e como fazer, um ambiente de trabalho propício
+e recompensas para aqueles que abraçam a mudança. Essa abordagem destaca a importância de
+considerar o nível micro na promoção eficaz da mudança no contexto do desenvolvimento do corpo
+docente/preceptores.
+Os participantes destacaram o relacionamento com os residentes, evidenciando uma maior
+atenção à escuta, paciência e Feedback construtivo. O curso contribuiu para o fortalecimento do
+vínculo entre preceptores e residentes, enfatizando a importância de se tornar um exemplo positivo e
+incentivando a autonomia progressiva durante o processo de formação. Barreto et al., (2011),
+destacam que a interação entre o preceptor e o educando representa uma ferramenta fundamental
+para a promoção do trabalho coletivo. Para que esse processo ocorra de maneira eficaz, é crucial
+aceitar e valorizar tanto o conhecimento teórico quanto os sentimentos trazidos pelo educando. Nesse
+sentido, o preceptor adota uma postura de crítica amorosa e cuidadosa, evitando qualquer intenção de
+inferiorizar o estudante. A horizontalidade da relação se manifesta quando o preceptor não se coloca
+como detentor absoluto da verdade. Dessa forma, distancia-se do paradigma da educação bancária, no
+qual o estudante é tratado como mero depositário do saber do preceptor.
+Um estudo que objetivou compreender as concepções e vivências de alunos e egressos do
+curso de especialização em Preceptoria acerca da preceptoria na formação médica apontou que as
+experiências com os preceptores durante a residência revelaram- se bem heterogêneas entre os
+relatos, destacando-se positivamente aquelas em que os preceptores demonstraram maior capacidade
+de compreensão, empatia e estabelecimento de vínculo com os residentes. (Ministério da Saúde,
+2010b).
+Esse olhar em relação a avaliação do residente, reflete uma mudança em relação ao que é
+praticado em termos de avaliação ao longo da história. Barreto et al., (2011) destacam que a prática
+da avaliação é pouco comum na maioria dos programas educacionais, no ensino em serviço,
+graduação ou pós-graduação. Quando ocorre, tende a seguir métodos tradicionais de avaliação, com
+foco em provas objetivas pontuais ao final de módulos ou rodízios, predominantemente quantitativos.
+Autonomo et al., (2015), reforçam a importância dos preceptores propiciarem a aplicação do
+conhecimento teórico dos residentes nas atividades práticas da equipe; realizarem a avaliação do
+residente (junto à equipe e aos docentes/tutores) e estimulem a autoavaliação.
+Além disso, a análise revela o reconhecimento da importância do Feedback na prática da
+preceptoria, indicando uma mudança positiva nesse aspecto específico. A compreensão da autonomia
+52
+
+na educação de adultos, a superação de abordagens expositivas unidirecionais e a busca por criar um
+ambiente propício para o desenvolvimento de competências também são destacadas como aspectos
+valiosos na reflexão sobre o papel do educador. Percebe-se uma mudança de perspectiva dos
+preceptores em relação à sua prática e papel educacional. A experiência do curso influenciou
+positivamente a forma como eles se veem como educadores e como refletem sobre sua prática.
+O desenvolvimento do corpo docente, incluído aqui o corpo de preceptores, é uma tarefa
+desafiadora e não há um modelo único ou solução rápida. Os requisitos mínimos para a
+profissionalização da prática docente incluem sustentação por teorias de aprendizagem, adaptação às
+necessidades individuais e institucionais, promoção do desenvolvimento pessoal e profissional, e
+orientação para a tarefa. Estratégias bem- sucedidas podem envolver incentivos e reconhecimento do
+valor dos membros do corpo docente. O desenvolvimento futuro deve considerar a globalização, a
+colaboração interprofissional e a responsabilização do corpo docente, integrando a profissionalização
+do ensino na vida de cada profissional de saúde (Steinert., 2010).
+Limitações do estudo
+Algumas limitações deste estudo são um possível viés de memória, tendo em conta o tempo
+que passou entre a frequência do PRODEP e o momento da pesquisa, e o tamanho da amostra,
+sobretudo de participantes na edição de 2019. Apesar disso, este estudo não apenas oferece uma
+caracterização aprofundada da amostra e resultados positivos na avaliação de reação, mas também
+destaca mudanças percebidas na prática da preceptoria e contribui para a compreensão da
+importância de programas de desenvolvimento educacional para profissionais de saúde.
+53
+
+6 CONCLUSÃO
+A presente pesquisa buscou compreender a contribuição do Módulo Básico de um Programa
+de Desenvolvimento em Preceptoria - PRODEP, utilizando o modelo de avaliação proposto por Donald
+Kirkpatrick. Os resultados e análises, indicam que o PRODEP teve um impacto na prática dos
+preceptores, não apenas no conhecimento técnico, mas também nas habilidades pedagógicas e na
+perspectiva sobre o papel educacional. A aplicação do modelo de avaliação de Kirkpatrick proporcionou
+uma compreensão geral do curso, desde a reação inicial até as mudanças percebidas na prática
+profissional, a partir da aplicação do que foi aprendido no curso.
+Diante da análise realizada, a partir da avaliação baseada nos níveis de Kirkpatrick, destaca-se
+a avaliação de reação positiva e a autopercepção da aprendizagem. A abordagem qualitativa, por meio
+da análise de conteúdo das entrevistas, revela percepções significativas dos preceptores sobre a
+contribuição do curso para a prática da preceptoria. As mudanças observadas nas estratégias
+pedagógicas, no relacionamento com os residentes e na avaliação evidenciam uma evolução positiva
+na abordagem dos preceptores após a participação no curso.
+A literatura apresentada ao longo da discussão enriquece a compreensão do contexto da
+preceptoria na formação das profissões da saúde, destacando a importância da profissionalização e a
+complexidade do papel de preceptor que ultrapassa a perspectiva do cuidado para se expressar em
+atividades que requerem conhecimentos educacionais.
+O curso analisado é parte do esforço institucional coordenado pelo NEDUC e os resultados
+encontrados na pesquisa demonstram sua contribuição ao promover reflexão, aprimorar habilidades
+pedagógicas e influenciar positivamente a prática dos preceptores. Recomenda-se que futuras
+pesquisas aprofundem a análise até o nível quatro de Kirkpatrick, investigando os impactos nos
+resultados e desempenho organizacional.
+54
+
+REFERÊNCIAS
+Amaral, E., Campos, H. H., Friedman, S., Morahan, P. S., Araujo, M. N. T., Júnior, P. C., ... & Campos,
+F. (2012). An educational international partnership responding to local needs: process evaluation
+of the Brazil FAIMER Regional Institute. Education for Health, 25(2), 116-123.
+Armitage, P., & Burnard, P. (1991). Mentors or preceptors? Narrowing the theorypractice gap. Nurse
+Education Today, 11(3), 225-229.
+Ausubel, D. P. (1982). A aprendizagem significativa: a teoria de David Ausubel. São Paulo: Moraes.
+Autonomo, F. R. D. O. M., Hortale, V. A., Santos, G. B. D., & Botti, S. H. D. O. (2015). A Preceptoria na
+formação médica e multiprofissional com ênfase na atenção primária–Análise das Publicações
+Brasileiras. Revista brasileira de educação médica, 39, 316-327.
+Bain, L. (1996). Preceptorship: a review of the literature. Journal of Advanced Nursing, 24(1), 104-107.
+Baker, L., Leslie, K., Panisko, D., Walsh, A., Wong, A., Stubbs, B., & Mylopoulos, M. (2018). Exploring
+faculty developers’ experiences to inform our understanding of competence in faculty
+development. Academic Medicine, 93(2), 265.
+Bardin, L. (2011). Análise de conteúdo. (L. A. Reto & A. Pinheiro, Trad.). São Paulo: Edições 70.
+Barr, H., Freeth, D., Hammick, M., Koppel, I., & Reeves, S. (2000). Evaluations of interprofessional
+education. London: United Kingdom Review of Health and Social Care.
+Barreto, V. H. L., Monteiro, R. O. D. S., Magalhães, G. S. D. G., Almeida, R. C. C. D., & Souza, L. N.
+(2011). Papel do preceptor da atenção primária em saúde na formação da graduação e pós-
+graduação da Universidade Federal de Pernambuco: um termo de referência. Revista Brasileira de
+Educação Médica, 35, 578-583.
+Bhanji, F., Gottesman, R., de Grave, W., Steinert, Y., & Winer, L. R. (2012). The retrospective pre–post:
+A practical method to evaluate learning from an educational program. Academic emergency
+medicine, 19(2), 189-194.
+Boni, V., & Quaresma, S. J. (2005). Aprendendo a entrevistar: como fazer entrevistas em Ciências
+Sociais. Revista eletrônica dos pós-graduandos em sociologia política da UFSC, 2(1), 3.
+Botti, S. H. D. O. (2009). O papel do preceptor na formação de médicos residentes: um estudo de
+Residências em especialidades clínicas de um hospital de ensino (Tese de doutorado), Fundação
+Oswaldo Cruz, Rio de Janeiro.
+Botti, S. H. D. O. (2012). Desenvolvendo as competências profissionais dos residentes. Revista Hospital
+Universitário Pedro Ernesto [Internet], 11(Supl. 1), 102-106.
+Botti, S. H. D. O., & Rego, S. (2008). Preceptor, supervisor, tutor e mentor: quais são seus
+papéis?. Revista brasileira de educação médica, 32, 363-373.
+55
+
+Câmara, R. H. (2013). Análise de conteúdo: da teoria à prática em pesquisas sociais aplicadas às
+organizações. Gerais: Revista Interinstitucional de Psicologia, 6(2), 179-191.
+http://pepsic.bvsalud.org/pdf/gerais/v6n2/v6n2a03.pdf
+Delbone, R. M., & Moura, A. S. (Eds.). (2022). Série EPAs na formação em saúde: Cadernos da
+residência médica: Volume 1: Currículo baseado em EPAs do programa de residência médica de
+cirurgia geral. Belo Horizonte: Faculdade Santa Casa BH
+http://pergamum.faculdadesantacasabh.org.br:8080/pergamumweb/downloadArquivo?vinculo=O
+TFGRTU5OVkyOWtSVzF3Y21WellUMDNOVGdtWVdObGNuWnZQVGNtYzJWeFVHRnlZV2R5WVdadlB
+URW1jMlZ4VTJWallXODlPQ1pyWVhKa1pYZzlUaVpzYjJOaGJFRnljWFZwZG04OVEwOU5VRUZTVkVsT
+VNFRk5SVTVVVHladW.
+Duarte, T. & Queiroz, L. (2023). Net Promoter Score: entenda o que é o NPS e como implementar esta
+métrica na sua empresa! Track.co. https://track.co/blog/net-promoter-score/
+Faculdade Santa Casa BH. (2021). Plano de Desenvolvimento Institucional – PDI 2021-2025. Belo
+Horizonte: FSCBH.
+FAIMER. (2023). Foundation for Advancement of International Medical Education and Research.
+https://www.faimer.org/
+Fajardo, A. P. (2011). Os tempos da docência nas residências em área profissional da saúde: ensinar,
+atender e (re)construir as instituições-escola na saúde (Tese de doutorado), Universidade Federal
+do Rio Grande do Sul, Porto Alegre.
+Ferreira, J. R., Haddad, A. E., Brenelli, S. L., Cury, G. C., Puccini, R. F., Martins, M. D. A., & Campos, F.
+E. (2012). Pró-Saúde e PET-Saúde: experiências exitosas de integração ensino-serviço. Revista
+Brasileira de Educação Médica, 36, 3-4.
+Feuerwerker, L. C. M. (1997). Mudanças na educação médica e residência no Brasil. Dissertação de
+mestrado, Departamento de Prática de Saúde Pública, Faculdade de Saúde Pública da
+Universidade de São Paulo. https://www.teses.usp.br/teses/disponiveis/6/6131/tde-21062018-
+145543/publico/MTR_688_Feuerwerker_1997.pdf.
+Feuerwerker, L. C. M. (2011). As identidades do preceptor: assistência, ensino, orientação. In: Ribeiro,
+V. B. (Ed.), Formação pedagógica dos preceptores do ensino em saúde (pp. 29-36). Juiz de Fora:
+UFJF.
+Frank, J. (2005). The CanMEDS 2005 physician competency framework: Better standards. Better
+physicians. Better care. Ottawa: The Royal College Physician and Surgeon of Canada
+Frank, J., Snell, L. S., & Sherbino, J. (2015). CanMEDS 2015 Physician Competency Framework.
+Ottawa: Royal College of Surgeons of Canada.
+Freire, P. (2009). Pedagogia da Autonomia: saberes necessários à prática educativa (40a ed.). São
+Paulo: Paz e Terra.
+Frenk, J., Chen, L., Bhutta, Z. A., Cohen, J., Crisp, N., Evans, T., ... & Zurayk, H. (2010). Health
+professionals for a new century: transforming education to strengthen health systems in an
+interdependent world. The lancet, 376(9756), 1923-1958.
+56
+
+Kirkpatrick, D. L, & Kirkpatrick, J. D. (2006). Evaluating training programs: The four levels. (3rd ed.).
+San Francisco: Berrett-Koehler.
+Kirkpatrick, J. D., & Kirkpatrick, W. K. (2016). Kirkpatrick's four levels of training evaluation. USA:
+Association for Talent Development.
+Klatt, J., & Taylor-Powell, E. (2005). Program Development and Evaluation: Using the Retrospective
+Post-then-Pre Design, Quick Tips #27. University of Wisconsin-Extension, Madison, WI.
+Lakatos, E. M., & Marconi, M. A. (2003). Fundamentos de metodologia científica (5a ed.). São Paulo:
+Atlas.
+Lam, T. C. & Bengo, P. (2003). A comparison of three retrospective self-reporting methods of
+measuring change in instructional practice. American Journal of Evaluation, 24(1), 65-80.
+Lei nº 11.129, de 30 de junho de 2005. (2005, julho 2005). Institui o Programa Nacional de Inclusão
+de Jovens – ProJovem; cria o Conselho Nacional da Juventude – CNJ e a Secretaria Nacional de
+Juventude; altera as Leis nº s 10.683, de 28 de maio de 2003, e 10.429, de 24 de abril de 2002;
+e dá outras providências. Diário Oficial da União.
+Levinson, W., Gordon, G., & Skeff, K. (1990). Retrospective versus actual pre-course self-
+assessments. Evaluation & the health professions, 13(4), 445-452.
+Libâneo, José Carlos. (1990). Democratização da escola pública: a pedagogia crítico-social dos
+conteúdos. São Paulo: Edições Loyola
+Lieff, S. J. (2010). Faculty development: yesterday, today and tomorrow: guide supplement 33.2–
+viewpoint. Medical teacher, 32(5), 429-431.
+Luckesi, C. C. (2011). Avaliação da aprendizagem: componente do ato pedagógico. São Paulo: Cortez.
+Macedo, C. G. (1999). Apresentação. In: Almeida, M., Feuerwerker, L., & Lanos, M. (Eds.), A educação
+dos profissionais de saúde da américa latina (pp. 9-11). São Paulo: Hucitec.
+Marins, J. J. N. (2011). Formação de preceptores para a área de saúde. In: Ribeiro V. M. B. (Ed.),
+Formação pedagógica de preceptores do ensino em saúde (pp. 47-52). Juiz de Fora: Ed. UFJF.
+Martins, A. R., et al. (2010). Residência Multiprofissional em Saúde: o que há de novo naquilo que já
+está posto. In: Fajardo, A. P., Rocha C. M. F., Pasini V. L. (Orgs.), Residências em saúde: fazeres
+& saberes na formação em saúde (Cap. 4, pp. 75-90). Porto Alegre: Hospital Nossa Senhora da
+Conceição.
+Mattos, M. C. I. D. (1997). Ensino médico: o que sabemos?. Interface-Comunicação, Saúde,
+Educação, 1, 193-196.
+McLean, M., Cilliers, F., & Van Wyk, J. M. (2008). Faculty development: yesterday, today and
+tomorrow. Medical teacher, 30(6), 555-584.
+Medeiros, N. M. H. (2015). Educação permanente em saúde: gestão e ensino na concepção dos
+trabalhadores. São Paulo: Fap-Unifesp.
+57
+
+Mendes, R. M., & Miskulin, R. G. S. (2017). A análise de conteúdo como uma metodologia. Cadernos
+de Pesquisa, 47(165), 1044-1066.
+Michel, J. L. M., Batista de Oliveira, R. A., & Nunes, M. P. T. (2011). A residência médica e a
+preceptoria, a supervisão e a coordenação. Cadernos da ABEM, 7, 35.
+Minayo, M. C. S. (1992). O desafio do conhecimento: pesquisa qualitativa em saúde. São Paulo:
+Hucitec-Abrasco.
+Ministério da Educação. (2007). Programa Nacional de Reorientação da Formação Profissional em
+Saúde. Brasília: Ministério da Saúde.
+https://bvsms.saude.gov.br/bvs/publicacoes/07_0323_M.pdf
+Ministério da Saúde. (2009). Política Nacional de Educação Permanente em Saúde. Brasília: MS.
+http://bvsms.saude.gov.br/bvs/publicacoes/politica_nacional_educacao_permanente_saude.pdf.
+Ministério da Saúde. (2010a) Programa de Educação pelo Trabalho para a Saúde – PET. Brasilia:MS.
+https://www.gov.br/saude/pt-br/composicao/sgtes/pet-saude
+Ministério da Saúde. (2010b). Residências em saúde: fazeres & saberes na formação em saúde. Porto
+Alegre: Hospital Nossa Senhora da Conceição.
+Ministério da Saúde. (2023). Residência em área profissional da saúde uni e multiprofissional. Brasília:
+MS. https://www.gov.br/mec/pt-br/residenciamultiprofissional
+Mizukami, Maria da Graça Nicoletti. (1986). Ensino: as abordagens do processo. São Paulo: EPU.
+Nogueira, D. L., de Sousa, M. D. S., de Araújo Dias, M. S., Pinto, V. D. P. T., Lindsay, A. C., &
+Machado, M. M. T. (2022). Educação em saúde e na saúde: conceitos, pressupostos e
+abordagens teóricas. SANARE-Revista de Políticas Públicas, 21(2).
+Nóvoa, A. (Ed.). (1995). Vidas de professores (2.ª ed.). Porto: Porto Ed.
+Nunes, T. P. M., Michel, J. L. M., Haddad, A. E., Brenelli, S. L., & Oliveira, R. A. B. (2011). A residência
+médica, a preceptoria, a supervisão e a coordenação. Cad Bras Med, 7, 35-40.
+O'Sullivan, P. S., & Irby, D. M. (2011). Reframing research on faculty development. Academic
+Medicine, 86(4), 421-428.
+Paschoal, A. S., Mantovani, M. D. F., & Méier, M. J. (2007). Percepção da educação permanente,
+continuada e em serviço para enfermeiros de um hospital de ensino. Revista da Escola de
+Enfermagem da USP, 41, 478-484.
+Paula, G. B. (2019). Papel e atribuições do preceptor na formação do profissional da saúde no contexto
+do ensino em cenários de prática do Sistema Único de Saúde (Trabalho de Conclusão de Curso).
+Apresentado ao curso de Especialização em Saúde Pública, Faculdade de Medicina, Universidade
+Federal do Rio Grande do Sul, Porto Alegre.
+Pereira, A. J., et al. (2018). Formação de preceptores e tutores em saúde: construção de caminhos.
+Formação de formadores para residências em saúde: corpo docente assistencial em experiência
+viva. Rede UNIDA, Porto Alegre, 88-101.
+58
+
+Perrenoud, P., & Thurler, M. A. (2002). As competências para ensinar no século XXI. Porto Alegre:
+Artmed.
+Portaria Interministerial nº 1.077, de 12 de novembro de 2009 (2009, 13 novembro). Dispõe sobre a
+Residência Multiprofissional em Saúde e a Residência em Área Profissional da Saúde, e institui o
+Programa Nacional de Bolsas para Residências Multiprofissionais e em Área Profissional da Saúde
+e a Comissão Nacional de Residência Multiprofissional em Saúde. Diário Oficial da União.
+Portaria nº 1.111/GM, de 5 de julho de 2005. (2005, 7 julho). Fixa normas para a implementação e a
+execução do Programa de Bolsas para a Educação pelo Trabalho. Diário Oficial da União, Brasília,
+DF.
+Pratt, CC, McGuigan, WM, & Katzev, AR (2000) Medindo os resultados do programa: Usando pré-teste
+retrospectivo metodologia. Jornal Americano de Avaliação, 21(3). 341-349.
+Presidência da República. (1988). Constituição da República Federativa do Brasil de 1988. (2001).
+(21a ed.). Saraiva.
+Resolução nº 2, de 13 de abril de 2012. (2012, 16 abril). Dispõe sobre Diretrizes Gerais para os
+Programas de Residência Multiprofissional e em Profissional de Saúde. Diário Oficial da União,
+Brasília, DF. Seção I, p. 24-25.
+Ribeiro, K. R. B., & Prado, M. L. D. (2014). A prática educativa dos preceptores nas residências em
+saúde: um estudo de reflexão. Revista Gaúcha de Enfermagem, 35, 161-165.
+Ricer, R. E. (1998). Defining preceptor, mentor, and role model. Family medicine, 30(5), 328-328.
+Rocha, H. C., & Ribeiro, V. B. (2012). Curso de formação pedagógica para preceptores do internato
+médico. Revista Brasileira de Educação Médica, 36(03), 343-350.
+Rodrigues, C. D. S. (2020). Mobilização e estruturação de competências no trabalho da preceptoria da
+residência multiprofissional em saúde (Tese de doutorado, Políticas e Práticas em Saúde e
+Enfermagem). Universidade Federal do Rio Grande do Sul, Porto Alegre.
+Romão, G. S., Romano, A. C., Preto, S. P., Romão, G. S., Rocha, S. R., & Sá, M. F. (2021). A
+aprendizagem experiencial na. Femina, 49(4), 219-22.
+Santos, W. S. D. (2011). Organização curricular baseada em competência na educação
+médica. Revista Brasileira de Educação Médica, 35, 86-92.
+Sheets, K. J., & Schwenk, T. L. (1990). Faculty development for family medicine educators: an agenda
+for future activities. Teaching and Learning in Medicine: An International Journal, 2(3), 141-148.
+Skeff, K. M., Stratos, G. A., & Bergen, M. R. (1992). Evaluation of a medical faculty development
+program: a comparison of traditional pre/post and retrospective pre/post self-assessment
+ratings. Evaluation & the Health Professions, 15(3), 350-366.
+Sousa, E. G. D. (2021). A residência médica no Brasil. Revista Brasileira de Educação Médica, 9(2),
+112-114.
+59
+
+Steinert, Y. (2010). Faculty development: from workshops to communities of practice. Medical
+teacher, 32(5), 425-428.
+Stewart, B. M., & Krueger, L. E. (1996). An evolutionary concept analysis of mentoring in
+nursing. Journal of professional nursing, 12(5), 311-321.
+Stuart-Siddall, S., & Haberlin, J. M. (1985). Qualities that make a preceptor. RNABC news, 17(4), 28.
+Taylor, D. C., & Hamdy, H. (2013). Adult learning theories: implications for learning and teaching in
+medical education: AMEE Guide No. 83. Medical teacher, 35(11), e1561-e1572.
+Ten Cate, O. (2005). Entrustability of professional activities and competency-bases training. Medical
+education, 39, 1176-1177.
+Uebel, A. C., Rocha, C. M., & Mello, V. R. C. (2003). Resgate da memória histórica da Residência
+Integrada em Saúde Coletiva do Centro de Saúde Escola Murialdo (CSEM). Boletim de Saúde,
+Porto Alegre, 17(1), 117-123.
+World Health Organization - WHO. (2013). Transforming and scaling up health professionals’ education
+and training: World Health Organization guidelines 2013. Genebra: WHO.
+https://iris.who.int/bitstream/handle/10665/93635/9789241506502_eng.pdf
+60
+
+APÊNDICES
+Apêndice A – Validação do questionário da Pesquisa Retrospectiva pós-pré
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+Apêndice B - Roteiro de entrevista
+70
+
+ANEXO
+Anexo A – Parecer Consubstanciado do CEP
+71

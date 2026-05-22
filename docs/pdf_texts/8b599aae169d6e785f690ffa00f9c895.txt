@@ -1,0 +1,1379 @@
+Universidade do Minho
+Escola de Medicina
+s
+is
+o
+d
+io
+c
+r
+a
+s
+n
+i
+n
+o it Ana Cláudia Pacheco Baptista
+a
+m
+r
+o
+f
+a
+m Dissecting the role of immunometabolism
+o
+lu in granuloma formation in sarcoidosis
+n
+a
+r
+g
+n
+i
+m
+s
+ilo
+b
+a
+t
+e
+m
+o
+n
+u
+m
+m
+i
+fo
+e
+lo
+r
+e
+h
+t
+g
+n
+it
+c
+e
+s
+s
+iD
+a
+ts
+itp
+a
+B
+o
+c
+e
+h
+c
+a
+P
+a
+id
+u
+á
+lC
+a
+n
+A
+2
+3
+0
+o
+|
+2 Setembro de 2023
+h
+n
+iM
+U
+
+Ana Cláudia Pacheco Baptista
+Dissecting the role of immunometabolism in
+granuloma formation in sarcoidosis
+Dissertação de Mestrado
+Mestrado em Ciências da Saúde
+Trabalho efetuado sob a orientação do
+Doutor Agostinho Albérico Rodrigues de Carvalho
+E do
+Doutor Relber Aguiar Gonçales
+Setembro de 2023
+
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras e
+boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não
+previstas no licenciamento indicado, deverá contactar o autor, através do RepositóriUM da Universidade
+do Minho.
+Atribuição-Não-Comercial-Sem-Derivações
+CC BY-NC-ND
+ii
+
+AGRADECIMENTOS
+Esta dissertação foi concretizada no Instituto de Investigação em Ciências da Vida e da Saúde (ICVS) e
+na Universidade do Minho. Agradeço, assim, ao Presidente da Escola de Medicina, Professor Doutor
+Jorge Correia Pinto, e à atual Diretora do ICVS e Diretora do Mestrado em Ciências da Saúde, Professora
+Doutora Patrícia Maciel.
+Agradeço também a todos os investigadores que fizeram parte desta jornada académica, com um
+especial agradecimento ao Doutor Agostinho Carvalho e à Doutora Cristina Cunha por me terem acolhido
+nestes últimos anos, bem como à fantástica equipa que os mesmos orientam. Deixo um grande obrigada
+ao Relber Gonçales e à Marcela Oliveira por terem sido uma ajuda fundamental e por terem feito parte,
+de uma forma tão especial, de todos os momentos desta fase. Não deixo de referir também o nome da
+recém doutorada, Daniela Antunes, por ter sido o meu grande apoio no primeiro contacto que tive com
+o mundo da Ciência.
+Por fim, tenho a agradecer aos meus pais por terem tornado toda esta jornada possível e por me terem
+dado todo o apoio e força que precisei ao longo destes anos. Agradeço também àqueles que me deram
+motivação fora do horário de laboratório, as pessoas-luz da minha vida, o Tomás, a Jéssica e a Beatriz,
+sem dúvida alguma que este caminho seria mais conturbado se vocês não fizessem parte dele. E, como
+trabalhadora-estudante, deixo o meu último agradecimento aos meus colegas de trabalho por estarem
+lá a arrancar-me um sorriso e a darem um brilho especial ao fim dos meus dias mais complicados.
+A todos, muito obrigada.
+The work presented in this dissertation was performed at the Life and Health Sciences Research Institute
+(ICVS), School of Medicine, University of Minho, Braga, Portugal (ICVS/3B’S – PT Government Associate
+Laboratory, Braga/Guimarães, Portugal). The work was supported by Fundação para a Ciência e a
+Tecnologia (FCT), PTDC/MED-OUT/1112/2021, UIDB/50026/2020 e UIDP/50026/2020.
+iii
+
+STATEMENT OF INTEGRITY
+I hereby declare having conducted this academic work with integrity. I confirm that I have not used
+plagiarism or any form of undue use of information or falsification of results along the process leading to
+its elaboration.
+I further declare that I have fully acknowledged the Code of Ethical Conduct of the University of Minho.
+iv
+
+Dissecando o papel do imunometabolismo na formação do
+granuloma na sarcoidose
+RESUMO
+A sarcoidose é uma condição granulomatosa de etiologia desconhecida que afeta predominantemente
+os pulmões. Este distúrbio é identificado pela formação de granulomas resultantes da acumulação de
+células imunes e da resolução inadequada da inflamação. O metabolismo celular é um mecanismo
+crucial pelo qual as células imunes modulam sua função. A indoleamina 2,3-dioxigenase 1 (IDO1) é a
+enzima limitante no metabolismo do triptofano e apresenta um papel imunorregulador fundamental,
+crucial na interface entre a inflamação e a imunidade celular. Os nossos dados mostraram que, entre os
+genes envolvidos no metabolismo celular, a expressão do gene Ido1 é regulada positivamente durante a
+formação de granulomas em modelos experimentais. Já os produtos da oxidação do L-triptofano pela
+IDO1, conhecidos como L-quinureninas, têm sido descritos como detentores de funções tolerogénicas,
+como ativação de células T reguladoras e produção de citocinas anti-inflamatórias. A nossa hipótese é
+que a IDO1 representa um elemento essencial na patogénese da sarcoidose, regulando a mobilização
+de células imunes e a formação de granulomas e, consequentemente, influenciando a progressão e o
+desfecho da doença. Neste sentido, recorremos a um modelo in vivo de formação de granuloma usando
+ratinhos selvagens e deficientes em Ido1. O nosso trabalho demonstra que a ausência do gene Ido1 em
+ratinhos perturba a fase inicial da formação do granuloma, assim como a produção de citocinas e a
+distribuição de células imunes. Em humanos, mostramos que a variante genética rs7820268 associada
+à deficiência de IDO1 pode ditar o curso da doença. Estes resultados contribuem para o nosso
+conhecimento dos mecanismos moleculares na base da inflamação granulomatosa e para o possível
+desenvolvimento de novas intervenções terapêuticas para a sarcoidose.
+PALAVRAS-CHAVE
+Indoleamina 2,3-dioxigenase 1 (IDO1); Inflamação granulomatosa; Polimorfismo de nucleótido simples;
+Quinurenina; Sarcoidose
+v
+
+Dissecting the role of immunometabolism in granuloma
+formation in sarcoidosis
+ABSTRACT
+Sarcoidosis is a granulomatous condition with unknown etiology that predominantly affects the lungs.
+This disorder is characterized by the formation of granulomas resulting from the accumulation of immune
+cells and an inadequate resolution of inflammation. Cell metabolism is a crucial mechanism whereby
+immune cells modulate their function. Indoleamine 2,3-dioxygenase 1 (IDO1) is the rate-limiting enzyme
+of tryptophan metabolism and displays a fundamental immunoregulatory role, crucial at the interface
+between inflammation and cell immunity. Our data revealed that, among the genes involved in cellular
+metabolism, expression of Ido1 gene was upregulated during granuloma formation in experimental
+sarcoid granulomas. On the other hand, the products of L-tryptophan oxidation by IDO1, known as L-
+kynurenines, have been described as having tolerogenic functions, such as T regulatory cell activation
+and anti-inflammatory cytokine production. We hypothesize that IDO1 represents an essential modulatory
+element in sarcoidosis by regulating immune cell mobilization and granuloma formation and, as a result,
+influences the progression and the outcome of the disease. In this work, we took advantage of an in vivo
+model of sarcoid granuloma using wild-type and Ido1 knockout mice. Our work shows that Ido1 deficiency
+disturbs the early phase of granuloma formation, as well as cytokine production and immune cell
+distribution. In patients, we showed that the rs7820268 genetic variant that underlies IDO1 deficiency
+may dictate the severity and the outcome of the disease. These results contribute to an improved
+understanding of the molecular mechanisms that underlie granulomatous inflammation and to the
+potential development of novel therapeutic interventions for sarcoidosis.
+KEYWORDS
+Granulomatous inflammation; Indoleamine 2,3-dioxygenase 1 (IDO1); Kynurenine (KYN); Sarcoidosis;
+Single nucleotide polymorphism (SNP)
+vi
+
+TABLE OF CONTENTS
+Agradecimentos .................................................................................................................................. iii
+Resumo............................................................................................................................................... v
+Abstract.............................................................................................................................................. vi
+Figure Index ....................................................................................................................................... ix
+List of Abbreviations ............................................................................................................................ x
+1. Introduction ................................................................................................................................ 1
+1.1 Sarcoidosis ......................................................................................................................... 2
+1.1.1 Epidemiology and etiology of sarcoidosis ...................................................................... 2
+1.1.2 Diagnosis and treatment .............................................................................................. 4
+1.1.3 Histopathologic characteristics ..................................................................................... 6
+1.2 Immunometabolism in sarcoidosis ....................................................................................... 8
+1.2.1 Tryptophan metabolism ............................................................................................... 9
+2. Objectives ................................................................................................................................. 13
+3. Material and Methods ............................................................................................................... 15
+3.1 Mouse strains ................................................................................................................... 16
+3.2 NDPD-Sepharose 4B beads coupling by cyanogen bromide-activation ................................. 16
+3.3 Murine model of lung sarcoid granuloma formation ............................................................ 16
+3.4 Histological and morphometric analysis of lung granulomas ............................................... 17
+3.5 Granuloma microdissection and RNA sequencing ............................................................... 17
+3.6 Protein quantification......................................................................................................... 18
+3.7 Immunofluorescence imaging in paraffin-embedded lung sections ...................................... 18
+3.8 Cytokine and chemokine quantification .............................................................................. 19
+3.9 Patient population ............................................................................................................. 19
+3.10 BAL collection from sarcoidosis patients ............................................................................ 20
+3.11 Isolation of genomic DNA from peripheral blood ................................................................. 20
+3.12 Genotyping of the rs7820268 SNP of IDO1 ........................................................................ 20
+3.13 Statistical analysis ............................................................................................................. 21
+4. Results ..................................................................................................................................... 22
+4.1 Lung granulomatous inflammation induces the expression of IDO1 in vivo .......................... 23
+vii
+
+4.2 IDO1 regulates early granuloma formation ......................................................................... 23
+4.3 IDO1 influences immune cell recruitment during granuloma development .......................... 24
+4.4 IDO1 is not required to control granulomatous inflammation .............................................. 25
+4.5 The IDO1 rs7820268 SNP is associated with the development of sarcoidosis ..................... 27
+4.6 IDO1 regulates leukocyte recruitment and disease progression in sarcoidosis ..................... 29
+5. Discussion and Final Considerations ......................................................................................... 31
+References ....................................................................................................................................... 35
+viii
+
+FIGURE INDEX
+Figure 1 Available lines of therapy for sarcoidosis Page 05
+Figure 2 An outline of the development of sarcoid granulomas Page 07
+Figure 3 Timeline of the in vivo model of granulomatous inflammation using a Page 17
+NDPD peptide from Aspergillus nidulans covalently linked to Sepharose
+4B beads
+Figure 4 Representative allelic discrimination plot Page 20
+Figure 5 Ido1 is induced during granulomatous inflammation in vivo Page 23
+Figure 6 IDO1 deficiency enhances granuloma formation in sarcoidosis Page 24
+Figure 7 IDO1 deficiency disturbs leukocyte recruitment during granuloma Page 25
+formation
+Figure 8 IDO1 does not influence proinflammatory cytokine production in a Page 26
+murine model of sarcoidosis
+Figure 9 IDO1 does not influence chemokine release in a mouse model of Page 27
+granulomatous inflammation
+Figure The IDO1 rs7820268 SNP is associated with the risk of human Page 28
+10 sarcoidosis
+Figure Measures of pulmonary function are not affected by genetic variation in Page 29
+11 IDO1
+Figure Genetic variation in IDO1 enhances leukocyte recruitment to the lungs of Page 30
+12 sarcoidosis patients and worsens disease progression
+ix
+
+LIST OF ABBREVIATIONS
+% – Percentage
+°C – Degree Celsius
+µg – Microgram
+µg – Microgram
+µL – Microliter
+µm – Micrometer
+ACCESS – A Case Control Etiologic Study of Sarcoidosis
+ACE – Angiotensin-converting enzyme
+AhR – Aryl hydrocarbon receptor
+ANOVA – Analysis of variance
+APC – Antigen presenting cell
+BALF – Bronchoalveolar lavage fluid
+C5a – Complement component 5a
+CD3 – Cluster of differentiation 3
+CHUSJ – Centro Hospitalar Universitário de São João
+CT – Computerized tomography
+CVF – Forced vital capacity
+DAPI – 4’,6-diamidino-2-phenylindole
+DC – Dendritic cell
+DGAV – Direção-geral de Alimentação e Veterinária
+DLCO – Carbon monoxide diffusing capacity
+DNA – Deoxyribonucleic acid
+EU – European Union
+FEF2575 – Forced expiratory flow at 25-75% of forced vital capacity
+g – gram
+GCN2 – General control nondepressible 2
+H&E – Hematoxylin and eosin
+HLA – Human leukocyte antigen
+HRQoL – Health-related quality of life
+ICVS – Instituto de Investigação em Ciências da Vida e da Saúde
+IDO – Indoleamine 2,3-dioxygenase
+IFN-γ – Interferon gamma
+Ig – Immunoglobulin
+IL – Interleukin
+ITIM – Immunoreceptor tyrosine-based motif
+KO – Knockout
+KYN – Kynurenine
+L-TRP – L-Tryptophan
+mg – miligram
+x
+
+MHC – Major histocompatibility complex
+mKatG – Mycobacterial catalase-peroxidase
+mL – mililiter
+MMP – Matrix metalloproteinase
+mTORC1 – Mammalian target of rapamycin complex 1
+NAD – Nicotinamide adenine dinucleotide
+NDPD – NAD-dependent histone deacetylase hst4
+NF-κB
+NOD – Non-obese diabetic
+OCT – Optimal cutting temperature
+PaCO – Carbon dioxide arterial pressure
+2
+PAMP – Pathogen-associated molecular pattern
+PaO – Oxigen arterial pressure
+2
+PBMC – Peripheral blood mononuclear cell
+PBS – Phosphate-buffered saline
+PCR – Polymerase chain reaction
+pH – Potential of hydrogen
+PTX3 – Pentraxin-3
+rpm – Rotation per minute
+SCID – Severe combined immunodeficiency
+SH2 – Src homology 2
+SHP – Src homology domain phosphatase
+SNP – Single nucleotide polymorphism
+SOCS3 – Supressor of cytokine signaling 3
+SodA – Superoxide dismutase A
+SPF – Specific pathogen free
+T1D – Type 1 diabetes
+TB – Tuberculosis
+TCA – Tricarbolxylic acid
+TCZ – Tocilizumab
+TDO – Tryptophan 2,3-dioxygenase
+TF – Tiffeneau index
+TGF-β – Transforming growth factor
+Th – T helper
+TIMP – Tissue inhibitor of matrix metalloproteinases
+TLC – Total lung capacity
+TLR – Toll-like receptor
+TNF – Tumor necrosis factor
+Treg – T regulatory
+VR – Residual volume
+WT – Wild-type
+xi
+
+x g – g force
+xii
+
+1. INTRODUCTION
+1
+
+1.1 Sarcoidosis
+Sarcoidosis is a systemic inflammatory condition of unknow cause. A multitude of organs can be impacted
+by sarcoidosis, including skin, liver and heart, although it most frequently affects the lungs (i.e. in 90% of
+cases) 1. This illness progresses from an asymptomatic state to a persistent, chronic inflammation with
+increasing organ impairment in around one-third of patients 2. The formation and accumulation of
+epithelioid noncaseating granulomas in the affected tissues is the distinguishing immunopathological
+signature of sarcoidosis 3. Despite recent advances, the exact triggers and molecular signals that initiate
+and control granulomatous inflammation are still largely unknown. Since the pathophysiological
+mechanisms and its biomarkers are not clearly identified, viable therapeutic choices remain limited 4.
+Notwithstanding, further developments in our understanding of sarcoidosis development and its disease-
+specific mechanisms will be essential for developing clinically useful tools and innovative therapeutic
+interventions. In this sense, a large effort has recently been put in the characterization of the molecular
+mechanisms associated to sarcoidosis. In this regard, innate immunity features represent the connecting
+element between the initiation, persistence, and resolution of sarcoid granulomas, whereas adaptive
+immune responses to selected antigens coordinates the establishment and amplification, and as well as
+the fine-tuning, of granulomatous inflammation 5.
+1.1.1 Epidemiology and etiology of sarcoidosis
+Despite large disparities in the occurrence of sarcoidosis, epidemiological studies have contributed
+considerably to outline the worldwide dispersion of the disease, evaluating long-term effects and detecting
+potential risk factors. Depending on the geographical region, the prevalence of sarcoidosis varies widely,
+ranging from 1–5 per 100,000 in South Korea, Taiwan and Japan, to 140–160 per 100,000 in Sweden
+and Canada 6, 7. However, comparisons between regions are challenging since estimates are derived from
+countless sources and are used in multiple settings. Additionally, data is lacking about multiple regions
+around the world. The actual disease burden may be inflated, especially in circumstances where people
+continue to be categorized as cases decades after the condition has resolved. Besides that, some surveys
+only use information from hospitalizations, which underestimates the exact number of sarcoidosis
+patients by excluding individuals who are only observed during outpatient treatment 8.
+Sarcoidosis incidence in Sweden is 11.5 per 100,000 according to statistics from the Swedish
+national register 9, which is higher than estimates from the United States (around 8-11 per 100,000) 10, 11
+and Canada (6.8 per 100,000 per year) 12. The latest data from East Asia, corresponding to South Korea
+reports, shows lower incidence levels (from 0.5 to 1.3 per 100,000) 13, 14. Once more, data sources,
+2
+
+diagnosis and clinical patterns in different regions might result in an unreliable estimation of incidence
+and prevalence 7.
+Knowing that patient populations are heterogeneous and might result in variable incidence and
+prevalence estimates, race is a critical determinant for defining the rates of sarcoidosis. In fact, non-
+Hispanic Black Americans have the highest rates of sarcoidosis in the United States with higher age-
+adjusted death rates attributable to sarcoidosis, in comparison with non-Hispanic White Americans 15, 16, 17.
+Particularly, Black American women exhibit the greatest levels 18. In fact, some reports claim that women
+are more likely to suffer from sarcoidosis than males, presenting worse outcomes 19, 20.
+In Portugal, a cohort with 409 patients from the Northern region was used to investigate the
+epidemiological and clinical aspects of the impacted population 21. According to this study, the condition
+peaks at about 40 years of age, with women accounting for 58.9% of all cases. Additionally, thoracic
+involvement was observed in 94.8% of the patients. Intriguingly, even though the origin of sarcoidosis is
+still unknown, the fact that the lung is the organ most commonly affected suggests that exposure to
+airborne environmental antigens may be a potential cause for the disease 22.
+It is plausible that several genetic and environmental factors contribute to sarcoidosis.
+Granulomas are considered to form in the context of immune dysregulation through a multitude of
+different processes. Sarcoidosis has a wide range of possible causes, including self-antigens such as
+vimentin 23 and organic and inorganic particles 24, 25, 26. Multiple mycobacterial pathogen-associated
+molecular patterns (PAMPs), such as mycobacterial catalase-peroxidase (mKatG) and superoxide
+dismutase A (sodA), have been found in tissue and bronchoalveolar-lavage fluid (BALF) from sarcoidosis
+patients 27, 28. Additionally, in different mouse models of pulmonary sarcoid inflammation, these
+mycobacterial antigens induce granulomas that seem to be histologically and immunologically equivalent
+to those found in human disease 29. Even so, not every sarcoidosis patient shows signs of mycobacterial
+remains, which has driven researchers to speculate that different microbiological pathogens contribute
+to the onset of sarcoidosis. In accordance, DNA and other molecules from Propionibacterium species
+have been extracted from sarcoid granulomas, while most patients hold a distinctive adaptive immune
+response to these associated antigens 30, 31. It has also been reported that Propionibacterium acnes causes
+antigen-driven granulomatous inflammation in a variety of in vitro and in vivo models 32. Recently, it was
+also discovered that antigens derived from the nicotinamide adenine dinucleotide (NAD)-dependent
+histone deacetylase hst4 (NDPD) of the fungus Aspergillus nidulans were recognized by CD4+ T cells in
+patients with acute pulmonary sarcoidosis 33, suggesting another causal trigger in the etiology of
+sarcoidosis.
+3
+
+There is substantial evidence that a genetic predisposition exists due to the varying occurrence
+and pathophysiology of sarcoidosis across multiple races and examples of familiar transmission of
+disease 15, 34. Now more than ever, genetic studies have been focusing on immune-related genes that
+potentially confer disease susceptibility 35, 36. As such, human leukocyte antigens (HLA), with functions in
+the regulation of expression of the major histocompatibility complex (MHC), which is crucial for antigen
+presentation and the regulation of adaptive immune responses, was proven to be associated with
+sarcoidosis susceptibility, particularly in the class II region 37, 38. Considering every factor, and even if the
+etiology of sarcoidosis is still unclear, it is currently believed that host genetics and environmental factors
+play a concerted action to promote disease pathology 39.
+1.1.2 Diagnosis and treatment
+The absence of adequate biomarkers for the diagnosis, prognosis, and treatment of sarcoidosis
+complicates therapeutic interventions. It is indeed challenging to diagnose sarcoidosis since it mirrors a
+variety of health conditions such as cancer or inflammatory diseases.
+Sarcoidosis diagnosis is based on a multimodality approach combining clinical, radiological, and
+BAL analysis, supported by histological evaluation demonstrating the presence of non-caseating
+granulomas, according to the American Thoracic Society/European Respiratory Society/World
+Association for Sarcoidosis and Other Granulomatous Disorders statement 40, 41. In patients without
+evidence of granulomas, diagnosis also involves clinical and radiological features associated with a BAL
+CD4+/CD8+ lymphocyte ratio >3.5 42. Sarcoidosis is defined as acute if resolved within 2 years, either self-
+limiting or following treatment, whereas chronic sarcoidosis referred to persistent disease beyond 2 years.
+Despite numerous investigations, there is still no accurate and clinically used diagnostic
+biomarker for sarcoidosis 43. Angiotensin-converting enzyme (ACE) values above the norm can validate
+the diagnosis but are not unique towards sarcoidosis 44. For some individuals, the diagnosis might not be
+determined for months or even years due to it being dependent on the clinical manifestation, presence
+of granulomas and exclusion of alternative causes. Moreover, in particular cases, sarcoidosis can be
+diagnosed, but eventually manifestations are proven to be related to another condition 45.
+Up to 50% of sarcoidosis patients will need therapy, a large fraction of patients will experience
+spontaneous illness remission, and 10 to 30% of patients may experience chronic, persisting disease
+with, in some cases, noticeable lung fibrosis and variable degrees of respiratory failure 46, 47, 48, 49. Indeed,
+5% of sarcoidosis patients will die from the condition, with increased death rates observed in those with
+respiratory failure, fibrotic pulmonary disease, pulmonary hypertension, and cardiac sarcoidosis 16, 50, 51, 52,
+4
+
+53.
+Corticosteroids are the standard therapy for sarcoidosis, yet they are associated with decreased
+health-related quality of life (HRQoL), morbidity, toxicity and several health complications, such as obesity
+or endocrinal and cardiovascular side effects 54, 55, 56 (Figure 1). In this sense, steroid-sparing non-biologic
+immunosuppressive drugs take place as “second-line agents” for treatment 57. The preferred steroid-
+sparing non-biologic agent is methotrexate since it allows patients to reduce or even discontinue
+corticosteroid therapy with positive outcomes 46, 47, 48, 58, 59. When individuals are intolerant or do not react to
+first and second-line therapies, biological therapy implementation has promising results towards
+sarcoidosis treatment 46. Tumor necrosis factor (TNF) inhibitors, considered “third-line agents”, are
+administered in individuals with uncontrolled disease or those who experience toxicity upon “second-line”
+treatments 46, 48, 60. Infliximab, the most used TNF inhibitor, has shown positive outcomes on severe forms
+of sarcoidosis 61, 62. Despite their proven success with treating persistent sarcoidosis, these patients display
+instead a higher probability for tuberculosis 63.
+Figure 1. Available lines of therapy for sarcoidosis. The treatment of sarcoidosis is composed by three different lines
+of therapy, with increasing specificity. The first line of therapy is a standard and unspecific treatment, mainly consisting in
+corticosteroid administration. The second line of therapy is the one applied when corticosteroid intolerance appears and
+englobes immunosuppressive drugs, such as methotrexate. Finally, the third line of therapy is applied to individuals with
+uncontrolled disease or lack of response to other therapies, consisting in a biological therapy, such as infliximab, a TNF
+inhibitor.
+Genome-wide expression profiling has received attention as a potential tool for the diagnosis and
+5
+
+prognosis of diverse lung conditions 64. There are now more opportunities to find therapeutically
+meaningful biomarkers because of incorporation of transcriptomic profiling in the blood and pulmonary
+tissues of sarcoidosis patients. The genomic landscape thus distinguishes sarcoidosis from other
+alternative diagnostics and provides a perspective into critical regulatory processes underpinning sarcoid
+inflammation 65. Furthermore, the investigation of novel biomarkers and further establishment of the
+groundwork for the implementation of personalized treatment in clinical settings may initiate with a deeper
+understanding of the genetic background of sarcoidosis.
+1.1.3 Histopathologic characteristics
+The immunopathogenesis of sarcoidosis is focused on the growth and accumulation of non-caseating
+epithelioid granulomas 66. Sarcoid granulomas are compact and structured concentrations of
+macrophages that originate in response to a sustained immunological insult. Epithelioid and giant cells,
+neutrophils, dendritic cells, B and T lymphocytes, and fibroblasts are only a few of the many types of cells
+that compose mature granulomas 67. Yet, granulomas may still form in severe combined
+immunodeficiency (SCID) mice, which essentially lack both B and T cells 68. This suggests that the adaptive
+immune system plays a non-essential role in granuloma formation. Innate immunity therefore drives the
+establishment and development of granulomatous lesions, while adaptive immunity contributes to
+restrict and minimize the dissemination of the causative antigen.
+Granuloma formation and development
+The first step in the establishment of sarcoid granulomas is the activation of antigen-presenting cells
+(APCs), which primarily consist of lung-resident macrophages activated by the recognition of poorly
+soluble or insoluble antigens 69 (Figure 2). APCs activate the adaptive immune system by providing the
+processed peptides to recruited CD4+ T lymphocytes after antigen phagocytosis. After detecting MHC-II
+on the surface of lung-resident macrophages, T cells promote cytokine release that supports the
+inflammatory environment firstly created by interactions between the insult and innate immune cells 70.
+In addition, CD4+ T cells differentiate into type 1 effector T-helper (Th1) cells and promote survival and
+activation of effector macrophages by releasing interferon-γ (IFN-γ) and TNF 71. Cytokine-activated
+macrophages also produce TNF, which boosts cellular immune responses important for granuloma
+maturation. In fact, individuals with a progressive disease status present higher TNF values than those in
+a remissive state 72.
+6
+
+Figure 2. An outline of the development of sarcoid granulomas. (1) The immune system identifies persistent antigenic
+stimuli through antigen-presenting cells (APCs), such as dendritic cells or lung-resident macrophages. (2) After migrating to
+lymph nodes, APCs present the antigens that had previously been phagocytized and, upon MHC-II cross-presentation, activate
+T cells. (3) By releasing cytokines, T cell activation promotes an inflammatory environment that recruits and activates other
+immune cells. (4) The induction of an inflammatory environment amplifies the production of cytokines and chemokines to
+further boost cellular immune responses. (5) Under normal circumstances, the immune system effectively eliminates the
+threat. However, when the immune system is unable to eradicate it, immune cells begin to accumulate in the lung. A
+mesenchymal-epithelial remodeling process occurs in activated macrophages, giving rise to epithelioid and giant multinuclear
+cells. Other immune cells, such as T and B cells, build up on the surroundings, and uncontrolled inflammation leads
+to fibroblast accumulation on the granuloma, developing pulmonary fibrosis.
+When incapable of eliminating persistent antigens, macrophages undergo structural and
+molecular changes that attracts other immune cells, leading to immune cell accumulation and,
+consequently, granuloma formation 73. In particular, activated macrophages enter into an epithelioid state
+and start to attach to adjacent cells by cell membrane connections until a point they may completely fuse
+their membranes and form multinucleated giant cells 74. These morphological modifications have been
+detailed in the context of tuberculosis 75. Macrophages suffer a mesenchymal-epithelial remodeling and
+display classical epithelial markers such E-cadherin in the development of adherent junctions during
+macrophage merging, giving rise to epithelioid and giant multinuclear cells. By inversely regulating
+macrophage quiescence, the mammalian target of rapamycin complex 1 (mTORC1) has recently been
+shown to be a crucial rheostat of the inflammation associated with sarcoidosis 76. The conversion of
+7
+
+murine macrophages into hypertrophic epithelioid cells that spontaneously form granulomas is thus
+facilitated by the mTORC1 chronic activation as the result of the genetic deletion of the TSC2 negative
+regulator.
+Granuloma formation and maintenance is instigated by a combination of chemokines that
+promotes the recruitment of circulating cells, such as patrolling monocytes and macrophages,
+neutrophils, and lymphocytes, to the lung tissue 77. While Th1-dominant environments are often restricted
+to disease sites, T helper type 17 (Th17) cells have been linked to the etiology of sarcoidosis. Intriguingly,
+the percentage of IFN-γ-producing Th17.1 cells is increased in the peripheral blood and BAL from
+sarcoidosis patients when compared to healthy controls and is associated with disease course 78. In
+addition, evaluation of pulmonary and mediastinal lymph node biopsies identified infiltrates of IL-17-
+producing T cells in the sarcoid area around the center of the granuloma 79. The pathogenic effects of
+Th17 effector cells in sarcoidosis are still unclear, their relevance in the immune response is mostly
+attributed to their capacity to direct the mobilization of neutrophils to the inflamed tissue 80.
+Even though most granulomas may remit with favorable long-term results, the primary cause of
+morbidity and death in sarcoidosis is the development of pulmonary fibrosis, being a prevalent side effect
+for an increasing percentage of patients who suffer from persistent and uncontrolled inflammation 51. The
+capacity to maintain and regenerate host tissue becomes the dominant survival strategy after immune
+responses enter the chronic phase 81. Yet, a persistent fibrotic scar may develop by an excessive buildup
+of extracellular matrix components as a result of repair in the areas with dysregulated inflammation. The
+mechanisms underlying lung fibrosis remain unclear, however numerous research studies back up the
+idea that a Th2-polarized program firmly counters the dominant Th1 responses, in which IFN-γ inhibits
+fibroblast proliferation and extracellular matrix deposition 82. In fact, matrix metalloproteinases (MMPs)
+and tissue inhibitor of matrix metalloproteinases (TIMPs) expression are regulated by IFN-γ, which control
+collagen degradation and production, respectively. Likewise, epithelioid and giant cells in sarcoid
+granulomas were shown to express MMP-2, MMP-9, and their inhibitors TIMP-2 and TIMP-1 83.
+Nevertheless, it is unclear how these cells may be related to pulmonary fibrosis. Recruited fibroblasts
+form a collagen matrix in response to Th2 pro-fibrotic mediators (IL-4 and IL-13), as well as other cytokines
+generated by granuloma resident cells, such as transforming growth factor (TGF)-β1 and surround the
+sarcoid granuloma, which eventually results in organ failure 84.
+1.2 Immunometabolism in sarcoidosis
+In inflammatory conditions, the metabolic processes are critical for the immune response. One of the
+8
+
+most relevant examples regards the mTORC1 pathway, whose chronic activation is linked to the
+development of sarcoidosis 76. Due to the expression of degradative enzymes, the epithelial transformation
+of macrophages and their metabolic shift via mTORC1 towards enhanced glycolysis fosters their
+proliferative, microbicidal, and secretory ability to eliminate large or less degraded foreign bodies 74. The
+immune response is eventually concentrated locally when these cells clump to form an early granuloma.
+In a mouse model of sarcoidosis, the granulomas of animals deficient for the long pentraxin 3 (PTX3), a
+central component of humoral innate immunity, displayed higher levels of phosphorylated S6K1 kinase,
+a downstream target of mTORC1, when compared to wild-type animals 85. Similarly, everolimus-mediated
+mTORC1 inhibition restrained granuloma development in Ptx3 KO mice 85. Ultimately, PTX3 deficiency
+elicits mTORC1 activation via the complement component C5a and the downstream metabolic
+reprogramming of macrophages towards enhanced glycolysis, promoting their proliferation and
+aggregation 85.
+Although there is growing evidence towards the role of immune cell metabolism in sarcoid
+granuloma formation, the exact metabolic mechanisms and the way they crosstalk to foster granuloma
+formation remain mostly elusive. Amino acids are constituents of proteins that modulate cellular
+responses through signaling or that act as precursors for energy-producing pathways. For example,
+individuals with active tuberculosis (TB) were found to have lower levels of L-tryptophan (L-TRP) and
+increased amounts of its metabolites 86, 87, 88. Of note, 11 out of 20 serum metabolites with the potential
+to distinguish between patients with active tuberculosis and healthy controls were amino acids
+or derivatives 86. Importantly, sarcoidosis and tuberculosis share similar clinical patterns to a large extent
+89 and, as such, it is plausible that the molecular mechanisms underlying such disorders are analogous.
+1.2.1 Tryptophan metabolism
+IDO1 is a heme-containing enzyme that catalyzes the first and rate-limiting step of the kynurenine (KYN)
+pathway. The essential amino acid L-TRP is depleted as a result of the enzymatic conversion of L-TRP
+into N-formylkynurenine, a precursor of the kynurenines. The KYN pathway is the second primary source
+of NAD+, a reducing equivalent that is required for many metabolic reactions, such as glycolysis and the
+tricarboxylic acid (TCA) cycle 90. In fact, IDO1-driven catabolism of L-TRP can result in the endogenous
+synthesis of NAD+ through the KYN pathway 91, 92. This well described catalytic function is complemented
+with the recently identified signaling function of the protein itself. IDO1 is mainly composed by two
+domains: a large domain containing the catalytic cleft and a small domain with two function
+immunoreceptor tyrosine-based inhibitory motifs (ITIMs), ITIM1 and ITIM2, linked to the noncatalytic
+9
+
+signaling functions of the enzyme 93.
+Even though it is detected in basal conditions, IDO1 is an inducible enzyme, mainly induced by
+IFN-γ as a part of a conserved mechanism to prevent harmful inflammatory responses 93, 94. Moreover,
+IDO1 can be induced in the long-term in a TGF-β environment. Tyrosine phosphorylation of the ITIM
+sequence allows it to function as a docking site for molecular patterns with Src homology 2 (SH2)
+domains. As a matter of fact, TGF-β promotes Src homology domain phosphatase-1 (SHP1) and SHP2
+upregulation and favors interaction with ITIM1 over ITIM2 95, 96. Then, IDO1-SHP1-SHP2 complex formation
+promotes activation of the anti-inflammatory non-canonical factor nuclear kappa B (NF-κB) pathway and
+induces a sustained Ido1 expression 95.
+An immunosuppressive microenvironment caused by KYN production and L-TRP depletion has
+been implicated in IDO1-mediated inhibitory effect on T cells and increased regulatory T (Treg) cell
+differentiation 97, 98. The lack of L-TRP causes the general control nonderepressible 2 (GCN2) gene to
+become active, which inhibits the expression of a number of genes, including the one that encodes the
+pro-inflammatory cytokine interleukin-6 (IL-6) 99. This suppresses the transition of Treg cells into
+proinflammatory Th17 cells 100, 101. Furthermore, L-KYN is an endogenous aryl hydrocarbon receptor (AhR)
+agonist that can support the differentiation of effector T cells into Treg cells and the induction of IDO1 to
+modulate immune activity 102, 103.
+IDO1 is not the sole enzyme capable of converting L-TRP into L-KYN. IDO2 and tryptophan 2,3-
+dioxygenase (TDO) are two other enzymes that can accomplish the same purpose. IDO2 is an isoform of
+IDO1, both of which are encoded by genes located in chromosome 8 and both share high degree of
+amino acid sequence similarity 104. Epithelial, vascular endothelial, neoplastic, and antigen-presenting cells
+generally express both isoforms 92, 105, with IDO2 being preferentially expressed in the liver under
+physiological circumstances 106. However, IDO2 exhibits abnormalities on its catalytic activity and its
+depletion does not result in decreased L-KYN levels 107. In fact, further research is needed to fully
+understand the physiological significance of IDO2 since its function is yet unknown. On the other hand,
+TDO has a more well-defined purpose, being located in the liver and showing high substrate specificity,
+in comparison to the promiscuous profile of IDO1, which can bind to various indole-bearing compounds,
+such as serotonin, melatonin or tryptamine 108. TDO degrades excess dietary L-TRP, but it is believed that
+L-KYN are also further degraded in the liver since the systemic levels are maintained by IDO1 activity 109,
+110. Of the enzymes that metabolize L-TRP through the KYN pathway, only IDO1 and IDO2 are present and
+active in immune cells.
+10
+
+IDO1 in infectious diseases
+The L-TRP metabolism is an essential modulator of immunological host-pathogen interactions. By
+functioning as Toll-like receptor (TLR) ligands, a number of PAMPs can increase IDO1 expression 111, 112.
+Furthermore, L-TRP malnutrition has the power to rewire certain auxotroph invaders, as seen with
+Mycobacterium tuberculosis, enabling them to regain the ability to generate this crucial amino acid 113. In
+addition, the production of kynurenines by IDO1 in infectious illnesses creates an immunosuppressive
+state that may hamper the clearance of the pathogen. The suppression of IDO1 activity in macaques with
+active TB decreases the burden of M. tuberculosis, improves animal survival, and reduces pathology 114.
+Whether enhanced IDO1 is a cause of the progression into active infection or a coping mechanism against
+the microorganism is still unknown at this point. These findings, however, imply that there may be a
+chance for IDO1 inhibitors to be used as a successful antimicrobial treatment. In addition to controlling
+the pathogen burden, IDO1 activation may restrain the pathogenic immune response that could
+exacerbate the condition. Since the innate and adaptive immune responses to the fungus are dysregulated
+in experimental fungal infections, IDO1 inhibition significantly worsens the illness and the concomitant
+inflammatory pathology 115. It is noteworthy that fungi express IDO1 and synthesize kynurenines that are
+important for both fungal and host viability 116.
+IDO1 in autoimmunity
+IDO1-mediated immunomodulatory processes play a significant role in the pathophysiology of
+autoimmune diseases characterized by an overactive immune response to self-antigens. In autoimmunity,
+the overactivation of effector immune cells is achieved as the result of the diminished activity of IDO1,
+which under healthy settings may suppress effector T cells and promote Treg lymphocytes in an antigen-
+specific way 117, 118, 119. In peripheral blood mononuclear cells (PBMCs) obtained from pediatric type 1
+diabetes (T1D) patients 120 or dendritic cells (DCs) from nonobese diabetic mice 121, 122, 123, IDO1 activity was
+found to be impaired. Poor IDO1 activity in DCs from non-obese diabetic (NOD) mice and PBMCs from
+diabetic children is a result of a fast turnover of the protein brought on by an IL-6-driven pro-inflammatory
+environment. In fact, inhibition of the IL-6 receptor (IL-6R) through the administration of tocilizumab (TCZ)
+can be used to rescue IDO1 deficiency 90. Through an IDO1-dependent mechanism, IL-6 inhibition
+prevents IDO1 degradation and improves normoglycemia in diabetic NOD mice 124. In PBMCs from a
+subpopulation of T1D children with a deregulated IL-6R-supressor of cytokine signaling 3 (SOCS3) axis
+and a distinctive frequency of the single nucleotide polymorphism (SNP) rs7820268 in the IDO1 gene,
+TCZ also restored L-TRP metabolism 120. Although various SNPs in IDO1 have been linked to the
+development of autoimmune and chronic inflammatory illnesses, such as T1D, Crohn's disease, systemic
+11
+
+sclerosis, and multiple sclerosis, the majority of them impact intronic areas or the IDO1 promoter and
+lack a cause-and-effect connection 93. The absence of a genotype-to-protein connection represents a
+barrier to the exploitation of IDO1 as a predictive biomarker and viable therapeutic target. All this supports
+the idea that IDO1 should be developed as a biomarker that predicts outcomes and helps with precision
+therapy in the area of autoimmunity. Likewise, IDO1 could have a huge impact on the course of
+sarcoidosis. In fact, numerous medical signs of sarcoidosis are similar to other typical autoimmune
+disorders 125. Our hypothesis relied thus on the possible influence that IDO1 deficiency and the rs7820268
+SNP may have on the progression and outcome of this particular granulomatous disease.
+12
+
+2. OBJECTIVES
+13
+
+Despite the significance of sarcoid granulomas for the pathogenesis of the disease, our molecular
+understanding of the signals underpinning macrophage transition into hypertrophic cells that aggregate,
+initiate, and maintain granulomatous inflammation remains elusive. Therefore, an improved knowledge
+about these processes is ultimately required for the design of rationale therapies targeting pathogenetic
+mechanisms. Since IDO1 exhibits a critical immunoregulatory activity at the crossroads between
+inflammation and immunity, we hypothesize that a functional dysregulation of IDO1 in sarcoidosis could
+be a pivotal molecular hallmark linked to granuloma formation and affecting disease progression and
+outcome. Therefore, we aim to:
+1. Describe the role of IDO1 in the development and resolution of sarcoid granulomas.
+2. Define the role of IDO1 deficiency in immune cell recruitment and function during granulomatous
+inflammation.
+3. Assess how IDO1 deficiency impacts susceptibility and traits of human sarcoidosis.
+By unraveling the processes underlying sarcoid granuloma formation and maintenance, we expect to
+contribute to the development of novel and personalized therapeutic strategies for efficient clinical
+interventions in sarcoidosis.
+14
+
+3. MATERIAL AND METHODS
+15
+
+3.1 Mouse strains
+C57BL/6 Ido1+/+ (WT) and C57BL/6 Ido1-/- (KO) (B6.129-Ido1tm1Alm/J) mice were bred under specific-
+pathogen-free (SPF) conditions and kept at the Life and Health Sciences Research Institute (ICVS) Animal
+Facility. Mice were fed ad libitum with standard solid food and water and were kept at light/dark cycles
+of 12 hours, temperature of 18-25°C and 40-60% humidity. All the procedures were approved by the
+Ethics Committee for Research in Life and Health Sciences of the University of Minho (SECVS 074/2016),
+according to the guidelines sanctioned by the Ethical Committee for Animal Experiments and Direção-
+Geral de Alimentação e Veterinária (DGAV). All procedures followed the EU adopted regulations (Directive
+2010/63/EU).
+3.2 NDPD-Sepharose 4B beads coupling by cyanogen bromide-activation
+Briefly, 0.5 g of Sepharose® 4B beads (Sigma-Aldrich, Missouri, USA) activated with cyanogen bromide
+were washed and swollen in cold 1 mM HCl for 30 minutes. A total of 100 mL was added in numerous
+aliquots, with the supernatant being gently filtered off in between additions. The resin was then washed
+twice, one with 35 mL of 0.1 M NaHCO buffer containing 0.5 M NaCl (pH 8.3-8.5) and another with 750
+3
+mL of distilled water (coupling buffer). The resin was transferred to a solution containing 8 mg of the
+Aspergillus nidulans ligand NDPD peptide (RLGSDNRLTRL) 33 in coupling buffer (GenScript, New Jersey,
+USA), and gently mixed overnight at 4°C. Following incubation, the unreacted ligands were discarded by
+washing the beads three times in 50 mL of coupling buffer and centrifuging for 10 minutes at room
+temperature at 10,000 rpm. Using 0.2 M glycine (pH 8.0), the unreacted chemical groups were blocked
+for two hours at room temperature. Thereafter, the beads were thoroughly washed to remove the blocking
+solution. This was performed over four cycles, each cycle alternating between acid and basic solutions,
+first with 25 mL of basic coupling buffer and then with 25 mL of 0.1 M acetate buffer combined with 0.5
+M NaCl (pH 4.0).
+3.3 Murine model of lung sarcoid granuloma formation
+Lung sarcoid granulomas were induced as previously described, with minor adjustments 29, 85. A
+subcutaneous injection of 20 µg of the NDPD-peptide, together with 0,25 mL of Freund's incomplete
+adjuvant, was used to sensitize eight-week-old Ido1 WT and KO mice on day -14. Fourteen days later,
+6,000 NDPD-coupled Sepharose 4B beads in 0.4 mL of phosphate-buffered saline (PBS) (Thermo Fisher,
+USA) were injected into the tail vein of mice. Mice were euthanized using a lethal dose of anesthesia,
+following cardiac perfusion, two, four- and seven-days after bead administration (Figure 3).
+16
+
+Figure 3. Timeline of the in vivo model of granulomatous inflammation using a NDPD peptide from Aspergillus
+nidulans covalently linked to Sepharose 4B beads. Ido1+/+ (WT) and Ido1-/- (KO) mice were sensitized subcutaneously
+on day -14 with 0.25 mL of a solution of incomplete Freund’s adjuvant containing the NAD-dependent histone deacetylase
+hst4 (NDPD) peptide. Fourteen days later, mice were challenged via tail-vein injection with 6,000 Sepharose 4B beads
+covalently bonded to NDPD peptides in 0.4 mL of Phosphate Buffer Saline (PBS). At day 0 and day 2, 4 and 7 post-
+embolization, animals were euthanized, and the lungs were collected for further analysis. Created with BioRender.com
+3.4 Histological and morphometric analysis of lung granulomas
+Mice had their lungs removed after being perfused with PBS 1x. The left lobe was isolated and fixed with
+formaldehyde solution 3.7% (Sigma-Aldrich, USA) for at least 48h, before processing and paraffin
+embedding. Hematoxylin and eosin (H&E) staining was performed to allow histological evaluation and
+granuloma size measurement in lung paraffin-sections with a 5 µm of thickness. The area of granulomas
+was quantified using ImageJ, version 1.53d, after acquisition of images with an Olympus BX61 widefield
+upright microscope using a DP70 high resolution camera (Olympus, Japan). The measurements were
+performed on a minimum of 20 granulomas per lung section, on a total of 3 sections per animal,
+sectioned through the central NDPD-coupled bead nidus.
+3.5 Granuloma microdissection and RNA sequencing
+After mice were euthanized, their entire lungs were removed, submerged in Optimal Cutting Temperature
+(OCT) compound in a ratio of 1:2 of PBS and rapidly frozen at -80⁰C. Afterwards, the tissue was cut with
+10 µm thickness and stained with 1% cresyl violet. Granulomas on the tissue were identified and isolated
+17
+
+using laser-capture microdissection technology in order to isolate granuloma RNA. Sample processing,
+sequencing and analysis was performed at IMGM Laboratories GmbH (Germany), as described 126.
+3.6 Protein quantification
+Mice lungs were excised and kept at -80⁰C. For protein quantification, Bradford dye-binding (Bio-Rad,
+USA) method was used. Lysis buffer and protease inhibitor solution was prepared and used at a volume
+of 800 µL per sample containing half of each adult lobe. The lung tissue was transferred to a tube
+containing lysis buffer before disruption with up-and-down twisted movements. The lysate was
+homogenized 15 times through 19-, 21- and 25-gauge needles attached to a syringe. After 15 minutes
+on ice, the lysate was centrifuged at 10,000 rpm for 10 minutes at 4⁰C. Afterwards, 20 µg of protein
+were mixed with Laemmli buffer (Bio-Rad), and samples were then boiled, separated on a 12% SDS-PAGE
+gel, and transferred to nitrocellulose membranes (Bio-Rad). The following primary antibodies were used
+in Western blotting following the manufacturer’s instructions: both mouse anti-β-actin antibody (Abcam,
+UK) and anti-IDO1 antibody in a 1:1000 dilution. Anti-mouse secondary antibody was diluted to 1:5000.
+Thermo Chemoluminescence (SuperSignalTM West Femto Maximum Sensitivity Substrate; ThermoFisher
+Scientific) was used to generate the blots, and the ChemiDocTM XRS system (Bio-Rad) was used to detect
+the results. The ImageLab 4.1 analysis program (Bio-Rad) was used to calculate signal intensities.
+3.7 Immunofluorescence imaging in paraffin-embedded lung sections
+Paraffin was removed from lung sections in two washes of xylol (5 minutes each) and then washed two
+times in ethanol 100%, ethanol 90%, ethanol 70% and water for 2 minutes each. The slides were boiled
+for 15 minutes in 10 mM citrate buffer (pH 6.0) for antigen retrieval in a microwave oven. After slides
+cooled down at room temperature, the non-specific antibody binding sites were blocked with 5% donkey
+serum (Sigma-Aldrich) in PBS for 1 hour at room temperature. Slides were then incubated at 4°C
+overnight with the primary antibodies Mac-2 (B2C10) 1:100, CD3 (RM0027-3B19) 1:100 (Santa Cruz,
+USA) and Gr-1 (RB6-8C5) 1:100 (BD Biosciences, USA). On the next day, slides were stained with the
+secondary biotinylated IgG (H+L) antibody 1:250 for 1 hour at room temperature. Afterwards, streptavidin-
+conjugated Alexa Fluor 568 1:200 (Thermo Fisher) was added to the tissue sections. Nuclei were
+counterstained for 10 minutes at room temperature with 0.1 g/mL DAPI. Slides were washed with PBS
+containing 0.02% (v/v) Tween-20 after each stage. PermaFluor Aqueous Mounting Medium (Thermo
+Fisher) was used to mount the slides, and images were captured on an Olympus FV1000 confocal
+microscope. ImageJ 1.53d was used to quantify fluorescence.
+18
+
+3.8 Cytokine and chemokine quantification
+Excised lungs were homogenized in 2 mL of PBS, centrifuged at 10,000 rpm for 2 minutes at 4⁰C and
+supernatants were stored at -80⁰C. Before measuring cytokines and chemokines, samples were
+concentrated into a final volume of 500 µL using speed vacuum. An indirect ELISA test was conducted
+to measure TNF, IFN-γ, IL-6 and IL-17 levels in samples diluted at a 1:1 ratio, according to manufacturer’s
+instructions (BioLegend). Absorbance was read on a MicroPlate reader model 680 (Bio-Rad). Mouse
+chemokines, namely CCL5 (RANTES), CCL11 (Eotaxin-1), CCL17 (TARC), CXCL1 (KC), CCL2 (MCP-1),
+CXCL9 (MIG), CXCL10 (IP-10), CCL3 (MIP-1α), CCL4 (MIP-1β), CXCL13 (BLC), CXCL5 (LIX) and CCL22
+(MDC), were profiled using the 13-plex LEGENDplex Mouse Proinflammatory Chemokine Panel
+(BioLegend), according to the manufacturer’s instructions. Samples were analyzed on a BD FACS LSRII
+instrument (BD Biosciences) and processed using FlowJo v.10 (Tree Star Inc.).
+3.9 Patient population
+Ethical approval for human research has been granted by the Hospital São João Ethics Committee and
+the Ethical Subcommission for Life and Health Sciences (protocol 014/2015). Between 2001 and 2014,
+201 sarcoidosis patients recruited at Centro Hospitalar Universitário de São João (CHUSJ), Porto,
+Portugal, had their clinical samples and information collected. Diagnosis was determined through a
+multimodality approach combining clinical, radiological, and BAL analysis, as well as histological
+evaluation demonstrating the presence of non-caseating granulomas, according to the American Thoracic
+Society/European Respiratory Society/World Association for Sarcoidosis and Other Granulomatous
+Disorders stipulation 41. In patients lacking granulomas, the diagnosis additionally considered clinical and
+radiological traits linked to a BAL CD4+/CD8+ lymphocyte ratio greater than 3.5. In contrast to chronic
+sarcoidosis, which was described as a disease that persisted for more than two years, acute sarcoidosis
+was characterized as a resolution of the condition within two years, either via self-limitation or after
+therapy. At the Hospital de Braga in Portugal, healthy volunteers were selected among the blood donors.
+Both the Ethics Committee of the Hospital de Braga (CESHB 029/2019) and the Health Ethics Committee
+of CHUSJ (CES.72/19) approved the study. According to the Portuguese law and EU guidelines, all
+participants supplied written informed permission, and their identities and the confidentiality of the data
+were maintained. The National Heart, Lung, and Blood Institute Biorepository provided the ACCESS study
+127 with sarcoidosis patients which was then utilized as a validation cohort. This was accomplished through
+a research materials distribution agreement.
+19
+
+3.10 BAL collection from sarcoidosis patients
+When the diagnosis of sarcoidosis was clinically suspected, routine procedures were used to obtain BALs
+from the patients. By injecting 150 mL of 0.9% sterile saline solution into the bronchus of the furthest
+radiographically affected pulmonary lobe, BALs were collected. Samples were carefully aspirated and
+centrifuged for 5 minutes at 4°C at 3,000 rpm to remove cell debris. The supernatants were then kept
+at -80°C.
+3.11 Isolation of genomic DNA from peripheral blood
+Using the NZY Blood gDNA Isolation kit (NZYTech, Portugal), genomic DNA was extracted from whole
+blood from healthy donors and sarcoidosis patients, according to the manufacturer’s instructions. The
+genomic DNA was stored at -20°C.
+3.12 Genotyping of the rs7820268 SNP of IDO1
+Genotyping of the rs7820268 SNP was performed using specific KASPar assays (LCG Genomics) in an
+Applied Biosystems 7500 Fast qPCR (Thermo Fisher Scientific, USA), following the manufacturer’s
+instructions. Quality controls for the genotyping results was obtained with negative controls and randomly
+selected samples with previously known genotypes. The genotyping cluster data was analyzed with the
+Software Design & Analysis, version 2.5.1 (Applied Biosystems, USA) (Figure 4).
+Figure 4. Representative allelic discrimination plot. The genotyping cluster data was analyzed using the Design &
+Analysis Software, version 2.5.1 (Applied Biosystems, USA). Red dot denotes individuals carrying the rs7820268 homozygous
+20
+
+genotype (TT), blue dot the wild-type (CC) genotype and the green dot indicates heterozygous individuals (CT). The yellow dot
+represents the non-template control.
+3.13 Statistical analysis
+Data was analyzed with the GraphPad Prism software (version 8.0.1). Normality was assessed for all
+data. Data was analyzed using unpaired two-tailed Student’s t test or Mann-Whitney t test, One-Way
+Analysis of Variance (ANOVA) with Bonferroni multiple correction post-hoc test and linear regression as
+specified. Statistical significance was defined when p < 0.05.
+21
+
+4. RESULTS
+22
+
+4.1 Lung granulomatous inflammation induces the expression of IDO1 in vivo
+We aimed to clarify the possible immunoregulatory role of IDO1 in the molecular events that control
+sarcoid inflammation in vivo. Using the NDPD peptide covalently coupled to Sepharose beads to elicit an
+antigen-driven immune response, we investigated the induction of IDO1 expression in WT mice exposed
+to a well-established murine model of lung granulomatous inflammation 29. We found that Ido1 gene
+expression was mostly observed in the granulomas of WT mice 2 days after embolization, to decrease
+thereafter on day 4 (Figure 5A and B). In support of gene expression data, Western-Blot analysis of the
+lung on day 2 following bead administration demonstrated a 1.8-fold up-regulation of IDO1, with a minor
+decrease on day 4, analogous to gene expression (Figure 5C, D, and E). These findings collectively show
+that IDO1 is induced during the formation of pulmonary granulomas and is a potential mediator of
+sarcoidosis-related inflammation.
+Figure 5. Ido1 is induced during granulomatous inflammation in vivo. (A) Heatmap of genes involved in tryptophan
+metabolism (Ido1, Tdo2, Kmo, Kynu and Haao) and genes encoding cytokines involved in the regulation of tryptophan
+metabolism (Ifng, Il6 and Tgfb1) in NDPD bead-elicited granulomas from WT mice (0, 2 and 4 days after bead embolization).
+(B) Gene expression of Ido1 during granuloma formation in WT mice 0, 2- and 4-days post-embolization. (C) Western-blot
+determination of IDO1 in lungs from WT mice. β-actin was used as control. (D) Quantification of protein levels of IDO1 in the
+lungs of WT mice during granuloma formation; Data are represented as mean ± SEM.
+4.2 IDO1 regulates early granuloma formation
+We subsequently aimed to define the effect of IDO1 deficiency on the susceptibility to sarcoidosis in vivo
+23
+
+by inducing experimental granulomatous lung inflammation in both WT and KO mice (Figure 6A). KO
+animals form larger granulomas compared to their WT counterparts, as shown by histological and
+morphometric analyses of lung sections 2, 4, and 7 days following NDPD-coupled bead embolization
+(Figure 6B and C). This was particularly evident at earlier timepoints, most notably after 2 days post-
+administration). At this time point, the mean size of the granulomas induced by the NDPD-coupled beads
+was 12,496 ± 702 µm2 (mean ± SEM) and 24,774 ± 1,690 µm2 in the WT and KO groups, respectively.
+This difference was attenuated at later timepoints (between day 4 and day 7), with granulomas in KO
+mice showing similar mean sizes to WT mice. Considering the above, IDO1 appears to play a role in the
+development of granulomas in an animal model of granulomatous inflammation.
+Figure 6. IDO1 deficiency enhances granuloma formation in sarcoidosis. (A) Model of granulomatous inflammation
+using the NDPD peptide from Aspergillus nidulans covalently linked to Sepharose beads. (B) Representative H&E stained lung
+sections of WT and KO animals demonstrating NDPD-coupled bead-induced granulomas 2, 4 and 7 days after challenge with
+NDPD-coupled beads. (C) Area of granulomas elicited by NDPD-coupled beads in WT and KO at day 2, day 4 and day 7 post-
+embolization; **p < 0.005, *** p < 0.001 and **** p < 0.0001 by two-tailed One-Way ANOVA; Data are represented as Mean
+± SEM.
+4.3 IDO1 influences immune cell recruitment during granuloma development
+Based on its recognized immunoregulatory role in leukocyte recruitment 93, we next addressed the
+consequences of IDO1 deficiency to the cellular dynamics during granuloma formation by analyzing the
+24
+
+infiltrating cells harvested from the lungs of NDPD-coupled beads-challenged animals. Lung slides showed
+differences in immune cell composition throughout the granuloma, with neutrophils being the
+predominant cells at the center of the granuloma, while other immune cells such as macrophages and T
+cells being homogeneously distributed in WT mice (Figure 7A). Quantitative analyses demonstrated
+decreased fluorescence intensity for Gr-1 in KO mice in comparison to WT, whereas no differences
+regarding macrophages and T cells were detected (Figure 7B). Considering the larger granuloma size in
+KO mice, these results suggest that cell types other the ones tested contribute to granuloma formation.
+Figure 7. IDO1 deficiency disturbs leukocyte recruitment during granuloma formation. (A) Representative
+immunofluorescence analysis revealing the preferential localization of macrophages (MAC-2), neutrophils (Gr-1) and T cells
+(CD3) in sites of NDPD-coupled bead-elicited granulomas in the WT and KO mice lung on day 2 after bead embolization; Nuclei
+were stained with DAPI; Scale bar represents 100 µm. (B) Mean fluorescence intensity (MFI) of neutrophils, macrophages
+and lymphocytes in WT and KO mice lung sections; p < 0.01 by unpaired two-tailed Student’s t test with Welch’s correction;
+Data are represented as mean ± SEM.
+4.4 IDO1 is not required to control granulomatous inflammation
+Since sarcoid granulomas are formed and sustained by the local orchestration of a complex network of
+immunoregulatory cytokines and chemokines, we postulated that the levels of one or more of these
+molecules may be more prominently altered in the pulmonary airways of KO mice. At day 2 post-
+embolization, all the cytokines tested were increased in comparison to later timepoints (Figure 8). Levels
+of proinflammatory cytokines in lung homogenates of KO mice were found to be generally increased than
+those in the WT counterparts, as shown in Figure 8, although in any of the cases the difference reached
+statistical significance.
+25
+
+Figure 8. IDO1 does not influence proinflammatory cytokine production in a murine model of sarcoidosis.
+Quantification of the protein levels of (A) TNF, (B) IL-6, (C) IFN- γ and (D) IL-17 by ELISA in the lung homogenates of WT
+and KO mice at days 2, 4 and 7 post-embolization; Data are represented as Mean ± SEM.
+When it comes to chemokine levels, flow cytometry analysis showed that, specifically at day 2
+post-bead administration, a general trend towards the enhanced release of chemokines responsible for
+inflammatory functions was noted (Figure 9A-L). In KO mice, an increased in relevant chemoattractants
+for monocytes and lymphocytes was detected, in comparison to WT mice (Figure 9E, F, G, I and J).
+Moreover, KO mice showed a trend towards decreased concentrations of chemokines responsible for
+neutrophil recruitment on its lungs (Figure 9D and K), a finding in line with the lower numbers of
+neutrophils present in the granulomas.
+26
+
+Figure 9. IDO1 does not influence chemokine release in a mouse model of granulomatous inflammation.
+Concentrations of (A) CCL5 (RANTES), (B) CCL11 (Eotaxin-1), (C) CCL17 (TARC), (D) CXCL1 (KC), (E) CCL2 (MCP-1), (F)
+CXCL9 (MIG), (G) CXCL10 (IP-10), (H) CCL3 (MIP-1α), (I) CCL4 (MIP-1β), (J) CXCL13 (BLC), (K) CXCL5 (LIX) and (L)
+CCL22 (MDC) in the lung supernatants of WT and KO mice at days 2, 4 and 7 post-embolization; Data are represented as
+mean ± SEM.
+4.5 The IDO1 rs7820268 SNP is associated with the development of sarcoidosis
+In humans, the IDO1 rs7820268 SNP have been commonly associated with an increased susceptibility
+to several inflammatory and autoimmune conditions, including type I diabetes 128. Along this line, to
+evaluate whether human genetic deficiency of IDO1 might increase the susceptibility to sarcoidosis, we
+genotyped 174 sarcoidosis patients and 447 healthy controls of European descent 120. By performing a
+case-control genetic association study, we observed a higher occurrence of the CC genotype among
+sarcoidosis patients in comparison with healthy controls (p value = 0.001581) (Figure 10A and B),
+pinpointing this specific genotype as a risk-conferring factor for the developing of sarcoidosis.
+27
+
+Figure 10. The IDO1 rs7820268 SNP is associated with the risk of human sarcoidosis. (A) Genetic variation in
+IDO1 among cases of sarcoidosis and controls and association test results; the statistical analysis is relative to the genotypes;
+OR – odds ratio, CI – confidence interval. (B) Frequencies of different genotypes at rs7820268 in IDO1 in the case-control
+association study; Fisher’s exact t test for association with the risk of sarcoidosis.
+We observed a different proportion of IDO1 genotypes according to gender, symptoms, smoking
+habits, and age groups, with the CC genotype generally accounting for more than 50% of the overall cases
+(Figure 11A). With regards to pulmonary parameters, including forced expiratory flow at 25-75% of forced
+vital capacity (FEF2575), forced vital capacity (CVF), Tiffeneau index (TF), residual volume (VR), residual
+volume/total lung capacity (TLC) ratio (VR/TLC), TLC, carbon monoxide diffusing capacity (DLCO), carbon
+dioxide arterial pressure (PaCO) and oxygen arterial pressure (PaO), no association with a particular
+2 2
+genotype was observed (Figure 11B). These results suggest that, while genetic variation in IDO1 may act
+as a risk factor for sarcoidosis, it is so regardless of any effects on the demographic and clinical
+characteristics of the patients.
+28
+
+Figure 11. Measures of pulmonary function are not affected by genetic variation in IDO1. (A) Distribution of
+rs7820268 genotypes in IDO1 per gender, presence of symptoms, smoking habits and age groups. (B) Spirometry and
+respiratory values of patients with sarcoidosis according to genotypes of the rs7820268 SNP. FEF2575 = forced expiratory
+flow at 25-75% of forced vital capacity; CVF = forced vital capacity; IT = Tiffeneau index; VR = residual volume; VR/TLC =
+residual volume/total lung capacity; TLC = total lung capacity; DLCO = carbon monoxide diffusing capacity; PaCO =
+2
+CO/carbon dioxide arterial pressure; PaO = O/oxygen arterial pressure; Data are represented as mean ± SEM.
+2 2 2
+4.6 IDO1 regulates leukocyte recruitment and disease progression in sarcoidosis
+As already mentioned, we noticed an enhanced vulnerability to murine sarcoidosis together with an
+imbalanced buildup of lung-infiltrating leukocytes as the result of IDO1 deficiency. Since sarcoidosis
+induces a range of immunological modifications in the lung 129, we assessed the number of immune cells
+in BAL samples. We observed that the CC genotype was associated with an increased accumulation of T
+cells, macrophages and neutrophils (Figure 12A), suggesting that IDO1 is essential for the regulation of
+immune cell recruitment in sarcoidosis. To confirm our previous findings, we next evaluated the
+contribution of genetic variation in IDO1 to disease course. We observed a lower frequency of patients
+with the CC and CT genotype that were in remission 5 years after diagnosis (Figure 12B). Moreover, the
+CC genotype was more frequent among patients with the most severe radiologic stage, which involves
+fibrosis, in contrast to the less severe stage, in which no patients with the CC genotype were detected
+(Figure 12C). This identifies a potential link between the rs7820268 SNP and disease progression.
+29
+
+Figure 12. Genetic variation in IDO1 enhances leukocyte recruitment to the lungs of sarcoidosis patients and
+worsens disease progression. (A) Immune cell counts (105 cells/mL) in the BAL fluid of sarcoidosis patients; *p < 0.05,
+**p < 0.005, *** p < 0.001 and **** p < 0.0001 by two-tailed One-Way ANOVA; Data are represented as mean ± SEM.
+Distribution of cases, according to genotype for the rs7820268 SNP regarding (B) evolution of disease within 2 and 5 years
+and (C) lung damage stages; stage 0 corresponds to normal chest X-ray, stage 1 represents hilar lymphadenopathy, stage 2
+reflects hilar lymphadenopathy and parenchymal infiltrates, stage 3 mirrors parenchymal infiltrates only, and grade 4 denotes
+pulmonary fibrosis.
+30
+
+5. DISCUSSION AND FINAL CONSIDERATIONS
+31
+
+The structure and function of granulomas have been the subject of a recent explosion of new information.
+We have learned vital information on the causes and consequences of granuloma formation, and we have
+started to understand the unique roles that each myeloid cell plays within the intricate network of
+proinflammatory mediators during this dynamic process 70. Compared to the traditional infectious
+granulomas in tuberculosis, our understanding of granulomatous disorders with unknown causes, such
+as sarcoidosis, remains far behind 70, 90. The onset and maintenance of granulomatous inflammation in
+sarcoidosis is in fact still poorly understood, despite the importance of granulomas in disease
+pathophysiology 5. Even though the histopathological order of events that lead to granuloma formation is
+well understood, genetic and molecular research on the signaling pathways that convert macrophages
+into hypertrophic, epithelioid cells that cluster to initiate and maintain sarcoid granulomas is scarce 76.
+Here, we describe IDO1 as a crucial regulatory node in the immunopathogenesis of sarcoidosis by
+regulating key immunological pathways, including the recruitment of leukocytes to the lungs and the
+development of granulomatous inflammation in vivo and in human sarcoidosis.
+Both the innate and adaptive immune systems are considered to play a role in the formation and
+shaping of sarcoid granulomas 73. According to growing evidence, metabolic processes play a crucial role
+in the immunopathogenesis of sarcoidosis by helping to initiate and maintain granulomatous
+inflammation 76, 85. Within the different metabolic pathways, IDO1, an amino acid metabolism-related
+enzyme, has been shown to play a significant role in the immunopathogenesis of a variety of
+granulomatous and autoimmune conditions 93. IDO1 has been recognized to tightly control immunological
+responses by suppressing the inflammatory phenotypes of immune cells 103. In agreement, we discovered
+that the expression of IDO1 is increased in the airways of mice exposed to NDPD peptide-coated beads
+during the early stages of sarcoid granuloma formation, indicating that IDO1 is crucial for the development
+of granulomas in sarcoidosis.
+IDO1 is widely believed to have a regulatory role at the interface of inflammation and cell
+immunity 130, but its function in granulomatous inflammation associated with sarcoidosis is still unclear.
+Here, we show that in a mouse model of NDPD-induced experimental granulomatous inflammation,
+typical signs of sarcoidosis such as the development of non-caseating granulomas and dysregulated
+immunological parameters, were amplified. Our findings show that IDO1-deficient mice, particularly in
+the early phases of granuloma development (day 2 post-embolization), produced considerably larger
+granulomas when compared to their WT littermates. This initial intensification of inflammation detected
+in KO mice was not accompanied by a sudden infiltration of immune cells into the lung parenchyma. It
+is intriguing that a decline in the proportion of neutrophils in the granuloma was observed, raising the
+32
+
+question about the nature of the cells that are contributing to enlarging the granulomas. The existence of
+dendritic cells (DCs) in the granuloma niche is one of the first unanswered concern. This may be important
+since these immune cells are among the main cell types that express IDO1, in particular, tolerogenic DCs,
+that lead to inhibition memory and effector T cells, and induction of Treg cells 118 that could be locally
+accumulating. Our data fails to demonstrate an effect of IDO1 on the number of T cells according to their
+subpopulations. Likewise, additional experiments are required to understand whether instead T cell
+activation and function might be altered. Moreover, the number of T cells and the quality of their response
+should also be analyzed at later timepoints. The presence of non-immune cells within the granuloma is
+another possible explanation for the increased granuloma size. In fact, alveolar epithelial cells may
+represent an important constituent of granulomas in IDO1 KO mice, even though these were found not
+to differ between WT and PTX3 KO, the latter strain also associated with the formation of larger
+granulomatous lesions 85.
+A remarkable finding from our analysis regards the decreased neutrophil infiltration observed in
+the granulomatous lesions from IDO1 KO mice. Although the role of neutrophils in sarcoidosis is not well
+described yet, this decrease argues in favor of a protective role for neutrophils in restraining granuloma
+assembly and maturation. The fact that CXCL1 and CXCL5, chemokines that act as potent neutrophil
+chemoattractants are diminished further supports this hypothesis. However, the mechanisms that rely
+on neutrophils through which these contribute to the control of granuloma formation remain to be
+assessed.
+The SNP rs7820268 in IDO1 has recently been demonstrated to affect IDO1 expression in a
+variety of human tissues. In many autoimmune disorders, such as type 1 diabetes and multiple sclerosis,
+this SNP has been linked to defective tryptophan catabolism. Additionally, this SNP has been linked to
+CD8+ Treg cell dysfunction in systemic sclerosis 131. The precise signaling pathways by which this SNP
+affects IDO1 expression and/or function are still unclear. We found that the CC genotype in this SNP
+confers an increased risk for sarcoidosis. This genotype was previously identified to result in a loss-of-
+function of IDO1 in type 1 diabetes 120, which may be the case also in sarcoidosis. This question should
+be addressed by the quantification of tryptophan/kynurenine ratios, which allow the estimation of IDO1
+activity. Furthermore, immune profiling of BAL samples revealed an enhanced leukocyte recruitment in
+patients carrying the risk-conferring genotype, which may, in part, help explaining disease severity and its
+clinical course. Moreover, to better understand the mechanisms whereby the IDO1 SNP might also
+influence granuloma formation, it is possible to resort to in vitro human granuloma formation models
+using PBMCs derived from patients with sarcoidosis 132.
+33
+
+As previously mentioned, IDO1 is an immunomodulator of inflammatory responses, and its
+dysfunction can lead to an uncontrolled inflammatory environment and immune cell recruitment. This
+raises questions concerning the importance of tight control of this particular enzyme, considering that the
+exuberant enhancement of IDO1 can be just as harmful as its functional loss.
+In conclusion, our findings demonstrate that IDO1, a crucial player in tryptophan metabolism, acts
+as an immunoregulatory node during granulomatous inflammation in sarcoidosis in both an in vivo model
+and in patients. This project has contributed with important insights to ongoing efforts in minimizing the
+knowledge gap of the molecular and cellular players involved in granulomatous inflammation in
+sarcoidosis. It is thus expected to shed light into new and tailored medical interventions leading to a more
+successful management of this condition.
+34
+
+REFERENCES
+1. Zhou, Y. et al. The impact of demographic disparities in the presentation of sarcoidosis: A
+multicenter prospective study. Respiratory medicine 187, 106564 (2021).
+2. Sève, P. et al. Sarcoidosis: A Clinical Overview from Symptoms to Diagnosis. Cells 10 (2021).
+3. Foster, C.S., Belotto, S. & Alvarez-Nóvoa, A. Systemic Manifestations of Sarcoidosis. In: Albert,
+D., Miller, J., Azar, D. & Young, L.H. (eds). Albert and Jakobiec's Principles and Practice of
+Ophthalmology. Springer International Publishing: Cham, 2020, pp 1-22.
+4. Gerke, A.K. Treatment of Sarcoidosis: A Multidisciplinary Approach. Front Immunol 11,
+545413 (2020).
+5. Chen, E.S. Innate immunity in sarcoidosis pathobiology. Current opinion in pulmonary medicine
+22, 469-475 (2016).
+6. Arkema, E.V. & Cozier, Y.C. Epidemiology of sarcoidosis: current findings and future directions.
+Therapeutic advances in chronic disease 9, 227-240 (2018).
+7. Arkema, E.V. & Cozier, Y.C. Sarcoidosis epidemiology: recent estimates of incidence,
+prevalence and risk factors. Current opinion in pulmonary medicine 26, 527-534 (2020).
+8. Bogdan, M. et al. Sarcoidosis among hospitalized patients in Poland: a study based on a
+national hospital registry. Polish archives of internal medicine 129, 580-585 (2019).
+9. Arkema, E.V., Grunewald, J., Kullberg, S., Eklund, A. & Askling, J. Sarcoidosis incidence and
+prevalence: a nationwide register-based assessment in Sweden. European Respiratory Journal
+48, 1690-1699 (2016).
+10. Baughman, R.P. et al. Sarcoidosis in America. Analysis Based on Health Care Use. Annals of
+the American Thoracic Society 13, 1244-1252 (2016).
+11. Dumas, O., Abramovitz, L., Wiley, A.S., Cozier, Y.C. & Camargo, C.A., Jr. Epidemiology of
+Sarcoidosis in a Prospective Cohort Study of U.S. Women. Annals of the American Thoracic
+Society 13, 67-71 (2016).
+12. Fidler, L.M. et al. Epidemiology and health outcomes of sarcoidosis in a universal healthcare
+population: a cohort study. European Respiratory Journal 54, 1900444 (2019).
+13. Yoon, H.Y., Kim, H.M., Kim, Y.J. & Song, J.W. Prevalence and incidence of sarcoidosis in
+Korea: a nationwide population-based study. Respiratory research 19, 158 (2018).
+14. Park, J.E. et al. Prevalence, incidence, and mortality of sarcoidosis in Korea, 2003-2015: A
+nationwide population-based study. Respiratory medicine 144s, S28-s34 (2018).
+15. Hena, K.M. Sarcoidosis Epidemiology: Race Matters. Frontiers in Immunology 11 (2020).
+35
+
+16. Kearney, G.D. et al. Sarcoidosis deaths in the United States: 1999-2016. Respiratory medicine
+149, 30-35 (2019).
+17. Ogundipe, F., Mehari, A. & Gillum, R. Disparities in Sarcoidosis Mortality by Region,
+Urbanization, and Race in the United States: A Multiple Cause of Death Analysis. The American
+journal of medicine 132, 1062-1068.e1063 (2019).
+18. Wills, A.B. et al. Sarcoidosis-associated Hospitalizations in the United States, 2002 to 2012.
+Annals of the American Thoracic Society 15, 1490-1493 (2018).
+19. Birnbaum, A.D. & Rifkin, L.M. Sarcoidosis: Sex-Dependent Variations in Presentation and
+Management. Journal of Ophthalmology 2014, 236905 (2014).
+20. Gwadera, Ł. et al. Gender differences in health-related quality of life measured by the
+Sarcoidosis Health Questionnaire. Scientific Reports 11, 10242 (2021).
+21. Cardoso, A.V. et al. Analysis of sarcoidosis in the Oporto region (Portugal). Revista portuguesa
+de pneumologia 23, 251-258 (2017).
+22. Judson, M.A. Environmental Risk Factors for Sarcoidosis. Frontiers in Immunology 11 (2020).
+23. Kinloch, A.J. et al. In Situ Humoral Immunity to Vimentin in HLA-DRB1*03(+) Patients With
+Pulmonary Sarcoidosis. Frontiers in immunology 9, 1516 (2018).
+24. Crowley, L.E. et al. "Sarcoid like" granulomatous pulmonary disease in World Trade Center
+disaster responders. American journal of industrial medicine 54, 175-184 (2011).
+25. Newman, L.S. et al. A case control etiologic study of sarcoidosis: environmental and
+occupational risk factors. American journal of respiratory and critical care medicine 170,
+1324-1330 (2004).
+26. Kucera, G.P. et al. Occupational risk factors for sarcoidosis in African-American siblings. Chest
+123, 1527-1535 (2003).
+27. Song, Z. et al. Mycobacterial catalase-peroxidase is a tissue antigen and target of the adaptive
+immune response in systemic sarcoidosis. The Journal of experimental medicine 201, 755-
+767 (2005).
+28. Allen, S.S. et al. Superoxide dismutase A antigens derived from molecular analysis of
+sarcoidosis granulomas elicit systemic Th-1 immune responses. Respiratory Research 9, 36
+(2008).
+29. Swaisgood, C.M. et al. Development of a sarcoidosis murine lung granuloma model using
+Mycobacterium superoxide dismutase A peptide. American journal of respiratory cell and
+molecular biology 44, 166-174 (2011).
+30. Negi, M. et al. Localization of Propionibacterium acnes in granulomas supports a possible
+36
+
+etiologic link between sarcoidosis and the bacterium. Modern Pathology 25, 1284-1297
+(2012).
+31. Sakhamuru, S., Kambampati, S., Wasim, S., Kukkar, V. & Malik, B.H. The Role of
+Propionibacterium acnes in the Pathogenesis of Sarcoidosis and Ulcerative Colitis: How This
+Connection May Inspire Novel Management of These Conditions. Cureus 12, e10812 (2020).
+32. Schupp, J.C. et al. Immune response to Propionibacterium acnes in patients with sarcoidosis –
+in vivo and in vitro. BMC Pulmonary Medicine 15, 75 (2015).
+33. Greaves, S.A. et al. CD4+ T cells in the lungs of acute sarcoidosis patients recognize an
+Aspergillus nidulans epitope. The Journal of experimental medicine 218 (2021).
+34. Rossides, M. et al. Familial aggregation and heritability of sarcoidosis: a Swedish nested
+case−control study. European Respiratory Journal 52, 1800385 (2018).
+35. Calender, A., Weichhart, T., Valeyre, D. & Pacheco, Y. Current Insights in Genetics of
+Sarcoidosis: Functional and Clinical Impacts. Journal of clinical medicine 9 (2020).
+36. Moorsel, C.H.M.v. & Christiani, D.C. Genetic Susceptibility to Sarcoidosis, a Chronic
+Inflammatory Disorder. American Journal of Respiratory and Critical Care Medicine 186, 816-
+818 (2012).
+37. Grunewald, J., Spagnolo, P., Wahlström, J. & Eklund, A. Immunogenetics of Disease-Causing
+Inflammation in Sarcoidosis. Clinical reviews in allergy & immunology 49, 19-35 (2015).
+38. Spagnolo, P. & Maier, L.A. Genetics in sarcoidosis. Current opinion in pulmonary medicine 27,
+423-429 (2021).
+39. Jain, R., Yadav, D., Puranik, N., Guleria, R. & Jin, J.O. Sarcoidosis: Causes, Diagnosis, Clinical
+Features, and Treatments. Journal of clinical medicine 9 (2020).
+40. Ungprasert, P., Ryu, J.H. & Matteson, E.L. Clinical Manifestations, Diagnosis, and Treatment of
+Sarcoidosis. Mayo Clinic proceedings. Innovations, quality & outcomes 3, 358-375 (2019).
+41. Crouser, E.D. et al. Diagnosis and Detection of Sarcoidosis. An Official American Thoracic
+Society Clinical Practice Guideline. American journal of respiratory and critical care medicine
+201, e26-e51 (2020).
+42. Schimmelpennink, M.C., Vorselaars, A.D.M. & Grutters, J.C. Chapter 19 - Biomarkers in
+Sarcoidosis. In: Baughman, R.P. & Valeyre, D. (eds). Sarcoidosis. Elsevier: Philadelphia, 2019,
+pp 219-238.
+43. Ramos-Casals, M. et al. Clinically-useful serum biomarkers for diagnosis and prognosis of
+sarcoidosis. Expert review of clinical immunology 15, 391-405 (2019).
+44. Ungprasert, P., Carmona, E.M., Crowson, C.S. & Matteson, E.L. Diagnostic Utility of
+Angiotensin-Converting Enzyme in Sarcoidosis: A Population-Based Study. Lung 194, 91-95
+37
+
+(2016).
+45. Rossides, M., Darlington, P., Kullberg, S. & Arkema, E.V. Sarcoidosis: Epidemiology and clinical
+insights. J Intern Med (2023).
+46. Baughman, R.P. et al. ERS clinical practice guidelines on treatment of sarcoidosis. The
+European respiratory journal 58 (2021).
+47. Trivieri, M.G. et al. Challenges in Cardiac and Pulmonary Sarcoidosis: JACC State-of-the-Art
+Review. Journal of the American College of Cardiology 76, 1878-1901 (2020).
+48. Rahaghi, F.F. et al. Delphi consensus recommendations for a treatment algorithm in pulmonary
+sarcoidosis. European respiratory review : an official journal of the European Respiratory
+Society 29 (2020).
+49. Baughman, R.P. et al. Presenting characteristics as predictors of duration of treatment in
+sarcoidosis. QJM : monthly journal of the Association of Physicians 99, 307-315 (2006).
+50. Alqalyoobi, S., Liao, S.Y., Qureshi, W. & Obi, O.N. National Temporal Trends in Hospitalization
+and Inpatient Mortality in Patients With Pulmonary Sarcoidosis in the United States Between
+2007 and 2018. Chest 161, 152-168 (2022).
+51. Kirkil, G., Lower, E.E. & Baughman, R.P. Predictors of Mortality in Pulmonary Sarcoidosis.
+Chest 153, 105-113 (2018).
+52. Jeny, F. et al. Predictors of mortality in fibrosing pulmonary sarcoidosis. Respiratory medicine
+169, 105997 (2020).
+53. Gupta, R. & Baughman, R.P. Advanced Pulmonary Sarcoidosis. Seminars in respiratory and
+critical care medicine 41, 700-715 (2020).
+54. Judson, M.A. Corticosteroids in Sarcoidosis. Rheumatic diseases clinics of North America 42,
+119-135, ix (2016).
+55. Khan, N.A. et al. Toxicity risk from glucocorticoids in sarcoidosis patients. Respiratory medicine
+132, 9-14 (2017).
+56. Dineen, R., Stewart, P.M. & Sherlock, M. Factors impacting on the action of glucocorticoids in
+patients receiving glucocorticoid therapy. Clinical endocrinology 90, 3-14 (2019).
+57. Obi, O.N., Saketkoo, L.A., Russell, A.M. & Baughman, R.P. Sarcoidosis: Updates on therapeutic
+drug trials and novel treatment approaches. Front Med (Lausanne) 9, 991783 (2022).
+58. Brito-Zerón, P. et al. Sarcoidosis: an update on current pharmacotherapy options and future
+directions. Expert opinion on pharmacotherapy 17, 2431-2448 (2016).
+59. Cremers, J.P. et al. Multinational evidence-based World Association of Sarcoidosis and Other
+Granulomatous Disorders recommendations for the use of methotrexate in sarcoidosis:
+38
+
+integrating systematic literature research and expert opinion of sarcoidologists worldwide.
+Current Opinion in Pulmonary Medicine 19 (2013).
+60. Drent, M., Cremers, J.P., Jansen, T.L. & Baughman, R.P. Practical eminence and experience-
+based recommendations for use of TNF-α inhibitors in sarcoidosis. Sarcoidosis, vasculitis, and
+diffuse lung diseases : official journal of WASOG 31, 91-107 (2014).
+61. Baughman, R.P. et al. Infliximab Therapy in Patients with Chronic Sarcoidosis and Pulmonary
+Involvement. American Journal of Respiratory and Critical Care Medicine 174, 795-802
+(2006).
+62. Judson, M.A. et al. Efficacy of infliximab in extrapulmonary sarcoidosis: results from a
+randomised trial. European Respiratory Journal 31, 1189-1196 (2008).
+63. Mengi, G. & Göğüş, F. A Rare Adverse Effect of Anti-Tumor Necrosis Factor Alpha Therapy:
+Sarcoidosis. Archives of rheumatology 32, 67-70 (2017).
+64. Casanova, N., Zhou, T., Knox, K.S. & Garcia, J.G.N. Identifying Novel Biomarkers in Sarcoidosis
+Using Genome-Based Approaches. Clinics in chest medicine 36, 621-630 (2015).
+65. Iannuzzi, M.C. & Rybicki, B.A. Genetics of sarcoidosis: candidate genes and genome scans.
+Proceedings of the American Thoracic Society 4, 108-116 (2007).
+66. Grunewald, J. et al. Sarcoidosis. Nature Reviews Disease Primers 5, 45 (2019).
+67. Sakthivel, P. & Bruder, D. Mechanism of granuloma formation in sarcoidosis. Current opinion in
+hematology 24, 59-65 (2017).
+68. Ehlers, S. & Schaible, U.E. The granuloma in tuberculosis: dynamics of a host-pathogen
+collusion. Frontiers in immunology 3, 411 (2012).
+69. Zissel, G., Prasse, A. & Müller-Quernheim, J. Sarcoidosis--immunopathogenetic concepts.
+Seminars in respiratory and critical care medicine 28, 3-14 (2007).
+70. Zissel, G. & Müller-Quernheim, J. Cellular Players in the Immunopathogenesis of Sarcoidosis.
+Clinics in chest medicine 36, 549-560 (2015).
+71. Zhang, H., Costabel, U. & Dai, H. The Role of Diverse Immune Cells in Sarcoidosis. Frontiers in
+Immunology 12 (2021).
+72. Lepzien, R. et al. Monocytes in sarcoidosis are potent TNF producers and predict disease
+outcome. European Respiratory Journal, 2003468 (2021).
+73. Broos, C.E. et al. Granuloma formation in pulmonary sarcoidosis. Front Immunol 4, 437
+(2013).
+74. Pagán, A.J. & Ramakrishnan, L. The Formation and Function of Granulomas. Annual review of
+immunology 36, 639-665 (2018).
+39
+
+75. Cronan, M.R. et al. Macrophage Epithelial Reprogramming Underlies Mycobacterial Granuloma
+Formation and Promotes Infection. Immunity 45, 861-876 (2016).
+76. Linke, M. et al. Chronic signaling via the metabolic checkpoint kinase mTORC1 induces
+macrophage granuloma formation and marks sarcoidosis progression. Nature immunology 18,
+293-302 (2017).
+77. Patterson, K.C. & Chen, E.S. The Pathogenesis of Pulmonary Sarcoidosis and Implications for
+Treatment. Chest 153, 1432-1442 (2018).
+78. Broos, C.E. et al. Increased T-helper 17.1 cells in sarcoidosis mediastinal lymph nodes.
+European Respiratory Journal 51, 1701124 (2018).
+79. Facco, M. et al. Sarcoidosis is a Th1/Th17 multisystem disorder. Thorax 66, 144-150 (2011).
+80. Miyamoto, M. et al. Endogenous IL-17 as a mediator of neutrophil recruitment caused by
+endotoxin exposure in mouse airways. Journal of immunology (Baltimore, Md. : 1950) 170,
+4665-4672 (2003).
+81. Wynn, T.A. Fibrotic disease and the T(H)1/T(H)2 paradigm. Nature reviews. Immunology 4,
+583-594 (2004).
+82. Trial, J., Cieslik, K.A., Haudek, S.B., Duerrschmid, C. & Entman, M.L. Th1/M1 conversion to
+th2/m2 responses in models of inflammation lacking cell death stimulates maturation of
+monocyte precursors to fibroblasts. Frontiers in immunology 4, 287 (2013).
+83. Piotrowski, W.J. et al. Metalloproteinases MMP-9, MMP-2 and their tissue inhibitors TIMP-1,
+TIMP-2 in peripheral transbronchial lung biopsies of patients with sarcoidosis. Polskie
+Archiwum Medycyny Wewnetrznej 119, 628-635 (2009).
+84. Gieseck, R.L., 3rd, Wilson, M.S. & Wynn, T.A. Type 2 immunity in tissue repair and fibrosis.
+Nature reviews. Immunology 18, 62-76 (2018).
+85. Gonçales, R.A. et al. Pentraxin 3 Inhibits Complement-driven Macrophage Activation to Restrain
+Granuloma Formation in Sarcoidosis. Am J Respir Crit Care Med 206, 1140-1152 (2022).
+86. Weiner, J., 3rd et al. Biomarkers of inflammation, immunosuppression and stress with active
+disease are revealed by metabolomic profiling of tuberculosis patients. PloS one 7, e40221
+(2012).
+87. Vrieling, F. et al. Plasma metabolomics in tuberculosis patients with and without concurrent
+type 2 diabetes at diagnosis and during antibiotic treatment. Scientific Reports 9, 18669
+(2019).
+88. Cho, Y. et al. Identification of serum biomarkers for active pulmonary tuberculosis using a
+targeted metabolomics approach. Sci Rep 10, 3825 (2020).
+40
+
+89. Gupta, D., Agarwal, R., Aggarwal, A.N. & Jindal, S.K. Sarcoidosis and tuberculosis: the same
+disease with different manifestations or similar manifestations of different disorders. Current
+opinion in pulmonary medicine 18, 506-516 (2012).
+90. Crowther, R.R. & Qualls, J.E. Metabolic Regulation of Immune Responses to Mycobacterium
+tuberculosis: A Spotlight on L-Arginine and L-Tryptophan Metabolism. Frontiers in Immunology
+11 (2021).
+91. Comai, S., Bertazzo, A., Brughera, M. & Crotti, S. Tryptophan in health and disease. Advances
+in clinical chemistry 95, 165-218 (2020).
+92. Cervenka, I., Agudelo, L.Z. & Ruas, J.L. Kynurenines: Tryptophan's metabolites in exercise,
+inflammation, and mental health. Science (New York, N.Y.) 357 (2017).
+93. Pallotta, M.T. et al. Indoleamine 2,3-dioxygenase 1 (IDO1): an up-to-date overview of an eclectic
+immunoregulatory enzyme. The FEBS journal 289, 6099-6118 (2022).
+94. Taylor, M.W. & Feng, G.S. Relationship between interferon-gamma, indoleamine 2,3-
+dioxygenase, and tryptophan catabolism. FASEB journal : official publication of the Federation
+of American Societies for Experimental Biology 5, 2516-2522 (1991).
+95. Pallotta, M.T. et al. Indoleamine 2,3-dioxygenase is a signaling protein in long-term tolerance by
+dendritic cells. Nature immunology 12, 870-878 (2011).
+96. Albini, E. et al. Distinct roles of immunoreceptor tyrosine-based motifs in immunosuppressive
+indoleamine 2,3-dioxygenase 1. Journal of cellular and molecular medicine 21, 165-176
+(2017).
+97. Li, R. et al. Indoleamine 2,3-dioxygenase regulates T cell activity through Vav1/Rac pathway.
+Molecular immunology 81, 102-107 (2017).
+98. Fallarino, F. et al. The combined effects of tryptophan starvation and tryptophan catabolites
+down-regulate T cell receptor zeta-chain and induce a regulatory phenotype in naive T cells.
+Journal of immunology (Baltimore, Md. : 1950) 176, 6752-6761 (2006).
+99. Munn, D.H. et al. GCN2 Kinase in T Cells Mediates Proliferative Arrest and Anergy Induction in
+Response to Indoleamine 2,3-Dioxygenase. Immunity 22, 633-642 (2005).
+100. Baban, B. et al. IDO activates regulatory T cells and blocks their conversion into Th17-like T
+cells. Journal of immunology (Baltimore, Md. : 1950) 183, 2475-2483 (2009).
+101. Sharma, M.D. et al. Indoleamine 2,3-dioxygenase controls conversion of Foxp3+ Tregs to TH17-
+like cells in tumor-draining lymph nodes. Blood 113, 6102-6111 (2009).
+102. Opitz, C.A. et al. An endogenous tumour-promoting ligand of the human aryl hydrocarbon
+receptor. Nature; 2011. pp. 197-203.
+103. Mezrich, J.D. et al. An interaction between kynurenine and the aryl hydrocarbon receptor can
+41
+
+generate regulatory T cells. Journal of immunology (Baltimore, Md. : 1950) 185, 3190-3198
+(2010).
+104. Yuasa, H.J. et al. Evolution of vertebrate indoleamine 2,3-dioxygenases. Journal of molecular
+evolution 65, 705-714 (2007).
+105. Munn, D.H. & Mellor, A.L. Indoleamine 2,3 dioxygenase and metabolic control of immune
+responses. Trends in immunology 34, 137-143 (2013).
+106. Jusof, F.F. et al. Investigation of the Tissue Distribution and Physiological Roles of Indoleamine
+2,3-Dioxygenase-2. International journal of tryptophan research : IJTR 10,
+1178646917735098 (2017).
+107. Metz, R. et al. IDO2 is critical for IDO1-mediated T-cell regulation and exerts a non-redundant
+function in inflammation. International immunology 26, 357-367 (2014).
+108. Capece, L. et al. Substrate stereo-specificity in tryptophan dioxygenase and indoleamine 2,3-
+dioxygenase. Proteins 78, 2961-2972 (2010).
+109. Kanai, M. et al. Tryptophan 2,3-dioxygenase is a key modulator of physiological neurogenesis
+and anxiety-related behavior in mice. Molecular brain 2, 8 (2009).
+110. Schramme, F. et al. Inhibition of Tryptophan-Dioxygenase Activity Increases the Antitumor
+Efficacy of Immune Checkpoint Inhibitors. Cancer immunology research 8, 32-45 (2020).
+111. Volpi, C. et al. High doses of CpG oligodeoxynucleotides stimulate a tolerogenic TLR9–TRIF
+pathway. Nature Communications 4, 1852 (2013).
+112. Schmidt, S.V. & Schultze, J.L. New Insights into IDO Biology in Bacterial and Viral Infections.
+Frontiers in immunology 5, 384 (2014).
+113. Zhang, Y.J. et al. Tryptophan biosynthesis protects mycobacteria from CD4 T-cell-mediated
+killing. Cell 155, 1296-1308 (2013).
+114. Gautam, U.S. et al. In vivo inhibition of tryptophan catabolism reorganizes the tuberculoma and
+augments immune-mediated control of Mycobacterium tuberculosis. Proceedings of the
+National Academy of Sciences of the United States of America 115, E62-e71 (2018).
+115. Romani, L. & Puccetti, P. Protective tolerance to fungi: the role of IL-10 and tryptophan
+catabolism. Trends in microbiology 14, 183-189 (2006).
+116. Zelante, T. et al. Aspergillus fumigatus tryptophan metabolic route differently affects host
+immunity. Cell reports 34, 108673 (2021).
+117. Puccetti, P. & Grohmann, U. IDO and regulatory T cells: a role for reverse signalling and non-
+canonical NF-kappaB activation. Nature reviews. Immunology 7, 817-823 (2007).
+118. Grohmann, U., Fallarino, F. & Puccetti, P. Tolerance, DCs and tryptophan: much ado about
+42
+
+IDO. Trends in Immunology 24, 242-248 (2003).
+119. Mellor, A.L. & Munn, D.H. IDO expression by dendritic cells: tolerance and tryptophan
+catabolism. Nature reviews. Immunology 4, 762-774 (2004).
+120. Orabona, C. et al. Deficiency of immunoregulatory indoleamine 2,3-dioxygenase 1in juvenile
+diabetes. JCI insight 3 (2018).
+121. Pallotta, M.T. et al. Forced IDO1 expression in dendritic cells restores immunoregulatory
+signalling in autoimmune diabetes. Journal of cellular and molecular medicine 18, 2082-2091
+(2014).
+122. Grohmann, U. et al. A defect in tryptophan catabolism impairs tolerance in nonobese diabetic
+mice. The Journal of experimental medicine 198, 153-160 (2003).
+123. Mondanelli, G. et al. The Proteasome Inhibitor Bortezomib Controls Indoleamine 2,3-
+Dioxygenase 1 Breakdown and Restores Immune Regulation in Autoimmune Diabetes.
+Frontiers in immunology 8, 428 (2017).
+124. Arif, S. et al. Blood and islet phenotypes indicate immunological heterogeneity in type 1
+diabetes. Diabetes 63, 3835-3845 (2014).
+125. Starshinova, A.A. et al. Sarcoidosis as an Autoimmune Disease. Frontiers in immunology 10,
+2933 (2019).
+126. Gonçalves, S.M. et al. Phagosomal removal of fungal melanin reprograms macrophage
+metabolism to promote antifungal immunity. Nature Communications 11, 2282 (2020).
+127. Semenzato, G. ACCESS: A Case Control Etiologic Study of Sarcoidosis. Sarcoidosis, vasculitis,
+and diffuse lung diseases : official journal of WASOG 22, 83-86 (2005).
+128. Mondanelli, G. et al. Amino acid metabolism as drug target in autoimmune diseases.
+Autoimmunity Reviews 18, 334-348 (2019).
+129. Lee, S., Birnie, D. & Dwivedi, G. Current perspectives on the immunopathogenesis of
+sarcoidosis. Respiratory Medicine 173, 106161 (2020).
+130. Mbongue, J.C. et al. The Role of Indoleamine 2, 3-Dioxygenase in Immune Suppression and
+Autoimmunity. Vaccines 3, 703-729 (2015).
+131. Tardito, S. et al. Indoleamine 2,3 dioxygenase gene polymorphisms correlate with CD8+ Treg
+impairment in systemic sclerosis. Human immunology 74, 166-169 (2013).
+132. Crouser, E.D. et al. A Novel In Vitro Human Granuloma Model of Sarcoidosis and Latent
+Tuberculosis Infection. American journal of respiratory cell and molecular biology 57, 487-498
+(2017).
+43

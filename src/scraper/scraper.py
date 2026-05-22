@@ -1,10 +1,11 @@
-import time
+import hashlib
 import os
 import platform
 import shutil
 import requests
 import pdfplumber
 import io
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -120,7 +121,7 @@ class UMinhoDSpace8Scraper:
             "authors": [],
             "affiliations": [],
             "pdf_link": None,
-            "pdf_text": None,
+            "pdf_text_path": None,
             "url": None,
         }
         try:
@@ -151,12 +152,15 @@ class UMinhoDSpace8Scraper:
 
         return data
 
-    def get_paper_info(self, url):
+    def get_paper_info(self, url, extract_pdf=True):
         """
         Visita a página /full de um documento, extrai metadados da tabela
         Dublin Core e tenta descarregar e ler o texto completo do PDF.
         """
         self.driver.get(url)
+
+        # For new /entities/publication/ URLs, wait longer for Angular to render
+        is_new_format = "/entities/publication/" in url
 
         try:
             self.wait.until(EC.presence_of_element_located(
@@ -165,7 +169,11 @@ class UMinhoDSpace8Scraper:
         except Exception:
             pass
 
-        time.sleep(self.ANGULAR_SETTLE_TIME)
+        # Extra wait for new Angular format
+        if is_new_format:
+            time.sleep(self.ANGULAR_SETTLE_TIME + 1.5)
+        else:
+            time.sleep(self.ANGULAR_SETTLE_TIME)
 
         targets = {
             "dc.title":                   "title",
@@ -185,14 +193,24 @@ class UMinhoDSpace8Scraper:
             "authors":      [],
             "affiliations": [],
             "pdf_link":     None,
-            "pdf_text":     None,
+            "pdf_text_path": None,
             "url":          url.replace('/full', ''),
         }
 
         try:
+            # Try multiple selectors to find metadata rows
             rows = self.driver.find_elements(
                 By.CSS_SELECTOR, "table.table-striped tbody tr, table tbody tr"
             )
+
+            # If no rows found and new format, try scrolling and waiting more
+            if not rows and is_new_format:
+                self.driver.execute_script("window.scrollTo(0, 300);")
+                time.sleep(1.5)
+                rows = self.driver.find_elements(
+                    By.CSS_SELECTOR, "table tbody tr, tr"
+                )
+
             for row in rows:
                 cols = row.find_elements(By.TAG_NAME, "td")
                 if len(cols) >= 2:
@@ -208,7 +226,6 @@ class UMinhoDSpace8Scraper:
         except Exception as e:
             print(f"Error parsing metadata for {url}: {e}")
 
-        # ── [CORREÇÃO SELETORES DSPACE 8] Encontrar link do PDF ──────────────
         pdf_selectors = [
             "a.download-link", 
             "a[href*='/bitstreams/']", 
@@ -231,7 +248,7 @@ class UMinhoDSpace8Scraper:
                 continue
 
         # Descarregar e ler o texto completo do PDF
-        if data["pdf_link"]:
+        if data["pdf_link"] and extract_pdf:
             try:
                 print(f"      A tentar descarregar PDF de: {data['pdf_link']}")
                 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
@@ -249,12 +266,18 @@ class UMinhoDSpace8Scraper:
                             page_text = page.extract_text()
                             if page_text:
                                 text_parts.append(page_text.strip())
-                            # Imprime o progresso a cada 10 páginas para não encher o terminal
                             if page_num % 10 == 0 or page_num == total_pages:
                                 print(f"         [Progresso: {page_num}/{total_pages} páginas lidas]")
                     if text_parts:
-                        data["pdf_text"] = "\n\n".join(text_parts)
-                        print(f"      -> PDF lido com sucesso: {len(data['pdf_text'])} caracteres")
+                        full_text = "\n\n".join(text_parts)
+                        url_hash = hashlib.md5(data["url"].encode()).hexdigest() if data.get("url") else hashlib.md5(data["pdf_link"].encode()).hexdigest()
+                        pdf_dir = os.path.join("docs", "pdf_texts")
+                        os.makedirs(pdf_dir, exist_ok=True)
+                        txt_path = os.path.join(pdf_dir, f"{url_hash}.txt")
+                        with open(txt_path, "w", encoding="utf-8") as tf:
+                            tf.write(full_text)
+                        data["pdf_text_path"] = txt_path
+                        print(f"      -> PDF guardado em: {txt_path} ({len(full_text)} caracteres)")
                     else:
                         print(f"      -> O PDF não contém texto extraível estruturado.")
                 else:
@@ -265,12 +288,16 @@ class UMinhoDSpace8Scraper:
         return data
 
     def go_to_next_page(self):
-        next_button_xpath = "//li[contains(@class, 'page-item') and not(contains(@class, 'disabled'))]/a[@aria-label='Next']"
+        next_button_xpath = (
+            "//li[contains(@class, 'page-item') and not(contains(@class, 'disabled'))]/a[@aria-label='Next']"
+            " | //a[@aria-label='Next' and not(ancestor::li[contains(@class,'disabled')])]"
+            " | //button[@aria-label='Next' and not(@disabled)]"
+        )
         try:
             next_button = self.driver.find_element(By.XPATH, next_button_xpath)
             self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", next_button)
             next_button.click()
-            time.sleep(self.ANGULAR_SETTLE_TIME + 1)
+            time.sleep(self.ANGULAR_SETTLE_TIME + 2.5)
             return True
         except NoSuchElementException:
             raise NoSuchElementException("Reached the last page: 'Next' button is missing or disabled.")
@@ -330,14 +357,16 @@ class UMinhoDSpace8Scraper:
             print(f"Found {len(paper_items)} documents in listing.")
 
             for idx, item in enumerate(paper_items):
-                if idx < self.FULL_SCRAPE_LIMIT:
-                    full_url = item["url"] + "/full"
-                    print(f"  [full {idx+1}/{self.FULL_SCRAPE_LIMIT}] {item['url']}")
-                    full_data = self.get_paper_info(full_url)
-                    item.update(full_data)
-                else:
-                    print(f"  [listing only] {item['url']}")
+                full_url = item["url"] + "/full"
+                extract_pdf = idx < self.FULL_SCRAPE_LIMIT
 
+                if extract_pdf:
+                    print(f"  [full+PDF {idx+1}/{self.FULL_SCRAPE_LIMIT}] {item['url']}")
+                else:
+                    print(f"  [full {idx+1}/{len(paper_items)}] {item['url']}")
+
+                full_data = self.get_paper_info(full_url, extract_pdf=extract_pdf)
+                item.update(full_data)
                 print(f"      Title: {item['title']}")
                 results.append(item)
 
@@ -350,13 +379,11 @@ if __name__ == "__main__":
     import json
     import os
 
-    BASE_URL = "https://repositorium.uminho.pt/search?f.entityType=Publication,equals"
+    BASE_URL = "https://repositorium.uminho.pt/collections/7eae6651-4038-4838-a1f1-6d827f4d9d06/search"
     RESEARCH_AREA = ""
 
-    # [ALTERADO] Total de documentos na listagem geral
     MAX_ITEMS = 100
 
-    # [ALTERADO] Apenas os primeiros 20 visitam a página completa e extraem o texto do PDF
     FULL_SCRAPE_LIMIT = 20
 
     scraper = UMinhoDSpace8Scraper(
@@ -372,7 +399,7 @@ if __name__ == "__main__":
         json.dump(results, f, ensure_ascii=False, indent=4)
 
     full_count = sum(1 for r in results if r.get("abstract") not in ("N/A", None, ""))
-    pdf_count  = sum(1 for r in results if r.get("pdf_text"))
+    pdf_count  = sum(1 for r in results if r.get("pdf_text_path"))
     print(f"\nGuardados {len(results)} documentos.")
     print(f"  → {full_count} com abstract completo.")
     print(f"  → {pdf_count} com texto do PDF extraído.")

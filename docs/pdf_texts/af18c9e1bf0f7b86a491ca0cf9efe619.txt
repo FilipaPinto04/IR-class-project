@@ -1,0 +1,1971 @@
+Universidade do Minho
+Escola de Medicina
+l
+e
+d
+o
+M
+e Filipa Ferreira Antunes
+s
+u
+o
+M
+t
+u Noradrenergic Degeneration in a DJ-1
+o
+k
+c Knockout Mouse Model
+o
+n
+K
+1
+J-
+D
+a
+n
+i
+n
+o
+i
+t
+a
+r
+e
+n
+e
+g
+e
+D
+c
+i
+g
+r
+e
+n
+e
+r
+d
+a
+r
+o
+N
+s
+e
+n
+u
+tn
+A
+a
+p
+iliF
+3
+2
+o
+0
+|
+2
+h
+n
+iM
+setembro de 2023
+U
+
+Filipa Ferreira Antunes
+Noradrenergic Degeneration in a DJ-1
+Knockout Mouse Model
+Dissertação de Mestrado
+Mestrado em Ciências da Saúde
+Trabalho efetuado sob a orientação do
+Doutor António José Braga Osório Gomes Salgado
+E da
+Doutora Ana Maria Franco Aveiro Marote
+setembro de 2023
+
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras
+e boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não
+previstas no licenciamento indicado, deverá contactar o autor, através do RepositóriUM da Universidade
+do Minho.
+Atribuição-Não-Comercial-Sem-Derivações
+CC BY-NC-ND
+Universidade do Minho, 21/09/2023
+Assinatura:
+ii
+
+AGRADECIMENTOS
+First, I would like to express my gratefulness to my supervisors, António Salgado, and Ana Marote
+for all the institutional, technical and guidance support that I have received in the last years. You were
+remarkable in teaching, guiding and supporting me throughout the beginning of my journey in science.
+Nonetheless, I would like to thank all the RENEU team for helping and teaching me in all the tasks
+performed.
+For all the late nights, laughs, dinners, long walks to BA, the most amazing afternoons at Gota
+D’água, and all the remaining stories, a big thank you to Andreia, Lucas, Lúcio, Romeu, Luís, Noversa
+and Adriana. You made all of this worth it. To my oldest friends, Leonel, Leonardo, Rosa, Beatriz and
+Margarida, thank you for trying to keep the friendship alive even when I was gone for months. To the
+person that supported me the most through this year, Zé Pedro, thank you for being there, even when
+my energy levels were drained and didn’t feel like talk. Thank you for being you.
+O meu mais sincero obrigado aos meus pais. Obrigada por acreditarem em mim
+independentemente de qualquer que fosse a função que queria assumir ou o trabalho que decidia fazer.
+Por fim, o produto destes 5 anos é dedicado ao meu Avô, que não está cá hoje para ver o desfecho de
+todas as histórias sobre o laboratório que lhe contei. A ti, obrigado.
+The work presented in this thesis was performed in the Life and Health Sciences Research
+Institute (ICVS), University of Minho. Financial support was provided by grants from Prémios Santa Casa
+Neurociências ‐ Prize Melo e Castro for Spinal Cord Injury Research (MC-04/17); PORTUGAL 2020
+Partnership Agreement, through the European Regional Development Fund (ERDF) FEDER, through the
+Competitiveness Internationalization Operational Programme (POCI), and by National funds, through the
+Foundation for Science and Technology (FCT), under the scope of the projects TUBITAK/0007/2014;
+PTDC/DTP-FTO/5109/2014; POCI-01-0145-FEDER-029206; POCI-01-0145-FEDER-031392;
+PTDC/MED-NEU/31417/2017; NORTE-01-0145-FEDER-029968; UIDB/50026/2020 and
+UIDP/50026/2020. ICVS Scientific Microscopy Platform, member of the national infrastructure PPBI -
+Portuguese Platform of Bioimaging (PPBI-POCI-01-0145-FEDER-022122; and by the projects NORTE-01-
+0145-FEDER-000013 and NORTE-01-0145-FEDER-000023, supported by Norte Portugal Regional
+Operational Programme (NORTE 2020), under the PORTUGAL 2020 Partnership Agreement, through the
+European Regional Development Fund (ERDF).
+iii
+
+STATEMENT OF INTEGRITY
+I hereby declare having conducted this academic work with integrity. I confirm that I have not used
+plagiarism or any form of undue use of information or falsification of results along the process leading to
+its elaboration.
+I further declare that I have fully acknowledged the Code of Ethical Conduct of the University of
+Minho.
+iv
+
+Degeneração Noradrenérgica num Modelo de Murganho DJ-1
+Knockout
+Resumo
+A doença de Parkinson (DP) é a segunda doença neurodegenerativa mais comum, com
+aproximadamente 10% de casos familiares, causada por várias mutações identificadas, como no gene
+DJ-1. Os modelos de murganho com ablação para o gene DJ-1 (KO) demonstraram apresentar défices
+progressivos de comportamento motor, sem alterações significativas no sistema dopaminérgico
+nigroestriatal, descrito como o substrato neuropatológico da DP. A degeneração de um núcleo
+noradrenérgico - Locus Ceruleus (LC) - tem sido associada ao desenvolvimento de sintomas não motores
+e ao agravamento dos sintomas motores. Neste trabalho, o nosso objetivo é estudar o envolvimento da
+degeneração do LC num modelo DJ-1 KO, analisando tanto o fenótipo motor quanto o não motor. Para
+isso, administrámos uma neurotoxina noradrenérgica seletiva (DSP-4) em murganhos DJ-1 KO. Primeiro,
+avaliámos a dose apropriada. Para avaliar as alterações funcionais, realizámos uma bateria de testes
+que abrangem vários sintomas associados à DP, incluindo depressão, ansiedade, défice cognitivo,
+alteração da atividade locomotora e disfunção da marcha. Para avaliar os efeitos histológicos realizámos
+imuno-histoquímica para a Tirosina Hidroxilase (TH) no LC, substancia nigra (SNpc) e estriado (STR).
+Os animais com ablação da DJ-1 mostraram uma tendência para alterações na função motora,
+disfunção da marcha e para ansiedade relacionada com novidade. Os animais DJ-1 tratados com DSP-4
+apresentaram capacidade de natação prejudicada, disfunção na marcha, tendência para um
+comportamento semelhante à depressão, e um melhor desempenho na reaquisição da memória. Estes
+animais mostraram uma redução de 42.6% na densitometria no estriado e uma diminuição no número
+de células TH+ na SNpc em comparação com murganhos Wild-type (WT). A injeção de DSP-4 levou à
+diminuição de 83-85% dos neurónios no LC. A administração de DSP-4 em murganhos DJ-1 resultou
+numa diminuição de 58% das fibras dopaminérgicas no estriado, sem afetar os neurónios nigrais.
+Neste trabalho, desenvolvemos um modelo capaz de recapitular a degeneração noradrenérgica
+descrita na DP, que levou a degeneração nigroestriatal significativa, com um fenótipo comportamental
+ligeiro, a nível motor e não motor. Este modelo pode ser uma abordagem adequada para o estudo de
+terapias neuroprotetoras focadas nos neurónios noradrenérgicos do LC.
+Palavras-Chave
+Locus Ceruleus, DJ-1 Knockout, Doença de Parkinson, DSP-4, noradrenalina.
+v
+
+Noradrenergic Degeneration in a DJ-1 Knockout Mouse Model
+Abstract
+Parkinson’s disease (PD) is the second most common neurodegenerative disorder, with
+approximately 10% familial cases, caused by several identified mutations, such as in the DJ-1 gene. DJ-
+1 knockout (KO) mouse models have been shown to present progressive motor behavioral deficits,
+without significant alterations in the nigrostriatal dopaminergic system, described as the
+neuropathological substrate of PD. Degeneration of the noradrenergic nucleus - locus coeruleus (LC) -
+has been linked to the development of non-motor symptoms and to the aggravation of motor symptoms.
+Herein, we aimed to study the involvement of LC degeneration in a DJ-1 KO model looking at both motor
+and non-motor phenotype. For that, we have administered a selective noradrenergic neurotoxin (DSP-4)
+in DJ-1 KO mice. First, we optimized the appropriate dosage to be administered. To assess functional
+alterations, we have performed a battery of behavioral tests covering several symptoms associated with
+PD, including depression, anxiety, cognitive impairments, impaired locomotor activity and gait
+dysfunction. To assess the histological effects of both DSP-4 and the mutation we have performed
+Tyrosine Hydroxylase (TH) immunohistochemistry on the LC, substantia nigra (SNpc), and striatum (STR).
+DJ-1 animals have shown tendencies to impaired motor functioning, gait dysfunction and a
+tendency to develop anxiety-related to novelty. DJ-1 KO treated with DSP-4 showed impaired swimming
+ability, gait dysfunction, tendency for depressive-like behavior, and improved fear memory retrieval. DJ-1
+animals showed a reduction of 42.6% in striatal densitometry and a decrease in the number of TH+ cells
+in the SNpc compared to WT littermates. The injection of DSP-4 led to a decrease of 83-85% neurons
+within the LC. DSP-4 administration in DJ-1 mice led to a 58% decrease in dopaminergic fibers content
+in the striatum but did not affect nigral neurons.
+In this work, we developed a model capable of recapitulating noradrenergic degeneration described
+in PD, which led to significant nigrostriatal degeneration, and was translated into mild behavioral
+phenotype, at the motor and non-motor level. This model may provide a suitable approach for the study
+of neuroprotective therapies focused on the LC noradrenergic neurons.
+KEYWORDS
+Locus Coeruleus, DJ-1 Knockout, DSP-4, Parkinson’s disease, noradrenaline.
+vi
+
+TABLE OF CONTENTS
+Agradecimentos .................................................................................................................................. iii
+Figure Index ....................................................................................................................................... ix
+List of Tables ....................................................................................................................................... x
+List of Abbreviations ........................................................................................................................... xi
+1. Introduction ................................................................................................................................ 1
+1.1 Locus Coeruleus ................................................................................................................. 4
+1.1.1 Locus Coeruleus and Parkinson´s Disease: a focus on non-motor symptoms ............... 5
+1.1.2 Locus Coeruleus and Parkinson’s Disease: experimental models (DSP-4) ..................... 9
+1.2 DJ-1 .................................................................................................................................. 13
+1.2.1 Mechanisms .............................................................................................................. 14
+1.2.2 DJ-1 Knockout models ............................................................................................... 17
+2. Research objectives .................................................................................................................. 20
+3. Materials and Methods .............................................................................................................. 21
+3.1 Animals ............................................................................................................................. 21
+3.2 DSP-4 Administration ........................................................................................................ 21
+3.3 Behavioral Tests ................................................................................................................ 21
+3.3.1 Elevated Plus Maze .................................................................................................... 22
+3.3.2 Open Field ................................................................................................................. 22
+3.3.3 Marble-Burying .......................................................................................................... 23
+3.3.4 Sucrose Splash Test .................................................................................................. 23
+3.3.5 Forced Swimming Test .............................................................................................. 23
+3.3.6 Novel Object Recognition Test .................................................................................... 23
+3.3.7 Morris Water Maze Test ............................................................................................. 24
+3.3.8 Balance Beam Test.................................................................................................... 24
+3.3.9 Motor Swimming Test ................................................................................................ 24
+3.3.10 Footprint Analysis ...................................................................................................... 25
+3.3.11 Contextual Fear Conditioning ..................................................................................... 25
+3.4 Histological Analysis .......................................................................................................... 25
+3.4.1 TH+ free-floating immunohistochemistry ...................................................................... 26
+vii
+
+3.4.2 TH+ fibers density quantification ................................................................................. 26
+3.4.3 TH+ cells quantification ............................................................................................... 27
+3.5 Statistical Analysis ............................................................................................................. 27
+4. Results and discussion .............................................................................................................. 28
+4.1 Adjusting the appropriate DSP-4 dosage ............................................................................ 28
+4.2 Behavioral effects of DSP-4 administration in DJ-1 KO animals. .......................................... 30
+4.2.1 Alterations on Motor Behavior .................................................................................... 30
+4.2.2 Alterations on Cognition ............................................................................................. 33
+4.2.3 Alterations on Depressive and Anxious-like Behavior ................................................... 36
+4.3 Histological Alterations ...................................................................................................... 39
+4.3.1 Effect of DSP-4 on Locus Coeruleus ........................................................................... 39
+4.3.2 Impact of NA depletion in the nigrostriatal pathway integrity ....................................... 41
+5. Conclusions and future perspectives ......................................................................................... 44
+6. References ............................................................................................................................... 46
+ANNEXES ……………………………………………………………………………….……………………………………… 56
+viii
+
+FIGURE INDEX
+Figure 1 Progression of Parkinson’s Disease with age Page 1
+Figure 2 Locus Coeruleus Noradrenergic projection in the human brain Page 5
+Figure 3. DSP-4 mode of action. Page 10
+Figure 4 Diversity of mechanisms of DJ-1 in neuron and glia Page 15
+Figure 5 Experimental timeline Page 22
+Figure 6 Percentage of body weight variation related to baseline at 2-, 4-, 6-, and Page 28
+20-days after N-(2-chloroethyl)-N-ethyl-2-bromobenzylamine (DSP-4)
+Administration.
+Figure 7 Assessment of the dose-dependent effect of DSP-4 at motor and non- Page 29
+motor level.
+Figure 8 Motor Behavior Page 31
+Figure 9 Cognition and memory Page 35
+Figure 10 Anxiety and depressive-like Behavior. Page 37
+Figure 11 Histological assessment of N-(2-chloroethyl)-N-ethyl-2- Page 40
+bromobenzylamine (DSP-4)-induced Locus Coeruleus degeneration.
+Figure 12 Histological assessment of N-(2-chloroethyl)-N-ethyl-2- Page 42
+bromobenzylamine (DSP-4) effect on Striatal and Nigral degeneration
+ix
+
+LIST OF TABLES
+Table 1 List of Parkinson’s disease associated genes and respective mutations Page 3
+Table 2 DSP-4 Studies in rodents and major outlines Page 12
+Table 3 Studies using DJ-1 Knockout Models Page 18
+Table 4 DSP-4 solution preparation Page 21
+x
+
+LIST OF ABBREVIATIONS
+# E
+% - Percentage EPM – Elevated Plus Maze
+°C – Degree Celsius ERK½ - Extracellular signal regulated kinase ½
+µg – Microgram F
+µL – Microliter FCS – Fetal calf serum
+5-HT – Serotonin FST – Forced Swimming Test
+6-OHDA – 6-hydroxydopamine G
+α-syn – Alfa-synuclein GFAP – Glial fibrillary acidic protein
+A GSH – Glutathione
+ALS – Amyotrophic lateral sclerosis H
+ANOVA – Analysis of Variance h – Hour
+ANS – Autonomic nervous system HO – Hydrogen peroxide
+2 2
+ATP – Adenosine triphosphate I
+C i.p. – Intraperitoneal Injection
+CFC – Contextual Fear Conditioning IHC – Immunohistochemistry
+cm – Centimeter IL-1β – Interleukin 1 beta
+CNP – Central neuropathic pain IL-6 – Interleukin 6
+CNS – Central nervous system iNOS – Inducible nitric oxide synthase
+COX-2 – Cyclooxygenase-2 IT – Immobility Time
+CREB1 – cAMP-response-element-binding K
+protein 1 kg – Kilogram
+CSF – Cerebrospinal fluid KO – Knockout
+D L
+DA – Dopamine LC – Locus Coeruleus
+DAB – 3,3’-diaminobenzidine L-DOPA – L-3,4-dihydroxyphenylalanine
+tetrahydrochloride M
+DBH – Dopamine-β-hydroxylase MB – Marble Burying
+DNA – Desoxyribonucleic acid mg – Milligram
+DSP-4 – N-(2-chloroethyl)-N-ethyl-2- MHPG – 3-Methoxy-4-Hydroxyphenylglycol
+bromobenzylamine min – Minutes
+xi
+
+mL – Milliliter associated splicing factor
+mm – Millimeters PTGDA – Prostaglandin D2 synthase
+MPTP – 1-methyl-4-phenyl-1,2,3,6- PTSD - Post-traumatic stress disorder
+tetrahydropyrine R
+MRI – Magnetic resonance imaging RBD – Rapid eye movement sleep behavior
+MST – Motor Swimming Test disorder
+MWM – Morris Water Maze REM – Rapid eye movement
+N RNA – Ribonucleic acid
+n – Number ROS – Reactive oxygen species
+NA – Noradrenaline RT – Room Temperature
+NAc – Nucleus accumbens S
+NaCl – Sodium Chloride s – Seconds
+NAT – Noradrenaline transporter SD – Standard deviation
+NF-kB – Nuclear factor-kappa B SNpc – Substantia nigra pars compacta
+NO – nitric oxide SST – Sucrose Splash Test
+NOR – Novel Object Recognition STAT1 – Activator of transcription 1
+Nrf2 – Nuclear factor erythroid 1-related factor STR – Striatum
+2 T
+Nurr1 – Nuclear receptor related 1 protein TFs – Transcription factors
+O TH – Tyrosine hydroxylase
+OF – Open Field TNFα – Tumor necrosis alpha
+OH – Orthostatic hypotension TREM2 - Triggering receptor expressed on
+P myeloid cells two
+PBS – Phosphate buffered saline V
+PBS-T – PBS-Triton V – Volts
+PD – Parkinson’s Disease VMAT2 – Vesicular monoamine transporter 2
+PET – Positron emission tomography VTA – Ventral tegmental area
+PFA – Paraformaldehyde WT – Wild-type
+PFC – Prefrontal cortex
+PGD2 – Prostaglandin D2
+PGE2 – Prostaglandin E2
+PSF – Polypyrimidine tract-binding protein-
+xii
+
+1. INTRODUCTION
+Parkinson’s Disease (PD) is the most common movement disorder and the second most common
+neurodegenerative disorder affecting more than 10 million people worldwide1,2. PD is strongly correlated
+with age2,3. It is rare before 60 years old (≈1%) but at the age of 80 the prevalence rises to about 3%2.
+Pathologically, it is characterized by degeneration of dopaminergic neurons in the substantia nigra pars
+compacta (SNpc) and dopamine depletion in the striatum (STR), which leads to changes in the functioning
+of downstream basal ganglia circuitry1,4. Motor impairment, i.e. parkinsonism is the main feature that
+clinically characterizes PD, being characterized by bradykinesia in combination with either rest tremor,
+rigidity, or both4,5. The dopamine precursor amino acid L-3,4-dihydroxyphenylalanine (L-DOPA) was first
+established in 1950 as an attempt to replace striatal dopamine depletion and remains as the "gold
+standard" symptomatic therapy for PD1,4. Still, disease-modifying treatments that halt the gradual
+degeneration of dopaminergic neurons remain an unmet need.
+Figure 1. Progression of PD with age3,6,7. Several studies report that PD may develop from the olfactory or
+gastrointestinal tract, and several genetic mutations and environmental factors have been identified as a risk factor for the
+development of PD8–11. Preclinical stage comprises the presence of neurodegeneration before the manifestation of clinical
+symptoms, which sets the beginning of prodromal stage3,4,7,12. This stage is marked by a broad range of symptoms that may
+include anxiety, depression, sleep problems, cognitive impairments, and constipation6,13. Finally, in the clinical stage, the
+diagnosis of PD is made upon the establishment of cardinal motor symptoms, such as bradykinesia and resting tremors3.
+Image created with BioRender.com (adapted from) Chen, H., & Ritz, B. Journal of Parkinson's disease (2018).
+1
+
+Recently, an increasing body of knowledge has shown that before the appearance of the motor
+signs that allow PD diagnosis, patients experience non-motor symptoms and subtle motor alterations
+(figure 1)3–5. This prodromal stage of PD has been correlated with degeneration in other neurotransmitter
+systems besides the dopaminergic nigrostriatal pathway1,4,5,14. Identifying specific clinical markers
+associated with prodromal PD is crucial for early detection and intervention5,7,15. Motor symptoms
+associated with prodromal PD may comprise subtle changes in movement coordination, mild tremors, or
+alterations in posture4,5,7. On the other hand, non-motor symptoms are more evident and diverse and can
+include cognitive disfunctions (such as dementia), sleep disorders, depression, and autonomic
+dysfunction1,5,6,16.
+Therefore, to better understand PD progression it is critical to understand how different non-
+dopaminergic brain areas are affected in PD. A structure that has been proposed to be early affected in
+PD is the Locus Coeruleus (LC)13,17. This brainstem nucleus is involved in various functions, including
+regulation of arousal, attention, and stress responses8,18. LC degeneration is correlated with the
+development and aggravation of both motor and non-motor PD symptoms8,13,15. Despite its potential
+implication in the early stages of PD, the LC remains mostly understudied. Further research is needed to
+explore its involvement in prodromal PD and understand the underlying mechanisms contributing to its
+degeneration. Moreover, studying the LC could provide new insights into early diagnostic techniques and
+novel therapeutic strategies.
+Additionally to understanding the degenerative processes and regions affected during the course
+of PD, it is important to acquire insight into how genetic mutations may influence vulnerability to
+degeneration9,10. Genetic factors have been increasingly recognized as part of PD etiology4,9,10. Investigating
+the genetic basis of PD may provide insights into disease mechanisms, risk assessment, early diagnosis,
+and the development of targeted therapies9,10,19. Even though most cases of PD are idiopathic, the discovery
+of rare PD forms with Mendelian inheritance (5-10% of PD cases) sparked interest in the role of genetics
+in PD. Recent studies have also revealed the existence of polymorphic genes that can contribute to the
+development of sporadic PD or increase its risk and progression10,11,19–21. Some mutations associated with
+PD include autosomal-dominant (LRRK2 and SNCA) and autosomal-recessive forms (Parkin, PINK1 and
+DJ-1) and risk mutations (GBA) 9–11. A list of genes and associated mutations is presented in table 1.
+2
+
+Table 1. List of Parkinson's disease associated genes and respective mutations
+Locus Clinical
+Gene Protein Function(s) Mutation(s)
+symbol manifestations
+Neurite outgrowth GS2019S
+Leucine-rich Membrane trafficking
+LRRK2 PARK8 R1441C/G/H, Y1699C Classic
+repeat kinase 2 Autophagy
+and 12020T
+Protein synthesis
+Synaptic vesicle Missense Mutations
+PARK1 Classic
+Alfa-synuclein (α- Dynamics (i.e., A53T)
+SNCA
+syn) Mitochondrial Function Duplication Early-onset and
+PARK4
+Intracellular trafficking Triplication dementia
+Homozygous or
+Parkin Parkin E3 ubiquitin ligase PARK2 compound Lower limb dystonia
+heterozygous
+Homozygous or
+PTEN-induced Mitochondrial serine- Psychiatric
+PINK1 PARK6 compound
+putative kinase 1 threonine protein kinase manifestations
+heterozygous
+ROS Scavenger
+Detoxification
+Transcriptional co- Homozygous or
+DJ-1 DJ-1 activator PARK7 compound Early onset
+Glyoxalase heterozygous
+Deglycase
+Protease
+Esterase
+Low risk (N370S,
+GBA Lysosomal enzyme S2716)
+High Risk
+Autosomal recessive mutations in the PARK7 gene, which encodes for the DJ-1 protein, accounts
+for about 1-2% of early-onset PD cases2,9–11. DJ-1 is a highly conserved protein (189 amino acids) which
+regulates numerous processes important in neuroprotection, such as anti-oxidative, anti-apoptotic and
+anti-inflammatory pathways9,10,22. Patients with DJ-1 mutations exhibit an early onset of rigidity, tremors,
+dyskinesia and generally have a good response to L-DOPA treatment11. Moreover, DJ-1-linked PD cases
+often present non-motor symptomatology, like anxiety and cognitive deficits and have shown the presence
+3
+
+of degeneration in the LC9,23. However, there is still a lack of description regarding the alterations, the
+extent of the degeneration and its correlation with the development and exacerbation of symptoms.
+Studying DJ-1 mutation can provide valuable insights into the underlying mechanisms of PD pathology,
+particularly in individuals with an early onset of the disease.
+In this section, we will provide a description about the LC, its functioning, and studies performed
+regarding its involvement in PD symptomatology. We will address DJ-1 mutation and mechanisms
+potentially involved in PD pathogenesis, as well as review the studies using DJ-1 knockout (KO) animals.
+1.1 Locus Coeruleus
+The LC is a structure located in the caudal central gray pons under the floor of the fourth ventricle
+with widespread projections to several brain regions such as olfactory bulb, hippocampus, hypothalamus,
+striatum, cerebral cortex, cerebellum, subthalamic nucleus and spinal cord (figure 2)8,18. Due to its
+location deep in the brainstem and its small size, it has been difficult to assess LC neuronal activity and
+understand its correlation with several aspects of the disease8,13,18. Advances in magnetic resonance
+imaging (MRI), optogenetics, chemogenetics, RNA sequencing and specific labeling techniques have
+improved the knowledge regarding LC functioning and anatomy8,12. Immunolabeling techniques using
+tyrosine hydroxylase (TH) and dopamine-ꞵ-hydroxylase (DBH), critical enzymes of noradrenaline
+biosynthesis, show that LC is mainly composed of noradrenergic neurons, being recognized as the major
+source of noradrenaline in the brain8,18.
+Noradrenaline (NA) is a neurotransmitter involved in a wide range of behavioral and physiological
+processes including wakefulness, arousal, attention, mood, memory, appetite and homeostasis8,24 During
+several years the LC noradrenergic system has been described as an homogeneous system with unified
+action. Recent evidence supports that this is an heterogeneous system with different morphologies and
+actions, depending on firing mode17,25. LC neurons are mostly medium sized with several long and thin
+dendrites of the central part of the LC. Smaller spindle-shaped neurons are present in the sub coeruleus
+region, mainly targeting the brainstem and spinal cord26. NA neurons can fire in two different modes, tonic
+and phasic, and the capacity of switching between these regulate different behavioral states18. Tonic firing
+is related to the arousal and waking state whereas phasic mode is activated during focused task
+performance and highly precise behavioral responses18.
+NA has several effects on target neurons, including modulation of intracellular cascades, cellular
+excitability, membrane potentials and synaptic plasticity, which in turn lead to the modulation of pain,
+4
+
+motor control, energy homeostasis and control of local blood flow26. Noradrenergic signaling happens over
+three major categories of receptors, α1, α2 and ꞵ, with different subtypes that elicit different cellular
+responses24. NA also exhibits potent antioxidant and anti-inflammatory properties in the brain27. NA can
+exert neuroprotective effects by decreasing the release of brain related trophic factors and reducing the
+generation of reactive oxygen species (ROS)12,17,28. Lesioning of the LC and consequent NA depletion has
+been shown to affect microglial function and lead to an increase of oxidative stress12,13,18. Importantly, NA
+depletion in the LC seems to exacerbate dopaminergic neurons loss in the SNpc, contributing to the
+progression of the disease. This has been shown in several animal models combining LC lesions with
+oxidative stress insults, such as 6-Hydroxydopamine (6-OHDA), 1-methyl-4-phenyl-1,2,3,6-
+tetrahydropyridine (MPTP) and genetic models, such as DJ-1 KO7,24. Moreover, NA has been shown to
+exert paracrine effects on neurons, glial cells and microvessels, thus confirming a large involvement of
+this system not only by typical synapses but by extra synaptic interactions18,26.
+Figure 2. Locus Coeruleus Noradrenergic projection in the human brain. The LC projects to several regions in the
+cerebral cortex such as the prefrontal cortex, involved in wakefulness, and behavior control, and to the sensory cortices involved
+in attention and sensory processing8,18,29. LC projects to the limbic system, including the amygdala and the hippocampus, which
+play a role in episodic and emotional memory26,29. LC projects to the thalamus which is important for sensory processing, stress,
+and pain modulation18,30. LC projects to the cerebellum and spinal cord, which are involved in motor and sensory function8,18.
+Image created with BioRender.com.
+1.1.1 Locus Coeruleus and Parkinson´s Disease: a focus on non-motor symptoms
+5
+
+Neuronal loss within LC has been described in several studies17. With age, the number of LC cells
+and NA concentration declines. By the age of 90 years, 25% of LC neurons are lost and NA levels in the
+brain are reduced by 50%31. Clinical studies in PD patients revealed that degeneration of LC noradrenergic
+neurons occurs earlier and to a greater extent than the loss of nigral dopaminergic neurons within the
+SNpc7,13,15,32. Some studies reported an 83% loss of noradrenergic innervation in various targets of the LC-
+NA system compared to a 78% DA degeneration in the onset of PD motor symptoms14. The degeneration
+of LC NA neurons seems to be directly linked to early non-motor symptoms17,31. Non-motor symptoms
+related to LC degeneration that occur before the onset of motor symptoms may be important clinical
+markers of this prodromal phase of the disease15,31,32. Therefore, it is important to address these non-motor
+symptoms and how LC dysfunction might contribute to their occurrence.
+Depression and anxiety
+Mood disorders, such as depression and anxiety, are frequent symptoms experienced among PD
+patients (25-40%) and have been recognized as a clinical marker of developing PD24,33,34. People who
+develop depression early in the course of PD are more likely to have higher deterioration of motor function
+and disability over time6,34. Antidepressant drugs have been demonstrated to be useful in the treatment of
+parkinsonian depression. Dopaminergic neurons within the ventral tegmental area (VTA) and nucleus
+accumbens (NAc) are described to have fundamental roles in motivation and reward, which are usually
+impaired in several psychiatric disorders such as depression35–37. It has been suggested that noradrenergic
+neurons of the LC and dopaminergic neurons of the VTA work together on regulating behavior since they
+both converge in the prefrontal cortex38. Some studies showed a correlation between the decline of NA
+content in VTA, the reduction of LC pigmentation, and the reduction of NA transporter binding with the
+prevalence of depression in PD patients14,24,35. Drugs that increase NA and serotonin (5-HT) levels act as
+antidepressants, whereas the depletion of NA or 5-HT may induce a depressive state14.
+Like depression, anxiety can arise at any time over the course of PD6,34. In PD, anxiety most
+commonly manifests as generalized anxiety disorder or panic disorder6,34. The LC has been studied in the
+context of anxiety-related disorders such as post-traumatic stress disorder (PTSD)39,40. Tonic and
+continuous activity of the LC is high in states of distress or anxiety41. Studies in rodents demonstrate that
+the LC is involved in several types of stress response, leading to increased anxiety and defensive
+behaviors41. Increased LC activity, along with an augmented TH expression, has been associated with the
+onset of anxiety-like behavior in rodents, particularly related to exposure to stressful events (i.e. restraint)
+or in response to fear34,41. However, there is contradictory evidence suggesting that a reduced LC activity
+6
+
+is associated with anxiety41–43. When lesioning the LC, some studies have reported an increase of anxiety
+behavior related to a reduced exploration of novel environments6. While the LC has a global function in
+mediating arousal to strongly aversive stimuli, distinct modulations can have different and opposite
+functional roles in mediating learning or responses to aversive stimuli6,15,33. Therefore, the distinct roles of
+the LC-NA system and the specific evoked behavioral responses require further study.
+Cognitive disfunctions
+Although cognitive impairments become more regular and prominent with the progression of the
+disease, almost 25% of the patients have developed mild cognitive impairments in early stages of PD6,18.
+Patients in early-stage PD have shown an impairment in tasks requiring behavioral shift, which is highly
+dependent of NA modulation8,18. A study conducted in PD patients with mild cognitive impairment showed
+a lower LC MRI signal and a decreased performance on cognitive flexibility tests26,44. Consistent with this,
+treatment with NA re-uptake inhibitors like atomoxetine showed an improvement in cognitive performance
+among PD patients44. Recent research has pointed towards the involvement of LC noradrenergic system
+in learning and memory formation, sensory processing, synaptic plasticity, network resetting and decision
+making6,15,26,32.
+Learning and memory formation involves multiple neural systems27,44. These include hippocampal
+context-dependent associative learning, stimulus discrimination, declarative and working memory, and
+amygdala-mediated affective learning6,27,44. The LC has been proposed to exert effect in these neuronal
+systems6,45,46. The LC-NA projections to the hippocampus regulate long-term potentiation and hippocampal
+plasticity, positively influencing the process of memory consolidation and retrieval6,45. The LC also
+modulates the interaction between the hippocampus and the amygdala, related to emotional memory
+and stress response, mainly in passive-avoidance memory consolidation6.
+Phasic activation of NA LC neurons is critical in focus and attention18,26. The administration of
+clonidine, an α2-receptor agonist, inhibits the release of NA and leads to impaired performance in high
+arousal and high demand tasks 24. In non-human primates optimal levels of NA in the prefrontal cortex
+are key for high arousal and working-memory tasks12,47. The effects of clonidine on humans, acquired by
+positron emission tomography (PET), have shown the interference of the LC in the network that mediates
+attention and working memory26,47. Taken together these findings support the assumption that the LC may
+have powerful effect on the regulation of multiple memory systems, including hippocampal plasticity,
+working memory, and amygdala-mediated associative learning for aversive events6,44.
+7
+
+Sleep Disturbances
+Another common symptom among PD patients is sleep disturbances, mainly rapid eye movement
+(REM) sleep behavior disorder (RBD) which has been also proposed to be one of the main clinical markers
+for prodromal PD7,18,32. The LC plays a main role in the sleep-waking cycle, anticipating activity fluctuation
+and promoting a state of vigilance. The LC-NA system regulates the circadian rhythm of expression of
+genes responsible for the waking state13,29. During REM sleep, when the LC activity is suppressed, there
+is a reduction in the expression of these genes13. In agreement with this, lesioning the LC ablates the
+waking-related genes expression13. Studies performed in animals and humans have also shown that LC
+is one of the effectors of the orexin/hypocretin neurons of the lateral hypothalamus which are involved in
+arousal and inhibition of REM sleep48.
+Clinical, imaging and neuropathological evidence demonstrate that LC-NA system is involved early
+in the sequence of the pathological alterations leading to sleep disturbances several years before
+dopaminergic degeneration is noticed29. In healthy patients, during quiet wakefulness, LC neurons fire at
+a regular slow rate, whereas during REM these neurons are completely silent8,26. PD patients with RBD
+showed a decrease in signal intensity of the LC when compared with PD patients without RBD48. The
+authors suggested that only a certain degeneration in the LC noradrenergic system could lead to RBD,
+however, this correlation is not properly established, and further studies are required.
+Pain
+Pain is one of the most common symptoms displayed by PD patients (40%) and is often
+considered worse than motor symptoms30. The LC noradrenergic system plays a critical role in central
+modulation of pain due its descending projections to the spinal cord49,50. Descending projections from the
+LC interact with pain responsive neurons of trigeminal sensory nuclei and the spinal dorsal horn, altering
+neuronal sensitivity and modulating nociceptive transmission and the experience of pain50. The
+antinociceptive effects of norepinephrine are primarily mediated through α2-adrenergic receptors on the
+central terminals and the subsequent activation of secondary projection neurons. Descending
+noradrenergic projections from the LC can inhibit the sensation of pain and pharmacological inhibition of
+spinal noradrenergic transmission results in decreased nociceptive thresholds. It is hypothesized that
+dysfunctional descending noradrenergic pathways might contribute to central neuropathic pain (CNP)49,50.
+Autonomic dysfunction
+The autonomic nervous system (ANS) serves as a communication route between the central
+8
+
+nervous system (CNS) and peripheral tissues51. Several autonomic dysfunctionalities have been described
+to appear in early-stage PD patients, which include gastrointestinal malfunction, cardiovascular
+dysregulation, urinary disturbance and sexual dysfunction6,52. It should be mentioned that these symptoms
+can occur independently, and their severity can vary between patients51. One example of cardiovascular
+dysfunction is orthostatic hypotension (OH) which has been estimated to have a prevalence of
+approximately 30% in early-stage PD patients52. The LC has strong connections with sympathetic
+preganglionic neurons of the spinal cord, which control autonomic functions16. PET imaging showed that
+there is a significant loss of NA uptake in cardiac postganglionic sympathetic neurons in early PD which
+could contribute to cardiovascular dysregulation47,52. In line with this, pathological examination of
+sympathetic nerves supplying the heart in patients with PD revealed a substantial loss of noradrenergic
+fibers51. LC degeneration might contribute and influence these dysfunctionalities but there is still no clear
+evidence of this involvement.
+In summary, the LC seems to be involved in a variety of non-motor symptoms often described in
+PD patients and proposed to be related to a prodromal stage. Understanding the role of the LC in both
+PD patients and healthy people is important to identify possible clinical markers and allow early PD
+diagnosis.
+1.1.2 Locus Coeruleus and Parkinson’s Disease: experimental models (DSP-4)
+The current experimental models of PD are mainly focused on reproducing the nigrostriatal DA
+degeneration, not providing much information about the involvement of other neurotransmitter systems1,53.
+In the last decade, some studies have started to explore the involvement of LC-NA system in the
+pathophysiology of PD16,32,54. Targeting the noradrenergic system in neurodegenerative diseases such as
+AD and PD has received greater attention and several models of noradrenergic degeneration have been
+generated. N-(2-chloroethyl)-N-ethyl-2-bromobenzylamine (DSP-4) is a highly selective neurotoxin for
+noradrenergic projections originating from the LC and has been widely used to study the LC-NA system50,55–
+59.
+Mode of Action
+Figure 3 summarizes the current understanding of DSP-4 mode of action. DSP-4 crosses the
+blood-brain barrier and is cyclized into a reactive aziridinium ion55,57,60. The aziridinium ion is transported
+by the NA transporter into the NAergic nerve terminals where it is accumulated, triggering
+degeneration55,60. DSP-4 also inhibits its own uptake by an irreversible mechanism at an inner site of the
+NAT57,60,60. The difference in the capacity of transport and inhibition of the transport becomes a critical and
+9
+
+limiting factor determining the amount of the toxin entering the neurons60. Inside these neurons the
+aziridinium ion reacts with cellular components, producing a toxic reaction14,60. The first sign of this toxicity
+is a rapid decline of NA levels in the nerve terminals and axons60. Based on experiments using DSP-4, two
+separate subsystems of noradrenergic fibers were described, the LC and non-coerulean noradrenergic
+fibers, which differ not only in their projections but also with respect to the pharmacological properties of
+their axon terminals61. DSP-4 is proposed to affect specifically LC noradrenergic fibers by inducing
+morphological changes, inhibiting norepinephrine reuptake, stimulating NA release, and increasing
+turnover rate of NA56. DSP-4 has been proposed to solely affect the noradrenergic fibers from the LC55,60,61.
+It has been suggested that this selectivity toward LC neurons may be related to the significant difference
+found in the affinity of DSP-4 for the NA uptake carrier in different brain structures61. On the molecular
+level a cellular energy collapse by lack of adenosine triphosphate (ATP) may be an explanation of DSP-4
+neurotoxicity55. Another hypothesis is that DSP-4 downregulates the noradrenergic phenotypes by its
+actions on DNA replication, leading to replication stress and cell cycle arrest57,60. Markers of terminal loss
+are observed as a reduction in NA brain tissue content, decrease in NAT density, and temporary increase
+in α2-adrenergic auto receptor60,61. However, the mechanism underlying this effect is yet to be fully
+understood.
+Figure 3. DSP-4 mode of action. DSP-4 crosses the blood-brain barrier and is cyclized into a reactive aziridinium ion (DSP-
+4az)55,57,60. The aziridinium ion is transported by the NA transporter (NAT) into the NAergic nerve terminals where it is
+accumulated, triggering degeneration55,60. DSP-4 also inhibits its own uptake by an irreversible mechanism at an inner site of
+10
+
+the NAT57,60,60. Inside these neurons the aziridinium ion reacts with cellular components, producing a toxic reaction14,60. DSP-4 is
+thought to interact with the mitochondria and evoke a cellular energy collapse by lack of adenosine triphosphate (ATP)55. Image
+created with BioRender.com.
+Effects of DSP-4 Administration in Rodents
+Several studies in rodents showed that systemic administration of DSP-4 has a dose-dependent
+depleting effect on NA levels in several brain regions and spinal cord27,55,56,58,62. The cerebellum, brainstem,
+mesencephalon, and pons-medulla seem to be the most affected brain areas, while in the thalamus and
+medulla oblongata no significant alterations are noted60. In the central nervous system the depletion is
+long lasting while in the peripheral sympathetic nervous system after a month there is an almost complete
+recovery of NA innervation60,63. Different dosages of DSP-4 have been used in studies to induce the PD-like
+phenotypes in mice, with typical dosages ranging from 6mg/kg to 50mg/kg55,61,63. Lower dosages (6mg/kg)
+produce a partial lesion while higher dosages (50mg/kg) induce neurotoxicity and about 90% reduction
+of NA content14,55,60,64. Still, it is not clear whether DSP-4 leads to a complete ablation of NA neurons57,61.
+Some studies have pointed to a decrease in the level of NA but not to a loss of noradrenergic neurons50.
+DSP-4 LC lesions also seems to indirectly affect the dopaminergic system58,64. In a study conducted in
+rats, lesioning the LC with DSP-4 lead to a decrease in DA turnover, which supports the role of the LC-NA
+system in neuroprotection64. A summary of the studies conducted using DSP-4 treatment is outlined in
+Table 2.
+In addition to investigating the integrity of the LC-NA system and its connection with other
+monoaminergic systems and brain regions, certain studies have also examined the motor and non-motor
+behavior in rodents with DSP-4-induced LC lesions.
+When administered alone, DSP-4 does not lead to any evident altered motor functioning14.
+However, when combined with other neurotoxins, such as MPTP and 6-OHDA, DSP-4 leads to an
+exacerbation of neuronal degeneration and potentiates the appearance motor symptoms58,65–67. DSP-4
+lesions on MPTP rats significantly aggravated the motor deficits and histological analysis on these animals
+showed a significant reduction on TH-positive cells in the SNpc ipsilateral to the lesioned LC, indicating
+that lesioning LC increases DA neurons degeneration susceptibility14,27. According with this, studies
+performed in 6-OHDA animals treated with DSP-4 showed an aggravation on the forelimb akinesia and a
+reduction in dopaminergic neurons in animals with loss of LC-NA neurons7,17,25. This suggests that the
+degeneration of LC-NA neurons may act as a potentiator for DA degeneration, exacerbating the
+progression of PD symptomatology58,64. However, in other studies no alterations on motor function were
+11
+
+observed and further studies assessing the effect of NA depletion in motor function are required64,66,68.
+Regarding non-motor symptoms, DSP-4 lesioning have shown to impair learning and memory
+tasks with a reduction of about 70% in LC-NA neurons27,45. Some studies reported an increase in anxious
+and depressive-like behavior, neophobia, increased aggressiveness and lack of fear factors14,27,50,55,58,69.
+Aligned with this, histologically, DSP-4 not only provoked a marked reduction in LC-NA neurons, but also
+a significant reduction of NA levels in the hippocampus and prefrontal cortex, which may be an
+explanation for the deficits observed in the behavioral analysis.
+Table 2. DSP-4 Studies in rodents and major outlines
+Histological and
+DSP-4 Complementary Motor Non-motor
+Behavioral Tests Neurochemical
+Dosage Drugs Alterations Alterations
+alterations
+50% NE reduction in
+10
+- - - - the cerebral cortex and
+mg/kg55
+spinal cord
+Sensory Complete NE depletion
+50 Disrupts the
+- preconditioning - in the cerebral cortex
+mg/kg55 acquisition of odor
+paradigm and spinal cord
+Increased NA in
+prefrontal cortex and
+50 Haloperidol (0.2 Catalepsy and activity Decreased
+- hippocampus.
+mg/kg64 mg=kg) cage activity
+Increased DA turnover
+in prefrontal cortex.
+Pronounced Reduced striatal
+50
+6-OHDA (8 μg) Stepping Test forelimb extracellular levels of
+mg/kg62
+akinesia NA and DA
+Paraquat (10 Stool collection, forced
+50 Impaired learning
+mg/kg) + maneb swim test and Morris - -
+mg/kg27 and memory
+(30 mg/kg) water maze
+Sucrose preference Anhedonia, 34% DBH reduction in
+test, bar test, forced Exacerbates depressive-like LC and 30% TH
+MPTP (25
+50 swim test, tail MPTP induced behavior, anxiety- reduction in SN. 60%
+mg/kg/day for 5
+mg/kg14 suspension, elevated motor like behavior and NA reduction in
+days)
+plus maze and Morris symptoms impaired learning prefrontal cortex and
+water maze and memory 58% in hippocampus
+12
+
+Thermal and
+50 Reduced CSF NA
+- Hargreaves method mechanical -
+mg/kg59 content
+hyperalgesia
+Dose-dependent
+3-50 Contextual Fear Impaired learning reduction of NA
+- -
+mg/kg68 Conditioning and memory content. 70% decrease
+of LC neurons
+Novelty suppressed Reduction of NAT in
+50 Anxiety-like
+- feeding and marble- - the LC, PFC and
+mg/kg50 behavior
+burying hippocampus
+Anxiety-like
+25 Elevated plus maze behavior, spatial Depletion of cortical
+- -
+mg/kg70 and water maze test memory NA levels
+impairment
+Novel cage stress and Reduction of NA levels
+25-50 Cognitive
+- novel object - in hippocampus and
+mg/kg71 deterioration
+recognition frontal cortex
+Decreased
+50 exploratory
+- Exploration box - -
+mg/kg72 behavior,
+neophobia
+Still, different studies show different levels of degeneration and different levels of impairment,
+especially related to non-motor symptoms. This lack of consistency depends not only on the amount of
+drug administered but is also related to several experimental factors, such as the animal model used,
+whether it is combined with other toxins, and the behavioral tests used. Therefore, further studies focused
+on understanding the behavioral alterations evoked by DSP-4 NA depletion are of interest to fulfill these
+notions.
+1.2 DJ-1
+In humans, DJ-1 mutation generally leads to an early onset, slowly progressive, parkinsonism73. DJ-
+1 is highly expressed in cells with high energy demands, like neurons and astrocytes, and therefore cells
+that produce high levels of reactive oxygen species23,65.
+DJ-1 is oxidatively damaged in sporadic PD patient’s brains, contributing to the hypothesis that DJ-
+1 does play a role in neuroprotection against oxidative stress. In vitro, it has been shown that intrinsic
+13
+
+loss of DJ-1 in primary dopaminergic neurons is sufficient to confer hypersensitivity to oxidative stress23,74.
+Patient-derived DJ-1 deficient cells cellular phenotypes are mainly mitochondrial dysfunction and a
+reduced dopaminergic differentiation, supporting the notion that PD pathogenesis involves an important
+metabolic component75. Given its growing clinical relevance, DJ-1 levels in the cerebrospinal fluid (CSF)
+have been studied as a potential marker for neurodegenerative diseases such as PD and Amyotrophic
+lateral sclerosis (ALS)23,74. CSF DJ-1 has shown to be increased in PD patients and seems to increase with
+age, however, age dependence may become weaker during the course of PD. CSF DJ-1 levels are elevated
+in early stages of the disease, being suggested to play a protective role against oxidative stress during PD
+onset74.
+To study the role of DJ-1 in PD researchers have generated animal models that lack functional DJ-
+1 protein by knocking out the DJ-1 gene. These DJ-1 KO mouse models are useful for studying the effects
+of DJ-1 deficiency on the development of PD-like symptoms.
+1.2.1 Mechanisms
+Although there has been clinical evidence suggesting the involvement of DJ-1 in the development
+and aggravation of PD, there are contradictory explanations regarding the underlying mechanisms
+responsible for these alterations. Several pathways have been implicated in its function, particularly in
+the context of PD. Figure 4 represents relevant pathways studied in the context of PD in which DJ-1 is
+being proposed to participate.
+DJ-1 has been widely studied to be involved in protecting cells from oxidative stress, one of the
+main mechanisms that has been correlated with the development of PD1,4. In healthy dopaminergic
+neurons DJ-1 is mostly localized in the cytoplasm76. When exposed to elevated levels of ROS, the DJ-1
+protein oxidises to its Cys-SOH form and is translocated to the mitochondria and the nucleus. In the
+2
+mitochondria, DJ-1 levels seem to increase in response to oxidative stress, in order to supress ROS
+accumulation76,77. Thus, it has been hypothesized that DJ-1 may contribute to prevent oxidative damage
+in dopaminergic neurons78. DJ-1 also localizes at the outer membrane of the mitochondria and contributes
+to maintain a healthy mitochondrial environment74. Loss of DJ-1 has been shown to lead to impaired
+autophagy and dysfunctional mitochondria74,75. Cytologic analyses of fibroblasts isolated from PD patients
+with DJ-1 mutations showed impaired mitochondrial functioning and an increased sensitivity to ROS76.
+Still, DJ -1 is not as efficient in removing ROS as other enzymes involved in oxidative homeostasis76. Given
+this, several studies have explored DJ-1 as a potential oxidative stress sensor, which modulates signalling
+pathways and the expression of genes involved in neuroprotective and neuroinflammatory pathways76,79.
+14
+
+For instance, studies performed in DA neurons exposed to 6-OHDA, and hydrogen peroxide (HO) have
+2 2
+shown that increased levels of DJ-1 induce Glutathione (GSH) synthesis, an antioxidant protein, improving
+neuroprotection74,80.
+Figure 4. Diversity of mechanisms of DJ-1 in neuron and glia. DJ-1 is known to be involved in protecting cells from
+oxidative stress, acting as a sensor and scavenger of ROS74–76. DJ-1 has been linked to the regulation of mitochondrial function
+and dynamics, associated with maintaining mitochondrial integrity and preventing mitochondrial dysfunction23,74. DJ-1
+participates in maintaining cellular redox balance by influencing the levels of various antioxidants and oxidants75,81. DJ-1 is
+implicated in modulating inflammatory responses in the brain, regulating the production of pro-inflammatory cytokines and
+inhibit the activation of inflammatory pathways75,81. DJ-1 is also known to regulate several transcription factors mainly by
+interfering with the dopamine synthesis75,82. Finally, DJ-1 is abundantly expressed in dopaminergic neurons, and it is involved
+in regulating dopamine homeostasis80,82. Image created with BioRender.com.
+DJ-1 is also known to regulate several transcription factors (TFs) that are relevant in PD23. DJ-1
+can interfere with dopamine synthesis by interacting with the polypyrimidine tract binding protein and
+associated splicing factor (PSF)23,76,80. DJ-1 stimulates the acetylation of TH-promoter-bound histones by
+blocking the SUMOylating of the transcriptional co-repressor PSF82. DJ-1 activates dopamine synthesis by
+up-regulating the transcription of TH, the enzyme responsible for converting L-tyrosine to L-DOPA74.
+Inactivation of DJ-1 results in loss of TH expression and L-DOPA production, leading to impaired
+15
+
+nigrostriatal functioning and therefore contributing to the development of PD74. Moreover, DJ-1 directly
+regulates TH activity, exerting a positive effect on TH expression. With age, DJ-1 oxidized levels increase
+and its activity toward TH decreases, being one of the key factors for the onset of PD80,82. DJ-1 also
+contributes to the reuptake of dopamine into synaptic vesicles by interacting directly with the vesicular
+monoamine transporter 2 (VMAT2)78,80. VMAT2 reuptakes excess dopamine into synaptic vesicles,
+protecting neurons from oxidized dopamine-induced toxicity. DJ-1 deficiency has been shown to impair
+dopamine reuptake, therefore contributing to oxidative stress80.
+DJ-1 participates in maintaining cellular redox balance by influencing the levels of various
+antioxidants and oxidants76,79. For instance, DJ-1 is thought to have a role in the extracellular signal-
+regulated kinase ½ (ERK½) pathway, which has functions in antioxidant response and dopamine
+homeostasis23,79,80. DJ-1 increases ERK½ phosphorylation, activating antioxidant mechanisms. Another
+example is the DJ-1 interaction with the nuclear factor erythroid 2–related factor 2 (Nrf2) which interacts
+with antioxidant response element that regulates the expression of certain antioxidant genes, a
+mechanism of relevance in response to oxidative stress79. Some studies have shown that DJ-1 is able to
+stabilize and facilitate the nuclear translocation of Nrf2, increasing the expression of antioxidant
+enzymes23,80. Herein, it is though that DJ-1 mutations can lead to cellular dysfunction and neuronal damage
+due to dysregulation of redox homeostasis79,80.
+DJ-1 is implicated in modulating inflammatory responses in the brain. It can regulate the
+production of pro-inflammatory cytokines and inhibit the activation of inflammatory pathways, indirectly
+contributing to neuronal survival23,81. DJ-1 loss increases intracellular ROS, nitric oxide (NO), interleukin 6
+(IL-6), and interleukin 1 beta (IL-1β), reduces the anti-inflammatory factor triggering receptor expressed
+on myeloid cells 2 (TREM2), blights migration capacity, and enhances phagocytosis23. DJ-1 KO attenuates
+astrocytic anti-inflammatory activity by promoting inducible nitric oxide synthase (iNOS) expression, NO
+cyclooxygenase-2 (COX-2) and IL-681,83.
+Recent studies showed that DJ-1 is highly expressed in astrocytes and may alter the expression
+of genes involved in antioxidant defence and neuroinflammatory processes74,79. Astrocyte-derived factors,
+such as tumor necrosis factor alpha (TNFα) and prostaglandin E2 (PGE2), are involved in the mechanism
+of astrocyte-mediated protection and were decreased in DJ-1 KO mice81. Decreased TNFα expression and
+secretion may decrease astrocytic support of neuronal viability during early stages of neurodegeneration.
+Astrocyte-derived TNFα is essential for maintaining synaptic connectivity and plasticity. PGE2 is released
+from astrocytes following glutamate activation and is likely a cytoprotective event. Therefore, decreased
+16
+
+astrocytic release of TNFα and PGE2 induced by DJ-1 KO may decrease neuronal viability81,81.
+In studies conducted upon LPS treatment, DJ-1 interacts with signal transducer and activator of
+transcription 1 (STAT1) implicated in neuroinflammation, augmenting STAT1 activation by impairing the
+interaction between STAT1 and its phosphatase SHP-1 in astrocytes and microglia23,80. DJ-1 deficiency
+affected microglial central metabolism and their ability to degrade α-syn via autophagy23,75. Furthermore,
+some authors proposed that DJ-1 reduces the release of microglial inflammatory mediators by promoting
+the astrocytic expression of prostaglandin D2 synthase (PTGDS) and production of prostaglandin D2
+(PGD2)79,81.
+It is important to note that even though DJ-1 mutations are rare causes of early-onset PD, the
+impact of DJ-1 dysfunction to PD pathogenesis remains to be widely studied. Further understanding of
+the pathways in which DJ-1 is involved is crucial to unravelling the complex mechanisms underlying PD
+and may offer potential targets for therapeutic interventions in the future.
+1.2.2 DJ-1 Knockout models
+DJ-1 Knockout models (KO) mouse models provide an important tool in PD investigation, allowing
+for the study of PD with a genetic background, differently for what is observed in 6-OHDA and MPTP
+models that rely solely on oxidative stress mechanisms limited to the nigrostriatal pathway74,76,77,81,84. Table
+3 contains a summary of the phenotypes described for DJ-1 KO mouse models.
+Behavioral tests performed in DJ-1 KO mouse models have shown subtle behavioral
+abnormalities73,85. Regarding locomotor activity, assessed with the open field paradigm, mice showed a
+marked reduction in horizontal and vertical activity73,85. A study evaluating motor performance in the
+rotarod, open field, and grip-strength showed that DJ-1 KO mice had impaired gait and motor features86.
+In the adhesive removal test, known to assess somatosensory abilities, DJ-1 KO animals at 2-4 and 7
+months old had a decreased performance compared to Wild-type controls87. However, at the age of 18
+months no significant differences were found, likely because of the age-dependent decline of Wild-type
+(WT) animals87. In contrast, some studies showed no significant motor alterations in similar paradigms
+proposing that DJ-1 KO mice display only a slight motor defect22,65,76.
+Regarding non-motor behavior, few studies have addressed these alterations in DJ-1 KO animals.
+In the open field test, mice spent less time moving and rearing and had fewer instances of stereotyped
+behavior, indicating a possible anxious phenotype73. In the appetitive instrumental learning, used to assess
+altered striatal function, DJ-1 KO rats displayed similar behavior as WT controls88. In several studies DJ-1
+KO mice seem to fail to recapitulate the major clinical features of PD22,76,81. An explanation for this, proposed
+17
+
+by some authors, is the existence of compensatory mechanisms in mice that may protect them from
+neurodegeneration and consequent establishment of motor symptoms81.
+Studies performed in DJ-1 KO rodents have shown their increased susceptibility to neuronal death
+due to oxidative stress in MPTP, 6-OHDA and hydrogen peroxide models65,77,85. On the other hand, over-
+expression of DJ-1 seems to protect cells from several oxidative stimuli85. Immunohistochemical analysis
+showed no major differences in the number of TH-positive neurons in the striatum nor SNpc73,74,80,85.
+Neurochemical analysis showed that KO mice present increased dopamine uptake, reduced evoked
+dopamine release, decreased autoinhibitory effects of the D2 receptor, reduced postsynaptic dopamine
+signaling and impaired cortical striatal long-term depression23. Decreased levels of synaptophysin, a
+presynaptic marker, were also detected in DJ-1-deficient mouse, which may be indicative of impaired
+synaptic network89. This suggests that dopaminergic neurons may not be degenerated, but they are not
+fully functional in DJ-1 KO mice.
+Table 3. Studies using DJ-1 Knockout Models
+Motor Non-motor Histological and
+Model Behavioral Tests
+symptoms symptoms Neurochemical alterations
+DJ-1 KO Decreased TH+ neurons in
+Novel environment, pole test
+Mice + Hypokinesia - SNpc, STR, and reduction in
+and open field
+MPTP65 [DA] STR content
+DJ-1 KO Rotarod, beam balance and Impaired motor Defects in DA release and
+-
+Mice87 adhesive removal test performance synaptic excitability
+Reduced DA overflow and
+DJ-1 KO
+Open Field and startle test Hypokinesia - decreased sensitivity of nigral
+Mice73
+neurons to DA
+DJ-1 KO Open Field, rotarod and Enhanced DA release and
+Hypokinesia -
+Mice90 adhesive removal test reuptake in STR
+DJ-1 KO
+Amphetamine-Induced
+Mice + 6- Decreased [DA] and increased
+Rotation - -
+OHDA (4 STR dopaminergic loss
+Asymmetry
+μg)83
+Balance beam, open field, Impaired
+DJ-1 KO Anxiety-like Decreased TH-positive neurons
+light-dark box and coordination and
+Rats88 behavior in SNpc
+instrumental learning task locomotion
+DJ-1 KO Balance Beam, rotarod, Impaired gait and Decreased TH-positive neurons
+-
+Rats86 open field and grip-strength motor features in SNpc
+18
+
+As mentioned above, in addition to DA degeneration, noradrenergic degeneration is also observed
+in PD patients77. DJ-1 KO rat models show noradrenergic degeneration within the LC at the age of 8
+months85. Conversely, a study conducted in mice showed no changes in the number of NA-LC neurons
+compared to WT animals at the same age77. However, there is a lack of studies focusing on the LC
+degeneration in DJ-1 KO models and whether it affects the behavioral outcome.
+Overall, these studies on DJ-1 KO mouse models showed that loss of DJ-1 is not sufficient to elicit
+a strong behavioral phenotype but, when combined with other toxins, it increases the susceptibility to
+neuronal oxidative stress.
+19
+
+2. RESEARCH OBJECTIVES
+The LC has been described to be related to the development of non-motor symptoms clinically
+associated with PD. DSP-4 is a neurotoxin, specific to the LC, that has been widely used to understand
+the role of LC degeneration in neurodegenerative disorders. DJ-1 KO mouse models have been shown to
+present age dependent progression, of both motor and non-motor behavior. It is important to note that
+PD is a multifactorial disease, and it is likely that a combination of genetic and environmental factors
+contribute to its development. Therefore, studies that combine different types of mouse models, such as
+DJ-1 KO mice with other genetic or environmental manipulations, may provide a more complete
+understanding of the pathogenesis of the disease.
+The main goal of this work was to develop a PD mouse model able to recapitulate noradrenergic
+degeneration in the LC in the context of a genetic PD form (DJ-1 mutation). For that, we have established
+the following specific objectives:
+(1) Adjusting the appropriate DSP-4 dosage to elicit noradrenergic degeneration with a functional
+impact on a DJ-1 KO mouse model.
+(2) Characterize motor and non-motor behavioral alterations to understand the effect of DSP-4
+administration in WT and DJ-1 animals.
+(3) Characterize the histological alterations in the LC and nigrostriatal pathway to understand the
+effect of DSP-4 administration in WT and DJ-1 animals.
+20
+
+3. MATERIALS AND METHODS
+3.1 Animals
+In this study, we used a DJ-1 KO (DJ-1-/-) mouse model established by Goldberg et al 87. An
+heterozygous DJ-1 (+/-) male and female mice were kindly provided by his lab (Center for Neurologic
+Diseases, Harvard Medical School, Boston) where this mouse model was originally established. From this
+couple, we have established a colony at ICVS by crossing heterozygous DJ-1 (+/-) male and female mice
+and performing genotyping of the offspring.
+10 to 17 weeks old DJ-1 mice and WT littermates, male and female, were used under the scope
+of the project 008-2022, according to the Portuguese national authority for animal research, Direção
+Geral de Alimentação e Veterinária (DGAV) and Ethical Subcommittee in Life and Health Sciences (SECVS;
+ID: SECVS 142/2016, University of Minho). Animals were housed in groups, obeying animals’ limit per
+cage, in a temperature and humidity-controlled room, on 12h light/dark cycles, and access to food and
+water ad libitum.
+3.2 DSP-4 Administration
+DSP-4 (C8417, Sigma-Aldrich, St. Louis, MO) was systemically injected by intraperitoneal injection
+(i.p.) at the defined dosage (table 4). A set of animals received the same volume of saline (NaCl), which
+was the vehicle used to prepare DSP-4 solution. Animals (n =43) were randomly assigned to 6 groups
+total
+(n=5-11/group): 1) WT vehicle; 2) WT + DSP-4 50mg/kg; 3) DJ-1 vehicle; 4) DJ-1 + DSP-4 10mg/kg ; 5)
+DJ-1 + DSP-4 25mg/kg and 6) DJ-1 + DSP-4 50mg/kg.
+Table 4. DSP-4 solution preparation. Three solutions of DSP-4 were prepared as described to facilitate the administration
+of the different dosages being tested. Then, the volume of DSP-4 administered to each animal was calculated based on their
+weight.
+Solution 1 – DSP-4 (10mg/kg) 25mg DSP-4 + 2.5mL NaCl
+Solution 2 – DSP-4 (5mg/kg) 750 µL Solution 1 + 750µL NaCl
+Solution 3 – DSP-4 (2mg/mL) 300µL Solution 1 + 1200µL NaCl
+3.3 Behavioral Tests
+21
+
+Two weeks after DSP-4 injection, animals went through behavioral tests covering both motor and
+non-motor features. The battery of tests chosen covered several symptoms associated with PD, including
+depression, anxiety, cognitive impairments, impaired locomotor activity and gait dysfunction. Prior to each
+behavioral test, all mice were habituated to the testing room for 30 min. The experimental timeline is
+described in figure 5.
+Figure 5. Experimental timeline. First, animals were separated into groups and injected with either saline or DSP-4. During
+the 2 weeks following injection animals were weighed and welfare was assessed every 2 days. Then, behavioral assessment
+was started with tests evaluating anxiety and depressive-like behavior: Elevated Plus Maze (EPM) , Open Field (OF), Marble
+Burying (MB), Sucrose Splash Test (SST), Forced Swimming Test (FST). On the following two weeks we evaluated memory
+and learning paradigms: Novel Object Recognition (NOR) and Morris Water Maze (MWM). On the fourth week we assessed
+motor coordination and balance: Beam Balance, Motor Swimming Test (MST) and Footprint Analysis. At week 5, we evaluated
+memory and learning using the Contextual Fear Conditioning (CFC).
+3.3.1 Elevated Plus Maze
+EPM is often used to evaluate anxiety-like behavior in rodents91. This test uses mice’s innate
+tendency to explore new environments and their natural tendency to avoid bright, elevated places42. The
+test was carried out under a bright white light in an apparatus consisting of a black propylene plus-shaped
+platform elevated 74.4cm above the floor with two open arms (50.8cm) and two closed arms (10.2 cm).
+Animals were placed individually in the center of the platform and all sessions were video recorded over
+5min and manually analyzed using the Kinoscope software (V.3.0.4, SourceForge, San Diego, CA, USA).
+The time animals spent in each arm and the number of entries in each arm were used as measures of
+anxiety-like behavior.
+3.3.2 Open Field
+OF can be used to assess anxiety-like behavior91. As anxious animals tend to avoid open areas,
+anxious behavior can be evaluated using the time mice spend in the center of the box and the time spent
+on the periphery of the box43,91. Animals were placed in the center of an illuminated square arena (43.2cm
+x 43.2cm) enclosed by a 30.5cm high wall. Movements were tracked for 5 min, using a 16-beam infrared
+system (MedAssociates Inc., Twin City, GA, USA), and data was analyzed using the Activity Monitor
+22
+
+software (MedAssociates Inc.). Distance traveled and time spent at the center versus periphery were
+considered as a measure of anxiety-like behavior.
+3.3.3 Marble-Burying
+Marble-burying is frequently used to address anxiety related to novelty and obsessive-compulsive
+behavior91. The burying of the marble is a natural defense mechanism that follows anxiety or a condition
+of stress42. When a strange object is placed inside the cage, mice usually start to display specific behavior,
+such as digging, burrowing, burying and grooming43. Each mouse was placed in a cage with six marbles
+for 30min. The number of marbles buried was used as an index to evaluate anxiety-like behavior. Marble
+was considered buried if at least two-thirds were hidden in the bedding.
+3.3.4 Sucrose Splash Test
+Rodents developing depressive-like behavior usually spend less time grooming and are more
+immobile42,91. For this test, animals were placed in a clean empty cage. A 10% sucrose solution was
+sprayed on the dorsal coat of mice. The sucrose solution is usually chosen as a releaser and an enduring
+factor of grooming due to its viscosity92. All sessions were video recorded over 5min and analyzed manually
+using the Kinoscope software. The latency time to initiate a grooming, time spent grooming and number
+of grooming initiated were used as an index to measure depressive-like behavior.
+3.3.5 Forced Swimming Test
+FST evaluates helplessness or depressive-like behavior91. This test was carried out under the
+concept that rodents show increased periods of inertia when they learn that escaping is not possible.
+Each animal was individually placed in glass cylinders filled with water (30cm of depth; 22ºC). All sessions
+were video recorded during 7 min total and the first 2 min were considered habituation period. Each
+session was analyzed manually using the Kinoscope software. The immobility time (IT), or total time spent
+immobile, was measured. Mice were considered immobile when remaining passively floating or doing
+minimal movements needed to maintain the head above the surface.
+3.3.6 Novel Object Recognition Test
+This test makes advantage of rodent’s natural tendency for novelty to investigate several aspects
+of learning and memory45. It requires a habituation period of 3 days, in which mice were placed in a white
+empty box for 15 minutes. On the first test day, two identical objects were placed in the corners of the
+23
+
+box. 24h later, two other identical objects were placed in the same spot on the boxes. On the same day,
+mice had a training session, where two identical novel objects were placed in the box. 1h later, the rodent
+was returned to the same arena, which contained one familiar object and a novel object. During each
+session animals were left to explore for 10 min and all sessions were video recorded. Given its preference
+for novelty, if the mouse can recognize the familiar object, it will spend more time around the novel
+object93. All sessions were video recorded and analyzed manually using the Kinoscope software. The time
+the animal spends with the familiar object is compared to the time spent with the novel object and used
+as an index to evaluate learning and memory.
+3.3.7 Morris Water Maze Test
+Morris Water Maze is the most used test to evaluate learning and memory, specifically spatial
+memory acquisition91. The test was performed in a circular swimming pool (150cm diameter, 50cm
+depth, 22ºC), divided into four quadrants, with a mobile target platform set about 1-1.5cm under water
+surface. During four consecutive days, each animal had four trials, each one starting in a different
+quadrant. They were given 1min maximum to find the platform. The time spent and the travelled distance
+to reach the platform was used as a measure of hippocampal-dependent learning. The average speed in
+each session was used to assess if the results were correlated with motor impairments. All sessions were
+video recorded and analyzed using EthoVision XT 13 software (Noldus, Wageningen, the Netherlands).
+3.3.8 Balance Beam Test
+The Beam test is designed to assess motor coordination deficits and is one of the most used
+tests in PD modeling91. Mice were placed in an elevated, open platform, connected by a beam to a closed
+box. Mice were trained for 3 days on a square beam with 12 mm of diameter. On day 4, animals were
+tested on a large square beam (12mm), on a round large beam (17mm) and on a thin square beam
+(11mm). The time animals took to cross each beam was registered. Whenever the animal stopped, time
+was discounted. If the animal fell or turned around it was considered a failed trial. Each animal had two
+opportunities to fail, otherwise it was not included in the analysis.
+3.3.9 Motor Swimming Test
+MST is the most frequently used task to evaluate motor impairments and deficits in PD models91.
+Animals were trained for two consecutive days (three trials per animal) to traverse a clear Perspex water
+tank (100 cm long, 22º C) to a safe black platform at the end. Mice were tested for three consecutive
+24
+
+days (two trials per animal), and the latency to cross the water was measured from the 60cm distance
+mark.
+3.3.10 Footprint Analysis
+Several different parameters of gait, such as enlargement of base width, can be analyzed using
+footprint patterns94. Mice’s hind and forepaws were coated with black or red non-toxic paints, respectively,
+before walking along an inclined corridor (100cm x 4.2cm x 10cm), containing a clean paper sheet on
+the bottom. The stride width was obtained by manually measuring the distance between two pawprints.
+Three values were measured for six consecutive steps and the mean of three values was used.
+3.3.11 Contextual Fear Conditioning
+Contextual Fear Conditioning is used to assess learning and memory formation, usually in relation
+to fear responses and the formation of fear memories95. In this task, mice are placed in a novel context
+and an aversive stimulus is provided43. When animals are returned to the same context, if they can
+remember and associate that environment with the aversive stimuli they were given before, they will
+demonstrate a freezing response. Freezing can be defined as “absence of movement except for
+respiration” in response to fear. The presence or absence of a freezing response, as well as the time
+animal’s take to respond, is used as criteria for learning. The protocol herein employed used a light as a
+cue. 20s after the light turned on, animals received a 2s shock (0.7V), in 3min intervals, during 9min
+total. On the second day, animals were subjected to the same context, and when the light turned on, the
+responsiveness of mice, freezing, could be used as an index of contextual fear conditioning. 2h later, on
+the second day, animals were placed in a different context and the responsiveness was analyzed. All
+sessions were video recorded and analyzed manually using the Kinoscope software. It is important to
+note than some mouse strains require repeated exposures to the repetitive stimuli in other to retrieve fear
+memories and thus, this test often needs further optimization40,95.
+3.4 Histological Analysis
+After behavioral assessment, mice were anesthetized with a mixture of ketamine (150 mg/kg) and
+medetomidine (0.3 mg/Kg) and were transcardially perfused with cold 4% paraformaldehyde (PFA) in
+phosphate buffered saline (PBS). Brains were collected and transferred to a tube containing 4% PFA in
+PBS. After 48h of incubation at 4ºC brains were transferred to a solution of 30% sucrose in PBS containing
+0.01% of sodium azide and kept at 4ºC until being processed. Brains were sectioned coronally using a
+25
+
+vibratome (VT1000S, Leica, Germany) at thickness of 40 µm.
+3.4.1 TH+ free-floating immunohistochemistry
+TH catalyzes the initial and rate-limiting step in the biosynthesis of catecholamines (i.e., dopamine
+and noradrenaline). TH-containing catecholamine neurons are specifically affected on PD and hence TH
+is used as a marker to assess dopaminergic neuronal cell loss in animal models for PD.
+Immunohistochemistry (IHC) is widely used to target specific antigens within tissue. Performing TH+ IHC
+allows to selectively mark dopaminergic and noradrenergic neurons and thus analyze DA and NA neurons
+preservation and/or degeneration. Free-floating immunohistochemistry is a useful method when we
+intend to see certain structures, like dendrites and axons given that the staining is performed uniformly
+from all section angles within the tissue.
+Six series of coronal sections of striatum, SNpc and LC were selected for free-floating
+immunohistochemistry. Sections were initially treated with PBS 3% HO for 20 min to block endogenous
+2 2
+peroxidase activity, permeabilized in 0.3% PBS-Triton (PBS-T) for 10 min and then blocked in PBS with
+10% fetal calf serum (FCS) for 1h to prevent non-specific binding. Then, sections were incubated in PBS
+with 2% FCS anti-TH antibody (rabbit polyclonal IgG, 1:1000; Merck Millipore) overnight at 4°C. On the
+next day, brain sections were incubated during 30 min at RT with a biotinylated secondary antibody (goat
+anti-polyvalent, TP-125-BN, ThermoFisher Scientific) and then during 30 min with the streptavidin-
+peroxidase solution (TP-125-HR, ThermoFisher Scientific). To detect the streptavidin-biotin
+immunoenzymatic complex, a substrate was given to this reaction, using 12.5 mg of 3,3’-
+diaminobenzidine tetrahydrochloride (DAB; D5905, Sigma) dissolved in 25 ml of Tris-HCl 0.05 M
+(pH=7.6) with 62.5 µl of HO. Sections were then mounted on superfrost slides and air dried for 24h at
+2 2
+RT before analysis.
+3.4.2 TH+ fibers density quantification
+TH+ fibers in the striatum were imaged using brightfield illumination (SZX16, Olympus) and the
+optical density was measured using the ImageJ software (National Institute of Health, v1.48, USA). Each
+image was first converted to 8-bit format. Then, using the regions of interest (ROI) manager, the dorsal
+striatal area was selected in both hemispheres, as well as three different background regions next to the
+striatal area. White and black values were inverted (black=0, white=255) and the selected settings for the
+analysis were area and mean grey value (average gray value within the selection). After that, the
+measurement was performed, and the values for striatal area and backgrounds were saved.
+26
+
+3.4.3 TH+ cells quantification
+TH-positive cells in the SNpc and LC were visualized and counted using a bright‐field microscope
+(BX51; Olympus, Center Valley, PA) equipped with a digital camera (PixeLINK PL‐A622, CANIMPEX
+Enterprises, Halifax, NS, Canada). Using the Visiomorph software (V2.12.3.0; Visiopharm, Hørsholm,
+Denmark) the boundaries of the SNpc and LC area were drawn and total TH+ cells were counted in both
+hemispheres.
+3.5 Statistical Analysis
+Data were assessed for normality using the Shapiro–Wilk. To evaluate the homogeneity of variance
+a Levene’s test was used. For datasets that were not normally distributed, non-parametric tests (Kruskal-
+Wallis) or (Mann-Whitney) were used. Post-hoc testing using pairwise comparisons were used for
+parametric (Turkey’s correction) and non-parametric (Dunn’s correction) tests.
+Data regarding histological assessment and non-motor behavior were analyzed using one-way
+ANOVA to compare the four groups. Data regarding motor behavior behavioral assessment were analyzed
+using ANCOVA to compare the mean values for the groups taking account animal’s weight. When
+comparing two independent groups, independent sample t-tests were used.
+The significance value was set as 0.05 for all statistical tests and all the results are presented as
+mean ± SD (standard deviation). JASP (version 0.17.1; Amsterdam, The Netherlands) was used as a
+statistical software platform used for all statistical analysis and GraphPad Prism (version 9.5.0; GraphPad
+Software, Inc., San Diego, CA, USA) was used to perform graphical representation.
+27
+
+4. RESULTS AND DISCUSSION
+In this work we aimed to develop a PD mouse model able to recapitulate LC-noradrenergic
+degeneration in the context of DJ-1 mutation. By administering DSP-4 in DJ-1 KO mice we expected to
+lesion LC-NA neurons. Through a battery of tests covering motor coordination, locomotion, cognitive
+functions and the presence/absence of depressive or anxious behavior we expected to understand the
+impact of noradrenergic degeneration in the progression and aggravation of PD symptoms.
+4.1 Adjusting the appropriate DSP-4 dosage
+Given the increased susceptibility of DJ-1 KO animals to other toxins (e.g., 6-OHDA and MPTP)
+described in several studies, we first addressed whether higher dosages of DSP-4 would significantly
+compromise animal’s welfare65,83,88. We did a preliminary study in a small number of animals to test three
+different dosages previously described in the literature for WT animals, 10mg/kg (n=6), 25mg/kg (n=5),
+and 50mg/kg (n=7) in DJ-1 KO animals herein used68,70,71.
+Figure 6. Percentage of body weight variation related to baseline at 2-, 4-, 6-, and 20-days after DSP-4
+administration. Animal’s weight was assessed before DSP-4 was administered and 2, 4, 6 and 20 days after (Two-way
+ANOVA, F (3, 9)=38,24, p ≤ 0.0001). The percentage change in body weight was calculated concerning the weight measured
+prior the injection (baseline). n=2 for WT Vehicle mice, n=6 for DJ-1 + DSP-4 10mg/kg, n=5 for DJ-1 + DSP-4 25mg/kg and
+n=7 for DJ-1 + DSP-4 50mg/kg. Data is presented as mean values. *p<0.05, **p<0.01, ***p<0.001.
+In animal experimentation, animal welfare is based on a set of parameters that establish the
+28
+
+humane endpoints for a certain intervention96. Extreme variations of body weight (a reduction > 20%) is
+one of the most important parameters that reveal animal wellbeing92. Therefore, the body weight of each
+animal was assessed before DSP-4 administration and 2, 4, 6 and 20 days after injection and compared
+with WT mice injected with saline. The results showed significant differences between groups (F(3,
+9)=38,24, p ≤ 0.0001), as observed in figure 6. The groups administered with saline (n=2, p<0.001),
+10mg/kg (n=6, p<0.01) and 25mg/kg DSP-4 (n=5, p<0.05) showed a significant weight gain compared
+with animals that received 50mg/kg DSP-4 (n=7). Even though 2 days after injection there was a
+significant body weight reduction (1-2 %) of DJ-1 + DSP-4 50mg/kg animals when compared to other
+groups, these animals recovered their weight 5 days after the injection and continued to increase it over
+time. Moreover, they did not present any concerning signal of harm, such as wounds, difficulty breathing
+or diarrhoea.
+a ea alance
+Latency ( ound eam 11mm)
+r
+o TVehicle
+i
+a D 1 DSP 4 10mg kg
+e
+r
+D 1 DSP 4 25mg kg
+o
+o
+D 1 DSP 4 50mg kg
+c d e P
+Distance in Center ( ) Time in Open Arms mmobility (5min)
+r
+o
+i
+a
+e
+r
+o
+o
+n
+o
+Figure 7. Assessment of the dose-dependent effect of DSP-4 at motor and non-motor level. (a) Beam Balance
+test on the 11mm round beam (One-way ANCOVA, F(3,11)=0.3863, p=0.7651). (b) Motor Swimming Test means of three
+test days (One-way ANCOVA, F(3,18)=0.5659, p=0.6445). (c) Open Field Time spent in the center (One-way ANOVA,
+F(3,16)=0.7660, p=0.5296). (d) Marble Burying (One-way ANOVA, F(3, 16)=5.722, p=0.0074). (e) Elevated Plus Maze time
+spent in open arms (One-way ANOVA, F(3,16)=1.048, p=0.3984). (f) Forced Swimming Test immobility time during last 5
+minutes (One-way ANOVA, F(3,11)=0.1823, p=0.9062). n=2 for WT Vehicle, n=6 for DJ-1 + DSP-4 10mg/kg, n=5 for DJ-1 +
+DSP-4 25mg/kg and n=7 for DJ-1 +DSP-4 50mg/kg mice. Data is presented as mean ± SD. *p<0.05, **p<0.01. Abbreviations
+MST= Motor Swimming Test, OF= Open Field, MB= Marble Burying, EPM= Elevated Plus Maze and FST= Forced Swimming
+Test. .
+29
+
+We also performed a preliminary assessment of the impact of these DSP-4 dosages on animals’
+behaviour (figure 7). Previous studies have already showed that lower dosages (10 and 25mg/kg)
+produce a partial lesion, with no apparent influence on behavior, while higher dosages (50mg/kg) have
+a greater impact and can directly affect behavior14,55,60,64. Our results revealed no major impairments at the
+motor (figures 7a and b) nor at the non-motor level (figures 7b,c,d,e and f) in 10 mg/kg and 25
+mg/kg DSP-4 compared to 50mg/kg DSP-4 injected DJ-1 animals. Moreover, the 50mg/kg DSP-4
+injected animals have shown less discrepancies in the results, contrary to 10 and 25 mg/kg DSP-4
+injected animals that presented increased variability within results. This suggests a better-established
+effect of the 50mg/kg DSP-4 dosage on behavior. Therefore, we decided to proceed the behavioral
+assessment only with the highest dosage (50mg/kg), as it did not significantly compromise animals’
+welfare and was more likely to have an impact at the behavioral level.
+Even though we acknowledge the relevance of assessing the histological outcome of the lowest
+dosages to have a dose-response curve, this assessment would require the use of a lot of animals which
+is not in line with the 3 ’s principle97. Specifically, it would not be in line with the reduction principle that
+defends the use of fewer animals to answer the research question. Herein, we reduced the number of
+animals used by administering only the highest dosage. Moreover, we maximized the information
+obtained per animals by performing a complex battery of behavioral tests and performing histological
+analysis on these animals, avoiding the subsequent use of additional animals, without compromising
+animal welfare.
+4.2 Behavioral effects of DSP-4 administration in DJ-1 KO animals.
+Once we established the suitable dosage of DSP-4 to be administered, we proceeded to assess the
+effects of noradrenergic degeneration in both motor and non-motor behavior in WT and DJ-1 KO mice.
+4.2.1 Alterations on Motor Behavior
+Most PD models mostly rely on the evaluation of motor symptoms1,91. We performed commonly
+used behavioral tests used in current PD models to evaluate motor performance (motor swimming test),
+balance (beam balance), and gait dysfunction (footprint analysis)91. This outcome is not only important to
+understand if the model has some motor impairments, but also to understand if the results obtained in
+some non-motor test (e.g., Morris Water Maze) could be influenced by any underlying motor alteration.
+In the Beam Balance test, mice were trained to travel through a beam, and, on the test day, the
+time took to reach the safe platform was used to assess motor function. We conducted the test day on
+30
+
+three beams, each one with a different difficulty level. Our results did not reveal any statistically significant
+differences between groups, even controlling for a possible influence of animals’ weight on their latency
+to transverse each beam. Nevertheless, there are some tendencies worth to further explore (figure 8a).
+On the 12mm beam (F(3,25)=1.184, p=0.3358), the easiest to cross, WT vehicle and DJ-1 DSP-4
+injected animals had similar latencies. On the 17mm (F(3, 28)=0.6727, p=0.5760) and 11mm beam
+(F(1,19)=0.078, p=0.783), there is a slightly higher latency of WT animals injected with DSP-4 in
+comparison to vehicle WT animals. Despite the great variability, on the 11mm beam, which is the hardest
+beam, WT and DJ-1 animals injected with DSP-4 show a higher latency than their vehicles. Moreover, the
+latency of the DJ-1 KO animals with DSP-4 seems to be higher than injected WT animals. Therefore, the
+absence of DJ-1 might increase the impact of DSP-4 effects on animals’ balance.
+Figure 8. Motor Behavior. (a) Beam Balance test on the 12mm square beam (One-way ANCOVA, F(3,25)=1.184,
+p=0.3358), 17mm (One-way ANCOVA, F(3,28)=0.6727, p=0.5760) and 11mm round beam (One-way ANCOVA,
+F(1,19)=0.078, p=0.783). (b) Motor Swimming Test means of three test days (One-way ANCOVA, F(1,23)=1.657, p=0.211).
+(c) Footprint Analysis mean of the measure for six consecutive steps (One-way ANCOVA, F(1,24)=0.252, p=0.620). n=5-7 for
+Wild-type Vehicle mice, n=5 for Wild-type DSP-4 50mg/kg, n=8/9 for DJ-1 Knockout Vehicle and n=7/8 for DJ-1 Knockout
+DSP-4 50mg/kg. Data is presented as mean ± SD. Abbreviations MST= Motor Swimming Test.
+31
+
+MST evaluates swimming abilities, which require fine motor coordination of the limbs91. Then
+again, despite the lower dispersion of these results (figure 8b), the slight differences observed between
+groups do not reach statistical significance (F(1,23)=1.657, p=0.211). Still, there is a subtle increase of
+DJ-1 animals’ latency in comparison to T mice, that is not altered by DSP-4 administration (figure 8b).
+A similar tendency is observed in the footprint test (F(1,24)=0.252, p=0.620) (figure 8c). DJ-1 animals
+show an increased base width when compared to WT animals, but DSP-4 injected animals did not
+presented differences compared to vehicle groups. This gait dysfunction is a typical feature in PD patients
+and has been previously described in DJ-1 rats86,91,94.
+Despite the lack of significance, the DSP-4 administration seems to have an impact in animal’s
+balance, which is more pronounced in DJ-1 animals. However, in the swimming ability and gait
+dysfunction, the DJ-1 mutation seems to be the most prominent factor that is affecting the results.
+Therefore, it appears that DJ-1 animals develop a minor motor phenotype that can be exacerbated with
+the DSP-4 administration. The lack of statistical significance could be attributed to the considerable
+variability within the groups, which might require a larger sample size for conclusive findings.
+In order to understand our model, it is important to compare our results with other previously
+described models. 6-OHDA, for instance, often reflects an end-stage of the disease with robust behavioral
+phenotypes54. Even though some studies performed partial lesion models as an attempt to mimic an
+earlier PD stage, the behavioral readouts are less consistent, and it is still not possible to reproduce earlier
+PD events4,91,94. The administration of DSP-4 in combination with a 6-OHDA lesion led to an aggravation of
+typical symptomatology displayed by these toxin models (i.e., forelimb akinesia)62. MPTP models usually
+are good at inducing parkinsonism and different dosages are being optimized in order to recapitulate
+several stages of the disease4,91. When administered in MPTP models, DSP-4 led to a marked activity
+decrease, suggesting the establishment of a severe motor phenotype58,65. DJ-1 genetic models have shown
+an age-dependent progression associated with mild motor behavior impairment73,90. Our results show that
+DJ-1 animals have slightly worsened performance on balance, swimming and an aggravated gait
+dysfunction. The administration of DSP-4 on DJ-1 animals led to an increased impairment on motor
+balance but did not seem to affect swimming ability or gait functioning. Thus, our results point that the
+combination of DSP-4 and DJ-1 may be able to mimic mild motor impairments, usually displayed by
+patients in the prodromal stage, in contrast to 6-OHDA and MPTP models that best mimic the
+establishment of the most prominent motor symptoms in the clinical stage.
+Overall, in the motor assessment herein performed, the combination of knocking out DJ-1 and
+DSP-4 administration only seemed to have mild effect on animals’ balance and did not exacerbate the
+32
+
+effects observed in swimming and gait analysis. In earlier stages, patients usually start to manifest slight
+motor alterations that are not noticeable at first, like postural instability, balance problems and difficulty
+in fine motor movements3,4,98. At this point, nigrostriatal degeneration begins. Moreover, the NA depletion
+might potentiate degeneration processes, as the LC projects to the nigrostriatal areas and also to the
+spinal cord and can be influencing fine motor movements8,18. In future studies, to better understand the
+effects of DSP-4 administration combined with the DJ-1 KO phenotype, it would be interesting to perform
+additional motor behavioral tests, including the grip-strength, used to assess skeletal muscle function,
+the pole test used assess basal ganglia related movement disorders and the adhesive removal test, used
+to evaluate sensory and motor deficits99,100.
+4.2.2 Alterations on Cognition
+In PD patients, cognitive deficits are present both as a prodromal feature and as a long-term
+complication in later stages of the disease6,18. Learning and memory formation involves hippocampal
+context-dependent associative learning, declarative and working memory, and amygdala-mediated
+affective learning, which have been described to be influenced by LC-NA system6,27,44. Distinct modulations
+can have different and opposite functional roles in mediating learning and responses to aversive stimuli26,31.
+To address the impact of LC lesion and DJ-1 KO mutation on these responses, we selected some standard
+behavioral tests to assess spatial memory (Morris Water Maze), learning, and memory (Novel Object
+Recognition and Contextual Fear Conditioning).
+The MWM is commonly used to evaluate learning and memory, specifically spatial memory
+acquisition91. The distance traveled and latency to reach the platform are used to evaluate memory
+learning. Over sessions, healthy animals usually travel lower distances and require less time to reach the
+platform, indicating memory retrieval101. Our analysis on the fourth and last MWM day showed no
+significant differences between groups in the latency to reach the platform (F(3,15)=10.860, p=0.895)
+(figure 9a). Regarding distance traveled to reach the platform, there were significant differences among
+groups (F(3,16)=4.695, p=0.015). Post hoc testing using pairwise comparisons of the estimated marginal
+means with Turkey’s correction revealed a significant difference between WT DSP-4 (mean=677.996,
+SD=142.369) and DJ-1 DSP-4 (mean=337.978, SD=141.465, p<0.05) mice, suggesting that DJ-1 DSP-
+4 treated animals have a better spatial memory acquisition ability than DSP-4 injected WT mice. In a
+study conducted using DSP-4 in paraquat and maneb-induced mouse PD model, DSP-4 led to impaired
+spatial learning ability in the MWM27. Another study also showed that, in the same test, when combined
+with MPTP, DSP-4 administration also impaired spatial learning14. Moreover, another study showed that
+33
+
+the combination of DSP-4 with 6-OHDA affected working memory in the Radial Maze test102. However, in
+the same studies, when administered alone, DSP-4 lesions did not affected working memory. This is in
+line with our results since WT DSP-4 lesioned animals did not show impaired spatial memory acquisition.
+This suggests that NA depletion itself is not sufficient to evoke cognitive deterioration but can act as a
+potentiator when combined with other toxins that elicit neurodegeneration. However, our results show
+conflicting evidence, since when administered in DJ-1 mice, DSP-4 seems to improve spatial memory
+acquisition.
+The differences observed in MWM tests sometimes are caused by locomotor deficits. To assess
+this, we analyzed animals’ speed. This analysis showed significant differences among groups (F(3,
+11)=10.06, p<0.01). Post hoc testing using Turkey’s correction revealed significant difference between
+DJ-1 DSP-4 (mean=15.41, SD=3.519) and WT DSP-4 (mean= 31.66, SD= 5.699, p<0.05) and DJ-1
+Vehicle (mean=31.72, SD=6.548, p<0.01). DJ-1 DSP-4 animals showed significantly lower swimming
+speed than DJ-1 vehicle and WT DSP-4. This suggests an impairment in motor functioning of DJ-1 DSP-
+4 treated animals rather than a spatial memory acquisition deficit. Combined with the tendencies
+observed in motor behavior testing described earlier, this further supports the hypothesis that combining
+a lesion in the LC with DJ-1 KO mutation leads to mild motor deficits.
+The LC has been described to have global function in mediating arousal to strongly aversive
+stimuli and to play a critical role in threat-related learning8,18. Threatening cues or events leads to a
+heightened vigilance state and prepares a rapid flexible behavioral response that often translates to mice
+as the presence of a freezing state95. CFC is used to assess learning and memory formation, usually in
+relation to fear responses and the formation of fear memories91,95. A study conducted with DSP-4 has
+shown that injected animals show impaired learning and memory in a similar paradigm68. Other authors
+defend that LC lesions seem to increase fear extinction71. In our test, mice were exposed to a fear stressor
+and were later returned to that same context and to a novel one, completely different from the box where
+the aversive stimulus was given. Our results showed no significant differences in the traumatic context
+(F(3,14) = 2.210, p=0.132) nor in the novel context (H=1.687,df=3, p=0.640)(figure 9b). Still, some
+tendencies are worth exploring. In our work, WT animals had similar freezing percentages in both
+contexts, suggesting that these animals did not discriminate potentially threatening contexts. WT DSP-4
+injected animals had a similar performance as WT Vehicle animals in both contexts. An explanation for
+this may be than some mouse strains require repeated exposures to the repetitive stimuli in other to
+recall fear memories40,95. DJ-1 DSP-4 mice spent more time in freezing behavior, suggesting the retrieval
+of fear memory. When placed in a novel context, both DJ-1 groups spent less time immobile, suggesting
+34
+
+the fear response was not triggered. Herein, our results suggest that the administration of DSP-4 alone
+is not sufficient to affect the retrieval of fear memory, but DJ-1 animals, vehicle and DSP-4 injected, both
+shown improved memory retrieval.
+Results regarding the NOR test are not represented as the WT vehicle group did not discriminate
+against the objects used (Annex I, figure 1a). Therefore, the results are not suitable for analysis. This
+test needs further optimization since different strains of mice may have different object perceptions45,93.
+Figure 9. Cognition and memory. (a) Morris Water Maze traveled distance (One-way ANOVA, F(3,16)=4.695, p=0.015),
+latency (One-way ANOVA, F(3,15) = 0.1995, p=0.895) and speed (One-way ANOVA, F(3,11) = 10.06, p<0.01) to reach the
+hidden platform on day 4. (b) Contextual Fear Conditioning in a traumatic context (One-way ANOVA, F(3,14) = 2.210,
+p=0.132) and novel context (Kruskal-Wallis Test, H=1.687,df=3, p=0.640). n=3/4 for WT vehicle mice, n=2/3 for WT + DSP-
+4, n=4-6 for DJ-1 vehicle and n=5-7 for DJ-1 + DSP-4. Data is presented as mean ± SD. * p<0.05 and **p<0.01. Abbreviations
+MWM= Morris Water Maze and CFC= Contextual Fear Conditioning.
+In future studies, using a combination of different tests should be considered. For instance, even
+though the MWM is a well-established and validated test, mice may get stressed in a water context, which
+35
+
+may influence the results. Alternatively, we could use a Barnes Maze test which evaluates spatial memory
+by measuring the time taken by mice to find a target hole on a circular platform using visual cues or a
+Radial Arm Maze assesses spatial memory as mice navigate through a maze with arms extending from
+a central hub99. Regarding the evaluation of fear memory, the Passive Avoidance test can also be
+considered43,91. In this test, mice learn to avoid an aversive compartment and display a preference for a
+safe compartment. This allows us to assess long-term memory and, unlike the CFC, does not require
+moving the animals between rooms and diminishes handling, which can act as stressors and influence
+the test readout. Regarding the NOR test, besides optimizing the protocol for this specific strain, we could
+use complementary tests in order to understand the formation and retrieval of short and long-memory in
+this model. The Social Recognition test, for instance, does not evaluate object recognition but rather
+evaluates mice’s ability to recognize and remember other individuals91,95.
+4.2.3 Alterations on Depressive and Anxious-like Behavior
+Depression and anxiety are common in earlier stages, prior to motor alterations, and are one of
+the most frequent symptoms among PD patients (25-40%)24,33,34. Some studies have linked increased LC
+activity and the development of anxiety related disorders41,72. In the context of depression, some studies
+showed a correlation between the decline of NA content and the reduction of LC pigmentation with the
+prevalence of depression in PD patients6,34. Herein, we selected tests to evaluate both anxiety-like (Open
+Field, Elevated Plus Maze and Marble-burying), and depressive-like behavior (Forced Swimming Test and
+Sucrose Splash Test).
+The EPM and the OF tests use mice’s innate tendency to explore new environments and their
+natural tendency to avoid bright, open places42. Some authors reported that, in the same tests, LC lesioned
+rats had reduced anxious behavior6. However, other studies showed that, in mice, NA depletion alone is
+not sufficient to significantly affect the exploration of open contexts14. Our results showed that, in the EPM
+test, there were no significant differences (F(3,23)=0.181, p=0.908) (figure 10a). Both DSP-4 treated
+groups have shown a small tendency to spend more time in the open arms, suggesting a reduced anxiety-
+behavior. However, the differences between the groups were almost unnoticeable. In the OF no significant
+differences were found (F(3,16)=1.471, p=0.260) (figure10b). DSP-4 treated animals spend less time
+in the centre of the box than the respective controls. This suggests that the administration of DSP-4 may
+lead to the development of anxiety-like behavior. DJ-1 animals spend more time in the center than WT
+vehicles, which indicates that the DJ-1 mutation did not lead to anxious-like behavior. However, these
+results may be related to the test itself since both OF and EPM tests readouts can often be influenced by
+36
+
+external factors, thus requiring to be careful performed and analysed. In the future, other tests may be
+considered to complement the assessment of anxious behavior. For instance, the light and dark box that
+test takes advantage of the innate aversion of mice to brightly lit, open spaces and their preference for
+dark, enclosed spaces, or the hole-board test, which is based on the natural tendency of rodents to explore
+new environments and the conflict between their exploratory drive and fear of open spaces42,103.
+Figure 10. Anxiety and depressive-like Behavior. (a) Elevated Plus Maze time spent in open arms (one-way ANOVA, F
+(3,23)=0.181, p=0.908. (b) Open Field Time spent in the center (one-way ANOVA, F (3,16)=1.471, p=0.260). (c) Marble
+Burying (Kruskal-Wallis test, H=1.923, df=3, p=0.588). (d) Forced Swimming Test immobility time during last 5 minutes (one-
+way ANOVA, F (3, 23) = 1.178), p=0.340). (e) Sucrose Splash Test time spent grooming (one-way ANOVA, F (3,23)=1.517,
+p=0.237). n=4-6 for WT vehicle, n=3-5 for WT + DSP-4, n=6-9 for DJ-1 vehicle and n=7/8 for DJ-1 + DSP-4. Data is presented
+as mean ± SD. Abbreviations EPM= Elevated Plus Maze, OF=Open Field, FST=Forced Swimming Test and SST= Sucrose
+Splash Test.
+Marble-burying is frequently used to address anxiety related to novelty91. When a unfamiliar object
+is placed in the cage, mice usually start displaying specific behavior, such as burying, indicators of anxious
+behavior43. Previous studies report that DSP-4 ablation in rats induces anxiety-like phenotypes in response
+37
+
+to novelty stress6,67. Studies using DSP-4 in mice have also shown increased anxiety-like behavior specific
+to novelty in the marble burying test50. Figure 10c shows that both DJ-1 vehicle, WT and DJ-1 DSP-4
+treated animals buried more marbles than WT vehicles, although these differences did not reach statistical
+significance (H=1.923, df=3, p=0.588). Herein, both DSP-4 and DJ-1 mutation seem to have an impact
+on the development of anxiety related to novelty. Still, the combination of DJ-1 KO and DSP-4 led to a
+small increase in this phenotype, with less discrepant results, suggesting the establishment of anxious-
+like behavior on these animals.
+The FST evaluates helplessness or depressive-like behavior under the concept that rodents show
+increased periods of inertia when they learn that escape is not possible91. In studies where NA was
+depleted, mice showed an increased immobility time in the FST compared to control animals14. Our results
+show contrary effects of DSP-4, without reaching statistical significance (F(3,23)=1.178), p=0.340)
+(figure 10d). In WT animals, the administration of DSP-4 led to a decrease in immobility time while in
+DJ-1 animals DSP-4 led to an increased immobility time. However, WT vehicle mice spend more time
+immobile, suggesting that these animals may have developed a depressive-like behavior that is not
+dependent on DSP-4 nor DJ-1 mutation. This can also indicate that the test was not well performed, or,
+since this test is a stressful event for mice, we should consider that this may not be the most suitable
+approach to assess helplessness. In the future, an alternative for the FST could be the Tail Suspension
+test which is based on the notion that the animal will try to escape from the stressful situation (being
+hanging by the tail).
+Rodents developing depressive-like symptoms usually spend less time grooming and are more
+immobile42,91. The SST enhances the need for grooming by splashing animals’ coats with a sucrose
+solution. While DJ-1 and WT vehicle groups showed similar results, DSP-4 treated WT animals have spent
+less time grooming, correlated with the establishment of depressive-like behavior (F(3,23)=1.517,
+p=0.237) (figure 10e). DJ-1 DSP-4 injected animals shown a reduced depressive-like behavior
+compared to WT DSP-4 animals. Herein, although DSP-4 lesions led to an increased depressive-like
+behavior in WT mice, DJ-1 mice do not seem to be affected. In another task (Sucrose Preference test)
+used to assess anhedonia, the inability or reduced ability to experience pleasure or enjoyment, depleting
+NA is not sufficient to induce anhedonic behavior in mice but, when combined with DA degeneration, a
+significant depressive-like phenotype was noticed14. In the future, a good option to complement our
+behavioral characterization could be the sucrose preference test, which measures the level of depression
+(or anhedonic state) by the preference for a sucrose (sweet) solution rather than water103.
+38
+
+Assessing anxiety and depressive-like behavior in mice has several limitations, as mice are
+anxious by nature34,42,43. We tried to diminish at the most external factors that may interfere with the
+outcome of the tests. For instance, mice were handled regularly since the beginning of the experiments,
+all anxiety related tests were performed at lowest affluence periods in the animal facility, lights were
+always turned off and animals were left alone in the room while tests were recorded. Still, the
+discrepancies obtained indicate that these tests were not successfully performed or that our model does
+not develop an anxious nor depressive-like phenotype. The lack of statistical significance can mostly be
+related to the variability between animals. Further studies using a higher number of animals, in order to
+minimize variability, are a first improvement to assess these alterations. Moreover, there are several
+variability factors to be considered. For instance, the fact that we used three separated sets of animals to
+perform the tests may be influencing the outcome. This can be related to several external factors such
+animals’ stress, noise in the facilities and the user itself. Second, different ages and genders could be
+correlated with different outcomes. To overcome these factors, for every set of animals we always tried
+to diminish discrepancies, as in every set we tried to use same number of males and females, at similar
+ages, between different experimental groups. Moreover, we have separated each experimental group of
+animals per age and gender and performed statistical analysis for each case (Annex I, figures 1-4). As
+we did not find any differences, we proceeded to analyse all data together. We acknowledge that having
+one single set of animals with a higher number of animals per group, with the same gender and age, may
+had contributes to diminish discrepancies. However, we could not predict if the animals would develop
+any phenotype or have any complication during the experimental timeline, which would lead to a
+significant loss of animals. Moreover, having more animals in one single set would require generating
+more animals that would not be used, which would not be in line with the 3 ’s principle.
+4.3 Histological Alterations
+In order to understand if the readouts obtained in the behavioral analysis can be a consequence
+of noradrenergic and/or nigrostriatal degeneration, we performed histological analysis on the LC, striatum
+and SNpc.
+4.3.1 Effect of DSP-4 on Locus Coeruleus
+DSP-4 is a highly selective drug for LC neurons60. Hence, it was of interest to evaluate the level
+of degeneration provoked by DSP-4 administration in the LC. The majority of the LC (90%) is composed
+of noradrenergic neurons31. Ideally, the level of noradrenergic degeneration would be addressed using
+39
+
+DBH immunohistochemistry, which is specific to noradrenergic neurons14,70,104. However, after several trials
+to optimize the protocol, we were not successful in using DBH antibody (PA5-34664, ThermoFisher
+Scientific) in immunohistochemistry. We could overcome this by using DBH antibody in
+immunofluorescence24,50. However, this would not allow a rapid visualization and quantification of the
+neurons as it would require longer image acquisition in a confocal microscope. Alternatively, TH staining
+through immunohistochemistry is fully optimized in our lab and can also be used to noradrenergic
+staining, as it is involved in NA synthesis. Inside the neurons, the enzyme TH catalyses the conversion of
+tyrosine to L-DOPA. L-DOPA is then decarboxylated by the enzyme DOPA decarboxylase31. Finally, DBH
+which is primarily found in noradrenergic neurons, catalyses the hydroxylation of dopamine to form NA31.
+Therefore, we opted to perform TH immunohistochemistry in slices containing LC, which we used to
+count noradrenergic cell bodies.
+Figure 11. Histological assessment of N-(2-chloroethyl)-N-ethyl-2-bromobenzylamine (DSP-4)-induced Locus
+Coeruleus degeneration. (a) Representative images of the Locus Coeruleus. (b) Quantification and representative
+micrograph of TH-positive neurons and fibers in the Locus Coeruleus (LC) (One-way ANOVA, (F(3,14)=8.387x10-8, p<0.001).
+n=4 for WT vehicle mice, n=3 for WT + DSP-4, n=6 for DJ-1 vehicle and n=5 for DJ-1 + DSP-4. Data is presented as mean ±
+SD. * p<0.05, ** p<0.01.
+40
+
+In rats, when administered the same DSP-4 dosage as we used in this study (50mg/kg), it was
+shown a decrease of 70% in DBH-positive cells in the LC65. Other studies conducted in mice only reported
+a 34% decrease in DBH-positive cells in the LC when compared to WT animals13. Yet, some studies in
+both mice and rats, showed that DSP-4 induces a decrease or complete depletion in the concentration of
+NA but does not lead to neuronal loss14,50,55,68. Our results showed a significant effect of the experimental
+group on TH+ cells in the LC (F (3,14)=8.387x10-8, p<0.001) (figure 11b). Post hoc testing using
+pairwise comparisons of the estimated marginal means with Turkey’s correction revealed that both WT
+and DJ-1 DSP-4 injected mice had a significantly reduced TH+ LC Cells (mean=4.628x10-5, SD=9.319x10-
+5; mean=4.240x10-5, SD=3.325x10-5) compared to the respective vehicles (mean=2.757x10-4,
+SD=9.319x10-5, p<0.05; mean=2.856x10-4, SD=1.336x10-4, p<0.01). There were no significant
+differences between WT and DJ-1 Vehicles (p=0.998) or between WT DSP-4 and DJ-1 DSP-4 (p=1.000).
+Our results showed a decrease of ≈83% LC neurons between WT DSP-4 animals and WT vehicle
+group and a decrease of ≈85% LC neurons between DJ-1 KO DSP-4 and DJ-1 KO vehicle, with no major
+differences between the WT and DJ-1 vehicle groups. Our results suggest that DSP-4 exerts a significant
+impact on LC, leading to substantial neuronal depletion. Our results also suggest that the DJ-1 KO
+phenotype does not seem to lead to trigger noradrenergic degeneration in the LC, nor increase
+significantly increase the vulnerability to DSP-4 effects. However, other brain regions can be affected by
+the DJ-1 mutation or the combination of this mutation with DSP-4. Therefore, we next tried to evaluate
+the integrity of the nigrostriatal pathways in our animals.
+4.3.2 Impact of NA depletion in the nigrostriatal pathway integrity
+The loss of dopaminergic neurons in the nigrostriatal pathway is one of the main pathological
+features of PD4. Loss of TH+ cells in the SNpc and decrease of TH+ densitometry in the striatum are
+usually observed in most PD models1,4,92. To evaluate the effects of DJ-1 KO mutation and the effects of
+DSP-4-induced NA depletion, we performed IHC on the SNpc and the STR.
+In previous studies, treatment with DSP-4 seems to affect the dopaminergic system58,64. Lesioning
+the LC with DSP-4 leads to a decrease in DA turnover in the striatum and to reduce the extracellular levels
+of DA64. Our results showed a significant effect of the experimental group on TH+ densitometry in the
+Striatum (F(3,17)=63.402, p<0.001) (figure 12b). Post hoc testing using pairwise comparisons of the
+estimated marginal means with Turkey’s correction revealed that T DSP-4 (mean=15.241, SD=1.272)
+and DJ-1 DSP-4 (mean=9.414, SD=0.633) had a significantly reduced TH+ fibers densitometry compared
+to the WT vehicle group (mean=22.352, SD=1.352, p<0.001). DJ-1 DSP-4 also showed a significant
+41
+
+reduction when compared to DJ-1 vehicle group (p<0.005) and compared to WT DSP-4 (p<0.001). The
+reduction of ≈42.6 densitometry observed between the T and the D -1 KO vehicle groups may suggest
+that the DJ-1 depletion augmented dopaminergic STR degeneration. WT DSP-4 animals showed a
+reduction of ≈31.8 fibers densitometry compared to the vehicle group, whereas the D -1 DSP-4 group
+showed a reduction of ≈26.7 compared to the D -1 vehicle group and a ≈57.9 reduction compared to
+WT vehicle. This result indicates that the DSP-4-induced LC neuron depletion affected the striatal area.
+An explanation for this may be the dual role of NA as it has been proposed to exert modulation over
+DA39,46,105,106.
+Figure 12. Histological assessment of N-(2-chloroethyl)-N-ethyl-2-bromobenzylamine (DSP-4) effect on
+Striatal and Nigral degeneration. (a) Representative images of the Substantia Nigra and the Striatum. (b) TH+ Striatal
+Densitometry in the Striatum (One-way ANOVA, F(3,17)=63.402, p<0.001). (c) TH+ Cell Counts on the Substantia nigra per
+area (µm2) (One-way ANOVA, F(3,20)=3.189, p<0.05). n=4/5 for WT vehicle, n=5/6 for WT + DSP-4, n=7 for DJ-1 vehicle
+and n=4-7 for DJ-1 + DSP-4 mice. Data is presented as mean ± SD. *p<0.05, **p<0.01 and ***p<0.001.
+42
+
+Previous studies have reported that knocking out DJ-1 does not led to significant alterations in
+the SNpc73,74,80,85. In mice, the administration of DSP-4 and MPTP led to a 30% TH reduction in the
+substantia nigra14. Our results showed significant differences between groups (F(3,20)=3.189, p<0.05)
+(figure 12c). Post hoc testing using pairwise comparisons of the estimated marginal means with
+Turkey’s correction revealed no significant differences between experimental groups. Regardless, there
+are some tendencies worth explore. DJ-1 animals show reduced TH+ cell count when compared to WT
+animals. In WT animals, DSP-4 administration seems to have led to a slight reduction in SNpc neuron
+content while DSP-4 injection in DJ-1 animals did not evoked significant changes. Therefore, both DJ-1
+mutation and DSP-4 administration seem to have a negative impact in the SNpc neuronal integrity, while
+the administration of DSP-4 in DJ-1 mice did not significantly increase dopaminergic neuronal loss in the
+SNpc.
+Overall, these results show a significant effect of DSP-4 induced noradrenergic neurons
+degeneration on nigrostriatal pathway integrity. This is in line with previous studies demonstrating a
+protective role of NA on DA neurons. In our analysis, this effect seems to be more significant in the
+striatum than SNpc, which could be explained by a retrograde degeneration of dopaminergic neurons
+that has been proposed in the literature107. Moreover, the relatively magnitude of the loss of TH fibers in
+the striatum evoked by DSP-4 (32% in WT animals and 58% in DJ-1 animals) might partially explain the
+mild and non-statistically significant impairments at the motor level, as compensatory mechanisms can
+be occurring that hinder a quantifiable behavioral outcome. To address this hypothesis, it would be
+important to conduct this experiment in different ages (e.g., 6-, 8- and 12-month-old mice), not only to
+take into account the aging factor, but also because it may lead to more pronounced loss of dopaminergic
+neurons fibers and consequently, a better-established behavioral phenotype 82,87,90.
+43
+
+5. CONCLUSIONS AND FUTURE PERSPECTIVES
+PD is a multifactorial disease and the combination of genetic and environmental factors can
+contribute to its earlier development3,9,11. Most of the animal models commonly used to study PD focus
+solely on the mimicking of nigrostriatal degeneration. However, it is important to develop models that
+allow the study of PD as a multifactorial disease. In our study, we have tried to generate a mouse model
+with a genetic background (DJ-1 Knockout) and combine it with a neurotoxin (DSP-4) that ablates
+noradrenergic neurons in the locus coeruleus.
+Comparing the histological results and the behavioral analysis in this work we were able to explore
+the effects of DJ-1 mutation, DSP-4 administration, and the combination of both. Regarding the effect of
+the mutation, DJ-1 animals have shown tendencies to impaired motor functioning, especially in gait
+evaluated with footprint analysis. In the marble-burying, DJ-1 animals had shown a tendency to develop
+anxiety-related to novelty. Histologically, DJ-1 animals showed a reduction of 42.6% in striatal
+densitometry and a decrease in the number of TH+ cells in the SNpc compared to WT littermates. Thus,
+knocking out DJ-1 in mice seems to lead to a degeneration of the nigrostriatal pathway, leading to motor
+and non-motor impairments.
+DSP-4 administration had an impact in animal’s balance in the eam alance test and seemed to
+be related to the development of anxiety-like behavior. Histologically, DSP-4 evoked a decrease of 83%
+and 85% of LC neurons in WT and DJ-1 animals, respectively. In the striatum, DSP-4 administration led
+to a decrease of 27% and 32% in fibers densitometry in the striatum in WT and DJ-1 animals, respectively.
+However, TH+ cell counts in the SNpc were not different from the respective vehicles. Thus, our results
+suggest that the DSP-4-induced LC neuron depletion affected the striatal area but does not seem to affect
+the nigral neurons. This suggests that DSP-4 may exert its effect on the nigrostriatal pathway through a
+retrograde degeneration which begins in the axons, present in the striatum, and progress to the cell
+bodies, located in the substantia nigra107.
+The administration of DSP-4 on DJ-1 animals led to behavioral and histological alterations. In the
+Beam Balance and MWM test, DJ-1 mice with DSP-4 lesions show impaired balance and swimming
+ability. In the contextual fear conditioning, DJ-1 DSP-4 animals showed an improved retrieval of fear
+memory. In the Marble Burying and the SST, the administration of DSP-4 seems to develop a tendency
+for anxiety and depressive-like behavior. Histologically, in the LC, DSP-4 seemed to have a similar impact
+in DJ-1 animals as in WT animals. The administration of DSP-4 in DJ-1 animals led to an exacerbated
+degeneration in the striatum (≈58 compared to T vehicle) but not in the SNpc, which can corroborate
+44
+
+with the fact that DSP-4 may lead to a retrograde degeneration in the nigrostriatal pathway.
+In the future, there are several aspects worth to consider in order to improve this work. Firstly, as
+we have been discussing, the lack of statistical differences can be related to the number of animals per
+group, or the behavioural tests used. In future studies, it should be considered increasing the number of
+animals per group and optimizing the battery of tests chosen.
+Secondly, there are parameters to be addressed that can allow to further understand the relation
+between the histological degeneration and the lack of behavioral phenotype. In this work we performed
+immunohistochemistry analysis that provide information regarding structural alterations. To complement
+this, it would be of interest to quantify the concentration of DA, NA and 3-Methoxy-4-Hydroxyphenylglycol
+(MHPG), the major metabolite of NA, to assess the effects of DSP-4 on neurotransmitter content, which
+would provide a functional analysis of the circuits affected in this model14.
+Thirdly, due to time constraints, we were not able to address the impact of LC lesion on other brain
+regions involved in non-motor behavioral assessment, such as hippocampus and amygdala, as well as
+on the spinal cord. Nevertheless, these analyses would be important to further complement this
+histological assessment and have a clearer picture of the impact of noradrenergic degeneration effects
+on WT and DJ-1 KO animals. We could also characterize astrocytes and microglia and assess the impact
+of noradrenergic degeneration in neuroinflammation, which has been reported to be impaired in DJ-1 KO
+mice and DSP-4 treated animals66,70,77,83,108.
+Finally, further studies should also include the assessment of other parameters, such as
+quantification of genes involved with dopamine-synthesis (by real-time reverse transcription–polymerase
+chain reaction) and, to characterize the role of DJ-1 in WT animals, quantify the levels of oxidized and
+non-oxidized DJ-1 (through Western blotting)23,74,75,83,88.
+Overall, we were able to develop a model able to mimic nigrostriatal and noradrenergic
+degeneration described in PD, which led to a mild motor and non-motor behavioral phenotype. This model
+resembles the natural progression PD which may provide suitable approach to the study of
+neuroprotective therapies targeting different degeneration processes, with an accentuate relevance to
+study neuroprotective therapies focused on the LC. Moreover, our work has provided new information
+regarding behavioral and histological alterations in both DJ-1 KO and DSP-4 models individually that were
+still lacking in the literature.
+45
+
+6. REFERENCES
+1. aza, C., Anjum, . & Shakeel, N. U. A. Parkinson’s disease: Mechanisms, translational models and
+management strategies. Life Sci. 226, 77–90 (2019).
+2. Tysnes, O.- . & Storstein, A. Epidemiology of Parkinson’s disease. J. Neural Transm. 124, 901–
+905 (2017).
+3. Antony, P. M. A., Diederich, N. ., Krüger, . & alling, . The hallmarks of Parkinson’s disease.
+FEBS J. 280, 5981–5993 (2013).
+4. eitz, . M. Parkinson’s disease: a review. Front. Biosci. Sch. Ed. 6, 65–74 (2014).
+5. Berg, D. et al. MDS research criteria for prodromal Parkinson’s disease: MDS Criteria for Prodromal
+PD. Mov. Disord. 30, 1600–1611 (2015).
+6. Pfeiffer, R. F. Non-motor symptoms in Parkinson’s disease. Parkinsonism Relat. Disord. 22 Suppl
+1, S119-122 (2016).
+7. Oxtoby, N. P. et al. Sequence of clinical and neurodegeneration events in Parkinson’s disease
+progression. Brain J. Neurol. 144, 975–988 (2021).
+8. Poe, G. R. et al. Locus coeruleus: a new look at the blue spot. Nat. Rev. Neurosci. 21, 644–659
+(2020).
+9. Lunati, A., Lesage, S. & rice, A. The genetic landscape of Parkinson’s disease. Rev. Neurol. (Paris)
+174, 628–643 (2018).
+10. Bandres-Ciga, S., Diez-Fairen, M., Kim, . . & Singleton, A. . Genetics of Parkinson’s disease:
+An introspection of its journey towards precision medicine. Neurobiol. Dis. 137, 104782 (2020).
+11. Pankratz, N. & Foroud, T. Genetics of Parkinson disease. Genet. Med. 9, 801–811 (2007).
+12. Betts, M. J. et al. Locus coeruleus imaging as a biomarker for noradrenergic dysfunction in
+neurodegenerative diseases. Brain J. Neurol. 142, 2558–2571 (2019).
+46
+
+13. Gesi, M. et al. The role of the locus coeruleus in the development of Parkinson’s disease.
+Neurosci. Biobehav. Rev. 24, 655–668 (2000).
+14. Li, Y. et al. Investigation of Behavioral Dysfunctions Induced by Monoamine Depletions in a
+Mouse Model of Parkinson’s Disease. Front. Cell. Neurosci. 12, 241 (2018).
+15. Hansen, N. Locus Coeruleus Malfunction Is Linked to Psychopathology in Prodromal Dementia
+With Lewy Bodies. Front. Aging Neurosci. 13, 641101 (2021).
+16. Vermeiren, Y. & De Deyn, P. P. Targeting the norepinephrinergic system in Parkinson’s disease
+and related disorders: The locus coeruleus story. Neurochem. Int. 102, 22–32 (2017).
+17. Singh, S. Noradrenergic pathways of locus coeruleus in Parkinson’s and Alzheimer’s pathology.
+Int. J. Neurosci. 130, 251–261 (2020).
+18. Benarroch, E. E. Locus coeruleus. Cell Tissue Res. 373, 221–232 (2018).
+19. Corti, O., Lesage, S. & Brice, A. What Genetics Tells us About the Causes and Mechanisms of
+Parkinson’s Disease. Physiol. Rev. 91, 1161–1218 (2011).
+20. nternational Parkinson’s Disease Genomics Consortium ( PDGC) et al. Large-scale meta-
+analysis of genome-wide association data identifies six new risk loci for Parkinson’s disease. Nat.
+Genet. 46, 989–993 (2014).
+21. Iwaki, H. et al. Genomewide association study of Parkinson’s disease clinical biomarkers in 12
+longitudinal patients’ cohorts. Mov. Disord. 34, 1839–1850 (2019).
+22. Bonifati, V. Autosomal recessive parkinsonism. Parkinsonism Relat. Disord. 18, S4–S6 (2012).
+23. Huang, M. & Chen, S. DJ-1 in neurodegenerative diseases: Pathogenesis and clinical
+application. Prog. Neurobiol. 204, 102114 (2021).
+24. Berridge, C. W. & Waterhouse, B. D. The locus coeruleus-noradrenergic system: modulation of
+behavioral state and state-dependent cognitive processes. Brain Res. Brain Res. Rev. 42, 33–84
+(2003).
+47
+
+25. Bari, B. A., Chokshi, V. & Schmidt, K. Locus coeruleus-norepinephrine: basic functions and
+insights into Parkinson’s disease. Neural Regen. Res. 15, 1006–1013 (2020).
+26. Sara, S. J. The locus coeruleus and noradrenergic modulation of cognition. Nat. Rev. Neurosci.
+10, 211–223 (2009).
+27. Hou, L., Sun, F., Sun, W., Zhang, L. & Wang, Q. Lesion of the Locus Coeruleus Damages
+Learning and Memory Performance in Paraquat and Maneb-induced Mouse Parkinson’s Disease
+Model. Neuroscience 419, 129–140 (2019).
+28. Giorgi, F. S. et al. Locus Coeruleus Modulates Neuroinflammation in Parkinsonism and
+Dementia. Int. J. Mol. Sci. 21, 8630 (2020).
+29. Oertel, W. H., Henrich, M. T., Janzen, A. & Geibl, F. F. The locus coeruleus: Another
+vulnerability target in Parkinson’s disease. Mov. Disord. 34, 1423–1429 (2019).
+30. Ford, . Pain in Parkinson’s disease: Pain in Parkinson’s Disease. Mov. Disord. 25, S98–S103
+(2010).
+31. Mercan, D. & Heneka, M. T. The Contribution of the Locus Coeruleus–Noradrenaline System
+Degeneration during the Progression of Alzheimer’s Disease. Biology 11, 1822 (2022).
+32. Speelberg, D. H. B. et al. Prodromal Cognitive Deficits and the isk of Subsequent Parkinson’s
+Disease. Brain Sci. 12, 199 (2022).
+33. Totah, N. K., Neves, R. M., Panzeri, S., Logothetis, N. K. & Eschenko, O. The Locus Coeruleus
+Is a Complex and Differentiated Neuromodulatory System. Neuron 99, 1055-1068.e6 (2018).
+34. Upneja, A., Paul, . S., ain, D., Choudhary, . & Paul, G. Anxiety in Parkinson’s Disease:
+Correlation with Depression and Quality of Life. J. Neurosci. Rural Pract. 12, 323–328 (2021).
+35. Wei, L., Hu, X., Yuan, Y., Liu, W. & Chen, H. Abnormal ventral tegmental area-anterior cingulate
+cortex connectivity in Parkinson’s disease with depression. Behav. Brain Res. 347, 132–139
+(2018).
+48
+
+36. Tang, J. et al. Crocin Reverses Depression-Like Behavior in Parkinson Disease Mice via VTA-
+mPFC Pathway. Mol. Neurobiol. 57, 3158–3170 (2020).
+37. Mesman, S. & Smidt, M. P. Acquisition of the Midbrain Dopaminergic Neuronal Identity. Int. J.
+Mol. Sci. 21, 4638 (2020).
+38. Tsukahara, J. S. & Engle, R. W. Fluid intelligence and the locus coeruleus–norepinephrine
+system. Proc. Natl. Acad. Sci. 118, e2110630118 (2021).
+39. Lima, K. R. et al. Noradrenergic and dopaminergic involvement in novelty modulation of
+aversive memory generalization of adult rats. Behav. Brain Res. 371, 111991 (2019).
+40. Finnell, J. E. et al. The contribution of the locus coeruleus-norepinephrine system in the
+emergence of defeat-induced inflammatory priming. Brain. Behav. Immun. 79, 102–113 (2019).
+41. Morris, L. S., McCall, J. G., Charney, D. S. & Murrough, J. W. The role of the locus coeruleus in
+the generation of pathological anxiety. Brain Neurosci. Adv. 4, 2398212820930321 (2020).
+42. Campos, A. C., Fogaca, M. V., Aguiar, D. C. & Guimaraes, F. S. Animal models of anxiety
+disorders and stress. Rev. Bras. Psiquiatr. 35, S101–S111 (2013).
+43. Himanshu, Dharmila, Sarkar, D., & Nutan. A Review of Behavioral Tests to Evaluate Different
+Types of Anxiety and Anti-anxiety Effects. Clin. Psychopharmacol. Neurosci. Off. Sci. J. Korean Coll.
+Neuropsychopharmacol. 18, 341–351 (2020).
+44. Holland, N., Robbins, T. W. & Rowe, J. B. The role of noradrenaline in cognition and cognitive
+disorders. Brain 144, 2243–2256 (2021).
+45. Cohen, S. J. & Stackman, R. W. Assessing rodent hippocampal involvement in the novel object
+recognition task. A review. Behav. Brain Res. 285, 105–117 (2015).
+46. Duszkiewicz, A. J., McNamara, C. G., Takeuchi, T. & Genzel, L. Novelty and Dopaminergic
+Modulation of Memory Persistence: A Tale of Two Systems. Trends Neurosci. 42, 102–114 (2019).
+47. Galgani, A. et al. Locus Coeruleus Magnetic Resonance Imaging in Neurological Diseases. Curr.
+49
+
+Neurol. Neurosci. Rep. 21, 2 (2020).
+48. García-Lorenzo, D. et al. The coeruleus/subcoeruleus complex in rapid eye movement sleep
+behaviour disorders in Parkinson’s disease. Brain J. Neurol. 136, 2120–2129 (2013).
+49. Kudo, T., Kushikata, T., Kudo, M., Kudo, T. & Hirota, K. Antinociceptive effects of neurotropin
+in a rat model of central neuropathic pain: DSP-4 induced noradrenergic lesion. Neurosci. Lett. 503,
+20–22 (2011).
+50. Iannitelli, A. F. et al. The Neurotoxin DSP-4 Dysregulates the Locus Coeruleus-Norepinephrine
+System and Recapitulates Molecular and Behavioral Aspects of Prodromal Neurodegenerative
+Disease. bioRxiv (2022) doi:10.1101/2022.09.27.509797.
+51. Y, S., Gd, V. & A, A. Parkinson’s disease outside the brain: targeting the autonomic nervous
+system. Lancet Neurol. 20, (2021).
+52. Chen, Z., Li, G. & Liu, . Autonomic dysfunction in Parkinson’s disease: mplications for
+pathophysiology, diagnosis, and treatment. Neurobiol. Dis. 134, 104700 (2020).
+53. Falkenburger, . H., Saridaki, T. & Dinter, E. Cellular models for Parkinson’s disease. J.
+Neurochem. 139 Suppl 1, 121–130 (2016).
+54. Salari, S. & agheri, M. n vivo, in vitro and pharmacologic models of Parkinson’s disease.
+Physiol. Res. 68, 17–24 (2019).
+55. Nowak, P. Selective Lifelong Destruction of Brain Monoaminergic Nerves Through Perinatal
+DSP-4 Treatment. in Neurotoxin Modeling of Brain Disorders—Life-long Outcomes in Behavioral
+Teratology (eds. Kostrzewa, R. M. & Archer, T.) vol. 29 51–71 (Springer International Publishing,
+2015).
+56. Bortel, A., Nowak, P. & Brus, R. Neonatal DSP-4 treatment modifies GABAergic
+neurotransmission in the prefrontal cortex of adult rats. Neurotox. Res. 13, 247–252 (2008).
+57. Grzanna, R., Berger, U., Fritschy, J. M. & Geffard, M. Acute action of DSP-4 on central
+50
+
+norepinephrine axons: biochemical and immunohistochemical evidence for differential effects. J.
+Histochem. Cytochem. 37, 1435–1442 (1989).
+58. Archer, T. Noradrenergic–Dopaminergic Interactions Due to DSP-4–MPTP Neurotoxin
+Treatments: Iron Connection. in Neurotoxin Modeling of Brain Disorders—Life-long Outcomes in
+Behavioral Teratology (eds. Kostrzewa, R. M. & Archer, T.) vol. 29 73–86 (Springer International
+Publishing, 2015).
+59. Touchette, J. C., Little, J. W., Wilken, G. H., Salvemini, D. & Macarthur, H. The Neurotoxin DSP-
+4 Induces Hyperalgesia in Rats that is Accompanied by Spinal Oxidative Stress and Cytokine
+Production. Neuroscience 376, 13–23 (2018).
+60. Ross, S. B. & Stenfors, C. DSP4, a selective neurotoxin for the locus coeruleus noradrenergic
+system. A review of its mode of action. Neurotox. Res. 27, 15–30 (2015).
+61. Hormigo, S., Horta Júnior, J. de A. de C. e, Gómez-Nieto, R. & López, D. E. The selective
+neurotoxin DSP-4 impairs the noradrenergic projections from the locus coeruleus to the inferior
+colliculus in rats. Front. Neural Circuits 6, (2012).
+62. Wang, Y. et al. Additional noradrenergic depletion aggravates forelimb akinesia and abnormal
+subthalamic nucleus activity in a rat model of Parkinson’s disease. Life Sci. 119, 18–27 (2014).
+63. Jaim-Etcheverry, G. & Zieher, L. M. DSP-4: A novel compound with neurotoxic effects on
+noradrenergic neurons of adult and developing rats. Brain Res. 188, 513–523 (1980).
+64. Srinivasan, J. & Schmidt, W. J. Functional recovery of locus coeruleus noradrenergic neurons
+after DSP-4 lesion: effects on dopamine levels and neuroleptic induced-parkinsonian symptoms in
+rats. J. Neural Transm. Vienna Austria 1996 111, 13–26 (2004).
+65. Kim, R. H. et al. Hypersensitivity of DJ-1-deficient mice to 1-methyl-4-phenyl-1,2,3,6-
+tetrahydropyrindine (MPTP) and oxidative stress. Proc. Natl. Acad. Sci. 102, 5215–5220 (2005).
+66. Hallman, H., Sundström, E. & Jonsson, G. Effects of the noradrenaline neurotoxin DSP 4 on
+51
+
+monoamine neurons and their transmitter turnover in rat CNS. J. Neural Transm. 60, 89–102
+(1984).
+67. Berridge, C. W. & Dunn, A. J. DSP-4-induced depletion of brain norepinephrine produces
+opposite effects on exploratory behavior 3 and 14 days after treatment. Psychopharmacology (Berl.)
+100, 504–508 (1990).
+68. Archer, T., Jonsson, G. & Ross, S. B. A parametric study of the effects of the noradrenaline
+neurotoxin DSP4 on avoidance acquisition and noradrenaline neurones in the CNS of the rat. Br. J.
+Pharmacol. 82, 249–257 (1984).
+69. Ledreux, A., Boger, H. A., Hinson, V. K., Cantwell, K. & Granholm, A.-C. BDNF levels are
+increased by aminoindan and rasagiline in a double lesion model of Parkinson׳s disease. Brain Res.
+1631, 34–45 (2016).
+70. Lapiz, M., Mateo, Y., Durkin, S., Parker, T. & Marsden, C. Effects of central noradrenaline
+depletion by the selective neurotoxin DSP-4 on the behaviour of the isolated rat in the elevated plus
+maze and water maze. Psychopharmacology (Berl.) 155, 251–259 (2001).
+71. Scullion, G. A., Kendall, D. A., Sunter, D., Marsden, C. A. & Pardon, M.-C. Central
+noradrenergic depletion by DSP-4 prevents stress-induced memory impairments in the object
+recognition task. Neuroscience 164, 415–423 (2009).
+72. Orelandb, L. & Vasar’, E. mpaired exploratory behaviour after DSP-4 treatment in rats:
+implications for the increased anxiety after noradrenergic denervation. (1995).
+73. Goldberg, M. S. et al. Nigrostriatal dopaminergic deficits and hypokinesia caused by inactivation
+of the familial Parkinsonism-linked gene DJ-1. Neuron 45, 489–496 (2005).
+74. Antipova, D. & Bandopadhyay, R. Expression of DJ-1 in Neurodegenerative Disorders. in DJ-
+1/PARK7 Protein (eds. Ariga, H. & Iguchi-Ariga, S. M. M.) vol. 1037 25–43 (Springer Singapore,
+2017).
+52
+
+75. Mencke, P. et al. The Role of DJ-1 in Cellular Metabolism and Pathophysiological Implications
+for Parkinson’s Disease. Cells 10, 347 (2021).
+76. Dorszewska, J. et al. Oxidative stress factors in Parkinson’s disease. Neural Regen. Res. 16,
+1383 (2021).
+77. Yamaguchi, H. & Shen, J. Absence of dopaminergic neuronal degeneration and oxidative
+damage in aged DJ-1-deficient mice. Mol. Neurodegener. 2, 10 (2007).
+78. van der Vlag, M., Havekes, R. & Heckman, P. R. A. The contribution of Parkin, PINK1 and DJ‐1
+genes to selective neuronal degeneration in Parkinson’s disease. Eur. J. Neurosci. 52, 3256–3268
+(2020).
+79. Neves, M., Grãos, M., Anjo, S. I. & Manadas, B. Modulation of signaling pathways by DJ-1: An
+updated overview. Redox Biol. 51, 102283 (2022).
+80. Takahashi-Niki, K., Niki, T., Iguchi-Ariga, S. M. M. & Ariga, H. Transcriptional Regulation of DJ-
+1. in DJ-1/PARK7 Protein (eds. Ariga, H. & Iguchi-Ariga, S. M. M.) vol. 1037 89–95 (Springer
+Singapore, 2017).
+81. Ashley, A. K., Hinds, A. I., Hanneman, W. H., Tjalkens, R. B. & Legare, M. E. DJ-1 mutation
+decreases astroglial release of inflammatory mediators. NeuroToxicology 52, 198–203 (2016).
+82. Zhong, N. et al. DJ-1 Transcriptionally Up-regulates the Human Tyrosine Hydroxylase by
+Inhibiting the Sumoylation of Pyrimidine Tract-binding Protein-associated Splicing Factor. J. Biol.
+Chem. 281, 20940–20948 (2006).
+83. Lev, N. et al. Knocking out DJ-1 attenuates astrocytes neuroprotection against 6-
+hydroxydopamine toxicity. J. Mol. Neurosci. MN 50, 542–550 (2013).
+84. Taipa, R. et al. DJ-1 linked parkinsonism (PARK7) is associated with Lewy body pathology.
+Brain 139, 1680–1687 (2016).
+85. Yang, K. M. et al. Characterization of oromotor and limb motor dysfunction in the DJ1 -/- model
+53
+
+of Parkinson disease. Behav. Brain Res. 339, 47–56 (2018).
+86. Dave, K. D. et al. Phenotypic characterization of recessive gene knockout rat models of
+Parkinson’s disease. Neurobiol. Dis. 70, 190–203 (2014).
+87. Goldberg, M. S. et al. Parkin-deficient Mice Exhibit Nigrostriatal Deficits but Not Loss of
+Dopaminergic Neurons. J. Biol. Chem. 278, 43628–43635 (2003).
+88. Giangrasso, D. M., Furlong, T. M. & Keefe, K. A. Characterization of striatum-mediated behavior
+and neurochemistry in the DJ-1 knock-out rat model of Parkinson’s disease. Neurobiol. Dis. 134,
+104673 (2020).
+89. Sheng, C. et al. DJ-1 deficiency perturbs microtubule dynamics and impairs striatal neurite
+outgrowth. Neurobiol. Aging 34, 489–498 (2013).
+90. Chen, L. et al. Age-dependent Motor Deficits and Dopaminergic Dysfunction in DJ-1 Null Mice.
+J. Biol. Chem. 280, 21418–21426 (2005).
+91. Asakawa, T. et al. Animal behavioral assessments in current research of Parkinson’s disease.
+Neurosci. Biobehav. Rev. 65, 63–94 (2016).
+92. Mendes-Pinheiro, B. et al. Unilateral Intrastriatal 6-Hydroxydopamine Lesion in Mice: A Closer
+Look into Non-Motor Phenotype and Glial Response. Int. J. Mol. Sci. 22, 11530 (2021).
+93. Lueptow, L. M. Novel Object Recognition Test for the Investigation of Learning and Memory in
+Mice. J. Vis. Exp. JoVE 55718 (2017) doi:10.3791/55718.
+94. Carter, R. J., Morton, J. & Dunnett, S. B. Motor Coordination and Balance in Rodents. Curr.
+Protoc. Neurosci. 15, (2001).
+95. Maren, S., Phan, K. L. & Liberzon, I. The contextual brain: implications for fear conditioning,
+extinction and psychopathology. Nat. Rev. Neurosci. 14, 417–428 (2013).
+96. Kahnau, P., Habedank, A., Diederich, K. & Lewejohann, L. Behavioral Methods for Severity
+Assessment. Animals 10, 1136 (2020).
+54
+
+97. Lee, K. H., Lee, D. . & Kang, . C. The ‘ ’ principles in laboratory animal experiments. Lab.
+Anim. Res. 36, 45 (2020).
+98. Opara, ., Małecki, A., Małecka, E. & Socha, T. Motor assessment in Parkinson`s disease. Ann.
+Agric. Environ. Med. 24, 411–415 (2017).
+99. Dockman, R. L., Carpenter, J. M., Diaz, A. N., Benbow, R. A. & Filipov, N. M. Sex differences in
+behavior, response to LPS, and glucose homeostasis in middle-aged mice. Behav. Brain Res. 418,
+113628 (2022).
+100. Aniszewska, A., Bergström, J., Ingelsson, M. & Ekmark‐Lewén, S. Modeling Parkinson’s
+disease‐related symptoms in alpha‐synuclein overexpressing mice. Brain Behav. 12, (2022).
+101. Graziano, A., Petrosini, L. & Bartoletti, A. Automatic recognition of explorative strategies in the
+Morris water maze. J. Neurosci. Methods 130, 33–44 (2003).
+102. Pérez, V. et al. Effect of the additional noradrenergic neurodegeneration to 6-OHDA-lesioned
+rats in levodopa-induced dyskinesias and in cognitive disturbances. J. Neural Transm. 116, 1257–
+1266 (2009).
+103. Belovicova, K., Bogi, E., Csatlosova, K. & Dubovicky, M. Animal tests for anxiety-like and
+depression-like behavior in rats. Interdiscip. Toxicol. 10, 40–43 (2017).
+104. Srinivasan, J. & Schmidt, W. J. Potentiation of parkinsonian symptoms by depletion of locus
+coeruleus noradrenaline in 6-hydroxydopamine-induced partial degeneration of substantia nigra in
+rats: Locus coeruleus and neuroprotection. Eur. J. Neurosci. 17, 2586–2592 (2003).
+105. Allard, S., Gosein, V., Cuello, A. C. & Ribeiro-da-Silva, A. Changes with aging in the
+dopaminergic and noradrenergic innervation of rat neocortex. Neurobiol. Aging 32, 2244–2253
+(2011).
+106. Guiard, B. P., El Mansari, M. & Blier, P. Cross-Talk between Dopaminergic and Noradrenergic
+Systems in the Rat Ventral Tegmental Area, Locus Ceruleus, and Dorsal Hippocampus. Mol.
+55
+
+Pharmacol. 74, 1463–1475 (2008).
+107. Kolacheva, A. A. & Ugrumov, M. V. A Mouse Model of Nigrostriatal Dopaminergic Axonal
+Degeneration As a Tool for Testing Neuroprotectors. Acta Naturae 13, 110–113 (2021).
+108. ose, A. & eal, M. F. Mitochondrial dysfunction in Parkinson’s disease. J. Neurochem. 139,
+216–231 (2016).
+ANNEXES
+56
+
+ANNEX I
+57
+
+Figure 1. Cognition and Memory. (a) Novel Object Recognition as long term memory (24h interval) and short-term
+memory (2h interval). (b) Contextual Fear Conditioning in a traumatic context and novel context. (c) Morris Water Maze
+traveled distance, time, and speed to reach the hidden platform on day 4. i. Data separated only by experimental group; ii.
+Data separated by experimental group and gender; iii. Data separated by experimental group and starting age (in weeks) of
+the experimental timeline. n=3/4 for WT Vehicle mice, n=2/3 for WT + DSP-4, n=4-6 for DJ-1 Vehicle and n=5-7 for DJ-1 +
+DSP-4. Data is presented as mean ± SD. * p<0.05 and **p<0.01. Abbreviations WT: Wild-type and KO: Knockout.
+58
+
+Figure 2. Motor Behavior. (a) Beam Balance test on the 11mm round beam. (b) Motor Swimming Test latency (mean)
+of three test days. (c) Footprint Analysis measure (mean) for six consecutive steps. i. Data separated only by experimental
+group; ii. Data separated by experimental group and gender; iii. Data separated by experimental group and starting age (in
+weeks) of the experimental timeline. n=5-7 for WT Vehicle, n=5 for WT + DSP-4, n=8/9 for DJ-1 Vehicle and n=7/8 for DJ-1
++ DSP-4. Data is presented as mean ± SD. Abbreviations WT: Wild-type and KO: Knockout.
+59
+
+Figure 3. Anxiety-like Behavior. (a) Elevated Plus Maze time spent in open arms. (b) Open Field travelled distance in the
+center compared to total distance. (c) Marble Burying. i. Data separated only by experimental group; ii. Data separated by
+experimental group and gender; iii. Data separated by experimental group and starting age (in weeks) of the experimental
+timeline. n=4-6 for WT Vehicle, n=3-5 for WT + DSP-4, n=6-9 for DJ-1 Vehicle and n=7/8 for DJ-1 + DSP-4. Data is presented
+as mean ± SD. Abbreviations WT: Wild-type and KO: Knockout.
+60
+
+Figure 4. Depressive-like Behavior. (a) Forced Swimming Test immobility time during last 5 minutes. (b) Sucrose Splash
+Test time spent grooming. i. Data separated only by experimental group; ii. Data separated by experimental group and gender;
+iii. Data separated by experimental group and starting age (in weeks) of the experimental timeline. n=4-6 for WT Vehicle, n=3-
+5 for WT + DSP-4, n=6-9 for DJ-1 Vehicle and n=7/8 for DJ-1 + DSP-4. Data is presented as mean ± SD. Abbreviations WT:
+Wild-type and KO: Knockout.
+61

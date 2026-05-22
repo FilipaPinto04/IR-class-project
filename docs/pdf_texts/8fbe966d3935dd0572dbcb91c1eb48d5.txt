@@ -1,0 +1,845 @@
+Universidade do Minho
+Escola de Medicina
+Nuno Gabriel Silva Gonçalves
+Escala de Avaliação de Sutura do Minho –
+Desenvolvimento e Validação
+abril de 2024
+ohniM
+od
+arutuS
+ed
+oãçailavA
+ed
+alacsE
+sevlaçnoG
+onuN
+4202
+|
+ohniMU
+oãçadilaV
+e
+otnemivlovneseD
+–
+
+Universidade do Minho
+Escola de Medicina
+Nuno Gabriel Silva Gonçalves
+Escala de Avaliação de Sutura do Minho –
+Desenvolvimento e Validação
+Dissertação de Mestrado
+Mestrado em Avaliação aplicado à formação das
+Profissões de Saúde
+Trabalho efetuado sob a orientação dos
+Professor Doutor Vítor Hugo Pereira
+Professora Doutora M. Brownell Anderson
+abril de 2024
+
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas
+as regras e boas práticas internacionalmente aceites, no que concerne aos direitos de autor e
+direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo
+indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em
+condições não previstas no licenciamento indicado, deverá contactar o autor, através do
+RepositóriUM da Universidade do Minho.
+Atribuição-NãoComercial-SemDerivações
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+ii
+
+ACKNOWLEDGMENTS
+I would like to express my deepest gratitude to those who contributed for this project and
+without whom this would have been impossible.
+I thank M. Brownell Anderson, PhD for her essential guidance, insightful feedback and for
+supervising this Project.
+I thank Vítor Hugo Pereira, MD PhD, for his guidance and for supervising this Project.
+I thank Carlos Collares, MD PhD for his constant help, availability and guidance on the
+validation methodology and enhancing the quality of the work.
+I thank my family for the support and motivation they gave to overcome all challenges
+during my entire life.
+I thank Rita Sousa for the outstanding encouragement, motivation, companionship, source
+of inspiration and love.
+Financial Support
+The work presented in this thesis was performed in the School of Medicine and in the Life
+and Health Sciences Research Institute (ICVS), University of Minho. Financial support was provided
+by Grupo Fuste and 2CA Braga – Centro Clínico Académico, Braga.
+iii
+
+STATEMENT OF INTEGRITY
+I hereby declare having conducted this academic work with integrity. I confirm that I have
+not used plagiarism or any form of undue use of information or falsification of results along the
+process leading to its elaboration.
+I further declare that I have fully acknowledged the Code of Ethical Conduct of the
+University of Minho.
+iv
+
+RESUMO
+Escala de Avaliação de Sutura do Minho – Desenvolvimento e Validação
+Objetivo: Esta investigação introduz e valida a Escala de Avaliação de Sutura do Minho (Minho-
+SAS), uma ferramenta abrangente concebida para a avaliação de competências fundamentais de
+sutura em estudantes de medicina. Utilizando a Teoria de Resposta ao Item (IRT) e um formato
+dicotômico de resposta sim/não, a escala fornece uma estrutura detalhada para avaliar as
+competências de sutura.
+Métodos: O processo de desenvolvimento envolveu a colaboração com equipas multidisciplinares
+e profissionais experientes para desenvolver a Minho-SAS e garantir a sua validade. Os métodos
+de validação incorporaram técnicas de IRT, utilizando o modelo Rasch e o modelo 2-PL para avaliar
+a confiabilidade, validade de construto e precisão de medição. Foi realizada uma avaliação
+psicométrica rigorosa utilizando dados de uma coorte de estudantes do 5º ano de medicina.
+Resultados: A Minho-SAS final consiste em 15 itens dicotômicos sim/não e exibiu uma robusta
+consistência interna, confiabilidade e validade de construto nos modelos Rasch e 2-PL. A análise
+dos itens revelou perceções sobre o desempenho individual dos itens, elucidando diferentes níveis
+de dificuldade e discriminação entre os 15 componentes da avaliação. A ênfase da escala nas
+competências fundamentais de sutura foi evidente na sua avaliação detalhada, diferenciando-a de
+ferramentas de avaliação mais amplas.
+Conclusão: A Minho-SAS revela-se um promissor instrumento especificamente adaptado para a
+avaliação de competências fundamentais de sutura em estudantes de medicina. A sua rigorosa
+validação através de metodologias de IRT sublinha a sua precisão e fiabilidade, posicionando-a
+como uma adição valiosa às escalas de avaliação existentes. No entanto, é essencial uma maior
+exploração em diversas populações e ambientes educacionais para confirmar sua aplicabilidade e
+impacto.
+Palavras-Chave: Avaliação; Competências; Sutura, Teoria de Resposta ao Item, Validação
+v
+
+ABSTRACT
+Minho Suture Assessment Scale – Development and Validation
+Objective: This research introduces and validates the Minho Suture Assessment Scale (Minho-
+SAS), a comprehensive tool designed for the evaluation of fundamental suturing competencies in
+medical students. Employing Item Response Theory (IRT) and a dichotomous yes/no response
+format, the scale provides a detailed framework for assessing suturing abilities.
+Methods: The development process involved collaboration with multidisciplinary teams and
+experienced practitioners to develop the Minho-SAS and to ensure content validity. Validation
+methods incorporated IRT techniques, utilizing the Rasch model and the 2-PL model to assess
+reliability, construct validity, and measurement precision. Rigorous psychometric evaluation was
+conducted using data from a cohort of 5th-year medical students.
+Results: The final Minho-SAS consisted of 15 dichotomic yes/no items and exhibited robust
+internal consistency, reliability, and construct validity across both Rasch and 2-PL models. Item
+analyses revealed insights into individual item performance, elucidating varying levels of difficulty
+and discrimination among the 15 assessment components. The scale's emphasis on fundamental
+suturing skills was evident in its detailed evaluation, setting it apart from broader assessment tools.
+Conclusion: The Minho-SAS proves to be a promising instrument specifically tailored for
+assessing fundamental suturing skills in medical students. Its rigorous validation through IRT
+methodologies underscores its precision and reliability, positioning it as a valuable addition to
+existing evaluation scales. While showing considerable promise, further exploration across diverse
+populations and educational settings is essential to confirm its broader applicability and impact in
+medical education and clinical practice.
+Keywords: Assessment; Competencies; Item Response Theory; Suture; Validation.
+vi
+
+Table of Contents
+INTRODUCTION........................................................................................................................ 1
+OBJECTIVES ............................................................................................................................. 3
+METHODS ................................................................................................................................ 4
+Part I: Identification of the domains to be assessed. ........................................................................... 4
+Part II: Development of the Minho-Suture Assessment Scale ............................................................... 4
+Part III: Scale Testing and Sample Size .............................................................................................. 4
+Part IV: Statistical Analysis ................................................................................................................. 5
+Ethical Considerations ....................................................................................................................... 6
+RESULTS .................................................................................................................................. 7
+DISCUSSION .......................................................................................................................... 16
+CONCLUSION ......................................................................................................................... 21
+REFERENCES ......................................................................................................................... 22
+vii
+
+Table Index
+Table 1 - Minho Suture Assessment Scale translated to English language .................................. 7
+Table 2 - Dichotomous Rasch Model - Residuals Analysis using Q3 Correlation Matrix ................ 8
+Table 3 - Principal Component Analysis ..................................................................................... 9
+Table 4 - Model Fit Indices for Rasch and 2PL Analyses of the Minho-SAS. ................................. 9
+Table 5 - Difficulty and Discrimination Parameters for Each Item in Rasch and 2-PL Models ..... 10
+Table 6 – Item Fit Statistics for Rasch Model ........................................................................... 13
+Table 7 - Reliability Statistics for Minho-SAS............................................................................. 13
+Table 8 - Correlation Matrix ..................................................................................................... 15
+Table 9 - Effect Sizes (Cohen's d) for Minho-SAS ...................................................................... 15
+Figure Index
+Figure 1 - Item Characteristic Curve for Rasch model .............................................................. 11
+Figure 2 - Item Information Curve for Rasch model .................................................................. 11
+Figure 3 - Item Characteristic Curve for 2-PL model ................................................................. 12
+Figure 4 - Item Information Curve for 2-PL model .................................................................... 12
+Figure 5 – Conditional Reliability plot for Rasch Analysis .......................................................... 14
+Figure 6 – Conditional Reliability plot for 2-PL Analysis ............................................................ 14
+viii
+
+List of Abbreviations
+1-PL – 1 Parameter Logistic
+2-PL – 2 Parameter Logistic
+ACGME - Accreditation Councill for Graduate Medical Education
+AIC - Alkaike Information Criterion
+BIC - Bayesian Information Criterion
+CTT – Classic Test Theory
+HQ - Hannan-Quinn Information Criterion
+ICC - Item Characteristic Curve
+IIC - Item Information Curve
+IRT – Item Response Theory
+MAPS – Master in Health Professions Education
+MINHO-SAS – Minho Suture Assessment Scale
+OSATS - Objective structured assessment of technical skill
+OSCE – Objective Structured Clinical Examination
+PCA – Principal Component Analysis
+SABIC - Sample-Size Adjusted Bayesian Information Criterion
+ix
+
+INTRODUCTION
+Suture proficiency is an indispensable skill for young doctors, who are expected to
+autonomously treat patients with skin wounds after finishing their training. Despite its crucial
+nature, the teaching and assessment of this skill during undergraduate medical training are often
+insufficient, posing challenges for medical students in acquiring essential competencies for
+immediate post-graduation practice. While medical educators recognize the importance of suturing
+skills, there is a notable absence of regular and structured assessments in medical schools, leading
+to a deficit in competency acquisition. In the existing literature, available tools for assessing
+technical and surgical competencies primarily target more complex procedures, predominantly
+applicable to surgical residents rather than undergraduates. Recognizing this gap, the authors
+believe there is a need for a fundamental suture skill assessment scale tailored specifically to
+medical students. To bridge this void, the authors propose the development and validation of a
+new scale utilizing Item Response Theory (IRT) as an innovative approach to suture scale validation.
+The assessment of competency presents challenges, partly due to the difficulty in defining
+and isolating the specific competency to be evaluated, given the multifaceted nature of professional
+competency dimensions. Various competencies-based curricula, such as CanMEDS (Frank, 2004)
+and Accreditation Councill for Graduate Medical Education (ACGME) core competencies (Derstine
+et al., sem data), have attempted to address this challenge. Competence, as explained by Epstein
+et al., is contextual, reflecting the relationship between a person's abilities and the tasks they are
+required to perform in real-world situations (Epstein, 2002). In the context of undergraduate
+performance assessment, students can be evaluated in simulated or real-life environments,
+utilizing various instruments depending on the measured competence (Epstein, 2007).
+Surgical skills constitute a vital component of the undergraduate curriculum, with the ability
+to perform a basic suture being a fundamental requirement for medical graduates (Emmanuel et
+al., 2021). However, recent reports indicate a concerning decline in suture competence among
+recent medical graduates (Emmanuel et al., 2021). Existing suture assessment scales, while
+available, predominantly focus on specialized areas such as laparoscopic/robotic sutures
+(Vassiliou et al., 2005), microsurgery (Almeland et al., 2020; Nugent et al., 2012), or are tailored
+to post-graduate surgical residents (Chipman & Schmitz, 2009; Dormegny et al., 2023; Scott et
+al., 2007). Some scales aimed at medical students include time to perform as a component, a
+controversial factor in the literature, as the expected competency for undergraduates should
+prioritize the quality of technique over speed (Sundhagen et al., 2018).
+1
+
+Acknowledging the contextual and developmental nature of competence, the authors
+believe that assessments must be tailored to the specific context. They claim the need to
+differentiate those who are competent from those who are unable to perform. Additionally, the
+authors aim to enhance the specificity, detail, and standardization of the assessment tool, reducing
+subjectivity and facilitating use by less experienced assessors in summative exams.
+Additionally, due to the novelty of assessing suture skills in the Minho School of Medicine,
+the authors, who were part of the surgical curricular unit teaching staff, felt the need for a validated
+process in the specific context of an Objective Structured Clinical Examination (OSCE) for 5th- year
+medical students.
+The assessment of competencies, particularly in complex domains like medical education,
+necessitates robust methodologies that provide accurate and reliable measurements. Classical
+Test Theory (CTT) and IRT are two distinct frameworks employed in educational measurement.
+CTT, a traditional approach, estimates the reliability of a test by calculating the standard error of
+measurement for a given group of students. While widely used, CTT has limitations such as being
+sample-dependent and assuming constant reliability across all performance levels. In contrast, IRT
+offers a more sophisticated and flexible approach. By focusing on the characteristics of individual
+test items, IRT estimates a candidate's true ability, incorporating factors like item difficulty and
+discrimination. The two commonly used IRT models, the one-parameter logistic (1-PL)/Rasch and
+the two-parameter logistic (2-PL), provide valuable insights into the nuances of test performance.
+Unlike CTT, IRT is sample-independent, ensuring applicability across various expertise levels and
+offering a more precise estimation of measurement error at each point along the ability scale (De
+Champlain, 2010). For proper validation and understanding of the measurement process, the
+authors advocate for the use of Item Response Theory over classic test theory.
+In conclusion, the authors propose to address the identified problem by developing and
+validating the Minho Suture Assessment Scale (Minho-SAS), a dichotomic scale using IRT. This
+novel approach aims to differentiate competent from non-competent undergraduate medical
+students in basic suture skills within a summative context.
+2
+
+OBJECTIVES
+1. Develop a suture assessment scale using a multidisciplinary team.
+2. Apply the created scale on a summative objective structured clinical examination.
+3. Validate the Minho-SAS assessment properties using Item Response Theory
+3
+
+METHODS
+Part I: Identification of the domains to be assessed.
+The authors aimed to develop an evaluation tool capable of discerning undergraduates
+proficient in correctly executing a fundamental suture. The instrument was designed to be user-
+friendly, in the Portuguese language, and tailored to the context of a summative assessment for
+5th-year medical students within a simulated scenario. As far as our knowledge extends, no other
+scale serving this specific purpose and context has undergone validation. To establish the best
+practices for scale validation, the authors followed the recommendations from Boateng and the
+Standards for Educational and Psychological Testing (American Educational Research Association
+et al., 2014; Boateng et al., 2018).
+Part II: Development of the Minho-Suture Assessment Scale
+The authors employed a simultaneous application of both inductive and deductive
+approaches to generate scale items. A focus group comprised of fourteen skilled surgeons with
+diverse backgrounds, including general surgery, pediatric surgery, gynecology, orthopedics, and
+urology, was carefully assembled. The group utilized a Delphi methodology to collaboratively
+propose a list of items for inclusion in the initial Minho-SAS prototype. Each specialist contributed
+with suggestions and feedback. During the primary round, items were deliberated upon, duplicates
+were removed, wording was standardized, and a consensus was reached. The final draft,
+containing 15 yes/no items and a global performance scale with a Likert-type rating ranging from
+1 to 5 (Table 1), underwent thorough revision and received approval from the group.
+Part III: Scale Testing and Sample Size
+Adhering to the 10:1 rule of thumb for sample size determination (Goodhue et al., 2012),
+implying a minimum of 150 assessments, the authors employed the Minho-SAS to assess the
+performance of 269 fifth-year medical students participating in OSCE during a surgical clerkship,
+corresponding to two consecutive yearly OSCE. The evaluations were conducted by six highly
+experienced medical doctors, trained in the technique, and possessing ample assessment
+experience, reducing the risk of bias.
+4
+
+Part IV: Statistical Analysis
+To validate our assumptions regarding the Minho-SAS results, we assert that the test score
+serves as a reliable approximation of the true ability (suturing ability), focusing solely on one
+competency without undue influence from other variables. The belief is that scale takers with higher
+grades would exhibit greater success in an advanced course compared to students with lower
+grades. To examine this unidimensionality, a key assumption to conduct an IRT analysis, a Q3
+correlation matrix was performed to analyze residuals (differences between observed and predicted
+values), and Principal Component Analysis (PCA) was employed to explore the underlying structure
+of the dataset.
+Additionally, the authors incorporated multiple sources of validity evidence:
+A. Test Content: Content validity was ensured by obtaining approval from a focus group, as
+previously described. The scale was further endorsed by expert medical professionals with
+experience in suture and psychometrics, reinforcing alignment with the intended content.
+B. Response Processes: To ensure the fit between the assessment process and the construct,
+assessors were questioned about their thought processes, specifically regarding the
+evaluation of suture skills and whether they perceived they were assessing other
+competencies. Surgical experts accompanied assessors during the initial assessments to
+enhance the alignment between the assessment process and the construct.
+C. Internal Structure: To conduct this analysis, the authors employed IRT, which is a statistical
+and psychometric framework that models the relationship between the individual’s latent
+trait (an unobservable trait, in this case, suture ability) and the result of Minho-SAS items.
+Contrary to CTT, IRT focuses on the item’s properties and its ability to discriminate
+between individuals with different skill levels. Within the IRT analysis, the authors applied
+two models: Rasch model and the 2-parameter logistic model (2-PL). The Rasch model is
+a one-parameter logistic model that assumes that the probability of responding correctly
+to an item (or having that item classified as yes/obtained) is dependent on the responder's
+ability (Theta – θ) and the item’s difficulty (b). The 2-PL model extends the Rasch, by
+introducing another component: the item’s discrimination (a) that reflects how well an item
+discriminates students with higher and lower ability levels. To assess internal consistency,
+the authors used Cronbach’s alpha and McDonald's omega, ensuring reliability estimates
+of the scale items (Baker, 2001; Boateng et al., 2018; Nima et al., 2020; YANG & KAO,
+2014; Zanon et al., 2016).
+5
+
+D. Relations with Other Variables: The Minho-SAS was validated in conjunction with the
+established technical assessment scale OSATS (Martin et al., 1997), assuring the accuracy
+of the results. A correlation analysis and Cohen's d were conducted between the test
+scores of the two assessment tools to enhance the overall validity of the findings.
+E. Validity of Consequences of Testing: Faculty members responsible for the curricular unit
+blueprint and mapping can modify the curriculum based on the analysis of test scores,
+addressing potential gaps in student learning. The future application of the scale for
+feedback delivery is also contemplated, responding to one of the most common student
+requests: more feedback.
+This comprehensive approach aims to thoroughly validate the Minho-SAS, providing a
+robust foundation for its application in assessing suture skills among fifth-year medical students.
+For the analysis software, the authors used R version 4.3.1 with the mirt package, JASP
+((JASP Team (2023). JASP (Version 0.18.1) [Computer software].) and jamovi (v2.3.28), retrieved
+from https://www.jamovi.org.
+Ethical Considerations
+This study was conducted in full conformance with the principles of the “Declaration of
+Helsinki”, and with the Good Clinical Practice, within the “Diretiva 95/46/CE” and “Diretiva
+93/88/CEE”. All data and participant materials were appropriately stored following the Data
+protection and privacy ethical guidelines form EU.
+This project was approved by the ethical committee of University of Minho - CEICVS
+103/2022.
+6
+
+RESULTS
+The ultimate Minho-SAS is presented in Table 1, featuring 15 dichotomous yes/no items
+and a global performance score ranging from 1 to 5. Additional information regarding the number
+of positive assessments in the OSCE is also provided.
+Table 1 - Minho Suture Assessment Scale translated to English language.
+Nº of positive
+Question Item Yes/No
+assessments
+1 Confirms and prepares the necessary material Y/N 242
+2 Hold the needle correctly with the needle holder Y/N 251
+3 Handles the needle holder correctly Y/N 259
+4 Handles the tissue forceps correctly Y/N 245
+Suture at the correct distance from the edge AND at the same distance
+5 Y/N 221
+on both sides
+Demonstrates surgical dexterity in the entry and exteriorization and
+6 Y/N 181
+handling of the needle at the exit of the skin
+7 Performs knot, counter-knot and knot correctly. Y/N 249
+8 Correctly cuts the thread with proper length and technique. Y/N 206
+9 Places the knot lateral to the wound Y/N 199
+10 Places the appropriate degree of tension on the knot. Y/N 209
+11 Correct distance between sutures Y/N 209
+12 Performs suturing safely Y/N 236
+13 Safely store suture equipment and needle at the end of the procedure. Y/N 166
+14 Performs the suture with dexterity, economy and fluidity of movements. Y/N 164
+15 Respects the tissues Y/N 228
+Global Global Assessment Score 1 to 5 -
+To initiate the validation process, the final scale prototype was subjected to face validation
+by presenting it to surgeons’ experts in suture skills. Their unanimous positive judgment confirmed
+the Minho-SAS adequacy.
+To be able to apply IRT, particularly Rasch analysis, it is imperative to confirm
+unidimensionality. Using jamovi, we conducted a thorough analysis, examining residuals and
+conducting Principal Component Analysis (PCA), as illustrated in Tables 2 and 3, respectively.
+Values of correlation coefficient residuals values >0.3 would indicate a compromise of
+independence. In our data, there is no compromise to the assumption of independence, as
+indicated by correlation coefficient residuals values <0.3 (Table 2).
+7
+
+Furthermore, the results from PCA demonstrated a dominant single component, supported
+by substantial loadings of variables onto this component. This observation aligns with the
+assumption of unidimensionality, signifying that a single factor can explain a significant portion of
+the variance in our dataset.
+Table 2 - Dichotomous Rasch Model - Residuals Analysis using Q3 Correlation Matrix
+Q3 Correlation Matrix
+x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15
+x1 —
+-
+x2 0.07 —
+0
+- -
+x3 0.09 0.04 —
+4 7
+0.01 0.18 0.10
+x4 —
+5 3 1
+- - - -
+x5 0.04 0.00 0.10 0.06 —
+7 6 7 3
+- -
+0.01 0.05 0.01
+x6 0.06 0.24 —
+7 9 9
+2 4
+- - - -
+0.00 0.03
+x7 0.01 0.17 0.07 0.14 —
+7 6
+5 8 3 1
+- - - - - -
+0.00
+x8 0.20 0.00 0.16 0.00 0.07 0.08 —
+2
+6 4 9 2 1 5
+- - - - - - -
+0.22
+x9 0.23 0.12 0.00 0.11 0.18 0.11 0.10 —
+2
+3 1 1 1 2 4 6
+- - - - - - - -
+x1 0.07
+0.17 0.00 0.05 0.04 0.00 0.18 0.01 0.08 —
+0 9
+5 5 0 2 2 6 1 8
+- - - - - - - -
+x1 0.16 0.00
+0.05 0.08 0.04 0.02 0.16 0.09 0.01 0.08 —
+1 5 2
+5 6 0 8 5 7 6 1
+- - - - - - - -
+x1 0.07 0.02 0.02
+0.14 0.04 0.10 0.10 0.14 0.12 0.04 0.16 —
+2 2 5 4
+2 9 4 5 7 3 3 9
+- - - - - - - -
+x1 0.05 0.05 0.06 0.03
+0.00 0.13 0.06 0.21 0.01 0.16 0.05 0.15 —
+3 1 5 8 6
+8 0 2 1 2 7 0 7
+- - - - - - - - - -
+x1 0.01 0.32 0.02
+0.10 0.04 0.13 0.07 0.03 0.07 0.16 0.13 0.11 0.03 —
+4 6 6 8
+8 8 4 4 4 9 6 0 0 5
+- - - - - - - - - -
+x1 0.06 0.00 0.04 0.01
+0.02 0.07 0.05 0.07 0.08 0.01 0.00 0.03 0.31 0.01 —
+5 9 2 2 6
+2 1 6 9 8 2 2 4 2 3
+8
+
+Table 3 - Principal Component Analysis
+Component
+1 Uniqueness
+x1 0.961
+x2 0.440 0.807
+x3 0.490 0.760
+x4 0.424 0.820
+x5 0.425 0.819
+x6 0.628 0.606
+x7 0.563 0.683
+x8 0.362 0.869
+x9 0.546 0.702
+x10 0.546 0.702
+x11 0.503 0.747
+x12 0.456 0.792
+x13 0.469 0.780
+x14 0.640 0.590
+x15 0.575 0.669
+Concerning the analysis of model fit using IRT, the summarized findings are presented in
+Tables 4 and 5. Notably, the values of AIC (Akaike Information Criterion) and SABIC (Sample-Size
+Adjusted Bayesian Information Criterion) are of interest as statistical measures for comparing
+different models. Lower values in these measures indicate a better fit. As per Baker et al., item
+discrimination values ranging from 0.01 to 0.34 are considered very low, 0.34 to 0.64 are low,
+0.65 to 1.34 are moderate, 1.35 to 1.69 are high, and 1.70 and above are considered very high
+(Baker, 2001).
+Table 4 - Model Fit Indices for Rasch and 2PL Analyses of the Minho-SAS.
+AIC SABIC HQ BIC logLik X2 df p
+Rasch 3282.212 3288.997 3305.310 3339.727 -1625.106 NA NA NA
+2PL 3261.493 3274.215 3304.802 3369.334 -1600.746 48.7191 14 <.0001
+AIC: Akaike Information Criterion; SABIC: Sample-Size Adjusted Bayesian Information Criterion; HQ: Hannan-Quinn Information
+Criterion; BIC: Bayesian Information Criterion; Df: Degrees of freedom
+9
+
+Table 5 - Difficulty and Discrimination Parameters for Each Item in Rasch and 2-PL Models
+Rasch model 2-PL model
+Difficulty Difficulty Discrimination
+1 2.8 2.301 0.525
+2 3.32 3.37 1.38
+3 4.02 5.08 2.16
+4 2.95 2.8 1.14
+5 1.98 1.768 0.919
+6 0.948 1.34 2.52
+7 3.18 3.92 2.06
+8 1.55 1.327 0.774
+9 1.37 1.34 1.25
+10 1.63 1.58 1.23
+11 1.63 1.52 1.08
+12 2.52 2.51 1.31
+13 0.628 0.573 1.013
+14 2.21 0.925 2.935
+15 1.75 2.47 1.7
+Figures 1 and 3 illustrate the Item Characteristic Curves (ICCs) for each item, as estimated
+by the Rasch Model and the 2-Parameter Logistic Model (2-PL), respectively. These curves
+showcase the probability of a correct response to an item at various levels of the latent trait (suture
+skill). The x-axis represents the continuum of the latent trait, indicating increasing proficiency levels,
+while the y-axis displays the probability of having the item assessed as achieved.
+Upon examination of these curves, it becomes apparent that for a student with a  (theta)
+value of 0, representing an average student, the probability of having the item 14 (v14) as achieved
+is 0.6. As the  value decreases to -2, the probability drops to nearly 0.2, and conversely, when
+ is +4, the probability approaches almost 1.
+Additionally, Figures 2 and 4 represent the Item Information Curves as estimated by the
+Rasch Model and the 2-PL, respectively.
+10
+
+Figure 1 - Item Characteristic Curve for Rasch model
+Figure 2 - Item Information Curve for Rasch model
+11
+
+Figure 3 - Item Characteristic Curve for 2-PL model
+Figure 4 - Item Information Curve for 2-PL model
+In Rasch analysis, item fit statistics presented in Table 6 serve as indicators of how well
+the data align with the model. Outfit is a measure of how closely an item corresponds to the
+anticipated pattern of responses outlined by the Rasch model. An Outfit value that is excessively
+high or low may suggest that the item is either too challenging or too easy compared to
+12
+
+expectations. Distinctively, Infit assesses response consistency and is more sensible to patterns of
+responses. Deviations in Infit values, whether too high or too low, may signal potential confusion
+or misalignment of an item with others in the scale. Fit values ideally fall within the range of 0.5 to
+1.5, and items with Infit or Outfit exceeding 2.0 are typically considered for exclusion (Cecilio-
+Fernandes et al., 2017; Dichotomous Mean-Square Fit Statistics, sem data; What do Infit and
+Outfit, Mean-square and Standardized mean?, sem data).
+In this work, the observed Outfit range from 0.479 to 1.253, indicating an acceptable
+variability in the behavior of the items. Similarly, the Infit statistics range from 0.954 to 1.247,
+suggesting good levels of response consistency. The mean values for Outfit (0.782) and Infit
+(0.971) signify an overall alignment of items with the Rasch model, although with some variability
+in their fit.
+Table 6 – Item Fit Statistics for Rasch Model
+Outfit Infit
+Minimum 0,479 0,954
+Maximum 1,253 1,247
+Mean 0.782 0.971
+Standard Deviation 0,195 0,118
+The Minho-SAS exhibited strong internal consistency, supported by McDonald's 
+estimate of 0.776 (95% CI [0.736, 0.815]) and Cronbach's α of 0.765 (95% CI [0.723, 0.803]),
+as detailed in Table 7. These values signify a high level of reliability, indicating that the items
+forming the Minho-SAS consistently measure the intended construct. The reliability coefficients
+obtained for both the Rasch model (0.71) and the 2-PL model (0.74) fall within an acceptable
+range for assessment (Walsh et al., 2021).
+Table 7 - Reliability Statistics for Minho-SAS
+Estimate McDonald's ω Cronbach's α
+Point estimate 0.776 0.765
+95% CI lower bound 0.736 0.723
+95% CI upper bound 0.815 0.803
+13
+
+Reliability coefficient assessments resulted in values of 0.71 for the Rasch Model and 0.74
+for the 2-PL Model. These coefficients offer insights into the internal consistency of the respective
+models when measuring the latent trait.
+Patterns related to the reliability of the Minho-SAS across different ability models are
+illustrated in Figures 5 (Rasch model) and 6 (2-PL model).
+Figure 5 – Conditional Reliability plot for Rasch Analysis
+Figure 6 – Conditional Reliability plot for 2-PL Analysis
+Regarding the correlation between the latent traits (theta), signifying student ability, and
+the sum of the items from the Minho-SAS, notable correlation levels were observed—0.96 from the
+2-PL model and 0.982 from the Rasch model, as presented in Table 8.
+14
+
+Table 8 - Correlation Matrix
+Sum of MinhoSAS Global
+Rasch 2PL OSATS
+MinhoSAS Score
+Rasch R Pearson —
+gl —
+p-value —
+2PL R Pearson 0.975 —
+gl 267 —
+p-value < .001 —
+Sum of MinhoSAS R Pearson 0.982 0.960 —
+gl 267 267 —
+p-value < .001 < .001 —
+OSATS R Pearson 0.670 0.698 0.656 —
+gl 135 135 135 —
+p-value < .001 < .001 < .001 —
+MinhoSAS Global
+R Pearson 0.800 0.811 0.793 0.931 —
+Score
+gl 267 267 267 135 —
+p-value < .001 < .001 < .001 < .001 —
+In the pursuit of differences between the two assessed years, we performed an
+independent samples t-test and investigated the effect size using Cohen’s d coefficient, as depicted
+in Table 9.
+Table 9 - Effect Sizes (Cohen's d) for Minho-SAS
+Statistics gl p Cohen’s d
+MinhoSAS Global Score Studen’s t 3.64 ᵃ 267 < .001 d de Cohen 0.443
+Sum of MinhoSAS Studen’s t 2.80 267 0.005 d de Cohen 0.342
+2PL Studen’s t 2.93 267 0.004 d de Cohen 0.357
+Rasch Studen’s t 2.98 267 0.003 d de Cohen 0.363
+15
+
+DISCUSSION
+This work addresses the creation and validation of a suture assessment scale tailored for
+5th-year medical students – Minho-SAS. As we delve into the discussion, a synthesis of our
+methodologies and key findings becomes paramount. The exploration of the Minho-SAS’s internal
+consistency, reliability coefficients derived from IRT, using the Rasch and 2-PL models, and model
+fit analysis lays the foundation for a nuanced understanding of the assessment scale's efficacy.
+This discussion aims to unravel the intricacies of our validation processes, shedding light on the
+statistical measures employed and the implications of the observed outcomes. The overarching
+goal is to unveil the reliability, validity, and practical implications of the Minho-SAS, providing
+valuable insights into its potential integration into medical training programs and its role in shaping
+the future of suture skills assessment. Through a comprehensive exploration of these aspects, this
+discussion will underscore the significance of our study in enhancing the precision and
+effectiveness of suturing skill evaluation among 5th-year medical students.
+The creation of the Minho-SAS involved a collaborative process to ensure the development
+of a robust and contextually relevant suture assessment scale. Employing both inductive and
+deductive approaches simultaneously, fourteen skilled surgeons with diverse backgrounds were
+selected to form a focus group, respecting the Delphi methodology. This tailored approach to scale
+creation ensures that the Minho-SAS encapsulates the diverse facets of suturing skills deemed
+critical for 5th-year medical students in simulated scenarios and what will be required in their future
+practice.
+In terms of validation methodologies, conventional techniques such as exploratory and
+confirmatory factor analysis are suboptimal for the Minho-SAS, given its dichotomous nature.
+Instead, IRT emerges as a pivotal approach for scale validation, offering distinct advantages. IRT
+models the relationship between an individual's latent trait, specifically suture skill in this case, and
+their assessments in the individual items within the Minho-SAS. This stands in contrast to classical
+test theory, which treats all items as equivalent, not considering item difficulty and discrimination.
+In this study, we used two IRT models: the Rasch model and the 2-PL. The Rasch model, a one-
+parameter model, assumes unidimensionality, focusing on a single latent trait uninfluenced by
+external factors. Each item in this model possesses a difficulty parameter (b), indicating the point
+on the ability continuum where individuals have a 50% probability of receiving a positive
+assessment. The 2-PL model, an extension of one-parameter models, introduces a discrimination
+16
+
+parameter (a), quantifying an item's ability to differentiate between students with varying ability
+levels.
+In the journey towards validating the Minho-SAS, an in-depth model fit analysis was
+conducted, exploring how well the data align with the prescribed models. The utilization of AIC and
+SABIC values, outlined in Tables 4 and 5, served as compass points guiding the assessment of
+model fit. Lower AIC and SABIC values signify a superior fit, emphasizing the accuracy of the Minho-
+SAS. Crucial to our investigation was the confirmation of unidimensionality, a fundamental aspect
+for the application of IRT. Residuals analysis and Principal Component Analysis (PCA) (Table 2 and
+3) were employed to scrutinize the dimensionality of the Minho-SAS. Notably, our data exhibited
+no compromise to the assumption of independence, as indicated by correlation coefficient
+residuals values <0.3. This unidimensionality was further supported by the observed patterns in
+the Principal Component Analysis, revealing a dominant single component with substantial
+loadings of variables onto it.
+Assessing suture skill proficiency and determining the scale's appropriateness for students
+with varying skill levels are crucial aspects of scale refinement. Ideally, the scale's items should
+span a range of difficulty levels, enhancing its effectiveness in measuring proficiency. Items with
+higher discrimination parameters are particularly valuable as they excel in distinguishing between
+high and low performers. In the Rasch model, observed in Table 5, item difficulty parameters
+demonstrate a wide distribution, ranging from 0.628 (item 13) to 4.02 (item 3), indicating a
+progressive difficulty level spectrum within the Minho-SAS. The 2-PL analysis reaffirms this
+distribution, with item difficulty values ranging from 0.573 (item 13) to 5.08 (item 3). An intriguing
+shift in item 14's difficulty from Rasch to 2-PL analysis hints at its challenging nature.
+Discrimination parameters, ranging from 0.525 (item 1) to 2.935 (item 14), highlight the diverse
+effectiveness of items in discerning suture skills and contributing to the Minho-SAS's accuracy
+across a spectrum of proficiency levels.
+In the Item Characteristic Curve (ICC) analysis, item 3 exhibits a tall and narrow curve,
+signifying high precision in measuring abilities, while item 6 displays a broader ICC, implying
+information coverage across a wider range of skills. Items characterized by steeper curves,
+exemplified by item 3, indicate higher discrimination values, effectively distinguishing students
+based on their suture skill levels. Conversely, items with shallower curves, like item 5, possess
+lower discrimination values. The peak of the ICC signifies an item's difficulty, with item 2 peaking
+at a lower ability level, denoting an easy item, and item 4 peaking at a higher ability level, indicating
+17
+
+a more challenging item. For instance, the ICC curve of item 6 suggests a higher probability of
+success for students with advanced skill levels, depicting it as a more challenging item. In contrast,
+the ICC curve for item 15 implies a less challenging nature.
+Regarding the Information Curve (IIC), it is noteworthy that the peak of information is
+observed around Θ values of -2 in the Rasch Analysis and Θ=0 in the 2-PL analysis. Information
+decreases when moving beyond this range of ability. This implies that, in the Rasch analysis, the
+Minho-SAS yields the most informative measure for students with lower suture skill proficiency,
+which aligns with the purpose of this assessment and scale creation. Conversely, the 2-PL analysis
+captures more detailed information for students with average ability levels.
+The scrutiny of item fit and outfit, outlined in Table 6, further elucidates the performance
+of the Minho-SAS concerning the Rasch model. Outfit, gauging the overall fit of items, and infit,
+sensitive to the consistency of responses, are pivotal components of the assessment. The observed
+values of outfit ranging from 0.479 to 1.253 indicate acceptable variability in the behavior of the
+items. Similarly, infit statistics ranging from 0.954 to 1.247 suggest commendable levels of
+response consistency. It is essential to note that the mean values for both outfit (0.479) and infit
+(0.954) signify an overall alignment of items with the Rasch model. While some variability in fit
+exists, these findings affirm the general appropriateness of the Minho-SAS in accurately assessing
+suturing skills.
+The internal consistency, as estimated by McDonald's ω and Cronbach's α values
+presented in Table 7, attests to the robustness of the scale. These reliability measures reinforce
+our confidence in the Minho-SAS, indicating that the individual items within the scale consistently
+contribute to the measurement of the intended construct — an imperative quality for any
+assessment tool. Furthermore, the reliability coefficients generated for both the Rasch Model (0.71)
+and the 2-PL Model (0.74) fall within an acceptable range for assessment tools. This attests to the
+scale's ability to yield consistent results across different ability models, as illustrated in Figures 5
+and 6. These figures depict patterns of reliability, showcasing the Minho-SAS's efficacy in reliably
+assessing suturing skills, regardless of the underlying proficiency levels of the individuals being
+evaluated. In essence, the validation process not only establishes the internal consistency of the
+Minho-SAS but also emphasizes its reliability across different models, which is of paramount
+importance for ensuring that the scale remains a robust and dependable tool for evaluating suturing
+skills.
+18
+
+The correlation analysis between latent traits (theta) and the aggregated Minho-SAS scores,
+detailed in Table 8, unveils a close relationship. The exceptionally high correlation levels, notably
+0.96 from the 2-PL model and 0.982 from the Rasch model, underscore the scale's effectiveness
+in capturing and reflecting students' abilities accurately. This robust correlation signifies that the
+Minho-SAS not only aligns with the theoretical constructs posited by the Rasch model and 2-PL
+model but also provides a reliable representation of students' suturing abilities. The findings
+suggest that the Minho-SAS serves as a valid and dependable tool for evaluating the suturing skills
+of medical students, offering valuable insights into their aptitude in this critical aspect of medical
+practice.
+To perceive any discernible differences between the two assessed years, an independent
+samples t-test and Cohen’s d coefficient were employed and are delineated in Table 9. The results
+shed light on potential variations in suturing proficiency among 5th-year medical students across
+different academic years. The independent samples t-test examines mean score differences,
+providing insights into whether there are statistically significant variations in the performance of
+students from different cohorts. Additionally, the utilization of Cohen’s d coefficient allows for an
+exploration of the effect size, offering a quantitative measure of the magnitude of any observed
+differences. By scrutinizing the comparative data, we can gain a nuanced understanding of how
+the Minho-SAS performs across different academic years, providing valuable implications for the
+ongoing refinement of medical education practices. Any identified differences may inform targeted
+interventions or enhancements in the curriculum, contributing to a more tailored and effective
+approach to teaching and assessing suturing skills.
+Undoubtedly, the study possesses noteworthy strengths. The integration of IRT principles,
+particularly the Rasch and 2-PL models, ensures a rigorous and theoretically grounded approach
+to scale development. The robust internal consistency, reliability coefficients, and model fit analysis
+affirm the Minho-SAS's suitability for evaluating suturing skills among 5th-year medical students.
+However, acknowledging limitations is crucial for a balanced perspective. Potential biases in
+participant selection, the generalizability of findings to broader medical student populations, and
+the contextual constraints of simulated scenarios are inherent limitations. These considerations
+underscore the necessity for caution in extrapolating the results to real-world clinical contexts.
+Despite these limitations, the study's strengths solidify the Minho-SAS as a valuable tool in suture
+skills assessment, contributing meaningfully to the broader discourse on medical education
+evaluation methodologies.
+19
+
+The implications of our study extend beyond the academic realm, offering practical insights
+for medical education and assessment practices. The Minho-SAS emerges as a valuable
+instrument, demonstrating its efficacy in evaluating suturing skills among medical students. This
+has tangible implications for curriculum design and the integration of targeted interventions to
+enhance suturing proficiency. Recommendations stem from our findings, advocating for the
+incorporation of the Minho-SAS into medical training programs. This would not only provide a
+standardized and reliable method for assessing suturing skills but also contribute to the ongoing
+refinement of curricula. The scale's potential role in identifying specific areas of improvement for
+individual students further enhances its utility. As the medical education landscape evolves, our
+study encourages educators and institutions to consider the Minho-SAS as a strategic component
+in shaping the next generation of adept medical practitioners.
+20
+
+CONCLUSION
+Our investigation extensively scrutinized the internal consistency, precision, and
+multifaceted performance of the Minho-SAS, affirming its potential as a reliable and accurate
+assessment tool. Filling a critical gap in evaluating basic suture skills among medical students, the
+Minho-SAS introduces a standardized and objective approach to proficiency assessment. The
+integration of IRT within the validation process enhances its standing as a precise instrument for
+evaluating suture skills by offering insightful information about each item’s performance. Despite
+the robust validation, certain limitations necessitate acknowledgment. Relying on a specific cohort
+and a limited sample size may restrict the generalizability of findings, cautioning against
+extrapolating results beyond the study's context. While acknowledging these limitations, the study
+highlights the Minho-SAS's potential versatility across diverse contexts. Looking ahead, further
+research, particularly through multicentric studies and larger, more diverse samples, can
+strengthen its validation and universality. Despite limitations, this study establishes a foundation
+for future endeavors, offering promise in refining and expanding the Minho-SAS's utility in diverse
+educational and clinical settings. This validated tool stands poised to enhance medical education,
+providing an objective means of evaluating and enhancing suture skills, ultimately contributing to
+the overall competence and proficiency of future healthcare professionals.
+21
+
+REFERENCES
+Almeland, S. K., Lindford, A., Sundhagen, H. P., Hufthammer, K. O., Strandenes, E., Svendsen,
+H. L., Guttormsen, A. B., & Hansson, E. (2020). The effect of microsurgical training on
+novice medical students’ basic surgical skills—A randomized controlled trial. European
+Journal of Plastic Surgery, 43(4), 459–466. https://doi.org/10.1007/s00238-019-
+01615-w
+American Educational Research Association, American Psychological Association, & National
+Council on Measurement in Education. (2014). Standards for educational and
+psychological testing. American Educational Research Association.
+Baker, F. B. (2001). The Basics of Item Response Theory. Second Edition. For full text:
+http://ericae. https://eric.ed.gov/?id=ED458219
+Boateng, G. O., Neilands, T. B., Frongillo, E. A., Melgar-Quiñonez, H. R., & Young, S. L. (2018).
+Best Practices for Developing and Validating Scales for Health, Social, and Behavioral
+Research: A Primer. Frontiers in Public Health, 6.
+https://www.frontiersin.org/articles/10.3389/fpubh.2018.00149
+Cecilio-Fernandes, D., Medema, H., Collares, C. F., Schuwirth, L., Cohen-Schotanus, J., & Tio, R.
+A. (2017). Comparison of formula and number-right scoring in undergraduate medical
+training: A Rasch model analysis. BMC Medical Education, 17, 192.
+https://doi.org/10.1186/s12909-017-1051-8
+Chipman, J. G., & Schmitz, C. C. (2009). Using Objective Structured Assessment of Technical
+Skills to Evaluate a Basic Skills Simulation Curriculum for First-Year Surgical Residents.
+Journal of the American College of Surgeons, 209(3), 364.
+https://doi.org/10.1016/j.jamcollsurg.2009.05.005
+De Champlain, A. F. (2010). A primer on classical test theory and item response theory for
+assessments in medical education. Medical Education, 44(1), 109–117.
+https://doi.org/10.1111/j.1365-2923.2009.03425.x
+Derstine, P., Leach, D. C., Teherani, A., & Reich, L. M. (sem data). Improvement Through the
+Application of the Competencies.
+Dichotomous Mean-Square Fit Statistics. (sem data). Obtido 16 de novembro de 2023, de
+https://www.rasch.org/rmt/rmt82a.htm
+Dormegny, L., Neumann, N., Lejay, A., Sauer, A., Gaucher, D., Proust, F., Chakfe, N., & Bourcier,
+T. (2023). Multiple metrics assessment method for a reliable evaluation of corneal suturing
+skills. Scientific Reports, 13(1), Artigo 1. https://doi.org/10.1038/s41598-023-29555-3
+Emmanuel, T., Nicolaides, M., Theodoulou, I., Yoong, W., Lymperopoulos, N., & Sideris, M. (2021).
+Suturing Skills for Medical Students: A Systematic Review. In Vivo, 35(1), 1–12.
+https://doi.org/10.21873/invivo.12226
+Epstein, R. M. (2002). Defining and Assessing Professional Competence. JAMA, 287(2), 226.
+https://doi.org/10.1001/jama.287.2.226
+Epstein, R. M. (2007). Assessment in Medical Education. New England Journal of Medicine,
+356(4), 387–396. https://doi.org/10.1056/NEJMra054784
+Frank, J. (2004, janeiro 1). A history of CanMEDS - chapter from Royal College of Physicians of
+Canada 75th Anniversary history.
+Goodhue, D. L., Lewis, W., & Thompson, R. (2012). Does PLS Have Advantages for Small Sample
+Size or Non-Normal Data? MIS Quarterly, 36(3), 981–1001.
+https://doi.org/10.2307/41703490
+Martin, J. A., Regehr, G., Reznick, R., MacRae, H., Murnaghan, J., Hutchison, C., & Brown, M.
+(1997). Objective structured assessment of technical skill (OSATS) for surgical residents.
+22
+
+The British Journal of Surgery, 84(2), 273–278. https://doi.org/10.1046/j.1365-
+2168.1997.02502.x
+Nima, A. A., Cloninger, K. M., Persson, B. N., Sikström, S., & Garcia, D. (2020). Validation of
+Subjective Well-Being Measures Using Item Response Theory. Frontiers in Psychology, 10,
+3036. https://doi.org/10.3389/fpsyg.2019.03036
+Nugent, E., Joyce, C., Perez-Abadia, G., Frank, J., Sauerbier, M., Neary, P., Gallagher, A. G.,
+Traynor, O., & Carroll, S. (2012). Factors influencing microsurgical skill acquisition during
+a dedicated training course. Microsurgery, 32(8), 649–656.
+https://doi.org/10.1002/micr.22047
+Scott, D. J., Goova, M. T., & Tesfay, S. T. (2007). A cost-effective proficiency-based knot-tying and
+suturing curriculum for residency programs. The Journal of Surgical Research, 141(1), 7–
+15. https://doi.org/10.1016/j.jss.2007.02.043
+Sundhagen, H. P., Almeland, S. K., & Hansson, E. (2018). Development and validation of a new
+assessment tool for suturing skills in medical students. European Journal of Plastic
+Surgery, 41(2), 207–216. https://doi.org/10.1007/s00238-017-1378-8
+Vassiliou, M. C., Feldman, L. S., Andrew, C. G., Bergman, S., Leffondré, K., Stanbridge, D., & Fried,
+G. M. (2005). A global assessment tool for evaluation of intraoperative laparoscopic skills.
+American Journal of Surgery, 190(1), 107–113.
+https://doi.org/10.1016/j.amjsurg.2005.04.004
+Walsh, A., Cao, R., Wong, D., Kantschuster, R., Matini, L., Wilson, J., Kormilitzin, A., South, M.,
+Travis, S., & Bauermeister, S. (2021). Using item response theory (IRT) to improve the
+efficiency of the Simple Clinical Colitis Activity Index (SCCAI) for patients with ulcerative
+colitis. BMC Gastroenterology, 21(1), 132. https://doi.org/10.1186/s12876-021-01621-
+y
+What do Infit and Outfit, Mean-square and Standardized mean? (sem data). Obtido 16 de novembro
+de 2023, de https://www.rasch.org/rmt/rmt162f.htm
+YANG, F. M., & KAO, S. T. (2014). Item response theory for measurement validity. Shanghai
+Archives of Psychiatry, 26(3), 171–177. https://doi.org/10.3969/j.issn.1002-
+0829.2014.03.010
+Zanon, C., Hutz, C. S., Yoo, H. (Henry), & Hambleton, R. K. (2016). An application of item response
+theory to psychological test development. Psicologia: Reflexão e Crítica, 29(1), 18.
+https://doi.org/10.1186/s41155-016-0040-x
+23

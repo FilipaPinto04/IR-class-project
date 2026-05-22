@@ -1,0 +1,1030 @@
+António Manuel Melo Soares de Almeida
+Development of Quality Assessment Tools
+for Question Construction: Utilizing AI
+Models in Detecting Flaws in Item Writing
+março de 2025
+gnitirW
+metI
+ni
+swalF
+gnitceteD
+ni
+sledoM
+IA
+gnizilitU
+:noitcurtsnoC
+noitseuQ
+rof
+slooT
+tnemssessA
+ytilauQ
+fo
+tnempoleveD
+adiemlA
+ed
+seraoS
+oleM
+leunaM
+oinótnA
+5202|ohniMU
+Universidade do Minho
+Escola de Medicina
+
+Universidade do Minho
+Escola de Medicina
+António Manuel Melo Soares de Almeida
+Development of Quality Assessment Tools
+for Question Construction: Utilizing AI
+Models in Detecting Flaws in Item Writing
+Dissertação de Mestrado
+Mestrado em Avaliação Aplicada à Formação das Profissões
+da Saúde
+Trabalho efetuado sob a orientação do
+Professor Doutor José Miguel Pêgo
+março de 2025
+
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS
+Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras e
+boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.
+Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo indicada.
+Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não
+previstas no licenciamento indicado, deverá contactar o autor, através do RepositóriUM da Universidade
+do Minho.
+Licença concedida aos utilizadores deste trabalho
+Atribuição-NãoComercial-SemDerivações
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+ii
+
+ACKNOWLEDGEMENTS
+I would like to express my gratitude to my supervisors, Professor José Miguel Pêgo for the expertise and
+guidance throughout this project.
+I must convey my sincere appreciation to Professor José Miguel Pêgo and Professor Nuno Sousa for
+encouraging and supporting me not only in academic and medical activities but also in my personal life.
+They have been of paramount importance to me as role models in science and in life.
+I offer my sincere thanks to all my friends from MAPS for the shared conversations that contributed to
+my personal and professional growth.
+To my close friends, I express the support and strength for believing in me.
+I want to dedicate my final words to family. For the ones that are my daily support, and to the ones that
+already perished, specially to Eva Cristina, António Soares de Pinho, Ilda Pinho and Alberto Sampaio e
+Melo.
+Financial Support
+The work presented in this thesis was performed in the School of Medicine and in the Life and Health
+Sciences Research Institute (ICVS), University of Minho. Financial Support was provided by Grupo Fuste
+and 2CA Braga – Centro Clínico e Académico, Braga.
+iii
+
+STATEMENT OF INTEGRITY
+I hereby declare having conducted this academic work with integrity. I confirm that I have not used
+plagiarism or any form of undue use of information or falsification of results along the process leading
+to its elaboration.
+I further declare that I have fully acknowledged the Code of Ethical Conduct of the University of Minho.
+iv
+
+Development of Quality Assessment Tools for Question Construction: Utilizing AI Models
+in Detecting Flaws in Item Writing
+ABSTRACT
+Introduction: One of the most challenging area in medical education is assessment. Multiple choice
+questions (MCQs) are one of the most used method of assessment in educational setting. However
+their construction is time consuming, and the nature of MCQs architecture make it difficult to build
+robust and reliable test items. The gold standard for quality control is the manual detection of these
+flaws, however this process is time-consuming and costly. An effective automated tool would make this
+process more friendly. New advances in artificial intelligence both in accessibility and ease of use, make
+it a possible pathway to automatize this process. Therefore, his project aims to assess the feasibility
+and efficacy of using Artificial Intelligence (AI) to detect item writing flaws (IWFs) in Multiple-Choice
+Questions.
+Methods: To evaluate GPT-4 we used a sample of 106 items taken from a database already screened
+for IWFs. The native database consists of 1150 questions from the Portuguese National Selection Exam
+(NSE) conducted between 2009 and 2018 and the pilot exam of the Residency National Access Exam
+(RNAE) and was screened for IWFs using established criteria and quality ratings (Rush, 2016;
+Jozefowicz, 2002) using manual identification. The automated analysis assisted by GPT-4 was
+performed using prompt optimization for a group of specific flaws.
+Results: Of the items analyzed, 98.1% had at least one flaw. The flaw identified with the highest
+sensitivity was "negative stems" and "longest option is correct" items. GPT-4 had low sensitivity and
+high rates of disagreement in the identification of the remaining items.
+Conclusions: The AI model GPT-4 has intrinsic knowledge in construction and validation of multiple-
+choice questions and construction flaws identification, however, it does perform worse than human
+review.
+Keywords: artificial intelligence, assessment, item writing flaw, multiple choice question.
+v
+
+Desenvolvimento de Ferramentas de Avaliação de Qualidade para Construção de
+Questões: a utilização de Modelos de IA na Detecção de Falhas na construção de Itens
+RESUMO
+Introdução: Uma das áreas mais desafiadoras na educação médica é a avaliação. As pergunta de
+escolha múltipla (PEM) são um dos métodos mais utilizados de avaliação em ambientes educacionais.
+No entanto, a sua construção é demorada, e a natureza da arquitetura das PEM torna difícil construir
+itens de teste robustos e confiáveis. O padrão de ouro para o controle de qualidade é a detecção
+manual dessas falhas, no entanto, este processo é demorado e custoso. Uma ferramenta automatizada
+eficaz tornaria este processo mais amigável. Novos avanços na inteligência artificial, tanto em
+acessibilidade quanto em facilidade de uso, tornam possível um caminho para automatizar este
+processo. Portanto, este projeto visa avaliar a viabilidade e eficácia do uso da Inteligência Artificial (IA)
+para detectar falhas na elaboração de itens em PEM.
+Métodos: Para avaliar o GPT-4, usamos uma amostra de 106 itens retirados de um banco de dados já
+analisado para IWFs. O banco de dados original consiste em 1150 perguntas do Exame Nacional de
+Seleção português realizado entre 2009 e 2018 e o exame piloto da Prova Nacional de Acesso e foi
+analisado para IWFs usando critérios estabelecidos e classificações de qualidade (Rush, 2016;
+Jozefowicz, 2002) utilizando identificação manual. A análise automatizada assistida pelo GPT-4 foi
+realizada usando otimização de prompt para um grupo de falhas específicas.
+Resultados: Dos itens analisados, 98,1% tinham pelo menos uma falha. A falha identificada com maior
+sensibilidade foi em itens de "stems negativas" e "a opção mais longa é a correta". O GPT-4 teve baixa
+sensibilidade e altas taxas de discordância na identificação dos demais itens.
+Conclusões: O modelo de IA GPT-4 possui conhecimento intrínseco na construção e validação de
+questões de múltipla escolha e identificação de falhas na construção, no entanto, apresenta
+desempenho inferior à revisão humana.
+Palavras-chave: avaliação, identificação de falhas, inteligência artificial, perguntas de escolha
+múltipla.
+vi
+
+INDEX
+DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS ........................ ii
+ACKNOWLEDGEMENTS ...................................................................................................................... iii
+STATEMENT OF INTEGRITY ................................................................................................................ iv
+ABSTRACT .......................................................................................................................................... v
+RESUMO ............................................................................................................................................ vi
+LIST OF ABBREVIATIONS .................................................................................................................. viii
+LIST OF FIGURES ............................................................................................................................... ix
+LIST OF TABLES ................................................................................................................................. ix
+INTRODUCTION ................................................................................................................................. 1
+Objectives .......................................................................................................................................... 5
+MATERIAL AND METHODS ................................................................................................................. 6
+RESULTS ............................................................................................................................................ 9
+DISCUSSION .................................................................................................................................... 17
+CONCLUSIONS ................................................................................................................................ 22
+REFERENCES ................................................................................................................................... 23
+APPENDIX ........................................................................................................................................ 25
+vii
+
+LIST OF ABBREVIATIONS
+ AI -Artificial Intelligence
+ IWF - Item writing fail
+ LLM - Large language model
+ PPV - Positive predictive value
+ NPV - Negative predictive value
+ NLP - Natural language processing
+ MCQs - Multiple Choice Questions
+ RNAE - Residency National Access Exam
+ NBME - National Board of Medical Examiners
+ n - Absolute Frequency
+ % - Percentage
+viii
+
+LIST OF FIGURES
+Figure 1 - Absolute number of IWF type specific (n) ........................................................................... 10
+LIST OF TABLES
+Table 1 - Degree of agreement interpretation based on Cohen’s kappa value ....................................... 8
+Table 2 - Descriptive analysis of IWF (n) .............................................................................................. 9
+Table 3 - Descriptive analysis of IWF – type specific (n) ..................................................................... 10
+Table 4 - Analysis of systematic effect and agreement between tests (PPV – Positive predictive value;
+NPV – Negative predictive value) ....................................................................................................... 11
+ix
+
+INTRODUCTION
+Assessment in Medical Education
+Assessment in medical education has undergone significant evolution, moving from a narrow focus on
+measurement aimed at distinguishing the competent from the not competent, towards a more
+nuanced, integrated system perspective. Initially, assessments were primarily concerned with reliability
+and construct validity, emphasizing reproducibility and minimizing human judgment to classify
+individuals' competence straightforwardly. However, as understanding deepened, the field recognized
+the limitations of such an approach and shifted towards incorporating human judgment within
+workplace-based assessments, acknowledging the complexity of assessing competence in authentic
+settings.
+This evolution reflects a broader shift from viewing assessment as a mere measurement tool to
+understanding it as a complex process that integrates human judgment, supported by expertise and
+robust assessment methodologies. Currently, the paradigm treats assessment as an integral system
+problem, evaluating competence from an integrated perspective rather than through isolated metrics.
+This comprehensive approach focuses on supporting and improving human judgment, meaningfully
+triangulating assessment information, and constructing fairness, credibility, and defensibility within a
+systemic framework. (Schuwirth, 2020)
+The transformation in assessment practices in medical education mirrors the rapid changes in society,
+education, and healthcare, suggesting that the field may continue to evolve. The journey from viewing
+assessment through a reductionist lens to embracing it as a holistic, system-wide challenge highlights
+the dynamic nature of medical education and the continuous quest for methods that not only evaluate
+but also enhance learning and competence in healthcare professionals.
+In the evolving landscape of education and research, the construction of questions stands as a
+cornerstone for reliable and valid assessments.The meticulous crafting of these questions influences
+not only the measurement of educational achievements and survey outcomes but also the integrity of
+data-driven decisions across various fields. Historically, the journey toward refining question quality has
+been marked by continuous efforts to adhere to guidelines for good assessment. These guidelines
+emphasize clarity, fairness, relevance, and the avoidance of bias, ensuring that each question
+accurately gauges the intended construct without prejudice or ambiguity.
+1
+
+Multiple Choice Questions (MCQs) are widely utilized in medical education for assessment purposes,
+surpassing other methods like short answer questions, oral exams, and written reports in frequency of
+use for summative evaluations faced by medical students. Their preference is largely due to the
+efficiency with which they can cover a wide range of knowledge, facilitate the establishment of
+standards, and generate statistical data critical for maintaining the quality of institutional question
+databases. However, MCQs often face criticism for not adequately promoting critical thinking or
+assessing attitudes, behaviors, or clinical skill application, and for not addressing gender and cultural
+biases in responses. Consequently, standard MCQs are rarely linked with transformative learning
+experiences. Nevertheless, a diverse array of MCQ formats exists that can assess a spectrum of
+competencies, including knowledge, skills, attitudes, judgment, and behaviors, particularly when the
+questions are framed within specific contexts. ( Douthit, 2021) Of paramount importance is also the
+quest for quality in question construction. The National Board of Medical Examiners (NBME) produced a
+very comprehensive guide on item writing: “NBME Item-Writing Guide” which is one of the most
+valuable tools to empower faculties in developing high quality questions. Despite the continuous effort
+to control quality, most methodologies for creating and evaluating questions rely heavily on expert
+judgment and manual review, a process that is time and man-work consuming and not completely
+devoid of subtle flaws. Issues such as ambiguity in question wording, cultural or linguistic biases, and
+inconsistencies across test items have persisted, threatening the validity and reliability of assessments.
+These imperfections can lead to misinterpretations of a respondent's knowledge or opinions, ultimately
+affecting educational outcomes, research findings, and policy decisions.
+The significance of these challenges is not a modern revelation. Since the inception of standardized
+testing and survey methodologies, educators, researchers, and policymakers have grappled with the
+complexities of question construction. In the early 20th century, as standardized testing began to take
+shape, the focus was primarily on the practicality and scalability of assessments. However, as the
+century progressed, the emphasis shifted towards the nuanced aspects of test construction, including
+the psychometric properties of test items and the ethical considerations of testing practices. Despite
+advancements in assessment theory and practice, the enduring struggle to balance efficiency, accuracy,
+and fairness in question construction has remained a critical concern.
+2
+
+Technological breakthroughs and Artificial Intelligence
+Both scientific and technological advances achieved throughout the XXth century are the main reason
+for the changes in the way we live. We have never had so many ways how to interact between humans,
+how to overcome distances or how to store information to categorize and analyze our world. In the last
+decade computing advances allowed the development of powerful machines that can cope with more
+complex tasks.
+Several Works addressed the role of AI models concerning the ability to transform theoretical
+input into the capacity of resolving medical problems and answering clinical questions. (Meo, 2023)
+However the perception of AI future application in clinical practice is a subject that’s way far from
+consensual. (Civaner, 2022) The event of AI democratization happened on November 30, 2022 with
+the launch of ChatGPT (Chat Generative Pre-trained Transformer) by OpenAI: a an artificial intelligence
+(AI) research laboratory consisting of the for-profit corporation OpenAI LP and its parent company, the
+non-profit OpenAI Inc., founded in December 2015 by Elon Musk, Sam Altman, Greg Brockman, Ilya
+Sutskever, Wojciech Zaremba, and John Schulman, among others, with a mission to ensure that
+artificial general intelligence (AGI), a highly autonomous systems that outperform humans at most
+economically valuable work, benefits all of humanity. ChatGPT quickly became a focal point in the
+media for its detailed and eloquent answers across a wide array of technical and professional fields. As
+an AI-driven natural language processing (NLP) platform, ChatGPT excels in delivering conversations
+that closely resemble those with a human, assisting users with tasks such as composing emails,
+drafting essays, creating software code, among others. Initially, this innovative tool was made available
+to the public at no cost. The reason behind the free release of the demo and research version GPT-3.5
+was to encourage extensive experimentation by the general public, thereby collecting valuable feedback
+for the development of its successor, GPT-4. (Ghosal, 2023) ChatGPT is initially based on GPT-3.5 and
+now utilizes GPT-4 of large-scale pre-trained model, and is a general-purpose human-computer
+conversation system obtained by combining human-labeled data and reinforcement learning training for
+various dialogue tasks according to the multi-modal inputs of texts and images. It can understand
+various instructions of human beings and can complete tasks such as text generation, code writing and
+modification, image captioning, chart reasoning and paper summarizing etc. The specific analysis of the
+capabilities demonstrated by ChatGPT is Multimodal (Language and Image) Understanding and Text
+Generation: it can accurately understand the user's intention with prompts of texts and images, and
+generate various types of texts in the process of dialogue. ChatGPT can not only deal with typical NLP
+3
+
+task instructions such as classification, matching, translation, re-writing, but also deal with new tasks,
+which require accurate intent understanding or visual understanding, for example, organizing outputs in
+the form of lists and image captioning. ChatGPT also has good reasoning ability, especially in answering
+scientific questions, knowledge related questions and complex logic questions. ChatGPT also has a
+deep and wide array of knowledge and can complete almost all kinds of information consulting tasks
+very well, and can also achieve good results in areas requiring professional knowledge such as medical,
+judicial, and financial ones, for instance passing the American Medical Examination. (Kung et al 2023).
+The integration of AI into various domains has heralded a new age of innovation, offering solutions to
+age-old problems with unprecedented efficiency and insight. In the context of question construction, AI
+models emerge as a powerful tool with potential promises of being capable of transforming traditional
+practices, it hypothetically should be possible to systematically analyze and refine questions, addressing
+flaws that human reviewers might overlook.
+This thesis delves into the development of quality assessment tools for question construction,
+employing AI to detect and rectify item writing flaws in MCQs. This approach represents a significant
+leap forward in adhering to the guidelines for good assessment by ensuring questions are not only clear
+and fair but also crafted with a level of precision and objectivity that manual methods struggle to
+achieve. (Dave, 2023; Alkaissi, 2023)
+4
+
+Objectives
+This work was performed with the objective to create knowledge concerning the use of technological
+advances in medical education and assessment.
+The objectives of this work are:
+(1) Assess the intrinsic knowledge concerning item writing flaws analysis of a large language
+model, specifically GPT-4
+(2) Test the accuracy of GPT-4 by comparing with manual item writing flaws analysis
+5
+
+MATERIAL AND METHODS
+Study dates
+The study was conducted at the School of Medicine, University of Minho, Braga, Portugal, from October
+2022 to February 2024.
+Study Design
+The study was developed in 4 steps
+First step – question database selection, randomization and validation.
+In order to address our aims, we needed a solid medical question database. We used a database
+created by Silva in 2020 (Silva,2020), which looked at 1150 questions from Portuguese NSEs from
+2009 to 2018 (1000 items) and RNAE pilot exam (150) that were previously studied and submitted to a
+manual identification of item writing flaws. We selected a smaller sample through a process of stratified
+random sampling in order to assure representation of all the IWF, which the final result of a group of
+106 question.
+Manual IWF evaluation
+We performed a manual validation of the selected sample in order to validate the new database,
+concerning agreement with the previously detected IWF in criteria’s for manual analysis of the IFWs
+such as the quality rating calculation. (Rush, 2016; Jozefowicz, 2002)
+Second step: Selection of AI model and evaluation of the intrinsic knowledge about question
+construction and item writing flaw detection.
+AI Large language models
+In order to assess the performance of a AI model we used ChatGPT and GPT-4, developed by OpenAI
+(https://openai.com). Language models are designed to process and generate text that mirrors human-
+like conversation. They achieve this by predicting what next word (token) should come next given an
+input, allowing them to generate coherent, contextually relevant responses. ChatGPT, an earlier version,
+has been widely used in a variety of applications due to its ability to generate coherent and contextually
+6
+
+relevant responses. GPT-4, is similar in design but much larger in scale, meaning it has been trained on
+more data and can understand and generate text with even greater accuracy.
+To test the intrinsic knowledge on the subject, we asked directly if GPT-4 was familiar with the concept
+of “item writing flaws detection in A-type (One-best-answer item) MCQs”, and he described the concept
+of writing questions and of item writing detection. (APPENDIX 1)
+Third step: Evaluate each individual question from our 106 items database for the presence of 14
+different IWF: “Longest option is correct answer”; “Grammatical clues or inconsistencies between stem
+and distractors”; ”Implausible distractors”; “Mutually exclusive distractors”; “Use of absolute terms”;
+“Use of all of the above”; “Awkward stem structure”; ”Extraneous or misleading information in the
+stem”; “Negative stem”; “Response options are a series of true/false statements”; “Use of none of the
+above”; “Complex or K-type items”; “Vague or generalizing terms” and “Unfocused question”. In
+order to perform this task we established a strategy of prompt development for each one of the IFW.
+(APPENDIX 2)
+Fourth step – Compare IWF detection in both models.
+Number of identified IWF
+Items were considered generally flawed or non-flawed based on the presence of at least one IWF or the
+total absence of IWFs, respectively.
+Statistics and Analysis
+Given that we are dealing with a binary outcome (e.g., positive/negative), to check if there was a
+systematic difference between the results obtained from each method, McNemar’s Chi squared test
+was performed in each IWFs analysis (statistically significant result with P < 0.05). To check the degree
+of agreement between both tests, we calculated Cohen’s kappa and the standard error of kappa for
+each IWF analysis (with kappa ranging from 0 to 1, with zero meaning that the agreement is no better
+than a result obtained by chance and one meaning that there is a perfect agreement between the tests.
+(Royal, 2017) For interpretation, we used the scale below, proposed by Landis et al.
+Our statistical analysis was performed in Microsoft Excel and Prism 10.
+7
+
+Table 1 - Degree of agreement interpretation based on Cohen’s kappa value
+In descriptive statistics, qualitative variables were represented by absolute frequency (n) and percentage
+(%).
+8
+
+RESULTS
+IWF manual analysis
+The database from where the questions were retrieved had 96,6% of items with at least had at least one
+IWF, with most having more than one. The most common flaws were using a negative stem, response
+options being a series of true/false statements, vague or generalizing terms, and unfocused questions.
+The least found IWFs were the use of complex or K-type items, “all of the above”, and “none of the
+above”. The manual analysis of each item used for this project is shown in the APPENDIX 3 AND 4.
+We randomly selected 106 items from the database, and then performed a blinded manual analysis of
+the individual items in order to characterize our sample concerning different types of IWF previously
+assessed by Silva. Our manual analysis shown 98,11% of the items had at least one IWF, in
+accordance with the original database.
+GPT-4 IWF analysis
+The analysis performed using the developed prompts to ask GPT-4 for IWF detection identified an
+absolute number of 226, comparing with 385 for the manual IWF detection. (Table 2; Figure 1)
+Table 2 - Descriptive analysis of IWF (n)
+The GPT-4 identified the longest option is correct answer in the option set (26 items identified, 38.46%
+true positives); the use grammatical clues or inconsistencies between stem and distractors (11 items
+identified, 63,63%
+true positives); the use of implausible distractors (22 items identified, 31,81%
+true positives); the identification of mutually exclusive distractors (11 items identified, 36,36% true
+positives); concerning identification of a negative stem 76 items identified, 100% true positives);
+presence of response options are a series of true/false statements (14 items identified, of those
+9
+
+92,85% true positives); the use of vague or generalizing terms (12 items identified, 33,33% true
+positives); and when looking for unfocused question (23 items identified, 3,03% true positives).
+In the analysis of both the use of absolute terms (9 items identified, 0% true positives); the identification
+of an awkward stem structure (11 items identified, 0 % true positives); presence of extraneous or
+misleading information in the stem (10 items identified, 0% true positives); despite GPT-4 identified
+errors, it failed in identifying the IWF. Regarding the use of complex or K-type items and the use of
+“none of the above” the analysis had no items with any of those IWFs, resulting in a no identification of
+those IWFs by GPT-4.
+Figure 1 - Absolute number of IWF type specific (n)
+Table 3 - Descriptive analysis of IWF – type specific (n)
+10
+
+Systematic effect
+Regarding the presence of a systematic effect we tested all IWFs except the use of “all of the above”,
+the use of “none of the above” and the presence of complex or K-type terms due to the absence of
+items with this IWF in the analysed item set.
+A statistically significant result was shown in the detection of “the longest option as the correct option”,
+“grammatical clues or inconsistencies between stem and distractors”, “implausible distractors”,
+“mutually exclusive distractors”, “negative stem”, “response options are a series of true/false
+statements” and “unfocused questions”.
+Degree of agreement
+Concerning the degree of agreement between both tests, we were able to show that there is some
+degree in specific IWF identification, while other display disagreement. The IWF with the highest
+agreement is “the longest option as the correct option” and “grammatical clues or inconsistencies
+between stem and distractors”; IWFs with lesser agreement between tools of evaluation are
+“implausible distractors” and “mutually exclusive distractors”. In the analysis of the remain IWF there
+was disagreement in evaluation. (Table 4)
+Table 4 - Analysis of systematic effect and agreement between tests (PPV – Positive predictive value; NPV – Negative
+predictive value)
+11
+
+Longest option is correct answer.
+Chi-square, df 25,28, 1; P value <0,0001***; Sensitivity 0,8333; Specificity 0,8298; Likelihood Ratio
+4,896; Cohens Kappa 0,439; SE of kappa 0,104; the high sensitivity and specificity values suggest that
+the test method is quite accurate in identifying the IWF, both when it is present and when it is not. The
+very low P value associated with the chi-square test suggests that these findings are unlikely to be due
+to random chance, implying that the test method is reliably differentiating between the presence and
+absence of the condition. The Cohen's Kappa value of 0.439 indicates a moderate level of agreement
+between two raters or between a rater and a true standard. The Kappa statistic is used to measure
+inter-rater reliability for qualitative (categorical) items and is generally thought to be a more robust
+measure than simple percent agreement calculation because Kappa takes into account the agreement
+occurring by chance. In conclusion, the result indicate a moderate level of agreement which is fairly
+consistent (given the SE of Kappa).
+Grammatical clues or inconsistencies between stem and distractors.
+Chi-square, df 20,65, 1; P value <0,0001***; Sensitivity 0,4118; Specificity 0,9551; Likelihood Ratio
+9,162; Cohens Kappa 0,428; SE of kappa 0,125; the test seems to have a high specificity and a
+moderate sensitivity, with a moderate level of agreement as indicated by Cohen's Kappa. This suggests
+the test is quite reliable at ruling out items without grammatical clues or inconsistencies but less
+reliable at positively identifying items with the trait. The high likelihood ratio and significant p-value
+indicate that the test results are statistically robust.
+Implausible distractors.
+Concerning the identification of “implausible distractors” the systematic effect analysis gave us the
+following results: Chi-square df 5,134, 1; P value 0,0235*; Sensitivity 0,4118; Specificity 0,8315;
+Cohens Kappa 0,217; SE of kappa 0,112. The test shows some degree of effectiveness in identifying
+implausible distractors, with a moderate level of specificity and a fair negative predictive value.
+However, the sensitivity and positive predictive value are relatively low, indicating that many implausible
+distractors may be missed or incorrectly identified as such. The Cohen's Kappa value shows slight
+agreement beyond chance between the two methods of identification, indicating that while there is
+some alignment, it is not strong.
+12
+
+Mutually exclusive distractors.
+The statistical summary of the analysis of performance comparison between GPT-4 and human
+detection in identifying the Item Writing Flaw (IWF) of "mutually exclusive distractors" : Chi-square
+8,912; P value 0,0028**; Sensitivity 0,3636; Specificity 0,9263; Cohens Kappa -0,119; SE of kappa
+0,028; tells us that the test has a relatively high specificity and NPV, suggesting it is more reliable in
+identifying when distractors are not mutually exclusive. The sensitivity and PPV are on the lower side,
+indicating less reliability in correctly identifying the presence of mutually exclusive distractors. The
+Cohen's Kappa value suggests that there is a fair level of agreement between GPT-4 and human
+detection. The significant chi-square and p-value indicate that the findings are statistically significant and
+not likely due to random chance.
+Use of absolute terms
+The statistical analysis of the detection of the IWF "Use of absolute terms" in items, comparing the
+performance between GPT-4 and human detection produced this stats: Chi-square 1,621; P value
+0,2029; Sensitivity 0; Specificity 0,9011; Cohens Kappa -0,119 and SE of kappa 0,028. The analysis
+suggests that there is no statistically significant difference in the ability of GPT-4 and humans to detect
+the use of absolute terms as an IWF. However, the lack of sensitivity and PPV indicates that neither
+method is effective at identifying the flaw when it is present. The high specificity and NPV suggest that
+both methods are better at confirming the absence of the flaw. The negative Cohen’s Kappa value is
+particularly concerning and would require further investigation to understand the cause of this
+discrepancy.
+Awkward stem structure
+Concerning the comparison of the ability of GPT-4 and human detection to identify the IWF) "Awkward
+stem structure" in test items, the analysis of the results is: Chi-square 1,410; P value 0,2351;
+Sensitivity 0; Specificity 0,8936; PPV0; NPV 0,875; Likelihood Ratio 0; Cohens Kappa -0,115; SE of
+kappa 0,141. The analysis suggests the methods used by GPT-4 and humans to detect "Awkward stem
+structure" as an IWF are not effective, as indicated by the lack of sensitivity and PPV. The specificity and
+NPV are high, but these are less informative given the absence of true positives. The negative Cohen's
+Kappa value points to an issue with the agreement between the methods that is worse than random,
+13
+
+and the overall findings suggest that neither GPT-4 nor human raters are reliably detecting awkward
+stem structures in the test items.
+Extraneous or misleading information in the stem
+The data relates to the statistical analysis of the detection of the IWF "Extraneous or misleading
+information in the stem" by GPT-4 and human evaluators. Here's a breakdown of the statistics: Chi-
+square 0,2123; P value 0,6449; Sensitivity 0; Specificity 0,9038; PPV 0; NPV 0,9792; Likelihood Ratio
+0; Cohens Kappa 0,032; SE of kappa 0,02. The analysis suggests neither GPT-4 nor human evaluators
+are effectively identifying the IWF "Extraneous or misleading information in the stem," as indicated by
+the zero sensitivity and PPV. While the specificity and NPV are high, they are less informative due to the
+absence of true positives. The negative Cohen’s Kappa value points to a negligible disagreement
+between GPT-4 and human detection, but overall, the test's effectiveness is called into question given
+the lack of significant findings.
+Negative stem
+The following statistical data provided presents a comparison of the detection capabilities for the Item
+Writing Flaw (IWF) "Negative stem" between GPT-4 and human evaluation: Chi-square 106,0; z 10,3; P
+value<0,0001****; Sensitivity 1; Specificity 1; PPV 1; NPV 1; Cohens Kappa 1; SE of kappa 0. The
+results suggest a perfect level of agreement and accuracy and indicates that both GPT-4 and human
+detection are perfectly accurate in identifying the IWF "Negative stem" with absolute agreement.
+Response options are a series of true/false statements
+Here are the statistical data on the comparison of the detection capabilities of the IWF "Response
+options are a series of true/false statements," by either GPT-4 and human evaluators: Chi-square
+8,257; z 2,873; P value 0,0041**; Sensitivity 0,1287; Specificity 0,4; PPV 0,8125; NPV 0,02222;
+Likelihood Ratio 0,2145; Cohens Kappa -0,052; SE of kappa 0,034. They suggest us that there is a
+significant difference in the detection of the IWF "Response options are a series of true/false
+statements" between GPT-4 and human evaluators. However, both sensitivity and specificity are low,
+which means neither GPT-4 nor humans are effective at detecting this flaw. The negative Cohen's
+Kappa value implies a disagreement between GPT-4 and human raters that is worse than what would
+14
+
+be expected by random chance. The test seems to have high precision when it identifies the flaw as
+present (high PPV), but its overall reliability is questionable given the low sensitivity, specificity, and
+NPV, along with the poor likelihood ratio.
+Vague or generalizing terms
+The statistical analysis comparing the detection of the IWF "Vague or generalizing terms" by GPT-4 and
+human evaluators produced the following results: Chi-square 0,4606; z 0,6787; P value 0,4973;
+Sensitivity 0,08889; Specificity 0,8689; PPV 0,3333; NPV 0,5638; Likelihood Ratio 0,6778;
+Cohens Kappa -0,047; SE of kappa 0,067. The analysis suggests that there is no statistically significant
+difference between GPT-4 and human detection of "Vague or generalizing terms" as an IWF. However,
+the low sensitivity and PPV indicate that neither method is particularly effective at identifying this flaw
+when it is present. The negative Cohen's Kappa value suggests a negligible but worse-than-random
+disagreement between the methods. The specificity is relatively high, which suggests that items without
+this flaw are likely to be correctly identified as such.
+Unfocused question
+The following elements summarize the results of the statistical analysis of comparison between GPT-4
+and human detection of the Item Writing Flaw (IWF) "Unfocused question.": Chi-square 22,54; z 4,747;
+P value <0,0001****; Sensitivity 0,01961; Specificity 0,6; PPV 0,04348; NPV 0,3976; Likelihood Ratio
+0,04902; Cohens Kappa -0,388; SE of kappa 0,072. The provided statistics indicate a very poor
+performance in the detection of "Unfocused question" IWF by both GPT-4 and human detection
+methods, with extremely low sensitivity and PPV, moderate specificity, and low NPV. The negative
+Cohen's Kappa suggests a significant disagreement between the two methods, and the highly
+significant p-value indicates that these results are statistically reliable, although the practical reliability of
+the detection methods is questionable given the performance metrics. The detection methods appear to
+be ineffective at identifying this particular IWF.
+“Use of none of the above” and “Complex or K-type items”
+The fact that both of the methods (GPT-4 and human manual analysis) failed to detect a single IFW
+concerning these two specific ones, doesn’t allow us to perform both systematic effect or agreement
+15
+
+analysis. Our work won’t be able to address an answer to the difference in performance concerning
+these IFW.
+16
+
+DISCUSSION
+With our work we purposed to present a comprehensive analysis of the most important IWF and to
+compare the detection capabilities of GPT-4 and human evaluators across multiple IWF categories. Our
+starting point was the database already assessed for IWF by Silva et al.
+Our starting point was a database extensively analyzed concerning quality in item generation.
+The comprehensive dataset presented delineates the outcomes of a rigorous comparative analysis
+between GPT-4's automated assessment capabilities and human manual detection in identifying various
+Item Writing Flaws (IWFs). This side-by-side evaluation employed two statistical methodologies:
+McNemar’s Chi-squared test and Cohen's Kappa analysis. These methods were specifically chosen to
+quantify the systematic effects and to measure the level of agreement, respectively, between the two
+detection modalities.
+We are going to review briefly the main findings across the several IWFs:
+ Longest Option Is Correct Answer: The process of automatically detecting questions where
+the correct answer is the longest option can be affected or changed by the nature of the
+required answer. This issue often arises when the person creating the question feels compelled
+to ensure the answer is beyond dispute, leading to a longer option compared to the others.
+Additionally, the specific threshold at which the system identifies an answer as "the longest"
+plays a role in this identification process. (Rush,2016) In our work both the AI and human
+methods show high sensitivity and specificity, indicating a reliable identification of this flaw. The
+moderate Cohen's Kappa suggests that while there is agreement, there is still room for
+improvement. It is noteworthy that most of the answer from GTP-4 have a small justification of
+the classification, and the framework of the rationale is that there shouldn’t be stems that are
+longer than the average, neither the correct nor the others. This contributes for the number of
+false positive comparing with the manual review data.
+ Grammatical Clues or Inconsistencies: The use of nongrammatically correct options
+provide cues to the student who easily eliminates distracters that do not flow grammatically
+with the stem, influencing the performance of in the item irrespectively of assessment
+objectives. The high specificity and moderate sensitivity, along with a moderate Cohen's Kappa,
+suggest that while human evaluators are reliably ruling out items without issues, they are
+moderately successful in identifying items with grammatical flaws. GTP-4 evaluation is just
+moderately compliant with the human one.
+17
+
+ Implausible Distractors: This IWF can impact the performance of the test taker,
+automatically avoiding the stem with it, and with a potential positive impact on mean scores.
+The analysis reveals a fair level of specificity but low sensitivity, indicating a moderate degree of
+detection effectiveness. The low positive predictive value suggests many distractors may be
+missed, and the slight agreement indicated by Cohen's Kappa implies only some alignment in
+detection. The detection of an implausible distractor is somehow directly linked with context
+knowledge of the observer.CGT-4 has general medical knowledge built in, as several studies
+already described the potential have good performance in medical examinations. (Sallam,
+2024; Meo, 2023)
+ Mutually Exclusive Distractors: The results indicate higher reliability in ruling out non-
+mutually exclusive distractors, with a fair level of specificity. The negative Cohen's Kappa,
+however, points to a fair level of disagreement, which is concerning. Just as in the previous
+IWF, mutually exclusive distractors can change the tester performance. GPT-4 performed in a
+less efficient way with low sensitivity score.
+ Use of Absolute Terms: The use of absolute terms is recognized by experienced students as
+indicator of wrong answers and is often immediately dismissed as a plausible distractor. This is
+because absolute terms are frequently found in incorrect statements. In our analysis the results
+do not show a statistically significant difference in detection capability. The lack of sensitivity
+and the negative Cohen's Kappa highlight a serious inconsistency in detecting this flaw. GPT-4
+failed to identify the use of absolute terms.
+ Awkward Stem Structure: The methods appear ineffective in identifying this flaw, as
+indicated by zero sensitivity and a negative Cohen's Kappa value. This suggests that neither
+method is reliable for detecting awkward stem structures.
+ Extraneous or Misleading Information: Both GPT-4 and human evaluators fail to
+effectively identify this flaw, with zero sensitivity and a negligible Cohen's Kappa value. This
+indicates an ineffective detection method for this type of IWF.
+ Negative Stem: The reported perfect scores across all metrics are highly unusual in practical
+scenarios and could suggest an oversimplification in the test design or data issues. Absolute
+agreement in real-world conditions is rare, so these results warrant a closer examination of
+methodology.
+18
+
+ Response Options as True/False Statements: The low sensitivity and specificity, coupled
+with a negative Cohen's Kappa, imply a poor detection capability for this flaw. The high PPV is
+contradicted by other metrics, suggesting a potential anomaly in the data.
+ Vague or Generalizing Terms: No significant difference is detected between the methods,
+but the low sensitivity and PPV show ineffectiveness in identifying this flaw. The negative
+Cohen's Kappa suggests slight disagreement between methods.
+ Unfocused Question: Extremely low sensitivity and PPV, along with a negative Cohen's
+Kappa, indicate very poor performance in detecting this flaw by both methods.
+In general, McNemar’s test, which is apt for paired nominal data, helped us to discern whether
+the differences in detection rates between GPT-4 and human raters were statistically significant. This
+was particularly important in identifying asymmetries where one method may detect an IWF more
+frequently than the other. The resulting Chi-square values, some exceeding the threshold of statistical
+significance (e.g., P value <0.0001 for "Negative stem"), illuminated instances of substantial divergence
+or concurrence in the performance of GPT-4 and human raters.
+Meanwhile, Cohen's Kappa analysis offered a nuanced view of the agreement between the two
+evaluators, adjusting for the agreement that could occur by chance. This analysis ranged from
+indicating a moderate level of agreement (Kappa value of 0.439 for "Longest option is correct answer")
+to revealing substantial disagreement (Kappa value of -0.388 for "Unfocused question"). These Kappa
+values, along with their respective standard errors, provided a robust measure of inter-rater reliability,
+demonstrating areas of consistency and disparity.
+It is noteworthy that the combination of McNemar’s Chi-squared test and Cohen's Kappa analysis
+provided a holistic view of the comparative effectiveness of GPT-4 and human detection of IWFs. While
+high specificity and NPV across several IWF categories suggested a reliable exclusion of non-flaws, the
+varying sensitivity and PPV highlighted the challenges in flaw detection. The negative Cohen’s Kappa
+values in certain categories underscored the need for further investigation to reconcile the differences
+between GPT-4 and human evaluators and to enhance the accuracy of IWF detection methodologies.
+The absence of detection for certain IWFs such as "Use of none of the above" and “Complex or K-type
+items” could indicated that both GPT-4 and human raters were unable to identify any instances of these
+flaws, however the database was manual validated for the absence of those IWF.
+Despite expecting a better performance of GPT-4 both in the systematic effect of detecting IWF and in
+degree of agreement, the use of a novel tool has limitations and challenges that must be addressed.
+These results support the proof of concept that AI tools can identify IFW.
+19
+
+Our objective was solely to identity IFW, however, several times during GPT-4 analysis a lot of
+comments concerning other fields were reported. AI models are known to sometimes create abnormal
+information, however during the interaction we didn’t found inconsistencies compatible with
+hallucinations. (Masters, 2023). When asked for a specific IFW, GPT-4 answer was more embracing,
+addressing an analysis concerning the content quality, the question structure and sometimes the
+identification of other IWF. When the question was considered suboptimal, GPT-4 suggested a new
+corrected version. There can be a contamination effect of the management of GPT-4 analysis. The
+analysis of the question as a whole prevails over the individual IWF analysis.
+In conclusion, the analytical journey encompassing both McNemar’s test and Cohen's Kappa has
+yielded critical insights into the comparative detection of IWFs by GPT-4 and humans. While certain
+IWFs were effectively identified, the varied levels of sensitivity, specificity, and inter-rater agreement
+pinpointed specific areas for improvement in both automated and manual detection processes.
+In essence, your analysis has effectively highlighted both the strengths and limitations of the detection
+methods for IWFs. The insights gleaned from this analysis could guide improvements in the design of
+AI-based detection systems and human evaluators' training protocols. The goal would be to enhance
+sensitivity without sacrificing specificity and to ensure that the inter-rater reliability, as measured by
+Cohen's Kappa, is consistently positive and ideally closer to 1 for practical application.
+Further research and developments
+We are in the early days if AI. Each new tool released has a lot of improvements that overcome
+inconsistencies found in early versions. This work shows that AI is a valuable tool in detecting IFW,
+however is suboptimal when compared to the gold standard, manual evaluation. Evaluation of AI
+models as automatic quality improvement tools must continue, addressing both the evaluation of other
+AI models, and other strategies for both prompt building and training of the AI model.
+AI is not only a new technology, but perhaps is the biggest revolution in humanity since the industrial
+revolution. With no doubt ,that there will be a role for AI in medical education and clinical practice.
+Limitations
+This project was developed based on a manual analysis of an item database, elaborated in a previous
+study. However, that identification may be exposed to human error or misidentification of some items,
+which could influence the development of this tool. We performed a validation for the items selected for
+20
+
+the database in order to reduce the possible bias. Despite these facts, the human manual individual
+identification of item flaws remains the gold standard test for IWFs identification.
+The use of an innovative but relatively young technology as AI is perhaps the biggest limitation in our
+study. However the main objective of our work is to assess the ability of one of the most advanced AI
+tools in identifying IWF.
+21
+
+CONCLUSIONS
+This study compares the detection of various IWFs by an AI model, GPT-4, against human manual
+analysis, which is considered the gold standard. The use of McNemar’s Chi-squared test and Cohen's
+Kappa provides a robust framework for evaluating the agreement and systematic differences between
+the two detection methods.
+The results portray a mixed performance of GPT-4 and human evaluators in detecting various IWFs.
+While some areas show promise, such as the detection of the longest option being correct, other areas,
+including the detection of vague terms and unfocused questions, highlight significant weaknesses.
+In conclusion, this analysis underscores the importance of continuous improvement in AI models for
+IWF detection and the need for human evaluators to receive ongoing training to maintain high standards
+in item writing and evaluation. The discrepancies between AI and human detection also highlight the
+complexity of IWF detection and the need for multifaceted approaches to training and evaluation.
+22
+
+REFERENCES
+Alkaissi, H. & McFarlane, S. I. (2023). Artificial Hallucinations in ChatGPT: Implications in Scientific
+Writing. Cureus, 15(2), e35179. https://doi.org/10.7759/cureus.35179
+Ameer, A. Y. A. (2023). Assessment of the Quality of Multiple-Choice Questions in the Surgery Course
+for an Integrated Curriculum, University of Bisha College of Medicine, Saudi Arabia. Cureus, 15(12),
+e50441. https://doi.org/10.7759/cureus.50441
+Civaner, M. M., Uncu, Y., Bulut, F., Chalil, E. G. & Tatli, A. (2022). Artificial intelligence in medical
+education: a cross-sectional needs assessment. BMC Medical Education, 22(1), 772.
+https://doi.org/10.1186/s12909-022-03852-3
+Dave, T., Athaluri, S. A. & Singh, S. (2023). ChatGPT in medicine: an overview of its applications,
+advantages, limitations, future prospects, and ethical considerations. Frontiers in Artificial
+Intelligence, 6, 1169595. https://doi.org/10.3389/frai.2023.1169595
+Douthit, N. T., Norcini, J., Mazuz, K., Alkan, M., Feuerstein, M.-T., Clarfield, A. M., Dwolatzky, T.,
+Solomonov, E., Waksman, I. & Biswas, S. (2021). Assessment of Global Health Education: The Role of
+Multiple-Choice Questions. Frontiers in Public Health, 9, 640204.
+https://doi.org/10.3389/fpubh.2021.640204
+Egarter, S., Mutschler, A., Tekian, A., Norcini, J. & Brass, K. (2020). Medical assessment in the age of
+digitalisation. BMC Medical Education, 20(1), 101. https://doi.org/10.1186/s12909-020-02014-7
+Ghosal, S. (2023). ChatGPT on Characteristic Mode Analysis. Authorea Preprints.
+https://doi.org/10.36227/techrxiv.21900342.v1
+Kung, T. H., Cheatham, M., Medenilla, A., Sillos, C., Leon, L. D., Elepaño, C., Madriaga, M., Aggabao,
+R., Diaz-Candido, G., Maningo, J. & Tseng, V. (2023). Performance of ChatGPT on USMLE: Potential for
+AI-assisted medical education using large language models. PLOS Digital Health, 2(2), e0000198.
+https://doi.org/10.1371/journal.pdig.0000198
+Meo, S. A., Al-Masri, A. A., Alotaibi, M., Meo, M. Z. S. & Meo, M. O. S. (2023). ChatGPT Knowledge
+Evaluation in Basic and Clinical Medical Sciences: Multiple Choice Question Examination-Based
+Performance. Healthcare, 11(14), 2046. https://doi.org/10.3390/healthcare11142046
+23
+
+Norcini, J., Anderson, M. B., Bollela, V., Burch, V., Costa, M. J., Duvivier, R., Hays, R., Mackay, M. F.
+P., Roberts, T. & Swanson, D. (2018). 2018 Consensus framework for good assessment. Medical
+Teacher, 40(11), 1102–1109. https://doi.org/10.1080/0142159x.2018.1500016
+Royal, K. D. & Hedgpeth, M.-W. (2017). The Prevalence of Item Construction Flaws in Medical School
+Examinations and Innovative Recommendations for Improvement. EMJ Innov Innovations 1.1
+2017, 1(1), 61–66. https://doi.org/10.33590/emjinnov/10312489
+Rush, B. R., Rankin, D. C. & White, B. J. (2016). The impact of item-writing flaws and item complexity
+on examination item difficulty and discrimination value. BMC Medical Education, 16(1), 250.
+https://doi.org/10.1186/s12909-016-0773-3
+Sallam, M., Al-Salahat, K., Eid, H., Egger, J. & Puladi, B. (2024). Human versus Artificial Intelligence:
+ChatGPT-4 Outperforming Bing, Bard, ChatGPT-3.5, and Humans in Clinical Chemistry Multiple-Choice
+Questions. https://doi.org/10.21203/rs.3.rs-3880412/v1
+Silva R. A qualitative and psychometric analysis of the Portuguese National Selection Exames from
+2009 to 2018 and pilot exam of the National Access Exam. 2020.
+Schuwirth, L. W. T. & Vleuten, C. P. M. van der. (2020). A history of assessment in medical
+education. Advances in Health Sciences Education, 25(5), 1045–1056.
+https://doi.org/10.1007/s10459-020-10003-0
+Wong, R. S.-Y., Ming, L. C. & Ali, R. A. R. (2023). The Intersection of ChatGPT, Clinical Medicine, and
+Medical Education. JMIR Medical Education, 9, e47274. https://doi.org/10.2196/47274
+Wu, S., Koo, M., Blum, L., Black, A., Kao, L., Fei, Z., Scalzo, F. & Kurtz, I. (2024). Benchmarking Open-
+Source Large Language Models, GPT-4 and Claude 2 on Multiple-Choice Questions in
+Nephrology. NEJM AI, 1(2). https://doi.org/10.1056/aidbp2300092
+24
+
+APPENDIX
+APPENDIX 1
+USER:
+“Hello ! I would like to interact to you concerning a subject that I find very interesting: item writing flaws
+detection in A-type (One-best-answer item) MCQs . I would like to know if you are familiar with the
+concept on item writing flaws. Do you have the ability to identify item writing flaws? And what kind of
+different item writing flaws do you can identify? Thank you in advance for your colaboration.”
+CHATGPT 4.0
+“Hello! It's great to hear about your interest in item writing flaws detection in A-type (One-best-answer
+item) multiple-choice questions (MCQs). Yes, I'm familiar with the concept of item writing flaws and can
+help identify various types of flaws that can compromise the validity, reliability, and fairness of MCQs.
+Identifying and addressing these flaws is crucial for creating high-quality assessments that accurately
+measure what they are intended to.
+Some common item writing flaws in MCQs include:
+1. **Use of Absolutes**: Words like "always," "never," "all," or "none" can often make an option
+obviously right or wrong.
+2. **Ambiguity**: Poorly worded questions or answers that can be interpreted in multiple ways, leading
+to confusion.
+3. **Grammatical Cues**: Inconsistencies in grammar or phrasing between the stem and the options,
+which can inadvertently lead to the correct answer.
+4. **Test-wise Cues**: Patterns in the options or the position of the correct answer that test-wise
+students can exploit.
+25
+
+5. **Use of "All of the Above" or "None of the Above"**: These can be problematic because they may
+not always test the student's knowledge accurately. For instance, if a student knows that two options
+are correct, they can choose "All of the above" without knowing about the other options.
+6. **Overly Specific or General Options**: Options that are significantly more detailed or more general
+than others can stand out as either obviously correct or incorrect.
+7. **Negative Wording**: Double negatives or questions asking for the "not correct" or "least likely"
+option can be confusing and mislead students.
+8. **Trivia Questions**: Focusing on trivial facts rather than concepts or critical thinking.
+9. **Convergence Strategy**: Options that are too similar or that overlap significantly, allowing test-
+takers to deduce the correct answer through elimination.
+10. **Implausible Distractors**: Incorrect options (distractors) that are obviously wrong, which do not
+effectively test the student's knowledge.
+Identifying these flaws requires a thorough review of the questions, an understanding of the content
+being tested, and an awareness of common pitfalls in question design. It's also beneficial to have a
+clear objective for what each question is intended to measure and to ensure that the question and its
+options align with that objective.
+If you have specific MCQs you'd like to discuss or need advice on identifying or correcting item writing
+flaws, feel free to share more details!”
+26
+
+APPENDIX 2
+Prompts developer for each question:
+Longest option is correct answer
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly #the
+longest option is not the correct answer rule# (the correct answer should not be longer than the other
+options). Provide a brief explanation for each evaluation, and if necessary, propose a corrected version
+for any identified flaws.
+Grammatical clues or inconsistencies between stem and distractors.
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly the
+“grammatical clues or inconsistencies between stem and distractors” (occurs when there are
+grammatical inconsistencies between the stem and the distractors or when a word or clue is repeated
+in stem and in the correct answer). Provide a brief explanation for each evaluation, and if necessary,
+propose a corrected version for any identified flaws.
+Implausible distractors.
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly the
+existence of implausible distractors (often occurs when there is the need to fill the distractors to fullfill a
+number of options). Provide a brief explanation for each evaluation, and if necessary, propose a
+corrected version for any identified flaws.
+Mutually exclusive distractors.
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly the
+existence of mutually exclusive distractors in the stems (occurs when two or more distractors exclude
+each other). Provide a brief explanation for each evaluation, and if necessary, propose a corrected
+version for any identified flaws.
+27
+
+Use of absolute terms (always, never, only, all).
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly each
+question “use of absolute terms such as “all”, “none”, “must”, “except”, “every”, “not”, “always”,
+“just”, “only” or “never””. Provide a brief explanation for each evaluation, and if necessary, propose a
+corrected version for any identified flaws.
+Use of all of the above
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly each
+question “use the term “all of the above””. Provide a brief explanation for each evaluation, and if
+necessary, propose a corrected version for any identified flaws.
+Awkward stem structure (finish the sentence, fill in the blank, grammatically flawed)
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly the
+existence of awkward stem structure rule (requires students to test each option after the stem, which
+can influence the capacity of a test-maker to answer correctly). Provide a brief explanation for each
+evaluation, and if necessary, propose a corrected version for any identified flaws.
+Extraneous or misleading information in the stem.
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly the
+existence of “extraneous or misleading information in the stem” rule (requires students to test each
+option after the stem, which can influence the capacity of a test-maker to answer correctly). Provide a
+brief explanation for each evaluation, and if necessary, propose a corrected version for any identified
+flaws.
+Negative stem. (Not true, true except, incorrect.)
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly the
+existence of a “negative stem expression such as “not true”, “true except” or “incorrect”” (easier to
+28
+
+create but don’t assess students knowledge as well as positively build stems). Provide a brief
+explanation for each evaluation, and if necessary, propose a corrected version for any identified flaws.
+Response options are a series of true/false statements.
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly that “the
+response options are a series of true/false statements” (require students to answer to all questions
+instead of only 1). Provide a brief explanation for each evaluation, and if necessary, propose a corrected
+version for any identified flaws.
+Use of none of the above.
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly the
+existence of “none of the above” (it is often automatically excluded from test-wise students as it is often
+used as a distractor). Provide a brief explanation for each evaluation, and if necessary, propose a
+corrected version for any identified flaws.
+Complex or K-type items. (e.g. A and C)
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly the
+existence of “Complex or K-type items(e.g. A and C)” (it requires students to answer several questions).
+Provide a brief explanation for each evaluation, and if necessary, propose a corrected version for any
+identified flaws.
+Vague or generalizing terms. (Sometimes, frequently, often, occasionally, typically, potentially).
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning strictly the
+existence of “vague or generalizing terms such as “Sometimes”, “frequently”, “often”, “occasionally”,
+“typically” or “potentially”” (different interpretations of these terms can lead to multiple correct
+answers or a set of options that cannot be rank ordered in terms of correctness ). Provide a brief
+explanation for each evaluation, and if necessary, propose a corrected version for any identified flaws.
+29
+
+Unfocused question. (Distractors are unrelated or distantly related to a single learning objective.)
+Review the following A-type multiple-choice questions (One-best-answer items) and begin your response
+with 'yes' or 'no' indicating whether the question has an item writing flaw concerning the existence of
+“unfocused question where distractors are unrelated or distantly related to a single learning objective”
+(when a stem does not directed question to a learning objective and the options have different learning
+objectives). Provide a brief explanation for each evaluation, and if necessary, propose a corrected
+version for any identified flaws.
+30
+
+APPENDIX 3
+CHATGPT analysis of IWF (Tool) (0 – no flaw; 1 – flaw)
+Appendix 4 - Manual analysis (MI) of IWF (Tool) (0 - no flaw; 1- flaw)
+31
+
+w o o o o n p n n e e e a g L c c s s s rr r t t t . i i m m w G o o u n n n b n e e e e ee a a ac c c c s ss s r r t t t i l l i i i m o ndd e a ac s s s r r t t t . i m o p u b d e a ac s s s r r t t I . l i l i M o u u u d e e a a y v xc c s s s r r t t t . ll l i i m U o o b u e e e a s s s r t t f . l U o o o h b e e e a a v s t f f . ll m w w A d u u e e a k c s s r r r t t t . m m o o o o n u d n n n n h e e e a a a E g x s s r r r t t t f il i i i i m e st . m Ne e e ag v s t t . i R o o o o p n p n u e e e e e e e a a a / s s s s s s r r r t tf f i i l m n e e a s s t t t. U o o o o n n h b e e e e a v s t f f . m m K o o p p C e e e y x s r t t - . l i m V o u n n e e e e a a g g g s z r r r t . lii U o o n u dqu n e e c s st f . i
+1 0 0 0 0 0 0 0 0 1 1 0 0 0 1
+2 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+3 0 0 0 0 1 0 0 0 1 1 0 0 0 0
+4 0 0 0 0 0 0 0 0 1 1 0 0 0 1
+5 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+6 0 0 1 0 0 0 0 0 1 1 0 0 1 1
+7 0 1 0 0 0 0 0 0 0 1 0 0 1 1
+8 0 0 0 1 0 0 0 0 1 1 0 0 0 1
+9 1 0 0 0 0 0 0 0 1 1 0 0 0 1
+10 0 0 0 0 0 0 1 0 1 1 0 0 0 0
+11 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+12 0 1 1 0 0 0 0 0 1 1 0 0 1 1
+13 1 1 0 0 0 0 0 0 1 1 0 0 1 1
+14 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+15 0 0 1 0 1 0 0 0 0 1 0 0 0 1
+16 0 1 0 0 1 0 0 0 1 1 0 0 1 1
+17 0 0 0 0 0 0 0 0 1 1 0 0 1 0
+18 1 1 0 0 0 0 0 0 1 1 0 0 1 1
+19 1 0 0 0 1 0 0 0 1 1 0 0 0 0
+20 0 0 0 1 0 0 0 0 1 1 0 0 0 0
+21 0 0 0 0 0 0 1 0 1 1 0 0 0 1
+22 0 0 0 0 0 0 0 1 1 1 0 0 0 1
+23 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+24 0 0 0 0 0 0 0 0 1 1 0 0 0 0
+25 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+26 0 0 1 0 0 0 0 0 0 1 0 0 1 1
+27 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+28 1 1 0 0 0 0 0 0 1 1 0 0 1 1
+29 0 0 0 0 0 0 1 0 0 1 0 0 1 1
+30 0 0 0 0 1 0 0 0 1 1 0 0 0 0
+31 0 0 0 1 1 0 0 0 1 1 0 0 0 1
+32 0 0 0 0 0 0 0 1 1 1 0 0 0 1
+33 0 0 0 0 0 0 0 0 1 1 0 0 0 0
+34 1 0 0 0 0 0 0 0 0 1 0 0 0 0
+35 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+36 0 0 0 0 0 0 0 0 1 1 0 0 0 1
+37 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+38 0 0 1 0 0 0 0 0 0 1 0 0 1 1
+39 0 1 0 0 0 0 0 0 1 1 0 0 1 0
+40 0 0 0 0 1 0 0 0 1 1 0 0 1 1
+41 0 0 1 1 0 0 0 0 0 1 0 0 0 0
+42 0 0 0 0 0 0 1 0 1 1 0 0 0 1
+43 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+44 0 0 0 0 0 0 0 0 0 1 0 0 1 1
+45 0 0 1 0 0 0 0 0 0 1 0 0 1 1
+46 0 0 0 0 0 0 0 0 0 1 0 0 1 1
+47 0 0 1 0 0 0 0 0 0 1 0 0 1 1
+48 0 0 0 0 1 0 0 0 0 1 0 0 1 1
+49 0 0 0 0 0 0 1 0 1 1 0 0 0 0
+50 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+51 0 0 0 1 0 0 0 0 1 1 0 0 0 0
+52 1 0 0 1 0 0 0 0 0 1 0 0 1 0
+53 0 1 0 0 0 0 0 0 0 1 0 0 1 1
+54 0 0 0 0 0 0 0 0 1 1 0 0 1 0
+55 0 0 1 0 1 0 0 0 0 1 0 0 1 1
+56 1 0 0 0 0 0 0 0 1 1 0 0 0 1
+57 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+58 0 0 0 0 0 0 0 0 0 1 0 0 1 1
+59 0 0 0 0 0 0 0 0 1 1 0 0 0 1
+60 0 0 0 1 0 0 0 0 0 1 0 0 0 1
+61 0 0 0 0 0 0 1 0 0 1 0 0 0 1
+62 0 0 0 0 1 0 0 0 1 1 0 0 0 1
+63 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+64 0 0 0 0 0 0 0 0 0 1 0 0 0 1
+65 1 0 0 0 1 0 0 0 1 1 0 0 1 1
+66 1 0 0 0 0 0 0 0 1 1 0 0 0 1
+67 0 1 0 0 0 0 0 1 1 0 0 0 1
+68 0 0 0 1 0 0 0 0 1 1 0 0 0 1
+69 0 1 0 0 0 0 0 0 1 1 0 0 0 1
+70 0 1 1 0 0 0 1 0 1 1 0 0 0 1
+71 0 0 0 0 0 0 0 1 1 1 0 0 0 0
+72 0 0 0 0 0 0 0 0 1 1 0 0 1 0
+73 1 0 0 0 0 0 0 0 1 1 0 0 0 1
+74 0 1 0 0 0 0 0 0 1 1 0 0 0 1
+75 0 0 0 0 0 0 0 0 0 1 0 0 0 1
+76 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+77 0 0 0 0 1 0 0 0 1 1 0 0 0 1
+78 0 0 1 0 0 0 0 0 1 1 0 0 1 0
+79 0 0 0 0 0 0 1 0 1 1 0 0 1 1
+80 0 0 0 0 0 0 1 1 1 1 0 0 0 0
+81 0 0 1 0 0 0 0 0 1 1 0 0 0 0
+82 0 0 0 1 0 0 1 0 1 1 0 0 1 1
+83 0 0 0 0 0 0 0 0 1 1 0 0 0 1
+84 0 0 0 0 0 0 0 0 1 1 0 0 0 1
+85 0 0 0 0 0 0 0 0 1 1 0 0 1 0
+86 0 1 0 0 0 0 0 0 1 1 0 0 1 1
+87 0 0 0 0 1 0 0 0 1 1 0 0 1 1
+88 0 0 0 0 0 0 0 0 1 1 0 0 0 1
+89 0 0 0 0 0 0 0 0 1 1 0 0 0 0
+90 1 1 0 0 0 0 0 0 1 1 0 0 1 1
+91 0 0 1 0 0 0 1 0 0 1 0 0 0 1
+92 0 0 0 1 0 0 0 0 0 1 0 0 0 0
+93 0 0 0 0 0 0 0 0 1 1 0 0 1 1
+94 0 1 0 0 0 0 0 0 1 1 0 0 0 1
+95 0 0 0 0 0 0 0 0 1 1 0 0 1 0
+96 0 0 0 0 0 0 0 0 0 1 0 0 1 1
+97 0 0 1 0 1 0 0 0 0 1 0 0 0 1
+98 0 0 0 0 1 0 0 0 1 1 0 0 0 1
+99 0 1 0 0 0 0 0 0 1 1 0 0 1 1
+100 0 0 1 0 0 0 0 0 1 1 0 0 1 0
+101 0 0 0 0 0 0 1 0 1 1 0 0 0 1
+102 0 0 1 1 0 0 0 0 1 1 0 0 0 0
+103 0 0 0 0 0 0 0 0 0 1 0 0 0 1
+104 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+1
+1
+0
+0
+5
+6
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+32
